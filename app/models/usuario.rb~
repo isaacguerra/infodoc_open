@@ -1,0 +1,58 @@
+class Usuario < CouchFoo::Base
+    attr_accessor :password
+    attr_accessor :password_confirmation
+    
+    property :login, String
+    property :email, String
+    property :crypted_password, String
+    property :password_salt, String
+
+    # Magic columns, just like ActiveRecord's created_at and updated_at. These are automatically maintained by Authlogic if they are present.
+    property :login_count, Integer
+    property :failed_login_count, Integer
+    property :last_request_at, DateTime
+    property :current_login_at, DateTime
+    property :last_login_at, DateTime
+    property :current_login_ip, DateTime
+    property :last_login_ip, DateTime
+    
+    validates_uniqueness_of :login
+    validates_presence_of :login
+    validates_presence_of :email
+    validates_presence_of :password
+    validates_confirmation_of :password
+    
+    before_save :encriptar_senha
+    
+    
+    private
+    def random_alphanumeric(size=6)
+        chars = ('a'..'z').to_a + ('A'..'Z').to_a + (0..9).to_a
+        (0...size).collect { chars[Kernel.rand(chars.length)] }.join
+    end
+    
+    
+    
+    def encriptar_senha
+        self.password_salt = random_alphanumeric(30)
+        self.crypted_password = encriptar(self.password_salt, self.password)
+    end 
+    
+    public
+    def self.login(login, senha)
+        u = Usuario.find(:first, :conditions=>{:login=login})
+        if u
+          if u.crypted_password == u.encriptar(u.password_salt, senha)
+              return u
+          else
+              return nil
+          end
+        else
+            return nil
+        end
+    end
+    def encriptar(salt, senha)
+        return Digest::SHA1.hexdigest("#{salt}#{senha}")
+    end
+    
+end
