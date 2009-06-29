@@ -1,0 +1,11 @@
+<%= request.remote_ip %><br>
+
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+<% form_tag("/core/login") do %>
+  Usario <%= text_field :login, :usuario %><br>
+  Senha <%= password_field :login, :senha %><br>
+  <%= submit_tag "Enviar" %>
+<% end %>
+

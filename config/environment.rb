@@ -11,6 +11,7 @@ Rails::Initializer.run do |config|
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
 
+  config.log_level = :debug
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
@@ -42,3 +43,4 @@ end
 
 CouchFoo::Base.set_database(:host => "http://localhost:5984", :database => "infodoc")
 CouchFoo::Base.logger = Rails.logger
+

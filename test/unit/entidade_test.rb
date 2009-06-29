@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Core::UsuarioTest < ActiveSupport::TestCase
+class Core::EntidadeTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true
