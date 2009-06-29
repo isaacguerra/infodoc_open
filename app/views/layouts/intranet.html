@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag "chromestyle.css" %>
+    <%= stylesheet_link_tag "anylinkcssmenu.css" %>
+     <%= stylesheet_link_tag "intranet.css" %>
+    <%= javascript_include_tag 'chrome.js' %>
+    <%= javascript_include_tag 'anylinkcssmenu.js' %>
+     
+    </script>
+    <title>INTRANET :: Infomanager</title>
+  </head>
+  <body>
+    <div id="topo">
+        <div id="logo">
+          <img src="images/infodoc.gif" />
+        </div>
+       
+        <div id="status">
+          <b>Login: </b><i>Infomanager</i>
+        </div>
+    </div>
+    <div id="tudo">
+      
+      <div class="chromestyle" "id="menu_nav">
+        <ul>
+          <li><a href="#" rel="dropmenu1" rev="lr">Aplicações&nbsp;</a></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <!--1º drop down menu --> 
+        <div id="dropmenu1" class="dropmenudiv">
+          <a href="#aplicao1">Aplicação 1</a>
+          <a href="#aplicaco2">Aplicação 2</a>
+          <a href="#aplicaco3">Aplicação 3</a>
+        </div>
+        <!--1º drop down menu --> 
+      </div>
+      <%=javascript_tag "cssdropdown.startchrome('menu_nav')"%>
+      <div id="conteudo">
+      <%= yield %>
+       
+      </div>
+      
+      <div id="rodape">
+      Teste         
+      </div>
+    </div>
+  </body>
+</html>
+

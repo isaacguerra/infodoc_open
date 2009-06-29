@@ -1,0 +1,8 @@
+ul.menubar{
+  margin: 0px;
+  padding: 0px;
+  background-color: #FFFFFF; /* IE6 Bug */
+  font-size: 100%;
+}
+
+
