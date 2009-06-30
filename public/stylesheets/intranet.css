@@ -66,7 +66,19 @@ a:hover {
   clear:right;
 }
 
+    
+#conteudo {
+    width: 99%;
+    border : 1px solid #E8E3E3;
+    float:left;
+    margin: 5px 0.3% 5px 0.7%;
+    padding: 10px;
+    overflow: hidden;
+    min-height:600px;
+    height:auto;
 
+
+}
 
 /*############# MENU DROPDOWN ##############*/
 
@@ -123,16 +135,7 @@ a:hover {
 }
 
 /*################## FIM DO SUB MENU DROP DOWN #################*/
-    
-#conteudo {
-    width: 99%;
-    border : 1px solid #E8E3E3;
-    float:left;
-    margin: 5px 0.3% 5px 0.7%;
-    padding: 10px;
-    overflow: hidden;
 
-}
 
 .caixa {
     margin: 0 0 10px 10px;
@@ -159,6 +162,7 @@ a:hover {
     font-family: arial;
     padding: 6px;
     margin: 6px;
+    margin-bottom:2px;
     list-style-type: none;
     text-align: right;
     background-color:#ffffff;
@@ -168,4 +172,44 @@ a:hover {
     border-bottom-color:#8c1c1c;
     background-image: url("/images/img09.gif");
 	background-repeat: repeat-x;
+}
+
+/*########### LOGIN ########### */
+
+input#login_usuario,input#login_senha {
+    margin-bottom: 4px; 
+    border:1px solid #BFBFBF;
+}
+
+#form_login {
+    background-color:#E8E8E8;
+    border: 1px solid #C4C4C4;
+    text-align: center;
+    width:30%;
+    height:100px;
+    padding-top: 20px;
+    margin:20px auto 50px auto;
+}
+.form_login{
+
+    margin-left:31%;
+    margin-bottom:20px
+    text-align:center;
+    padding: 0 5px 0 5px;
+}
+#form_login form {
+    margin:0;
+}
+input.enviar {
+    
+    margin-top: 5px 
+    
+
+}
+
+#imagem_mouse {
+    margin:0px;
+    width:100%;
+    margin:5px auto 5px auto;
+    text-align:center;    
 }

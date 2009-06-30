@@ -41,7 +41,7 @@ background: url(chromebg-over.gif) center center repeat-x; /*THEME CHANGE HERE*/
 /* ######### Style for Drop Down Menu ######### */
 
 .dropmenudiv{
-margin: 3px 0 0 0px;
+margin: 1px 0 0 0px;
 position:absolute;
 border: 1px solid #BBB; /*THEME CHANGE HERE*/
 border-top-width: 0;
@@ -50,7 +50,7 @@ line-height:18px;
 z-index:100;
 background-color: #EDEDED;
 width: 115px;
-
+padding:5px;
 visibility: hidden;
 
 }

@@ -1,0 +1,2 @@
+module Core::LoginHelper
+end

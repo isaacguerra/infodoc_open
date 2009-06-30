@@ -1,19 +1,24 @@
-* {
+*       {
    font-family:Arial, Helvetica, Verdana;
 }
 body {
 	margin:0;
 	padding:0;
-	   background-color: #FFFFFF;
+	background-color: #FFFFFF;
 }
 #tudo {
-	height: auto;
+    height: auto;
 	width: 97%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 0;
 	margin: 10px 10px 0px 10px;
 	padding:0 0 0 5px;
+}
+
+#conteudo {
+    min-height: 350px;
+    
 }
 h1{
 	margin: 0;
@@ -127,6 +132,7 @@ h1{
       	width:100%;
 	float:right;
 	}
+	
     #servicos h2 {
         font-family:Verdana;
 	font-size:1.3em;
@@ -187,9 +193,18 @@ h1{
         padding:0 0 0 3px;
     }
     #contato a{
+        
+        float:left;
         text-decoration: none;
-	color: #8c1c1c;
-    }
+    	color: #8c1c1c;
+    	margin-top: 45px;
+    	margin-left:20px;
+
+}
+        #contato img {
+            
+            float:left;
+        }
 /*FIM Extra*/
 /*Destaque*/
     #destaque {
@@ -269,18 +284,18 @@ h1{
 	width: 100%;
     }
     #rodape ul {
-      	font-size:0.8em;
-      	padding: 6px;
-      	margin: 5px 0px 0px 0px;
-      	list-style-type: none;
-      	text-align: right;
-      	background-color:#ffffff;
-      	height:18px;
-      	border-bottom-style:solid;
-      	border-bottom-width:5px;
-      	border-bottom-color:#8c1c1c;
-      	background-image: url("/images/img09.gif");
-	background-repeat: repeat-x;
+     font-size:0.8em;
+     padding: 6px;
+     margin: 5px 0px 0px 0px;
+     list-style-type: none;
+     text-align: right;
+     background-color:#ffffff;
+     height:18px;
+     border-bottom-style:solid;
+     border-bottom-width:5px;
+     border-bottom-color:#8c1c1c;
+     background-image: url("/images/img09.gif");
+	 background-repeat: repeat-x;
     }
     #rodape ul li {
      	display: inline;
@@ -300,12 +315,13 @@ h1{
 
 /*Detalhamento*/
     #depoimentos_show, #servicos_show, #clientes_show{
-      	border:1px solid #CCCCCC;
-      	padding: 4px 5px;
-      	min-height: 450px;
-      	width:780px;
+   	border:1px solid #CCCCCC;
+   	padding: 4px 5px;
+   	min-height: 450px;
+   	width:780px;
+    margin-top:20px;  	
 	margin-right: auto;
-	margin-left: auto;
+    margin-left: auto;
     }
     #depoimentos_show p {
       	font-size: 0.9em;
@@ -319,8 +335,8 @@ h1{
 	border-bottom: 1px solid #C00;
     }
     #depoimentos_show b {
-       	font-family: serif;
-       	font-size: 40px;
+   	font-family: serif;
+    	font-size: 40px;
        	color:#8c1c1c ;
     }
     #dep_cab {
@@ -334,3 +350,64 @@ h1{
         font-size:1.2em;
     }
 /*Fim Depoimento_show*/
+
+
+/*########### LOGIN ########### */
+
+input#login_usuario,input#login_senha {
+    margin-bottom: 4px; 
+    border:1px solid #BFBFBF;
+    padding: 2px 3px 2px 3px;
+    background-color:#F5F5F5;
+}
+
+#form_login {
+    background-image: url("/images/img10.gif");
+    background-repeat: repeat-x;
+    border: 1px solid #C4C4C4;
+    border-top: 3px solid #C4C4C4;
+    text-align: center;
+    width:25%;
+    height:100px;
+/*    padding-top: 30px;*/
+    padding: 30px 20px;
+    margin:20px auto 50px auto;
+}
+.form_login{
+    border: 2px solid #8c1c1c;
+    border-right:0px ;
+    border-left: 0px;
+    color: #FFFFFF;
+    weight:bold;
+    margin-left:29%;
+    margin-bottom:20px
+    text-align:center;
+    padding: 0 5px 0 5px;
+    background-color: #8c1c1c;
+    
+}
+#form_login form {
+    margin:0;
+}
+input.enviar {
+    margin-top: 5px ;
+    width:80px;
+    padding:3px;
+}
+
+#flash {
+    text-align:center;
+    color:#ffffff;
+    margin: 5px 0 5px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width:100%;
+    height:auto;
+    border-top: 2px solid #B50404;
+    border-bottom: 2px solid #B50404;
+    background-color:#E67E73;
+}
+#flash img {
+    
+
+}

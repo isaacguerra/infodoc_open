@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <%= stylesheet_link_tag "intranet.css" %>
     <%= stylesheet_link_tag "chromestyle.css" %>
     <%= stylesheet_link_tag "anylinkcssmenu.css" %>
      <%= stylesheet_link_tag "intranet.css" %>
@@ -26,7 +25,7 @@
       
       <div class="chromestyle" "id="menu_nav">
         <ul>
-          <li><a href="#" rel="dropmenu1" rev="up">Aplicações&nbsp;</a></li>
+          <li><a href="#" rel="dropmenu1" rev="lr">Aplicações&nbsp;</a></li>
           <li></li>
           <li></li>
           <li></li>

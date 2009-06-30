@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+	  <title>Infomanager - Gertão Digital de Informação</title>
+	    <%= stylesheet_link_tag "estilo.css" %>
+	    <%= javascript_include_tag 'jquery-125.js' %>
+	    <%= javascript_include_tag 'funcoes.js' %>
+  </head>
+
+  <body>
+    <div id="tudo">
+
+      <div id="login">
+	      <a href="/intranet">Intranet</a>&nbsp;<img src="/images/key.jpg" height="20" align=center></img><br><br><br>
+	      <h3>Tenha nas Mãos o Capital Intelectual de sua Empresa</h3>
+      </div>
+
+      <div id="topo">
+        <img src="../../../images/infomanager.gif" height="90px" />
+      </div>
+
+      <div id="navcontainer">
+        <ul>
+          <li><a href="/">Home</a><b>|</b></li>
+          <li><a href="/noticias">Noticias</a><b>|</b></li>
+          <li><a href="/servicos">Serviços</a><b>|</b></li>
+          <li><a href="/clientes">Clientes</a><b>|</b></li>
+          <li><a href="/depoimentos">Depoimentos</a></li>
+        </ul>
+      </div>
+
+      <div id="conteudo">
+        <%= yield %>
+      </div>
+<div style="clear: both"></div>
+      <div id="rodape">
+	<ul>
+          <li><a href="/">Home</a><b>|</b></li>
+          <li><a href="noticias">Noticias</a><b>|</b></li>
+          <li><a href="/servicos">Serviços</a><b>|</b></li>
+          <li><a href="/clientes">Clientes</a><b>|</b></li>
+          <li><a href="/depoimentos">Depoimentos</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
+

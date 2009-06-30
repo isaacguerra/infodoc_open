@@ -14,7 +14,7 @@
   <body>
     <div id="topo">
         <div id="logo">
-          <img src="images/infodoc.gif" />
+          <img src="/images/infodoc.gif" />
         </div>
        
         <div id="status">
