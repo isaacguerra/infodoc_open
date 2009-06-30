@@ -38,6 +38,7 @@ class Sessao < CouchFoo::Base
 
     def acesso
       self.ultima_data_acesso = DateTime.now
+      self.save
     end
 
 end

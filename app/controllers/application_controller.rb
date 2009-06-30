@@ -15,11 +15,13 @@ class ApplicationController < ActionController::Base
     unless session[:sessao_atual].nil?
       @sessao_usuario = Sessao.find(session[:sessao_atual])
       unless @sessao_usuario
+        flash[:notice] = "Login Requerido!"
         session[:return_to] = request.request_uri
         redirect_to :controller => "core/login", :action=>:index
         return false
       else
         if @sessao_usuario.ultima_data_acesso+20.minutes > DateTime.now
+          flash[:notice] = "Sessão Expirada por tempo limite!"
           @sessao_usuario.fim
           session[:return_to] = request.request_uri
           redirect_to :controller => "core/login", :action=>:index
@@ -30,6 +32,7 @@ class ApplicationController < ActionController::Base
         end
       end
     else
+      flash[:notice] = "Login Requerido!"
       session[:return_to] = request.request_uri
       redirect_to :controller => "core/login", :action=>:index
       return false

@@ -1,6 +1,8 @@
 class Usuario < CouchFoo::Base
     belongs_to :entidade
     has_one :sessao
+    has_many :grupousuarios
+    has_many :grupos, :through => :grupousuarios
 
     attr_accessor :senha
     attr_accessor :senha_confirmation
@@ -44,9 +46,9 @@ class Usuario < CouchFoo::Base
         (0...size).collect { chars[Kernel.rand(chars.length)] }.join
     end
     def self.login(login, senha, remote_ip)
-        usuario = Usuario.find(:first, :conditions=>{:login=>login})
+        usuario = Usuario.find(:first, :conditions=>{:login=>login, :status=>true})
         if usuario
-           if usuario.senha_encriptada = usuario.encriptar(usuario.chave_criptografia, senha)
+           if usuario.senha_encriptada == usuario.encriptar(usuario.chave_criptografia, senha)
              usuario.sessao.inicia_sessao(remote_ip, usuario.nome)
              return usuario.sessao.id
           else

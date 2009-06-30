@@ -1,5 +1,4 @@
 class Core::LoginController < ApplicationController
-  layout "home"
   skip_before_filter :autenticado
 
   def index

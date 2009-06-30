@@ -1,5 +1,6 @@
 class Entidade < CouchFoo::Base
    has_many :usuarios
+   has_many :grupos
 
    property :nome, String
    property :razao_social, String
