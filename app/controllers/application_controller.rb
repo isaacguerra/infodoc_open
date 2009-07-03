@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
   before_filter :autenticado
+  before_filter :autorizado
 
   protected
   def autenticado
@@ -39,6 +40,21 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
+  def autorizado
+    @nivel_permissao=0
+    @sessao_usuario.opcoes.each do |o|
+      if o[2].downcase == self.class.to_s.downcase
+        @nivel_permissao = o[1]
+      end
+    end
+    if @nivel_permissao == 0
+      flash[:notice] = "Sistema não Autorizado para este Usuario!"
+      redirect_to "/intranet"
+      return false
+    else
+      flash[:notice] = "Sistema Autorizado para este Usuario!"
+      return true
+    end
+  end
 end
 

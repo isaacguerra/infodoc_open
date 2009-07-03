@@ -1,0 +1,18 @@
+<h3>Lista de Sistemas - <%= @modulo.nome%></h3>
+	<%= link_to 'Novo Sistema', new_core_modulo_sistema_path(@modulo) %>
+	<table>
+	  </tr>
+	    <th>Nome</th>
+	    <th>Descrição</th>
+	    <th>Status</th>
+	  </tr>
+	  <% @modulo.sistemas.each do |sistema| %>
+	  <tr>
+	    <td><%= link_to sistema.nome, core_modulo_sistema_path(@modulo, sistema) %></td>
+	    <td><%=h sistema.descricao %></td>
+	    <td><%=h sistema.status %></td>
+	  </tr>
+	  <% end %>
+	</table>
+</div>
+

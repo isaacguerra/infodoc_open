@@ -1,0 +1,12 @@
+<h3>Cadastrar Sistema</h3>
+<% form_for @sistema, :url=>{:action=>'create'} do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :nome %><br><%= f.text_field :nome %><br>
+  <%= f.label 'Descrição',:descricao %><br><%= f.text_field :descricao %><br>
+  <%= f.label :rota %><br><%= f.text_field :rota %><br>
+  <%= f.label :controle %><br><%= f.text_field :controle %><br>
+  <%= f.label :menu %><br><%= f.check_box :menu %><br>
+  <%= f.submit 'Salvar' %>
+<% end %>
+<%= link_to 'Voltar', core_modulo_sistemas_path(@sistema.modulo) %>
+

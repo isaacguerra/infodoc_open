@@ -1,0 +1,44 @@
+<div id="ferramentas">
+  <h3>Lista de Modulos da Entidade</h3>
+</div>
+  <% form_tag(:action=>"create") do %>
+  <table>
+   </tr>
+     <th>Modulos Inclusos a Entidade</th>
+    </tr>
+    <% @entidade.moduloentidades.each do |me| %>
+    <tr>
+      <td>
+       <%= check_box_tag "modulos[]", me.id %>
+       <%= me.modulo.nome %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= submit_tag "Remover" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+
+  <% form_tag(:action=>"create") do %>
+  <table>
+   </tr>
+     <th>Usuarios não Inclusos no Grupo</th>
+    </tr>
+    <% @modulos.each do |modulo| %>
+    <tr>
+      <td>
+       <%= check_box_tag "modulos[]", modulo.id %>
+       <%= modulo.nome %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= submit_tag "Adicionar" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+</div>
+

@@ -1,0 +1,7 @@
+<h3>Perfil</h3>
+Nome: <%= @usuario.nome %><br>
+Login: <%= @usuario.login %><br>
+E-mail: <%= @usuario.email %><br>
+
+<%= link_to "Alterar Perfil e Senha", edit_core_perfil_path(@usuario) %>
+

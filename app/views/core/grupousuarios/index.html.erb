@@ -1,0 +1,44 @@
+<div id="ferramentas">
+  <h3>Lista de Usuarios do Grupos</h3>
+</div>
+  <% form_tag(:action=>"create") do %>
+  <table>
+   </tr>
+     <th>Usuarios Inclusos no Grupo</th>
+    </tr>
+    <% @grupo.grupousuarios.each do |gu| %>
+    <tr>
+      <td>
+       <%= check_box_tag "usuarios[]", gu.id %>
+       <%= gu.usuario.nome %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= submit_tag "Remover" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+
+  <% form_tag(:action=>"create") do %>
+  <table>
+   </tr>
+     <th>Usuarios não Inclusos no Grupo</th>
+    </tr>
+    <% @usuarios.each do |usuario| %>
+    <tr>
+      <td>
+       <%= check_box_tag "usuarios[]", usuario.id %>
+       <%= usuario.nome %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= submit_tag "Adicionar" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+</div>
+

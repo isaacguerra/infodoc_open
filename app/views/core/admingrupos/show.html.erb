@@ -1,0 +1,8 @@
+<h3>Grupo</h3>
+Nome: <%= @grupo.nome %><br>
+Descrição: <%= @grupo.descricao %><br>
+Entidade: <%= @grupo.entidade.nome %><br><br>
+
+<%= link_to 'Editar', edit_core_admingrupo_path(@grupo) %>&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to 'Voltar', core_admingrupos_path %>&nbsp;&nbsp;&nbsp;&nbsp;
+

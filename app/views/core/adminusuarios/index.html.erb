@@ -1,0 +1,19 @@
+<div id="ferramentas">
+  <h3 class="h3_index">Lista de Usuarios</h3>
+  <div id="novo">
+   	<%= link_to 'Novo Usuario', new_core_adminusuario_path %>
+  </div>
+</div>
+<table id="tabela_listar_index">
+  <tr>
+    <th class="titulo_item_index">Nome</th>
+    <th class="titulo_item_index">Status</th>
+  </tr>
+	<% @usuarios.each do |usuario| %>
+  <tr class="linha_item_index">
+    <td class="item_index"><%= link_to usuario.nome, core_adminusuario_path(usuario) %></td>
+    <td class="item_index"><%=h status(usuario.status) %></td>
+  </tr>
+  <% end %>
+</table>
+

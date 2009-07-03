@@ -1,0 +1,11 @@
+Chat Com Juggernaut
+Gems Necessárias
+   * json gem (gem install json)
+   * EventMachine gem (gem install eventmachine)
+   * juggernaut gem (gem install juggernaut)
+
+     Para iniciar o Servidor de chat
+     Apos iniciar o Server, abra outra aba do console e digite:
+     juggernaut -c config/juggernaut.yml
+end chat
+

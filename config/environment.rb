@@ -11,7 +11,6 @@ Rails::Initializer.run do |config|
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
 
-  config.log_level = :debug
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
@@ -21,13 +20,22 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
+  config.gem "jchris-couchrest", :lib=>"couchrest", :source=>"http://gems.github.com"
+  config.gem "rest-client", :lib=>false
+  config.gem "extlib", :lib=>false
+  config.gem "uuid", :lib=>"uuid"
+  config.gem "json", :lib=>"json"
+  config.gem "eventmachine", :lib=>false
+  config.gem "juggernaut", :lib=>false
+  config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
+
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
-  # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
+  # config.plugins = [:exception_notification, :ssl_requirement, :all ]
 
   # Skip frameworks you're not going to use. To use Rails without a database,
   # you must remove the Active Record framework.
-  # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
+   config.frameworks -= [:active_record]
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer

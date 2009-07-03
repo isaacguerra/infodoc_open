@@ -1,0 +1,12 @@
+<h3>Usuario</h3>
+Nome: <%= @usuario.nome %><br>
+<%= @usuario.id %><br>
+Login: <%= @usuario.login %><br>
+E-mail: <%= @usuario.email %><br>
+Ativo: <%= @usuario.status %><br>
+
+<%= link_to 'Editar', edit_core_adminusuario_path(@usuario) %>&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to 'Voltar', core_adminusuarios_path %>
+<%= link_to "Ativar/Desativar", {:action=>"mudar_status", :id=>@usuario.id}, :confirm => 'Você tem certesa que quer ativar eu desativar esta usuario?' %>
+<%= link_to 'Mudar Senha', edit_core_adminusuario_adminmudarsenha_path(@usuario) %>
+

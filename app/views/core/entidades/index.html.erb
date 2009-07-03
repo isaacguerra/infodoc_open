@@ -1,0 +1,23 @@
+<div id="ferramentas">
+  <h3 class="h3_index">Lista de Entidades</h3>
+  <div id="novo">
+    <%= link_to 'Nova Entidade', new_core_entidade_path %>
+  </div>
+</div>
+<table id="tabela_listar_index">
+  <tr>
+    <th class="titulo_item_index">Nome</th>
+    <th class="titulo_item_index">Itens</th>
+  </tr>
+  <% @entidades.each do |entidade| %>
+  <tr class="linha_item_index">
+    <td class="item_index"><%= link_to entidade.nome, core_entidade_path(entidade) %></td>
+    <td class="item_index">
+      <%= link_to "Modulos", core_entidade_moduloentidades_path(entidade) %> |
+      <%= link_to "Grupos", core_entidade_grupos_path(entidade) %> |
+      <%= link_to "Usuarios", core_entidade_usuarios_path(entidade) %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+

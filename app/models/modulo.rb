@@ -1,5 +1,6 @@
-class Modulo < ActiveRecord::Base
+class Modulo < CouchFoo::Base
   has_many :sistemas
+  has_many :moduloentidades
 
   property :nome, String
   property :descricao, String

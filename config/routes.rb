@@ -3,12 +3,20 @@ ActionController::Routing::Routes.draw do |map|
 
   map.namespace :core do |core|
     core.resources :login
+    core.resources :entidades, :has_many => :grupos
+    core.resources :entidades, :has_many => :usuarios
+    core.resources :entidades, :has_many => :moduloentidades
+    core.resources :modulos, :has_many=>:sistemas
+    core.resources :admingrupos, :has_many=>:gruposistemas
+    core.resources :admingrupos, :has_many=>:grupousuarios
+    core.resources :adminusuarios, :has_many=>:adminmudarsenhas
+    core.resources :perfil
   end
 
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
-  map.root :controller => "home"  
+  map.root :controller => "home"
   map.resources :home
   map.resources :intranet
   map.purchase 'depoimentos', :controller => 'home', :action => 'depoimentos'

@@ -1,0 +1,12 @@
+<h3>Alterar Perfil</h3>
+<% form_for @usuario, :url=>{:action=>'update'} do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :nome %><br><%= f.text_field :nome %><br>
+  <%= f.label 'E-mail',:email %><br><%= f.text_field :email %><br>
+  <%= label_tag :senha_atual %><br><%= password_field_tag :senha_atual %><br>
+  <%= f.label :senha %><br><%= f.password_field :senha %><br>
+  <%= f.label :senha_confirmation %><br><%= f.password_field :senha_confirmation %><br>
+  <%= f.submit 'Salvar' %>
+<% end %>
+<%= link_to 'Voltar', core_perfil_path(@usuario) %>
+

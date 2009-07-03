@@ -37,6 +37,7 @@ class Usuario < CouchFoo::Base
     def criar_sessao
       sessao = Sessao.new
       sessao.usuario_id = self.id
+      sessao.entidade_id = self.entidade_id
       sessao.save
     end
 

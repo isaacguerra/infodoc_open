@@ -1,6 +1,7 @@
 class IntranetController < ApplicationController
-  layout "intranet"
+  skip_before_filter :autorizado
+
   def index
-    
   end
 end
+

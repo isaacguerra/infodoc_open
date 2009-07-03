@@ -1,0 +1,19 @@
+<h3>Editar Entidades</h3>
+<% form_for @entidade, :url=>{:action=>'update'} do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :nome %><br><%= f.text_field :nome %><br>
+  <%= f.label :razao_social %><br><%= f.text_field :razao_social %><br>
+  <%= f.label 'CPF/CNPJ',:cpf_cnpj %><br><%= f.text_field :cpf_cnpj %><br>
+  <%= f.label :cidade %><br><%= f.text_field :cidade %><br>
+  <%= f.label 'Endereço', :endereco %><br><%= f.text_field :endereco %><br>
+  <%= f.label :bairro %><br><%= f.text_field :bairro %><br>
+  <%= f.label :cep %><br><%= f.text_field :cep %><br>
+  <%= f.label :telefone %><br><%= f.text_field :telefone %><br>
+  <%= f.label 'E-mail', :email %><br><%= f.text_field :email %><br>
+  <%= f.label 'Nome_do_Responsavel', :nome_responsavel %><br><%= f.text_field :nome_responsavel %><br>
+  <%= f.label 'Telefone do Responsavel', :telefone_responsavel %><br><%= f.text_field :telefone_responsavel %><br>
+  <%= f.label 'E-mail do Responsavel', :email_responsavel %><br><%= f.text_field :email_responsavel %><br>
+  <%= f.submit 'Salvar' %>
+<% end %>
+<%= link_to 'Voltar', core_entidade_path(@entidade) %>
+

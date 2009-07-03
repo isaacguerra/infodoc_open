@@ -1,0 +1,10 @@
+<h3>Sistema</h3>
+Nome: <%= @sistema.nome %><br>
+Descrição: <%= @sistema.descricao %><br>
+Modulo: <%= @sistema.modulo.nome %><br>
+Rota: <%= @sistema.rota %><br>
+Classe: <%= @sistema.controle %><br><br>
+
+<%= link_to 'Editar', edit_core_modulo_sistema_path(@sistema.modulo, @sistema) %>&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to 'Voltar', core_modulo_sistemas_path(@sistema.modulo) %>
+

@@ -1,0 +1,9 @@
+<h3>Editar Modulo</h3>
+<% form_for @modulo, :url=>{:action=>'update'} do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :nome %><br><%= f.text_field :nome %><br>
+  <%= f.label 'Descrição',:descricao %><br><%= f.text_field :descricao %><br>
+  <%= f.submit 'Salvar' %>
+<% end %>
+<%= link_to 'Voltar', core_modulo_path(@modulo) %>
+

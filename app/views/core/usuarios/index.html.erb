@@ -1,0 +1,16 @@
+<h3>Lista de Usuarios</h3>
+	<%= link_to 'Novo Usuario', new_core_entidade_usuario_path(@entidade) %>
+	<table>
+	  </tr>
+	    <th>Nome</th>
+	    <th>Status</th>
+	  </tr>
+	  <% @entidade.usuarios.each do |usuario| %>
+	  <tr>
+	    <td><%= link_to usuario.nome, core_entidade_usuario_path(@entidade, usuario) %></td>
+	    <td><%=h usuario.status %></td>
+	  </tr>
+	  <% end %>
+	</table>
+</div>
+

@@ -1,0 +1,20 @@
+<div id="ferramentas">
+  <h3 class="h3_index">Lista de Grupos</h3>
+  <div id="novo">
+   	<%= link_to 'Novo Grupo', new_core_admingrupo_path %>
+  </div>
+</div>
+<table id="tabela_listar_index">
+  </tr>
+    <th class="titulo_item_index">Nome</th>
+    <th class="titulo_item_index">Itens</th>
+  </tr>
+    <% @grupos.each do |grupo| %>
+    <tr class="linha_item_index">
+      <td class="item_index"><%= link_to grupo.nome, core_admingrupo_path(grupo) %></td>
+      <td><%= link_to "Usuarios", core_admingrupo_grupousuarios_path(grupo) %> |
+      <%= link_to "Sistemas", core_admingrupo_gruposistemas_path(grupo) %></td>
+    </tr>
+	  <% end %>
+</table>
+

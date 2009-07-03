@@ -2,6 +2,7 @@ class Sessao < CouchFoo::Base
     belongs_to :usuario
 
     property :usuario_id, String
+    property :entidade_id, String
     property :hash_sessao, String
     property :nome_usuario, String
     property :status, Boolean
@@ -28,6 +29,24 @@ class Sessao < CouchFoo::Base
       self.corrente_data_login = DateTime.now
       self.ultima_data_acesso = DateTime.now
       self.status = true
+
+      #sistemas disponiveis
+      sistemas = []
+      self.usuario.grupousuarios.each do |gu|
+        gu.grupo.gruposistemas.each do |gs|
+          ja = false
+          sistemas.each do |ar|
+            if ar[0] == gs.sistema_id
+              ja = true
+              if ar[1] < gs.permissao
+                ar[1] = gs.permissao
+              end
+            end
+          end
+          sistemas << [gs.sistema_id, gs.permissao, gs.sistema.controle, gs.sistema.rota, gs.sistema.nome, gs.sistema.menu, gs.sistema.status] unless ja
+        end
+      end
+      self.opcoes = sistemas
       self.save
     end
 

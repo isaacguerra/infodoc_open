@@ -1,0 +1,21 @@
+<h3>Entidade</h3>
+Nome: <%= @entidade.nome %><br>
+Razão Social: <%= @entidade.razao_social %><br>
+CPF/CNPJ: <%= @entidade.cpf_cnpj %><br>
+Cidade: <%= @entidade.cidade %><br>
+Endereço: <%= @entidade.endereco %><br>
+Bairro: <%= @entidade.bairro %><br>
+CEP: <%= @entidade.cep %><br>
+Telefone: <%= @entidade.telefone %><br>
+E-mail: <%= @entidade.email %><br>
+Nome do Responsavel: <%= @entidade.nome_responsavel %><br>
+Telefone do Responsavel: <%= @entidade.telefone_responsavel %><br>
+E-mail do Responsavel: <%= @entidade.email_responsavel %><br>
+Ativo: <%= @entidade.status %><br><br>
+
+<%= link_to 'Editar', edit_core_entidade_path(@entidade) %>&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to 'Voltar', core_entidades_path %>&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to 'Usuarios', core_entidade_usuarios_path(@entidade) %>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<%= link_to "Ativar/Desativar", {:controller=>"/core/entidades", :action=>"mudar_status", :id=>@entidade}, :confirm => 'Você tem certesa que quer ativar eu desativar esta entidade?' %>
+

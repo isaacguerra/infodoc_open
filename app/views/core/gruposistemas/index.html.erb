@@ -1,0 +1,44 @@
+<div id="ferramentas">
+  <h3>Lista de Sistemas do Grupos</h3>
+</div>
+  <% form_tag(:action=>"create") do %>
+  <table>
+   </tr>
+     <th>Sistemas Inclusos no Grupo</th>
+    </tr>
+    <% @gruposistemas.each do |gs| %>
+    <tr>
+      <td>
+       <%= check_box_tag "sistemas[]", gs.id %>
+       <%= gs.sistema.nome %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= submit_tag "Remover" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+
+  <% form_tag(:action=>"create") do %>
+  <table>
+   </tr>
+     <th>Sistemas não Inclusos no Grupo</th>
+    </tr>
+    <% @sistemas.each do |sistema| %>
+    <tr>
+      <td>
+       <%= check_box_tag "sistemas[]", sistema.id %>
+       <%= sistema.nome %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= submit_tag "Adicionar" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+</div>
+
