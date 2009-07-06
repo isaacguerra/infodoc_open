@@ -1,10 +1,16 @@
-<h3>Cadastrar Grupo</h3>
-<% form_for @grupo, :url=>{:action=>'create'} do |f| %>
-  <%= f.error_messages %>
-  <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.usuario.entidade_id %>
-  <%= f.label :nome %><br><%= f.text_field :nome %><br>
-  <%= f.label 'Descrição',:descricao %><br><%= f.text_field :descricao %><br>
-  <%= f.submit 'Salvar' %>
-<% end %>
-<%= link_to 'Voltar', core_admingrupos_path %>
+<div id="barra_titulo">
+  <h3 class="titulo_new">Cadastrar Grupo</h3>
+</div>
+<div class="formulario">
+  <% form_for @grupo, :url=>{:action=>'create'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.usuario.entidade_id %>
+    <%= f.label :nome %><br><%= f.text_field :nome %><br>
+    <%= f.label :descricao, 'Descrição' %><br><%= f.text_field :descricao %><br>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_admingrupos_path %>
+</div>
 

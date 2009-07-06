@@ -1,12 +1,20 @@
-<h3>Cadastrar Usuario</h3>
-<% form_for @usuario, :url=>{:action=>'create'} do |f| %>
-  <%= f.error_messages %>
-  <%= f.label :nome %><br><%= f.text_field :nome %><br>
-  <%= f.label 'E-mail',:email %><br><%= f.text_field :email %><br>
-  <%= f.label :login %><br><%= f.text_field :login %><br>
-  <%= f.label :senha %><br><%= f.password_field :senha %><br>
-  <%= f.label :senha_confirmation %><br><%= f.password_field :senha_confirmation %><br>
-  <%= f.submit 'Salvar' %>
-<% end %>
-<%= link_to 'Voltar', core_entidade_usuarios_path(@usuario.entidade) %>
+<div id="barra_titulo">
+  <h3 id="titulo_new">Cadastrar Usuario</h3>
+</div>
+
+<div class="formulario">
+  <% form_for @usuario, :url=>{:action=>'create'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.label :nome %><br><%= f.text_field :nome %><br>
+    <%= f.label :email, 'E-mail' %><br><%= f.text_field :email %><br>
+    <%= f.label :login %><br><%= f.text_field :login %><br>
+    <%= f.label :senha %><br><%= f.password_field :senha %><br>
+    <%= f.label :senha_confirmation, 'Confirme a Senha' %><br><%= f.password_field :senha_confirmation %><br>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_entidade_usuarios_path(@usuario.entidade) %>
+</div>
 

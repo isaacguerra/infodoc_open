@@ -16,6 +16,11 @@ class Sessao < CouchFoo::Base
 
     property :opcoes, Array
 
+    #scopos----------
+    named_scope :ativo, :conditions=>{:status=>true}
+    named_scope :da_entidade, lambda {|id| {:conditions=>{:entidade_id=>id}}}
+    #-------------
+
     def inicia_sessao(ip, nome)
       self.nome_usuario = nome
       if self.num_login

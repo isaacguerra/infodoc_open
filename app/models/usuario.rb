@@ -25,6 +25,12 @@ class Usuario < CouchFoo::Base
     validates_presence_of :senha
     validates_confirmation_of :senha
 
+    #scopos----------
+    named_scope :ativo, :conditions=>{:status=>true}
+    named_scope :da_entidade, lambda {|id| {:conditions=>{:entidade_id=>id}}}
+    #-------------
+
+
     before_save :encriptar_senha
     after_create :criar_sessao
 

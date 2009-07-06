@@ -1,18 +1,18 @@
-<div id="ferramentas">
-  <h3 class="h3_index">Lista de Entidades</h3>
-  <div id="novo">
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Entidades</h3>
+  <div id="link_botao">
     <%= link_to 'Nova Entidade', new_core_entidade_path %>
   </div>
 </div>
-<table id="tabela_listar_index">
+<table id="listar">
   <tr>
-    <th class="titulo_item_index">Nome</th>
-    <th class="titulo_item_index">Itens</th>
+    <th class="titulo_lista">Nome</th>
+    <th class="titulo_lista">Itens</th>
   </tr>
   <% @entidades.each do |entidade| %>
-  <tr class="linha_item_index">
-    <td class="item_index"><%= link_to entidade.nome, core_entidade_path(entidade) %></td>
-    <td class="item_index">
+  <tr>
+    <td class="itens_index"><%= link_to entidade.nome, core_entidade_path(entidade) %></td>
+    <td class="itens_index">
       <%= link_to "Modulos", core_entidade_moduloentidades_path(entidade) %> |
       <%= link_to "Grupos", core_entidade_grupos_path(entidade) %> |
       <%= link_to "Usuarios", core_entidade_usuarios_path(entidade) %>

@@ -18,7 +18,8 @@ class Core::UsuariosController < ApplicationController
     @usuario.entidade_id=params[:entidade_id]
     @usuario.status = true
 	  if @usuario.save
-       redirect_to :controller=>"usuarios",:action=>"show",:id=>@usuario.id
+	    flash[:notice] = "Usuario Criado com Sucesso!"
+      redirect_to :controller=>"usuarios",:action=>"show",:id=>@usuario.id
     else
        render :action => "new"
     end
@@ -32,6 +33,7 @@ class Core::UsuariosController < ApplicationController
   def update
     @usuario = Usuario.find(params[:id])
     if @usuario.update_attributes(params[:usuario])
+      flash[:notice] = "Usuario Atualizado com Sucesso!"
       redirect_to :controller=>"usuarios",:action=>"show",:id=>@usuario.id
     else
        render :action=> :edit, :id=>@usuario
@@ -46,6 +48,7 @@ class Core::UsuariosController < ApplicationController
       @usuario.status = true
     end
     @usuario.save
+    flash[:notice] = "Status Alterad com Sucesso!"
     render :action=> :show, :id=>@usuario
   end
 end

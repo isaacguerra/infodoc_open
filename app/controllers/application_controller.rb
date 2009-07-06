@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
       redirect_to "/intranet"
       return false
     else
-      flash[:notice] = "Sistema Autorizado para este Usuario!"
+      #flash[:notice] = "Sistema Autorizado para este Usuario!"
       return true
     end
   end

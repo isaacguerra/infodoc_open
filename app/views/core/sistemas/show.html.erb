@@ -1,10 +1,34 @@
-<h3>Sistema</h3>
-Nome: <%= @sistema.nome %><br>
-Descrição: <%= @sistema.descricao %><br>
-Modulo: <%= @sistema.modulo.nome %><br>
-Rota: <%= @sistema.rota %><br>
-Classe: <%= @sistema.controle %><br><br>
+<div id="barra_titulo">
+  <h3 id="titulo_show">Sistema</h3>
+  <div id="link_botao">
+    <%= link_to 'Editar', edit_core_modulo_sistema_path(@sistema.modulo, @sistema) %>&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+</div>
 
-<%= link_to 'Editar', edit_core_modulo_sistema_path(@sistema.modulo, @sistema) %>&nbsp;&nbsp;&nbsp;&nbsp;
-<%= link_to 'Voltar', core_modulo_sistemas_path(@sistema.modulo) %>
+<table id="listar">
+  <tr>
+    <td class="lista_item">Nome</td>
+    <td class="lista_conteudo"><%= @sistema.nome %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Descrição</td>
+    <td class="lista_conteudo"><%= @sistema.descricao %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Modulo</td>
+    <td class="lista_conteudo"><%= @sistema.modulo.nome %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Rota</td>
+    <td class="lista_conteudo"><%= @sistema.rota %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Classe</td>
+    <td class="lista_conteudo"><%= @sistema.controle %></td>
+  </tr>
+</table>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_modulo_sistemas_path(@sistema.modulo) %>
+</div>
 

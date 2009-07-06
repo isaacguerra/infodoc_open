@@ -13,8 +13,10 @@ class Core::GrupousuariosController < ApplicationController
     if params[:usuarios]
       if params[:commit] == "Adicionar"
         params[:usuarios].each {|u| Grupousuario.create(:usuario_id=>u, :grupo_id=>params[:admingrupo_id])}
+        flash[:notice] = "Usuario (s) Adicionado (s) ao Grupo!"
       else
         params[:usuarios].each {|u| Grupousuario.find(u).destroy}
+        flash[:notice] = "Usuario (s) Retirado (s) do Grupo!"
       end
     end
     redirect_to core_admingrupo_grupousuarios_path(params[:admingrupo_id])

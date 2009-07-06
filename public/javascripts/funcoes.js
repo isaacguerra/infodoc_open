@@ -1,15 +1,22 @@
+               /**************************  LOGIN  **********************************/
+              /*************************** SCRIPT  para colocar ********************/
+             /*************************** Fundo amarelo em formulários ************/
+            /*************************** de login ********************************/
 var x;
 x=$(document);
 x.ready(inicializarEventos);
 
 function inicializarEventos()
 {
-  var x=$("#login_usuario");
+    
+  var x=$("#login_usuario,#forms input");
   x.focus(tomaFoco);
   x.blur(pierdeFoco);
   x=$("#login_senha");
   x.focus(tomaFoco);
   x.blur(pierdeFoco);
+
+  
 }
 
 function tomaFoco()
@@ -23,4 +30,10 @@ function pierdeFoco()
   var x=$(this);
   x.css("background","#F5F5F5");
 }
+
+
+
+
+
+
 

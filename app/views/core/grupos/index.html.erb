@@ -1,16 +1,22 @@
-<div id="ferramentas">
-  <h3 class="h3_index">Lista de Grupos</h3>
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Grupos</h3>
+  <div id="link_botao">
+   	<%= link_to 'Novo Grupo', new_core_entidade_grupo_path(@entidade) %>
+  </div>
 </div>
- 	<%= link_to 'Novo Grupo', new_core_entidade_grupo_path(@entidade) %>
-  <table id="tabela_listar_index">
-   </tr>
-     <th class="titulo_item_index">Nome</th>
-    </tr>
-    <% @grupos.each do |grupo| %>
-    <tr class="linha_item_index">
-      <td class="item_index"><%= link_to grupo.nome, core_entidade_grupo_path(@entidade, grupo) %></td>
-    </tr>
-    <% end %>
-  </table>
+
+<table id="listar">
+ </tr>
+   <th class="titulo_lista">Nome</th>
+  </tr>
+  <% @grupos.each do |grupo| %>
+  <tr>
+    <td class="itens_index"><%= link_to grupo.nome, core_entidade_grupo_path(@entidade, grupo) %></td>
+  </tr>
+  <% end %>
+</table>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_entidades_path %>
 </div>
 

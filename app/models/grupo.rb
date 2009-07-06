@@ -13,5 +13,9 @@ class Grupo < CouchFoo::Base
   validates_presence_of :nome
   validates_presence_of :descricao
 
+  #scopos----------
+  named_scope :da_entidade, lambda {|id| {:conditions=>{:entidade_id=>id}}}
+  #-------------
+
 end
 

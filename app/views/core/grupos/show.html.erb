@@ -1,8 +1,28 @@
-<h3>Grupo</h3>
-Nome: <%= @grupo.nome %><br>
-Descrição: <%= @grupo.descricao %><br>
-Entidade: <%= @grupo.entidade.nome %><br><br>
+<div id="barra_titulo">
+  <h3 class="titulo_show">Grupo</h3>
+  <div id="link_botao">
+  <%= link_to 'Editar', edit_core_entidade_grupo_path(@entidade, @grupo) %>
+  </div>
+</div>
 
-<%= link_to 'Editar', edit_core_entidade_grupo_path(@entidade, @grupo) %>&nbsp;&nbsp;&nbsp;&nbsp;
-<%= link_to 'Voltar', core_entidade_grupos_path(@entidade) %>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<table id="listar">
+  <tr>
+    <td class="lista_item">Nome</td>
+    <td class="lista_conteudo"><%= @grupo.nome %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Descrição</td>
+    <td class="lista_conteudo"><%= @grupo.descricao %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Entidade</td>
+    <td class="lista_conteudo"><%= @grupo.entidade.nome %></td>
+  </tr>
+</table>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_entidade_grupos_path(@entidade) %>
+</div>
 

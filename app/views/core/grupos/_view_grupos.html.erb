@@ -1,14 +1,17 @@
-	<%= link_to 'Novo Grupo', :action=>"new", :entidade_id=>@grupos[0].entidade.id if @grupos %>
-	<table>
-	  </tr>
-	    <th>Nome</th>
-	    <th>Descrição</th>
-	  </tr>
-	  <% @grupos.each do |grupo| %>
-	  <tr>
-	    <td><%= link_to grupo.nome, core_grupo_path(grupo) %></td>
-	    <td><%=h grupo.descricao %></td>
-	  </tr>
-	  <% end %>
-	</table>
+<div id="link_botao">
+  <%= link_to 'Novo Grupo', :action=>"new", :entidade_id=>@grupos[0].entidade.id if @grupos %>
+</div>
+
+<table id="listar">
+  </tr>
+    <th class="titulo_lista">Nome</th>
+    <th class="titulo_lista">Descrição</th>
+  </tr>
+  <% @grupos.each do |grupo| %>
+  <tr>
+    <td class="itens_index"><%= link_to grupo.nome, core_grupo_path(grupo) %></td>
+    <td class="itens_index"><%=h grupo.descricao %></td>
+  </tr>
+  <% end %>
+</table>
 

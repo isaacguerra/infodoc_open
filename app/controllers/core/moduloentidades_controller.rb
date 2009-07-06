@@ -13,8 +13,10 @@ class Core::ModuloentidadesController < ApplicationController
     if params[:modulos]
       if params[:commit] == "Adicionar"
         params[:modulos].each {|m| Moduloentidade.create(:modulo_id=>m, :entidade_id=>params[:entidade_id])}
+        flash[:notice] = "Entidade (s) Adicionada (s) ao Módulo!"
       else
         params[:modulos].each {|m| Moduloentidade.find(m).destroy}
+        flash[:notice] = "Entidade (s) Retirada (s) ao Módulo!"
       end
     end
     redirect_to core_entidade_moduloentidades_path(params[:entidade_id])

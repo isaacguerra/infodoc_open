@@ -1,21 +1,65 @@
-<h3>Entidade</h3>
-Nome: <%= @entidade.nome %><br>
-Razão Social: <%= @entidade.razao_social %><br>
-CPF/CNPJ: <%= @entidade.cpf_cnpj %><br>
-Cidade: <%= @entidade.cidade %><br>
-Endereço: <%= @entidade.endereco %><br>
-Bairro: <%= @entidade.bairro %><br>
-CEP: <%= @entidade.cep %><br>
-Telefone: <%= @entidade.telefone %><br>
-E-mail: <%= @entidade.email %><br>
-Nome do Responsavel: <%= @entidade.nome_responsavel %><br>
-Telefone do Responsavel: <%= @entidade.telefone_responsavel %><br>
-E-mail do Responsavel: <%= @entidade.email_responsavel %><br>
-Ativo: <%= @entidade.status %><br><br>
+<div id="barra_titulo">
+  <h3 class="titulo_show">Entidade</h3>
+  <div id="link_botao"><%= link_to "Ativar/Desativar", {:controller=>"/core/entidades", :action=>"mudar_status", :id=>@entidade}, :confirm => 'Você tem certesa que quer ativar eu desativar esta entidade?' %></div>
+  <div id="link_botao"><%= link_to 'Editar', edit_core_entidade_path(@entidade) %></div>
+  <div id="link_botao"><%= link_to 'Usuarios', core_entidade_usuarios_path(@entidade) %></div>
+</div>
 
-<%= link_to 'Editar', edit_core_entidade_path(@entidade) %>&nbsp;&nbsp;&nbsp;&nbsp;
-<%= link_to 'Voltar', core_entidades_path %>&nbsp;&nbsp;&nbsp;&nbsp;
-<%= link_to 'Usuarios', core_entidade_usuarios_path(@entidade) %>&nbsp;&nbsp;&nbsp;&nbsp;
-
-<%= link_to "Ativar/Desativar", {:controller=>"/core/entidades", :action=>"mudar_status", :id=>@entidade}, :confirm => 'Você tem certesa que quer ativar eu desativar esta entidade?' %>
+<table id="listar">
+  <tr>
+    <td class="lista_item">Nome</td>
+    <td class="lista_conteudo"><%= @entidade.nome %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Razão Social</td>
+    <td class="lista_conteudo"><%= @entidade.razao_social %>
+  </tr>
+  <tr>
+    <td class="lista_item">CPF/CNPJ</td>
+    <td class="lista_conteudo"><%= @entidade.cpf_cnpj %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Cidade</td>
+    <td class="lista_conteudo"><%= @entidade.cidade %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Endereço</td>
+    <td class="lista_conteudo"><%= @entidade.endereco %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Bairro</td>
+    <td class="lista_conteudo"><%= @entidade.bairro %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">CEP</td>
+    <td class="lista_conteudo"><%= @entidade.cep %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Telefone</td>
+    <td class="lista_conteudo"><%= @entidade.telefone %>
+  </tr>
+  <tr>
+    <td class="lista_item">E-mail</td>
+    <td class="lista_conteudo"><%= @entidade.email %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Nome do Responsavel</td>
+    <td class="lista_conteudo"><%= @entidade.nome_responsavel %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Telefone do Responsavel</td>
+    <td class="lista_conteudo"><%= @entidade.telefone_responsavel %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">E-mail do Responsavel</td>
+    <td class="lista_conteudo"><%= @entidade.email_responsavel %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Ativo</td>
+    <td class="lista_conteudo"><%= @entidade.status %></td>
+  </tr>
+</table>
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_entidades_path %>
+</div>
 

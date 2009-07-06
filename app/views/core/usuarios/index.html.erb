@@ -1,16 +1,23 @@
-<h3>Lista de Usuarios</h3>
-	<%= link_to 'Novo Usuario', new_core_entidade_usuario_path(@entidade) %>
-	<table>
-	  </tr>
-	    <th>Nome</th>
-	    <th>Status</th>
-	  </tr>
-	  <% @entidade.usuarios.each do |usuario| %>
-	  <tr>
-	    <td><%= link_to usuario.nome, core_entidade_usuario_path(@entidade, usuario) %></td>
-	    <td><%=h usuario.status %></td>
-	  </tr>
-	  <% end %>
-	</table>
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Usuarios</h3>
+  <div id="link_botao">
+    <%= link_to 'Novo Usuario', new_core_entidade_usuario_path(@entidade) %>
+  </div>
+</div>
+<table id="listar">
+  </tr>
+    <th class="titulo_lista">Nome</th>
+    <th class="titulo_lista">Status</th>
+  </tr>
+  <% @entidade.usuarios.each do |usuario| %>
+  <tr>
+    <td class="itens_index"><%= link_to usuario.nome, core_entidade_usuario_path(@entidade, usuario) %></td>
+    <td class="itens_index"><%=h usuario.status %></td>
+  </tr>
+  <% end %>
+</table>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_entidades_path %>
 </div>
 

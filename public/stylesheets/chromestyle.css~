@@ -45,12 +45,12 @@ margin: 1px 0 0 0px;
 position:absolute;
 border: 1px solid #BBB; /*THEME CHANGE HERE*/
 border-top-width: 0;
-font:normal 12px Verdana;
+font:normal 14px Verdana;
 line-height:18px;
 z-index:100;
 background-color: #EDEDED;
 width: 115px;
-padding:5px;
+padding:3px;
 visibility: hidden;
 
 }
