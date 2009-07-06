@@ -19,7 +19,8 @@ class Core::SistemasController < ApplicationController
     @sistema.modulo_id = params[:modulo_id]
     @sistema.status = true
 	  if @sistema.save
-       redirect_to :controller=>"sistemas",:action=>"show",:id=>@sistema.id
+	    flash[:notice] = "Sistema Criado com Sucesso!"
+      redirect_to :controller=>"sistemas",:action=>"show",:id=>@sistema.id
     else
        render :action => "new"
     end
@@ -33,6 +34,7 @@ class Core::SistemasController < ApplicationController
   def update
     @sistema = Sistema.find(params[:id])
     if @sistema.update_attributes(params[:sistema])
+      flash[:notice] = "Sistema Alterado com Sucesso!"
       redirect_to :controller=>"sistemas",:action=>"show",:id=>@sistema.id
     else
        render :action=> :edit, :id=>@sistema

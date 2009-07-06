@@ -15,7 +15,8 @@ class Core::AdminusuariosController < ApplicationController
     @usuario = Usuario.new(params[:usuario])
     @usuario.status = true
 	  if @usuario.save
-       redirect_to :action=>"show",:id=>@usuario.id
+	    flash[:notice] = "Usuario Criado com Sucesso!"
+      redirect_to :action=>"show",:id=>@usuario.id
     else
        render :action => "new"
     end
@@ -28,6 +29,7 @@ class Core::AdminusuariosController < ApplicationController
   def update
     @usuario = Usuario.find(params[:id])
     if @usuario.update_attributes(params[:usuario])
+      flash[:notice] = "Usuario Atualizado com Sucesso!"
       redirect_to :action=>"show",:id=>@usuario.id
     else
        render :action=> :edit, :id=>@usuario

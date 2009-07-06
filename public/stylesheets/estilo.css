@@ -1,4 +1,4 @@
-*       {
+* {
    font-family:Arial, Helvetica, Verdana;
 }
 body {
@@ -6,6 +6,7 @@ body {
 	padding:0;
 	background-color: #FFFFFF;
 }
+
 #tudo {
     height: auto;
 	width: 97%;
@@ -378,7 +379,7 @@ input#login_usuario,input#login_senha {
     border-right:0px ;
     border-left: 0px;
     color: #FFFFFF;
-    weight:bold;
+    font-weight:bold;
     margin-left:29%;
     margin-bottom:20px
     text-align:center;
@@ -403,11 +404,8 @@ input.enviar {
     padding-bottom: 5px;
     width:100%;
     height:auto;
-    border-top: 2px solid #B50404;
-    border-bottom: 2px solid #B50404;
-    background-color:#E67E73;
+    border-top: 2px solid #CF9191;
+    border-bottom: 2px solid #CF9191;
+    background-color:#F5C4C4;
 }
-#flash img {
-    
 
-}

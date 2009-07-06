@@ -15,7 +15,8 @@ class Core::EntidadesController < ApplicationController
     @entidade = Entidade.new(params[:entidade])
     @entidade.status = true
     if @entidade.save
-       redirect_to core_entidade_path(@entidade)
+      flash[:notice] = "Entidade Criado com Sucesso!"
+      redirect_to core_entidade_path(@entidade)
     else
        render :action => "new"
     end
@@ -28,6 +29,7 @@ class Core::EntidadesController < ApplicationController
   def update
     @entidade = Entidade.find(params[:id])
     if @entidade.update_attributes(params[:entidade])
+      flash[:notice] = "Entidade Atualizada com Sucesso!"
       redirect_to core_entidade_path(@entidade)
     else
        render :action=>:edit, :id=>@entidade

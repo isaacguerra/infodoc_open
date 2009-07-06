@@ -1,10 +1,10 @@
-<div id="ferramentas">
-  <h3>Lista de Modulos da Entidade</h3>
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Modulos da Entidade</h3>
 </div>
   <% form_tag(:action=>"create") do %>
-  <table>
-   </tr>
-     <th>Modulos Inclusos a Entidade</th>
+  <table id="listar">
+   <tr>
+     <th class="titulo_lista">Modulos Inclusos a Entidade</th>
     </tr>
     <% @entidade.moduloentidades.each do |me| %>
     <tr>
@@ -22,9 +22,9 @@
 
 
   <% form_tag(:action=>"create") do %>
-  <table>
-   </tr>
-     <th>Usuarios não Inclusos no Grupo</th>
+  <table id="listar">
+   <tr>
+     <th class="titulo_lista">Usuarios não Inclusos no Grupo</th>
     </tr>
     <% @modulos.each do |modulo| %>
     <tr>
@@ -40,5 +40,7 @@
   </table>
   <% end %>
 
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_entidades_path %>
 </div>
 

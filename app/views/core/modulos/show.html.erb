@@ -1,7 +1,22 @@
-<h3>Modulo</h3>
-Nome: <%= @modulo.nome %><br>
-Descrição: <%= @modulo.descricao %><br>
+<div id="barra_titulo">
+  <h3 class="titulo_show">Modulo</h3>
+  <div id="link_botao">
+    <%= link_to 'Editar', edit_core_modulo_path(@modulo) %>
+  </div>
+</div>
 
-<%= link_to 'Editar', edit_core_modulo_path(@modulo) %>&nbsp;&nbsp;&nbsp;&nbsp;
-<%= link_to 'Voltar', core_modulos_path %>
+<table id="listar">
+  <tr>
+    <td class="lista_item">Nome</td>
+    <td class="lista_conteudo"><%= @modulo.nome %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Descrição</td>
+    <td class="lista_conteudo"><%= @modulo.descricao %></td>
+  </tr>
+</table>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_modulos_path %>
+</div>
 

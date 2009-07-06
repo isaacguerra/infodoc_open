@@ -1,10 +1,11 @@
-<div id="ferramentas">
-  <h3>Lista de Sistemas do Grupos</h3>
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Sistemas do Grupos</h3>
 </div>
+
   <% form_tag(:action=>"create") do %>
-  <table>
-   </tr>
-     <th>Sistemas Inclusos no Grupo</th>
+  <table id="listar">
+   <tr>
+     <th class="titulo_lista">Sistemas Inclusos no Grupo</th>
     </tr>
     <% @gruposistemas.each do |gs| %>
     <tr>
@@ -22,9 +23,9 @@
 
 
   <% form_tag(:action=>"create") do %>
-  <table>
+  <table id="listar">
    </tr>
-     <th>Sistemas não Inclusos no Grupo</th>
+     <th class="titulo_lista">Sistemas não Inclusos no Grupo</th>
     </tr>
     <% @sistemas.each do |sistema| %>
     <tr>
@@ -40,5 +41,7 @@
   </table>
   <% end %>
 
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_admingrupos_path %>
 </div>
 

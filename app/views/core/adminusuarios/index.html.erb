@@ -1,18 +1,18 @@
-<div id="ferramentas">
-  <h3 class="h3_index">Lista de Usuarios</h3>
-  <div id="novo">
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Usuarios</h3>
+  <div id="link_botao">
    	<%= link_to 'Novo Usuario', new_core_adminusuario_path %>
   </div>
 </div>
-<table id="tabela_listar_index">
+<table id="listar">
   <tr>
-    <th class="titulo_item_index">Nome</th>
-    <th class="titulo_item_index">Status</th>
+    <th class="titulo_lista">Nome</th>
+    <th class="titulo_lista">Status</th>
   </tr>
 	<% @usuarios.each do |usuario| %>
-  <tr class="linha_item_index">
-    <td class="item_index"><%= link_to usuario.nome, core_adminusuario_path(usuario) %></td>
-    <td class="item_index"><%=h status(usuario.status) %></td>
+  <tr>
+    <td class="itens_index"><%= link_to usuario.nome, core_adminusuario_path(usuario) %></td>
+    <td class="itens_index"><%=h status(usuario.status) %></td>
   </tr>
   <% end %>
 </table>

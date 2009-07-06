@@ -14,7 +14,8 @@ class Core::AdmingruposController < ApplicationController
   def create
     @grupo = Grupo.new(params[:grupo])
 	  if @grupo.save
-       redirect_to :action=>"show",:id=>@grupo.id
+	    flash[:notice] = "Grupo Criado com Sucesso!"
+      redirect_to :action=>"show",:id=>@grupo.id
     else
        render :action => "new"
     end
@@ -27,6 +28,7 @@ class Core::AdmingruposController < ApplicationController
   def update
     @grupo = Grupo.find(params[:id])
     if @grupo.update_attributes(params[:grupo])
+      flash[:notice] = "Grupo Atualizado com Sucesso!"
       redirect_to :action=>"show",:id=>@grupo.id
     else
        render :action=> :edit, :id=>@grupo

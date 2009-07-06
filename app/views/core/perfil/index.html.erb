@@ -1,7 +1,22 @@
-<h3>Perfil</h3>
-Nome: <%= @usuario.nome %><br>
-Login: <%= @usuario.login %><br>
-E-mail: <%= @usuario.email %><br>
+<div id="barra_titulo">
+  <h3 class="titulo_show">Perfil</h3>
+  <div id="link_botao">
+    <%= link_to "Alterar Perfil e Senha", edit_core_perfil_path(@usuario) %>
+  </div>
+</div>
 
-<%= link_to "Alterar Perfil e Senha", edit_core_perfil_path(@usuario) %>
+<table id="listar">
+  <tr>
+    <td class="lista_item">Nome</td>
+    <td class="lista_conteudo"><%= @usuario.nome %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Login</td>
+    <td class="lista_conteudo"><%= @usuario.login %></td>
+  <Qtr>
+  <tr>
+    <td class="lista_item">E-mail</td>
+    <td class="lista_conteudo"><%= @usuario.email %></td>
+  </tr>
+</table>
 

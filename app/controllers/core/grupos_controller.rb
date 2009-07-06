@@ -17,7 +17,8 @@ class Core::GruposController < ApplicationController
   def create
     @grupo = Grupo.new(params[:grupo])
 	  if @grupo.save
-       redirect_to :controller=>"grupos",:action=>"show",:id=>@grupo.id
+	    flash[:notice] = "Grupo Criado com Sucesso!"
+      redirect_to :controller=>"grupos",:action=>"show",:id=>@grupo.id
     else
        render :action => "new"
     end
@@ -32,6 +33,7 @@ class Core::GruposController < ApplicationController
     @entidade = Entidade.find params[:entidade_id]
     @grupo = Grupo.find(params[:id])
     if @grupo.update_attributes(params[:grupo])
+      flash[:notice] = "Grupo Atualizado com Sucesso!"
       redirect_to :controller=>"grupos",:action=>"show",:id=>@grupo.id
     else
        render :action=> :edit, :id=>@grupo

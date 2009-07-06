@@ -1,12 +1,20 @@
-<h3>Editar Sistema - <%= @modulo.nome%></h3>
-<% form_for @sistema, :url=>{:action=>'update'} do |f| %>
-  <%= f.error_messages %>
-  <%= f.label :nome %><br><%= f.text_field :nome %><br>
-  <%= f.label 'Descrição',:descricao %><br><%= f.text_field :descricao %><br>
-  <%= f.label :rota %><br><%= f.text_field :rota %><br>
-  <%= f.label :controle %><br><%= f.text_field :controle %><br>
-  <%= f.label :menu %><br><%= f.check_box :menu %><br>
-  <%= f.submit 'Salvar' %>
-<% end %>
-<%= link_to 'Voltar', core_modulo_sistema_path(@sistema.modulo, @sistema) %>
+<div id="barra_titulo">
+  <h3 id="titulo_edit">Editar Sistema - <%= @modulo.nome%></h3>
+</div>
+
+<div class="formulario">
+  <% form_for @sistema, :url=>{:action=>'update'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.label :nome %><br><%= f.text_field :nome %><br>
+    <%= f.label :descricao, 'Descrição' %><br><%= f.text_field :descricao %><br>
+    <%= f.label :rota %><br><%= f.text_field :rota %><br>
+    <%= f.label :controle %><br><%= f.text_field :controle %><br>
+    <%= f.label :menu %><br><%= f.check_box :menu %><br>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_modulo_sistema_path(@sistema.modulo, @sistema) %>
+</div>
 

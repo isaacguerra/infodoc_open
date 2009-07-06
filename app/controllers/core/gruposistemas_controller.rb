@@ -18,8 +18,10 @@ class Core::GruposistemasController < ApplicationController
     if params[:sistemas]
       if params[:commit] == "Adicionar"
         params[:sistemas].each {|s| Gruposistema.create(:sistema_id=>s, :grupo_id=>params[:admingrupo_id])}
+        flash[:notice] = "Sistema (s) Adicionado (s) ao Grupo!"
       else
         params[:sistemas].each {|s| Gruposistema.find(s).destroy}
+        flash[:notice] = "Sistema (s) Retirado (s) do Grupo!"
       end
     end
     redirect_to core_admingrupo_gruposistemas_path(params[:admingrupo_id])

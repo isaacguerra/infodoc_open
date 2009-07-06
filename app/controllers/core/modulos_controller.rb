@@ -14,7 +14,8 @@ class Core::ModulosController < ApplicationController
   def create
     @modulo = Modulo.new(params[:modulo])
     if @modulo.save
-       redirect_to core_modulo_path(@modulo)
+      flash[:notice] = "Módulo Criado com Sucesso!"
+      redirect_to core_modulo_path(@modulo)
     else
        render :action => "new"
     end
@@ -27,6 +28,7 @@ class Core::ModulosController < ApplicationController
   def update
     @modulo = Modulo.find(params[:id])
     if @modulo.update_attributes(params[:modulo])
+      flash[:notice] = "Módulo Atualizado com Sucesso!"
       redirect_to core_modulo_path(@modulo)
     else
        render :action=>:edit, :id=>@modulo

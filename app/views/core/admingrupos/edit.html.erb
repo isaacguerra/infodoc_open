@@ -1,9 +1,17 @@
-<h3>Editar Grupo</h3>
-<% form_for @grupo, :url=>{:action=>'update'} do |f| %>
-  <%= f.error_messages %>
-  <%= f.label :nome %><br><%= f.text_field :nome %><br>
-  <%= f.label 'Descrição',:descricao %><br><%= f.text_field :descricao %><br>
-  <%= f.submit 'Salvar' %>
-<% end %>
-<%= link_to 'Voltar', core_grupo_path(@grupo) %>
+<div id="barra_titulo">
+  <h3 id="titulo_edit">Editar Grupo</h3>
+</div>
+
+<div class="formulario">
+  <% form_for @grupo, :id=>"forms", :url=>{:action=>'update'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.label :nome %><br><%= f.text_field :nome %><br>
+    <%= f.label :descricao, 'Descrição' %><br><%= f.text_field :descricao %><br>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_grupo_path(@grupo) %>
+</div>
 

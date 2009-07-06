@@ -1,9 +1,17 @@
-<h3>Editar Modulo</h3>
-<% form_for @modulo, :url=>{:action=>'update'} do |f| %>
-  <%= f.error_messages %>
-  <%= f.label :nome %><br><%= f.text_field :nome %><br>
-  <%= f.label 'Descrição',:descricao %><br><%= f.text_field :descricao %><br>
-  <%= f.submit 'Salvar' %>
-<% end %>
-<%= link_to 'Voltar', core_modulo_path(@modulo) %>
+<div id="barra_titulo">
+  <h3 id="titulo_edit">Editar Modulo</h3>
+</div>
+
+<div class="formulario">
+  <% form_for @modulo, :url=>{:action=>'update'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.label :nome %><br><%= f.text_field :nome %><br>
+    <%= f.label :descricao, 'Descrição' %><br><%= f.text_field :descricao %><br>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', core_modulo_path(@modulo) %>
+</div>
 
