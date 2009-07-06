@@ -29,8 +29,9 @@ class ApplicationController < ActionController::Base
           return false
         else
           @sessao_usuario.acesso
-          @menu_modulo = @sessao_usuario.opcoes.collect {|m| [m[7], m[8]]}
-          @menu_modulo.uniq!
+          @menu_modulo = []
+          @sessao_usuario.opcoes.collect {|m| @menu_modulo << [m[7], m[8]]}
+          #@menu_modulo.uniq!
           return true
         end
       end

@@ -23,20 +23,24 @@
         </div>
     </div>
     <div id="tudo">
-
       <div class="chromestyle" "id="menu_nav">
         <ul>
-          <li><a href="#" rel="dropmenu1" rev="lr">Aplicações&nbsp;</a></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <% if @menu_modulo %>
+           <% @menu_modulo.each do |m| %>
+            <li><a href="#" rel=<%= m[0] %> rev="lr"><%= m[1] %></a></li>
+           <% end %>
+           
+           <% @menu_modulo.each do |m| %>
+             <div id=<%= m[0] %> class="dropmenudiv">
+               <% @sessao_usuario.opcoes.each do |s| %>
+                 <% if s[5] == true and s[6] == true  and s[7] == m[0] %>  
+                 <a href=<%= s[3] %>><%= s[4] %></a>
+                 <% end %>
+               <% end %>  
+             </div>
+           <% end %>
+          <% end %>
         </ul>
-        <!--1º drop down menu -->
-        <div id="dropmenu1" class="dropmenudiv">
-          <a href="/core/entidades">Aplicação 1</a>
-          <a href="/core/modulos">Aplicação 2</a>
-          <a href="#aplicaco3">Aplicação 3</a>
-        </div>
         <!--1º drop down menu -->
       </div>
       <%=javascript_tag "cssdropdown.startchrome('menu_nav')"%>

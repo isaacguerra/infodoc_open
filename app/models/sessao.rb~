@@ -43,7 +43,7 @@ class Sessao < CouchFoo::Base
               end
             end
           end
-          sistemas << [gs.sistema_id, gs.permissao, gs.sistema.controle, gs.sistema.rota, gs.sistema.nome, gs.sistema.menu, gs.sistema.status, gs.sistema.modulo_id, gs.sistema.modulo.nome] unless ja
+          sistemas << [gs.sistema_id, gs.permissao, gs.sistema.controle, gs.sistema.rota, gs.sistema.nome, gs.sistema.menu, gs.sistema.status, gs.sistema.modulo_id] unless ja
         end
       end
       self.opcoes = sistemas
