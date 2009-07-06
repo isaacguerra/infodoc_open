@@ -25,9 +25,9 @@ Rails::Initializer.run do |config|
   config.gem "extlib", :lib=>false
   config.gem "uuid", :lib=>"uuid"
   config.gem "json", :lib=>"json"
-  config.gem "eventmachine", :lib=>false
-  config.gem "juggernaut", :lib=>false
-  config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
+  #config.gem "eventmachine", :lib=>false
+  #config.gem "juggernaut", :lib=>false
+  #config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
