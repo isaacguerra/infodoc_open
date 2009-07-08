@@ -7,12 +7,20 @@
 
 <table id="listar">
   <tr>
+    <td class="lista_item">Login do Usuario Padrão</td>
+    <td class="lista_conteudo"><%= @usuario.login %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Senha do Usuario Padrão</td>
+    <td class="lista_conteudo"><%= @senha %></td>
+  </tr>
+  <tr>
     <td class="lista_item">Nome</td>
     <td class="lista_conteudo"><%= @entidade.nome %></td>
   </tr>
   <tr>
     <td class="lista_item">Razão Social</td>
-    <td class="lista_conteudo"><%= @entidade.razao_social %>
+    <td class="lista_conteudo"><%= @entidade.razao_social %></td>
   </tr>
   <tr>
     <td class="lista_item">CPF/CNPJ</td>
@@ -55,8 +63,8 @@
     <td class="lista_conteudo"><%= @entidade.email_responsavel %></td>
   </tr>
   <tr>
-    <td class="lista_item">Status</td>
-    <td class="lista_conteudo"><%= status(@entidade.status) %></td>
+    <td class="lista_item">Ativo</td>
+    <td class="lista_conteudo"><%= @entidade.status %></td>
   </tr>
 </table>
 <div id="link_voltar">

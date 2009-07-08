@@ -1,6 +1,6 @@
 class Core::AdminusuariosController < ApplicationController
   def index
-    @usuarios = Usuario.find(:all, :conditions=>{:entidade_id=>@sessao_usuario.usuario.entidade_id})
+    @usuarios = Usuario.find(:all, {:conditions=>["entidade_id = ? ", @sessao_usuario.entidade_id]})
   end
 
   def show
@@ -32,7 +32,7 @@ class Core::AdminusuariosController < ApplicationController
       flash[:notice] = "Usuario Atualizado com Sucesso!"
       redirect_to :action=>"show",:id=>@usuario.id
     else
-       render :action=> :edit, :id=>@usuario
+      render :action=> :edit, :id=>@usuario
     end
   end
 

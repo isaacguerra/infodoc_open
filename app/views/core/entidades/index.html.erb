@@ -1,17 +1,17 @@
 <div id="barra_titulo">
   <h3 class="titulo_index">Lista de Entidades</h3>
-  <div id="link_botao">
-    <%= link_to 'Nova Entidade', new_core_entidade_path %>
-  </div>
+  <div id="link_botao"><%= link_to 'Nova Entidade', new_core_entidade_path %></div>
 </div>
 <table id="listar">
   <tr>
     <th class="titulo_lista">Nome</th>
+    <th class="titulo_lista">Status</th>
     <th class="titulo_lista">Itens</th>
   </tr>
   <% @entidades.each do |entidade| %>
   <tr>
     <td class="itens_index"><%= link_to entidade.nome, core_entidade_path(entidade) %></td>
+    <td class="itens_index"><%= status(entidade.status) %></td>
     <td class="itens_index">
       <%= link_to "Modulos", core_entidade_moduloentidades_path(entidade) %> |
       <%= link_to "Grupos", core_entidade_grupos_path(entidade) %> |

@@ -1,7 +1,7 @@
 class Core::SistemasController < ApplicationController
   def index
     @modulo = Modulo.find params[:modulo_id]
-    @sistema = Sistema.find(:all, :conditions=>{:modulo_id=>params[:modulo_id]})
+    @sistema = Sistema.find(:all, {:conditions=>["modulo_id = ?", params[:modulo_id]]})
   end
 
   def show

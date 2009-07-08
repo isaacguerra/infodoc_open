@@ -1,9 +1,6 @@
-class Modulo < CouchFoo::Base
+class Modulo < ActiveRecord::Base
   has_many :sistemas
   has_many :moduloentidades
-
-  property :nome, String
-  property :descricao, String
 
   validates_presence_of :nome
   validates_uniqueness_of :nome

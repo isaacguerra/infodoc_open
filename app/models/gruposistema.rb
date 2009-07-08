@@ -1,9 +1,8 @@
-class Gruposistema < CouchFoo::Base
+class Gruposistema < ActiveRecord::Base
   belongs_to :grupo
   belongs_to :sistema
 
-  property :grupo_id, String
-  property :sistema_id, String
-  property :permissao, Integer
+  validates_presence_of :grupo_id
+  validates_presence_of :sistema_id
 end
 

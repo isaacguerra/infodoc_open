@@ -8,14 +8,12 @@
 <table id="listar">
   <tr>
     <th class="titulo_lista">Nome</th>
-    <th class="titulo_lista">Descrição</th>
     <th class="titulo_lista">Status</th>
   </tr>
   <% @modulo.sistemas.each do |sistema| %>
   <tr>
     <td class="itens_index"><%= link_to sistema.nome, core_modulo_sistema_path(@modulo, sistema) %></td>
-    <td class="itens_index"><%=h sistema.descricao %></td>
-    <td class="itens_index"><%=h sistema.status %></td>
+    <td class="itens_index"><%=h status(sistema.status) %></td>
   </tr>
   <% end %>
 </table>

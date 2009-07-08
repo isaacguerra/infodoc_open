@@ -1,21 +1,7 @@
-class Entidade < CouchFoo::Base
+class Entidade < ActiveRecord::Base
    has_many :usuarios
    has_many :grupos
    has_many :moduloentidades
-
-   property :nome, String
-   property :razao_social, String
-   property :cpf_cnpj, String
-   property :cidade, String
-   property :endereco, String
-   property :bairro, String
-   property :cep, String
-   property :telefone, String
-   property :email, String
-   property :nome_responsavel, String
-   property :telefone_responsavel, String
-   property :email_responsavel, String
-   property :status, Boolean
 
    validates_presence_of :nome
    validates_presence_of :cpf_cnpj

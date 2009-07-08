@@ -1,8 +1,7 @@
 <div id="barra_titulo">
   <h3 id="titulo_show">Sistema</h3>
-  <div id="link_botao">
-    <%= link_to 'Editar', edit_core_modulo_sistema_path(@sistema.modulo, @sistema) %>&nbsp;&nbsp;&nbsp;&nbsp;
-  </div>
+  <div id="link_botao"><%= link_to 'Atitar/Deszativar', {:controller=>"/core/sistemas", :action=>"mudar_status", id=>@sistema}, :confirm=> 'Você tem certesa que quer ativar ou desativar este sistema?' %></div>
+  <div id="link_botao"><%= link_to 'Editar', edit_core_modulo_sistema_path(@sistema.modulo, @sistema) %></div>
 </div>
 
 <table id="listar">
@@ -25,6 +24,10 @@
   <tr>
     <td class="lista_item">Classe</td>
     <td class="lista_conteudo"><%= @sistema.controle %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Status</td>
+    <td class="lista_conteudo"><%= status(@sistema.status) %></td>
   </tr>
 </table>
 

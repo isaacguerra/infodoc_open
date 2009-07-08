@@ -4,7 +4,7 @@ class Core::GruposistemasController < ApplicationController
     @sessao_usuario.usuario.entidade.moduloentidades.each do |me|
       me.modulo.sistemas.each {|s| sv << s.id}
     end
-    @gruposistemas = Gruposistema.find(:all, :conditions=>{:grupo_id=>params[:admingrupo_id]}).collect {|s| s if sv.include?(s.sistema_id)}.compact
+    @gruposistemas = Gruposistema.find(:all, {:conditions=>["grupo_id = ? ", params[:admingrupo_id]]}).collect {|s| s if sv.include?(s.sistema_id)}.compact
 
     if @gruposistemas.size > 0
       @gruposistemas.collect {|u| sv.delete(u.sistema_id)}

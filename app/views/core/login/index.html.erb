@@ -1,11 +1,16 @@
 <!--<%= request.remote_ip %></center><br> -->
+<% if flash[:notice] %>
+<div id="flash">
+  <%= flash[:notice] %>
+</div>
+<% end %>
 
-  <fieldset id="form_login">
-    <legend class="form_login">Login do Usuário </legend>
-    <% form_tag("/core/login") do %>
-      Usuário:                 <%= text_field :login, :usuario %><br>
-      Senha:&nbsp;&nbsp; <%= password_field :login, :senha %><br>
-      <%= submit_tag "Logar", :class=> "enviar" %>
-    <% end %>
-   </fieldset>
+<fieldset id="form_login">
+  <legend class="form_login">Login do Usuário </legend>
+  <% form_tag("/core/login") do %>
+    Usuário:                 <%= text_field :login, :usuario %><br>
+    Senha:&nbsp;&nbsp; <%= password_field :login, :senha %><br>
+    <%= submit_tag "Logar", :class=> "enviar" %>
+  <% end %>
+ </fieldset>
 

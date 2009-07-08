@@ -7,13 +7,13 @@
 <table id="listar">
   <tr>
     <th class="titulo_lista">Nome</th>
-    <th class="titulo_lista">Descrição</th>
+    <th class="titulo_lista">Status</th>
     <th class="titulo_lista"></th>
   </tr>
   <% @modulos.each do |modulo| %>
   <tr>
     <td class="itens_index"><%= link_to modulo.nome, core_modulo_path(modulo) %></td>
-    <td class="itens_index"><%=h modulo.descricao %></td>
+    <td class="itens_index"><%= status(modulo.status) %></td>
     <td class="itens_index"><%= link_to "Sistemas", core_modulo_sistemas_path(modulo) %></td>
   </tr>
   <% end %>

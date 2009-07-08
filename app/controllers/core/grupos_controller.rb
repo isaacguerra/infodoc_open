@@ -1,7 +1,7 @@
 class Core::GruposController < ApplicationController
   def index
     @entidade = Entidade.find(params[:entidade_id])
-    @grupos = Grupo.find(:all, :conditions=>{:entidade_id=>params[:entidade_id]})
+    @grupos = Grupo.find(:all, {:conditions=>["entidade_id = ? ", params[:entidade_id]]})
   end
 
   def show

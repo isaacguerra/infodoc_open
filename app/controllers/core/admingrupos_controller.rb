@@ -1,6 +1,6 @@
 class Core::AdmingruposController < ApplicationController
   def index
-    @grupos = Grupo.find(:all, :conditions=>{:entidade_id=>@sessao_usuario.usuario.entidade_id})
+    @grupos = Grupo.find(:all, {:conditions=>["entidade_id = ?", @sessao_usuario.entidade_id]})
   end
 
   def show

@@ -1,24 +1,12 @@
-class Sessao < CouchFoo::Base
+class Sessao < ActiveRecord::Base
     belongs_to :usuario
 
-    property :usuario_id, String
-    property :entidade_id, String
-    property :hash_sessao, String
-    property :nome_usuario, String
-    property :status, Boolean
-
-    property :num_login, Integer
-    property :ultima_data_acesso, DateTime
-    property :corrente_data_login, DateTime
-    property :ultima_data_login, DateTime
-    property :corrente_login_ip, String
-    property :ultimo_login_ip, String
-
-    property :opcoes, Array
+    serialize :opcoes
 
     #scopos----------
     named_scope :ativo, :conditions=>{:status=>true}
-    named_scope :da_entidade, lambda {|id| {:conditions=>{:entidade_id=>id}}}
+    named_scope :do_usuario, lambda {|id| {:conditions=>["usuario_id = ?", id]}}
+    named_scope :da_entidade, lambda {|id| {:conditions=>["entidade_id = ?", id]}}
     #-------------
 
     def inicia_sessao(ip, nome)

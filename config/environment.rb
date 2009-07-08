@@ -20,14 +20,12 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
-  config.gem "jchris-couchrest", :lib=>"couchrest", :source=>"http://gems.github.com"
-  config.gem "rest-client", :lib=>false
-  config.gem "extlib", :lib=>false
   config.gem "uuid", :lib=>"uuid"
   config.gem "json", :lib=>"json"
-  #config.gem "eventmachine", :lib=>false
-  #config.gem "juggernaut", :lib=>false
-  #config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
+  config.gem "eventmachine", :lib=>false
+  config.gem "juggernaut", :lib=>false
+  config.gem "thoughtbot-shoulda", :lib => "shoulda/rails", :source => "http://gems.github.com"
+  config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -35,7 +33,7 @@ Rails::Initializer.run do |config|
 
   # Skip frameworks you're not going to use. To use Rails without a database,
   # you must remove the Active Record framework.
-   config.frameworks -= [:active_record]
+  # config.frameworks -= [:active_record]
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
@@ -48,7 +46,4 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
-
-CouchFoo::Base.set_database(:host => "http://localhost:5984", :database => "infodoc")
-CouchFoo::Base.logger = Rails.logger
 

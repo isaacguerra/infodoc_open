@@ -34,5 +34,16 @@ class Core::ModulosController < ApplicationController
        render :action=>:edit, :id=>@modulo
     end
   end
+
+  def mudar_status
+    @modulo = Modulo.find(params[:id])
+    if @modulo.status
+      @modulo.status = false
+    else
+      @modulo.status = true
+    end
+    @modulo.save
+    render :action=> :show, :id=>@modulo
+  end
 end
 

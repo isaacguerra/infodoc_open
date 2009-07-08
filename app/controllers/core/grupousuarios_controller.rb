@@ -3,9 +3,9 @@ class Core::GrupousuariosController < ApplicationController
     @grupo = Grupo.find(params[:admingrupo_id])
     if @grupo.grupousuarios.size > 0
       ud = @grupo.grupousuarios.collect {|u| u.usuario_id}
-      @usuarios = Usuario.find(:all, :conditions=>{:entidade_id=>@sessao_usuario.usuario.entidade_id}).collect {|uf| uf unless ud.include?(uf.id)}.compact!
+      @usuarios = Usuario.find(:all, {:conditions=>["entidade_id = ?", @sessao_usuario.entidade_id]}).collect {|uf| uf unless ud.include?(uf.id)}.compact!
     else
-      @usuarios = Usuario.find(:all, :conditions=>{:entidade_id=>@sessao_usuario.usuario.entidade_id})
+      @usuarios = Usuario.find(:all, {:conditions=>["entidade_id = ?", @sessao_usuario.usuario.entidade_id]})
     end
   end
 

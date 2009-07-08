@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
         redirect_to :controller => "core/login", :action=>:index
         return false
       else
-        if @sessao_usuario.ultima_data_acesso+20.minutes > DateTime.now
+        if @sessao_usuario.ultima_data_acesso+20.minutes > DateTime.now+3.hours
           flash[:notice] = "Sessão Expirada por tempo limite!"
           @sessao_usuario.fim
           session[:return_to] = request.request_uri
@@ -62,7 +62,7 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "Sistema não Autorizado para este Usuario!"
       redirect_to "/intranet"
       return false
-    end 
+    end
   end
 end
 
