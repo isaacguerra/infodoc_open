@@ -13,6 +13,15 @@ ActionController::Routing::Routes.draw do |map|
     core.resources :perfil
   end
 
+  map.namespace :ecm do |ecm|
+    ecm.resources :categorias, :has_many=>:formularios
+    ecm.resources :formularios, :has_many=>:itens_formularios
+    ecm.resources :formularios, :has_many=>:permissao_formularios
+    ecm.resources :formularios, :has_many=>:principal_formularios
+    ecm.resources :formularios, :has_many=>:ajudas_formularios
+    ecm.resources :formularios, :has_many=>:cadastros
+  end
+
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action

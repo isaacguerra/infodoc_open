@@ -1,0 +1,17 @@
+<div id="barra_titulo">
+  <h3 id="titulo_edit">Alterar Categoria</h3>
+</div>
+
+<div class="formulario">
+  <% form_for @categoria, :id=>"forms", :url=>{:action=>'update'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.label :nome %><br><%= f.text_field :nome %><br>
+    <%= f.label :descricao, 'Descrição' %><br><%= f.text_field :descricao %><br>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categoria_path(@categoria) %>
+</div>
+

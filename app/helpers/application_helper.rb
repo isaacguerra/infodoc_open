@@ -11,5 +11,13 @@ module ApplicationHelper
       return "Inativo"
     end
   end
+
+  def ecm_item(tipo, acao, opcoes = nil)
+    if opcoes
+      eval("#{tipo}_#{acao}_item(opcoes)")
+    else
+      eval("#{tipo}_#{acao}_item")
+    end
+  end
 end
 

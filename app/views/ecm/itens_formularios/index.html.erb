@@ -1,0 +1,22 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Itens</h3>
+  <div id="link_botao"><%= link_to 'Novo Item', new_ecm_formulario_itens_formulario_path(@formulario) %></div>
+</div>
+<table id="listar">
+  <tr>
+    <th class="titulo_lista">Rotulo</th>
+    <th class="titulo_lista">Tipo</th>
+  </tr>
+    <% @itens.each do |item| %>
+    <tr>
+      <td class="itens_index">
+        <%= link_to item.rotulo, ecm_formulario_itens_formulario_path(@formulario, item) %>
+      </td>
+      <td class="itens_index">
+        <%= item.itenstipo.nome %>
+      </td>
+    </tr>
+	  <% end %>
+</table>
+<%= link_to "Voltar", ecm_categoria_formulario_path(@formulario.formulariocategoria_id, @formulario) %></td>
+

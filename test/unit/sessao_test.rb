@@ -1,8 +1,9 @@
 require 'test_helper'
 
-class Core::SessaoTest < ActiveSupport::TestCase
+class SessaoTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true
   end
 end
+

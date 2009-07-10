@@ -12,7 +12,7 @@
   <% @entidade.usuarios.each do |usuario| %>
   <tr>
     <td class="itens_index"><%= link_to usuario.nome, core_entidade_usuario_path(@entidade, usuario) %></td>
-    <td class="itens_index"><%=h usuario.status %></td>
+    <td class="itens_index"><%=h status(usuario.status) %></td>
   </tr>
   <% end %>
 </table>

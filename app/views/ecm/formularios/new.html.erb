@@ -1,0 +1,17 @@
+<div id="barra_titulo">
+  <h3 class="titulo_new">Cadastro de Formulario</h3>
+</div>
+<div class="formulario">
+  <% form_for @formulario, :url=>{:action=>'create'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.usuario.entidade_id %>
+    <%= f.label :formulariotipo_id %><br><%= f.select :formulariotipo_id, Formulariotipo.ativo.all.collect {|t| [t.tipo, t.id]} %><br>
+    <%= f.label :titulo %><br><%= f.text_field :titulo %><br>
+    <%= f.label :descricao, 'Descrição' %><br><%= f.text_field :descricao %><br>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categoria_formularios_path(@categoria) %>
+</div>
+

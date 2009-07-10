@@ -1,0 +1,17 @@
+<div id="barra_titulo">
+  <h3 class="titulo_show">Item de Formulario</h3>
+  <div id="link_botao"><%= link_to 'Editar', edit_ecm_formulario_itens_formulario_path(@formulario, @item) %></div>
+</div>
+
+<table id="listar">
+  <tr>
+    <td class="lista_item">Rotulo</td>
+    <td class="lista_conteudo"><%= @item.rotulo %></td>
+  </tr>
+  <%= ecm_item(@item.itenstipo.componente, "show", @item.opcoes) %>
+</table>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_formulario_itens_formularios_path(@formulario) %>
+</div>
+

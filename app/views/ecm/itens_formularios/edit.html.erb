@@ -1,0 +1,15 @@
+<div id="barra_titulo">
+  <h3 class="titulo_new">Alterar Item</h3>
+</div>
+<div class="formulario">
+  <% form_for @item, :url=>{:action=>'update'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.entidade_id %>
+    <%= f.label :rotulo %><%= f.text_field :rotulo %>
+    <%= ecm_item(@item.itenstipo.componente, "edit", @item.opcoes) %>
+  <% end %>
+</div>
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_formulario_itens_formularios_path(@formulario) %>
+</div>
+

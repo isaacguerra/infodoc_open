@@ -31,7 +31,7 @@ padding: 4px 7px;
 margin: 0;
 text-decoration: none;
 border-right: 1px solid #DADADA;
-border-left:  1px solid #DADADA;
+
 }
 
 .chromestyle ul li a:hover, .chromestyle ul li a.selected{ /*script dynamically adds a class of "selected" to the current active menu item*/
@@ -49,8 +49,10 @@ font:normal 14px Arial;
 line-height:18px;
 z-index:100;
 background-color: #EDEDED;
-width: 115px;
-padding:3px;
+min-width: 115px;
+width:auto;
+padding:5px 3px;;
+
 visibility: hidden;
 
 }

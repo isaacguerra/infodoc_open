@@ -1,0 +1,25 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Formularios</h3>
+  <div id="link_botao"><%= link_to 'Novo Formulário', new_ecm_categoria_formulario_path(@categoria) %></div>
+</div>
+<table id="listar">
+  <tr>
+    <th class="titulo_lista">Título</th>
+    <th class="titulo_lista">Itens</th>
+  </tr>
+    <% @formularios.each do |formulario| %>
+    <tr>
+      <td class="itens_index">
+        <%= link_to formulario.titulo, ecm_categoria_formulario_path(@categoria, formulario) %>
+      </td>
+      <td class="itens_index">
+       <%= link_to "Itens", ecm_formulario_itens_formularios_path(formulario) %> |
+       <%= link_to "Permissoes", ecm_formulario_permissao_formularios_path(formulario) %> |
+       <%= link_to "Ajuda", ecm_formulario_ajudas_formularios_path(formulario) %> |
+       <%= link_to "Principal", ecm_formulario_principal_formularios_path(formulario) %>
+      </td>
+    </tr>
+	  <% end %>
+</table>
+<%= link_to "Voltar", ecm_categorias_path %></td>
+

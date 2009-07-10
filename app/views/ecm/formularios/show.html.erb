@@ -1,0 +1,24 @@
+<div id="barra_titulo">
+  <h3 class="titulo_show">Formulario</h3>
+  <div id="link_botao"><%= link_to 'Editar', edit_ecm_categoria_formulario_path(@categoria, @formulario) %></div>
+</div>
+
+<table id="listar">
+  <tr>
+    <td class="lista_item">Tipo</td>
+    <td class="lista_conteudo"><%= @formulario.formulariotipo.tipo %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Titulo</td>
+    <td class="lista_conteudo"><%= @formulario.titulo %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Descrição</td>
+    <td class="lista_conteudo"><%= @formulario.descricao %></td>
+  </tr>
+</table>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categoria_formularios_path(@categoria) %>
+</div>
+

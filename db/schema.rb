@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090708125107) do
+ActiveRecord::Schema.define(:version => 20090708194943) do
+
+  create_table "cadastros", :force => true do |t|
+    t.integer  "entidade_id"
+    t.integer  "formulario_id"
+    t.integer  "usuario_id"
+    t.integer  "formulariotipo_id"
+    t.integer  "formulariocategoria_id"
+    t.boolean  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "entidades", :force => true do |t|
     t.string   "nome"
@@ -34,6 +45,35 @@ ActiveRecord::Schema.define(:version => 20090708125107) do
   add_index "entidades", ["nome_responsavel"], :name => "index_entidades_on_nome_responsavel"
   add_index "entidades", ["razao_social"], :name => "index_entidades_on_razao_social"
   add_index "entidades", ["telefone_responsavel"], :name => "index_entidades_on_telefone_responsavel"
+
+  create_table "formulariocategorias", :force => true do |t|
+    t.integer "entidade_id"
+    t.string  "nome"
+    t.string  "descricao"
+  end
+
+  create_table "formularios", :force => true do |t|
+    t.integer  "formulariocategoria_id"
+    t.integer  "formulariotipo_id"
+    t.integer  "entidade_id"
+    t.integer  "principal_id"
+    t.string   "titulo"
+    t.string   "descricao"
+    t.boolean  "status",                 :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "formularios", ["entidade_id"], :name => "index_formularios_on_entidade_id"
+  add_index "formularios", ["formulariocategoria_id"], :name => "index_formularios_on_formulariocategoria_id"
+  add_index "formularios", ["formulariotipo_id"], :name => "index_formularios_on_formulariotipo_id"
+  add_index "formularios", ["status"], :name => "index_formularios_on_status"
+  add_index "formularios", ["titulo"], :name => "index_formularios_on_titulo"
+
+  create_table "formulariotipos", :force => true do |t|
+    t.string  "tipo"
+    t.boolean "status"
+  end
 
   create_table "grupos", :force => true do |t|
     t.integer  "entidade_id"
@@ -65,6 +105,23 @@ ActiveRecord::Schema.define(:version => 20090708125107) do
 
   add_index "grupousuarios", ["grupo_id"], :name => "index_grupousuarios_on_grupo_id"
   add_index "grupousuarios", ["usuario_id"], :name => "index_grupousuarios_on_usuario_id"
+
+  create_table "itensformularios", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "formulario_id"
+    t.integer "itenstipo_id"
+    t.string  "rotulo"
+    t.string  "posicao"
+    t.string  "tipo"
+    t.text    "opcoes"
+  end
+
+  create_table "itenstipos", :force => true do |t|
+    t.string  "nome"
+    t.string  "tipo"
+    t.string  "componente"
+    t.boolean "status"
+  end
 
   create_table "moduloentidades", :force => true do |t|
     t.integer "modulo_id"

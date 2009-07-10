@@ -14,7 +14,8 @@ class Entidade < ActiveRecord::Base
    validates_presence_of :nome_responsavel
    validates_presence_of :telefone_responsavel
    validates_presence_of :email_responsavel
+   validates_presence_of :status
    validates_uniqueness_of :cpf_cnpj
-
+   validates_length_of :cpf_cnpj, :in => 11..14, :allow_nil=>false
 end
 

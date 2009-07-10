@@ -1,0 +1,22 @@
+<div id="barra_titulo">
+  <h3 class="titulo_new">Cadastro de Item</h3>
+</div>
+<div class="formulario">
+  <% form_for @item, :url=>{:action=>'create'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.entidade_id %>
+    <%= f.select :itenstipo_id, Itenstipo.ativo.all.collect {|i| [i.nome, i.id]} %>
+    <%= f.label :rotulo %><%= f.text_field :rotulo %>
+    <%= observe_field "itensformulario_itenstipo_id",
+                    :frequency => 1,
+                    :url => {:action => "montaformitem"},
+                    :with => "'itenstipo_id='+escape(value)" %>
+    <div id='form'>
+
+    </div>
+  <% end %>
+</div>
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_formulario_itens_formularios_path(@formulario) %>
+</div>
+

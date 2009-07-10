@@ -1,0 +1,18 @@
+<div id="barra_titulo">
+  <h3 id="titulo_edit">Alterar Formulario</h3>
+</div>
+
+<div class="formulario">
+  <% form_for @formulario, :url=>{:action=>'update'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.label :formulariotipo_id %><br><%= f.select :formulariotipo_id, Formulariotipo.ativo.all.collect {|t| [t.tipo, t.id]} %><br>
+    <%= f.label :titulo %><br><%= f.text_field :titulo %><br>
+    <%= f.label :descricao, 'Descrição' %><br><%= f.text_field :descricao %><br>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categoria_formulario_path(@categoria, @formulario) %>
+</div>
+

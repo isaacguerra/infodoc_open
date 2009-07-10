@@ -6,10 +6,12 @@
 <table id="listar">
  </tr>
    <th class="titulo_lista">Nome</th>
+   <th class="titulo_lista">Status</th>
   </tr>
   <% @grupos.each do |grupo| %>
   <tr>
     <td class="itens_index"><%= link_to grupo.nome, core_entidade_grupo_path(@entidade, grupo) %></td>
+    <td class="itens_index"><%= status(grupo.status) %>
   </tr>
   <% end %>
 </table>

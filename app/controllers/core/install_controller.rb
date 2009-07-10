@@ -5,17 +5,25 @@ class Core::InstallController < ApplicationController
 
   def index
     @log  = ""
-    entidade = Entidade.create(:nome=>"Infomanager", :razao_social=>"Infomanager Ltda", :cpf_cnpj=>"08505672/0001-60", :cidade=>"Macapá", :endereco=>"Rua Iraci Nunes Nadler, nº 346", :bairro=>"Santa Nines", :cep=>"68901-380", :telefone=>"3242-5877", :email=>"comercial@infomanagerbrasil.com.br", :nome_responsavel=>"Isaac de Almeida Gerra", :telefone_responsavel=>"8113-8057", :email_responsavel=>"isaac@infomanagerbrasil.com.br", :status=>true)
+    entidade = Entidade.create(:nome=>"Infomanager", :razao_social=>"Infomanager Ltda", :cpf_cnpj=>"08505672000160", :cidade=>"Macapá", :endereco=>"Rua Iraci Nunes Nadler, nº 346", :bairro=>"Santa Nines", :cep=>"68901-380", :telefone=>"3242-5877", :email=>"comercial@infomanagerbrasil.com.br", :nome_responsavel=>"Isaac de Almeida Gerra", :telefone_responsavel=>"8113-8057", :email_responsavel=>"isaac@infomanagerbrasil.com.br", :status=>true)
     @log << "#ID da Entidade - #{entidade.id}\n"
     madmg = Modulo.create(:nome=>"Administração Geral", :descricao=>"Administração Geral")
     @log << "#ID da modulos Administracao Geral - #{madmg.id}\n"
     madm = Modulo.create(:nome=>"Administração", :descricao=>"Administração")
     @log << "#ID da modulos Administracao - #{madm.id}\n"
+    mecm = Modulo.create(:nome=>"Gerencia ECM", :descricao=>"Gerencia ECM")
+    @log << "#ID da modulos ECM - #{mecm.id}\n"
+    mgc = Modulo.create(:nome=>"Gerencia de Conteúdo", :descricao=>"Gerencia de Conteúdo")
+    @log << "#ID da modulos Gerencia de Conteúdo - #{mgc.id}\n"
 
     vmadmg = Moduloentidade.create(:entidade_id=>entidade.id, :modulo_id=>madmg.id)
     vmadm = Moduloentidade.create(:entidade_id=>entidade.id, :modulo_id=>madm.id)
+    vecm = Moduloentidade.create(:entidade_id=>entidade.id, :modulo_id=>mecm.id)
+    vgc = Moduloentidade.create(:entidade_id=>entidade.id, :modulo_id=>mgc.id)
     @log << "#ID da vinculação do modulo a entidade - #{vmadmg.id}\n"
     @log << "#ID da vinculação do modulo a entidade - #{vmadm.id}\n"
+    @log << "#ID da vinculação do modulo a entidade - #{vecm.id}\n"
+    @log << "#ID da vinculação do modulo a entidade - #{vgc.id}\n"
 
     gerenciaentidades = Sistema.create(:nome=>"Gerencia de Entidades", :descricao=>"Gerencia de Entidades", :rota=>"/core/entidades", :controle=>"Core::EntidadesController", :menu=>true, :status=>true, :modulo_id=>madmg.id)
     @log << "#ID do sistema  de Gerencia da Entidades - #{gerenciaentidades.id}\n"
@@ -29,7 +37,7 @@ class Core::InstallController < ApplicationController
     @log << "#ID do sistema  de Gerencia Modulos - #{gerenciademodulos.id}\n"
     gerenciadesistemas = Sistema.create(:nome=>"Gerencia de Sistemas", :descricao=>"Gerencia de Sistemas", :rota=>"/core/modulos", :controle=>"Core::SistemasController", :menu=>false, :status=>true, :modulo_id=>madmg.id)
     @log << "#ID do sistema  de Gerencia de Sistemas - #{gerenciadesistemas.id}\n"
-    
+
     administracaodegrupos = Sistema.create(:nome=>"Administração de Grupos", :descricao=>"Administração de Grupos", :rota=>"/core/admingrupos", :controle=>"Core::AdmingruposController", :menu=>true, :status=>true, :modulo_id=>madm.id)
     @log << "#ID do sistema  de Administracao de grupos - #{administracaodegrupos.id}\n"
     administracaodeusuarios = Sistema.create(:nome=>"Administração de Usuarios", :descricao=>"Administração de Usuarios", :rota=>"/core/adminusuarios", :controle=>"Core::AdminusuariosController", :menu=>true, :status=>true, :modulo_id=>madm.id)
@@ -43,6 +51,40 @@ class Core::InstallController < ApplicationController
     perfil = Sistema.create(:nome=>"Perfil do Usuario", :descricao=>"Perfil do Usuario", :rota=>"/core/perfil", :controle=>"Core::PerfilController", :menu=>true, :status=>true, :modulo_id=>madm.id)
     @log << "#ID do sistema de Perfil - #{perfil.id}\n"
 
+    cadastro = Sistema.create(:nome=>"Cadastro", :descricao=>"Cadastro", :rota=>"/ecm/cadastros", :controle=>"Ecm::CadastrosController", :menu=>true, :status=>true, :modulo_id=>mgc.id)
+    @log << "#ID do sistema  de Gerencia de Cadastro - #{cadastro.id}\n"
+
+    #ecm tipos de itens
+    Formulariotipo.create(:tipo=>"Pasta", :status=>true)
+    Formulariotipo.create(:tipo=>"Arquivo", :status=>true)
+    Formulariotipo.create(:tipo=>"Migração", :status=>false)
+    Formulariotipo.create(:tipo=>"Itentegração com SGBD", :status=>false)
+    Formulariotipo.create(:tipo=>"Itentegração com Web Service", :status=>false)
+
+    #ecm tipos de itens
+    Itenstipo.create(:nome=>"Texto", :tipo=>"texto", :status=>true, :componente=>"texto")
+    Itenstipo.create(:nome=>"Text Longo", :tipo=>"texto_longo", :status=>true, :componente=>"texto_longo")
+    Itenstipo.create(:nome=>"Numero", :tipo=>"numero_inteiro", :status=>true, :componente=>"numero_inteiro")
+    Itenstipo.create(:nome=>"Numero Real", :tipo=>"numero_decimal", :status=>true, :componente=>"numero_decimal")
+    Itenstipo.create(:nome=>"Auto Numeração", :tipo=>"numero_inteiro", :status=>true, :componente=>"auto_numeracao")
+    Itenstipo.create(:nome=>"Data", :tipo=>"data", :status=>true, :componente=>"data")
+    Itenstipo.create(:nome=>"Data e Hora", :tipo=>"data_hora", :status=>true, :componente=>"data_hora")
+    Itenstipo.create(:nome=>"Lista", :tipo=>"lista", :status=>true, :componente=>"lista")
+    Itenstipo.create(:nome=>"Imagem", :tipo=>"imagem", :status=>true, :componente=>"imagem")
+    Itenstipo.create(:nome=>"Soma em Referencia", :tipo=>:null, :status=>true, :componente=>"soma_referencia")
+
+    ecmcategoria = Sistema.create(:nome=>"Categoria de Formularios", :descricao=>"Categoria de Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::CategoriasController", :menu=>true, :status=>true, :modulo_id=>mecm.id)
+    @log << "#ID do Categoria de Formularios - #{ecmcategoria.id}\n"
+    ecmformulario = Sistema.create(:nome=>"Formularios", :descricao=>"Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::FormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
+    @log << "#ID do Formularios - #{ecmformulario.id}\n"
+    ecmitensformulario = Sistema.create(:nome=>"Itens do Formularios", :descricao=>"Itens do Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::ItensFormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
+    @log << "#ID do Itens Formularios - #{ecmitensformulario.id}\n"
+    ecmpermissaoformulario = Sistema.create(:nome=>"Permissoes do Formularios", :descricao=>"Permissoes do Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::PermissaoFormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
+    @log << "#ID do Itens Formularios - #{ecmpermissaoformulario.id}\n"
+    ecmprincipalformulario = Sistema.create(:nome=>"Iten Principal Formularios", :descricao=>"Iten Principal Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::PrincipalFormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
+    @log << "#ID do Itens Formularios - #{ecmprincipalformulario.id}\n"
+
+
     grupoadministrador = Grupo.create(:entidade_id=>entidade.id, :nome=>"Administradores", :descricao=>"Administradores")
     @log << "ID do grupo - #{grupoadministrador.id}\n"
 
@@ -53,8 +95,8 @@ class Core::InstallController < ApplicationController
     u = Usuario.new
     @senha = u.random_alphanumeric(6)
     usuario = Usuario.create(:entidade_id=>entidade.id, :nome=>"Administrador", :login=>"admin", :email=>"contato@infomanagerbrasil.com.br", :senha=>@senha, :senha_confirmation=>@senha, :status=>true)
-    @log << "ID do Usuario #{usuario.nome}\n" 
-     
+    @log << "ID do Usuario #{usuario.nome}\n"
+
     vug = Grupousuario.create(:usuario_id=>usuario.id, :grupo_id=>grupoadministrador.id)
     @log << "ID da vinculacao do usuario ao grupo #{vug.id}\n"
   end

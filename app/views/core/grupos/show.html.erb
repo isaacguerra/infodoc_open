@@ -1,6 +1,7 @@
 <div id="barra_titulo">
   <h3 class="titulo_show">Grupo</h3>
   <div id="link_botao"><%= link_to 'Editar', edit_core_entidade_grupo_path(@entidade, @grupo) %></div>
+  <div id="link_botao"><%= link_to "Ativar/Desativar", {:controller=>"/core/grupos", :action=>"mudar_status", :id=>@grupo}, :confirm => 'Você tem certesa que quer ativar eu desativar esta entidade?' %></div>
 </div>
 
 
@@ -17,6 +18,10 @@
   <tr>
     <td class="lista_item">Entidade</td>
     <td class="lista_conteudo"><%= @grupo.entidade.nome %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Status</td>
+    <td class="lista_conteudo"><%= status(@grupo.status) %></td>
   </tr>
 </table>
 

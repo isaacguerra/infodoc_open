@@ -1,0 +1,17 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Categorias de Formularios</h3>
+  <div id="link_botao"><%= link_to 'Nova Categoria', new_ecm_categoria_path %></div>
+</div>
+<table id="listar">
+  </tr>
+    <th class="titulo_lista">Nome</th>
+    <th class="titulo_lista">Itens</th>
+  </tr>
+    <% @categorias.each do |categoria| %>
+    <tr>
+      <td class="itens_index"><%= link_to categoria.nome, ecm_categoria_path(categoria) %></td>
+      <td class="itens_index"><%= link_to "Formulários", ecm_categoria_formularios_path(categoria) %></td>
+    </tr>
+	  <% end %>
+</table>
+
