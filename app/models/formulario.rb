@@ -3,6 +3,7 @@ class Formulario < ActiveRecord::Base
   belongs_to :formulariotipo
   belongs_to :entidade
   has_many :cadastros
+  has_many :itensformularios
 
   validates_presence_of :formulariocategoria_id
   validates_presence_of :formulariotipo_id

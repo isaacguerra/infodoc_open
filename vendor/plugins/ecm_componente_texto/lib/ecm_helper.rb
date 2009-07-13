@@ -1,7 +1,7 @@
 module EcmHelper
   def texto_new_item
     view = ""
-     view.concat(hidden_field "itensformulario", :tipo, :value=>"Texto")
+     view.concat(hidden_field "itensformulario", :tipo, :value=>"texto")
      view.concat("Item Texto")
      view.concat("<li> Este item receberá dados textuais, com tamanho maximo de 255 caracteres.</li>")
      view.concat("<table>")
@@ -162,6 +162,25 @@ module EcmHelper
         view.concat(opcoes[:maiusculo])
       view.concat("</td>")
     view.concat("</tr>")
+  end
+
+  def texto_new_form(item)
+    view = ""
+     view.concat(text_field :cadastro, "item_#{item.id}", options={:size=>item.opcoes[:largura], :maxlength=>item.opcoes[:max_length]})
+     view.concat("<br><span class='item_exemplo'>#{item.opcoes[:exemplo]}</span>") if item.opcoes[:exemplo] != ""
+     return view
+  end
+
+  def texto_edit_form(item, item_form)
+    view = ""
+     view.concat(text_field :cadastro, "item_#{item.id}" ,options={:value=>item_form.conteudo, :size=>item.opcoes[:largura], :maxlength=>item.opcoes[:max_length]})
+     view.concat("<br><span class='item_exemplo'>#{item.opcoes[:exemplo]}</span>") if item.opcoes[:exemplo] != ""
+     return view
+  end
+
+
+  def texto_show_form(item, itemform)
+    return itemform.conteudo
   end
 end
 

@@ -1,0 +1,38 @@
+<div id="barra_titulo">
+  <h3 class="titulo_new">Novo <%= @formulario.titulo %></h3>
+</div>
+<table class="formulario">
+  <% form_for @cadastro, :url=>{:action=>'create'} do |f| %>
+    <tr>
+      <td></td>
+      <td class="error_messages">
+        <%= f.error_messages %>
+        <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.entidade_id %>
+        <%= f.hidden_field :usuario_id, :value=>@sessao_usuario.usuario_id %>
+        <%= f.hidden_field :formulario_id, :value=>@formulario.id %>
+        <%= f.hidden_field :formulariocategoria_id, :value=>@formulario.formulariocategoria_id %>
+        <%= f.hidden_field :formulariotipo_id, :value=>@formulario.formulariotipo_id %>
+      </td>
+    </tr>
+    <% @formulario.itensformularios.each do |item| %>
+    <tr>
+      <td class="lista_item">
+        <%= item.rotulo %>
+      </td>
+      <td class="lista_conteudo">
+        <%= ecm_new_form(item.itenstipo.componente, item) %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td class="lista_item"></td>
+      <td class="lista_conteudo">
+        <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_formulario_cadastros_path(@formulario) %>
+</div>
+

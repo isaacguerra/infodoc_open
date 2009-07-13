@@ -1,0 +1,33 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Itens</h3>
+</div>
+  <table id="listar">
+   <tr>
+     <th class="titulo_lista">Item definido como Principal</th>
+   </tr>
+    <tr>
+      <td>
+       <%= Itensformulario.find(@formulario.principal_id).rotulo if @formulario.principal_id %>
+      </td>
+    </tr>
+  </table>
+
+  <% form_tag(:action=>"create") do %>
+  <table id="listar">
+   </tr>
+     <th class="titulo_lista">Itens Disponiveis para Principal</th>
+    </tr>
+    <% @itens.each do |item| %>
+    <tr>
+      <td>
+       <%= link_to item.rotulo, ecm_formulario_principal_formulario_path(@formulario.id, item.id) %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+  <% end %>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categoria_formularios_path(@formulario.formulariocategoria_id) %>
+</div>
+

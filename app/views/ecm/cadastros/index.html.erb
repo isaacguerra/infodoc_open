@@ -1,0 +1,17 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de <%= @formulario.titulo %></h3>
+  <div class="barra_filtro">
+  <% form_remote_tag :url=>{:action=>"busca", :id=>@formulario.id} do -%>
+    Filtro <%= text_field_tag :filtro %>
+    <%= submit_tag 'Buscar' %>
+  <% end -%>
+  </div>
+  <div id="link_botao">
+    <%= link_to 'Novo Cadastro', new_ecm_formulario_cadastro_path(@formulario) %>
+  </div>
+</div>
+<table id="listar">
+    <div id="cadastros">
+    </div>
+</table>
+

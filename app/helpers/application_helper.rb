@@ -19,5 +19,17 @@ module ApplicationHelper
       eval("#{tipo}_#{acao}_item")
     end
   end
+
+  def ecm_new_form(tipo, item)
+    eval("#{tipo}_new_form(item)")
+  end
+
+  def ecm_edit_form(tipo, item, item_form)
+    eval("#{tipo}_edit_form(item, item_form)")
+  end
+
+  def ecm_show_form(tipo, item, itemform)
+    eval("#{tipo}_show_form(item, itemform)")
+  end
 end
 

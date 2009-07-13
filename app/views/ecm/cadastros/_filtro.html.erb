@@ -1,0 +1,13 @@
+<table id="listar">
+  </tr>
+    <th class="titulo_lista"><%= @item.rotulo %></th>
+    <th class="titulo_lista">Status</th>
+  </tr>
+    <% @cadastros.each do |cadastro| %>
+    <tr>
+      <td class="itens_index"><%= link_to ecm_show_form(@item.itenstipo.componente, @item, cadastro), ecm_formulario_cadastro_path(@formulario, cadastro.cadastro_id) %></td>
+      <td class="itens_index"><%= cadastro.cadastro.status %></td>
+    </tr>
+	  <% end %>
+</table>
+

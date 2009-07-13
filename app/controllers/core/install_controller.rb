@@ -69,9 +69,10 @@ class Core::InstallController < ApplicationController
     Itenstipo.create(:nome=>"Auto Numeração", :tipo=>"numero_inteiro", :status=>true, :componente=>"auto_numeracao")
     Itenstipo.create(:nome=>"Data", :tipo=>"data", :status=>true, :componente=>"data")
     Itenstipo.create(:nome=>"Data e Hora", :tipo=>"data_hora", :status=>true, :componente=>"data_hora")
-    Itenstipo.create(:nome=>"Lista", :tipo=>"lista", :status=>true, :componente=>"lista")
+    Itenstipo.create(:nome=>"Lista", :tipo=>"texto", :status=>true, :componente=>"lista")
     Itenstipo.create(:nome=>"Imagem", :tipo=>"imagem", :status=>true, :componente=>"imagem")
-    Itenstipo.create(:nome=>"Soma em Referencia", :tipo=>:null, :status=>true, :componente=>"soma_referencia")
+    Itenstipo.create(:nome=>"Referencia", :tipo=>"referencia", :status=>true, :componente=>"referencia")
+    Itenstipo.create(:nome=>"Soma em Referencia", :tipo=>"referencia", :status=>true, :componente=>"soma_referencia")
 
     ecmcategoria = Sistema.create(:nome=>"Categoria de Formularios", :descricao=>"Categoria de Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::CategoriasController", :menu=>true, :status=>true, :modulo_id=>mecm.id)
     @log << "#ID do Categoria de Formularios - #{ecmcategoria.id}\n"

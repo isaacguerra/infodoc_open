@@ -1,0 +1,33 @@
+<div id="barra_titulo">
+  <h3 class="titulo_new">Novo <%= @formulario.titulo %></h3>
+</div>
+<table class="formulario">
+  <% form_for @cadastro, :url=>{:action=>'update'} do |f| %>
+    <tr>
+      <td></td>
+      <td class="error_messages">
+        <%= f.error_messages %>
+      </td>
+    </tr>
+    <% @formulario.itensformularios.each do |item| %>
+    <tr>
+      <td class="lista_item">
+        <%= item.rotulo %>
+      </td>
+      <td class="lista_conteudo">
+        <%= ecm_edit_form(item.itenstipo.componente, item, @cadastro.busca_form_item(item)) %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td class="lista_item"></td>
+      <td class="lista_conteudo">
+        <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_formulario_cadastros_path(@formulario) %>
+</div>
+

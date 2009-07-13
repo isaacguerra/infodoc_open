@@ -1,5 +1,6 @@
 class Itensformulario < ActiveRecord::Base
   belongs_to :itenstipo
+  belongs_to :formulario
 
   serialize :opcoes
 
@@ -15,7 +16,8 @@ class Itensformulario < ActiveRecord::Base
   #scopos----------
   named_scope :da_entidade, lambda {|id| {:conditions=>["entidade_id = ?", id]}}
   named_scope :do_formulario, lambda {|id| {:conditions=>["formulario_id = ?", id]}}
-  named_scope :do_tipo, lambda {|id| {:conditions=>["itenstipo_id = ?", id]}}
+  named_scope :do_itenstipo, lambda {|id| {:conditions=>["itenstipo_id = ?", id]}}
+  named_scope :do_tipo, lambda {|id| {:conditions=>["tipo = ?", id]}}
   #-------------
 
 end

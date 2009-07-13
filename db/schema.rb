@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090708194943) do
+ActiveRecord::Schema.define(:version => 20090711123057) do
 
   create_table "cadastros", :force => true do |t|
     t.integer  "entidade_id"
@@ -21,6 +21,143 @@ ActiveRecord::Schema.define(:version => 20090708194943) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "ecm_item_data_horas", :force => true do |t|
+    t.integer  "entidade_id"
+    t.integer  "formulariocategoria_id"
+    t.integer  "formulario_id"
+    t.integer  "itensformulario_id"
+    t.integer  "cadastro_id"
+    t.datetime "conteudo"
+  end
+
+  add_index "ecm_item_data_horas", ["cadastro_id"], :name => "index_ecm_item_data_horas_on_cadastro_id"
+  add_index "ecm_item_data_horas", ["conteudo"], :name => "index_ecm_item_data_horas_on_conteudo"
+  add_index "ecm_item_data_horas", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id", "conteudo"], :name => "index_ecm_data_horas"
+  add_index "ecm_item_data_horas", ["entidade_id"], :name => "index_ecm_item_data_horas_on_entidade_id"
+  add_index "ecm_item_data_horas", ["formulario_id"], :name => "index_ecm_item_data_horas_on_formulario_id"
+  add_index "ecm_item_data_horas", ["formulariocategoria_id"], :name => "index_ecm_item_data_horas_on_formulariocategoria_id"
+  add_index "ecm_item_data_horas", ["itensformulario_id"], :name => "index_ecm_item_data_horas_on_itensformulario_id"
+
+  create_table "ecm_item_datas", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "formulariocategoria_id"
+    t.integer "formulario_id"
+    t.integer "itensformulario_id"
+    t.integer "cadastro_id"
+    t.date    "conteudo"
+  end
+
+  add_index "ecm_item_datas", ["cadastro_id"], :name => "index_ecm_item_datas_on_cadastro_id"
+  add_index "ecm_item_datas", ["conteudo"], :name => "index_ecm_item_datas_on_conteudo"
+  add_index "ecm_item_datas", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id", "conteudo"], :name => "index_ecm_datas"
+  add_index "ecm_item_datas", ["entidade_id"], :name => "index_ecm_item_datas_on_entidade_id"
+  add_index "ecm_item_datas", ["formulario_id"], :name => "index_ecm_item_datas_on_formulario_id"
+  add_index "ecm_item_datas", ["formulariocategoria_id"], :name => "index_ecm_item_datas_on_formulariocategoria_id"
+  add_index "ecm_item_datas", ["itensformulario_id"], :name => "index_ecm_item_datas_on_itensformulario_id"
+
+  create_table "ecm_item_imagems", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "formulariocategoria_id"
+    t.integer "formulario_id"
+    t.integer "itensformulario_id"
+    t.integer "cadastro_id"
+    t.string  "imagem_file_name"
+    t.string  "imagem_content_type"
+    t.integer "imagem_file_size"
+  end
+
+  add_index "ecm_item_imagems", ["cadastro_id"], :name => "index_ecm_item_imagems_on_cadastro_id"
+  add_index "ecm_item_imagems", ["entidade_id"], :name => "index_ecm_item_imagems_on_entidade_id"
+  add_index "ecm_item_imagems", ["formulario_id"], :name => "index_ecm_item_imagems_on_formulario_id"
+  add_index "ecm_item_imagems", ["formulariocategoria_id"], :name => "index_ecm_item_imagems_on_formulariocategoria_id"
+  add_index "ecm_item_imagems", ["itensformulario_id"], :name => "index_ecm_item_imagems_on_itensformulario_id"
+
+  create_table "ecm_item_listas", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "formulariocategoria_id"
+    t.integer "formulario_id"
+    t.integer "itensformulario_id"
+    t.integer "cadastro_id"
+    t.text    "conteudo"
+  end
+
+  add_index "ecm_item_listas", ["cadastro_id"], :name => "index_ecm_item_listas_on_cadastro_id"
+  add_index "ecm_item_listas", ["conteudo"], :name => "index_ecm_item_listas_on_conteudo"
+  add_index "ecm_item_listas", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id", "conteudo"], :name => "index_ecm_tlistas"
+  add_index "ecm_item_listas", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id"], :name => "index_ecm_imagem"
+  add_index "ecm_item_listas", ["entidade_id"], :name => "index_ecm_item_listas_on_entidade_id"
+  add_index "ecm_item_listas", ["formulario_id"], :name => "index_ecm_item_listas_on_formulario_id"
+  add_index "ecm_item_listas", ["formulariocategoria_id"], :name => "index_ecm_item_listas_on_formulariocategoria_id"
+  add_index "ecm_item_listas", ["itensformulario_id"], :name => "index_ecm_item_listas_on_itensformulario_id"
+
+  create_table "ecm_item_numero_decimals", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "formulariocategoria_id"
+    t.integer "formulario_id"
+    t.integer "itensformulario_id"
+    t.integer "cadastro_id"
+    t.float   "conteudo"
+  end
+
+  add_index "ecm_item_numero_decimals", ["cadastro_id"], :name => "index_ecm_item_numero_decimals_on_cadastro_id"
+  add_index "ecm_item_numero_decimals", ["conteudo"], :name => "index_ecm_item_numero_decimals_on_conteudo"
+  add_index "ecm_item_numero_decimals", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id", "conteudo"], :name => "index_ecm_numero_decimals"
+  add_index "ecm_item_numero_decimals", ["entidade_id"], :name => "index_ecm_item_numero_decimals_on_entidade_id"
+  add_index "ecm_item_numero_decimals", ["formulario_id"], :name => "index_ecm_item_numero_decimals_on_formulario_id"
+  add_index "ecm_item_numero_decimals", ["formulariocategoria_id"], :name => "index_ecm_item_numero_decimals_on_formulariocategoria_id"
+  add_index "ecm_item_numero_decimals", ["itensformulario_id"], :name => "index_ecm_item_numero_decimals_on_itensformulario_id"
+
+  create_table "ecm_item_numero_inteiros", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "formulariocategoria_id"
+    t.integer "formulario_id"
+    t.integer "itensformulario_id"
+    t.integer "cadastro_id"
+    t.integer "conteudo"
+  end
+
+  add_index "ecm_item_numero_inteiros", ["cadastro_id"], :name => "index_ecm_item_numero_inteiros_on_cadastro_id"
+  add_index "ecm_item_numero_inteiros", ["conteudo"], :name => "index_ecm_item_numero_inteiros_on_conteudo"
+  add_index "ecm_item_numero_inteiros", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id", "conteudo"], :name => "index_ecm_numero_inteiros"
+  add_index "ecm_item_numero_inteiros", ["entidade_id"], :name => "index_ecm_item_numero_inteiros_on_entidade_id"
+  add_index "ecm_item_numero_inteiros", ["formulario_id"], :name => "index_ecm_item_numero_inteiros_on_formulario_id"
+  add_index "ecm_item_numero_inteiros", ["formulariocategoria_id"], :name => "index_ecm_item_numero_inteiros_on_formulariocategoria_id"
+  add_index "ecm_item_numero_inteiros", ["itensformulario_id"], :name => "index_ecm_item_numero_inteiros_on_itensformulario_id"
+
+  create_table "ecm_item_texto_longos", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "formulariocategoria_id"
+    t.integer "formulario_id"
+    t.integer "itensformulario_id"
+    t.integer "cadastro_id"
+    t.text    "conteudo"
+  end
+
+  add_index "ecm_item_texto_longos", ["cadastro_id"], :name => "index_ecm_item_texto_longos_on_cadastro_id"
+  add_index "ecm_item_texto_longos", ["conteudo"], :name => "index_ecm_item_texto_longos_on_conteudo"
+  add_index "ecm_item_texto_longos", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id", "conteudo"], :name => "index_ecm_texto_longos"
+  add_index "ecm_item_texto_longos", ["entidade_id"], :name => "index_ecm_item_texto_longos_on_entidade_id"
+  add_index "ecm_item_texto_longos", ["formulario_id"], :name => "index_ecm_item_texto_longos_on_formulario_id"
+  add_index "ecm_item_texto_longos", ["formulariocategoria_id"], :name => "index_ecm_item_texto_longos_on_formulariocategoria_id"
+  add_index "ecm_item_texto_longos", ["itensformulario_id"], :name => "index_ecm_item_texto_longos_on_itensformulario_id"
+
+  create_table "ecm_item_textos", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "formulariocategoria_id"
+    t.integer "formulario_id"
+    t.integer "itensformulario_id"
+    t.integer "cadastro_id"
+    t.string  "conteudo"
+  end
+
+  add_index "ecm_item_textos", ["cadastro_id"], :name => "index_ecm_item_textos_on_cadastro_id"
+  add_index "ecm_item_textos", ["conteudo"], :name => "index_ecm_item_textos_on_conteudo"
+  add_index "ecm_item_textos", ["entidade_id", "formulariocategoria_id", "itensformulario_id", "formulario_id", "cadastro_id", "conteudo"], :name => "index_ecm_texto"
+  add_index "ecm_item_textos", ["entidade_id"], :name => "index_ecm_item_textos_on_entidade_id"
+  add_index "ecm_item_textos", ["formulario_id"], :name => "index_ecm_item_textos_on_formulario_id"
+  add_index "ecm_item_textos", ["formulariocategoria_id"], :name => "index_ecm_item_textos_on_formulariocategoria_id"
+  add_index "ecm_item_textos", ["itensformulario_id"], :name => "index_ecm_item_textos_on_itensformulario_id"
 
   create_table "entidades", :force => true do |t|
     t.string   "nome"
