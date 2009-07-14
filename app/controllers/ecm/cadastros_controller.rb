@@ -11,6 +11,9 @@ class Ecm::CadastrosController < ApplicationController
   def new
     @formulario = Formulario.find(params[:formulario_id])
     @cadastro = Cadastro.new
+    if params
+      @params = params
+    end
     @cadastro.monta_acessores(@formulario)
   end
 

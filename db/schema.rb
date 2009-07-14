@@ -249,6 +249,7 @@ ActiveRecord::Schema.define(:version => 20090713190306) do
     t.integer "itenstipo_id"
     t.string  "rotulo"
     t.string  "posicao"
+    t.string  "componente"
     t.string  "tipo"
     t.text    "opcoes"
   end

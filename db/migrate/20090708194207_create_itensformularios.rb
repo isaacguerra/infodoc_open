@@ -6,6 +6,7 @@ class CreateItensformularios < ActiveRecord::Migration
       t.integer :itenstipo_id, nil=>false
       t.string :rotulo
       t.string :posicao
+      t.string :componente
       t.string :tipo
       t.text :opcoes
     end

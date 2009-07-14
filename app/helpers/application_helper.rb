@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def status(valor)
-    if valor
+    if valor == true or valor == 1 or valor == "1"
       return "Ativo"
     else
       return "Inativo"

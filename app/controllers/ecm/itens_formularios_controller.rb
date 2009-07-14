@@ -19,12 +19,17 @@ class Ecm::ItensFormulariosController < ApplicationController
     @itenstipo = Itenstipo.find(params[:itensformulario][:itenstipo_id])
     @form_item = Itensformulario.new(params[:itensformulario])
     @form_item.tipo = @itenstipo.tipo
+    @form_item.componente = @itenstipo.componente
     @form_item.opcoes = params[:opcoes]
-	  if @form_item.save
-	    flash[:notice] = "Item Criado com Sucesso!"
-      redirect_to :action=>"show",:id=>@form_item.id
+    if @form_item.validar_opcoes
+	    if @form_item.save
+	      flash[:notice] = "Item Criado com Sucesso!"
+        redirect_to :action=>"show",:id=>@form_item.id
+      else
+         render :action => "new"
+      end
     else
-       render :action => "new"
+      render :action => "new"
     end
   end
 
@@ -36,11 +41,16 @@ class Ecm::ItensFormulariosController < ApplicationController
   def update
     @formulario = Formulario.find(params[:formulario_id])
     @form_item = Itensformulario.find(params[:id])
-    if @form_item.update_attributes(params[:itensformulario])
-      flash[:notice] = "Item Atualizado com Sucesso!"
-      redirect_to :action=>"show",:id=>@form_item.id
+    @form_item.opcoes = params[:opcoes]
+    if @form_item.validar_opcoes
+      if @form_item.update_attributes(params[:itensformulario])
+        flash[:notice] = "Item Atualizado com Sucesso!"
+        redirect_to :action=>"show",:id=>@form_item.id
+      else
+         render :action=> :edit, :id=>@form_item
+      end
     else
-       render :action=> :edit, :id=>@form_item
+      render :action=> :edit, :id=>@form_item
     end
   end
 

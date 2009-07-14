@@ -6,12 +6,12 @@ class Itensformulario < ActiveRecord::Base
 
   validates_presence_of :entidade_id
   validates_presence_of :formulario_id
-  #validates_presence_of :itenstipo_id
-  #validates_presence_of :rotulo
+  validates_presence_of :itenstipo_id
+  validates_presence_of :rotulo
   #validates_presence_of :posicao
-  #validates_presence_of :tipo
-  #validates_presence_of :componente
-  #validates_presence_of :opcoes
+  validates_presence_of :tipo
+  validates_presence_of :componente
+  validates_presence_of :opcoes
 
   #scopos----------
   named_scope :da_entidade, lambda {|id| {:conditions=>["entidade_id = ?", id]}}
@@ -21,6 +21,11 @@ class Itensformulario < ActiveRecord::Base
   #-------------
 
   after_create :apos_criar
+
+  def validar_opcoes
+    vo = eval("#{self.componente.capitalize}EcmBase.new")
+    return vo.validar_opcoes(self)
+  end
 
   def apos_criar
     if self.formulario.cadastros.size > 0
