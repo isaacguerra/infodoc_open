@@ -56,13 +56,21 @@ class Ecm::CadastrosController < ApplicationController
 
   def busca
     @formulario = Formulario.find(params[:id])
-    @item = Itensformulario.find(@formulario.principal_id)
-    @cadastros = EcmItemTexto.do_formulario(@formulario.id).do_itens_formulario(@formulario.principal_id).find(:all, :conditions=>["conteudo like ?", "%#{params[:filtro]}%"])
+    @form_item = Itensformulario.find(@formulario.principal_id)
+    @cadastro_itens = EcmItemTexto.do_formulario(@formulario.id).do_itens_formulario(@formulario.principal_id).find(:all, :conditions=>["conteudo like ?", "%#{params[:filtro]}%"])
     render :update do |page|
       page.visual_effect(:highlight , 'cadastros')
       page.replace_html "cadastros", render(:partial => "filtro")
     end
   end
 
+  def ajax
+    @formulario = Formulario.find(params[:formulario_id])
+    @item = Itensformulario.find(params[:item_id])
+    render :update do |page|
+      page.visual_effect(:highlight , params[:div])
+      page.replace_html params[:div], render(:text=> ecm_ajax(@item.itenstipo.componente, @item, params))
+    end
+  end
 end
 

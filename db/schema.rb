@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090711123057) do
+ActiveRecord::Schema.define(:version => 20090713190306) do
 
   create_table "cadastros", :force => true do |t|
     t.integer  "entidade_id"
@@ -68,28 +68,11 @@ ActiveRecord::Schema.define(:version => 20090711123057) do
   end
 
   add_index "ecm_item_imagems", ["cadastro_id"], :name => "index_ecm_item_imagems_on_cadastro_id"
+  add_index "ecm_item_imagems", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id"], :name => "index_ecm_imagem"
   add_index "ecm_item_imagems", ["entidade_id"], :name => "index_ecm_item_imagems_on_entidade_id"
   add_index "ecm_item_imagems", ["formulario_id"], :name => "index_ecm_item_imagems_on_formulario_id"
   add_index "ecm_item_imagems", ["formulariocategoria_id"], :name => "index_ecm_item_imagems_on_formulariocategoria_id"
   add_index "ecm_item_imagems", ["itensformulario_id"], :name => "index_ecm_item_imagems_on_itensformulario_id"
-
-  create_table "ecm_item_listas", :force => true do |t|
-    t.integer "entidade_id"
-    t.integer "formulariocategoria_id"
-    t.integer "formulario_id"
-    t.integer "itensformulario_id"
-    t.integer "cadastro_id"
-    t.text    "conteudo"
-  end
-
-  add_index "ecm_item_listas", ["cadastro_id"], :name => "index_ecm_item_listas_on_cadastro_id"
-  add_index "ecm_item_listas", ["conteudo"], :name => "index_ecm_item_listas_on_conteudo"
-  add_index "ecm_item_listas", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id", "conteudo"], :name => "index_ecm_tlistas"
-  add_index "ecm_item_listas", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id"], :name => "index_ecm_imagem"
-  add_index "ecm_item_listas", ["entidade_id"], :name => "index_ecm_item_listas_on_entidade_id"
-  add_index "ecm_item_listas", ["formulario_id"], :name => "index_ecm_item_listas_on_formulario_id"
-  add_index "ecm_item_listas", ["formulariocategoria_id"], :name => "index_ecm_item_listas_on_formulariocategoria_id"
-  add_index "ecm_item_listas", ["itensformulario_id"], :name => "index_ecm_item_listas_on_itensformulario_id"
 
   create_table "ecm_item_numero_decimals", :force => true do |t|
     t.integer "entidade_id"
@@ -124,6 +107,23 @@ ActiveRecord::Schema.define(:version => 20090711123057) do
   add_index "ecm_item_numero_inteiros", ["formulario_id"], :name => "index_ecm_item_numero_inteiros_on_formulario_id"
   add_index "ecm_item_numero_inteiros", ["formulariocategoria_id"], :name => "index_ecm_item_numero_inteiros_on_formulariocategoria_id"
   add_index "ecm_item_numero_inteiros", ["itensformulario_id"], :name => "index_ecm_item_numero_inteiros_on_itensformulario_id"
+
+  create_table "ecm_item_referencias", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "formulariocategoria_id"
+    t.integer "formulario_id"
+    t.integer "itensformulario_id"
+    t.integer "cadastro_id"
+    t.integer "referencia_id"
+  end
+
+  add_index "ecm_item_referencias", ["cadastro_id"], :name => "index_ecm_item_referencias_on_cadastro_id"
+  add_index "ecm_item_referencias", ["entidade_id", "formulariocategoria_id", "itensformulario_id", "formulario_id", "cadastro_id", "referencia_id"], :name => "index_ecm_referencias"
+  add_index "ecm_item_referencias", ["entidade_id"], :name => "index_ecm_item_referencias_on_entidade_id"
+  add_index "ecm_item_referencias", ["formulario_id"], :name => "index_ecm_item_referencias_on_formulario_id"
+  add_index "ecm_item_referencias", ["formulariocategoria_id"], :name => "index_ecm_item_referencias_on_formulariocategoria_id"
+  add_index "ecm_item_referencias", ["itensformulario_id"], :name => "index_ecm_item_referencias_on_itensformulario_id"
+  add_index "ecm_item_referencias", ["referencia_id"], :name => "index_ecm_item_referencias_on_referencia_id"
 
   create_table "ecm_item_texto_longos", :force => true do |t|
     t.integer "entidade_id"

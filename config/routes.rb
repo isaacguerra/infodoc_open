@@ -20,7 +20,7 @@ ActionController::Routing::Routes.draw do |map|
     ecm.resources :formularios, :has_many=>:principal_formularios
     ecm.resources :formularios, :has_many=>:ajudas_formularios
     ecm.resources :formularios, :has_many=>:cadastros
-    ecm.resources :cadastros, :has_many=>:itens_cadastros
+    ecm.resources :cadastros
   end
 
   # Sample of regular route:

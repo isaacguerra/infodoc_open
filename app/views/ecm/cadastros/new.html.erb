@@ -14,13 +14,13 @@
         <%= f.hidden_field :formulariotipo_id, :value=>@formulario.formulariotipo_id %>
       </td>
     </tr>
-    <% @formulario.itensformularios.each do |item| %>
+    <% @formulario.itensformularios.each do |form_item| %>
     <tr>
       <td class="lista_item">
-        <%= item.rotulo %>
+        <%= form_item.rotulo %>
       </td>
       <td class="lista_conteudo">
-        <%= ecm_new_form(item.itenstipo.componente, item) %>
+        <%= ecm_new_cadastro_item(form_item.itenstipo.componente, form_item) %>
       </td>
     </tr>
     <% end %>

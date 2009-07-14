@@ -4,10 +4,10 @@
 </div>
 
 <table id="listar">
-  <% @formulario.itensformularios.each do |i| %>
+  <% @formulario.itensformularios.each do |form_item| %>
   <tr>
-    <td class="lista_item"><%= i.rotulo %></td>
-    <td class="lista_conteudo"><%= ecm_show_form(i.itenstipo.componente, i, @cadastro.busca_form_item(i)) %></td>
+    <td class="lista_item"><%= form_item.rotulo %></td>
+    <td class="lista_conteudo"><%= ecm_show_cadastro_item(form_item.itenstipo.componente, form_item, @cadastro.busca_form_item(form_item)) %></td>
   </tr>
   <% end %>
 </table>

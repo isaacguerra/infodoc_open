@@ -17,7 +17,7 @@ class CreateEcmItemImagems < ActiveRecord::Migration
     add_index :ecm_item_imagems, :itensformulario_id
     add_index :ecm_item_imagems, :cadastro_id
 
-    add_index :ecm_item_listas, [:entidade_id, :formulariocategoria_id, :formulario_id, :itensformulario_id, :cadastro_id], :name=>"index_ecm_imagem"
+    add_index :ecm_item_imagems, [:entidade_id, :formulariocategoria_id, :formulario_id, :itensformulario_id, :cadastro_id], :name=>"index_ecm_imagem"
   end
 
   def self.down

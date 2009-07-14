@@ -17,30 +17,30 @@ class Cadastro < ActiveRecord::Base
   #-------------
 
   def monta_acessores(formulario)
-    formulario.itensformularios.each do |i|
-      cm = eval("Ecm#{i.itenstipo.componente.capitalize}Base.new")
-      cm.acessores(self, i)
+    formulario.itensformularios.each do |form_item|
+      cm = eval("#{form_item.itenstipo.componente.capitalize}EcmBase.new")
+      cm.acessores(self, form_item)
     end
   end
 
-  def validar(formulario, itens_form)
-    formulario.itensformularios.each do |item|
-      cm = eval("Ecm#{item.itenstipo.componente.capitalize}Base.new")
-      cm.validar(self, item, itens_form)
+  def validar(formulario, cadastro_itens)
+    formulario.itensformularios.each do |form_item|
+      cm = eval("#{form_item.itenstipo.componente.capitalize}EcmBase.new")
+      cm.validar(self, form_item, cadastro_itens)
     end
   end
 
-  def salvar_itens(itens_form)
-    self.formulario.itensformularios.each do |item|
-      cm = eval("Ecm#{item.itenstipo.componente.capitalize}Base.new")
-      cm.save(self, item, itens_form)
+  def salvar_itens(cadastro_itens)
+    self.formulario.itensformularios.each do |form_item|
+      cm = eval("#{form_item.itenstipo.componente.capitalize}EcmBase.new")
+      cm.save(self, form_item, cadastro_itens)
     end
   end
 
-  def update_itens(itens_form)
-    self.formulario.itensformularios.each do |item|
-      cm = eval("Ecm#{item.itenstipo.componente.capitalize}Base.new")
-      cm.update(self, item, itens_form)
+  def update_itens(cadastro_itens)
+    self.formulario.itensformularios.each do |form_item|
+      cm = eval("#{form_item.itenstipo.componente.capitalize}EcmBase.new")
+      cm.update(self, form_item, cadastro_itens)
     end
   end
 

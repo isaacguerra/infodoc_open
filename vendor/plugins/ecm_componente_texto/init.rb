@@ -1,2 +1,2 @@
-ActionView::Base.send :include, EcmHelper
+ActionView::Base.send :include, TextoEcmHelper
 

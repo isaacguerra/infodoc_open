@@ -1,7 +1,9 @@
-module EcmHelper
-  def texto_new_item
+module TextoEcmHelper
+#================================================================
+# helper para criação do item do formulario
+
+  def texto_ecm_new_form_item
     view = ""
-     view.concat(hidden_field "itensformulario", :tipo, :value=>"texto")
      view.concat("Item Texto")
      view.concat("<li> Este item receberá dados textuais, com tamanho maximo de 255 caracteres.</li>")
      view.concat("<table>")
@@ -55,23 +57,27 @@ module EcmHelper
       view.concat("</table>")
      view.concat("</table>")
   end
-  def texto_edit_item(opcoes = nil)
+#-------------------------------------------------------------------------------
+
+#===============================================================================
+# Helper para edição do item no formulario
+
+  def texto_ecm_edit_form_item(form_item)
     view = ""
-     view.concat(hidden_field "itensformulario", :tipo, :value=>"Texto")
      view.concat("Item Texto")
      view.concat("<li> Este item receberá dados textuais, com tamanho maximo de 255 caracteres.</li>")
      view.concat("<table>")
       view.concat("<tr>")
         view.concat("<td>")
           view.concat("Largura:<br/>")
-          view.concat(text_field "opcoes", :largura, :value=>opcoes[:largura])
+          view.concat(text_field "opcoes", :largura, :value=>form_item.opcoes[:largura])
           view.concat("<li>Informe a largura da caixa de texto</li>")
         view.concat("</td>")
       view.concat("</tr>")
       view.concat("<tr>")
         view.concat("<td>")
           view.concat("Quant. Caracter:<br/>")
-          view.concat(text_field "opcoes", :max_length, :value=>opcoes[:max_length])
+          view.concat(text_field "opcoes", :max_length, :value=>form_item.opcoes[:max_length])
           view.concat("<li>Informe a Quantidade de Caracteres</li>")
         view.concat("</td>")
       view.concat("</tr>")
@@ -85,21 +91,21 @@ module EcmHelper
       view.concat("<tr>")
         view.concat("<td>")
           view.concat("Forçar letras maiúsculas:")
-          view.concat(check_box "opcoes", :maiusculo, :value=>opcoes[:maiusculo])
+          view.concat(check_box "opcoes", :maiusculo, :value=>form_item.opcoes[:maiusculo])
           view.concat("<li>Forçar o texto a ser maiúsculo!</li>")
         view.concat("</td>")
       view.concat("</tr>")
       view.concat("<tr>")
         view.concat("<td>")
           view.concat("Remover acentuação:")
-          view.concat(check_box "opcoes", :semacento, :value=>opcoes[:semacento])
+          view.concat(check_box "opcoes", :semacento, :value=>form_item.opcoes[:semacento])
           view.concat("<li>Remover as acentuações do texto</li>")
         view.concat("</td>")
       view.concat("</tr>")
       view.concat("<tr>")
         view.concat("<td>")
           view.concat("Texto de Exemplo:<br/>")
-          view.concat(text_field "opcoes", :exemplo, :value=>opcoes[:exemplo])
+          view.concat(text_field "opcoes", :exemplo, :value=>form_item.opcoes[:exemplo])
           view.concat("<li>Informe um exemplo para o campo, se achar necessário</li>")
         view.concat("</td>")
       view.concat("</tr>")
@@ -111,15 +117,16 @@ module EcmHelper
       view.concat("</table>")
      view.concat("</table>")
   end
+#-------------------------------------------------------------------------------
 
-  def texto_show_item(opcoes = nil)
+  def texto_ecm_show_form_item(form_item)
     view = ""
     view.concat("<tr>")
       view.concat("<td class='lista_item'>")
         view.concat("Largura")
       view.concat("</td>")
       view.concat("<td class='lista_conteudo'>")
-        view.concat(opcoes[:largura])
+        view.concat(form_item.opcoes[:largura])
       view.concat("</td>")
     view.concat("</tr>")
     view.concat("<tr>")
@@ -127,7 +134,7 @@ module EcmHelper
         view.concat("Quant. Caracter:<br/>")
       view.concat("</td>")
       view.concat("<td class='lista_conteudo'>")
-        view.concat(opcoes[:max_length])
+        view.concat(form_item.opcoes[:max_length])
       view.concat("</td>")
     view.concat("</tr>")
     view.concat("<tr>")
@@ -135,7 +142,7 @@ module EcmHelper
         view.concat("Sem Acento:<br/>")
       view.concat("</td>")
       view.concat("<td class='lista_conteudo'>")
-        view.concat(opcoes[:semacento])
+        view.concat(form_item.opcoes[:semacento])
       view.concat("</td>")
     view.concat("</tr>")
     view.concat("<tr>")
@@ -143,7 +150,7 @@ module EcmHelper
         view.concat("Exemplo:<br/>")
       view.concat("</td>")
       view.concat("<td class='lista_conteudo'>")
-        view.concat(opcoes[:exemplo])
+        view.concat(form_item.opcoes[:exemplo])
       view.concat("</td>")
     view.concat("</tr>")
     view.concat("<tr>")
@@ -151,7 +158,7 @@ module EcmHelper
         view.concat("Nulo:<br/>")
       view.concat("</td>")
       view.concat("<td class='lista_conteudo'>")
-        view.concat(opcoes[:nulo])
+        view.concat(form_item.opcoes[:nulo])
       view.concat("</td>")
     view.concat("</tr>")
     view.concat("<tr>")
@@ -159,28 +166,34 @@ module EcmHelper
         view.concat("Maiuscolo:<br/>")
       view.concat("</td>")
       view.concat("<td class='lista_conteudo'>")
-        view.concat(opcoes[:maiusculo])
+        view.concat(form_item.opcoes[:maiusculo])
       view.concat("</td>")
     view.concat("</tr>")
   end
 
-  def texto_new_form(item)
+#===============================================================================
+# helper de cadastro
+
+  def texto_ecm_new_cadastro_item(form_item)
     view = ""
-     view.concat(text_field :cadastro, "item_#{item.id}", options={:size=>item.opcoes[:largura], :maxlength=>item.opcoes[:max_length]})
-     view.concat("<br><span class='item_exemplo'>#{item.opcoes[:exemplo]}</span>") if item.opcoes[:exemplo] != ""
+     view.concat(text_field :cadastro, "item_#{form_item.id}", options={:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
+     view.concat("<br><span class='form_item_exemplo'>#{form_item.opcoes[:exemplo]}</span>") if form_item.opcoes[:exemplo] != ""
      return view
   end
 
-  def texto_edit_form(item, item_form)
+  def texto_ecm_edit_cadastro_item(form_item, cadastro_item)
     view = ""
-     view.concat(text_field :cadastro, "item_#{item.id}" ,options={:value=>item_form.conteudo, :size=>item.opcoes[:largura], :maxlength=>item.opcoes[:max_length]})
-     view.concat("<br><span class='item_exemplo'>#{item.opcoes[:exemplo]}</span>") if item.opcoes[:exemplo] != ""
+     view.concat(text_field :cadastro, "item_#{form_item.id}" ,options={:value=>cadastro_item.conteudo, :size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
+     view.concat("<br><span class='form_item_exemplo'>#{form_item.opcoes[:exemplo]}</span>") if form_item.opcoes[:exemplo] != ""
      return view
   end
 
 
-  def texto_show_form(item, itemform)
-    return itemform.conteudo
+  def texto_ecm_show_cadastro_item(form_item, cadastro_item)
+    return cadastro_item.conteudo
+  end
+
+  def texto_ajax
   end
 end
 

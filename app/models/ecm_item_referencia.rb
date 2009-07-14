@@ -6,6 +6,8 @@ class EcmItemReferencia < ActiveRecord::Base
   validates_presence_of :formulario_id
   validates_presence_of :itensformulario_id
   validates_presence_of :cadastro_id
+  validates_presence_of :formulario_refencia_id
+  validates_presence_of :itensformulario_referencia_id
   validates_presence_of :referencia_id
 
   #scopos----------

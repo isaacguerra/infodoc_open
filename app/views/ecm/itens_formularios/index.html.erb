@@ -5,15 +5,15 @@
 <table id="listar">
   <tr>
     <th class="titulo_lista">Rotulo</th>
-    <th class="titulo_lista">Tipo</th>
+    <th class="titulo_lista">Componente</th>
   </tr>
-    <% @itens.each do |item| %>
+    <% @form_itens.each do |form_item| %>
     <tr>
       <td class="itens_index">
-        <%= link_to item.rotulo, ecm_formulario_itens_formulario_path(@formulario, item) %>
+        <%= link_to form_item.rotulo, ecm_formulario_itens_formulario_path(@formulario, form_item) %>
       </td>
       <td class="itens_index">
-        <%= item.itenstipo.nome %>
+        <%= form_item.itenstipo.nome %>
       </td>
     </tr>
 	  <% end %>
