@@ -242,10 +242,22 @@ module TextoEcmHelper
     return view
   end
 
+  def texto_ecm_find_cadastro_item(form_item)
+    view = ""
+    view.concat(text_field :cadastro, "item_#{form_item.id}", options={:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
+    view.concat("<br><span class='form_item_exemplo'>#{form_item.opcoes[:exemplo]}</span>") if form_item.opcoes[:exemplo] != ""
+    return view
+  end
+
 
   def texto_ecm_show_cadastro_item(form_item, cadastro_item)
     return cadastro_item.conteudo
   end
+
+  def texto_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+    return cadastro_item.conteudo
+  end
+
 
   def texto_ajax
   end

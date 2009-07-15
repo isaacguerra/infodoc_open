@@ -5,7 +5,19 @@
   </tr>
     <% @cadastro_itens.each do |cadastro_item| %>
     <tr>
-      <td class="itens_index"><%= link_to ecm_show_cadastro_item(@form_item, cadastro_item), ecm_formulario_cadastro_path(@formulario, cadastro_item.cadastro_id) %></td>
+      <td class="itens_index">
+        <%= link_to ecm_show_cadastro_item(@form_item, cadastro_item), ecm_formulario_cadastro_path(@formulario, cadastro_item.cadastro_id) %>
+        <% if @tipo == "avancado" %>
+          <table id="listar">
+            <% cadastro_item.cadastro.formulario.itensformularios.each do |form_item| %>
+            <tr>
+              <td class="lista_item"><%= form_item.rotulo %></td>
+              <td class="lista_conteudo"><%= ecm_show_filtro_cadastro_item(form_item, cadastro_item.cadastro.busca_form_item(form_item)) %></td>
+            </tr>
+            <% end %>
+          </table>
+        <% end %>
+      </td>
       <td class="itens_index"><%= cadastro_item.cadastro.status %></td>
     </tr>
 	  <% end %>

@@ -43,8 +43,17 @@ module ApplicationHelper
     eval("#{form_item.componente}_ecm_edit_cadastro_item(form_item, cadastro_item, params)")
   end
 
+  def ecm_find_cadastro_item(form_item)
+    eval("#{form_item.componente}_ecm_find_cadastro_item(form_item)")
+  end
+
   def ecm_show_cadastro_item(form_item, cadastro_item)
     eval("#{form_item.componente}_ecm_show_cadastro_item(form_item, cadastro_item)")
   end
+
+  def ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+    eval("#{form_item.componente}_ecm_show_filtro_cadastro_item(form_item, cadastro_item)")
+  end
+
 end
 

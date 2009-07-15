@@ -124,8 +124,17 @@ module TextoLongoEcmHelper
      return view
   end
 
+  def texto_longo_ecm_find_cadastro_item(form_item)
+    view = ""
+    view.concat(text_field :cadastro, "item_#{form_item.id}", options={:size=>40})
+    return view
+  end
 
   def texto_longo_ecm_show_cadastro_item(form_item, cadastro_item)
+    return "<pre>#{cadastro_item.conteudo}</pre>"
+  end
+
+  def texto_longo_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
     return "<pre>#{cadastro_item.conteudo}</pre>"
   end
 

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
   before_filter :autenticado
-  before_filter :autorizado
+  #before_filter :autorizado
 
   protected
   def autenticado

@@ -20,3 +20,18 @@
 </table>
 <%= link_to "Voltar", ecm_categoria_formularios_path(@formulario.formulariocategoria_id) %></td>
 
+
+<h2>Preview</h2>
+<table class="formulario">
+    <% @formulario.itensformularios.each do |form_item| %>
+    <tr>
+      <td class="lista_item">
+        <%= form_item.rotulo %>
+      </td>
+      <td class="lista_conteudo">
+        <%= ecm_new_cadastro_item(form_item) %>
+      </td>
+    </tr>
+    <% end %>
+</table>
+
