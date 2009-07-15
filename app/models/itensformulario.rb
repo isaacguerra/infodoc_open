@@ -23,7 +23,7 @@ class Itensformulario < ActiveRecord::Base
   after_create :apos_criar
 
   def validar_opcoes
-    vo = eval("#{self.componente.capitalize}EcmBase.new")
+    vo = eval("#{self.componente.camelize}EcmBase.new")
     return vo.validar_opcoes(self)
   end
 

@@ -1,0 +1,47 @@
+class TextoLongoEcmBase
+
+   def validar_opcoes(form_item)
+      return true
+   end
+
+   def acessores(cadastro, item_form)
+    cadastro.instance_eval do
+      eval("@item_#{item_form.id}")
+      eval("def item_#{item_form.id}=(valor) @item_#{item_form.id}=valor end")
+      eval("def item_#{item_form.id}() return @item_#{item_form.id} end")
+    end
+   end
+
+   def validar(cadastro, form_item, cadastro_itens)
+      if form_item.opcoes[:nulo] == "0" and cadastro_itens["item_#{form_item.id}"] == ""
+        cadastro.errors.add("item_#{form_item.id}", "Campo #{form_item.rotulo} Requerido!")
+      end
+   end
+
+   def save(cadastro, form_item, cadastro_itens)
+      texto_longo = EcmItemTextoLongo.new
+      texto_longo.entidade_id = cadastro.entidade_id
+      texto_longo.formulariocategoria_id = cadastro.formulario.formulariocategoria_id
+      texto_longo.formulario_id = cadastro.formulario_id
+      texto_longo.itensformulario_id = form_item.id
+      texto_longo.cadastro_id = cadastro.id
+      texto_longo.conteudo = cadastro_itens["item_#{form_item.id}"]
+      texto_longo.save
+   end
+
+   def update(cadastro, form_item, cadastro_itens)
+     texto_longo = EcmItemTextoLongo.find(:first, :conditions=>["entidade_id = ? and
+                                                   formulariocategoria_id = ? and
+                                                   formulario_id = ? and
+                                                   itensformulario_id = ? and
+                                                   cadastro_id = ?",
+                                                   cadastro.entidade_id,
+                                                   cadastro.formulariocategoria_id,
+                                                   cadastro.formulario_id,
+                                                   form_item.id,
+                                                   cadastro.id])
+      texto_longo.conteudo = cadastro_itens["item_#{form_item.id}"]
+      texto_longo.save
+   end
+end
+
