@@ -10,6 +10,7 @@ class Grupo < ActiveRecord::Base
   validates_presence_of :descricao
 
   #scopos----------
+  named_scope :ativo, :conditions=>{:status=>true}
   named_scope :da_entidade, lambda {|id| {:conditions=>["entidade_id = ?", id]}}
   #-------------
 

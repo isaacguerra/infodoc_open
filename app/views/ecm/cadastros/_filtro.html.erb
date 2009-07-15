@@ -5,7 +5,7 @@
   </tr>
     <% @cadastro_itens.each do |cadastro_item| %>
     <tr>
-      <td class="itens_index"><%= link_to ecm_show_cadastro_item(@form_item.itenstipo.componente, @form_item, cadastro_item), ecm_formulario_cadastro_path(@formulario, cadastro_item.cadastro_id) %></td>
+      <td class="itens_index"><%= link_to ecm_show_cadastro_item(@form_item, cadastro_item), ecm_formulario_cadastro_path(@formulario, cadastro_item.cadastro_id) %></td>
       <td class="itens_index"><%= cadastro_item.cadastro.status %></td>
     </tr>
 	  <% end %>

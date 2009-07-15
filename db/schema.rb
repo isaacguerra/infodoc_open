@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090713190306) do
+ActiveRecord::Schema.define(:version => 20090715121359) do
 
   create_table "cadastros", :force => true do |t|
     t.integer  "entidade_id"
@@ -211,6 +211,16 @@ ActiveRecord::Schema.define(:version => 20090713190306) do
     t.string  "tipo"
     t.boolean "status"
   end
+
+  create_table "grupoformularios", :force => true do |t|
+    t.integer "grupo_id"
+    t.integer "formulario_id"
+    t.integer "permissao"
+  end
+
+  add_index "grupoformularios", ["formulario_id"], :name => "index_grupoformularios_on_formulario_id"
+  add_index "grupoformularios", ["grupo_id"], :name => "index_grupoformularios_on_grupo_id"
+  add_index "grupoformularios", ["permissao"], :name => "index_grupoformularios_on_permissao"
 
   create_table "grupos", :force => true do |t|
     t.integer  "entidade_id"

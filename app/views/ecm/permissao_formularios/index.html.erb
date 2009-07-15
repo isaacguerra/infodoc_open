@@ -1,0 +1,62 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Grupos</h3>
+</div>
+
+  <% form_tag(:action=>"create") do %>
+  <table id="listar">
+   <tr>
+     <th class="titulo_lista">Grupo com Permissão</th>
+     <th class="titulo_lista">Permissão</th>
+    </tr>
+    <% @gd.each do |gd| %>
+    <tr>
+      <td>
+         <%= check_box_tag "grupos[]", gd.id %>
+         <%= gd.grupo.nome %>
+      </td>
+      <td>
+        <% if gd.permissao == 1 %>
+          Leitura
+        <% elsif gd.permissao == 2 %>
+          Escrita
+        <% elsif gd.permissao == 3 %>
+          Gerencia
+        <% end %>
+      <td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= submit_tag "Remover" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+
+  <% form_tag(:action=>"create") do %>
+  <table id="listar">
+   </tr>
+     <th class="titulo_lista">Grupos Sem Permissão</th>
+     <th class="titulo_lista" width=100>Gerencia</th>
+     <th class="titulo_lista" width=100>Escrita</th>
+     <th class="titulo_lista" width=100>Leitura</th>
+     <th class="titulo_lista" width=100>Nenhuma</th>
+    </tr>
+    <% @gf.each do |gf| %>
+			<tr class='rowA'>
+        <td><%= gf.nome %></td>
+        <td><%= radio_button "perm", gf.id, 3 %></td>
+        <td><%= radio_button "perm", gf.id, 2 %></td>
+        <td><%= radio_button "perm", gf.id, 1 %></td>
+        <td><%= radio_button "perm", gf.id, 0, :checked=>true %></td>
+      </tr>
+  	<% end %>
+    <tr>
+      <td><%= submit_tag "Adicionar" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categoria_formularios_path(@formulario.formulariocategoria_id) %>
+</div>
+

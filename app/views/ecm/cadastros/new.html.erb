@@ -20,7 +20,8 @@
         <%= form_item.rotulo %>
       </td>
       <td class="lista_conteudo">
-        <%= ecm_new_cadastro_item(form_item.itenstipo.componente, form_item) %>
+        <%= ecm_new_cadastro_item(form_item) unless @params %>
+        <%= ecm_new_cadastro_item(form_item, @params) if @params %>
       </td>
     </tr>
     <% end %>

@@ -11,9 +11,6 @@ class Ecm::CadastrosController < ApplicationController
   def new
     @formulario = Formulario.find(params[:formulario_id])
     @cadastro = Cadastro.new
-    if params
-      @params = params
-    end
     @cadastro.monta_acessores(@formulario)
   end
 
@@ -23,6 +20,7 @@ class Ecm::CadastrosController < ApplicationController
     @cadastro.monta_acessores(@formulario)
     @cadastro.validar(@formulario, params[:cadastro])
     if @cadastro.errors.count > 0
+      @params = params[:cadastro]
       render :action => "new"
     else
       @cadastro.entidade_id = params[:cadastro][:entidade_id]
@@ -49,6 +47,7 @@ class Ecm::CadastrosController < ApplicationController
     @cadastro.monta_acessores(@formulario)
     @cadastro.validar(@formulario, params[:cadastro])
     if @cadastro.errors.count > 0
+      @params = params[:cadastro]
       render :action => "edit", :id=>@cadastro
     else
       @cadastro.update_itens(params[:cadastro])
