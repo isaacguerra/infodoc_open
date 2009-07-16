@@ -65,5 +65,12 @@ class TextoEcmBase
       texto.conteudo = cadastro_itens["item_#{form_item.id}"]
       texto.save
    end
+
+   def busca_avancada(form_item, params)
+      cads = EcmItemTexto.find(:all, :conditions=>["itensformulario_id = ? and
+                                                    conteudo like ?",
+                                                    form_item.id,
+                                                    "%#{params[:cadastro]["item_#{form_item.id}"]}%"]).collect {|c| c.cadastro_id}
+   end
 end
 

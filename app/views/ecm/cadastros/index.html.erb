@@ -4,17 +4,8 @@
     <%= link_to 'Novo Cadastro', new_ecm_formulario_cadastro_path(@formulario) %>
   </div>
 </div>
-<div>
-  <% form_remote_tag :url=>{:action=>"busca", :id=>@formulario.id} do -%>
-    <b><%= Itensformulario.find(@formulario.principal_id).rotulo %></b><br>
-    <%= text_field_tag :filtro, '', :size => 40 %>
-    <%= submit_tag 'Buscar' %><br>
-    <%= radio_button_tag :tipo, :simples, true %><font size=1>Relatorio Simples</font>
-    <%= radio_button_tag :tipo, :avancado %><font size=1>Relatorio detalhado</font>
-    <font size=1><%= link_to_remote "Busca Avançada", :url=>{:action=>"view_busca_avancada", :id=>@formulario} %></font>
-  <% end -%>
-</div>
-<div id="filtro_avancado">
+<div id="busca">
+  <%= render :partial=>"busca" %>
 </div>
 <table id="listar">
     <div id="cadastros">

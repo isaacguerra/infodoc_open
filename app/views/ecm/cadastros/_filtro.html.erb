@@ -1,12 +1,12 @@
 <table id="listar">
   </tr>
-    <th class="titulo_lista"><%= @form_item.rotulo %></th>
+    <th class="titulo_lista"><%= @principal.rotulo %></th>
     <th class="titulo_lista">Status</th>
   </tr>
     <% @cadastro_itens.each do |cadastro_item| %>
     <tr>
       <td class="itens_index">
-        <%= link_to ecm_show_cadastro_item(@form_item, cadastro_item), ecm_formulario_cadastro_path(@formulario, cadastro_item.cadastro_id) %>
+        <%= link_to ecm_show_cadastro_item(@principal, cadastro_item), ecm_formulario_cadastro_path(@formulario, cadastro_item.cadastro_id) %>
         <% if @tipo == "avancado" %>
           <table id="listar">
             <% cadastro_item.cadastro.formulario.itensformularios.each do |form_item| %>
