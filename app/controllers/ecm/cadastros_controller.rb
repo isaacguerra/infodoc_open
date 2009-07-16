@@ -1,17 +1,29 @@
 class Ecm::CadastrosController < ApplicationController
   def index
     @formulario = Formulario.find(params[:formulario_id])
+    if @formulario.permissao(@sessao_usuario.usuario) < 1
+      flash[:notice] = "Ação não Autorizada"
+      redirect_to "/intranet"
+    end
   end
 
   def show
     @formulario = Formulario.find(params[:formulario_id])
     @cadastro = Cadastro.find(params[:id])
+    if @formulario.permissao(@sessao_usuario.usuario) < 1
+      flash[:notice] = "Ação não Autorizada"
+      redirect_to "/intranet"
+    end
   end
 
   def new
     @formulario = Formulario.find(params[:formulario_id])
     @cadastro = Cadastro.new
     @cadastro.monta_acessores(@formulario)
+    if @formulario.permissao(@sessao_usuario.usuario) < 2
+      flash[:notice] = "Ação não Autorizada"
+      redirect_to "/intranet"
+    end
   end
 
   def create
@@ -39,6 +51,10 @@ class Ecm::CadastrosController < ApplicationController
     @formulario = Formulario.find(params[:formulario_id])
     @cadastro = Cadastro.find(params[:id])
     @cadastro.monta_acessores(@formulario)
+    if @formulario.permissao(@sessao_usuario.usuario) < 2
+      flash[:notice] = "Ação não Autorizada"
+      redirect_to "/intranet"
+    end
   end
 
   def update

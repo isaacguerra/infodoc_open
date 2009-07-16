@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
   before_filter :autenticado
-  #before_filter :autorizado
+  before_filter :autorizado
 
   protected
   def autenticado
@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
           @sessao_usuario.acesso
           @menu_modulo = []
           opcoes = @sessao_usuario.opcoes.to_a
-          opcoes.each {|m| @menu_modulo << [m[7], m[8]]}
+          opcoes.each {|m| @menu_modulo << m[8]}
           @menu_modulo.uniq!
           return true
         end

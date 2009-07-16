@@ -12,12 +12,28 @@ class Formulario < ActiveRecord::Base
   validates_presence_of :descricao
 
   #scopos----------
-  named_scope :ativo, :conditions=>{:status=>true}
+  named_scope :ativo, :conditions=>["status = ? and principal_id not null", true]
   named_scope :da_entidade, lambda {|id| {:conditions=>["entidade_id = ?", id]}}
   named_scope :da_categoria, lambda {|id| {:conditions=>["formulariocategoria_id = ?", id]}}
   named_scope :do_tipo, lambda {|id| {:conditions=>["formulariotipo_id = ?", id]}}
   #-------------
 
+  def funcional
+    if self.status == true and self.principal_id
+      return true
+    else
+      return false
+    end
+  end
+
+  def permissao(usuario)
+    p = Grupoformulario.maximum("permissao", :conditions=>["formulario_id = ? and grupo_id in (?)", self.id, usuario.grupos])
+    if p
+      return p
+    else
+      return 0
+    end
+  end
 
 end
 

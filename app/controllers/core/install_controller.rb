@@ -51,7 +51,7 @@ class Core::InstallController < ApplicationController
     perfil = Sistema.create(:nome=>"Perfil do Usuario", :descricao=>"Perfil do Usuario", :rota=>"/core/perfil", :controle=>"Core::PerfilController", :menu=>true, :status=>true, :modulo_id=>madm.id)
     @log << "#ID do sistema de Perfil - #{perfil.id}\n"
 
-    cadastro = Sistema.create(:nome=>"Cadastro", :descricao=>"Cadastro", :rota=>"/ecm/cadastros", :controle=>"Ecm::CadastrosController", :menu=>true, :status=>true, :modulo_id=>mgc.id)
+    cadastro = Sistema.create(:nome=>"Cadastros", :descricao=>"Cadastro", :rota=>"/ecm/cadastros", :controle=>"Ecm::CadastrosController", :menu=>false, :status=>true, :modulo_id=>mgc.id)
     @log << "#ID do sistema  de Gerencia de Cadastro - #{cadastro.id}\n"
 
     #ecm tipos de itens

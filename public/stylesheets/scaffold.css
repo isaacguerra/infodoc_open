@@ -17,17 +17,20 @@ a:hover { color: #fff; background-color:#000; }
 */
 .fieldWithErrors {
   padding: 2px;
-  background-color: red;
+  background-color: #CF9191;
   display: table;
 }
 
 #errorExplanation {
   width: 400px;
-  border: 2px solid red;
+  border: 2px solid #CF9191;
+  margin-bottom:20px;
+  margin-left:24px;
+  margin-top:45px;
   padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+    background-color:#EDEDED;
 }
 
 #errorExplanation h2 {
@@ -36,7 +39,7 @@ a:hover { color: #fff; background-color:#000; }
   padding: 5px 5px 5px 15px;
   font-size: 12px;
   margin: -7px;
-  background-color: #c00;
+  background-color: #CF9191;
   color: #fff;
 }
 

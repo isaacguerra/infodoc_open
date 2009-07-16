@@ -1,30 +1,23 @@
-body {
-  margin:0;
-  padding:0;
-  font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura;
-}
-/*### LINKS PRE DEFINIFDOS*/
-a {
-    color:#000000;
-    text-decoration:none;
-}
+/************** PADROES LAYOUT ***********************/
+body    {  margin:0;  padding:0;  font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura; }
 
-a:hover {
-    text-decoration:underline;
-}
+a       { color:#000000; text-decoration:none; }
 
-td {
+a:hover { text-decoration:underline; }
 
-    font-size:0.8em;
-    padding:0;
-    padding-left:6px;
-    border-bottom: 1px solid #EDEDED;
+td      {font-size:0.8em; padding:0; padding-left:6px; border-bottom: 1px solid #EDEDED; }
 
-}
-/*### FIM LINKS PRE DEFINIFDOS*/
+table   { empty-cells: hide; margin-bottom:0; }
+
+form    { margin:0; }               
+      
+h3      { color:black; margin:0px; }
 
 
-/*# ESTRUTURAS PRINCIPALS */
+/**********//* PADROES LAYOUT *//*******************/
+
+
+/***********ESTRUTURAS PRINCIPALS ******************/
 #tudo {
   min-height: 600px;
   height: auto;
@@ -70,8 +63,12 @@ td {
 
 
 }
+/*********//* ESTRUTURAS PRINCIPALS *//****************/
 
-/*############# MENU DROPDOWN ##############*/
+
+
+
+/**************** MENU DROPDOWN *********************/
 
 #menu_nav ul {
   font-size:12px ;
@@ -112,15 +109,16 @@ td {
 }
 
 
-/*****************************************************/
+
 /************ FIM DO MENU DROP-DOWN *****************/
-/***************************************************/
+
 
 
 
 /*****************************************************/
 /************ SUBMENU DO DROP-DOWN ******************/
 /***************************************************/
+
 .dropmenudiv a {
     font-size:12px;    
     font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura;
@@ -187,8 +185,9 @@ input.enviar {
     margin-top: 5px
 
 }
-
-
+/************************************************************/
+/************ STATUS DO USUARIO LOGADO **********************/
+/************************************************************/
 #status {
 
   font-size: 75%;
@@ -196,14 +195,14 @@ input.enviar {
   float:right;
   background-image: url("/images/fil2.jpg");
   background-repeat: repeat-x;
-  background-position: top;          /************************************************************/
-  width :35%;                       /************ STATUS DO USUARIO LOGADO **********************/
-  height: 90%;                     /************************************************************/
+  background-position: top;          
+  width :35%;                       
+  height: 90%;                     
   margin-right: 50px;
   margin-top:10px;
   padding: 4px 5px 0px 5px;
   border: 0px solid #E8E3E3;
-  border-left:2px solid #E8E3E3;  /** CINZA FRACO *******************************/
+  border-left:2px solid #E8E3E3;  /** CINZA FRACO **/
   border-right:2px solid #E8E3E3;
   clear:right;
 }
@@ -240,16 +239,6 @@ input.enviar {
 
 }
 
-form {
-
-    margin:0;                      /* Zerar a margem de todos os forms */
-
-}
-
-h3 {
-    color:black;
-    margin:0px;
-}
 
 /**********************************************************************************************************/
 /************************************** CONTEÚDO INTRANET **************************************************/
@@ -257,9 +246,7 @@ h3 {
 
 
 
-         /**********************************************************************************/
-        /********************************  INDEX  ******************************************/
-       /***********************************************************************************/
+/* Area onde ficam botao 'Novo' , filtro e campo para filtrar */
 
 #barra_titulo, #link_voltar {
 
@@ -267,34 +254,32 @@ h3 {
     padding:6px 2px;
     width:99%;
     min-height:30px;
-    clear:both;                    /* Area onde ficam botao 'Novo' , filtro e campo para filtrar */
+    clear:both;                    
     margin:3px 4px;
 
     background-image: url("/images/fil4.jpg");
     background-repeat: repeat-x;
     border: 1px solid #EDEDED;
     border-top:0px;
-
-
 }
 
-.titulo_index {
-    background-image: url("/images/view_tree.png");
-}
+/* ****************************************************** */
 
-.titulo_show {
-    background-image: url("/images/view_choose.png")
-}
 
-.titulo_new {
-    background-image: url("/images/filenew.png")
-}
 
-.titulo_edit {
-    background-image: url("/images/edit.png")
 
-}
-.titulo_index,.titulo_show,.titulo_new,.titulo_edit{
+/**** CABECALHO h3 COM SIMBOLO PARA AS ACOES DO CRUD ****/
+
+.titulo_index { background-image: url("/images/view_tree.png");}
+
+.titulo_show { background-image: url("/images/view_choose.png");}
+
+.titulo_new { background-image: url("/images/filenew.png") };
+
+.titulo_edit { background-image: url("/images/edit.png") }
+
+.titulo_index,.titulo_show,.titulo_new,.titulo_edit {
+
    font-size:1.2em;
    float:left;
    padding-left:28px;
@@ -304,8 +289,11 @@ h3 {
 
 }
 
-#listar{
+/****//* CABECALHO h3 COM SIMBOLO PARA AS ACOES DO CRUD *//****/
 
+
+#listar{
+    
     float:left;
     margin: 6px 5px;
     min-height:450px;
@@ -313,9 +301,12 @@ h3 {
     height:auto;
     border: 1px solid #EDEDED;
     width:99%;
-    padding:5px 2px;
+    padding:2px 2px;
+    padding-bottom:25px;
 
 }
+
+
 
 .itens_index {
 
@@ -371,8 +362,7 @@ h3 {
     height:24px;
     min-width:80px;
     width:auto;
-    margin:0px;
-    margin-left:4px;                    /* DIV botao  'Novo' */
+    margin:2px 5px 0 0 ;
     float:right;
     color: #ffffff;
     font-weight:bold;
@@ -400,12 +390,6 @@ h3 {
 }
 
 
-         /**********************************************************************************/
-        /********************************  SHOW  ******************************************/
-       /***********************************************************************************/
-
-
-
 .lista_item {
 
     font-size:0.8em;
@@ -421,7 +405,10 @@ h3 {
     background:color:#ffffff;
 }
 
+.lista_conteudo pre {
 
+    letter-spacing: 1px;
+}
 
 .lista_conteudo {
 
@@ -456,7 +443,6 @@ h3 {
     padding:0;
     padding-left:20px;
     padding-top:0px;
-    background-image:url("/images/volta.png");
     background-repeat: no-repeat;
 }
 
@@ -467,6 +453,43 @@ h3 {
     background-repeat: no-repeat;
 
 }
+
+          /********************************************************************************/
+          /******************************* MENSAGENS SISTEMA *****************************/  
+          /******************************************************************************/
+          
+          
+          
+#flash {
+    
+    font-size: 0.9em;
+    text-align:center;
+    letter-spacing:1px;
+    color:#ffffff;
+    margin: 5px 0 5px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width:100%;
+    height:auto;
+
+    background-color:#6d6d6d;
+}
+          
+          
+          /*******************************************************************************/
+          /******************************************************************************/
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
          /**********************************************************************************/
         /********************************  FORM  ******************************************/
        /***********************************************************************************/
@@ -476,7 +499,8 @@ h3 {
     font-size:1em;
     width:99%;
     margin: 6px 5px;
-    padding:1px 2px;
+    padding:0 2px;
+    padding-bottom:25px;
     font-weight:bold;
     border: 1px solid #EDEDED;
 }
@@ -487,7 +511,7 @@ h3 {
 }
 
 .formulario select {
-    font-size:0.8em;
+    font-size:0.9em;
     color:#8C1C1C;
     height:29px;
     width:200px;
@@ -501,7 +525,7 @@ h3 {
 }
 
 
-.formulario  input[type=submit]{
+.formulario input[type=submit]{
     float:left;
     color:#E0E0E0;
     background-color:#8C1C1C;
@@ -530,7 +554,8 @@ input[type=password] {
     color:#8C1C1C;
     font-size:0.9em;
     border: 1px solid #CCCCCC;
-    margin:1px 0;
+    margin:0 5px;
+    margin-bottom:4px;
     background:#F5F5F5;
     
 }
@@ -541,9 +566,144 @@ input[type=password]:hover    {
 
     background:#FAF5DC;
 }
-.formulario input[type=checkbox] {
+input[type=checkbox] {
 
     height:auto;
     margin:0;
     padding:0;
 }
+
+
+select {
+
+    margin: 0;
+    margin:0 10px;
+    padding-top: 3px;
+
+}
+
+textarea {
+    
+    border: 1px solid #CCCCCC;
+    background:#F5F5F5;
+    padding-left:2px;
+    margin: 0 5px;
+    color:#8C1C1C;
+    font-family: "sans serif";
+    font-size:0.9em;
+
+
+}
+
+.formulario textarea:focus, 
+.formulario textarea:hover  {
+
+  background:#FAF5DC;
+  
+}
+
+
+.formulario li{
+
+    font-size:0.9em;
+    list-style: none ;
+    margin-left:20px;
+}
+.formulario td {
+
+    font-size:0.8em;
+    
+}    
+.formulario form li {
+
+
+    margin-left:20px;
+    
+
+}
+
+.formulario td li {
+    
+    margin: 5px 0px;
+    margin-top:2px;
+    color:#7D7979;
+    font-size: 0.8em;
+    list-style: none;
+}
+
+.formulario table {
+
+    width:100%;
+    padding-bottom:30px;
+
+}
+
+.form_item_exemplo {
+    
+    letter-spacing:2px;
+    margin:0;
+    padding:0px;
+    margin-left:8px;
+    color:#aaaaaa;
+    font-size: 0.6em;
+    line-height:0.6em;
+    font-weight:normal;
+    list-style: none;
+
+}
+.form_item_exemplo:before {
+    content:"Ex:\"";
+}
+.form_item_exemplo:after {
+    content:"\"";
+}
+
+
+/**********************  FILTRO FORM **********************/
+
+
+#busca {
+        
+    text-align:left;
+    clear:both;
+    color: #000000;
+    border: 1px solid #EDEDED;*/
+    padding: 6px 2px; */
+    padding-bottom: 5px;
+    font-size: 0.8em;
+    margin:3px 4px;
+    width:99.3%;
+    float:left;
+    border: 1px solid #EDEDED;
+
+}
+
+
+#busca b,#busca p  {
+    color:#8C1C1C;
+    font-weight:normal;
+    margin:5px 5px; 
+}
+
+
+#filtro_avancado {
+                        
+  
+}
+
+#filtro_avancado select { line-height:0.7em; }
+
+#filtro_avancado input[type=text] { font-size:1.1em; }
+
+#filtro_avancado a      { font-size:0.9em; float:right; }
+
+#filtro_avancado p      { margin:3px 0; padding:0; }
+
+#filtro_avancado br     { display: none; }
+
+.fechar                 { float:right; }
+
+
+
+/*******************************************************/
+
