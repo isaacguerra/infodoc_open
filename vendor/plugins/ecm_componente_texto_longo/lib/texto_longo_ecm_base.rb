@@ -5,11 +5,7 @@ class TextoLongoEcmBase
    end
 
    def acessores(cadastro, item_form)
-    cadastro.instance_eval do
-      eval("@item_#{item_form.id}")
-      eval("def item_#{item_form.id}=(valor) @item_#{item_form.id}=valor end")
-      eval("def item_#{item_form.id}() return @item_#{item_form.id} end")
-    end
+      cadastro.acessores("item_#{item_form.id}")
    end
 
    def validar(cadastro, form_item, cadastro_itens)

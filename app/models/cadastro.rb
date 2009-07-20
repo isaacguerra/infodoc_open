@@ -16,6 +16,14 @@ class Cadastro < ActiveRecord::Base
   named_scope :do_tipo, lambda {|id| {:conditions=>["formulariotipo_id = ?", id]}}
   #-------------
 
+  def acessores(nome)
+    self.instance_eval do
+      eval("@#{nome}")
+      eval("def #{nome}=(valor) @#{nome}=valor end")
+      eval("def #{nome}() return @item_#{nome} end")
+    end
+  end
+
   def monta_acessores(formulario)
     formulario.itensformularios.each do |form_item|
       cm = eval("#{form_item.itenstipo.componente.camelize}EcmBase.new")

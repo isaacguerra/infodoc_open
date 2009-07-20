@@ -71,6 +71,8 @@ h3      { color:black; margin:0px; }
 /**************** MENU DROPDOWN *********************/
 
 #menu_nav ul {
+
+
   font-size:12px ;
   padding: 6px;
   margin: 6px;
@@ -100,13 +102,133 @@ h3      { color:black; margin:0px; }
 #menu_nav ul li a{
   margin:0;
   text-decoration: none;
-  padding:0px 15px 0px 15px;
+  padding:0px 8px 0px 12px;
   color: #000000;
 }
 
 #menu_nav ul li a:hover{
+  outline: 1px solid #EDEDED;
   background-color: #FFFFFF;
+
 }
+
+
+
+
+/******************************************************/
+
+
+.mattblackmenu ul{
+margin: 0;
+padding: 0;
+font: bold 12px "sans serif";
+list-style-type: none;
+border-bottom: 1px solid #BBB;
+background: #EDEDED;
+overflow: hidden;
+width: auto;
+}
+
+.mattblackmenu li{
+display: inline;
+margin: 0;
+}
+
+.mattblackmenu li a{
+float: left;
+display: block;
+text-decoration: none;
+margin: 0;
+padding: 6px 8px; /*padding inside each tab*/
+border-right: 1px solid #EDEDED; /*right divider between tabs*/
+color: white;
+
+}
+
+
+/**********************************************************************/
+
+
+
+
+
+/* ######### Drop Down ULs CSS ######### */
+
+
+.ddsubmenustyle, .ddsubmenustyle ul{ /*topmost and sub ULs, respectively*/
+font: normal 13px "sans serif";
+margin: 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+background: white;
+border: 1px solid #DBDBDB;
+border-bottom-width: 0;
+visibility: hidden;
+z-index: 100;
+}
+
+.ddsubmenustyle li a{
+display: block;
+width:auto;
+min-width: 160px; /*width of menu (not including side paddings)*/
+background-color:#F0F0F0;
+
+text-decoration: none;
+padding: 3px 4px;
+border-bottom: 1px solid #CCCCCC;
+}
+
+* html .ddsubmenustyle li{ /*IE6 CSS hack*/
+display: inline-block;
+width: 170px; /*width of menu (include side paddings of LI A*/
+}
+
+.ddsubmenustyle li a:hover{
+
+    background-color: #8A4646;
+    color:#FFFFFF;
+
+}
+
+/* ######### Neutral CSS  ######### */
+
+.downarrowpointer{ /*CSS for "down" arrow image added to top menu items*/
+padding-left: 4px;
+border: 0;
+}
+
+.rightarrowpointer{ /*CSS for "right" arrow image added to drop down menu items*/
+position: absolute;
+padding-top: 3px;
+left: 100px;
+border: 0;
+}
+
+.ddiframeshim{
+position: absolute;
+z-index: 500;
+background: transparent;
+border-width: 0;
+width: 0;
+height: 0;
+display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -127,6 +249,16 @@ h3      { color:black; margin:0px; }
 
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
 
 /***************************************************/
 /************ FIM DO SUB MENU DROP DOWN ***********/
@@ -667,19 +799,21 @@ textarea {
     text-align:left;
     clear:both;
     color: #000000;
-    border: 1px solid #EDEDED;*/
-    padding: 6px 2px; */
+    border: 1px solid #EDEDED;
+    padding: 8px 4px; 
     padding-bottom: 5px;
     font-size: 0.8em;
     margin:3px 4px;
-    width:99.3%;
+    width:98.3%;
     float:left;
-    border: 1px solid #EDEDED;
+    border: 2px solid #F2F2F2;
+    outline:1px solid #E8E8E8;
 
 }
 
 
 #busca b,#busca p  {
+
     color:#8C1C1C;
     font-weight:normal;
     margin:5px 5px; 

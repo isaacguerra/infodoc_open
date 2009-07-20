@@ -1,12 +1,23 @@
 <% form_remote_tag :url=>{:action=>"busca_avancada", :id=>@formulario.id} do -%>
+<table>
+  <tr>
+    <th>Campo</th>
+    <th>Valor</th>
+    <th>Filtro</th>
+  </tr>
   <% @formulario.itensformularios.each do |form_item| %>
-    <p><%= form_item.rotulo %>
-    <%= ecm_find_cadastro_item(form_item) %>
-    <%= check_box(:filtro, "check_#{form_item.id}") %></p>
+  <tr>
+   <td><%= form_item.rotulo %></td>
+   <td><%= ecm_find_cadastro_item(form_item) %></td>
+   <td><%= check_box(:filtro, "check_#{form_item.id}") %></td>
+  </tr>
   <% end %>
-  <%= submit_tag 'Buscar'%><br>
-  <%= radio_button_tag :tipo, :simples, true %><font size=1>Relatorio Simples</font>
-  <%= radio_button_tag :tipo, :avancado %><font size=1>Relatorio detalhado</font>
-  <font size=1><%= link_to_remote "Busca Simplificada", :url=>{:action=>"view_busca", :id=>@formulario} %></font>
+  <tr><td colspan=3>
+    <%= radio_button_tag :tipo, :simples, true %><font size=1>Relatorio Simples</font>
+    <%= radio_button_tag :tipo, :avancado %><font size=1>Relatorio detalhado</font>
+    <font size=1><%= link_to_remote "Busca Simplificada", :url=>{:action=>"view_busca", :id=>@formulario} %></font>
+    <%= submit_tag 'Buscar'%>
+  </td></tr>
+</table>
 <% end -%>
 
