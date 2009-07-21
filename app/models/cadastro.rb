@@ -17,11 +17,10 @@ class Cadastro < ActiveRecord::Base
   #-------------
 
   def acessores(nome)
-    self.instance_eval do
-      eval("@#{nome}")
-      eval("def #{nome}=(valor) @#{nome}=valor end")
-      eval("def #{nome}() return @item_#{nome} end")
-    end
+    code = "@#{nome}; "
+    code << "def #{nome}=(valor); @#{nome}=valor; end;"
+    code << "def #{nome}(); return @item_#{nome}; end;"
+    self.instance_eval(code)
   end
 
   def monta_acessores(formulario)
