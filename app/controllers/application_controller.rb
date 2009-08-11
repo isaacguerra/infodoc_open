@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
   before_filter :autenticado
-  before_filter :autorizado
+  #before_filter :autorizado
 
   protected
   def autenticado
@@ -28,11 +28,12 @@ class ApplicationController < ActionController::Base
           redirect_to :controller => "core/login", :action=>:index
           return false
         else
-          @sessao_usuario.acesso
+          #@sessao_usuario.acesso
           @menu_modulo = []
           opcoes = @sessao_usuario.opcoes.to_a
           opcoes.each {|m| @menu_modulo << m[8]}
           @menu_modulo.uniq!
+          @menu_modulo.compact!
           return true
         end
       end

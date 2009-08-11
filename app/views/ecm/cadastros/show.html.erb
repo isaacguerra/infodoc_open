@@ -16,5 +16,16 @@
 
 <div id="link_voltar">
   <%= link_to 'Voltar', ecm_formulario_cadastros_path(@formulario) %>
+  <div id="show_actions">
+   <%= link_to_remote "Comentarios", :url=>(url_for(ecm_cadastro_comentarios_path(@cadastro))), :method=>"get" %> |
+   <%= link_to_remote "Artefatos", :url=>(url_for(ecm_cadastro_artefatos_path(@cadastro))), :method=>"get" %> |
+   <%= link_to_remote "Relacionamentos", :url=>(url_for(ecm_cadastro_relacionados_path(@cadastro))), :method=>"get" %>
+  </div>
+</div>
+<div id="comentarios">
+</div>
+<div id="artefatos">
+</div>
+<div id="relacionados">
 </div>
 

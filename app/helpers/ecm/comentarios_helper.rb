@@ -1,0 +1,2 @@
+module Ecm::ComentariosHelper
+end

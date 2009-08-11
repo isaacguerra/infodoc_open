@@ -9,7 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090715121359) do
+ActiveRecord::Schema.define(:version => 20090729183118) do
+
+  create_table "ajudas", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "ajudavel_id"
+    t.string  "ajudavel_type"
+    t.text    "conteudo"
+  end
+
+  create_table "artefatos", :force => true do |t|
+    t.integer  "entidade_id"
+    t.integer  "cadastro_id"
+    t.string   "objeto_file_name"
+    t.string   "objeto_content_type"
+    t.integer  "objeto_file_size"
+    t.datetime "objeto_updated_at"
+  end
 
   create_table "cadastros", :force => true do |t|
     t.integer  "entidade_id"
@@ -17,9 +33,18 @@ ActiveRecord::Schema.define(:version => 20090715121359) do
     t.integer  "usuario_id"
     t.integer  "formulariotipo_id"
     t.integer  "formulariocategoria_id"
+    t.integer  "parent_id"
     t.boolean  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "comentarios", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "usuario_id"
+    t.integer "comentavel_id"
+    t.string  "comentavel_type"
+    t.text    "conteudo"
   end
 
   create_table "ecm_item_data_horas", :force => true do |t|

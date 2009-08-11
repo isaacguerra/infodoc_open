@@ -1,0 +1,27 @@
+<h3 class="titulo_new">Novo Artefato</h3>
+<div class="comentario">
+  <% form_for @cadastro, :url=>(url_for(ecm_cadastro_artefatos_path(@parent))), :action=>"create", :html => {:multipart => true} do |f| %>
+    <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.entidade_id %>
+    <%= f.hidden_field :usuario_id, :value=>@sessao_usuario.usuario_id %>
+    <%= f.hidden_field :formulario_id, :value=>@formulario.id %>
+    <%= f.hidden_field :formulariocategoria_id, :value=>@formulario.formulariocategoria_id %>
+    <%= f.hidden_field :formulariotipo_id, :value=>@formulario.formulariotipo_id %>
+    <table class="artefato">
+      <tr>
+         <td class="lista_item"><%= f.label :objeto_file_name ,'Artefato'%></td>
+         <td class="lista_conteudo"><%= f.file_field :objeto_file_name %></td>
+      </tr>
+      <% @formulario.itensformularios.each do |form_item| %>
+      <tr>
+         <td class="lista_item"> <%= form_item.rotulo %></td>
+         <td class="lista_conteudo"><%= ecm_new_cadastro_item(form_item) unless @params %></td>
+      </tr>
+          <%= ecm_new_cadastro_item(form_item, @params) if @params %>
+      <% end %>
+      <tr>
+        <td class="lista_item"></td>
+        <td><%= f.submit 'Salvar' %></td>
+      </tr>
+  <% end %>
+    </table>
+

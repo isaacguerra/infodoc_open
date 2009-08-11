@@ -9,8 +9,8 @@ td      {font-size:0.8em; padding:0; padding-left:6px; border-bottom: 1px solid 
 
 table   { empty-cells: hide; margin-bottom:0; }
 
-form    { margin:0; }               
-      
+form    { margin:0; }
+
 h3      { color:black; margin:0px; }
 
 
@@ -242,7 +242,7 @@ display: block;
 /***************************************************/
 
 .dropmenudiv a {
-    font-size:12px;    
+    font-size:12px;
     font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura;
 }
 .dropmenudiv a:hover {
@@ -327,9 +327,9 @@ input.enviar {
   float:right;
   background-image: url("/images/fil2.jpg");
   background-repeat: repeat-x;
-  background-position: top;          
-  width :35%;                       
-  height: 90%;                     
+  background-position: top;
+  width :35%;
+  height: 90%;
   margin-right: 50px;
   margin-top:10px;
   padding: 4px 5px 0px 5px;
@@ -386,7 +386,7 @@ input.enviar {
     padding:6px 2px;
     width:99%;
     min-height:30px;
-    clear:both;                    
+    clear:both;
     margin:3px 4px;
 
     background-image: url("/images/fil4.jpg");
@@ -425,7 +425,7 @@ input.enviar {
 
 
 #listar{
-    
+
     float:left;
     margin: 6px 5px;
     min-height:450px;
@@ -553,7 +553,7 @@ input.enviar {
 
 #link_voltar {
 
-    
+
     padding:0;
     padding:9px 4px;
     padding-bottom:0px;
@@ -587,13 +587,13 @@ input.enviar {
 }
 
           /********************************************************************************/
-          /******************************* MENSAGENS SISTEMA *****************************/  
+          /******************************* MENSAGENS SISTEMA *****************************/
           /******************************************************************************/
-          
-          
-          
+
+
+
 #flash {
-    
+
     font-size: 0.9em;
     text-align:center;
     letter-spacing:1px;
@@ -606,17 +606,17 @@ input.enviar {
 
     background-color:#6d6d6d;
 }
-          
-          
+
+
           /*******************************************************************************/
           /******************************************************************************/
-          
-          
-          
-          
-          
-          
-          
+
+
+
+
+
+
+
 
 
 
@@ -639,7 +639,7 @@ input.enviar {
 
 .formulario label {
     margin:0;
-    
+
 }
 
 .formulario select {
@@ -670,7 +670,7 @@ input.enviar {
     margin:5px 0;
     color: #ffffff;
     font-weight:bold;
-    background-color:#8C1C1C;    
+    background-color:#8C1C1C;
     border:0;
 
 }
@@ -689,7 +689,7 @@ input[type=password] {
     margin:0 5px;
     margin-bottom:4px;
     background:#F5F5F5;
-    
+
 }
 .formulario input[type=text]:focus,
 input[type=text]:hover,
@@ -715,7 +715,7 @@ select {
 }
 
 textarea {
-    
+
     border: 1px solid #CCCCCC;
     background:#F5F5F5;
     padding-left:2px;
@@ -727,11 +727,11 @@ textarea {
 
 }
 
-.formulario textarea:focus, 
+.formulario textarea:focus,
 .formulario textarea:hover  {
 
   background:#FAF5DC;
-  
+
 }
 
 
@@ -744,18 +744,18 @@ textarea {
 .formulario td {
 
     font-size:0.8em;
-    
-}    
+
+}
 .formulario form li {
 
 
     margin-left:20px;
-    
+
 
 }
 
 .formulario td li {
-    
+
     margin: 5px 0px;
     margin-top:2px;
     color:#7D7979;
@@ -771,7 +771,7 @@ textarea {
 }
 
 .form_item_exemplo {
-    
+
     letter-spacing:2px;
     margin:0;
     padding:0px;
@@ -795,12 +795,12 @@ textarea {
 
 
 #busca {
-        
+
     text-align:left;
     clear:both;
     color: #000000;
     border: 1px solid #EDEDED;
-    padding: 8px 4px; 
+    padding: 8px 4px;
     padding-bottom: 5px;
     font-size: 0.8em;
     margin:3px 4px;
@@ -816,13 +816,13 @@ textarea {
 
     color:#8C1C1C;
     font-weight:normal;
-    margin:5px 5px; 
+    margin:5px 5px;
 }
 
 
 #filtro_avancado {
-                        
-  
+
+
 }
 
 #filtro_avancado select { line-height:0.7em; }
@@ -840,4 +840,5 @@ textarea {
 
 
 /*******************************************************/
+.comentario {float: left; width :80%;}
 

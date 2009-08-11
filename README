@@ -1,10 +1,12 @@
-<h1>INFODOC</h1>
+INFODOC
+========
 
-<p>Projeto de desenvolvimento de ferramenta case focada em gestão de conteúdo, com interface web.</p>
+Projeto de desenvolvimento de ferramenta case focada em gestão de conteúdo e processos,
+com interface web.
 
-<h1>Módulo de ECM</h1>
-
+= Módulo de ECM
  O módulo de ECM, consiste em ferramentas de:<br>
+
  -  Criação/Captura<br>
  -  Armazenamento<br>
  -  Versionamento<br>
@@ -16,21 +18,32 @@
  -  Pesquisa<br>
  -  Arquivamento<br>
 
-<p>De fato o medulo de ECM será uma ferramenta CASE focada na criação de formularios para armazenamento
- de dados onde cada cadastro se comporta como uma pasta onde pode ser axexado várias imagens digitais.</p>
+  De fato o medulo de ECM será uma ferramenta CASE focada na criação de formularios para armazenamento
+  de dados onde cada cadastro se comporta como uma pasta onde pode ser axexado várias imagens digitais.
 
-<h1>Módulo de BPM</h1>
-<p>
- Ainda não definido
-</p>
+= Módulo de BPM
+  Ainda não definido
 
-<h1>Módulo de Comunicação</h1>
- <p>Este módulo tem por objetivo disponibilizar ferramentas de comnicação entre os
- usuários da ferramentas</p>
+
+= Módulo de Comunicação
+  Este módulo tem por objetivo disponibilizar ferramentas de comnicação entre os usuários da ferramentas
+
  - Sistema de Noticias
  - Sistema de CHAT
  - Sistema de Blog
  - Sistema de webmail
+
+= Módulo Wiki
+  Este Módulo destina-se a gerenciar o conhecimento coletivo da Entidade
+
+  - Adição de Artigos
+  - Comentários
+  - Proteção de Conteúdo
+  - Autoria de Conteúdo
+  - Histórico de modificações
+
+
+--------------------------------------------------------------------------------------------------------
 
  Creditos
   - Isaac Guerra

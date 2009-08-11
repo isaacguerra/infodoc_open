@@ -1,0 +1,706 @@
+/*********************************** PADROES TAGS ********************************************************/
+
+body                                {  
+                                       margin:0;
+                                       padding:0;
+                                       font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura;
+                                    }
+
+a                                   { color:#934DA2; text-decoration:none; }
+
+a:hover                             { text-decoration:underline; }
+
+td                                  { font-size:0.8em;
+                                      padding:5px;
+                                      padding-left:6px;
+                                      border-bottom: 1px solid #EDEDED;
+                                    }
+
+table                               {  margin-bottom:0; }
+
+form                                { margin:0; }               
+      
+h3                                  { color:#934DA2; margin:0px; }
+
+
+/**************************************    END  **********************************************************/
+
+
+                  
+                  
+/*******************************************************************************************************/                  
+/************************************ ESTRUTURAS PRINCIPALS *******************************************/
+/*****************************************************************************************************/
+
+#tudo                               {
+
+                                       min-height: 600px;
+                                       height: auto;
+                                       width: 98%;
+                                       margin-right: auto;
+                                       margin-left: auto;
+                                       margin-top: 0px;
+                                       margin: 0px 0px 0px 2px;
+                                       padding:0 0 0 0px;
+                                    }
+
+#topo                               {
+                                       margin:0;
+                                       width:100%;
+                                       height:100px;
+                                       background-image: url("/theme/violet/images/fil1.png");
+                                       padding-bottom: 10px;
+                                       display: inline-block;
+                           
+                                    }
+                        
+#topo img                           {  height:80%; margin :25px 5px 2px 20px; }
+
+#logo                               {  float:left; width:20%; height:100%;  }
+
+#conteudo                           {
+                                        width: 100%;
+                                        border : 1px solid #ffffff;
+                                        float:left;
+                                        padding: 0px;
+                                        overflow: hidden;
+                                        min-height:500px;
+                                        height:auto;
+                                        margin:0 6px;
+                                    }
+
+#rodape                             {
+
+	                                    clear: both;
+	                                    width: 100%;
+                                        font-size:0.8em;
+                                        font-family: arial;
+                                        padding: 6px;
+                                        margin: 6px 0;
+                                        margin-left:2px;
+                                        margin-bottom:2px;
+                                        list-style-type: none;
+                                        text-align: right;
+                                        background-color:#ffffff;
+                                        height:18px;
+                                        border-bottom-style:solid;
+                                        border-bottom-width:5px;
+                                        border-bottom-color:#934DA2;
+                                        background-image: url("/theme/violet/images/img09.gif");
+	                                    background-repeat: repeat-x;
+	                                    
+                                    }
+                                     
+                                     
+/******************************************************************************************************/
+
+
+
+  /***************************************************************************************************/
+ /******************************************* MENU DROPDOWN *****************************************/
+/***************************************************************************************************/
+#menu_nav { clear:both; width:100%;}
+
+#menu_nav ul                        {
+
+                                      
+                                      padding: 4px 0px;
+                                      margin: 6px 0 6px 8px;
+                                      list-style-type: none;
+                                      text-align: left;
+                                      background-color:#ffffff;
+                                      height: auto;
+                                      min-height:20px;
+                                      width:100%;
+                                      border-top: 5px solid #934DA2;
+                                      border-bottom: 1px solid #f1e5f4;
+                                      background-image: url("/theme/violet/images/img09.gif");
+                                      background-repeat: repeat-x;
+                                      clear:both;
+                                      
+
+                                    }
+
+
+
+#menu_nav ul li b                   { margin:0; color:#7a7272; }
+
+#menu_nav ul li a                   { 
+                                      margin:0;
+                                      margin-left:2px;
+                                      text-decoration: none;
+                                      padding:2px 8px 0px 12px;
+                                      color: #7B6E7E;
+                                    }
+
+#menu_nav ul li a:hover             { outline: 1px solid #EDEDED;  background-color: #FFFFFF;  }
+
+.mattblackmenu ul                   {
+                                      
+                                      margin: 0;
+                                      padding: 0;
+                                      font: normal 12px "sans serif";
+                                      list-style-type: none; border-bottom: 1px solid #BBB;
+                                      background: #EDEDED; overflow: hidden; width: auto;
+                                    }
+
+.mattblackmenu li                   { display: inline; margin: 0;  padding: 30px 0 ; }
+
+.mattblackmenu li a                 { 
+
+                                      float: left;
+                                      display: block;
+                                      text-decoration: none;
+                                      margin: 0;
+                                      margin-left:1px; 
+                                      padding: 6px 8px; /*padding inside each tab*/
+                                      border-right: 1px solid #EDEDED; /*right divider between tabs*/
+                                      color: white;
+                                    }
+
+
+/***************************************************************************************************/
+
+                        /* ######### Drop Down ULs CSS ######### */
+
+
+.ddsubmenustyle,
+.ddsubmenustyle ul                  { /*topmost and sub ULs, respectively*/
+                                      font: normal 13px "sans serif";
+                                      margin: 0;
+                                      padding: 0;
+                                      position: absolute;
+                                      left: 0;
+                                      top: 0;
+                                      list-style-type: none;
+                                      background: white;
+                                      border: 1px solid #DBDBDB;
+                                      border-bottom-width: 0;
+                                      visibility: hidden;
+                                      z-index: 100;
+                                    }
+
+.ddsubmenustyle li a                {
+                                      display: block;
+                                      width:auto;
+                                      min-width: 160px; /*width of menu (not including side paddings)*/
+                                      background-color:#f4ecf6;
+                                      text-decoration: none;
+                                      padding: 3px 4px;
+                                      border-bottom: 1px solid #CCCCCC;
+                                    }
+                        
+* html .ddsubmenustyle li           { /*IE6 CSS hack*/ display: inline-block; }               
+
+.ddsubmenustyle li a:hover          { background-color: #934DA2; color:#FFFFFF; }
+
+
+
+                        /* ######### Neutral CSS  ######### */
+                        
+
+.downarrowpointer                   { /*CSS for "down" arrow image added to top menu items*/
+                                        padding-left: 4px;
+                                        border: 0;
+                                    }
+
+.rightarrowpointer                  { /*CSS for "right" arrow image added to drop down menu items*/
+                                        position: absolute;
+                                        padding-top: 3px;
+                                        left: 100px;
+                                        border: 0;
+                                    }
+
+.ddiframeshim                       {
+                                        position: absolute;
+                                        z-index: 500;
+                                        background: transparent;
+                                        border-width: 0;
+                                        width: 0;
+                                        height: 0;
+                                        display: block;
+                                    }
+
+
+
+
+ /********************************** FIM DO MENU DROP-DOWN ****************************************/
+
+
+
+
+
+
+
+/**************************************************************************************************/
+/************************************** LOGIN *****************************************************/
+/**************************************************************************************************/
+
+
+input#login_usuario,input#login_senha { margin-bottom: 4px; border:1px solid #BFBFBF; }
+
+#form_login                           { background-color:#E8E8E8;  border: 1px solid #C4C4C4;
+                                        text-align: center; width:30%; height:100px;
+                                        padding-top: 20px; margin:20px auto 50px auto;
+                                      }
+                                      
+.form_login                           {                          
+
+                                        margin-left:31%;
+                                        margin-bottom:20px
+                                        text-align:center;
+                                        padding: 0 5px 0 5px;
+                                        
+                                      }
+                                        
+#form_login form                      {
+                                        margin:0;
+                                      }
+                                      
+input.enviar                          {
+
+                                        margin-top: 5px
+
+                                      }
+
+
+/**************************************************************************************************/
+
+
+/*************************************************************************************************/
+/*********************************** STATUS DO USUARIO LOGADO *************************************/
+/*************************************************************************************************/
+
+#status                             {
+
+                                      font-size: 75%;
+                                      color:#7b6e7e;
+                                      font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura ;
+                                      float:right;
+                                      background-image: url("/theme/violet/images/fil2.jpg");
+                                      background-repeat: repeat-x;
+                                      background-position: top;          
+                                      width :35%;                       
+                                      height: 90%;                     
+                                      margin-right: 14px;
+                                      margin-top:10px;
+                                      padding: 4px 5px 0px 5px;
+                                      border: 0px solid #E8E3E3;
+                                      border-bottom: 1px solid #f1e5f4;
+                                     
+                                      clear:right;
+                                   }
+
+#tab_status                        { width:100% ;}
+
+#status td                         { margin :0px; padding:0px;  }
+
+#logout                            { width:85px; text-align:center; background-color:#ffffff; }
+
+
+#status b                          { color:#934da2; }
+
+#status .titulo_lista              { padding:1px; padding-left:4px; }
+
+
+/**********************************************************************************************************/
+/************************************** CONTEÚDO INTRANET **************************************************/
+/**********************************************************************************************************/
+
+
+
+/* Area onde ficam botao 'Novo' , filtro e campo para filtrar  e o Link Voltar*/
+
+#barra_titulo, #link_voltar 
+                              {
+
+                                float:left;
+                                padding:6px 1px;
+                                width:99.6%;
+                                min-height:30px;
+                                clear:both;                    
+                                margin:3px 0 3px 1px;
+                                background-image: url("/theme/violet/images/fil4.jpg");
+                                background-repeat: repeat-x;
+                                border: 1px solid #F1E5F4;
+                                border-top:0px;
+                             }
+
+/* **************************************************************************************************** */
+
+
+
+
+/***************************** CABECALHO h3 COM SIMBOLO PARA AS ACOES DO CRUD ***************************/
+
+.titulo_index               { background-image: url("/theme/violet/images/view_tree.png");}
+
+.titulo_show                { background-image: url("/theme/violet/images/view_choose.png");}
+
+.titulo_new                 { background-image: url("/theme/violet/images/filenew.png") };
+
+.titulo_edit                { background-image: url("/theme/violet/images/edit.png") }
+
+.titulo_index,
+.titulo_show,
+.titulo_new,
+.titulo_edit                {
+
+                            font-size:1.2em;
+                            float:left;
+                            padding-left:28px;
+                            margin-left:5px;
+                            background-position:left;
+                            background-repeat:no-repeat;
+                            
+                            }
+                                                    
+/* ***************************************   END    ************************************************* */
+
+
+#listar 
+                            {
+                            
+                            color:#7B6E7E;
+                            float:left;
+                            margin: 6px 0 6px 0px;
+                            min-height:450px;
+                            background-repeat:repeat-x;
+                            height:auto;
+                            border: 1px solid #F1E5F4;
+                            width:100%;
+                            padding:2px 2px 25px;
+
+                            }   
+
+.itens_index
+                            {
+
+                            font-size:0.8em;
+                            margin:0;
+                            padding: 4px 0px;
+                            text-align:left;              /* Item listado */
+                            padding-left: 30px;
+                            width:auto;
+                            }
+
+.linha_item_index           {  border: 1px solid #EDEDED; }
+
+.titulo_lista               { background-image:url("/theme/violet/images/fil4.jpg"); }
+
+.titulo_lista,
+.lista_item 
+                            {
+                             
+                             font-size:0.9em;
+                             text-align:left;
+                             color:#934DA2;
+                             margin-top:5px;
+                             padding: 10px 0;
+                             padding-left: 30px;             /*Titulo do Item*/
+                             font-weight:bold;
+                             width:auto;
+                             border-bottom: 1px solid #F1E5F4;
+                             
+                             
+                             }
+.titulo_lista a,
+#titulo_lista a:hover       
+                             { float:left; text-decoration:none; width:100%;  height:100%; }
+
+.item_index a,
+.item_index a:hover          { font-weight: bold; color:#8C1C1C; }
+
+
+
+#link_botao                 {
+                               font-size:.8em;
+                               padding: 0 8px;
+                               text-align:center;
+                               height:24px;
+                               min-width:80px;
+                               width:auto;
+                               margin:2px 5px 0 0 ;
+                               float:right;
+                               color: #ffffff;
+                               font-weight:bold;
+                               background-color:#934DA2;     
+                               border:0;
+                            }
+                            
+#link_botao a               { 
+
+                               color: #f1e5f4;
+                               margin-top:3px;
+                               float:left;                   
+                               width:100%;
+                               height:100%;
+                               text-decoration: none;
+                               
+                            }
+                            
+#link_botao a:hover         {
+
+                               color: #ffffff;
+                               margin-top:3px;              
+                               float:left;
+                               width:100%;
+                               height:100%;
+                               text-decoration: none;
+                               
+                            }
+
+
+.lista_item                 {
+
+                                font-size:0.8em;
+                                text-align:right;
+                                padding:5px 0;
+                                padding-right:6px;
+                                min-width:15%;
+                                width:auto;
+                                background-color:#DCC6E1;
+                                border-top:1px;
+                                border-bottom:0px;
+                                
+                            }
+
+.lista_conteudo pre         {   letter-spacing: 1px; }
+
+.lista_conteudo             {
+
+                                font-size:0.8em;
+                                color:#7B6E7E;
+                                padding:0;
+                                padding-left:6px;
+                                border-bottom: 1px solid #EDEDED;
+                            }
+
+#link_voltar                {
+
+                                padding:0;
+                                padding:9px 4px;
+                                padding-bottom:0px;
+                                margin:6px 2px ;
+                                width:99%;
+                                float:left;
+                                background-image:url("/theme/violet/images/fil6.jpg");
+                                border: 1px solid #F1E5F4;
+
+                            }
+
+#link_voltar a              {
+
+                                font-size: 0.9em;
+                                color:#934DA2;
+                                font-weight:bold;
+                                text-decoration:none;
+                                padding:0;
+                                padding-left:20px;
+                                padding-top:0px;
+                                background-repeat: no-repeat;
+                            }
+
+#link_voltar a:hover        {
+
+                                color:#d14eed;
+                                background-repeat: no-repeat;
+
+                            }
+
+
+.formulario td.lista_item                  {  empty-cells: show; } 
+/**********************************************************************************************************/
+/*********************************************** MENSAGENS SISTEMA ***************************************/  
+/********************************************************************************************************/
+          
+          
+          
+#flash_notice, #flash_error {
+    
+                                font-size: 0.9em;
+                                text-align:center;
+                                letter-spacing:1px;
+                                color:#ffffff;
+                                margin: 5px 0 5px 0;
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                                width:100%;
+                                height:auto;
+                                background-color:#95C4AE;
+                            }
+
+#flash_error                { background-color:#F5C4C4; }  
+
+.error_messages {
+
+    empty-cells:hide;
+}     
+
+          
+/***********************************************************************************************************/
+/**********************************************************************************************************/
+          
+
+
+         /**********************************************************************************/
+        /********************************  FORM  ******************************************/
+       /***********************************************************************************/
+
+
+.formulario               { 
+                            font-size:1em;
+                            width:100%;
+                            margin: 6px 0;
+                            padding:2px 2px 25px;
+                            font-weight:bold;
+                            border: 1px solid #F1E5F4;
+                          }
+                          
+.formulario td            { empty-cells: hide ; }                          
+
+.formulario label         { margin:0; }
+
+.formulario select        { 
+                            font-size:0.9em;
+                            color:#934DA2;
+                            height:29px;
+                            width:200px; 
+                            margin-bottom:8px;
+                          }
+
+.formulario option        { background-color:#F5F5F5; color:#934DA2; }
+
+
+.formulario input[type=submit],#busca input[type=submit]  {
+
+                                    float:left;
+                                    color:#E0E0E0;
+                                    padding: 0 4px;
+                                    text-align:center;
+                                    height:24px;
+                                    min-width:80px;
+                                    width:auto;
+                                    margin:0px;
+                                    margin:5px 0;
+                                    color: #ffffff;
+                                    font-weight:bold;
+                                    background-color:#934DA2;    
+                                    border:0;
+
+                                }
+
+input[type=text],
+input[type=password]            {
+
+                                    padding-top:3px;
+                                    padding-left:2px;
+                                    width:auto;
+                                    color:#934DA2;
+                                    font-size:0.9em;
+                                    border: 1px solid #DCC6E1;
+                                    background:#F5F5F5;
+
+                                }
+                                
+.formulario input[type=text]:focus,
+input[type=text]:hover,
+input[type=password]:focus,
+input[type=password]:hover      {  background:#FAF5DC;  }
+
+input[type=checkbox]            { height:auto; margin:0; padding:0;            }
+
+select                          { margin: 0; margin:0 10px; padding-top: 3px; }
+
+textarea                        {
+                                  border: 1px solid #DCC6E1;
+                                  background:#F5F5F5;
+                                  padding-left:2px;
+                                  margin:0; 
+                                  color:#934DA2;
+                                  font-family: "sans serif";
+                                  font-size:0.9em;
+                                }
+
+.formulario textarea:focus, 
+.formulario textarea:hover      { background:#FAF5DC; }
+
+
+.formulario li                  { font-size:0.9em; list-style: none ; margin-left:20px; }
+
+.formulario td                  { font-size:0.8em;                                      }    
+
+.formulario form li             { margin-left:20px;                                     }
+
+.formulario td li               {
+                                  margin: 5px 0px;
+                                  margin-top:2px;
+                                  color:#934DA2; 
+                                  font-size: 0.8em;
+                                  list-style: none;
+                                }
+
+.formulario table               { width:100%; padding-bottom:30px;                      }
+
+/*.formulario p { float:left; width:60%; margin:0px; }*/
+
+div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px; padding-top:20px; color:#7B6E7E}
+
+#form_item                      { width:auto;} 
+
+.form_item_exemplo              {
+    
+                                  letter-spacing:2px;
+                                  margin:0;
+                                  padding:0px;
+                                  margin-left:8px;
+                                  color:#934DA2;
+                                  font-size: 0.6em;
+                                  line-height:0.6em;
+                                  font-weight:normal;
+                                  list-style: none;
+
+                                }
+
+.form_item_exemplo:before       {  content:"Ex:\""; }
+.form_item_exemplo:after        {  content:"\"";   }
+
+
+/**********************************************  FILTRO FORM **********************************************/
+
+
+#busca                      {         
+                                  text-align:left;
+                                  clear:both;
+                                  color: #000000;
+                                  border: 2px solid #e2b1ec;
+                                  padding: 8px 4px; 
+                                  padding-bottom: 5px;
+                                  font-size: 0.8em;
+                                  margin:3px 6px;
+                                  margin-left:2px;
+                                  width:98.7%;
+                                  float:left;
+                                  outline:1px solid #F1E5F4;
+                            }
+
+
+#busca b,#busca p       { color:#7B6E7E; font-weight:normal; margin:5px 5px; }
+
+#busca input[type=submit] { float:none; }
+
+#filtro_avancado select { line-height:0.7em; }
+
+#filtro_avancado input[type=text] { font-size:1.1em; }
+
+#filtro_avancado a      { font-size:0.9em; float:right; }
+
+#filtro_avancado p      { margin:3px 0; padding:0; }
+
+#filtro_avancado br     { display: none; }
+
+.fechar                 { float:right; }
+
+
+
+/***********************************************************************************************************/

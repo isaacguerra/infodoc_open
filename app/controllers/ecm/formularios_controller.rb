@@ -41,10 +41,5 @@ class Ecm::FormulariosController < ApplicationController
        render :action=> :edit, :id=>@formulario
     end
   end
-
-  def principal
-    @formulario = Formulario.find(params[:id])
-    @itens = Itensformulario.do_formulario(params[:id]).do_tipo("texto").find(:all)
-  end
 end
 

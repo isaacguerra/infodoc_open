@@ -2,6 +2,10 @@ class Cadastro < ActiveRecord::Base
   belongs_to :formulario
   has_many :ecm_item_textos
   has_many :ecm_item_texto_longos
+  has_many :comentarios, :as=>:comentavel
+  has_one :artefato
+
+  acts_as_tree
 
   validates_presence_of :formulario_id
   validates_presence_of :entidade_id

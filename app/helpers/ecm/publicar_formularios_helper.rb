@@ -1,0 +1,2 @@
+module Ecm::PublicarFormulariosHelper
+end

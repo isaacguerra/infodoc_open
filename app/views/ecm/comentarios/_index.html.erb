@@ -1,0 +1,20 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Comentarios</h3>
+  <div id="link_botao">
+    <%= link_to_remote "Esconder Comentarios", :url=>{:controller=>"/ecm/comentarios", :action=>"clean"}, :method=>"get" %>
+  </div>
+  <div id="link_botao">
+    <%= link_to_remote "Novo Comentario", :url=>(url_for(new_ecm_cadastro_comentario_path(@cadastro))), :method=>"get" %>
+  </div>
+</div>
+<div id="new_comentario">
+</div>
+<div id="listar">
+    <% @cadastro.comentarios.each do |comentario| %>
+      <div class="itens_index">
+        <b><%= comentario.usuario.nome %>:</b>&nbsp;
+        <%= comentario.conteudo %><br>
+      </div>
+	  <% end %>
+</div>
+

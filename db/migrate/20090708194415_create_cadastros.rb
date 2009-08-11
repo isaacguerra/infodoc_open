@@ -6,8 +6,8 @@ class CreateCadastros < ActiveRecord::Migration
       t.integer :usuario_id
       t.integer :formulariotipo_id
       t.integer :formulariocategoria_id
+      t.integer :parent_id
       t.boolean :status
-
       t.timestamps
     end
   end

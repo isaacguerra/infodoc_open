@@ -14,9 +14,12 @@
       </td>
       <td class="itens_index">
        <%= link_to "Itens", ecm_formulario_itens_formularios_path(formulario) %> |
+       <%= link_to "Principal", ecm_formulario_principal_formularios_path(formulario) %> |
+       <% if formulario.formulariotipo_id == 1 %>
        <%= link_to "Permissoes", ecm_formulario_permissao_formularios_path(formulario) %> |
        <%= link_to "Ajuda", ecm_formulario_ajudas_formularios_path(formulario) %> |
-       <%= link_to "Principal", ecm_formulario_principal_formularios_path(formulario) %>
+       <%= link_to "Publicar", ecm_formulario_publicar_formularios_path(formulario) %> |
+       <% end %>
       </td>
     </tr>
 	  <% end %>

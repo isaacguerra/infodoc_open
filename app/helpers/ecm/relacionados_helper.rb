@@ -1,0 +1,2 @@
+module Ecm::RelacionadosHelper
+end
