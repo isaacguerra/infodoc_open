@@ -22,7 +22,7 @@ class Ecm::ItensFormulariosController < ApplicationController
     @form_item.componente = @itenstipo.componente
     @form_item.opcoes = params[:opcoes]
     if @form_item.validar_opcoes
-	    if @form_item.save
+	    if @form_item.salvar_item(@itenstipo, params)
 	      flash[:notice] = "Item Criado com Sucesso!"
         redirect_to :action=>"show",:id=>@form_item.id
       else
@@ -44,8 +44,12 @@ class Ecm::ItensFormulariosController < ApplicationController
     @form_item.opcoes = params[:opcoes]
     if @form_item.validar_opcoes
       if @form_item.update_attributes(params[:itensformulario])
-        flash[:notice] = "Item Atualizado com Sucesso!"
-        redirect_to :action=>"show",:id=>@form_item.id
+        if @form_item.salvar_item(@form_item.itenstipo, params)
+	        flash[:notice] = "Item Criado com Sucesso!"
+          redirect_to :action=>"show",:id=>@form_item.id
+        else
+        render :action=> :edit, :id=>@form_item
+        end
       else
          render :action=> :edit, :id=>@form_item
       end
@@ -59,6 +63,14 @@ class Ecm::ItensFormulariosController < ApplicationController
     render :update do |page|
       page.visual_effect(:highlight , 'form_item')
       page.replace_html "form_item", render(:text=>ecm_new_form_item(@itenstipo.componente))
+    end
+  end
+
+  def ajax
+    render :update do |page|
+      @itenstipo = Itenstipo.find(params[:id])
+      page.visual_effect(:highlight , 'ajax_item')
+      page.replace_html "ajax_item", render(:text=>ecm_form_item_ajax(@itenstipo, params))
     end
   end
 end

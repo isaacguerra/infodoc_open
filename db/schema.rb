@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
     t.integer  "formulario_id"
     t.integer  "itensformulario_id"
     t.integer  "cadastro_id"
+    t.integer  "campo"
     t.datetime "conteudo"
   end
 
@@ -70,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
     t.integer "formulario_id"
     t.integer "itensformulario_id"
     t.integer "cadastro_id"
+    t.integer "campo"
     t.date    "conteudo"
   end
 
@@ -87,6 +89,7 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
     t.integer "formulario_id"
     t.integer "itensformulario_id"
     t.integer "cadastro_id"
+    t.integer "campo"
     t.string  "imagem_file_name"
     t.string  "imagem_content_type"
     t.integer "imagem_file_size"
@@ -105,6 +108,7 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
     t.integer "formulario_id"
     t.integer "itensformulario_id"
     t.integer "cadastro_id"
+    t.integer "campo"
     t.float   "conteudo"
   end
 
@@ -122,6 +126,7 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
     t.integer "formulario_id"
     t.integer "itensformulario_id"
     t.integer "cadastro_id"
+    t.integer "campo"
     t.integer "conteudo"
   end
 
@@ -139,6 +144,7 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
     t.integer "formulario_id"
     t.integer "itensformulario_id"
     t.integer "cadastro_id"
+    t.integer "campo"
     t.integer "referencia_id"
   end
 
@@ -156,6 +162,7 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
     t.integer "formulario_id"
     t.integer "itensformulario_id"
     t.integer "cadastro_id"
+    t.integer "campo"
     t.text    "conteudo"
   end
 
@@ -173,6 +180,7 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
     t.integer "formulario_id"
     t.integer "itensformulario_id"
     t.integer "cadastro_id"
+    t.integer "campo"
     t.string  "conteudo"
   end
 
@@ -221,6 +229,8 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
     t.integer  "principal_id"
     t.string   "titulo"
     t.string   "descricao"
+    t.text     "filtro_publico"
+    t.boolean  "publico",                :default => false
     t.boolean  "status",                 :default => true
     t.datetime "created_at"
     t.datetime "updated_at"

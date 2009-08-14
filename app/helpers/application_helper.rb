@@ -28,6 +28,10 @@ module ApplicationHelper
   def ecm_show_form_item(form_item)
     eval("#{form_item.componente}_ecm_show_form_item(form_item)")
   end
+
+  def ecm_form_item_ajax(form_item, params, valor=nil)
+    eval("#{form_item.componente}_ecm_form_item_ajax(form_item, params, valor)")
+  end
 # ------------------------------------------------------------------
 
 #====================================================================

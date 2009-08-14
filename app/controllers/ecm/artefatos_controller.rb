@@ -34,7 +34,7 @@ class Ecm::ArtefatosController < ApplicationController
     @cadastro = Cadastro.new()
     @cadastro.monta_acessores(@formulario)
     @cadastro.validar(@formulario, params[:cadastro])
-    @cadastro.errors.add("Artefato Requerido!") unless params[:cadastro][:objeto_file_name]
+    @cadastro.errors.add("Artefato Requerido!") unless params[:cadastro][:objeto]
     if @cadastro.errors.count > 0
       flash[:notice] = "Impossivel criar o Artefato"
       redirect_to ecm_formulario_cadastro_path(@parent.formulario_id, @parent)
@@ -50,7 +50,7 @@ class Ecm::ArtefatosController < ApplicationController
       @artefato = Artefato.new
       @artefato.cadastro_id = @cadastro.id
       @artefato.entidade_id = @cadastro.entidade_id
-      @artefato.objeto_file_name = params[:cadastro][:objeto_file_name]
+      @artefato.objeto = params[:cadastro][:objeto]
       @artefato.save
       flash[:notice] = "Artefato Criada com Sucesso!"
       redirect_to ecm_formulario_cadastro_path(@parent.formulario_id, @parent)
@@ -66,8 +66,8 @@ class Ecm::ArtefatosController < ApplicationController
 
   def download
     cadastro = Cadastro.find(params[:id])
-    if cadastro.parent.formulario.permissao(@sessao_usuario.usuario) > 0
-      send_file(cadastro.artefato.objeto_file_name) if cadastro.artefato
+    if cadastro.parent.formulario.permissao(@sessao_usuario.usuario) > 0 and cadastro.artefato
+      send_file(cadastro.artefato.objeto.path, :type=>cadastro.artefato.objeto_content_type)
     end
   end
 end

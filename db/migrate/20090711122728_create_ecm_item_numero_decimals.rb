@@ -6,6 +6,7 @@ class CreateEcmItemNumeroDecimals < ActiveRecord::Migration
       t.integer :formulario_id
       t.integer :itensformulario_id
       t.integer :cadastro_id
+      t.integer :campo
       t.float :conteudo
     end
     add_index :ecm_item_numero_decimals, :entidade_id

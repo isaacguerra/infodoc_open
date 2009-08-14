@@ -6,6 +6,7 @@ class CreateEcmItemTextoLongos < ActiveRecord::Migration
       t.integer :formulario_id
       t.integer :itensformulario_id
       t.integer :cadastro_id
+      t.integer :campo
       t.text :conteudo
     end
     add_index :ecm_item_texto_longos, :entidade_id

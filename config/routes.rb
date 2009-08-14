@@ -26,6 +26,10 @@ ActionController::Routing::Routes.draw do |map|
     ecm.resources :cadastros, :has_many=>:relacionados
   end
 
+  map.namespace :page do |page|
+    page.resources :entidades
+  end
+
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action

@@ -1,5 +1,8 @@
 <div id="barra_titulo">
-  <h3 class="titulo_new">Novo <%= @formulario.titulo %></h3>
+  <div id="link_botao">
+    <%= link_to "Ajuda", ecm_formulario_ajudas_formulario_path(@formulario,1), :popup=>true %>
+  </div>
+  <h3 class="titulo_new">Alterando <%= @formulario.titulo %></h3>
 </div>
 <table class="formulario">
   <% form_for @cadastro, :url=>{:action=>'update'} do |f| %>

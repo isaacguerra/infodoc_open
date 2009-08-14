@@ -1,0 +1,2 @@
+module Core::AjudasHelper
+end

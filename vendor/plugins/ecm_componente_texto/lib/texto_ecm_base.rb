@@ -1,4 +1,29 @@
 class TextoEcmBase
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+# ITEM DO FORMULARIO
+  def salvar_item(item_form, params)
+    item_form.opcoes = params[:opcoes]
+    return item_form.save
+  end
+
+  def apos_criar_item(form_item)
+    if form_item.formulario.cadastros.size > 0
+      form_item.formulario.cadastros.each do |cadastro|
+        texto = EcmItemTexto.new
+        texto.entidade_id = cadastro.entidade_id
+        texto.formulariocategoria_id = cadastro.formulario.formulariocategoria_id
+        texto.formulario_id = cadastro.formulario_id
+        texto.itensformulario_id = form_item.id
+        texto.cadastro_id = cadastro.id
+        texto.referencia_id = ""
+        texto.save
+      end
+    end
+  end
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------
+# CADASTRO
+#
 
    def validar_opcoes(form_item)
       return true
@@ -62,11 +87,18 @@ class TextoEcmBase
       texto.save
    end
 
-   def busca_avancada(form_item, params)
+   def busca_avancada(form_item, params, valor=nil)
+     unless valor
       cads = EcmItemTexto.find(:all, :conditions=>["itensformulario_id = ? and
                                                     conteudo like ?",
                                                     form_item.id,
                                                     "%#{params[:cadastro]["item_#{form_item.id}"]}%"]).collect {|c| c.cadastro_id}
+     else
+       cads = EcmItemTexto.find(:all, :conditions=>["itensformulario_id = ? and
+                                                    conteudo like ?",
+                                                    form_item.id,
+                                                    "%#{valor}%"]).collect {|c| c.cadastro_id}
+     end
    end
 end
 

@@ -8,8 +8,8 @@
     <%= f.hidden_field :formulariotipo_id, :value=>@formulario.formulariotipo_id %>
     <table class="artefato">
       <tr>
-         <td class="lista_item"><%= f.label :objeto_file_name ,'Artefato'%></td>
-         <td class="lista_conteudo"><%= f.file_field :objeto_file_name %></td>
+         <td class="lista_item"><%= f.label :objeto ,'Artefato'%></td>
+         <td class="lista_conteudo"><%= f.file_field :objeto %></td>
       </tr>
       <% @formulario.itensformularios.each do |form_item| %>
       <tr>

@@ -6,6 +6,7 @@ class CreateEcmItemDataHoras < ActiveRecord::Migration
       t.integer :formulario_id
       t.integer :itensformulario_id
       t.integer :cadastro_id
+      t.integer :campo
       t.datetime :conteudo
     end
     add_index :ecm_item_data_horas, :entidade_id

@@ -1,5 +1,8 @@
 <div id="barra_titulo">
   <h3 class="titulo_index">Lista de <%= @formulario.titulo %></h3>
+  <div id="link_botao">
+    <%= link_to "Ajuda", ecm_formulario_ajudas_formulario_path(@formulario,1), :popup=>true %>
+  </div>
   <% if @formulario.permissao(@sessao_usuario.usuario) > 1 %>
   <div id="link_botao">
     <%= link_to 'Novo Cadastro', new_ecm_formulario_cadastro_path(@formulario) %>

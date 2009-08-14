@@ -20,85 +20,32 @@ class Itensformulario < ActiveRecord::Base
   named_scope :do_tipo, lambda {|id| {:conditions=>["tipo = ?", id]}}
   #-------------
 
-  after_create :apos_criar
+  after_create :apos_criar_item
 
   def validar_opcoes
     vo = eval("#{self.componente.camelize}EcmBase.new")
     return vo.validar_opcoes(self)
   end
 
-  def apos_criar
-    if self.formulario.cadastros.size > 0
-      self.formulario.cadastros.each do |cadastro|
-        if self.itenstipo.tipo == "texto"
-          cadastro_item = EcmItemTexto.new
-          if self.opcoes[:default]
-            cadastro_item.conteudo = self.opcoes[:default]
-          else
-            cadastro_item.conteudo = "--"
-          end
-        elsif self.itenstipo.tipo == "texto_longo"
-          cadastro_item = EcmItemTextoLongo.new
-          if self.opcoes[:default]
-            cadastro_item.conteudo = self.opcoes[:default]
-          else
-            cadastro_item.conteudo = "--"
-          end
-        elsif self.itenstipo.tipo == "numero_inteiro"
-          cadastro_item = EcmItemNumeroInteiro.new
-          if self.opcoes[:default]
-            cadastro_item.conteudo = self.opcoes[:default]
-          else
-            cadastro_item.conteudo = 0
-          end
-        elsif self.itenstipo.tipo == "numero_decimal"
-          cadastro_item = EcmItemNumeroDecimal.new
-          if self.opcoes[:default]
-            cadastro_item.conteudo = self.opcoes[:default]
-          else
-            cadastro_item.conteudo = 0
-          end
-        elsif self.itenstipo.tipo == "data"
-          cadastro_item = EcmItemData.new
-          if self.opcoes[:default]
-            cadastro_item.conteudo = self.opcoes[:default]
-          else
-            cadastro_item.conteudo = Date.now
-          end
-        elsif self.itenstipo.tipo == "data_hora"
-          cadastro_item = EcmItemDataHora.new
-          if self.opcoes[:default]
-            cadastro_item.conteudo = self.opcoes[:default]
-          else
-            cadastro_item.conteudo = DateTime.now
-          end
-        elsif self.itenstipo.tipo == "imagem"
-          cadastro_item = EcmItemImagem.new
-          if self.opcoes[:default]
-            cadastro_item.conteudo = self.opcoes[:default]
-          else
-            cadastro_item.conteudo = "--"
-          end
-        elsif self.itenstipo.tipo == "referencia"
-          cadastro_item = EcmItemReferencia.new
-          if self.opcoes[:default]
-            cadastro_item.referencia_id = self.opcoes[:default]
-          else
-            cadastro_item.referencia_id = Ecm::Cadastro.find(:first, :conditions=>["formulario_id = ?", self.formulario_refencia_id]).id
-          end
-        end
-        cadastro_item.entidade_id = cadastro.entidade_id
-        cadastro_item.formulariocategoria_id = cadastro.formulario.formulariocategoria_id
-        cadastro_item.formulario_id = cadastro.formulario_id
-        cadastro_item.itensformulario_id = self.id
-        cadastro_item.cadastro_id = cadastro.id
-        cadastro_item.save!
-      end
-    end
+  def apos_criar_item
+    it = eval("#{self.componente.camelize}EcmBase.new")
+    return it.apos_criar_item(self)
   end
 
   def antes_de_remover
     if self.formulario.cadastros.size > 0
+    end
+  end
+
+  def salvar_item(itenstipo, params)
+      cm = eval("#{itenstipo.componente.camelize}EcmBase.new")
+      return cm.salvar_item(self, params)
+  end
+
+  def update_item(cadastro_itens)
+    self.formulario.itensformularios.each do |form_item|
+      cm = eval("#{form_item.itenstipo.componente.camelize}EcmBase.new")
+      cm.update(self, form_item, cadastro_itens)
     end
   end
 end

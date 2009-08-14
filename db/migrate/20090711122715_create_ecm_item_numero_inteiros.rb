@@ -6,6 +6,7 @@ class CreateEcmItemNumeroInteiros < ActiveRecord::Migration
       t.integer :formulario_id
       t.integer :itensformulario_id
       t.integer :cadastro_id
+      t.integer :campo
       t.integer :conteudo
     end
     add_index :ecm_item_numero_inteiros, :entidade_id

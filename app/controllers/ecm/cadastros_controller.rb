@@ -42,7 +42,7 @@ class Ecm::CadastrosController < ApplicationController
       @cadastro.usuario_id = params[:cadastro][:usuario_id]
       @cadastro.save
       @cadastro.salvar_itens(params[:cadastro])
-      flash[:notice] = "Categoria Criada com Sucesso!"
+      flash[:notice] = "Cadastro Criado com Sucesso!"
       redirect_to :action=>"show",:id=>@cadastro.id
     end
   end
@@ -67,7 +67,7 @@ class Ecm::CadastrosController < ApplicationController
       render :action => "edit", :id=>@cadastro
     else
       @cadastro.update_itens(params[:cadastro])
-      flash[:notice] = "Categoria Criada com Sucesso!"
+      flash[:notice] = "Cadastro Alterado com Sucesso!"
       redirect_to :action=>"show",:id=>@cadastro.id
     end
   end

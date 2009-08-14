@@ -140,7 +140,7 @@ class Cadastro < ActiveRecord::Base
                                                    item.id,
                                                    self.id])
       return i
-    elsif item.tipo.downcase == "referncia"
+  elsif item.tipo.downcase == "referencia"
       i = EcmItemReferencia.find(:first, :conditions=>["entidade_id = ? and
                                                    formulariocategoria_id = ? and
                                                    formulario_id = ? and

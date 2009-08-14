@@ -6,6 +6,7 @@ class CreateEcmItemImagems < ActiveRecord::Migration
       t.integer :formulario_id
       t.integer :itensformulario_id
       t.integer :cadastro_id
+      t.integer :campo
       t.string :imagem_file_name
       t.string :imagem_content_type
       t.integer :imagem_file_size
