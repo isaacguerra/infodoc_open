@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script type='text/javascript' src="/javascripts/iframeauto.js">
+    </script>
+    <link type="text/css" rel="stylesheet" href="/theme/infodoc/stylesheets/intranet.css">
+    <title>INTRANET :: Infomanager</title>
+  </head>
+  <body>
+    <div id="topo">
+        <div id="logo">
+          <img src="/images/infodoc.gif" />
+        </div>
+    </div>
+    <div id="menu_nav">
+       <ul>
+       &nbsp;
+       </ul>
+    </div>
+    <div id="tudo">
+      <div id="conteudo">
+       <ul id="lista_ajuda">
+        <li><h3><a href="/ajuda/index.html" class="ativo">Topicos de Ajuda</a></h3></li>
+        <li><h3><a target="principal" href="/ajuda/sobre_infodoc.html">Sobre o infodoc</a></h3>
+          <ul>
+            <li><a target="principal" href="/ajuda/sobre_infodoc.html#oque">O que é ?</a></li>
+          </ul>
+        </li>
+        <li><h3><a target="principal" href="/ajuda/instalacao.html">Instalação</h3></a>
+          <ul>
+            <li><a target="principal" href="/ajuda/instalacao.html#ruby">Instalação Ruby e RubyGems</a></li>
+            <li><a target="principal" href="/ajuda/instalacao.html#rails">Instalação o Rails</a></li>
+            <li><a target="principal" href="/ajuda/instalacao.html#git">Instalação o Git</a></li>
+            <li><a target="principal" href="/ajuda/instalacao.html#infodoc">Instalação o Infodoc</a></li>
+          </ul>
+        </li>
+        <li><h3><a target="principal" href="/ajuda/sistemas_infodoc.html">Sistemas do Infodoc</h3></a>
+          <ul>
+            <li><a target="principal" href="/ajuda/sistemas_admg.html">Administração Geral</a></li>
+            <li><a target="principal" href="/ajuda/sistemas_adm.html">Administração</a></li>
+            <li><a target="principal" href="/ajuda/sistemas_gecm.html">Gerencia de ECM</a></li>
+            <li><a target="principal" href="/ajuda/sistemas_gconteudo.html">Gerencia de Conteúdo</a></li>
+          </ul>
+        </li>
+        <li>
+          <h3><a target="principal" href="/ajuda/instalacao_padrao_infodoc.html">Instalação Padrão</a></h3>
+        <li>
+          <h3><a target="principal" href="/ajuda/usando_o_infodoc.html">Usando o Infodoc</a></h3>
+          <ul>
+            <li><h3><a target="principal" href="/ajuda/admg.html">Administração Geral do Infodoc</a></h3>
+              <ul>
+                <li><a target="principal" href="/ajuda/admg.html#gentidade">Cadastrando Entidades</a></li>
+                <li><a target="principal" href="/ajuda/admg.html#liberamodulo">Liberação de Módulo a Entidade</a></li>
+                <li><a target="principal" href="/ajuda/admg.html#cgrupos">Cadastro de Grupos</a></li>
+                <li><a target="principal" href="/ajuda/admg.html#cusuarios">Cadastro de Usuários<a/></li>
+                <li><a target="principal" href="/ajuda/admg.html#gmodulos">Gerênciando Módulos e Sistemas</a></li>
+              </ul>
+            </li>
+            <li><h3><a target="principal" href="/ajuda/adm.html">Administração</a></h3>
+              <ul>
+                <li><a target="principal" href="/ajuda/adm.html#cgrupos">Cadastrando Grupos</a></li>
+                <li><a target="principal" href="/ajuda/adm.html#vgrupos">Vinculando Usuário a Grupo</a></li>
+                <li><a target="principal" href="/ajuda/adm.html#vsistemas">Vinculando  Sistema a Grupo </a></li>
+                <li><a target="principal" href="/ajuda/adm.html#msenha">Mudança de Senha</a></li>
+                <li><a target="principal" href="/ajuda/adm.html#pusuario">Perfil do Usuário</a></li>
+              </ul>
+            </li>
+            <li><h3><a target="principal" href="/ajuda/sistemas_gecm.html">Gerencia de ECM</a></h3></li>
+            <li><h3><a target="principal" href="/ajuda/sistemas_gconteudo.html">Gerencia de Conteúdo</a></h3></li>
+          </ul>
+        </li>      
+       </ul>
+       <div id="conteudo_ajuda">
+          <iframe src="/ajuda/principal.html" scrolling="no" name="principal" onload='iframeAutoHeight(this)'>
+          </iframe>
+       </div>
+      </div>
+    </div>
+    <div id="rodape">
+      <div id="licensa">
+        <b><a href="http://www.infodocbrasil.com.br">INFODOC</a></b> é <i>Free Software</i> Liberado sob a <i>GNU / GPL2 License</i>.<br />
+         Desenvolvido por <b><a href=mailto:guerra.isaac@gmail.com>Isaac Guerra</a></b> e
+        Design por <b><a href=mailto:raphaeljq@gmail.com>Raphael Chaves</a></b><br />
+        <div id="icones">
+          <a href="http://www.w3.org/1999/xhtml"> XHTML</a> <img src="/images/ico_html.png" alt="html" /> |
+          <a href="http://www.w3.org/Style/CSS/">CSS</a> <img src="/images/ico_css.png" alt="css"/> |
+          <a href="http://rubyonrails.org">RoR</a> <img src="/images/rails.png" alt="rails" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

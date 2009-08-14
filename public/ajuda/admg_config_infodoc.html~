@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="/theme/infodoc/stylesheets/intranet.css">
+  </head>
+  <div id="frame">
+      <h3 id="barra_titulo">Instalação</h3>
+      <p> 
+          Para a implementação básica do Infodoc no linux ,será necessária a instalação dos seguintes
+          aplicativos:
+      </p>    
+      <ul>
+        <li><a href="/ajuda/instalacao.html#ruby">Administração Geral</a></li>
+        <li><a href="/ajuda/instalacao.html#rails">Administração</a></li>
+        <li><a href="/ajuda/instalacao.html#git">Gerencia de ECM</a></li>
+        <li><a href="/ajuda/instalacao.html#infodoc">Gerencia de Conteudo</a></li>
+      </ul> 
+      <h4><a href="#" name="ruby">Instalação Ruby e RubyGems</a></h4>
+      <p>
+      
+        Se ainda não houver instalado o Ruby, digite na linha de comando do console:
+      </p>  
+  </div>  
+

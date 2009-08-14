@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="/theme/infodoc/stylesheets/intranet.css">
+  </head>
+  
+  <div id="frame">
+      <h3 id="barra_titulo">Administração Geral</h3>
+      <p>
+      É um módulo composto de sistemas que gerenciam Entidades, Usuários, Grupos,Módulos,Sistemas
+      e a Liberação de Módulos a Entidades.
+      </p>
+      <ul>
+        <li><a href="/ajuda/sistemas_admg.html#gentidade">Gerência de Entidades</a></li>
+        <li><a href="/ajuda/sistemas_admg.html#gusuarios">Gerência de Usuários</a></li>
+        <li><a href="/ajuda/sistemas_admg.html#ggrupos">Gerência de Grupos</a></li>
+        <li><a href="/ajuda/sistemas_admg.html#liberamodulos">Liberação de  Módulos a Entidades<a/></li>
+        <li><a href="/ajuda/sistemas_admg.html#gmodulos">Gerência de Módulos</a></li>
+        <li><a href="/ajuda/sistemas_admg.html#gsistemas">Gerência de Sistemas</a></li>
+      </ul>
+      <h4><a href="#" name="gentidade">Gerência de Entidades</a></h4>
+      <p>
+        Gerência de Entidades no Infodoc.
+      </p>
+      <h4><a href="#" name="gusuarios">Gerência de Usuários</a></h4>
+      <p>
+        Possibilita a gerência do usuários de uma entidade.
+      </p>
+      <h4><a href="#" name="ggrupos">Gerência de Grupos</a></h4>
+      <p>
+        Possibilita a gerência de grupos de usuários.
+      </p>
+      <h4><a href="#" name="liberaMódulos">Liberação de Módulos a Entidades</a></h4>
+      <p>
+        Administra que módulos estarão disponíveis para uma Entidade.
+      </p>
+      <h4><a href="#" name="gmodulos">Gerência de Módulos</a></h4>
+      <p>
+        Permite a gerência dos módulos da entidade.
+      </p>
+      <h4><a href="#" name="gsistemas">Gerência de Sistemas</a></h4>
+      <p>
+        
+      </p>
+  </div>    

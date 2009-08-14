@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="/theme/infodoc/stylesheets/intranet.css">
+  </head>
+  
+  <div id="frame">
+      <h3 id="barra_titulo">Gerência de ECM</h3>
+      <p>
+        A utilização do módulo de Gerência de ECM abrange os seguintes tópicos:
+      </p>
+      <ul>
+        <li><a href="/ajuda/sistemas_adm.html#ccatforms">Criando Categoria de Formulário</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#forms">Criando Formulários</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#itensforms">Itens de Formulários</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#pforms">Permissões de Formulários<a/></li>
+        <li><a href="/ajuda/sistemas_adm.html#itemprincipal">Item Principal de Formulário</a></li>
+      </ul>
+      <h4><a href="#" name="ccatforms">Criando Categoria de Formulário</a></h4>
+      <p>
+          Para começar a criar formulários no módulo de ECM, é necessário primeiramente cadastrar uma categoria
+          de formulário. O acesso se da pelo menu horizontal no topo:<br>
+          
+      </p>
+      <code>GERENCIA ECM > CATEGORIA DE FORMULARIOS</code>
+      <img class="semborda" src="/images/ajuda/passo_54.png" title="Categorias de Formulário"/>
+      <p>
+        Nesta tela serão listadas todas as categorias de formulários cadastradas pelo usuário. 
+        Para cadastrar uma nova categoria, será necessário clicar no botão "Nova Categoria".
+      </p>
+      <img class="semborda" src="/images/ajuda/passo_55.png" title="Categorias de Formulário"/>
+      <p>
+        Nesta tela o usuário vai encontrar um formulário e preencher as informações referentes a essa
+        categoria que está sendo criada.
+      </p>
+      <img class="semborda" src="/images/ajuda/passo_56.png" title="Categorias de Formulário"/>
+      <p>
+        O usuário poderá alterar as informações da categoria clicando no nome da categoria, na tela da
+        Lista de Categorias de Formularios.
+      </p>
+      <img class="semborda" src="/images/ajuda/passo_57.png" title="Categorias de Formulário"/>
+      <p>
+        Em seguida clicando no botão EDITAR
+      </p>
+      <img class="semborda" src="/images/ajuda/passo_58.png" title="Categorias de Formulário"/>
+      <p>
+        Então as informações da categoria poderão ser alteradas em um formulário de alteração.
+      </p>
+      <img class="semborda" src="/images/ajuda/passo_59.png" title="Categorias de Formulário"/>
+      <h4><a href="#" name="cforms">Criando Formulários</a></h4>
+      <p>
+        Depois de criadas categorias, os formularios
+     </p> 
+  </div>    

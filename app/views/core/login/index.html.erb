@@ -5,12 +5,14 @@
 </div>
 <% end %>
 
-<fieldset id="form_login">
-  <legend class="form_login">Login do Usuário </legend>
+
+<div id="login">
+      <h4>Acesso a Intranet</h4>
   <% form_tag("/core/login") do %>
-    Usuário:                 <%= text_field :login, :usuario %><br>
-    Senha:&nbsp;&nbsp; <%= password_field :login, :senha %><br>
-    <%= submit_tag "Logar", :class=> "enviar" %>
+    Usuário: <%= text_field :login, :usuario %><br>
+    Senha:&nbsp;<%= password_field :login, :senha %><br>
+    <%= submit_tag "Logar" %>
   <% end %>
- </fieldset>
+
+</div>
 

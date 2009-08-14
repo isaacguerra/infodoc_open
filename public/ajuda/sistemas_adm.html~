@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="/theme/infodoc/stylesheets/intranet.css">
+  </head>
+  
+  <div id="frame">
+      <h3 id="barra_titulo">Administração</h3>
+      <p>
+      É composto por sistemas de administração de grupos,
+       de usuário, de mudança de senha e ainda de vinculação de usuários a grupos,
+        de vinculação de sistemas a grupos e perfil de usuário.
+      </p>
+      <ul>
+        <li><a href="/ajuda/sistemas_adm.html#adgrupos">Administração de Grupos</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#adusuarios">Administração de Usuários</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#admudasenha">Administração de Mudança de Senha</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#vinculausuarios">Vinculação de Usuários a Grupos<a/></li>
+        <li><a href="/ajuda/sistemas_adm.html#vinculasistemas">Vinculação de Sistemas a Grupos</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#perfilusuario">Perfil do Usuário</a></li>
+      </ul>
+      <h4><a href="#" name="adgrupos">Administração de Grupos</a></h4>
+      <p>
+        Permite administrar grupos de usuários.
+      </p>
+      <h4><a href="#" name="adusuarios">Administração de Usuários</a></h4>
+      <p>
+        Permite administrar usuários de uma entidade.
+      </p>
+      <h4><a href="#" name="admudasenha">Administração de Mudança de Senha</a></h4>
+      <p>
+        Permite mudar a senha de um usuário vinculado à entidade.
+      </p>
+      <h4><a href="#" name="vinculausuario">Vinculação de Usuário a Grupos</a></h4>
+      <p>
+        Permite vincular ou desvincular um usuário a um grupo.
+      </p>
+      <h4><a href="#" name="vinculasistemas">Vinculação de Sistemas a Grupos</a></h4>
+      <p>
+        Permite fazer a vinculação de  sistemas a grupos. 
+      </p>
+  </div>    

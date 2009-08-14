@@ -1,5 +1,5 @@
 * {
-   font-family:Arial, Helvetica, Verdana;
+   font-family:"Sans Serifs", Arial, Helvetica, Verdana;
 }
 body {
 	margin:0;
@@ -17,43 +17,123 @@ body {
 	padding:0 0 0 5px;
 }
 
-#conteudo {
-    min-height: 350px;
-    
-}
-h1{
-	margin: 0;
-}
-#topo {
-	background-color:#ffffff;
-	height: 90px;
-  	width: 10%;
-    	padding: 8px;
-}
-/*LOGIM*/
-    #login{
-        height: 110px;
-      	width: 85%;
-	padding: 0px 0px 0px 0px;
-	float:right;
-	text-align: right;
-    }
-    #login h3{
-	color:#949494;
-	font-family: Verdana;
-    }
-    #login a{
-        font-family: Verdana;
-        font-size: 0.7em;
-	color:#949494;
-    }
+#conteudo {  min-height: 350px; }
+
+h1              { margin: 0; }
+
+#topo { background-color:#ffffff; height: 90px; width: 10%;   padding: 8px; }
+/*==========================
+layout login*/
+
+
+
+
+/*===================================
+LOGIM*/
+
+#login              {
+                        min-height: 110px;
+                        width: 25%;
+	                    padding: 0px 10px 0px 0px;
+	                    float:right;
+	                    text-align: right;
+	                    border-width: 5px 1px 2px 1px;
+                    	border-style: solid solid solid solid;
+                    	border-color: #8C1C1C #EDEDED #CCCCCC #EDEDED; 
+                    	margin-bottom: 15px;
+                    	margin-right:20px;
+                    	margin-top: 5px;
+                    }
+                    
+#login h4           {
+                    	color:#949494;
+                    	font-family: Arial,Helvetica,Verdana;
+                    	margin:0;
+                    	margin: 1px 0 0 5px;
+                    	clear:both;
+              
+                    	text-align:left;
+                    	display:block;
+
+                    	 
+                    }
+                    
+#login a            {
+                        font-family: Verdana;
+                        font-size: 0.7em;
+                    	color:#949494;
+                    }
+                    
+#login form         { margin:  0px; font-size:0.8em; }                       
+#login input[type=text],
+#login input[type=password]   {     
+                                    padding:0;
+                                    padding-top:3px;
+                                    padding-left:2px;
+                                    width:auto;
+                                    min-width:100px;
+                                    color:#8C1C1C;
+                                    font-size:0.9em;
+                                    border: 1px solid #CCCCCC;
+                                    margin:0 5px;
+                                    margin-bottom:4px;
+                                    background:#F5F5F5;    
+                              }
+                              
+#login input[type=submit]     {   
+                                    margin-right: 47%;
+                                    margin-top:3px;
+                                    font-size: 0.8em;
+                                    border: 1px solid #CCCCCC;
+                                    color:#8C1C1C;
+                                    
+                                    
+                              }   
+/* Login Layout
+============================================== */
+
+
+#topo_login                     {     
+                                       width: 100%; 
+                                       min-height:20px; 
+                                       margin:0;
+                                       width:100%;
+                                       background-image: url("/theme/infodoc/images/fil1.png");
+                                       padding-bottom: 10px;
+                                       padding-top:10px;
+                                       display: inline-block;
+                                       border-top:8px solid #8C1C1C;
+                                       border-bottom: 1px  solid #EDEDED;
+                                       
+                                 }
+                                 
+#topo_login b                    {     margin:10px; color: #8C1C1C; }
+
+#rodape_login                    {     
+                                       width:100%; height:32px;
+                                       border-top:5px solid #8C1C1C;
+                                       border-bottom: 1px solid #EDEDED;
+                                       background-image: url("/theme/infodoc/images/img09.gif");
+                                 }
+                                 
+#login_tudo                      {     min-height:370px;  }
+
+#login_conteudo                  { padding: 10px; }
+
+#login_conteudo #login           { float:none;margin:0; margin:35px 34%;}
+
+#login_conteudo #login h4        { margin-bottom: 10px; }
+/*========================
+*/
+                              
+                                                                     
 /*FIM LOGIM*/
 /*Menu*/
     #navcontainer ul {
       	font-size:0.8em;
       	font-weight:bold;
       	padding: 6px;
-      	margin: 5px 0px 0px 0px;
+      	margin: 20px 0px 0px 0px;
       	list-style-type: none;
       	text-align: left;
       	background-color:#ffffff;
@@ -79,206 +159,7 @@ h1{
 	
     }
 /*Fim Menu*/
-#direita{
-      	min-height: 50px;
-      	width:36%;
-	float:right;
-}
-/*Depoimento*/
-    #depoimentos {
-	padding: 0 10px 0 10px;
-      	min-height: 50px;
-      	width:95%;
-	float:right;
-	border: 1px solid #CCCCCC;
-    }
-    #depoimentos p {
-      	font-size: 0.9em;
-      	text-align: justify;
-	margin: 10px 0 0 0;
-    }
-    #depoimentos h5 {
-      	color:#8c1c1c;
-      	margin: 3px 0;
-    }
-    #depoimentos h4 {
-	border-bottom: 1px solid #C00;
-    }
-    #depoimentos b {
-       	font-family: serif;
-       	font-size: 40px;
-       	color:#8c1c1c ;
-    }
-    #depoimentos a{
-	color: #8c1c1c;
-	float: right;
-	font-size: 0.9em;
-	margin: 0 0 5px 0;
-    }
-    #dep_cab {
-	float: top;
-    }
-    #img_wellington{
-	float:left;
-	margin: 0px 5px 0px 0px;
-    }
-    .depoimento_txt{
-        font-size:1.2em;
-    }
-/*Fim Depoimento*/
-/*Serviços*/
-    #servicos{
-      	padding: 5px 0 0 10px;
-      	height: 207px;
-      	width:100%;
-	float:right;
-	}
-	
-    #servicos h2 {
-        font-family:Verdana;
-	font-size:1.3em;
-        font-weight:bold;
-        border-bottom: 1px solid #C00;
-    }
-    #servicos h6 {
-	margin:4px 0 12px 0;
-    }
-    #digitalizacao, #armazenagem, #disponibilidade{
-      	width:33%;
-      	height:auto;
-	float: left;
-	text-align: center;
-        opacity: 0.9;
-    }
-    #digitalizacao:hover, #armazenagem:hover, #disponibilidade:hover{
-        opacity: 1;
-    }
-/*FIM Serviços*/
-/*Extra*/
-    #extra{
-	margin-top:10px;
-        width:100%;
-        height:auto;
-	float: right;
-	clear: right;
-    }
-    #extra2{
-        width:99.5%;
-        height:88px;
-        border: 1px solid #CCCCCC;
-        float:left;
-        margin:0 5px 2px 0;
-    }
-    #extra2 h1{
-        font-family:Verdana;
-	font-size:1em;
-        font-weight:bold;
-        border-bottom: 1px solid #CCCCCC;
-        background-color: #EDEDED;
-        margin-bottom: 1px;
-        padding:0 0 0 3px;
-    }
-    #contato {
-        width:99.5%;
-        height:88px;
-        border: 1px solid #CCCCCC;
-        float:left;
-    }
-    #contato h1{
-        font-family:Verdana;
-	font-size:1em;
-        font-weight:bold;
-        border-bottom: 1px solid #CCCCCC;
-        background-color: #EDEDED;
-        margin-bottom: 1px;
-        padding:0 0 0 3px;
-    }
-    #contato a{
-        
-        float:left;
-        text-decoration: none;
-    	color: #8c1c1c;
-    	margin-top: 45px;
-    	margin-left:20px;
 
-}
-        #contato img {
-            
-            float:left;
-        }
-/*FIM Extra*/
-/*Destaque*/
-    #destaque {
-      	width:61%;
-      	height:190px;
-	float: left;
-	border: 1px solid #CCCCCC;
-	font-family:Verdana;
-	font-size:3.5em;
-        font-weight:bold;
-	padding: 10px
-    }
-    #destaque a {
-	font-family:Verdana;
-	font-size:0.5em;
-	color: #8c1c1c;
-    }
-/*FIM Destaque*/
-/*Infodoc*/
-    #infodoc {
-      	width:61.1%;
-	float: left;
-	font-size:1em;
-	padding: 10px 10px 10px 10px;
-	margin: 10px 0 0 0;
-	background-image: url("/images/img08.gif");
-	background-repeat: repeat-x;
-	text-align:justify;
-    }
-    .infodoc_txt {
-        color:#8c1c1c;
-        font-weight:bold;
-        font-size:1.2em;
-    }
-/*FIM Infodoc*/
-/*Clientes*/
-    #clientes {
-      	width:62.4%;
-      	height:160px;
-	float: left;
-	border-bottom: 3px solid #8c1c1c;
-	padding: 3px 0px 3px 3px;
-	margin: 10px 0 0 0;
-	background-color: #FFFFFF;
-    }
-    #clientes h2 {
-        font-family:Verdana;
-	font-size:1.3em;
-        font-weight:bold;
-        border-bottom: 1px solid #CCCCCC;
-    }
-/*FIM Clientes*/
-/*Noticias*/
-    #noticias{
-        width:62.4%;
-      	min-height:160px;
-	float: left;
-	border-bottom: 3px solid #8c1c1c;
-	padding: 3px 0px 3px 3px;
-	margin: 10px 0 0 0;
-	background-color: #FFFFFF;
-	text-align: justify;
-    }
-    #noticias h2 {
-	font-size:1.3em;
-        font-weight:bold;
-        border-bottom: 1px solid #CCCCCC;
-    }
-    #noticias p{
-	font-size:0.9em;
-        text-align: justify;
-    }
-/*FIM Noticias*/
 /*Rodape*/
     #rodape {
 	clear: both;
@@ -295,6 +176,7 @@ h1{
      border-bottom-style:solid;
      border-bottom-width:5px;
      border-bottom-color:#8c1c1c;
+     border-top: 1px solid #EDEDED;
      background-image: url("/images/img09.gif");
 	 background-repeat: repeat-x;
     }
@@ -314,44 +196,81 @@ h1{
     }
 /*Fim Rodape*/
 
-/*Detalhamento*/
-    #depoimentos_show, #servicos_show, #clientes_show{
-   	border:1px solid #CCCCCC;
-   	padding: 4px 5px;
-   	min-height: 450px;
-   	width:780px;
-    margin-top:20px;  	
-	margin-right: auto;
-    margin-left: auto;
-    }
-    #depoimentos_show p {
-      	font-size: 0.9em;
-      	text-align: justify;
-    }
-    #depoimentos_show h5 {
-      	color:#8c1c1c;
-      	margin: 3px 0;
-    }
-    #depoimentos_show h4 {
-	border-bottom: 1px solid #C00;
-    }
-    #depoimentos_show b {
-   	font-family: serif;
-    	font-size: 40px;
-       	color:#8c1c1c ;
-    }
-    #dep_cab {
-	float: top;
-    }
-    #img_wellington{
-	float:left;
-	margin: 0px 5px 0px 0px;
-    }
-    .depoimento_txt{
-        font-size:1.2em;
-    }
-/*Fim Depoimento_show*/
+#colunadireita          {     width: 44%;
+                              float:left; 
+                              height:auto; 
+                              min-height:100px; 
+                              margin: 5px 0;
+                              
+                        }
+                        
+#colunadireita h2       { margin:0 ; color:#8C1C1C;}
 
+#colunadireita p        { font-size: 0.8em; }
+
+#colunadireita h4       { 
+                          display:block; 
+                          margin:0; 
+                          margin-left:5px;
+                          margin-bottom:5px; 
+                          width:auto;
+                        }
+
+#colunaesquerda         { 
+                          width: 55%; 
+                          float:left; 
+                          height:auto; 
+                          min-height:100px; 
+                          margin: 5px 0;
+
+                             
+                        }
+                        
+#colunaesquerda h4      { width:auto; margin:0 0 5px 5px; display:block; }
+
+#colunaesquerda h5      { width:auto; margin:0; display:block; color:#949494; }
+
+#colunaesquerda p       { font-size: 0.8em; }
+                        
+#publicados             { width: 100%; border: 1px solid #EDEDED; }
+                        
+.publicacao             { width: 100%; border: 1px solid #CCCCCC; padding: 1%; margin-bottom:5px;}
+
+
+
+.noticiap               { 
+                          width: 96%;
+                          float:left; 
+                          margin: 0 1%; 
+                          padding: 1% 1%; 
+                          clear:both; 
+                          border: 1px solid #CCCCCC;
+                        }
+                        
+#noticias               {    
+                          width: 100%;
+                          float:left; 
+                          margin: 0 1%; 
+                          padding: 1% 0%; 
+                          clear:both; 
+                          border: 1px solid #FFFFFF;
+        
+
+                        }
+                        
+.noticia                {
+                          width: 46%;
+                          float: left;
+                          margin: 0 2.0%;
+                          margin-left:0;
+                          padding:0 1%;
+                          outline: 1px solid #CCCCCC; 
+                        }
+                           
+.noticia h4             {
+                            width:auto;
+                            color:#949494;
+                        }
 
 /*########### LOGIN ########### */
 
@@ -390,21 +309,22 @@ input#login_usuario,input#login_senha {
 #form_login form {
     margin:0;
 }
-input.enviar {
-    margin-top: 5px ;
-    width:80px;
-    padding:3px;
-}
+input.enviar         {
+                        margin-top: 5px ;
+                        width:80px;
+                        padding:3px;
+                     }
 
-#flash {
-    text-align:center;
-    color:#ffffff;
-    margin: 5px 0 5px 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width:100%;
-    height:auto;
-    
-    background-color:#F5C4C4;
-}
+#flash               {
+                            text-align:center;
+                            color:#ffffff;
+                            margin: 5px 0 5px 0;
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            width:100%;
+                            height:auto;
+                            border-top: 2px solid #CF9191;
+                            border-bottom: 2px solid #CF9191;
+                            background-color:#F5C4C4;
+                      }  
 

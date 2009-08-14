@@ -1,2 +1,26 @@
-<%= yield %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </script>
+    <title>INTRANET :: Infomanager</title>
+    <%= stylesheet_link_tag "/theme/infodoc/stylesheets/intranet.css" %>
+  </head>
+  <body>
+    <div id="topo_ajuda">
+        <div id="logo_ajuda">
+          <b>AJUDAS!</b>
+        </div>
+    </div>
+    <div id="ajuda_tudo">
+      <div id="ajuda_conteudo">
+       <%= yield %>
+      </div>
+    </div>
+    <div id="rodape_ajuda">
+      
+    </div>
+  </body>
+</html>
+
 

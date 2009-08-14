@@ -7,7 +7,7 @@
   <body>
     <div id="tudo">
         <div id="imagem_mouse">
-          <img href="/images/mouse.jpg">
+          <img src="/images/mouse.jpg">
         </div>
         <%= yield %>
     </div>

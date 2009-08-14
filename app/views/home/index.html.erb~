@@ -1,0 +1,80 @@
+<div id="direita">
+	<div id="depoimentos">
+	  <h4>Depoimentos</h4>
+
+	  <div id="dep_cab">
+	    <div id="img_wellington">
+	      <img src="/images/wellintom_campos.png" height="160px" />
+	    </div>
+
+	    <h5>SEAD</h5>
+	    <h5>Wellington de Carvalho Campos<br>Entervista na Docoment Management<br> Junho de 2008</h5>
+	  </div>
+
+	  <p>"(...) O nosso objetivo maior está sendo alcançado, que vem a ser a otimização
+	  dos processos bem como a diminuição do espaço físico ocupado com documentos em áreas de alto custo, organização de
+	  informações, segurança, agilidade no tratamento com fiscalização e tomada de decisões e muitas outras vantagens 		  exigidas
+	  frente ao constante crescimento do volume de nossos arquivos com informações de servidores e do patrimônio do Estado e 	   aos
+	  problemas que eles gera”</p><a href="/depoimentos/1">Depoimento Completo ...</a>
+	</div>
+
+	<div id="servicos">
+	  <h2>Serviços</h2>
+	  <div id="digitalizacao">
+	    <h6>DIGITALIZAÇÃO</h6>
+	    <img src="/images/digitaliza.jpg" />
+	  </div>
+
+	  <div id="armazenagem">
+	    <h6>ARMAZENAGEM</h6>
+	    <img src="/images/armazena.jpg" height=112px />
+	  </div>
+
+	  <div id="disponibilidade">
+	    <!--<img src="/images/bolinha.gif" height=19px />-->
+	    <h6>DISPONIBILIDADE</h6>
+	    <img src="/images/notebook.jpg" height=112px />
+	  </div>
+	</div>
+
+	<div id="extra">
+	  <div id="extra2">
+	    <h1>Extra</h1>
+	  </div>
+
+	  <div id="contato">
+	    <h1>Contato</h1>
+	    <img src="/images/contato.jpg" />
+	    <a href="mailto:atendimento@infomanager.com.br" title="atendimento@infomanager.com.br">Enviar um e-mail</a>
+	  </div>
+	</div>
+</div>
+<div id="destaque">
+  Seja ágil na busca de Documentos!<br>
+  <a href="www.isaacguerra.net">saiba mais...</a>
+</div>
+
+<div id="infodoc">
+  <img src="/images/infodoc.gif" align=left height=95px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="infodoc_txt">Infodoc</span> é a ferramenta de Gestão de Conteúdo que sua empresa necessita. Com o <span class="infodoc_txt">Infodoc</span> sua empresa cria facilmente sistemas
+  sem a necessidade de especialistas na área de tecnologia, trazendo assim facilidade na criação e gerenciamento de Informações.
+  O <span class="infodoc_txt">Infodoc</span> também cuida de todos os documentos, audio, vídeo e tudo mais que sua empresa produz diariamente. Com o <span class="infodoc_txt">Infodoc</span> todo
+  Conteúdo de sua empresa fica centralizado e altamente organizado gerando assim agilidade e facilidades de Gestão!
+</div>
+
+<div id="clientes">
+  <h2>Clientes</h2>
+  <center>
+  <img src="/images/detran.png" height="80px" />&nbsp;&nbsp;&nbsp;
+  <img src="/images/policivil.png" height="80px" />&nbsp;&nbsp;&nbsp;
+  <img src="/images/90px-Brasao_macapa.jpg" height="80px" />&nbsp;&nbsp;&nbsp;
+  <img src="/images/bb.jpeg" height="80px" />&nbsp;&nbsp;&nbsp;
+  <img src="/images/logo-Sead.gif" height="50px" />
+  </center>
+</div>
+
+<div id="noticias">
+  <h2>Prefeitura de Macapá Economiza R$ 2.000.000,00 com o uso do InfoDoc </h2>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer metus arcu, interdum ac vehicula non, lobortis in lorem. Duis sed dui augue, ut dignissim augue. Praesent elementum ornare auctor. Nunc ut cursus nisl. Donec in eros a elit laoreet pretium ac et nulla. Ut quis diam et ligula ultrices hendrerit. Etiam semper egestas purus ut dapibus. Curabitur at congue lacus. Sed a orci quis purus imperdiet mollis et ut mi. Suspendisse faucibus tempus bibendum.</p>
+</div>
+

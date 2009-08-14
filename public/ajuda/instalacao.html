@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="/theme/infodoc/stylesheets/intranet.css">
+  </head>
+  <div id="frame">
+      <h3 id="barra_titulo">Instalação</h3>
+      <p> Para a implementação básica do Infodoc no linux ,será necessária a instalação dos seguintes
+          aplicativos:
+      </p>    
+      <ul>
+        <li><a href="/ajuda/instalacao.html#ruby">Instalação Ruby e RubyGems</a></li>
+        <li><a href="/ajuda/instalacao.html#rails">Instalação o Rails</a></li>
+        <li><a href="/ajuda/instalacao.html#git">Instalação o Git</a></li>
+        <li><a href="/ajuda/instalacao.html#infodoc">Instalação o Infodoc</a></li>
+      </ul> 
+      <h4><a href="#" name="ruby">Instalação Ruby e RubyGems</a></h4>
+      <p>
+      
+        Se ainda não houver instalado o Ruby, digite na linha de comando do console:
+      </p>  
+      <code>sudo aptitude install ruby rubygems</code><br /><br />
+      <img src="/images/ajuda/passo1.png"/>
+      <h4>
+        <a href="#" name="rails">Instalando o Rails</a>
+      </h4>
+      <p>
+          Digite o seguinte na linha de comando :
+      </p>  
+      <code>
+        sudo gem install rails
+      </code>
+      <br/ >
+      <br/ >
+      <img src="/images/ajuda/passo_2.png"/>
+      <p>
+        Após concluído o download e a configuração da Gem , digite o seguinte:
+      </p>
+      <code>
+        rails -v
+      </code>
+      <br/ >
+      <br />
+      <img src="/images/ajuda/passo3.png"/>
+      <p>
+        Se tudo estiver certo, será informada a versão do Rails instalada.
+      </p>
+      <h4>
+        <a href="#" name="git"> Instalando o git</a>
+      </h4>
+      <p>
+          O git é necessário para fazer o download direto do repositório do Infodoc.
+      </p>
+      <p>    
+          No console do linux digite o seguinte:
+      </p>
+      <code>
+          apt-get install git-core
+      </code>
+      <br/ >
+      <br/ > 
+      <img src="/images/ajuda/passo_4.png"/>
+      <h4><a href="#" name="infodoc">Instalando o Infodoc</a></h4>
+      <p>
+        Para instalar o infodoc utilize o seguinte comando:
+      </p>
+      <code>
+        git install git@github.com:isaacguerra/infodoc_open.git
+      </code>
+      <br/>
+      <br/>
+      <img src="/images/ajuda/passo_5.png"/>
+     
+      <p>
+        Após o download, teste se o servidor está funcionando:
+      </p>
+      <code>
+        cd infodoc_open
+      </code>
+      <br />
+      <code>
+        script/server
+      </code>
+      <br/>
+      <br/>
+      <img src="/images/ajuda/passo6.png"/>
+
+  </div>  
+

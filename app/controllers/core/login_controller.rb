@@ -1,7 +1,7 @@
 class Core::LoginController < ApplicationController
   skip_before_filter :autenticado
   skip_before_filter :autorizado
-  layout "home"
+  layout "login"
 
   def index
     session[:sessao_atual]=nil

@@ -17,17 +17,18 @@ td                                  { font-size:0.8em;
 
 table                               {  margin-bottom:0; }
 
-form                                { margin:0; }               
-      
+form                                { margin:0; }
+
 h3                                  { color:black; margin:0px; }
 
+tr:hover                                  { background:#FAF5DC; }
 
 /**************************************    END  **********************************************************/
 
 
-                  
-                  
-/*******************************************************************************************************/                  
+
+
+/*******************************************************************************************************/
 /************************************ ESTRUTURAS PRINCIPALS *******************************************/
 /*****************************************************************************************************/
 
@@ -50,9 +51,9 @@ h3                                  { color:black; margin:0px; }
                                        background-image: url("/theme/infodoc/images/fil1.png");
                                        padding-bottom: 10px;
                                        display: inline-block;
-                           
+
                                     }
-                        
+
 #topo img                           {  height:80%; margin :25px 5px 2px 20px; }
 
 #logo                               {  float:left; width:20%; height:100%;  }
@@ -86,18 +87,18 @@ h3                                  { color:black; margin:0px; }
                                         border-bottom:5px solid #8C1C1C;
                                         background-image: url("/theme/infodoc/images/img09.gif");
 	                                    background-repeat: repeat-x;
-	                                    
+
                                     }
 #licensa                            { width:60%; float:left; margin:0 5%; margin-left:20%; height:auto; }
-    
+
 #rodape a                           {  color:#8C1C1C; }
-#rodape img                         {  border:0; vertical-align:top;      }
+#rodape img                         {  border:0; vertical-align:top; height:16px;      }
 
 #rodape p                           { float:left; margin:0; }
 
 #icones                             { margin: 5px 0; }
 
-                                     
+
 /******************************************************************************************************/
 
 
@@ -109,7 +110,7 @@ h3                                  { color:black; margin:0px; }
 
 #menu_nav ul                        {
 
-                                      
+
                                       padding: 4px 0px;
                                       margin: 6px 0 6px 8px;
                                       list-style-type: none;
@@ -123,7 +124,7 @@ h3                                  { color:black; margin:0px; }
                                       background-image: url("/theme/infodoc/images/img09.gif");
                                       background-repeat: repeat-x;
                                       clear:both;
-                                      
+
 
                                     }
 
@@ -131,7 +132,7 @@ h3                                  { color:black; margin:0px; }
 
 #menu_nav ul li b                   { margin:0; color:#7a7272; }
 
-#menu_nav ul li a                   { 
+#menu_nav ul li a                   {
                                       margin:0;
                                       margin-left:2px;
                                       text-decoration: none;
@@ -142,7 +143,7 @@ h3                                  { color:black; margin:0px; }
 #menu_nav ul li a:hover             { outline: 1px solid #EDEDED;  background-color: #FFFFFF;  }
 
 .mattblackmenu ul                   {
-                                      
+
                                       margin: 0;
                                       padding: 0;
                                       font: normal 12px "sans serif";
@@ -152,13 +153,13 @@ h3                                  { color:black; margin:0px; }
 
 .mattblackmenu li                   { display: inline; margin: 0;  padding: 30px 0 ; }
 
-.mattblackmenu li a                 { 
+.mattblackmenu li a                 {
 
                                       float: left;
                                       display: block;
                                       text-decoration: none;
                                       margin: 0;
-                                      margin-left:1px; 
+                                      margin-left:1px;
                                       padding: 6px 8px; /*padding inside each tab*/
                                       border-right: 1px solid #EDEDED; /*right divider between tabs*/
                                       color: white;
@@ -195,15 +196,15 @@ h3                                  { color:black; margin:0px; }
                                       padding: 3px 4px;
                                       border-bottom: 1px solid #CCCCCC;
                                     }
-                        
-* html .ddsubmenustyle li           { /*IE6 CSS hack*/ display: inline-block; }               
+
+* html .ddsubmenustyle li           { /*IE6 CSS hack*/ display: inline-block; }
 
 .ddsubmenustyle li a:hover          { background-color: #8A4646; color:#FFFFFF; }
 
 
 
                         /* ######### Neutral CSS  ######### */
-                        
+
 
 .downarrowpointer                   { /*CSS for "down" arrow image added to top menu items*/
                                         padding-left: 4px;
@@ -249,20 +250,20 @@ input#login_usuario,input#login_senha { margin-bottom: 4px; border:1px solid #BF
                                         text-align: center; width:30%; height:100px;
                                         padding-top: 20px; margin:20px auto 50px auto;
                                       }
-                                      
-.form_login                           {                          
+
+.form_login                           {
 
                                         margin-left:31%;
                                         margin-bottom:20px
                                         text-align:center;
                                         padding: 0 5px 0 5px;
-                                        
+
                                       }
-                                        
+
 #form_login form                      {
                                         margin:0;
                                       }
-                                      
+
 input.enviar                          {
 
                                         margin-top: 5px
@@ -284,9 +285,9 @@ input.enviar                          {
                                       float:right;
                                       background-image: url("/theme/infodoc/images/fil2.jpg");
                                       background-repeat: repeat-x;
-                                      background-position: top;          
-                                      width :35%;                       
-                                      height: 90%;                     
+                                      background-position: top;
+                                      width :35%;
+                                      height: 90%;
                                       margin-right: 14px;
                                       margin-top:10px;
                                       padding: 4px 5px 0px 5px;
@@ -315,14 +316,14 @@ input.enviar                          {
 
 /* Area onde ficam botao 'Novo' , filtro e campo para filtrar  e o Link Voltar*/
 
-#barra_titulo, #link_voltar 
+#barra_titulo, #link_voltar
                               {
 
                                 float:left;
                                 padding:6px 1px;
                                 width:99.6%;
                                 min-height:30px;
-                                clear:both;                    
+                                clear:both;
                                 margin:3px 0 3px 1px;
                                 background-image: url("/theme/infodoc/images/fil4.jpg");
                                 background-repeat: repeat-x;
@@ -348,7 +349,8 @@ input.enviar                          {
 .titulo_index,
 .titulo_show,
 .titulo_new,
-.titulo_edit                {
+.titulo_edit,
+.titulo_comentario         {
 
                             font-size:1.2em;
                             float:left;
@@ -356,15 +358,15 @@ input.enviar                          {
                             margin-left:5px;
                             background-position:left;
                             background-repeat:no-repeat;
-                            
+
                             }
-                                                    
+
 /* ***************************************   END    ************************************************* */
 
 
-#listar 
+#listar
                             {
-    
+
                             float:left;
                             margin: 6px 0 6px 0px;
                             min-height:450px;
@@ -374,7 +376,7 @@ input.enviar                          {
                             width:100%;
                             padding:2px 2px 25px;
 
-                            }   
+                            }
 
 .itens_index
                             {
@@ -393,9 +395,9 @@ input.enviar                          {
 .titulo_lista               { background-image:url("/theme/infodoc/images/fil4.jpg"); }
 
 .titulo_lista,
-.lista_item 
+.lista_item
                             {
-                             
+
                              font-size:0.9em;
                              text-align:left;
                              margin-top:5px;
@@ -404,10 +406,10 @@ input.enviar                          {
                              font-weight:bold;
                              width:auto;
                              border-bottom: 1px solid #EDEDED;
-                             
+
                              }
 .titulo_lista a,
-#titulo_lista a:hover       
+#titulo_lista a:hover
                              { float:left; text-decoration:none; width:100%;  height:100%; }
 
 .item_index a,
@@ -426,30 +428,30 @@ input.enviar                          {
                                float:right;
                                color: #ffffff;
                                font-weight:bold;
-                               background-color:#8C1C1C;     
+                               background-color:#8C1C1C;
                                border:0;
                             }
-                            
-#link_botao a               { 
+
+#link_botao a               {
 
                                color: #E0E0E0;
                                margin-top:3px;
-                               float:left;                   
-                               width:100%;
-                               height:100%;
-                               text-decoration: none;
-                               
-                            }
-                            
-#link_botao a:hover         {
-
-                               color: #ffffff;
-                               margin-top:3px;              
                                float:left;
                                width:100%;
                                height:100%;
                                text-decoration: none;
-                               
+
+                            }
+
+#link_botao a:hover         {
+
+                               color: #ffffff;
+                               margin-top:3px;
+                               float:left;
+                               width:100%;
+                               height:100%;
+                               text-decoration: none;
+
                             }
 
 
@@ -461,8 +463,8 @@ input.enviar                          {
                                 padding-right:6px;
                                 min-width:15%;
                                 width:auto;
-                                background-image:url("/theme/infodoc/images/fil7.jpg");
-                                background-repeat:repeat-x;
+                                background-color:#f2f2f2;
+
                                 border-top:1px;
                                 border-bottom:0px;
                                 background:color:#ffffff;
@@ -503,6 +505,8 @@ input.enviar                          {
                                 padding-left:20px;
                                 padding-top:0px;
                                 background-repeat: no-repeat;
+                                float:left;
+
                             }
 
 #link_voltar a:hover        {
@@ -513,14 +517,14 @@ input.enviar                          {
                             }
 
 
-.formulario td.lista_item                  {  empty-cells: show; } 
+.formulario td.lista_item                  {  empty-cells: show; }
 /**********************************************************************************************************/
-/*********************************************** MENSAGENS SISTEMA ***************************************/  
+/*********************************************** MENSAGENS SISTEMA ***************************************/
 /********************************************************************************************************/
 
-          
+
 #flash_notice, #flash_error {
-    
+
                                 font-size: 0.9em;
                                 text-align:center;
                                 letter-spacing:1px;
@@ -533,17 +537,17 @@ input.enviar                          {
                                 background-color:#95C4AE;
                             }
 
-#flash_error                { background-color:#F5C4C4; }  
+#flash_error                { background-color:#F5C4C4; }
 
 .error_messages {
 
     empty-cells:hide;
-}     
+}
 
-          
+
 /***********************************************************************************************************/
 /**********************************************************************************************************/
-          
+
 
 
          /**********************************************************************************/
@@ -551,23 +555,23 @@ input.enviar                          {
        /***********************************************************************************/
 
 
-.formulario               { 
+.formulario               {
                             font-size:1em;
                             width:100%;
                             margin: 6px 0;
                             padding:2px 2px 25px;
                             font-weight:bold; border: 1px solid #EDEDED;
                           }
-                          
-.formulario td            { empty-cells: hide ; }                          
+
+.formulario td            { empty-cells: hide ; }
 
 .formulario label         { margin:0; }
 
-.formulario select        { 
+.formulario select        {
                             font-size:0.9em;
                             color:#8C1C1C;
                             height:29px;
-                            width:200px; 
+                            width:200px;
                             margin-bottom:8px;
                           }
 
@@ -588,7 +592,7 @@ input.enviar                          {
                                     margin:5px 0;
                                     color: #ffffff;
                                     font-weight:bold;
-                                    background-color:#8C1C1C;    
+                                    background-color:#8C1C1C;
                                     border:0;
 
                                 }
@@ -605,7 +609,7 @@ input[type=password]            {
                                     background:#F5F5F5;
 
                                 }
-                                
+
 .formulario input[type=text]:focus,
 input[type=text]:hover,
 input[type=password]:focus,
@@ -619,26 +623,26 @@ textarea                        {
                                   border: 1px solid #CCCCCC;
                                   background:#F5F5F5;
                                   padding-left:2px;
-                                  margin:0; 
+                                  margin:0;
                                   color:#8C1C1C;
                                   font-family: "sans serif";
                                   font-size:0.9em;
                                 }
 
-.formulario textarea:focus, 
+.formulario textarea:focus,
 .formulario textarea:hover      { background:#FAF5DC; }
 
 
 .formulario li                  { font-size:0.9em; list-style: none ; margin-left:20px; }
 
-.formulario td                  { font-size:0.8em;                                      }    
+.formulario td                  { font-size:0.8em;                                      }
 
 .formulario form li             { margin-left:20px;                                     }
 
 .formulario td li               {
                                   margin: 5px 0px;
                                   margin-top:2px;
-                                  color:#7D7979; 
+                                  color:#7D7979;
                                   font-size: 0.8em;
                                   list-style: none;
                                 }
@@ -649,10 +653,10 @@ textarea                        {
 
 div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px;}
 
-#form_item                      { width:auto;} 
+#form_item                      { width:auto;}
 
 .form_item_exemplo              {
-    
+
                                   letter-spacing:2px;
                                   margin:0;
                                   padding:0px;
@@ -672,12 +676,12 @@ div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px
 /**********************************************  FILTRO FORM **********************************************/
 
 
-#busca                      {         
+#busca                      {
                                   text-align:left;
                                   clear:both;
                                   color: #000000;
                                   border: 1px solid #EDEDED;
-                                  padding: 8px 4px; 
+                                  padding: 8px 4px;
                                   padding-bottom: 5px;
                                   font-size: 0.8em;
                                   margin:3px 6px;
@@ -708,3 +712,284 @@ div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px
 
 
 /***********************************************************************************************************/
+
+/*************************** COMENTARIOS **************************************/
+
+
+
+#show_actions               { font-size:0.7em; float: right; width:30%; text-align:right;}
+
+#show_actions a             {
+                              font-size: 1em;
+                              color:black;
+                              float:none;
+                              font-weight:normal;
+                              text-decoration:underline;
+                              padding:0;
+                              padding-top:0px;
+
+                            }
+
+#comentarios                {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+
+                             }
+
+#artefatos                   {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+                             }
+#comentarios #barra_titulo,
+#artefatos #barra_titulo     {
+
+
+                                padding:9px 5px;
+                                width:99%;
+                                min-height:25px;
+                                clear:both;
+                                margin:6px 2px;
+                                background-image: none;
+                                background-color: #ffffff;
+                                border: 1px solid #cccccc;
+
+
+                                }
+
+#comentarios #barra_titulo h3   {
+                                  font-size: 1em;
+                                  padding-left:32px;
+                                  background-image: url("/theme/infodoc/images/comment_write.png") ;
+                                }
+
+#artefatos #barra_titulo h3     {
+                                  font-size: 1em;
+                                  padding-left:32px;
+                                  background-image: url("/theme/infodoc/images/artefato.png") ;
+                                }
+
+.titulo_comentario              { font-size:10px; background-image:none; }
+
+
+
+
+
+#comentarios .itens_index       {
+
+                                  font-size:0.8em;
+                                  margin:0 1%;
+                                  margin-bottom:20px;
+                                  padding: 10px 0px;
+                                  text-align:left;              /* Item listado */
+                                  padding-left: 30px;
+                                  width:auto;
+                                  border:0;
+                                  border-bottom: solid 1px #cccccc;
+                                  width:95%;
+                                  background-color: #F5F5F5;
+
+                                 }
+
+#comentarios #listar             {
+
+
+                                  float:left;
+                                  margin: 6px 0 6px 0px;
+                                  min-height:450px;
+                                  background-repeat:repeat-x;
+                                  height:auto;
+                                  min-height:15px;
+                                  border: 0;
+                                  width:100%;
+                                  padding:2px 2px ;
+
+                                  }
+
+#comentarios #link_botao,
+#artefatos #link_botao            {
+
+                                  font-size:0.7em;
+                                  padding: 3px 4px;
+                                  text-align:center;
+                                  height:auto;
+                                  min-width:80px;
+                                  width:auto;
+                                  margin:2px 5px 0 0 ;
+                                  float:right;
+                                  color: #000000;
+                                  font-weight:normal;
+                                  background-color:#8C1C1C;
+                                  border:1px solid #8C1C1C;
+
+                                  }
+
+#comentarios #link_botao a:hover,
+#artefatos #link_botao a:hover    { color:#FFFFFF; }
+
+#comentarios #link_botao a,
+#artefatos #link_botao a          {
+
+                                  font-weight:none;
+                                  margin:0;
+                                  padding:0;
+                                  background-color:#8C1C1C;
+                                  color:#CCCCCC;
+                                  width:100%;
+                                  height:100%;
+
+                                 }
+
+#comentarios h3.titulo_new       {
+
+                                  width:98%;
+                                  margin:0;
+                                  padding:0;
+                                  margin-top:10px;
+                                  margin-bottom: 10px;
+                                  background-image:none;
+                                  font-size:0.8em;
+
+                                 }
+
+#comentarios input[type=submit]  {
+                                    margin-top:5px;
+                                    color: #EDEDED;
+                                    font-weight:bold;
+                                    font-size:0.7em;
+                                    background-color:#8C1C1C;
+                                    border: 1px solid #8C1C1C;
+
+                                 }
+
+#comentarios input[type=submit]:hover { color:#FFFFFF; }
+
+#new_comentario               { padding:0 5px; width:100%; margin:10px 0; margin-left:10px;}
+
+#comentarios textarea         { background-color:#FFFFFF;       }
+
+#comentarios textarea:focus   { background-color:#FFFFFF;       }
+
+
+/*****************                  ARTEFATOS                      *******************/
+#new_artefato                 {
+
+                                padding:0;
+                                width:100%;
+                                float:left;
+                                margin:10px 0;
+
+
+                              }
+
+#artefatos .formulario        { margin:0;}
+
+#artefatos div.formulario     { width:50%; float:left; padding:0; border:0; margin:0;}
+
+#artefatos .formulario select {
+                                font-size:0.9em;
+                                color:#8C1C1C;
+                                height:2em;
+                                width:200px;
+                                margin-bottom:8px;
+                                padding:2px 0;
+                                float:left;
+                               }
+
+#artefatos .formulario input[type=submit]  {
+
+                                            background-color:#8C1C1C;
+                                            border:1px solid #8C1C1C;
+                                            padding:0px 2px 0;
+                                            font-size:0.7em;
+                                            font-weight:normal;
+                                            color:#cccccc;
+                                            text-align:center;
+                                            height:2em;
+                                            margin:1px 0 0;
+
+                                            }
+
+#artefatos .formulario input[type=submit]:hover { color:#FFFFFF }
+
+#artefatos h3.titulo_new
+                               {
+
+                                width:98%;
+                                margin:0;
+                                padding:0;
+                                margin-top:10px;
+                                margin-bottom: 10px;
+                                background-image:none;
+                                font-size:0.8em;
+
+                               }
+
+#artefatos input[type="file"] { margin-top: 10px; }
+
+#artefatos input[type=submit]  {
+                                 margin-bottom:5px;
+                                 color: #EDEDED;
+                                 font-weight:bold;
+                                 font-size:0.7em;
+                                 background-color:#8C1C1C;
+                                 border: 1px solid #8C1C1C;
+
+                                }
+
+#artefatos input[type=submit]:hover { color:#FFFFFF; }
+
+#artefatos #listar { border:1px solid #CCCCCC; padding-bottom:2px; margin:6px 0.1% ;}
+
+#artefatos #listar a  {
+                        padding-top:36px;
+                        background-image: url("/theme/infodoc/images/download.png");
+                        background-position:center;
+                        background-repeat: no-repeat;
+                        margin:0; margin-top:20px;
+
+                      }
+
+#artefatos #listar a:hover { text-decoration:none; padding-top: 32px; }
+
+#artefatos td           {
+
+                             border-bottom:1px solid #ededed;
+                             background-color: #F5F5F5;
+                             vertical-align:bottom;padding:8px;
+                             padding-bottom:1px;
+                        }
+
+#artefatos .itens_index { background-color: #F5F5F5; min-width:10px; }
+
+#artefatos .formulario input[type="text"] { margin-top: 5px; }
+
+#artefatos form         { float:left; width:100%; }
+
+#artefatos input[type="text"],
+input[type="password"]  { margin-top:0; }
+
+#artefatos .lista_item  { background-image:none; border:0; text-align:center;  }
+
+.artefato               { border: 1px solid #EDEDED; width:100%;}
+
+#artefatos .artefato td.lista_item {
+                                     background-color:#F5F5F5;
+                                     border-bottom:1px solid #ededed;
+                                     padding-bottom:8px;
+                                   }
+
+#artefatos td.lista_conteudo {
+                                         background-color:#FFFFFF;
+                                         border:1px 0 solid #EDEDED;
+                                         padding-bottom:8px;
+                                       }
+
+#artefatos .artefato td                { background-color:#FFFFFF; border: 0;}
+
+#artefatos textarea:focus,
+#artefatos textarea:hover              { background:#FAF5DC; }
+
+#artefatos tr:hover                    { background:#FAF5DC; }
+

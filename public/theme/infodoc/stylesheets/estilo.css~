@@ -404,8 +404,7 @@ input.enviar {
     padding-bottom: 5px;
     width:100%;
     height:auto;
-    border-top: 2px solid #CF9191;
-    border-bottom: 2px solid #CF9191;
+    
     background-color:#F5C4C4;
 }
 

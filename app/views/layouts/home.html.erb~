@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
   <head>
 	  <title>Infomanager - Gertão Digital de Informação</title>
-	    <%= stylesheet_link_tag "estilo2.css" %>
+	    <%= stylesheet_link_tag "estilo.css" %>
 	    <%= javascript_include_tag 'jquery-125.js' %>
 	    <%= javascript_include_tag 'funcoes.js' %>
   </head>

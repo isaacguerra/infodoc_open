@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="/theme/infodoc/stylesheets/intranet.css">
+  </head>
+  
+  <div id="frame">
+      <h3 id="barra_titulo">Gerência de ECM</h3>
+      <p>
+        A utilização do módulo de Gerência de ECM abrange os seguintes tópicos:
+      </p>
+      <ul>
+        <li><a href="/ajuda/sistemas_adm.html#catforms">Criando uma Categoria de Formulário</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#forms">Formulários</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#itensforms">Itens de Formulários</a></li>
+        <li><a href="/ajuda/sistemas_adm.html#pforms">Permissões de Formulários<a/></li>
+        <li><a href="/ajuda/sistemas_adm.html#itemprincipal">Item Principal de Formulário</a></li>
+      </ul>
+      <h4><a href="#" name="catforms">Categoria de Formulário</a></h4>
+      <p>
+          Permitirá ao usuário criar uma categoria de formulário.
+      </p>
+      <h4><a href="#" name="forms">Formulários</a></h4>
+      <p>
+        Permite gerenciar formulários.
+      </p>
+      <h4><a href="#" name="itensforms">Itens Formulários</a></h4>
+      <p>
+        Permite que sejam criados intens a um formulário.
+      </p>
+      <h4><a href="#" name="pforms">Permissões de  Formulários</a></h4>
+      <p>
+        Gerência as permissões que grupos de usuários terão em cada formulário.
+      </p>
+      <h4><a href="#" name="itemprincipal">Item Principal de  Formulário</a></h4>      
+      <p>
+        Define qual o item principal em um formulário.
+      </p>
+  </div>    
