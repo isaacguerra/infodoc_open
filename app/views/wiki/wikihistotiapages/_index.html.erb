@@ -1,0 +1,24 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Histórico da Pagina</h3>
+  <div id="link_botao">
+    <%= link_to_remote "Esconder Historico", :url=>(url_for(clean_wiki_wikihistotiapages_path)), :method=>"get" %>
+  </div>
+</div>
+<div id="listar">
+    <% @wikipage.wikihistoriapages.each do |historia| %>
+      <div class="itens_index">
+        <% unless historia.conteudo_antigo %>
+          <b>Criado por: <%= historia.usuario.nome %> em </b>&nbsp;
+          <%= historia.created_at.to_s_br %><br>
+        <% else %>
+          <b>Midificado por: <%= historia.usuario.nome %> em </b>&nbsp;
+          <%= historia.created_at.to_s_br %> - <%= link_to_remote "Visualizar versão não modificada", :url=>(url_for(wiki_wikipage_wikihistotiapage_path(@wikipage, historia))), :method=>"get" %>
+
+          <br>
+        <% end %>
+      </div>
+	  <% end %>
+</div>
+<div id="view_old">
+</div>
+

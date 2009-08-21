@@ -1,0 +1,21 @@
+<div id="barra_titulo">
+  <h3 class="titulo_new">Cadastro de Pagina no Infowiki - <%= @wikicategoria.nome %></h3>
+  <div id="link_botao">
+    <%= link_to "Voltar", wiki_wikicategoria_path(@wikicategoria) %>
+  </div>
+</div>
+<div class="formulario">
+  <% form_for @wikipage, :url=>{:action=>'create'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.entidade_id %>
+    <%= f.hidden_field :wikicategoria_id, :value=>@wikicategoria.id %>
+    <%= f.label :titulo %><%= f.text_field :titulo %>
+    <%= fckeditor_textarea(:wikipage, :conteudo, :toolbarSet=>'Simple', :width=>'100%', :height=>'300px') %><br>
+    Proteger contra alterações de terceiros: <%= f.check_box :protegido %>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+<div id="link_voltar">
+  <%= link_to "Voltar", wiki_wikicategoria_path(@wikicategoria) %>
+</div>
+

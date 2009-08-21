@@ -1,0 +1,21 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista Ajudas do Formulário</h3>
+  <div id="link_botao"><%= link_to 'Nova Ajuda', new_ecm_formulario_ajudas_formulario_path(@formulario) %></div>
+</div>
+<table id="listar">
+  </tr>
+    <th class="titulo_lista">Ajudas</th>
+  </tr>
+    <% @formulario.ajudas.each do |ajuda| %>
+    <tr>
+      <td><%= ajuda.conteudo %></td>
+    </tr>
+    <tr>
+      <td><%= link_to "Alterar Ajuda", edit_ecm_formulario_ajudas_formulario_path(@formulario, ajuda) %></td>
+    </tr>
+	  <% end %>
+</table>
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categoria_formularios_path(@formulario.formulariocategoria_id) %>
+</div>
+

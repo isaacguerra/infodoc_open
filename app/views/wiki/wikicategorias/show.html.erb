@@ -1,0 +1,54 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index"><%= @wikicategoria.nome %></h3>
+  <div id="link_botao">
+    <% if @wikicategoria.parent_id %>
+      <%= link_to "Voltar", wiki_wikicategoria_path(@wikicategoria.parent_id) %>
+    <% else %>
+      <%= link_to "Voltar", wiki_wikicategorias_path %>
+    <% end %>
+  </div>
+</div>
+<table id="listar">
+  </tr>
+    <th class="titulo_lista">
+      <div id="link_botao"><%= link_to "Nova Pagina", new_wiki_wikicategoria_wikipage_path(@wikicategoria) %></div>
+      Paginas do Infowiki
+    </th>
+    <th class="titulo_lista">
+        <div id="link_botao"><%= link_to_remote "Nova Sub-Categorias", :url=>{:controller=>"/wiki/wikicategorias", :action=>"new", :wikicategoria_id=>@wikicategoria}, :method=>"get" %></div>
+        Sub-Categorias
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <h3>Busca no Conteúdo Wiki</h3>
+      <% form_remote_tag :url=>{:controller=>"/wiki/wikicategorias/busca"} do -%>
+        <% if @wikicategoria %>
+        <%= hidden_field_tag :wikicategoria_id, @wikicategoria.id %>
+        <% end %>
+        <%= text_field_tag :filtro %>
+        <%= submit_tag 'Buscar' %>
+      <% end -%>
+      <div id="busca_wiki">
+        <table>
+          <tr>
+            <th>Paginas Encontradas</th>
+          </tr>
+          <% @wikipages.each do |page| %>
+          <tr>
+            <td>
+              <%= link_to page.titulo, wiki_wikicategoria_wikipage_path(page.wikicategoria_id, page) %>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </td>
+    <td class="itens_index">
+      <div id="categorias">
+        <%= render(:partial => "categorias") %>
+      </div>
+    </td>
+  </tr>
+</table>
+

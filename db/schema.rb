@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090729183118) do
+ActiveRecord::Schema.define(:version => 20090817121640) do
 
   create_table "ajudas", :force => true do |t|
     t.integer "entidade_id"
@@ -377,5 +377,29 @@ ActiveRecord::Schema.define(:version => 20090729183118) do
   add_index "usuarios", ["nome"], :name => "index_usuarios_on_nome"
   add_index "usuarios", ["senha_encriptada"], :name => "index_usuarios_on_senha_encriptada"
   add_index "usuarios", ["status"], :name => "index_usuarios_on_status"
+
+  create_table "wikicategorias", :force => true do |t|
+    t.integer "entidade_id"
+    t.string  "nome"
+    t.integer "parent_id"
+  end
+
+  create_table "wikihistoriapages", :force => true do |t|
+    t.integer  "wikipage_id"
+    t.integer  "usuario_id"
+    t.text     "conteudo_antigo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "wikipages", :force => true do |t|
+    t.integer  "entidade_id"
+    t.integer  "wikicategoria_id"
+    t.string   "titulo"
+    t.text     "conteudo"
+    t.boolean  "protegido",        :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

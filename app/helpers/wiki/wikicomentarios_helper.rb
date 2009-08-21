@@ -1,0 +1,2 @@
+module Wiki::WikicomentariosHelper
+end

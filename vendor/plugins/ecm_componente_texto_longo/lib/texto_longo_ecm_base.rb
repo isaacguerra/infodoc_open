@@ -1,4 +1,4 @@
-class TextoEcmBase
+class TextoLongoEcmBase
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 # ITEM DO FORMULARIO
   def salvar_item(item_form, params)
@@ -9,7 +9,7 @@ class TextoEcmBase
   def apos_criar_item(form_item)
     if form_item.formulario.cadastros.size > 0
       form_item.formulario.cadastros.each do |cadastro|
-        texto = EcmItemTexto.new
+        texto = EcmItemTextoLongo.new
         texto.entidade_id = cadastro.entidade_id
         texto.formulariocategoria_id = cadastro.formulario.formulariocategoria_id
         texto.formulario_id = cadastro.formulario_id
@@ -37,43 +37,21 @@ class TextoEcmBase
       if form_item.opcoes[:nulo] == "0" and cadastro_itens["item_#{form_item.id}"] == ""
         cadastro.errors.add("item_#{form_item.id}", "Campo #{form_item.rotulo} Requerido!")
       end
-      if form_item.opcoes[:unico] == "1"
-        cadastro_itens["item_#{form_item.id}"].upcase! if form_item.opcoes[:semacento] == "1"
-        cadastro_itens["item_#{form_item.id}"].remover_acentos! if form_item.opcoes[:maiusculo] == "1"
-
-        cad = EcmItemTexto.find(:first, :conditions=>["itensformulario_id = ? and conteudo = ? and cadastro_id = ?", form_item.id, cadastro_itens["item_#{form_item.id}"], cadastro.id])
-        unless cad
-          num = EcmItemTexto.count(:all, :conditions=>["itensformulario_id = ? and conteudo = ?", form_item.id, cadastro_itens["item_#{form_item.id}"]])
-          cadastro.errors.add("item_#{form_item.id}", "O #{form_item.rotulo} ja foi cadastrado anteriormente!") if num > 0
-        else
-          unless cad.conteudo == cadastro_itens["item_#{form_item.id}"]
-            num = EcmItemTexto.count(:all, :conditions=>["itensformulario_id = ? and conteudo = ?", form_item.id, cadastro_itens["item_#{form_item.id}"]])
-            cadastro.errors.add("item_#{form_item.id}", "O #{form_item.rotulo} ja foi cadastrado anteriormente!") if num > 0
-          end
-        end
-      end
-
-      if form_item.opcoes[:regex] != ""
-        reg = Regexp.new(form_item.opcoes[:regex])
-        cadastro.errors.add("item_#{form_item.id}", "O conteúdo de #{form_item.rotulo} não é válido") unless reg.match(cadastro_itens["item_#{form_item.id}"])
-      end
    end
 
    def save(cadastro, form_item, cadastro_itens)
-      texto = EcmItemTexto.new
-      texto.entidade_id = cadastro.entidade_id
-      texto.formulariocategoria_id = cadastro.formulario.formulariocategoria_id
-      texto.formulario_id = cadastro.formulario_id
-      texto.itensformulario_id = form_item.id
-      texto.cadastro_id = cadastro.id
-      texto.conteudo = cadastro_itens["item_#{form_item.id}"]
-      texto.conteudo.remover_acentos! if form_item.opcoes[:semacento] == "1"
-      texto.conteudo.upcase! if form_item.opcoes[:maiusculo] == "1"
-      texto.save
+      texto_longo = EcmItemTextoLongo.new
+      texto_longo.entidade_id = cadastro.entidade_id
+      texto_longo.formulariocategoria_id = cadastro.formulario.formulariocategoria_id
+      texto_longo.formulario_id = cadastro.formulario_id
+      texto_longo.itensformulario_id = form_item.id
+      texto_longo.cadastro_id = cadastro.id
+      texto_longo.conteudo = cadastro_itens["item_#{form_item.id}"]
+      texto_longo.save
    end
 
    def update(cadastro, form_item, cadastro_itens)
-     texto = EcmItemTexto.find(:first, :conditions=>["entidade_id = ? and
+     texto_longo = EcmItemTextoLongo.find(:first, :conditions=>["entidade_id = ? and
                                                    formulariocategoria_id = ? and
                                                    formulario_id = ? and
                                                    itensformulario_id = ? and
@@ -83,18 +61,18 @@ class TextoEcmBase
                                                    cadastro.formulario_id,
                                                    form_item.id,
                                                    cadastro.id])
-      texto.conteudo = cadastro_itens["item_#{form_item.id}"]
-      texto.save
+      texto_longo.conteudo = cadastro_itens["item_#{form_item.id}"]
+      texto_longo.save
    end
 
    def busca_avancada(form_item, params, valor=nil)
      unless valor
-      cads = EcmItemTexto.find(:all, :conditions=>["itensformulario_id = ? and
+      cads = EcmItemTextoLongo.find(:all, :conditions=>["itensformulario_id = ? and
                                                     conteudo like ?",
                                                     form_item.id,
                                                     "%#{params[:cadastro]["item_#{form_item.id}"]}%"]).collect {|c| c.cadastro_id}
      else
-       cads = EcmItemTexto.find(:all, :conditions=>["itensformulario_id = ? and
+       cads = EcmItemTextoLongo.find(:all, :conditions=>["itensformulario_id = ? and
                                                     conteudo like ?",
                                                     form_item.id,
                                                     "%#{valor}%"]).collect {|c| c.cadastro_id}

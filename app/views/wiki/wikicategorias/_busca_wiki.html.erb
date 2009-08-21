@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Paginas Encontradas</th>
+  </tr>
+  <% @wikipages.each do |page| %>
+  <tr>
+    <td>
+      <%= link_to page.titulo, wiki_wikicategoria_wikipage_path(page.wikicategoria_id, page) %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+

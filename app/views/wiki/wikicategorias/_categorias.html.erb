@@ -1,0 +1,6 @@
+<ul>
+<% @wikicategorias.each do |categoria| %>
+  <li><%= link_to categoria.nome, wiki_wikicategoria_path(categoria) %><br></li>
+<% end %>
+</ul>
+

@@ -1,0 +1,28 @@
+<div id="barra_titulo">
+  <h3 class="titulo_new"><%= @wikipage.titulo %></h3>
+  <div id="link_botao">
+    <%= link_to "Voltar", wiki_wikicategoria_path(@wikicategoria) %>
+  </div>
+  <div id="link_botao">
+    <%= link_to "Editar", edit_wiki_wikicategoria_wikipage_path(@wikicategoria, @wikipage) %>
+  </div>
+</div>
+<div>
+  <%= @wikipage.conteudo %>
+</div>
+<div id="barra_titulo">
+  <div id="link_botao">
+    <%= link_to "Voltar", wiki_wikicategoria_path(@wikicategoria) %>
+  </div>
+  <div id="link_botao">
+    <%= link_to_remote "Comentarios", :url=>(url_for(wiki_wikipage_wikicomentarios_path(@wikipage))), :method=>"get" %>
+  </div>
+  <div id="link_botao">
+    <%= link_to_remote "Histórico", :url=>(url_for(wiki_wikipage_wikihistotiapages_path(@wikipage))), :method=>"get" %>
+  </div>
+</div>
+<div id="comentarios">
+</div>
+<div id="historico">
+</div>
+

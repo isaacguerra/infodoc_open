@@ -30,6 +30,14 @@ ActionController::Routing::Routes.draw do |map|
     page.resources :entidades
   end
 
+  map.namespace :wiki do |wiki|
+    wiki.resources :wikicategorias, :collection=>{:busca=>:get }, :has_many=>:wikipages
+    wiki.resources :wikipages, :has_many=>:wikihistotiapages
+    wiki.resources :wikipages, :has_many=>:wikicomentarios
+    wiki.resources :wikicomentarios, :collection=>{:clean=>:get }
+    wiki.resources :wikihistotiapages, :collection=>{:clean=>:get }
+  end
+
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action

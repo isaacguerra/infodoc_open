@@ -1,0 +1,10 @@
+
+  <h3 class="titulo_new">Novo Comentário</h3>
+
+<div class="comentario">
+  <% form_remote_tag :url=>(url_for(wiki_wikipage_wikicomentarios_path(@wikipage))), :action=>"create" do -%>
+    <%= text_area_tag 'comentario', nil, :size => "50x3" %><br>
+    <%= submit_tag 'Salvar', :class=>"botao_formulario" %>
+  <% end -%>
+</div>
+

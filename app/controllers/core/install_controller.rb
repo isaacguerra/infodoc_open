@@ -15,15 +15,19 @@ class Core::InstallController < ApplicationController
     @log << "#ID da modulos ECM - #{mecm.id}\n"
     mgc = Modulo.create(:nome=>"Gerencia de Conteúdo", :descricao=>"Gerencia de Conteúdo")
     @log << "#ID da modulos Gerencia de Conteúdo - #{mgc.id}\n"
+    mwiki = Modulo.create(:nome=>"Wiki", :descricao=>"Wiki de Conteúdo")
+    @log << "#ID da modulos Wiki - #{mwiki.id}\n"
 
     vmadmg = Moduloentidade.create(:entidade_id=>entidade.id, :modulo_id=>madmg.id)
     vmadm = Moduloentidade.create(:entidade_id=>entidade.id, :modulo_id=>madm.id)
     vecm = Moduloentidade.create(:entidade_id=>entidade.id, :modulo_id=>mecm.id)
     vgc = Moduloentidade.create(:entidade_id=>entidade.id, :modulo_id=>mgc.id)
+    vwiki = Moduloentidade.create(:entidade_id=>entidade.id, :modulo_id=>mwiki.id)
     @log << "#ID da vinculação do modulo a entidade - #{vmadmg.id}\n"
     @log << "#ID da vinculação do modulo a entidade - #{vmadm.id}\n"
     @log << "#ID da vinculação do modulo a entidade - #{vecm.id}\n"
     @log << "#ID da vinculação do modulo a entidade - #{vgc.id}\n"
+    @log << "#ID da vinculação do modulo a entidade - #{vwiki.id}\n"
 
     gerenciaentidades = Sistema.create(:nome=>"Gerencia de Entidades", :descricao=>"Gerencia de Entidades", :rota=>"/core/entidades", :controle=>"Core::EntidadesController", :menu=>true, :status=>true, :modulo_id=>madmg.id)
     @log << "#ID do sistema  de Gerencia da Entidades - #{gerenciaentidades.id}\n"
@@ -54,6 +58,10 @@ class Core::InstallController < ApplicationController
     cadastro = Sistema.create(:nome=>"Cadastros", :descricao=>"Cadastro", :rota=>"/ecm/cadastros", :controle=>"Ecm::CadastrosController", :menu=>false, :status=>true, :modulo_id=>mgc.id)
     @log << "#ID do sistema  de Gerencia de Cadastro - #{cadastro.id}\n"
 
+    scwiki = Sistema.create(:nome=>"InfoWiki", :descricao=>"infocategoriawiki", :rota=>"/wiki/wikicategorias", :controle=>"Wiki::WikicategoriasController", :menu=>true, :status=>true, :modulo_id=>mwiki.id)
+    swiki = Sistema.create(:nome=>"InfoWiki", :descricao=>"infowiki", :rota=>"/wiki/wikipages", :controle=>"Wiki::WikipagesController", :menu=>false, :status=>true, :modulo_id=>mwiki.id)
+    shwiki = Sistema.create(:nome=>"InfoHistoriaWiki", :descricao=>"infohistoriawiki", :rota=>"/wiki/wiki", :controle=>"Wiki::WikihistoriapagesController", :menu=>false, :status=>true, :modulo_id=>mwiki.id)
+
     #ecm tipos de itens
     Formulariotipo.create(:tipo=>"Pasta", :status=>true)
     Formulariotipo.create(:tipo=>"Arquivo", :status=>true)
@@ -65,14 +73,17 @@ class Core::InstallController < ApplicationController
     Itenstipo.create(:nome=>"Texto", :tipo=>"texto", :status=>true, :componente=>"texto")
     Itenstipo.create(:nome=>"Text Longo", :tipo=>"texto_longo", :status=>true, :componente=>"texto_longo")
     Itenstipo.create(:nome=>"Numero", :tipo=>"numero_inteiro", :status=>true, :componente=>"numero_inteiro")
-    Itenstipo.create(:nome=>"Numero Real", :tipo=>"numero_decimal", :status=>true, :componente=>"numero_decimal")
-    Itenstipo.create(:nome=>"Auto Numeração", :tipo=>"numero_inteiro", :status=>true, :componente=>"auto_numeracao")
+    Itenstipo.create(:nome=>"Valor Monetario", :tipo=>"valor_monetario", :status=>true, :componente=>"valor_monetario")
     Itenstipo.create(:nome=>"Data", :tipo=>"data", :status=>true, :componente=>"data")
     Itenstipo.create(:nome=>"Data e Hora", :tipo=>"data_hora", :status=>true, :componente=>"data_hora")
     Itenstipo.create(:nome=>"Lista", :tipo=>"texto", :status=>true, :componente=>"lista")
     Itenstipo.create(:nome=>"Imagem", :tipo=>"imagem", :status=>true, :componente=>"imagem")
     Itenstipo.create(:nome=>"Referencia", :tipo=>"referencia", :status=>true, :componente=>"referencia")
     Itenstipo.create(:nome=>"Soma em Referencia", :tipo=>"referencia", :status=>true, :componente=>"soma_referencia")
+    Itenstipo.create(:nome=>"Identificador Unico", :tipo=>"texto", :status=>true, :componente=>"identificador_unico")
+    Itenstipo.create(:nome=>"CPF/CNPJ", :tipo=>"texto", :status=>true, :componente=>"cpfcnpj")
+    Itenstipo.create(:nome=>"Auto Numeração", :tipo=>"numero_inteiro", :status=>true, :componente=>"auto_numeracao")
+
 
     ecmcategoria = Sistema.create(:nome=>"Categoria de Formularios", :descricao=>"Categoria de Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::CategoriasController", :menu=>true, :status=>true, :modulo_id=>mecm.id)
     @log << "#ID do Categoria de Formularios - #{ecmcategoria.id}\n"

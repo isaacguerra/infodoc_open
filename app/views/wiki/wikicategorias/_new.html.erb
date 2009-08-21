@@ -1,0 +1,10 @@
+<div class="formulario">
+   <% form_remote_tag :url=>(url_for(wiki_wikicategorias_path)) do -%>
+    <% if @wikicategoria %>
+      <%= hidden_field_tag :wikicategoria_id, @wikicategoria.id %>
+    <% end %>
+     <%= text_field_tag :nome %><%= submit_tag 'Salvar' %>
+   <% end -%>
+</div>
+<%= render(:partial => "categorias") %>
+

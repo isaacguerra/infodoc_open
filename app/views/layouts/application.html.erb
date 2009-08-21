@@ -18,7 +18,9 @@
         </div>
 
         <div id="status">
-          <b>Login: </b><i>Infomanager</i>
+          <b>Login: </b><i><%= @sessao_usuario.usuario.nome %></i><br>
+          <b>Entidade: </b><i><%= @sessao_usuario.usuario.entidade.nome %></i><br><br>
+          <i><%= link_to "Ajudas", "/ajuda", :popup=>true %></i>
         </div>
     </div>
     <div id="tudo">
