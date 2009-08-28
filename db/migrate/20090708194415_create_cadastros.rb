@@ -8,6 +8,8 @@ class CreateCadastros < ActiveRecord::Migration
       t.integer :formulariocategoria_id
       t.integer :parent_id
       t.boolean :status
+      t.boolean :publicado, :default=>false
+      t.text :filtro
       t.timestamps
     end
   end

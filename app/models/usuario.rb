@@ -25,7 +25,7 @@ class Usuario < ActiveRecord::Base
 
     private
     def encriptar_senha
-        self.chave_criptografia = random_alphanumeric(1024)
+        self.chave_criptografia = random_alphanumeric(128)
         self.senha_encriptada = encriptar(self.chave_criptografia, self.senha)
     end
 

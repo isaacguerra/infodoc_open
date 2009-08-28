@@ -1,10 +1,11 @@
 <table id="listar">
   </tr>
-    <th class="titulo_lista"><%= @principal.rotulo %> | Foram encontrados <%= @cadastro_itens.size.to_s %> Cadastros</th>
+    <th class="titulo_lista">Foram encontrados <%= @cadastro_itens.size.to_s %> Cadastros em <%= @principal.formulario.titulo %></th>
   </tr>
     <% @cadastro_itens.each do |cadastro_item| %>
     <tr>
       <td class="itens_index">
+        <%= @principal.rotulo %> -
         <%= link_to ecm_show_cadastro_item(@principal, cadastro_item), ecm_formulario_cadastro_path(@formulario, cadastro_item.cadastro_id) %>
         <% if @tipo == "avancado" %>
           <ul>

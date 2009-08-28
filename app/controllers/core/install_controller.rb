@@ -82,7 +82,7 @@ class Core::InstallController < ApplicationController
     Itenstipo.create(:nome=>"Soma em Referencia", :tipo=>"referencia", :status=>true, :componente=>"soma_referencia")
     Itenstipo.create(:nome=>"Identificador Unico", :tipo=>"texto", :status=>true, :componente=>"identificador_unico")
     Itenstipo.create(:nome=>"CPF/CNPJ", :tipo=>"texto", :status=>true, :componente=>"cpfcnpj")
-    Itenstipo.create(:nome=>"Auto Numeração", :tipo=>"numero_inteiro", :status=>true, :componente=>"auto_numeracao")
+    Itenstipo.create(:nome=>"Auto Numeração", :tipo=>"texto", :status=>true, :componente=>"auto_numeracao")
 
 
     ecmcategoria = Sistema.create(:nome=>"Categoria de Formularios", :descricao=>"Categoria de Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::CategoriasController", :menu=>true, :status=>true, :modulo_id=>mecm.id)

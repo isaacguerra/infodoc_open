@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
     t.integer  "formulariocategoria_id"
     t.integer  "parent_id"
     t.boolean  "status"
+    t.boolean  "publicado",              :default => false
+    t.text     "filtro"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -167,8 +169,7 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
   end
 
   add_index "ecm_item_texto_longos", ["cadastro_id"], :name => "index_ecm_item_texto_longos_on_cadastro_id"
-  add_index "ecm_item_texto_longos", ["conteudo"], :name => "index_ecm_item_texto_longos_on_conteudo"
-  add_index "ecm_item_texto_longos", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id", "conteudo"], :name => "index_ecm_texto_longos"
+  add_index "ecm_item_texto_longos", ["entidade_id", "formulariocategoria_id", "formulario_id", "itensformulario_id", "cadastro_id"], :name => "index_ecm_texto_longos"
   add_index "ecm_item_texto_longos", ["entidade_id"], :name => "index_ecm_item_texto_longos_on_entidade_id"
   add_index "ecm_item_texto_longos", ["formulario_id"], :name => "index_ecm_item_texto_longos_on_formulario_id"
   add_index "ecm_item_texto_longos", ["formulariocategoria_id"], :name => "index_ecm_item_texto_longos_on_formulariocategoria_id"

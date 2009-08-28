@@ -87,14 +87,14 @@ class NumeroInteiroEcmBase
       def busca_avancada(form_item, params, valor=nil)
      unless valor
       cads = EcmItemNumeroInteiro.find(:all, :conditions=>["itensformulario_id = ? and
-                                                    conteudo = ?",
+                                                    conteudo >= ? and conteudo <= ?",
                                                     form_item.id,
-                                                    params[:cadastro]["item_#{form_item.id}"]]).collect {|c| c.cadastro_id}
+                                                    params[:cadastro]["item_#{form_item.id}_1"], params[:cadastro]["item_#{form_item.id}_2"]]).collect {|c| c.cadastro_id}
      else
        cads = EcmItemTexto.find(:all, :conditions=>["itensformulario_id = ? and
-                                                    conteudo = ?",
+                                                    conteudo >= ? and conteudo <= ?",
                                                     form_item.id,
-                                                    valor]).collect {|c| c.cadastro_id}
+                                                    valor[0], valor[1]]).collect {|c| c.cadastro_id}
      end
    end
 

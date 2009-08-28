@@ -58,6 +58,13 @@ module TextoEcmHelper
       view.concat("</tr>")
       view.concat("<tr>")
         view.concat("<td>")
+          view.concat("Mascara<br/>")
+          view.concat(text_field "opcoes", :mascara)
+          view.concat("<li>Informe a mascara de Formatação do Campo Ex: (99)9999-9999</li>")
+        view.concat("</td>")
+      view.concat("</tr>")
+      view.concat("<tr>")
+        view.concat("<td>")
           view.concat("Validacao Regex<br/>")
           view.concat(text_field "opcoes", :regex)
           view.concat("<li>Valida o conteudo por meio de regex!</li>")
@@ -128,6 +135,13 @@ module TextoEcmHelper
           view.concat("Impedir Duplicação no Registro<br/>")
           view.concat(select "opcoes", :unico, [["Ativo", 1], ["Inativo", 0]], :selected=>form_item.opcoes[:unico].to_i)
           view.concat("<li>O campo não aceitará dois registros com o mesmo valor!</li>")
+        view.concat("</td>")
+      view.concat("</tr>")
+      view.concat("<tr>")
+        view.concat("<td>")
+          view.concat("Mascara<br/>")
+          view.concat(text_field "opcoes", :mascara, :value=>form_item.opcoes[:mascara])
+          view.concat("<li>Informe a mascara de Formatação do Campo Ex: (99)9999-9999</li>")
         view.concat("</td>")
       view.concat("</tr>")
       view.concat("<tr>")
@@ -207,6 +221,14 @@ module TextoEcmHelper
     view.concat("</tr>")
     view.concat("<tr>")
       view.concat("<td class='lista_item'>")
+        view.concat("Mascara:<br/>")
+      view.concat("</td>")
+      view.concat("<td class='lista_conteudo'>")
+        view.concat(form_item.opcoes[:mascara])
+      view.concat("</td>")
+    view.concat("</tr>")
+    view.concat("<tr>")
+      view.concat("<td class='lista_item'>")
         view.concat("Validação Regex:<br/>")
       view.concat("</td>")
       view.concat("<td class='lista_conteudo'>")
@@ -221,22 +243,22 @@ module TextoEcmHelper
   def texto_ecm_new_cadastro_item(form_item, params)
     view = ""
     unless params
-     view.concat(text_field :cadastro, "item_#{form_item.id}", options={:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
+     view.concat(masked_text_field :cadastro, "item_#{form_item.id}", options={:mask=>form_item.opcoes[:mascara],:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
      view.concat("<br><span class='form_item_exemplo'>#{form_item.opcoes[:exemplo]}</span>") if form_item.opcoes[:exemplo] != ""
     else
-     view.concat(text_field :cadastro, "item_#{form_item.id}", options={:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length], :value=>params["item_#{form_item.id}"]})
+     view.concat(masked_text_field :cadastro, "item_#{form_item.id}", options={:mask=>form_item.opcoes[:mascara],:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length], :value=>params["item_#{form_item.id}"]})
      view.concat("<br><span class='form_item_exemplo'>#{form_item.opcoes[:exemplo]}</span>") if form_item.opcoes[:exemplo] != ""
     end
-     return view
+    return view
   end
 
   def texto_ecm_edit_cadastro_item(form_item, cadastro_item, params)
     view = ""
     unless params
-     view.concat(text_field :cadastro, "item_#{form_item.id}" ,options={:value=>cadastro_item.conteudo, :size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
+     view.concat(masked_text_field :cadastro, "item_#{form_item.id}", options={:mask=>form_item.opcoes[:mascara],:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length],:value=>cadastro_item.conteudo})
      view.concat("<br><span class='form_item_exemplo'>#{form_item.opcoes[:exemplo]}</span>") if form_item.opcoes[:exemplo] != ""
     else
-     view.concat(text_field :cadastro, "item_#{form_item.id}" ,options={:value=>params["item_#{form_item.id}"], :size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
+     view.concat(masked_text_field :cadastro, "item_#{form_item.id}", options={:mask=>form_item.opcoes[:mascara],:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length], :value=>params["item_#{form_item.id}"]})
      view.concat("<br><span class='form_item_exemplo'>#{form_item.opcoes[:exemplo]}</span>") if form_item.opcoes[:exemplo] != ""
     end
     return view
@@ -245,7 +267,7 @@ module TextoEcmHelper
   def texto_ecm_find_cadastro_item(form_item)
     view = ""
     view.concat(text_field :cadastro, "item_#{form_item.id}", options={:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
-    view.concat("<br><span class='form_item_exemplo'>#{form_item.opcoes[:exemplo]}</span>") if form_item.opcoes[:exemplo] != ""
+     view.concat("<br><span class='form_item_exemplo'>#{form_item.opcoes[:exemplo]}</span>") if form_item.opcoes[:exemplo] != ""
     return view
   end
 

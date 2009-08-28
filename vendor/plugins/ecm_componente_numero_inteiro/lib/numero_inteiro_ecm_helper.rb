@@ -160,8 +160,10 @@ module NumeroInteiroEcmHelper
 # Helper que possibilita a execução de FIND do item no cadastro.
 
   def numero_inteiro_ecm_find_cadastro_item(form_item)
-    view = ""
-    view.concat(text_field :cadastro, "item_#{form_item.id}", options={:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
+    view = "Entre "
+    view.concat(text_field :cadastro, "item_#{form_item.id}_1", options={:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
+    view.concat(" e ")
+    view.concat(text_field :cadastro, "item_#{form_item.id}_2", options={:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
     return view
   end
 #-------------------------------------------------------------------------------
