@@ -14,7 +14,7 @@ class Formulario < ActiveRecord::Base
   validates_presence_of :descricao
 
   #scopos----------
-  named_scope :ativo, :conditions=>["status = ? and principal_id not null", true]
+  named_scope :ativo, :conditions=>["status = ? and principal_id is not null", true]
   named_scope :da_entidade, lambda {|id| {:conditions=>["entidade_id = ?", id]}}
   named_scope :da_categoria, lambda {|id| {:conditions=>["formulariocategoria_id = ?", id]}}
   named_scope :do_tipo, lambda {|id| {:conditions=>["formulariotipo_id = ?", id]}}

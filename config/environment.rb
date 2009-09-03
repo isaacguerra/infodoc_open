@@ -27,6 +27,8 @@ Rails::Initializer.run do |config|
    config.gem "thoughtbot-shoulda", :lib => "shoulda/rails", :source => "http://gems.github.com"
    config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
    config.gem 'brazilian-rails'
+   #require 'brazilian-rails'
+   require 'brI18n'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -45,6 +47,6 @@ Rails::Initializer.run do |config|
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-  # config.i18n.default_locale = :de
+   config.i18n.default_locale = "pt-BR"
 end
 

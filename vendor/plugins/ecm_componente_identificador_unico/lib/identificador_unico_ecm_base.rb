@@ -1,4 +1,4 @@
-class AutoNumeracaoEcmBase
+class IdentificadorUnicoEcmBase
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 # ITEM DO FORMULARIO
   def salvar_item(item_form, params)
@@ -16,11 +16,16 @@ class AutoNumeracaoEcmBase
         texto.itensformulario_id = form_item.id
         texto.cadastro_id = cadastro.id
 
-        form_item.opcoes[:valor] = (form_item.opcoes[:valor].to_i + 1).to_s
-        form_item.save
-        num = "#{form_item.opcoes[:prefixo]}#{form_item.opcoes[:valor]}#{form_item.opcoes[:posfixo]}"
+        if form_item.opcoes[:tipo] == "1"
+          chars = (0..9).to_a
+        elsif form_item.opcoes[:tipo] == "2"
+          chars = ('A'..'Z').to_a + (0..9).to_a
+        else
+          chars = ('A'..'Z').to_a + (0..9).to_a + ['!','@','#','$','%','&','*']
+        end
+        chave = (0...form_item.opcoes[:tamanho].to_i).collect { chars[Kernel.rand(chars.length)] }.join
 
-        texto.conteudo = num
+        texto.conteudo = chave
         texto.save
       end
     end
@@ -51,12 +56,7 @@ class AutoNumeracaoEcmBase
       texto.formulario_id = cadastro.formulario_id
       texto.itensformulario_id = form_item.id
       texto.cadastro_id = cadastro.id
-
-      form_item.opcoes[:valor] = (form_item.opcoes[:valor].to_i + 1).to_s
-      form_item.save
-      num = "#{form_item.opcoes[:prefixo]}#{form_item.opcoes[:valor]}#{form_item.opcoes[:posfixo]}"
-
-      texto.conteudo = num
+      texto.conteudo = cadastro_itens["item_#{form_item.id}"]
       texto.save
    end
 

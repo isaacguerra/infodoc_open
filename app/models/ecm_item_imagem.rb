@@ -6,6 +6,7 @@ class EcmItemImagem < ActiveRecord::Base
   validates_presence_of :formulario_id
   validates_presence_of :itensformulario_id
   validates_presence_of :cadastro_id
-  validates_presence_of :conteudo
+
+  has_attached_file :imagem
 end
 

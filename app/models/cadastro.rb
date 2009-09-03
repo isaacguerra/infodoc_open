@@ -92,7 +92,7 @@ class Cadastro < ActiveRecord::Base
                                                    item.id,
                                                    self.id])
       return i
-    elsif item.tipo.downcase == "numero_decimal"
+  elsif item.tipo.downcase == "valor_monetario"
       i = EcmItemNumeroDecimal.find(:first, :conditions=>["entidade_id = ? and
                                                    formulariocategoria_id = ? and
                                                    formulario_id = ? and

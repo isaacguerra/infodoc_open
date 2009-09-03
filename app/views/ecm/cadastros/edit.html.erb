@@ -5,7 +5,7 @@
   <h3 class="titulo_new">Alterando <%= @formulario.titulo %></h3>
 </div>
 <table class="formulario">
-  <% form_for @cadastro, :url=>{:action=>'update'} do |f| %>
+  <% form_for @cadastro, :url=>{:action=>'update'}, :html=>{:multipart=>true} do |f| %>
     <tr>
       <td></td>
       <td class="error_messages">

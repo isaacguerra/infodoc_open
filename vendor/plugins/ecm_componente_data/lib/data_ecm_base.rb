@@ -1,4 +1,4 @@
-class AutoNumeracaoEcmBase
+class DataEcmBase
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 # ITEM DO FORMULARIO
   def salvar_item(item_form, params)
@@ -9,18 +9,13 @@ class AutoNumeracaoEcmBase
   def apos_criar_item(form_item)
     if form_item.formulario.cadastros.size > 0
       form_item.formulario.cadastros.each do |cadastro|
-        texto = EcmItemTexto.new
+        texto = EcmItemData.new
         texto.entidade_id = cadastro.entidade_id
         texto.formulariocategoria_id = cadastro.formulario.formulariocategoria_id
         texto.formulario_id = cadastro.formulario_id
         texto.itensformulario_id = form_item.id
         texto.cadastro_id = cadastro.id
-
-        form_item.opcoes[:valor] = (form_item.opcoes[:valor].to_i + 1).to_s
-        form_item.save
-        num = "#{form_item.opcoes[:prefixo]}#{form_item.opcoes[:valor]}#{form_item.opcoes[:posfixo]}"
-
-        texto.conteudo = num
+        texto.conteudo = Date.today.to_s
         texto.save
       end
     end
@@ -39,29 +34,25 @@ class AutoNumeracaoEcmBase
    end
 
    def validar(cadastro, form_item, cadastro_itens)
-      unless cadastro_itens["item_#{form_item.id}"]
+      unless cadastro_itens["item_#{form_item.id}(3i)"]
         cadastro.errors.add("item_#{form_item.id}", "Campo #{form_item.rotulo} Requerido!")
       end
    end
 
    def save(cadastro, form_item, cadastro_itens)
-      texto = EcmItemTexto.new
+      texto = EcmItemData.new
       texto.entidade_id = cadastro.entidade_id
       texto.formulariocategoria_id = cadastro.formulario.formulariocategoria_id
       texto.formulario_id = cadastro.formulario_id
       texto.itensformulario_id = form_item.id
       texto.cadastro_id = cadastro.id
-
-      form_item.opcoes[:valor] = (form_item.opcoes[:valor].to_i + 1).to_s
-      form_item.save
-      num = "#{form_item.opcoes[:prefixo]}#{form_item.opcoes[:valor]}#{form_item.opcoes[:posfixo]}"
-
-      texto.conteudo = num
+      data = "#{cadastro_itens["item_#{form_item.id}(1i)"]}-#{cadastro_itens["item_#{form_item.id}(2i)"]}-#{cadastro_itens["item_#{form_item.id}(3i)"]}"
+      texto.conteudo = data
       texto.save
    end
 
    def update(cadastro, form_item, cadastro_itens)
-     texto = EcmItemTexto.find(:first, :conditions=>["entidade_id = ? and
+     texto = EcmItemData.find(:first, :conditions=>["entidade_id = ? and
                                                    formulariocategoria_id = ? and
                                                    formulario_id = ? and
                                                    itensformulario_id = ? and
@@ -71,16 +62,31 @@ class AutoNumeracaoEcmBase
                                                    cadastro.formulario_id,
                                                    form_item.id,
                                                    cadastro.id])
-      texto.conteudo = cadastro_itens["item_#{form_item.id}"]
+      data = "#{cadastro_itens["item_#{form_item.id}(1i)"]}-#{cadastro_itens["item_#{form_item.id}(2i)"]}-#{cadastro_itens["item_#{form_item.id}(3i)"]}"
+      texto.conteudo = data
       texto.save
    end
 
    def busca_avancada(form_item, params, valor=nil)
+     data_inicio = ""
+     data_inicio.concat(params[:cadastro]["item_inicio_#{form_item.id}(1i)"])
+     data_inicio.concat("-")
+     data_inicio.concat(params[:cadastro]["item_inicio_#{form_item.id}(2i)"])
+     data_inicio.concat("-")
+     data_inicio.concat(params[:cadastro]["item_inicio_#{form_item.id}(3i)"])
+
+     data_fim = ""
+     data_fim.concat(params[:cadastro]["item_fim_#{form_item.id}(1i)"])
+     data_fim.concat("-")
+     data_fim.concat(params[:cadastro]["item_fim_#{form_item.id}(2i)"])
+     data_fim.concat("-")
+     data_fim.concat(params[:cadastro]["item_fim_#{form_item.id}(3i)"])
+
      unless valor
-      cads = EcmItemTexto.find(:all, :conditions=>["itensformulario_id = ? and
-                                                    conteudo like ?",
+      cads = EcmItemData.find(:all, :conditions=>["itensformulario_id = ? and
+                                                    conteudo between ? and ?",
                                                     form_item.id,
-                                                    "%#{params[:cadastro]["item_#{form_item.id}"]}%"]).collect {|c| c.cadastro_id}
+                                                    data_inicio, data_fim]).collect {|c| c.cadastro_id}
      else
        cads = EcmItemTexto.find(:all, :conditions=>["itensformulario_id = ? and
                                                     conteudo like ?",

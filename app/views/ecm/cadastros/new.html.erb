@@ -5,7 +5,7 @@
   </div>
 </div>
 <table class="formulario">
-  <% form_for @cadastro, :url=>{:action=>'create'} do |f| %>
+  <% form_for @cadastro, :url=>{:action=>'create'}, :html=>{:multipart=>true} do |f| %>
     <tr>
       <td></td>
       <td class="error_messages">

@@ -113,9 +113,7 @@ module AutoNumeracaoEcmHelper
   def auto_numeracao_ecm_new_cadastro_item(form_item, params)
     view = ""
     unless params
-     form_item.opcoes[:valor] = (form_item.opcoes[:valor].to_i + 1).to_s
-     form_item.save
-     num = "#{form_item.opcoes[:prefixo]}#{form_item.opcoes[:valor]}#{form_item.opcoes[:posfixo]}"
+     num = "#{form_item.opcoes[:prefixo]}xxxx#{form_item.opcoes[:posfixo]}"
      view.concat(text_field :cadastro, "item_#{form_item.id}", :value=>num, :readonly=>true)
     else
      view.concat(text_field :cadastro, "item_#{form_item.id}", options={:value=>params["item_#{form_item.id}"], :readonly=>true})
