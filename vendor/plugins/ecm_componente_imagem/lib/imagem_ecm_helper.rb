@@ -71,7 +71,9 @@ module ImagemEcmHelper
     return view
   end
 
-  def imagem_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def imagem_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = ImagemEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     view.concat(file_field :cadastro, "item_#{form_item.id}")
     return view
@@ -83,19 +85,25 @@ module ImagemEcmHelper
   end
 
 
-  def imagem_ecm_show_cadastro_item(form_item, cadastro_item)
+  def imagem_ecm_show_cadastro_item(form_item, cadastro)
+    base = ImagemEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     view.concat(image_tag(cadastro_item.imagem.url)) if cadastro_item
     return view
   end
 
-  def imagem_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def imagem_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = ImagemEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
+    view.concat(cadastro_item.imagem_file_name) if cadastro_item
     return view
   end
 
 
   def imagem_ajax
   end
+
 end
 

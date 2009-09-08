@@ -129,7 +129,9 @@ module ValorMonetarioEcmHelper
 
 # Helper para EDIÇÃO do item no cadastro
 
-  def valor_monetario_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def valor_monetario_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = ValorMonetarioEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
      view.concat(text_field :cadastro, "item_#{form_item.id}" ,options={:value=>cadastro_item.conteudo, :size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
      view.concat("<br><span class='form_item_exemplo'>Ex.: 2567.98</span>")
@@ -150,14 +152,18 @@ module ValorMonetarioEcmHelper
 
 # Helper para EXIBIÇÃO do item no cadastro
 
-  def valor_monetario_ecm_show_cadastro_item(form_item, cadastro_item)
+  def valor_monetario_ecm_show_cadastro_item(form_item, cadastro)
+    base = ValorMonetarioEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 #-------------------------------------------------------------------------------
 
 # Helper para exibição do item no FILTRO de forma diferente do show.
 
-  def valor_monetario_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def valor_monetario_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = ValorMonetarioEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 #-------------------------------------------------------------------------------
@@ -166,5 +172,7 @@ module ValorMonetarioEcmHelper
 
   def valor_monetario_ajax
   end
+
+
 end
 

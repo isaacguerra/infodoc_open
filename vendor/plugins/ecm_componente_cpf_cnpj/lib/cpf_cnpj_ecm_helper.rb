@@ -120,7 +120,9 @@ module CpfCnpjEcmHelper
     return view
   end
 
-  def cpf_cnpj_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def cpf_cnpj_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = CpfCnpjEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     unless params
        if form_item.opcoes[:tipo] == "1"
@@ -149,15 +151,20 @@ module CpfCnpjEcmHelper
   end
 
 
-  def cpf_cnpj_ecm_show_cadastro_item(form_item, cadastro_item)
+  def cpf_cnpj_ecm_show_cadastro_item(form_item, cadastro)
+    base = CpfCnpjEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 
-  def cpf_cnpj_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def cpf_cnpj_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = CpfCnpjEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 
   def cpf_cnpj_ajax
   end
+
 end
 

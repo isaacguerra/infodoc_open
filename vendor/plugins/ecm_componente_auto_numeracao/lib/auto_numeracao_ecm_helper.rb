@@ -121,7 +121,9 @@ module AutoNumeracaoEcmHelper
     return view
   end
 
-  def auto_numeracao_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def auto_numeracao_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = AutoNumeracaoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     view.concat(text_field :cadastro, "item_#{form_item.id}", options={:value=>cadastro_item.conteudo, :readonly=>true})
     return view
@@ -134,16 +136,20 @@ module AutoNumeracaoEcmHelper
   end
 
 
-  def auto_numeracao_ecm_show_cadastro_item(form_item, cadastro_item)
+  def auto_numeracao_ecm_show_cadastro_item(form_item, cadastro)
+    base = AutoNumeracaoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 
-  def auto_numeracao_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def auto_numeracao_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = TextoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
-
 
   def texto_ajax
   end
+
 end
 

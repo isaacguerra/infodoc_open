@@ -55,104 +55,104 @@ class Cadastro < ActiveRecord::Base
     end
   end
 
-  def busca_form_item(item)
-    if item.tipo.downcase == "texto"
-      i = EcmItemTexto.find(:first, :conditions=>["entidade_id = ? and
-                                                   formulariocategoria_id = ? and
-                                                   formulario_id = ? and
-                                                   itensformulario_id = ? and
-                                                   cadastro_id = ?",
-                                                   self.entidade_id,
-                                                   self.formulariocategoria_id,
-                                                   self.formulario_id,
-                                                   item.id,
-                                                   self.id])
-      return i
-    elsif item.tipo.downcase == "texto_longo"
-      i = EcmItemTextoLongo.find(:first, :conditions=>["entidade_id = ? and
-                                                   formulariocategoria_id = ? and
-                                                   formulario_id = ? and
-                                                   itensformulario_id = ? and
-                                                   cadastro_id = ?",
-                                                   self.entidade_id,
-                                                   self.formulariocategoria_id,
-                                                   self.formulario_id,
-                                                   item.id,
-                                                   self.id])
-      return i
-    elsif item.tipo.downcase == "numero_inteiro"
-      i = EcmItemNumeroInteiro.find(:first, :conditions=>["entidade_id = ? and
-                                                   formulariocategoria_id = ? and
-                                                   formulario_id = ? and
-                                                   itensformulario_id = ? and
-                                                   cadastro_id = ?",
-                                                   self.entidade_id,
-                                                   self.formulariocategoria_id,
-                                                   self.formulario_id,
-                                                   item.id,
-                                                   self.id])
-      return i
-  elsif item.tipo.downcase == "valor_monetario"
-      i = EcmItemNumeroDecimal.find(:first, :conditions=>["entidade_id = ? and
-                                                   formulariocategoria_id = ? and
-                                                   formulario_id = ? and
-                                                   itensformulario_id = ? and
-                                                   cadastro_id = ?",
-                                                   self.entidade_id,
-                                                   self.formulariocategoria_id,
-                                                   self.formulario_id,
-                                                   item.id,
-                                                   self.id])
-      return i
-    elsif item.tipo.downcase == "data"
-      i = EcmItemData.find(:first, :conditions=>["entidade_id = ? and
-                                                   formulariocategoria_id = ? and
-                                                   formulario_id = ? and
-                                                   itensformulario_id = ? and
-                                                   cadastro_id = ?",
-                                                   self.entidade_id,
-                                                   self.formulariocategoria_id,
-                                                   self.formulario_id,
-                                                   item.id,
-                                                   self.id])
-      return i
-    elsif item.tipo.downcase == "data_hora"
-      i = EcmItemDataHora.find(:first, :conditions=>["entidade_id = ? and
-                                                   formulariocategoria_id = ? and
-                                                   formulario_id = ? and
-                                                   itensformulario_id = ? and
-                                                   cadastro_id = ?",
-                                                   self.entidade_id,
-                                                   self.formulariocategoria_id,
-                                                   self.formulario_id,
-                                                   item.id,
-                                                   self.id])
-      return i
-    elsif item.tipo.downcase == "imagem"
-      i = EcmItemImagem.find(:first, :conditions=>["entidade_id = ? and
-                                                   formulariocategoria_id = ? and
-                                                   formulario_id = ? and
-                                                   itensformulario_id = ? and
-                                                   cadastro_id = ?",
-                                                   self.entidade_id,
-                                                   self.formulariocategoria_id,
-                                                   self.formulario_id,
-                                                   item.id,
-                                                   self.id])
-      return i
-  elsif item.tipo.downcase == "referencia"
-      i = EcmItemReferencia.find(:first, :conditions=>["entidade_id = ? and
-                                                   formulariocategoria_id = ? and
-                                                   formulario_id = ? and
-                                                   itensformulario_id = ? and
-                                                   cadastro_id = ?",
-                                                   self.entidade_id,
-                                                   self.formulariocategoria_id,
-                                                   self.formulario_id,
-                                                   item.id,
-                                                   self.id])
-      return i
-    end
-  end
+#  def busca_form_item(item)
+#    if item.tipo.downcase == "texto"
+#      i = EcmItemTexto.find(:first, :conditions=>["entidade_id = ? and
+#                                                   formulariocategoria_id = ? and
+#                                                   formulario_id = ? and
+#                                                   itensformulario_id = ? and
+#                                                   cadastro_id = ?",
+#                                                   self.entidade_id,
+#                                                   self.formulariocategoria_id,
+#                                                   self.formulario_id,
+#                                                   item.id,
+#                                                   self.id])
+#      return i
+#    elsif item.tipo.downcase == "texto_longo"
+#      i = EcmItemTextoLongo.find(:first, :conditions=>["entidade_id = ? and
+#                                                   formulariocategoria_id = ? and
+#                                                   formulario_id = ? and
+#                                                   itensformulario_id = ? and
+#                                                   cadastro_id = ?",
+#                                                   self.entidade_id,
+#                                                   self.formulariocategoria_id,
+#                                                   self.formulario_id,
+#                                                   item.id,
+#                                                   self.id])
+#      return i
+#    elsif item.tipo.downcase == "numero_inteiro"
+#      i = EcmItemNumeroInteiro.find(:first, :conditions=>["entidade_id = ? and
+#                                                   formulariocategoria_id = ? and
+#                                                   formulario_id = ? and
+#                                                   itensformulario_id = ? and
+#                                                   cadastro_id = ?",
+#                                                   self.entidade_id,
+#                                                   self.formulariocategoria_id,
+#                                                   self.formulario_id,
+#                                                   item.id,
+#                                                   self.id])
+#      return i
+#  elsif item.tipo.downcase == "valor_monetario"
+#      i = EcmItemNumeroDecimal.find(:first, :conditions=>["entidade_id = ? and
+#                                                   formulariocategoria_id = ? and
+#                                                   formulario_id = ? and
+#                                                   itensformulario_id = ? and
+#                                                   cadastro_id = ?",
+#                                                   self.entidade_id,
+#                                                   self.formulariocategoria_id,
+#                                                   self.formulario_id,
+#                                                   item.id,
+#                                                   self.id])
+#      return i
+#    elsif item.tipo.downcase == "data"
+#      i = EcmItemData.find(:first, :conditions=>["entidade_id = ? and
+#                                                   formulariocategoria_id = ? and
+#                                                   formulario_id = ? and
+#                                                   itensformulario_id = ? and
+#                                                   cadastro_id = ?",
+#                                                   self.entidade_id,
+#                                                   self.formulariocategoria_id,
+#                                                   self.formulario_id,
+#                                                   item.id,
+#                                                   self.id])
+#      return i
+#    elsif item.tipo.downcase == "data_hora"
+#      i = EcmItemDataHora.find(:first, :conditions=>["entidade_id = ? and
+#                                                   formulariocategoria_id = ? and
+#                                                   formulario_id = ? and
+#                                                   itensformulario_id = ? and
+#                                                   cadastro_id = ?",
+#                                                   self.entidade_id,
+#                                                   self.formulariocategoria_id,
+#                                                   self.formulario_id,
+#                                                   item.id,
+#                                                   self.id])
+#      return i
+#    elsif item.tipo.downcase == "imagem"
+#      i = EcmItemImagem.find(:first, :conditions=>["entidade_id = ? and
+#                                                   formulariocategoria_id = ? and
+#                                                   formulario_id = ? and
+#                                                   itensformulario_id = ? and
+#                                                   cadastro_id = ?",
+#                                                   self.entidade_id,
+#                                                   self.formulariocategoria_id,
+#                                                   self.formulario_id,
+#                                                   item.id,
+#                                                   self.id])
+#      return i
+#  elsif item.tipo.downcase == "referencia"
+#      i = EcmItemReferencia.find(:first, :conditions=>["entidade_id = ? and
+#                                                   formulariocategoria_id = ? and
+#                                                   formulario_id = ? and
+#                                                   itensformulario_id = ? and
+#                                                   cadastro_id = ?",
+#                                                   self.entidade_id,
+#                                                   self.formulariocategoria_id,
+#                                                   self.formulario_id,
+#                                                   item.id,
+#                                                   self.id])
+#      return i
+#    end
+#  end
 end
 

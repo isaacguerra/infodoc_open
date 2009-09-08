@@ -75,7 +75,9 @@ module ListaEcmHelper
     return view
   end
 
-  def lista_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def lista_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = ListaEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     lista = form_item.opcoes[:lista].split(";").sort
     unless params
@@ -94,16 +96,21 @@ module ListaEcmHelper
   end
 
 
-  def lista_ecm_show_cadastro_item(form_item, cadastro_item)
+  def lista_ecm_show_cadastro_item(form_item, cadastro)
+    base = ListaEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 
-  def lista_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def lista_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = ListaEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
-
 
   def lista_ajax
   end
+
+
 end
 

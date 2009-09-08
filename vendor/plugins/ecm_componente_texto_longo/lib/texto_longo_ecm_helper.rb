@@ -118,7 +118,9 @@ module TextoLongoEcmHelper
     return view
   end
 
-  def texto_longo_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def texto_longo_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = TextoLongoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
      view.concat(text_area :cadastro, "item_#{form_item.id}" ,options={:value=>cadastro_item.conteudo, :cols=>form_item.opcoes[:largura], :rows=>form_item.opcoes[:altura]})
      return view
@@ -130,15 +132,20 @@ module TextoLongoEcmHelper
     return view
   end
 
-  def texto_longo_ecm_show_cadastro_item(form_item, cadastro_item)
+  def texto_longo_ecm_show_cadastro_item(form_item, cadastro)
+    base = TextoLongoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return "<pre>#{cadastro_item.conteudo}</pre>"
   end
 
-  def texto_longo_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def texto_longo_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = TextoLongoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return "<pre>#{cadastro_item.conteudo}</pre>"
   end
 
   def texto_longo_ajax
   end
+
 end
 

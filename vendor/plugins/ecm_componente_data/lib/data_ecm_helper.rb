@@ -92,7 +92,9 @@ module DataEcmHelper
     return view
   end
 
-  def data_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def data_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = DataEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     view.concat(date_select :cadastro, "item_#{form_item.id}", :order=>[:day, :month, :year], :start_year=>form_item.opcoes[:ano_inicio].to_i, :end_year=>form_item.opcoes[:ano_fim].to_i, :default=>cadastro_item.conteudo)
     return view
@@ -107,16 +109,22 @@ module DataEcmHelper
   end
 
 
-  def data_ecm_show_cadastro_item(form_item, cadastro_item)
+  def data_ecm_show_cadastro_item(form_item, cadastro)
+    base = DataEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo.to_s_br
   end
 
-  def data_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def data_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = DataEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo.to_s_br
   end
 
 
   def texto_ajax
   end
+
+
 end
 

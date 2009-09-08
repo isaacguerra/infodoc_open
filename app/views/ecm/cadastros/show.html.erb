@@ -12,7 +12,7 @@
   <% @formulario.itensformularios.each do |form_item| %>
   <tr>
     <td class="lista_item"><%= form_item.rotulo %></td>
-    <td class="lista_conteudo"><%= ecm_show_cadastro_item(form_item, @cadastro.busca_form_item(form_item)) %></td>
+    <td class="lista_conteudo"><%= ecm_show_cadastro_item(form_item, @cadastro) %></td>
   </tr>
   <% end %>
 </table>

@@ -252,7 +252,9 @@ module TextoEcmHelper
     return view
   end
 
-  def texto_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def texto_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = TextoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     unless params
      view.concat(masked_text_field :cadastro, "item_#{form_item.id}", options={:mask=>form_item.opcoes[:mascara],:size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length],:value=>cadastro_item.conteudo})
@@ -272,14 +274,17 @@ module TextoEcmHelper
   end
 
 
-  def texto_ecm_show_cadastro_item(form_item, cadastro_item)
+  def texto_ecm_show_cadastro_item(form_item, cadastro)
+    base = TextoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 
-  def texto_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def texto_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = TextoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
-
 
   def texto_ajax
   end

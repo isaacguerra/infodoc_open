@@ -114,7 +114,9 @@ module DataHoraEcmHelper
     return view
   end
 
-  def data_hora_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def data_hora_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = DataHoraEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     if form_item.opcoes[:readonly] == "0"
         view.concat(datetime_select :cadastro, "item_#{form_item.id}", :order=>[:day, :month, :year], :start_year=>form_item.opcoes[:ano_inicio].to_i, :end_year=>form_item.opcoes[:ano_fim].to_i, :default=>cadastro_item.conteudo)
@@ -133,16 +135,21 @@ module DataHoraEcmHelper
   end
 
 
-  def data_hora_ecm_show_cadastro_item(form_item, cadastro_item)
+  def data_hora_ecm_show_cadastro_item(form_item, cadastro)
+    base = DataHoraEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo.to_s_br
   end
 
-  def data_hora_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def data_hora_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = DataHoraEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo.to_s_br
   end
 
 
   def texto_ajax
   end
+
 end
 

@@ -43,20 +43,20 @@ module ApplicationHelper
     eval("#{form_item.componente}_ecm_new_cadastro_item(form_item, params)")
   end
 
-  def ecm_edit_cadastro_item(form_item, cadastro_item, params = nil)
-    eval("#{form_item.componente}_ecm_edit_cadastro_item(form_item, cadastro_item, params)")
+  def ecm_edit_cadastro_item(form_item, cadastro, params = nil)
+    eval("#{form_item.componente}_ecm_edit_cadastro_item(form_item, cadastro, params)")
   end
 
   def ecm_find_cadastro_item(form_item)
     eval("#{form_item.componente}_ecm_find_cadastro_item(form_item)")
   end
 
-  def ecm_show_cadastro_item(form_item, cadastro_item)
-    eval("#{form_item.componente}_ecm_show_cadastro_item(form_item, cadastro_item)")
+  def ecm_show_cadastro_item(form_item, cadastro)
+    eval("#{form_item.componente}_ecm_show_cadastro_item(form_item, cadastro)")
   end
 
-  def ecm_show_filtro_cadastro_item(form_item, cadastro_item)
-    eval("#{form_item.componente}_ecm_show_filtro_cadastro_item(form_item, cadastro_item)")
+  def ecm_show_filtro_cadastro_item(form_item, cadastro)
+    eval("#{form_item.componente}_ecm_show_filtro_cadastro_item(form_item, cadastro)")
   end
 
 end

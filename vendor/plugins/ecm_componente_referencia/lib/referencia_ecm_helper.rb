@@ -161,7 +161,9 @@ module ReferenciaEcmHelper
     return view
   end
 
-  def referencia_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def referencia_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = ReferenciaEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     formulario = Formulario.find(form_item.opcoes[0][:referenciado])
     principal = Itensformulario.find(formulario.principal_id)
@@ -226,14 +228,19 @@ module ReferenciaEcmHelper
   end
 
 
-  def referencia_ecm_show_cadastro_item(form_item, cadastro_item)
+  def referencia_ecm_show_cadastro_item(form_item, cadastro)
+    base = ReferenciaEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     cadastro = Cadastro.find(cadastro_item.referencia_id)
     return link_to EcmItemTexto.do_cadastro(cadastro.id).do_itens_formulario(cadastro.formulario.principal_id).find(:first).conteudo, ecm_formulario_cadastro_path(cadastro.formulario, cadastro)
   end
 
-  def referencia_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def referencia_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = ReferenciaEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     cadastro = Cadastro.find(cadastro_item.referencia_id)
     return link_to EcmItemTexto.do_cadastro(cadastro.id).do_itens_formulario(cadastro.formulario.principal_id).find(:first).conteudo, ecm_formulario_cadastro_path(cadastro.formulario, cadastro)
   end
+
 end
 

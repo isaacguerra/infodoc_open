@@ -150,7 +150,9 @@ module NumeroInteiroEcmHelper
 
 # Helper para EDIÇÃO do item no cadastro
 
-  def numero_inteiro_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def numero_inteiro_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = NumeroInteiroEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
      view.concat(text_field :cadastro, "item_#{form_item.id}" ,options={:value=>cadastro_item.conteudo, :size=>form_item.opcoes[:largura], :maxlength=>form_item.opcoes[:max_length]})
      return view
@@ -170,14 +172,18 @@ module NumeroInteiroEcmHelper
 
 # Helper para EXIBIÇÃO do item no cadastro
 
-  def numero_inteiro_ecm_show_cadastro_item(form_item, cadastro_item)
+  def numero_inteiro_ecm_show_cadastro_item(form_item, cadastro)
+    base = NumeroInteiroEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 #-------------------------------------------------------------------------------
 
 # Helper para exibição do item no FILTRO de forma diferente do show.
 
-  def numero_inteiro_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def numero_inteiro_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = NumeroInteiroEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 #-------------------------------------------------------------------------------
@@ -186,5 +192,6 @@ module NumeroInteiroEcmHelper
 
   def numero_inteiro_ajax
   end
+
 end
 

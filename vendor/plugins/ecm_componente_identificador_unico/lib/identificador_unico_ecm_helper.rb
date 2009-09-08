@@ -106,7 +106,9 @@ module IdentificadorUnicoEcmHelper
     return view
   end
 
-  def identificador_unico_ecm_edit_cadastro_item(form_item, cadastro_item, params)
+  def identificador_unico_ecm_edit_cadastro_item(form_item, cadastro, params)
+    base = IdentificadorUnicoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
     view.concat(text_field :cadastro, "item_#{form_item.id}", options={:value=>cadastro_item.conteudo, :readonly=>true})
     return view
@@ -119,16 +121,21 @@ module IdentificadorUnicoEcmHelper
   end
 
 
-  def identificador_unico_ecm_show_cadastro_item(form_item, cadastro_item)
+  def identificador_unico_ecm_show_cadastro_item(form_item, cadastro)
+    base = IdentificadorUnicoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 
-  def identificador_unico_ecm_show_filtro_cadastro_item(form_item, cadastro_item)
+  def identificador_unico_ecm_show_filtro_cadastro_item(form_item, cadastro)
+    base = IdentificadorUnicoEcmBase.new
+    cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     return cadastro_item.conteudo
   end
 
 
   def texto_ajax
   end
+
 end
 
