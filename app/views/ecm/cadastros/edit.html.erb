@@ -12,7 +12,7 @@
         <%= f.error_messages %>
       </td>
     </tr>
-    <% @formulario.itensformularios.each do |form_item| %>
+    <% @formulario.itensformularios.sort_by{|it| it.posicao}.each do |form_item| %>
     <tr>
       <td class="lista_item">
         <%= form_item.rotulo %>

@@ -6,6 +6,7 @@
   <tr>
     <th class="titulo_lista">Rotulo</th>
     <th class="titulo_lista">Componente</th>
+    <th class="titulo_lista">Posicionamento</th>
   </tr>
     <% @form_itens.each do |form_item| %>
     <tr>
@@ -15,6 +16,10 @@
       <td class="itens_index">
         <%= form_item.itenstipo.nome %>
       </td>
+      <td>
+      <%= link_to 'sobe', ecm_formulario_itens_formulario_path(@formulario, form_item,:acao=>"sobe") %>
+      <%= link_to 'desce', ecm_formulario_itens_formulario_path(@formulario, form_item,:acao=>"desce") %>
+      </td>
     </tr>
 	  <% end %>
 </table>
@@ -23,7 +28,7 @@
 
 <h2>Preview</h2>
 <table class="formulario">
-    <% @formulario.itensformularios.each do |form_item| %>
+    <% @formulario.itensformularios.sort_by{|it| it.posicao}.each do |form_item| %>
     <tr>
       <td class="lista_item">
         <%= form_item.rotulo %>

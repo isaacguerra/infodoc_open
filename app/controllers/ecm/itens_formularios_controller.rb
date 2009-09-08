@@ -1,12 +1,20 @@
 class Ecm::ItensFormulariosController < ApplicationController
   def index
     @formulario = Formulario.find(params[:formulario_id])
-    @form_itens = Itensformulario.do_formulario(params[:formulario_id]).find(:all)
+    @form_itens = Itensformulario.do_formulario(params[:formulario_id]).find(:all, :order=>"posicao")
   end
 
   def show
     @formulario = Formulario.find(params[:formulario_id])
     @form_item = Itensformulario.find(params[:id])
+    if params[:acao]
+      if params[:acao] == "sobe"
+        @form_item.sobeposicao
+      else
+        @form_item.desceposicao
+      end
+      redirect_to ecm_formulario_itens_formularios_path(@formulario)
+    end
   end
 
   def new

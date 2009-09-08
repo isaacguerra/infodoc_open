@@ -294,7 +294,7 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
     t.integer "formulario_id"
     t.integer "itenstipo_id"
     t.string  "rotulo"
-    t.string  "posicao"
+    t.integer "posicao"
     t.string  "componente"
     t.string  "tipo"
     t.text    "opcoes"

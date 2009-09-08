@@ -5,7 +5,7 @@ class CreateItensformularios < ActiveRecord::Migration
       t.integer :formulario_id, nil=>false
       t.integer :itenstipo_id, nil=>false
       t.string :rotulo
-      t.string :posicao
+      t.integer :posicao
       t.string :componente
       t.string :tipo
       t.text :opcoes

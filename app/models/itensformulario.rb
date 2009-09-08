@@ -21,6 +21,8 @@ class Itensformulario < ActiveRecord::Base
   #-------------
 
   after_create :apos_criar_item
+  before_create :add_posicao
+  before_destroy :remover_posicao
 
   def validar_opcoes
     vo = eval("#{self.componente.camelize}EcmBase.new")
@@ -48,5 +50,59 @@ class Itensformulario < ActiveRecord::Base
       cm.update(self, form_item, cadastro_itens)
     end
   end
+
+  # manutencao do posicionamento dos itens
+  def add_posicao
+   ultima = Itensformulario.do_formulario(self.formulario_id).maximum("posicao")
+   if ultima
+     self.posicao = ultima+1
+   else
+     self.posicao = 1
+   end
+  end
+
+  def sobeposicao
+    itens = Itensformulario.do_formulario(self.formulario_id).find(:all, :order=>"posicao")
+
+    if (self.posicao > 1)
+    	fez = false
+    	itens.each do |i|
+				if (i.posicao+1 == self.posicao) and (fez == false)
+					i.posicao += 1
+					i.save
+					self.posicao -= 1
+					self.save
+					fez = true
+			  end
+   	  end
+    end
+  end
+
+  def desceposicao
+    itens = Itensformulario.do_formulario(self.formulario).find(:all, :order=>"posicao")
+
+    if (itens.last.posicao > self.posicao)
+    	fez = false
+    	itens.each do |i|
+				if (i.posicao-1 == self.posicao) and (fez == false)
+					i.posicao -= 1
+					i.save
+					self.posicao += 1
+					self.save
+					fez = true
+			  end
+   	  end
+    end
+  end
+
+  def remover_posicao
+  	itens = Itensformulario.do_formulario(self.formulario).find(:all, :order=>"posicao DESC")
+    itens.each do |i|
+		  if i.posicao > self.posicao
+		  	i.posicao -= 1
+		  	i.save
+			end
+   	end
+ 	end
 end
 

@@ -5,7 +5,7 @@
     <th>Valor</th>
     <th>Filtro</th>
   </tr>
-  <% @formulario.itensformularios.each do |form_item| %>
+  <% @formulario.itensformularios.sort_by{|it| it.posicao}.each do |form_item| %>
   <tr>
    <td><%= form_item.rotulo %></td>
    <td><%= ecm_find_cadastro_item(form_item) %></td>

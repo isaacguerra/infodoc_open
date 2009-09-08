@@ -9,7 +9,7 @@
 </div>
 
 <table id="listar">
-  <% @formulario.itensformularios.each do |form_item| %>
+  <% @formulario.itensformularios.sort_by{|it| it.posicao}.each do |form_item| %>
   <tr>
     <td class="lista_item"><%= form_item.rotulo %></td>
     <td class="lista_conteudo"><%= ecm_show_cadastro_item(form_item, @cadastro) %></td>
