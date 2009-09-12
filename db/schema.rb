@@ -42,11 +42,13 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
   end
 
   create_table "comentarios", :force => true do |t|
-    t.integer "entidade_id"
-    t.integer "usuario_id"
-    t.integer "comentavel_id"
-    t.string  "comentavel_type"
-    t.text    "conteudo"
+    t.integer  "entidade_id"
+    t.integer  "usuario_id"
+    t.integer  "comentavel_id"
+    t.string   "comentavel_type"
+    t.text     "conteudo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "ecm_item_data_horas", :force => true do |t|
@@ -230,8 +232,6 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
     t.integer  "principal_id"
     t.string   "titulo"
     t.string   "descricao"
-    t.text     "filtro_publico"
-    t.boolean  "publico",                :default => false
     t.boolean  "status",                 :default => true
     t.datetime "created_at"
     t.datetime "updated_at"

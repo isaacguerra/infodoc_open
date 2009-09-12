@@ -118,5 +118,18 @@ class ReferenciaEcmBase
                                                    form_item.id,
                                                    cadastro.id])
   end
+
+  def deleta_cadastro_item(form_item, cadastro)
+    EcmItemReferencia.find(:first, :conditions=>["entidade_id = ? and
+                                                   formulariocategoria_id = ? and
+                                                   formulario_id = ? and
+                                                   itensformulario_id = ? and
+                                                   cadastro_id = ?",
+                                                   cadastro.entidade_id,
+                                                   cadastro.formulariocategoria_id,
+                                                   cadastro.formulario_id,
+                                                   form_item.id,
+                                                   cadastro.id]).destroy
+  end
 end
 

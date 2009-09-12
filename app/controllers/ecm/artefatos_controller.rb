@@ -70,5 +70,18 @@ class Ecm::ArtefatosController < ApplicationController
       send_file(cadastro.artefato.objeto.path, :type=>cadastro.artefato.objeto_content_type)
     end
   end
+
+  def destroy
+    @cadastro = Cadastro.find(params[:cadastro_id])
+    @artefato = Cadastro.find(params[:id])
+    if @cadastro.formulario.permissao(@sessao_usuario.usuario) > 2
+      @artefato.destroy
+      flash[:notice] = "Artefato Excluido com Sucesso!"
+      redirect_to ecm_formulario_cadastro_path(@cadastro.formulario_id, @cadastro)
+    else
+      flash[:notice] = "impossivel excluir o cadastro"
+      redirect_to ecm_formulario_cadastro_path(@cadastro.formulario_id, @cadastro)
+    end
+  end
 end
 

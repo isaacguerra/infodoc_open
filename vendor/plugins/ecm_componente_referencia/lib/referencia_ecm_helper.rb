@@ -232,14 +232,22 @@ module ReferenciaEcmHelper
     base = ReferenciaEcmBase.new
     cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     cadastro = Cadastro.find(cadastro_item.referencia_id)
-    return link_to EcmItemTexto.do_cadastro(cadastro.id).do_itens_formulario(cadastro.formulario.principal_id).find(:first).conteudo, ecm_formulario_cadastro_path(cadastro.formulario, cadastro)
+    if cadastro.formulario.permissao(@sessao_usuario.usuario) > 0
+      return link_to EcmItemTexto.do_cadastro(cadastro.id).do_itens_formulario(cadastro.formulario.principal_id).find(:first).conteudo, ecm_formulario_cadastro_path(cadastro.formulario, cadastro)
+    else
+      EcmItemTexto.do_cadastro(cadastro.id).do_itens_formulario(cadastro.formulario.principal_id).find(:first).conteudo
+    end
   end
 
   def referencia_ecm_show_filtro_cadastro_item(form_item, cadastro)
     base = ReferenciaEcmBase.new
     cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     cadastro = Cadastro.find(cadastro_item.referencia_id)
-    return link_to EcmItemTexto.do_cadastro(cadastro.id).do_itens_formulario(cadastro.formulario.principal_id).find(:first).conteudo, ecm_formulario_cadastro_path(cadastro.formulario, cadastro)
+    if cadastro.formulario.permissao(@sessao_usuario.usuario) > 0
+      return link_to EcmItemTexto.do_cadastro(cadastro.id).do_itens_formulario(cadastro.formulario.principal_id).find(:first).conteudo, ecm_formulario_cadastro_path(cadastro.formulario, cadastro)
+    else
+      EcmItemTexto.do_cadastro(cadastro.id).do_itens_formulario(cadastro.formulario.principal_id).find(:first).conteudo
+    end
   end
 
 end

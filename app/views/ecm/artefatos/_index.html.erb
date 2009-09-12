@@ -26,10 +26,15 @@
           <li>
             <% artefato.formulario.itensformularios.sort_by{|it| it.posicao}.each do |form_item| %>
                  <b><%= form_item.rotulo %> :</b>
-                 <%= ecm_show_cadastro_item(form_item, artefato.busca_form_item(form_item)) %>
+                 <%= ecm_show_cadastro_item(form_item, artefato) %>
           </li>
             <% end %>
         </ul>
+       </td>
+       <td>
+          <% if @cadastro.formulario.permissao(@sessao_usuario.usuario) > 2  %>
+            <%= link_to("Excluir", ecm_cadastro_artefato_path(@cadastro, artefato), :method=>"delete", :confirm => 'Exclur permanentemente o Cadastro e todos seus artefatos?') %>
+          <% end %>
        </td>
     </tr>
 	  <% end %>

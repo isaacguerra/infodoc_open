@@ -12,7 +12,7 @@
 <div id="listar">
     <% @cadastro.comentarios.each do |comentario| %>
       <div class="itens_index">
-        <b><%= comentario.usuario.nome %>:</b>&nbsp;
+        <b><%= comentario.usuario.nome %> - <%= comentario.created_at.to_s_br[0..9] %></b><br>
         <%= comentario.conteudo %><br>
       </div>
 	  <% end %>

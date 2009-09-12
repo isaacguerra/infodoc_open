@@ -4,7 +4,10 @@
     <%= link_to "Ajuda", ecm_formulario_ajudas_formulario_path(@formulario,1), :popup=>true %>
   </div>
   <% if @formulario.permissao(@sessao_usuario.usuario) > 1 %>
-  <div id="link_botao"><%= link_to 'Editar', edit_ecm_formulario_cadastro_path(@formulario, @cadastro) %></div>
+    <div id="link_botao"><%= link_to 'Editar', edit_ecm_formulario_cadastro_path(@formulario, @cadastro) %></div>
+  <% end %>
+  <% if @formulario.permissao(@sessao_usuario.usuario) > 2 and @cadastro.deletavel %>
+    <div id="link_botao"><%= link_to 'Excluir', ecm_formulario_cadastro_path(@formulario, @cadastro), :confirm => 'Exclur permanentemente o Cadastro e todos seus artefatos?', :method => :delete %></div>
   <% end %>
 </div>
 

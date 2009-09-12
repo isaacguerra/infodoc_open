@@ -9,8 +9,6 @@ class CreateFormularios < ActiveRecord::Migration
       t.string :titulo, nil=>false, :size=>255
       t.string :descricao, nil=>false, :size=>255
 
-      t.text :filtro_publico
-      t.boolean :publico, :default=>false
       t.boolean :status, :default=>true
 
       t.timestamps

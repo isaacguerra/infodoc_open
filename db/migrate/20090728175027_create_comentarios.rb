@@ -5,6 +5,7 @@ class CreateComentarios < ActiveRecord::Migration
       t.integer :usuario_id, nil=>false
     	t.references :comentavel, :polymorphic => true
     	t.text :conteudo
+    	t.timestamps
     end
   end
 

@@ -132,5 +132,17 @@ class Ecm::CadastrosController < ApplicationController
       page.replace_html params[:div], render(:text=> ecm_ajax(@item.itenstipo.componente, @item, params))
     end
   end
+
+  def destroy
+    @cadastro = Cadastro.find(params[:id])
+    if @cadastro.formulario.permissao(@sessao_usuario.usuario) > 2
+      @cadastro.destroy
+      flash[:notice] = "Cadastro Excluido com Sucesso!"
+      redirect_to ecm_formulario_cadastros_path(@cadastro.formulario_id)
+    else
+      flash[:notice] = "impossivel excluir o cadastro"
+      redirect_to ecm_formulario_cadastro_path(@cadastro.formulario_id, @cadastro)
+    end
+  end
 end
 

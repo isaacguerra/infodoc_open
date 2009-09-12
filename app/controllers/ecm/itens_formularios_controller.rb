@@ -81,5 +81,10 @@ class Ecm::ItensFormulariosController < ApplicationController
       page.replace_html "ajax_item", render(:text=>ecm_form_item_ajax(@itenstipo, params))
     end
   end
+
+  def destroy
+    @formulario = Formulario.find(params[:formulario_id])
+    @form_item = Itensformulario.find(params[:id])
+  end
 end
 

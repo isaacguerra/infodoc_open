@@ -1,7 +1,13 @@
 class Ecm::RelacionadosController < ApplicationController
    def index
     @cadastro = Cadastro.find(params[:cadastro_id])
-    @form_rel = Itensformulario.da_entidade(@sessao_usuario.entidade_id).do_tipo("referencia").find(:all).collect {|i| [i.formulario.titulo, i.formulario_id] if i.opcoes[0][:referenciado] == @cadastro.formulario_id.to_s}.compact.uniq
+    @form_rel = []
+    Itensformulario.da_entidade(@sessao_usuario.entidade_id).do_tipo("referencia").find(:all).each do |i|
+      if i.opcoes[0][:referenciado] == @cadastro.formulario_id.to_s and i.formulario.permissao(@sessao_usuario.usuario) > 0
+        @form_rel << [i.formulario.titulo, i.formulario_id]
+      end
+    end
+    @form_rel.compact.uniq
     render :update do |page|
       page.visual_effect(:highlight , "relacionados")
       page.replace_html "relacionados", render(:partial=>"index")

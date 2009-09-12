@@ -107,5 +107,8 @@ class SomaReferenciaEcmBase
 #                                                    form_item.id, valor]).collect {|c| c.cadastro_id}
 #     end
    end
+
+   def deleta_cadastro_item
+   end
 end
 
