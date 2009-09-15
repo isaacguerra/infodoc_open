@@ -1,9 +1,9 @@
 <div id="barra_titulo">
   <h3 class="titulo_index">Lista de Comentarios</h3>
-  <div id="link_botao">
+  <div class="hide_comentario">
     <%= link_to_remote "Esconder Comentarios", :url=>{:controller=>"/ecm/comentarios", :action=>"clean"}, :method=>"get" %>
   </div>
-  <div id="link_botao">
+  <div class="new_comentario">
     <%= link_to_remote "Novo Comentario", :url=>(url_for(new_ecm_cadastro_comentario_path(@cadastro))), :method=>"get" %>
   </div>
 </div>

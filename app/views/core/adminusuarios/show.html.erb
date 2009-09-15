@@ -1,25 +1,25 @@
 <div id="barra_titulo">
   <h3 class="titulo_show">Usuario</h3>
-  <div id="link_botao"><%= link_to 'Mudar Senha', edit_core_adminusuario_adminmudarsenha_path(@usuario) %></div>
-  <div id="link_botao"><%= link_to "Ativar/Desativar", {:action=>"mudar_status", :id=>@usuario.id}, :confirm => 'Você tem certesa que quer ativar eu desativar esta usuario?' %></div>
-  <div id="link_botao"><%= link_to 'Editar', edit_core_adminusuario_path(@usuario) %></div>
+  <div class="edit"><%= link_to 'Mudar Senha', edit_core_adminusuario_adminmudarsenha_path(@usuario) %></div>
+  <div class="abilita"><%= link_to "Ativar/Desativar", {:action=>"mudar_status", :id=>@usuario.id}, :confirm => 'Você tem certesa que quer ativar eu desativar esta usuario?' %></div>
+  <div class="edit"><%= link_to 'Editar', edit_core_adminusuario_path(@usuario) %></div>
 </div>
 
 <table id="listar">
   <tr>
-    <td classe="lista_item">Nome</td>
+    <td class="lista_item">Nome</td>
     <td class="lista_conteudo"><%= @usuario.nome %></td>
   </tr>
   <tr>
-    <td classe="lista_item">Login</td>
+    <td class="lista_item">Login</td>
     <td class="lista_conteudo"><%= @usuario.login %></td>
   </tr>
   <tr>
-    <td classe="lista_item">E-mail</td>
+    <td class="lista_item">E-mail</td>
     <td class="lista_conteudo"><%= @usuario.email %></td>
   </tr>
   <tr>
-    <td classe="lista_item">Ativo</td>
+    <td class="lista_item">Ativo</td>
     <td class="lista_conteudo"><%= @usuario.status %></td>
   </tr>
 </table>

@@ -1,9 +1,9 @@
 <div id="barra_titulo">
   <h3 class="titulo_index">Lista de Comentarios</h3>
-  <div id="link_botao">
+  <div class="hide_comentario">
     <%= link_to_remote "Esconder Comentarios", :url=>{:controller=>"/wiki/wikicomentarios", :action=>"clean"}, :method=>"get" %>
   </div>
-  <div id="link_botao">
+  <div class="new_comentario">
     <%= link_to_remote "Novo Comentario", :url=>(url_for(new_wiki_wikipage_wikicomentario_path(@wikipage))), :method=>"get" %>
   </div>
 </div>

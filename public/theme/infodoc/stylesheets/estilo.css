@@ -159,7 +159,206 @@ LOGIM*/
 	
     }
 /*Fim Menu*/
+#direita{
+      	min-height: 50px;
+      	width:36%;
+	float:right;
+}
+/*Depoimento*/
+    #depoimentos {
+	padding: 0 10px 0 10px;
+      	min-height: 50px;
+      	width:95%;
+	float:right;
+	border: 1px solid #CCCCCC;
+    }
+    #depoimentos p {
+      	font-size: 0.9em;
+      	text-align: justify;
+	margin: 10px 0 0 0;
+    }
+    #depoimentos h5 {
+      	color:#8c1c1c;
+      	margin: 3px 0;
+    }
+    #depoimentos h4 {
+	border-bottom: 1px solid #C00;
+    }
+    #depoimentos b {
+       	font-family: serif;
+       	font-size: 40px;
+       	color:#8c1c1c ;
+    }
+    #depoimentos a{
+	color: #8c1c1c;
+	float: right;
+	font-size: 0.9em;
+	margin: 0 0 5px 0;
+    }
+    #dep_cab {
+	float: top;
+    }
+    #img_wellington{
+	float:left;
+	margin: 0px 5px 0px 0px;
+    }
+    .depoimento_txt{
+        font-size:1.2em;
+    }
+/*Fim Depoimento*/
+/*Serviços*/
+    #servicos{
+      	padding: 5px 0 0 10px;
+      	height: 207px;
+      	width:100%;
+	float:right;
+	}
+	
+    #servicos h2 {
+        font-family:Verdana;
+	font-size:1.3em;
+        font-weight:bold;
+        border-bottom: 1px solid #C00;
+    }
+    #servicos h6 {
+	margin:4px 0 12px 0;
+    }
+    #digitalizacao, #armazenagem, #disponibilidade{
+      	width:33%;
+      	height:auto;
+	float: left;
+	text-align: center;
+        opacity: 0.9;
+    }
+    #digitalizacao:hover, #armazenagem:hover, #disponibilidade:hover{
+        opacity: 1;
+    }
+/*FIM Serviços*/
+/*Extra*/
+    #extra{
+	margin-top:10px;
+        width:100%;
+        height:auto;
+	float: right;
+	clear: right;
+    }
+    #extra2{
+        width:99.5%;
+        height:88px;
+        border: 1px solid #CCCCCC;
+        float:left;
+        margin:0 5px 2px 0;
+    }
+    #extra2 h1{
+        font-family:Verdana;
+	font-size:1em;
+        font-weight:bold;
+        border-bottom: 1px solid #CCCCCC;
+        background-color: #EDEDED;
+        margin-bottom: 1px;
+        padding:0 0 0 3px;
+    }
+    #contato {
+        width:99.5%;
+        height:88px;
+        border: 1px solid #CCCCCC;
+        float:left;
+    }
+    #contato h1{
+        font-family:Verdana;
+	font-size:1em;
+        font-weight:bold;
+        border-bottom: 1px solid #CCCCCC;
+        background-color: #EDEDED;
+        margin-bottom: 1px;
+        padding:0 0 0 3px;
+    }
+    #contato a{
+        
+        float:left;
+        text-decoration: none;
+    	color: #8c1c1c;
+    	margin-top: 45px;
+    	margin-left:20px;
 
+}
+        #contato img {
+            
+            float:left;
+        }
+/*FIM Extra*/
+/*Destaque*/
+    #destaque {
+      	width:61%;
+      	height:190px;
+	float: left;
+	border: 1px solid #CCCCCC;
+	font-family:Verdana;
+	font-size:3.5em;
+        font-weight:bold;
+	padding: 10px
+    }
+    #destaque a {
+	font-family:Verdana;
+	font-size:0.5em;
+	color: #8c1c1c;
+    }
+/*FIM Destaque*/
+/*Infodoc*/
+    #infodoc {
+      	width:61.1%;
+	float: left;
+	font-size:1em;
+	padding: 10px 10px 10px 10px;
+	margin: 10px 0 0 0;
+	background-image: url("/images/img08.gif");
+	background-repeat: repeat-x;
+	text-align:justify;
+    }
+    .infodoc_txt {
+        color:#8c1c1c;
+        font-weight:bold;
+        font-size:1.2em;
+    }
+/*FIM Infodoc*/
+/*Clientes*/
+    #clientes {
+      	width:62.4%;
+      	height:160px;
+	float: left;
+	border-bottom: 3px solid #8c1c1c;
+	padding: 3px 0px 3px 3px;
+	margin: 10px 0 0 0;
+	background-color: #FFFFFF;
+    }
+    #clientes h2 {
+        font-family:Verdana;
+	font-size:1.3em;
+        font-weight:bold;
+        border-bottom: 1px solid #CCCCCC;
+    }
+/*FIM Clientes*/
+/*Noticias*/
+    #noticias{
+        width:62.4%;
+      	min-height:160px;
+	float: left;
+	border-bottom: 3px solid #8c1c1c;
+	padding: 3px 0px 3px 3px;
+	margin: 10px 0 0 0;
+	background-color: #FFFFFF;
+	text-align: justify;
+    }
+    #noticias h2 {
+	font-size:1.3em;
+        font-weight:bold;
+        border-bottom: 1px solid #CCCCCC;
+    }
+    #noticias p{
+	font-size:0.9em;
+        text-align: justify;
+    }
+/*FIM Noticias*/
 /*Rodape*/
     #rodape {
 	clear: both;
@@ -247,7 +446,7 @@ LOGIM*/
                           border: 1px solid #CCCCCC;
                         }
                         
-#noticias               {    
+#noticiase            {    
                           width: 100%;
                           float:left; 
                           margin: 0 1%; 
