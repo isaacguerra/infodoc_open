@@ -1,7 +1,7 @@
 <div id="barra_titulo">
   <h3 class="titulo_show">Modulo</h3>
-  <div id="link_botao"><%= link_to "Ativar/Desativar", {:controller=>"/core/modulos", :action=>"mudar_status", :id=>@modulo}, :confirm => 'Você tem certesa que quer ativar ou desativar este modulo?' %></div>
-  <div id="link_botao"><%= link_to 'Editar', edit_core_modulo_path(@modulo) %></div>
+  <div class="abilita"><%= link_to "Ativar/Desativar", {:controller=>"/core/modulos", :action=>"mudar_status", :id=>@modulo}, :confirm => 'Você tem certesa que quer ativar ou desativar este modulo?' %></div>
+  <div class="edit"><%= link_to 'Editar', edit_core_modulo_path(@modulo) %></div>
 </div>
 
 <table id="listar">

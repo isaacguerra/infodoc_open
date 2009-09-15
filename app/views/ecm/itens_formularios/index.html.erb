@@ -1,6 +1,6 @@
 <div id="barra_titulo">
   <h3 class="titulo_index">Lista de Itens</h3>
-  <div id="link_botao"><%= link_to 'Novo Item', new_ecm_formulario_itens_formulario_path(@formulario) %></div>
+  <div class="new_item"><%= link_to 'Novo Item', new_ecm_formulario_itens_formulario_path(@formulario) %></div>
 </div>
 <table id="listar">
   <tr>
@@ -17,8 +17,8 @@
         <%= form_item.itenstipo.nome %>
       </td>
       <td>
-      <%= link_to 'sobe', ecm_formulario_itens_formulario_path(@formulario, form_item,:acao=>"sobe") %>
-      <%= link_to 'desce', ecm_formulario_itens_formulario_path(@formulario, form_item,:acao=>"desce") %>
+      <%= link_to '.', ecm_formulario_itens_formulario_path(@formulario, form_item,:acao=>"sobe"),:class=>"sobe" %>
+      <%= link_to '.', ecm_formulario_itens_formulario_path(@formulario, form_item,:acao=>"desce"), :class=>"desce" %>
       </td>
     </tr>
 	  <% end %>

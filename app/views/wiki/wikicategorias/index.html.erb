@@ -1,16 +1,16 @@
 <div id="barra_titulo">
-  <h3 class="titulo_index">InfoWiki</h3>
+  <h3 class="titulo_index_infowiki">InfoWiki</h3>
+  <div class="new_categoria"><%= link_to_remote "Nova Categoria", :url=>(url_for(new_wiki_wikicategoria_path)), :method=>"get" %></div>
 </div>
-<table id="listar">
+<table id="wiki">
   </tr>
-    <th class="titulo_lista">InfoWiki</th>
-    <th class="titulo_lista">
-        <div id="link_botao"><%= link_to_remote "Nova Categorias", :url=>(url_for(new_wiki_wikicategoria_path)), :method=>"get" %></div>
-        Categorias
+    <th class="titulo_wiki">InfoWiki</th>
+    <th class="titulo_categoria">
+        <h3>Categorias</h3>
     </th>
   </tr>
   <tr>
-    <td>
+    <td class="conteudo_wiki">
       <h3>Busca no Conteúdo Wiki</h3>
       <% form_remote_tag :url=>{:controller=>"/wiki/wikicategorias/busca"} do -%>
         <%= text_field_tag :filtro %>

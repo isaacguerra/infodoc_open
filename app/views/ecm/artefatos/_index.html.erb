@@ -3,12 +3,12 @@
   <% if @new_form.size > 0 and @cadastro.formulario.permissao(@sessao_usuario.usuario) > 1 %>
   <div class="formulario">
     <% form_remote_tag :url=>(url_for(new_ecm_cadastro_artefato_path(@cadastro))), :method=>"get" do -%>
-      <%= select_tag :formulario_id, options_for_select(@new_form) %>
       <%= submit_tag 'Novo Artefato' %>
+      <%= select_tag :formulario_id, options_for_select(@new_form) %>
     <% end -%>
   </div>
   <% end %>
-  <div id="link_botao">
+  <div class="hide_artefato">
     <%= link_to_remote "Esconder Artefatos", :url=>{:controller=>"/ecm/artefatos", :action=>"clean"}, :method=>"get" %>
   </div>
 </div>

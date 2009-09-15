@@ -1,6 +1,8 @@
 <div id="barra_titulo">
-  <h3 class="titulo_index"><%= @wikicategoria.nome %></h3>
-  <div id="link_botao">
+  <h3 class="titulo_cat_infowiki"><%= @wikicategoria.nome %></h3>
+  <div class="new_novo"><%= link_to "Nova Pagina", new_wiki_wikicategoria_wikipage_path(@wikicategoria) %></div>
+  <div class="new_subcategoria"><%= link_to_remote "Nova Sub-Categoria", :url=>{:controller=>"/wiki/wikicategorias", :action=>"new", :wikicategoria_id=>@wikicategoria}, :method=>"get" %></div>
+  <div class="voltar">
     <% if @wikicategoria.parent_id %>
       <%= link_to "Voltar", wiki_wikicategoria_path(@wikicategoria.parent_id) %>
     <% else %>
@@ -8,19 +10,19 @@
     <% end %>
   </div>
 </div>
-<table id="listar">
+<table id="wiki">
   </tr>
-    <th class="titulo_lista">
-      <div id="link_botao"><%= link_to "Nova Pagina", new_wiki_wikicategoria_wikipage_path(@wikicategoria) %></div>
+    <th class="titulo_wiki">
+      
       Paginas do Infowiki
     </th>
-    <th class="titulo_lista">
-        <div id="link_botao"><%= link_to_remote "Nova Sub-Categorias", :url=>{:controller=>"/wiki/wikicategorias", :action=>"new", :wikicategoria_id=>@wikicategoria}, :method=>"get" %></div>
-        Sub-Categorias
+    <th class="titulo_categoria">
+        
+        <h3>Sub-Categorias</h3>
     </th>
   </tr>
   <tr>
-    <td>
+    <td class="conteudo_wiki">
       <h3>Busca no Conteúdo Wiki</h3>
       <% form_remote_tag :url=>{:controller=>"/wiki/wikicategorias/busca"} do -%>
         <% if @wikicategoria %>

@@ -1,8 +1,8 @@
 <div id="barra_titulo">
   <h3 class="titulo_show">Entidade</h3>
-  <div id="link_botao"><%= link_to "Ativar/Desativar", {:controller=>"/core/entidades", :action=>"mudar_status", :id=>@entidade}, :confirm => 'Você tem certesa que quer ativar eu desativar esta entidade?' %></div>
-  <div id="link_botao"><%= link_to 'Editar', edit_core_entidade_path(@entidade) %></div>
-  <div id="link_botao"><%= link_to 'Usuarios', core_entidade_usuarios_path(@entidade) %></div>
+  <div  class="abilita"><%= link_to "Ativar/Desativar", {:controller=>"/core/entidades", :action=>"mudar_status", :id=>@entidade}, :confirm => 'Você tem certesa que quer ativar eu desativar esta entidade?' %></div>
+  <div class="edit"><%= link_to 'Editar', edit_core_entidade_path(@entidade) %></div>
+  <div class="usuarios_index"><%= link_to 'Usuarios', core_entidade_usuarios_path(@entidade) %></div>
 </div>
 
 <table id="listar">
