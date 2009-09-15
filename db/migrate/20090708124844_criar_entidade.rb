@@ -14,6 +14,12 @@ class CriarEntidade < ActiveRecord::Migration
       t.string :telefone_responsavel
       t.string :email_responsavel
       t.boolean :status,:default=>true
+      t.string :tema
+
+      t.string :logo_file_name
+      t.string :logo_content_type
+      t.integer :logo_file_size
+
       t.timestamps
     end
     add_index :entidades, :nome

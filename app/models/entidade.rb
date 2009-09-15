@@ -2,6 +2,7 @@ class Entidade < ActiveRecord::Base
    has_many :usuarios
    has_many :grupos
    has_many :moduloentidades
+   has_attached_file :logo
 
    validates_presence_of :nome
    validates_presence_of :cpf_cnpj

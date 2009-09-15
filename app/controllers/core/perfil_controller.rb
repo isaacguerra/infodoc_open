@@ -20,8 +20,6 @@ class Core::PerfilController < ApplicationController
       flash[:notice] = "Senha Atual não Confere"
       render :action=>"edit"
     end
-
   end
-
 end
 

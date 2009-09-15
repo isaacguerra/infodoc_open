@@ -13,6 +13,7 @@ class Core::AdminusuariosController < ApplicationController
 
   def create
     @usuario = Usuario.new(params[:usuario])
+    @usuario.entidade_id = @sessao_usuario.entidade_id
     @usuario.status = true
 	  if @usuario.save
 	    flash[:notice] = "Usuario Criado com Sucesso!"

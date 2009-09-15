@@ -3,11 +3,13 @@
 </div>
 
 <div class="formulario">
-  <% form_for @usuario, :url=>{:action=>'update'} do |f| %>
+  <% form_for @usuario, :url=>{:action=>'update'}, :html => { :multipart => true } do |f| %>
     <%= f.error_messages %>
     <%= f.label :nome %><br><%= f.text_field :nome %><br>
     <%= f.label :email, 'E-mail' %><br><%= f.text_field :email %><br>
     <%= f.label :login %><br><%= f.text_field :login %><br>
+    <%= f.label :avatar %><br><%= f.file_field :avatar %><br><br>
+
     <%= f.label :senha %><br><%= f.password_field :senha %><br>
     <%= f.label :senha_confirmation, 'Confime a Senha' %><br><%= f.password_field :senha_confirmation %><br>
     <%= f.submit 'Salvar', :class=>"botao_formulario" %>

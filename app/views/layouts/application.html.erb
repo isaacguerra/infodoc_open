@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <%= stylesheet_link_tag "/theme/infodoc/stylesheets/intranet.css" %>
+    <%= stylesheet_link_tag "/theme/#{@sessao_usuario.entidade.tema}/stylesheets/intranet.css" %>
     <%= stylesheet_link_tag "/theme/infodoc/stylesheets/scaffold.css" %>
     <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag "/theme/infodoc/javascripts/ddlevelsmenu.js" %>
@@ -16,10 +16,20 @@
   <body>
     <div id="topo">
         <div id="logo">
-          <img src="/images/infodoc.gif" />
+          <% if @sessao_usuario.entidade.logo_file_name %>
+            <%= image_tag @sessao_usuario.entidade.logo.url %>
+          <% else %>
+            <%= image_tag "infodoc.gif" %>
+          <% end %>
+
         </div>
 
         <div id="status">
+          <% if @sessao_usuario.usuario.avatar_file_name %>
+            <%= image_tag @sessao_usuario.usuario.avatar.url, :size=>"50x50" %>
+          <% else %>
+            <%= image_tag "user.png" %>
+          <% end %>
           <b>Login: </b><i><%= @sessao_usuario.usuario.nome %></i><br>
           <b>Entidade: </b><i><%= @sessao_usuario.usuario.entidade.nome %></i><br><br>
           <i><%= link_to "Ajudas", "/ajuda", :popup=>true %></i>

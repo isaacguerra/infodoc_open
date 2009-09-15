@@ -1,5 +1,6 @@
 class Sessao < ActiveRecord::Base
     belongs_to :usuario
+    belongs_to :entidade
 
     serialize :opcoes
 

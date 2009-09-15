@@ -5,7 +5,7 @@ class Core::InstallController < ApplicationController
 
   def index
     @log  = ""
-    entidade = Entidade.create(:nome=>"Infomanager", :razao_social=>"Infomanager Ltda", :cpf_cnpj=>"08505672000160", :cidade=>"Macapá", :endereco=>"Rua Iraci Nunes Nadler, nº 346", :bairro=>"Santa Nines", :cep=>"68901-380", :telefone=>"3242-5877", :email=>"comercial@infomanagerbrasil.com.br", :nome_responsavel=>"Isaac de Almeida Gerra", :telefone_responsavel=>"8113-8057", :email_responsavel=>"isaac@infomanagerbrasil.com.br", :status=>true)
+    entidade = Entidade.create(:nome=>"Infomanager", :razao_social=>"Infomanager Ltda", :cpf_cnpj=>"08505672000160", :cidade=>"Macapá", :endereco=>"Rua Iraci Nunes Nadler, nº 346", :bairro=>"Santa Nines", :cep=>"68901-380", :telefone=>"3242-5877", :email=>"comercial@infomanagerbrasil.com.br", :nome_responsavel=>"Isaac de Almeida Gerra", :telefone_responsavel=>"8113-8057", :email_responsavel=>"isaac@infomanagerbrasil.com.br", :status=>true, :tema=>"infodoc")
     @log << "#ID da Entidade - #{entidade.id}\n"
     madmg = Modulo.create(:nome=>"Administração Geral", :descricao=>"Administração Geral")
     @log << "#ID da modulos Administracao Geral - #{madmg.id}\n"
@@ -54,6 +54,8 @@ class Core::InstallController < ApplicationController
     @log << "#ID do sistema de Vinculacao Sistema a grupos - #{vincularsistemagrupo.id}\n"
     perfil = Sistema.create(:nome=>"Perfil do Usuario", :descricao=>"Perfil do Usuario", :rota=>"/core/perfil", :controle=>"Core::PerfilController", :menu=>true, :status=>true, :modulo_id=>madm.id)
     @log << "#ID do sistema de Perfil - #{perfil.id}\n"
+    perfilentidade = Sistema.create(:nome=>"Perfil da Entidade", :descricao=>"Perfil da Entidade", :rota=>"/core/perfilentidades", :controle=>"Core::PerfilentidadesController", :menu=>true, :status=>true, :modulo_id=>madm.id)
+    @log << "#ID do sistema de Perfil da entidade - #{perfilentidade.id}\n"
 
     cadastro = Sistema.create(:nome=>"Cadastros", :descricao=>"Cadastro", :rota=>"/ecm/cadastros", :controle=>"Ecm::CadastrosController", :menu=>false, :status=>true, :modulo_id=>mgc.id)
     @log << "#ID do sistema  de Gerencia de Cadastro - #{cadastro.id}\n"

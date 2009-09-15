@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
     core.resources :admingrupos, :has_many=>:grupousuarios
     core.resources :adminusuarios, :has_many=>:adminmudarsenhas
     core.resources :perfil
+    core.resources :perfilentidades
   end
 
   map.namespace :ecm do |ecm|

@@ -209,6 +209,10 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
     t.string   "telefone_responsavel"
     t.string   "email_responsavel"
     t.boolean  "status",                             :default => true
+    t.string   "tema"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -367,7 +371,10 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
     t.string   "email"
     t.string   "senha_encriptada"
     t.string   "chave_criptografia"
-    t.boolean  "status",             :default => true
+    t.boolean  "status",              :default => true
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,16 +1,11 @@
 class Core::GruposistemasController < ApplicationController
   def index
-    sv = []
-    @sessao_usuario.usuario.entidade.moduloentidades.each do |me|
-      me.modulo.sistemas.each {|s| sv << s.id}
-    end
-    @gruposistemas = Gruposistema.find(:all, {:conditions=>["grupo_id = ? ", params[:admingrupo_id]]}).collect {|s| s if sv.include?(s.sistema_id)}.compact
-
-    if @gruposistemas.size > 0
-      @gruposistemas.collect {|u| sv.delete(u.sistema_id)}
-      @sistemas = Sistema.all.collect {|sf| sf if sv.include?(sf.id)}.compact!
+    @grupo = Grupo.find(params[:admingrupo_id])
+    if @grupo.gruposistemas.size > 0
+      sd = @grupo.gruposistemas.collect {|s| s.sistema_id}
+      @sistemas = Sistema.find(:all, {:conditions=>["modulo_id in (?) and id not in (?)", @sessao_usuario.entidade.moduloentidades.collect {|me| me.modulo_id}, sd]})
     else
-      @sistemas = Sistema.all.collect {|sf| sf if sv.include?(sf.id)}.compact!
+      @sistemas = Sistema.find(:all, {:conditions=>["modulo_id in (?)", @sessao_usuario.entidade.moduloentidades.collect {|me| me.modulo_id}]})
     end
   end
 

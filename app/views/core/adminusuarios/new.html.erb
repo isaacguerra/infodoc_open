@@ -3,19 +3,20 @@
 </div>
 
 <div class="formulario">
-  <% form_for @usuario, :id=>"forms", :url=>{:action=>'create'} do |f| %>
+  <% form_for @usuario, :url=>{:action=>'create'}, :html => { :multipart => true } do |f| %>
     <%= f.error_messages %>
-    <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.usuario.entidade_id %>
     <%= f.label :nome %><br><%= f.text_field :nome %><br>
     <%= f.label :email, 'E-mail' %><br><%= f.text_field :email %><br>
-    <%= f.label :login, 'Login' %><br><%= f.text_field :login %><br>
+    <%= f.label :login %><br><%= f.text_field :login %><br>
+    <%= f.label :avatar %><br><%= f.file_field :avatar %><br><br>
+
     <%= f.label :senha %><br><%= f.password_field :senha %><br>
-    <%= f.label :senha_confirmation, 'Confirmar Senha'%><br><%= f.password_field :senha_confirmation %><br>
+    <%= f.label :senha_confirmation, 'Confirme a Senha' %><br><%= f.password_field :senha_confirmation %><br>
     <%= f.submit 'Salvar', :class=>"botao_formulario" %>
   <% end %>
 </div>
 
 <div id="link_voltar">
-  <%= link_to 'Voltar', core_admingrupos_path %>
+  <%= link_to 'Voltar', core_adminusuarios_path %>
 </div>
 

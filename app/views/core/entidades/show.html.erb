@@ -58,6 +58,14 @@
     <td class="lista_item">Status</td>
     <td class="lista_conteudo"><%= status(@entidade.status) %></td>
   </tr>
+  <tr>
+    <td class="lista_item">Tema</td>
+    <td class="lista_conteudo"><%= @entidade.tema %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Logomarca</td>
+    <td class="lista_conteudo"><%= image_tag @entidade.logo.url %></td>
+  </tr>
 </table>
 <div id="link_voltar">
   <%= link_to 'Voltar', core_entidades_path %>

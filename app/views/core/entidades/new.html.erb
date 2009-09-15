@@ -3,7 +3,7 @@
 </div>
 
 <div class="formulario">
-  <% form_for @entidade, :url=>{:action=>'create'} do |f| %>
+  <% form_for @entidade, :url=>{:action=>'create'}, :html => { :multipart => true } do |f| %>
     <%= f.error_messages %>
     <%= f.label :nome %><br><%= f.text_field :nome %><br>
     <%= f.label :razao_social %><br><%= f.text_field :razao_social %><br>
@@ -16,7 +16,11 @@
     <%= f.label :email, 'E-mail'%><br><%= f.text_field :email %><br>
     <%= f.label :nome_responsavel, 'Nome do Responsavel' %><br><%= f.text_field :nome_responsavel %><br>
     <%= f.label :telefone_responsavel, 'Telefone do Responsavel' %><br><%= f.text_field :telefone_responsavel %><br>
-    <%= f.label :email_responsavel, 'E-mail do Responsavel' %><br><%= f.text_field :email_responsavel %><br>
+    <%= f.label :email_responsavel, 'E-mail do Responsavel' %><br><%= f.text_field :email_responsavel %><br><br>
+
+    <%= f.label :tema, 'Tema' %><br><%= f.select :tema, Dir.open("public/theme").collect {|t| [t] if t != "." and t != ".."}.compact %><br>
+    <%= f.label :logo, 'Logomarca' %><br><%= f.file_field :logo %>
+
     <%= f.submit 'Salvar', :class=>"botao_formulario" %>
   <% end %>
 </div>

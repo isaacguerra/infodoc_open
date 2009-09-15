@@ -3,6 +3,7 @@ class Usuario < ActiveRecord::Base
     has_one :sessao
     has_many :grupousuarios
     has_many :grupos, :through => :grupousuarios
+    has_attached_file :avatar
 
     attr_accessor :senha
     attr_accessor :senha_confirmation

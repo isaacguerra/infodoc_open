@@ -15,14 +15,14 @@ class Core::EntidadesController < ApplicationController
     @entidade = Entidade.find params[:id]
     modulo = Modulo.find(:first, :conditions=>{:nome=>"Administração"})
     vmadm = Moduloentidade.create(:entidade_id=>@entidade.id, :modulo_id=>modulo.id)
-    grupoadministrador = Grupo.create(:entidade_id=>@entidade.id, :nome=>"Administradores", :descrição=>"Administradores")
+    grupoadministrador = Grupo.create(:entidade_id=>@entidade.id, :nome=>"Administradores", :descricao=>"Administradores")
     modulo.sistemas.each do |s|
       Gruposistema.create(:grupo_id=>grupoadministrador.id, :sistema_id=>s.id, :permissao=>3)
     end
     u = Usuario.new
     @senha = u.random_alphanumeric(6)
     @usuario = Usuario.create(:entidade_id=>@entidade.id, :nome=>@entidade.nome, :login=>@entidade.cpf_cnpj, :email=>@entidade.email_responsavel, :senha=>@senha, :status=>true)
-    Grupousuario.create(:usuario_di=>@usuario.id, :grupo_id=>grupoadministrador.id)
+    Grupousuario.create(:usuario_id=>@usuario.id, :grupo_id=>grupoadministrador.id)
   end
 
   def create

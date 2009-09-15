@@ -8,6 +8,11 @@ class CriarUsuario < ActiveRecord::Migration
       t.string :senha_encriptada, nil=>false
       t.string :chave_criptografia, nil=>false
       t.boolean :status,:default=>true
+
+      t.string :avatar_file_name
+      t.string :avatar_content_type
+      t.integer :avatar_file_size
+
       t.timestamps
     end
     add_index :usuarios, :entidade_id

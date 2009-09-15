@@ -7,7 +7,7 @@
    <tr>
      <th class="titulo_lista">Sistemas Inclusos no Grupo</th>
     </tr>
-    <% @gruposistemas.each do |gs| %>
+    <% @grupo.gruposistemas.each do |gs| %>
     <tr>
       <td>
        <%= check_box_tag "sistemas[]", gs.id %>
