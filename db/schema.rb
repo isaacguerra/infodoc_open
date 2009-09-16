@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
     t.string   "objeto_content_type"
     t.integer  "objeto_file_size"
     t.datetime "objeto_updated_at"
+    t.text     "ocr"
   end
 
   create_table "cadastros", :force => true do |t|

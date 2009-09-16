@@ -7,6 +7,7 @@ class CreateArtefatos < ActiveRecord::Migration
       t.string :objeto_content_type
       t.integer :objeto_file_size
       t.datetime :objeto_updated_at
+      t.text :ocr
     end
   end
 

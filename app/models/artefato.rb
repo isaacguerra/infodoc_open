@@ -7,5 +7,29 @@ class Artefato < ActiveRecord::Base
 
   validates_presence_of :cadastro_id
   validates_presence_of :entidade_id
+
+  def apos_criar
+    file = ""
+    file_ocr = ""
+
+    size = self.objeto.path.size
+    if self.objeto_content_type == "image/tiff"
+      file = self.objeto.path
+      file_ocr = "#{self.objeto.path[0..size-5]}"
+    elsif self.objeto_content_type == "image/gif" or self.objeto_content_type == "image/bmp" or self.objeto_content_type == "image/jpg" or self.objeto_content_type == "image/png" or self.objeto_content_type == "image/bmp" or self.objeto_content_type == "image/jpeg"
+      file_origem = self.objeto.path
+      file_ocr = "#{self.objeto.path[0..size-5]}"
+      file = "#{self.objeto.path[0...size-3]}tif"
+      system "convert #{file_origem} #{file}"
+    end
+
+    unless file_ocr == ""
+      if system "tesseract #{file} #{file_ocr} -l por"
+        f = File.open("#{file_ocr}.txt", 'r')
+        self.ocr = f.read
+        self.save
+      end
+    end
+  end
 end
 
