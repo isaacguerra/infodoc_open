@@ -1,0 +1,14 @@
+<div id="colunadireita">
+  <h4> Noticias </h4>
+  <div class="noticiap">
+    <h2>NOTICIA PRINCIPAL   </h2>
+  </div>
+  <div id="noticias">
+  </div>  
+</div>
+<div id="colunaesquerda">
+  <h4>Publicados  </h4>
+  <div class="publicacao">
+    <h5>Titulo</h5>
+  </div>
+</div>
