@@ -25,14 +25,32 @@
         </div>
 
         <div id="status">
-          <% if @sessao_usuario.usuario.avatar_file_name %>
-            <%= image_tag @sessao_usuario.usuario.avatar.url, :size=>"50x50" %>
-          <% else %>
-            <%= image_tag "user.png" %>
-          <% end %>
-          <b>Login: </b><i><%= @sessao_usuario.usuario.nome %></i><br>
-          <b>Entidade: </b><i><%= @sessao_usuario.usuario.entidade.nome %></i><br><br>
-          <i><%= link_to "Ajudas", "/ajuda", :popup=>true %></i>
+          <div id="avatar">
+            <% if @sessao_usuario.usuario.avatar_file_name %>
+              <%= image_tag @sessao_usuario.usuario.avatar.url, :size=>"50x50" %>
+            <% else %>
+              <%= image_tag "user.png" %>
+            <% end %>
+          </div>
+          <div id="dados_perfil">  
+            <b>Usuário: </b><%= @sessao_usuario.usuario.nome %><br>
+            <b>Entidade: </b><%= @sessao_usuario.usuario.entidade.nome %><br><br>
+            
+          </div>
+            <div id="menu_perfil">
+              <ul>
+                <li>
+                  <a href="/core/perfil">Perfil</a> |
+                </li>
+                <li>
+                  <%= link_to "Ajudas", "/ajuda", :popup=>true %> |
+                </li>
+                <li>
+                  <a href="/core/login/logout">logout</a>
+                </li>
+                
+              </ul>  
+            </div>
         </div>
     </div>
     <div id="menu_nav">
