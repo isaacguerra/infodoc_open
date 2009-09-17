@@ -18,7 +18,9 @@
     <% @cadastro.children.each do |artefato| %>
     <tr>
       <td class="lista_item">
-       <%= link_to("download", :controller=>"/ecm/artefatos/download/#{artefato.id}") %>
+      <div class="download_artefato">
+         <%= link_to("download", :controller=>"/ecm/artefatos/download/#{artefato.id}") %>
+      </div>   
       </td>
        <td class="lista_conteudo"">
         <h3><%= artefato.formulario.titulo %></h3>
@@ -31,9 +33,11 @@
             <% end %>
         </ul>
        </td>
-       <td>
+       <td class="lista_item">
           <% if @cadastro.formulario.permissao(@sessao_usuario.usuario) > 2  %>
+           <div class="delete"> 
             <%= link_to("Excluir", ecm_cadastro_artefato_path(@cadastro, artefato), :method=>"delete", :confirm => 'Exclur permanentemente o Cadastro e todos seus artefatos?') %>
+           </div>
           <% end %>
        </td>
     </tr>

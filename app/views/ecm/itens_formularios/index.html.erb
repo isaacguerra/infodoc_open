@@ -6,7 +6,7 @@
   <tr>
     <th class="titulo_lista">Rotulo</th>
     <th class="titulo_lista">Componente</th>
-    <th class="titulo_lista">Posicionamento</th>
+    <th class="titulo_curto">Posicionamento</th>
   </tr>
     <% @form_itens.each do |form_item| %>
     <tr>
@@ -16,15 +16,16 @@
       <td class="itens_index">
         <%= form_item.itenstipo.nome %>
       </td>
-      <td>
+      <td class="itens_curto">
       <%= link_to '.', ecm_formulario_itens_formulario_path(@formulario, form_item,:acao=>"sobe"),:class=>"sobe" %>
       <%= link_to '.', ecm_formulario_itens_formulario_path(@formulario, form_item,:acao=>"desce"), :class=>"desce" %>
       </td>
     </tr>
 	  <% end %>
 </table>
-<%= link_to "Voltar", ecm_categoria_formularios_path(@formulario.formulariocategoria_id) %></td>
-
+<div id="link_voltar">
+  <%= link_to "Voltar", ecm_categoria_formularios_path(@formulario.formulariocategoria_id) %></td>
+</div>
 
 <h2>Preview</h2>
 <table class="formulario">

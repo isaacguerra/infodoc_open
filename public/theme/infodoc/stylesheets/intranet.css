@@ -410,7 +410,8 @@ input.enviar                          {
 
                             }
 
-.itens_index
+.itens_index,
+.itens_curto
                             {
 
                             font-size:0.8em;
@@ -420,6 +421,7 @@ input.enviar                          {
                             padding-left: 30px;
                             width:auto;
                             height:1em;
+                            border-left:1px solid #EDEDED;
 
 
                             }
@@ -427,14 +429,18 @@ input.enviar                          {
 .itens_index li             { list-style-type: none; }
 
 
-.titulo_lista               { background-image:url("/theme/infodoc/images/fil4.jpg");
+.titulo_lista,
+.titulo_curto               {
+                              background-image:url("/theme/infodoc/images/fil4.jpg");
                               background-repeat: repeat-x;
                               border-left: 1px solid #CCCCCC;
                               border-right: 1px solid #EDEDED;
                             }
 
 .titulo_lista,
-.lista_item
+.lista_item,
+.titulo_curto,
+.itens_curto
                             {
 
                              font-size:0.9em;
@@ -448,6 +454,9 @@ input.enviar                          {
                              border-bottom: 1px solid #EDEDED;
 
                              }
+.titulo_curto,
+.itens_curto   { width:12%; text-align:center;padding:10px 0 10px 0px; }
+
 .lista_item th               { margin-left:20px; }
 .titulo_lista a,
 #titulo_lista a:hover
@@ -584,7 +593,7 @@ BOTOES==============================*/
                                background-position: center top;
                                color: #8C1C1C;
                                font-size:0.7em;
-                               font-weight:bold;
+                               font-weight:normal;
                                width:auto;
                                height:15px;
                                text-decoration: none;
@@ -636,36 +645,36 @@ BOTOES==============================*/
 
 .new_comentario a           { 
                               background-image: url("/theme/infodoc/images/add_comentario.png");
-                              font-size:0.5em;
+                              font-size:0.7em;
                               padding-top:25px;
                              }
 
 .hide_comentario a           { 
                                   background-image: url("/theme/infodoc/images/hide_comentario.png");
-                                  color:#CCCCCC;
-                                  font-size:0.5em;
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
                                   padding-top:25px;
                              }
                              
 .hide_historico a           { 
                                   background-image: url("/theme/infodoc/images/hide_historico.png");
-                                  color:#CCCCCC;
-                                  font-size:0.5em;
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
                                   padding-top:25px;
                              }
 
 .hide_artefato a                { 
                                   background-image: url("/theme/infodoc/images/hide_artefato.png");
-                                  color:#CCCCCC;
-                                  font-size:0.5em;
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
                                   padding-top:25px;
 
                                 }
 
 .hide_relacionamento a          { 
                                   background-image: url("/theme/infodoc/images/hide_relacionamento.png");
-                                  color:#CCCCCC;
-                                  font-size:0.5em;
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
                                   padding-top:25px;
                                 }
 
@@ -675,7 +684,7 @@ BOTOES==============================*/
                                             border:0; 
                                             padding-top:25px; 
                                             padding-bottom:15px;
-                                            font-size:0.5em;
+                                            font-size:0.7em;
                                             margin-left:2px;
                                             cursor:pointer;
                                           }
@@ -853,7 +862,9 @@ BOTOES==============================*/
 
                                     float:left;
                                     color:#E0E0E0;
-                                    background-color:#8C1C1C;
+                                    /* background-color:#8C1C1C; */
+                                    background-image: url("/theme/infodoc/images/fundo_botoes.png");
+                                    background-position:center;
                                     padding: 0 4px;
                                     text-align:center;
                                     height:24px;
@@ -863,12 +874,13 @@ BOTOES==============================*/
                                     margin:5px 0;
                                     color: #ffffff;
                                     font-weight:bold;
-                                    background-color:#8C1C1C;
+                                   
                                     border:0;
                                     cursor:pointer;
 
                                 }
 
+.formulario input[type=submit]:hover { background-position:bottom; }
 .formulario .lista_conteudo     { border: 1px solid #FFFFFF }
 input[type=text],
 input[type=password]            {
@@ -1182,17 +1194,11 @@ div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px
                             
 #artefatos .formulario        { margin:0;}
 
-#artefatos div.formulario     { width:77.8%; float:left; padding:0; border:0; margin:0;}
+#artefatos div.formulario     { width:74.8%; float:left; padding:0; border:0; margin:0;}
 
-#artefatos .formulario select { 
-                                font-size:1em;
-                                color:#8C1C1C; 
-                                height:2.5em; 
-                                width:200px; 
-                                padding:6px 0; 
-                                float:right;
-                               }
-#artefatos .formulario option  { height:2.0em; padding-top:6px; }
+#artefatos .formulario select { color:#8C1C1C; float:right; margin:0 22px; vertical-align:middle;}
+                               
+#artefatos .formulario option  {  }
 /*
 #artefatos .formulario input[type=submit]  { 
                                             
@@ -1239,17 +1245,22 @@ div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px
 #artefatos input[type=submit]:hover { color:#FFFFFF; }
 
 #artefatos #listar { border:1px solid #CCCCCC; padding-bottom:2px; margin:6px 0.1% ;} 
-
-#artefatos #listar a  { 
+#artefatos #listar .download_artefato a,
+#artefatos #listar .delete a             { 
                         padding-top:50px; 
-                        background-image: url("/theme/infodoc/images/download.png");
                         background-position:center;
                         background-repeat: no-repeat;
-                        margin:0; margin-top:20px;
+                        margin:0; margin-top:10px;
+                        float:right;
+                        margin:4% 35%;
                         
-                      }
+                                          }
+#artefatos #listar .delete a:hover { background-color:#F2F2F2; }
+#artefatos #listar .download_artefato a { background-image: url("/theme/infodoc/images/download.png"); }
+
                      
-#artefatos #listar a:hover { text-decoration:none; padding-top: 40px; }  
+#artefatos #listar .download_artefato a:hover { text-decoration:none; padding-top: 40px; outline:1px solid #D1D1D1; background-color:#F2F2F2;}  
+
 
 #artefatos td           { 
 
