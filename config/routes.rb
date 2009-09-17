@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   # The priority is based upon order of creation: first created -> highest priority.
 
   map.namespace :core do |core|
-    core.resources :login
+    core.resources :login, :collection=>{:logout=>:get}
     core.resources :entidades, :has_many => :grupos
     core.resources :entidades, :has_many => :usuarios
     core.resources :entidades, :has_many => :moduloentidades

@@ -52,6 +52,7 @@ class Ecm::ArtefatosController < ApplicationController
       @artefato.entidade_id = @cadastro.entidade_id
       @artefato.objeto = params[:cadastro][:objeto]
       @artefato.save
+      @artefato.apos_criar
       flash[:notice] = "Artefato Criada com Sucesso!"
       redirect_to ecm_formulario_cadastro_path(@parent.formulario_id, @parent)
     end
