@@ -10,10 +10,10 @@ a                                   { color:#000000; text-decoration:none; }
 
 a:hover                             { text-decoration:underline; }
 
-td                                  { font-size:0.8em;
-                                      padding:5px;
-                                      padding-left:6px;
-                                      border-bottom: 1px solid #EDEDED;
+td                                  { font-size:0.9em;
+                                      padding:0 5px 0 0;
+                                      
+                                      
                                     }
 
 table                               {  margin-bottom:0; }
@@ -409,7 +409,7 @@ input.enviar                          {
                             padding:2px 2px 25px;
 
                             }
-
+#listar td                  { border-bottom: 1px solid #EDEDED; }
 .itens_index,
 .itens_curto
                             {
@@ -439,6 +439,7 @@ input.enviar                          {
 
 .titulo_lista,
 .lista_item,
+.form_item,
 .titulo_curto,
 .itens_curto
                             {
@@ -455,7 +456,7 @@ input.enviar                          {
 
                              }
 .titulo_curto,
-.itens_curto   { width:12%; text-align:center;padding:10px 0 10px 0px; }
+.itens_curto   { width:12%; text-align:center;padding:0px; }
 
 .lista_item th               { margin-left:20px; }
 .titulo_lista a,
@@ -478,7 +479,8 @@ input.enviar                          {
                                background-color:#8C1C1C;
                                border:0;
                             }
-                            
+
+
 
 /*========================   WIKI
 */
@@ -924,7 +926,7 @@ textarea                        {
 
 .formulario form li             { margin-left:20px;                                     }
 
-.formulario td li               {
+.formulario td p               {
                                   margin: 5px 0px;
                                   margin-top:2px;
                                   color:#7D7979;
@@ -932,13 +934,29 @@ textarea                        {
                                   list-style: none;
                                 }
 
-.formulario table               { width:100%; padding-bottom:30px;                      }
+/*.formulario table               { width:100%; padding-bottom:30px;                      }*/
 
 /*.formulario p { float:left; width:60%; margin:0px; }*/
 
-div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px;}
+div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px; display:table;}
+td.form_item { padding-left:0; border:none;}
 
-#form_item                      { width:auto;}
+#form_item               { width:auto;}
+#form_item table         { width: 100%; border-collapse:separate; border-spacing:0px;}
+#form_item h3            { font-size: 1em;}
+#form_item td h3         { font-size: 1.5em; }
+#form_item p             { font-size: 0.9em;} 
+#form_item td p          { font-size: 0.9em; } 
+#form_item td.lista_item { color: #000000; font-weight: bold; font-size:0.8em;}
+#form_item td.lista_conteudo { font-size:0.8em; } 
+
+.lista_linha  { display:table-row; }
+div.lista_item { width:43.5%; display:table-cell ; }
+div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding:0 0 0 6px;}
+
+#ajax_item { font-size:1em; }  
+#form_item #ajax_item td.lista_item    { font-size: 1em; }
+#form_item #ajax_item td.lista_conteudo{ font-size: 1em; }
 
 .form_item_exemplo              {
 

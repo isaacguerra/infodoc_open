@@ -2,19 +2,41 @@
   <h3 id="titulo_edit">Editar Usuario</h3>
 </div>
 
-<div class="formulario">
+<table class="formulario">
   <% form_for @usuario, :url=>{:action=>'update'}, :html => { :multipart => true } do |f| %>
-    <%= f.error_messages %>
-    <%= f.label :nome %><br><%= f.text_field :nome %><br>
-    <%= f.label :email, 'E-mail' %><br><%= f.text_field :email %><br>
-    <%= f.label :login %><br><%= f.text_field :login %><br>
-    <%= f.label :avatar %><br><%= f.file_field :avatar %><br><br>
-
-    <%= f.label :senha %><br><%= f.password_field :senha %><br>
-    <%= f.label :senha_confirmation, 'Confirme a Senha' %><br><%= f.password_field :senha_confirmation %><br>
-    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+    <tr>  
+      <td class="error_messages"><%= f.error_messages %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.label :nome %></td>
+      <td class="lista_conteudo"><%= f.text_field :nome %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.label :email, 'E-mail' %></td>
+      <td class="lista_conteudo"><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.label :login %></td>
+      <td class="lista_conteudo"><%= f.text_field :login %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.label :avatar %></td>
+      <td class="lista_conteudo"><%= f.file_field :avatar %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.label :senha %></td>
+      <td class="lista_conteudo"><%= f.password_field :senha %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.label :senha_confirmation, 'Confirme a Senha' %></td>
+      <td class="lista_conteudo"><%= f.password_field :senha_confirmation %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"/>
+      <td class="lista_conteudo"><%= f.submit 'Salvar', :class=>"botao_formulario" %></td>
+    </tr>
   <% end %>
-</div>
+</table>
 
 <div id="link_voltar">
   <%= link_to 'Voltar', core_adminusuarios_path %>

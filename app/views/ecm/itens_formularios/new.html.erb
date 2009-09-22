@@ -3,18 +3,25 @@
 </div>
 <div class="formulario">
   <% form_for @form_item, :url=>{:action=>'create'} do |f| %>
-    <%= f.error_messages %>
-    <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.entidade_id %>
-    <%= f.hidden_field :formulario_id, :value=>@formulario.id %>
-    <p><%= f.label :rotulo %><%= f.text_field :rotulo %></p>
-    Componente:<%= f.select :itenstipo_id, Itenstipo.ativo.all.collect {|i| [i.nome, i.id]}, :prompt=>"--"  %><br>
-    <%= observe_field "itensformulario_itenstipo_id",
-                    :frequency => 1,
-                    :url => {:action => "montaformitem"},
-                    :with => "'itenstipo_id='+escape(value)" %>
-    <div id='form_item'>
+        <%= f.error_messages %>
+        <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.entidade_id %>
+        <%= f.hidden_field :formulario_id, :value=>@formulario.id %>
+        <div class="lista_linha">
+          <div class="lista_item"><%= f.label :rotulo %></div>
+          <div class="lista_conteudo"><%= f.text_field :rotulo %></div>
+        </div>
+        <div class="lista_linha">  
+          <div class="lista_item">Componente:</div>
+          <div class="lista_conteudo"><%= f.select :itenstipo_id, Itenstipo.ativo.all.collect {|i| [i.nome, i.id]}, :prompt=>"--"  %></div>
+        </div>  
+        <%= observe_field "itensformulario_itenstipo_id",
+                           :frequency => 1,
+                           :url => {:action => "montaformitem"},
+                           :with => "'itenstipo_id='+escape(value)"
+                            %>
+        <div id='form_item'>
 
-    </div>
+        </div>
   <% end %>
 </div>
 <div id="link_voltar">

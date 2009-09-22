@@ -2,28 +2,73 @@
   <h3 class="titulo_new">Cadastrar Entidades</h3>
 </div>
 
-<div class="formulario">
+<table class="formulario">
   <% form_for @entidade, :url=>{:action=>'create'}, :html => { :multipart => true } do |f| %>
-    <%= f.error_messages %>
-    <%= f.label :nome %><br><%= f.text_field :nome %><br>
-    <%= f.label :razao_social %><br><%= f.text_field :razao_social %><br>
-    <%= f.label :cpf_cnpj, 'CPF/CNPJ'%><br><%= f.text_field :cpf_cnpj %><br>
-    <%= f.label :cidade %><br><%= f.text_field :cidade %><br>
-    <%= f.label :endereco, 'Endereço' %><br><%= f.text_field :endereco %><br>
-    <%= f.label :bairro %><br><%= f.text_field :bairro %><br>
-    <%= f.label :cep %><br><%= f.text_field :cep %><br>
-    <%= f.label :telefone %><br><%= f.text_field :telefone %><br>
-    <%= f.label :email, 'E-mail'%><br><%= f.text_field :email %><br>
-    <%= f.label :nome_responsavel, 'Nome do Responsavel' %><br><%= f.text_field :nome_responsavel %><br>
-    <%= f.label :telefone_responsavel, 'Telefone do Responsavel' %><br><%= f.text_field :telefone_responsavel %><br>
-    <%= f.label :email_responsavel, 'E-mail do Responsavel' %><br><%= f.text_field :email_responsavel %><br><br>
-
-    <%= f.label :tema, 'Tema' %><br><%= f.select :tema, Dir.open("public/theme").collect {|t| [t] if t != "." and t != ".."}.compact %><br>
-    <%= f.label :logo, 'Logomarca' %><br><%= f.file_field :logo %>
-
-    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <tr>
+      <td class="error_messages"><%= f.error_messages %></td>
+  </tr>
+  <tr>    
+      <td class="lista_item"><%= f.label :nome %></td>
+      <td class="lista_conteudo"><%= f.text_field :nome %></td>
+  </tr>
+  <tr>
+      <td class="lista_item"><%= f.label :razao_social %></td>
+      <td class="lista_conteudo"><%= f.text_field :razao_social %></td>
+  </tr>
+  <tr>
+      <td class="lista_item"><%= f.label :cpf_cnpj, 'CPF/CNPJ'%></td>
+      <td class="lista_conteudo"><%= f.text_field :cpf_cnpj %></td>
+  </tr>
+  <tr>    
+      <td class="lista_item"><%= f.label :cidade %></td>
+      <td class="lista_conteudo"><%= f.text_field :cidade %></td>
+  </tr>
+  <tr>    
+      <td class="lista_item"><%= f.label :endereco, 'Endereço' %></td>
+      <td class="lista_conteudo"><%= f.text_field :endereco %></td>
+  </tr>
+  <tr>    
+      <td class="lista_item"><%= f.label :bairro %></td>
+      <td class="lista_conteudo"><%= f.text_field :bairro %></td>
+  </tr>
+  <tr>
+      <td class="lista_item"><%= f.label :cep %></td>
+      <td class="lista_conteudo"><%= f.text_field :cep %></td>
+  </tr>
+  <tr>    
+      <td class="lista_item"><%= f.label :telefone %></td>
+      <td class="lista_conteudo"><%= f.text_field :telefone %></td>
+  </tr>
+  <tr>    
+      <td class="lista_item"><%= f.label :email, 'E-mail'%></td>
+      <td class="lista_conteudo"><%= f.text_field :email %></td>
+  </tr>
+  <tr>    
+      <td class="lista_item"><%= f.label :nome_responsavel, 'Nome do Responsavel' %></td>
+      <td class="lista_conteudo"><%= f.text_field :nome_responsavel %></td>
+  </tr>
+  <tr>    
+      <td class="lista_item"><%= f.label :telefone_responsavel, 'Telefone do Responsavel' %></td>
+      <td class="lista_conteudo"><%= f.text_field :telefone_responsavel %></td>
+  </tr>
+  <tr>    
+      <td class="lista_item"><%= f.label :email_responsavel, 'E-mail do Responsavel' %></td>
+      <td class="lista_conteudo"><%= f.text_field :email_responsavel %></td>
+   </tr>
+   <tr>   
+      <td class="lista_item"><%= f.label :tema, 'Tema' %></td>
+      <td class="lista_conteudo"><%= f.select :tema, Dir.open("public/theme").collect {|t| [t] if t != "." and t != ".."}.compact %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"><%= f.label :logo, 'Logomarca' %></td>
+      <td class="lista_conteudo"><%= f.file_field :logo %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"/>
+      <td class="lista_conteudo"><%= f.submit 'Salvar', :class=>"botao_formulario" %></td>
+   </tr>   
   <% end %>
-</div>
+</table>
 
 <div id="link_voltar">
   <%= link_to 'Voltar', core_entidades_path %>

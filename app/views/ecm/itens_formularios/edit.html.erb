@@ -4,8 +4,13 @@
 <div class="formulario">
   <% form_for @form_item, :url=>{:action=>'update'} do |f| %>
     <%= f.error_messages %>
-    <p><%= f.label :rotulo %><%= f.text_field :rotulo %></p>
-    <%= ecm_edit_form_item(@form_item) %>
+     <div class="lista_linha">
+        <div class="lista_item"><%= f.label :rotulo %></div>
+        <div class="lista_conteudo"><%= f.text_field :rotulo %></div>
+     </div> 
+    <div id="form_item">
+      <%= ecm_edit_form_item(@form_item) %>
+    </div>  
   <% end %>
 </div>
 <div id="link_voltar">

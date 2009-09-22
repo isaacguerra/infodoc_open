@@ -2,14 +2,25 @@
   <h3 class="titulo_edit">Editar Usuario</h3>
 </div>
 
-<div class="formulario">
+<table class="formulario">
   <% form_for @usuario, :id=>"forms", :url=>{:action=>'update'} do |f| %>
-    <%= f.error_messages %>
-    <%= f.label :senha %><br><%= f.password_field :senha %><br>
-    <%= f.label :senha_confirmation, 'Confirme a Senha' %><br><%= f.password_field :senha_confirmation %><br>
-    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+   <tr>
+      <td class="error_messages"><%= f.error_messages %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"><%= f.label :senha %></td>
+      <td class="lista_conteudo"><%= f.password_field :senha %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"><%= f.label :senha_confirmation, 'Confirme a Senha' %></td>
+      <td class="lista_conteudo"><%= f.password_field :senha_confirmation %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"/>
+      <td class="lista_conteudo"><%= f.submit 'Salvar', :class=>"botao_formulario" %></td>
+   </tr>
   <% end %>
-</div>
+</table>
 
 <div id="link_voltar">
   <%= link_to 'Voltar', core_adminusuario_path(@usuario) %>

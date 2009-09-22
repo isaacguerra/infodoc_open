@@ -2,15 +2,25 @@
   <h3 id="titulo_edit">Alterar Perfil da Entidade</h3>
 </div>
 
-<div class="formulario">
+<table class="formulario">
   <% form_for @sessao_usuario.entidade, :url=>{:action=>'update'}, :html => { :multipart => true }  do |f| %>
-    <%= f.error_messages %>
-    <%= f.label :Tema %><br>
-    <%= f.select :tema, Dir.open("public/theme").collect {|t| [t] if t != "." and t != ".."}.compact %><br>
-    <%= f.label :Logo %><br><%= f.file_field :logo %><br><br>
-    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+   <tr>   
+      <td class="error_messages"><%= f.error_messages %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"><%= f.label :Tema %></td>
+      <td class="lista_conteudo"><%= f.select :tema, Dir.open("public/theme").collect {|t| [t] if t != "." and t != ".."}.compact %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"><%= f.label :Logo %></td>
+      <td class="lista_conteudo"><%= f.file_field :logo %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"/>
+      <td class="lista_conteudo"><%= f.submit 'Salvar', :class=>"botao_formulario" %></td>
+   </tr>
   <% end %>
-</div>
+</table>
 
 <div id="link_voltar">
   <%= link_to 'Voltar', :action=>"index" %>
