@@ -3,7 +3,7 @@
 body                                {  
                                        margin:0;
                                        padding:0;
-                                       font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+                                       font-family: ""Lucida Grande","Trebuchet MS",Verdana,Helvetica,sans-serif;
                                     }
 
 a                                   { color:#000000; text-decoration:none; }
@@ -162,6 +162,8 @@ h3                                  { color:black; margin:0px; }
                                       float: left;
                                       display: block;
                                       text-decoration: none;
+                                      margin: 0;
+                                      margin-left:1px;
                                       border-right: 1px solid #EDEDED; /*right divider between tabs*/
                                       color: white;
                                     }
@@ -369,8 +371,6 @@ input.enviar                          {
 
 .titulo_edit                { background-image: url("/theme/infodoc/images/edit.png"); }
 
-.titulo_index_infowiki      { background-image: none; }
-
 .titulo_cat_infowiki        { background-image: url("/theme/infodoc/images/categoria.png") }
 
 .titulo_index,
@@ -399,9 +399,7 @@ input.enviar                          {
                             float:left;
                             margin: 6px 0 6px 0px;
                             height:auto;
-
                             background-repeat:repeat-x;
-
                             border: 1px solid #DBDBDB;
                             border-left: 1px solid #CCCCCC;
                             border-right: 1px solid #DBDBDB;
@@ -409,7 +407,7 @@ input.enviar                          {
                             padding:2px 2px 25px;
 
                             }
-#listar td                  { border-bottom: 1px solid #EDEDED; }
+
 .itens_index,
 .itens_curto
                             {
@@ -422,6 +420,7 @@ input.enviar                          {
                             width:auto;
                             height:1em;
                             border-left:1px solid #EDEDED;
+                            border-bottom: #EDEDED;
 
 
                             }
@@ -512,7 +511,7 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                              }
 #wiki .itens_index ul        { padding-left:15px;; }
 #wiki .itens_index li        { list-style: square; font-size:0.9em;}
-#wiki .itens_index           { border-left: 1px solid #EDEDED; padding-left:5px;vertical-align:top;}
+#wiki .itens_index           { border-left: 1px solid #EDEDED;border-bottom: 1px solid #FFFFFF; padding-left:5px;vertical-align:top;}
 #wiki #link_botao            { float:left; text-align:left; background:none; width:40%;padding:0;}  
 #wiki #link_botao a          { display:inline; color:#000000; margin:0;}
 #wiki #link_botao a:hover    { text-decoration:underline; }
@@ -562,7 +561,8 @@ BOTOES==============================*/
                             }
 
 
-
+/* ===================================================
+# BOTOES DE NAVEGACAO*/  
                             
 #artefatos .formulario input[type=submit], 
 .new_entidade a,
@@ -723,7 +723,8 @@ BOTOES==============================*/
                             }
 #artefatos .formulario input[type=submit]:hover { color: #8C1C1C;}
 
-                           
+/*======================================
+*/                           
 
 .lista_item                 {
 
@@ -731,13 +732,10 @@ BOTOES==============================*/
                                 text-align:right;
                                 padding:5px 0;
                                 padding-right:6px;
-                                width:10%;
                                 min-width:15%;
+                                width:10%;
                                 background-color:#f2f2f2;
-
-                                border-top:1px solid #FFFFFF;
-                                border-bottom:1px solid #DBDBDB;
-                                background:color:#ffffff;
+                                border: 1px solid #FFFFFF;
                             }
 
 .lista_conteudo pre         {   letter-spacing: 1px; }
@@ -853,8 +851,8 @@ BOTOES==============================*/
 .formulario select        {
                             font-size:0.9em;
                             color:#8C1C1C;
-                            height:29px;
-                            margin:3px 0;
+
+
                           }
 
 .formulario option        { background-color:#F5F5F5; color:#8C1C1C; }
