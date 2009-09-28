@@ -3,7 +3,7 @@
 body                                {  
                                        margin:0;
                                        padding:0;
-                                       font-family: ""Lucida Grande","Trebuchet MS",Verdana,Helvetica,sans-serif;
+                                       font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
                                     }
 
 a                                   { color:#000000; text-decoration:none; }
@@ -22,7 +22,7 @@ form                                { margin:0; padding: 0;}
 
 h3                                  { color:black; margin:0px; }
 
-#listar tr:hover                                  { background:#FAF5DC; }
+#listar tr:hover                    { background:#FAF5DC; }
 #listar  #busca_wiki { background-color:#FFFFFF; }
 
 /**************************************    END  **********************************************************/
@@ -30,9 +30,9 @@ h3                                  { color:black; margin:0px; }
 
 
 
-/*******************************************************************************************************/
-/************************************ ESTRUTURAS PRINCIPALS *******************************************/
-/*****************************************************************************************************/
+/*
+ESTRUTURAS PRINCIPAIS
+=================================================*/
 
 #tudo                               {
 
@@ -162,8 +162,6 @@ h3                                  { color:black; margin:0px; }
                                       float: left;
                                       display: block;
                                       text-decoration: none;
-                                      margin: 0;
-                                      margin-left:1px;
                                       border-right: 1px solid #EDEDED; /*right divider between tabs*/
                                       color: white;
                                     }
@@ -311,6 +309,9 @@ input.enviar                          {
 
 #status .titulo_lista              { padding:1px; padding-left:4px; }
 
+/*
+====================================
+AVATAR*/
 #avatar                            {
                                      width:60px; 
                                      height:60px;
@@ -329,7 +330,10 @@ input.enviar                          {
 #status #menu_perfil ul li a       { margin:0; color:#8c1c1c; font-weight:bold;padding:2px; font-family:"sans serif"; font-size:0.7em;}
 #status #menu_perfil ul li a:hover { background-color: #dbdbdb; text-decoration:none;}
 
-
+ /*===================================
+  */
+  
+  
 /**********************************************************************************************************/
 /************************************** CONTEÚDO INTRANET **************************************************/
 /**********************************************************************************************************/
@@ -370,6 +374,8 @@ input.enviar                          {
 .titulo_new                 { background-image: url("/theme/infodoc/images/filenew.png"); }
 
 .titulo_edit                { background-image: url("/theme/infodoc/images/edit.png"); }
+
+.titulo_index_infowiki      { background-image: none; }
 
 .titulo_cat_infowiki        { background-image: url("/theme/infodoc/images/categoria.png") }
 
@@ -420,7 +426,7 @@ input.enviar                          {
                             width:auto;
                             height:1em;
                             border-left:1px solid #EDEDED;
-                            border-bottom: #EDEDED;
+                            border-bottom: 1px solid #EDEDED;
 
 
                             }
@@ -464,6 +470,10 @@ input.enviar                          {
 
 .item_index a,
 .item_index a:hover          { font-weight: bold; color:#8C1C1C; }
+
+
+/*
+BOTOES==============================*/
 #link_botao                 {
                                font-size:.8em;
                                padding: 0 8px;
@@ -479,64 +489,6 @@ input.enviar                          {
                                border:0;
                             }
 
-
-
-/*========================   WIKI
-*/
-
-
-div#wiki                        { width:99.5%;  overflow:hidden;}  
-
-
-#wiki .titulo_lista          { }
-#wiki .conteudo_wiki         { width:80%; vertical-align:top; }
-#wiki .titulo_wiki           { 
-                               text-align:left; 
-                               vertical-align:top; 
-                               font-size:1.8em; 
-                               color:#8c1c1c;
-                               background-image: url("/theme/infodoc/images/img09.gif");
-                               background-repeat: repeat-x;
-                               padding-left:15px;
-                               border-left: 1px solid #DBDBDB;
-                               border-left: 1px solid #CCCCCC;
-                             } 
-#wiki .titulo_categoria      { 
-                               text-align: left;
-                               background-image: url("/theme/infodoc/images/img09.gif");
-                               background-repeat: repeat-x;
-                               padding-left:15px;
-                               border-left: 1px solid #DBDBDB;
-                               border-left: 1px solid #CCCCCC;
-                             }
-#wiki .itens_index ul        { padding-left:15px;; }
-#wiki .itens_index li        { list-style: square; font-size:0.9em;}
-#wiki .itens_index           { border-left: 1px solid #EDEDED;border-bottom: 1px solid #FFFFFF; padding-left:5px;vertical-align:top;}
-#wiki #link_botao            { float:left; text-align:left; background:none; width:40%;padding:0;}  
-#wiki #link_botao a          { display:inline; color:#000000; margin:0;}
-#wiki #link_botao a:hover    { text-decoration:underline; }
-#wiki h3                     { margin:0; width:60%; }
-#wiki #busca_wiki #resultado_busca
-                             { width: 70%; margin-left:1%; }
-#wiki .titulo_categoria h3   { color: #8c1c1c; margin-left:20px; }
-#wiki .wiki_texto            { float:left;width:85%; }
-#wiki #categorias div.formulario{ 
-                                  width: auto; 
-                                  padding-top: 10px; 
-                                  border-left: 1px solid #CCCCCC; 
-                                  border-right:1px solid #EDEDED;
-                                  border-bottom: 1px solid #CCCCCC;
-                                }
-
-                            
-/*=====================================================
-*/
-
-
-
-                            
-/*
-BOTOES==============================*/
 
 #link_botao a               {
 
@@ -560,9 +512,67 @@ BOTOES==============================*/
 
                             }
 
+/* ===================================================
+*/
+
+
+
+
+/*========================   WIKI
+*/
+
+
+div#wiki                        { width:99.5%;  overflow:hidden;}  
+
+
+#wiki .titulo_lista          { }
+#wiki .conteudo_wiki         { width:80%; vertical-align:top; }
+#wiki .titulo_wiki           { 
+                               text-align:left; 
+                               vertical-align:top; 
+                               font-size:1.8em; 
+                               color:#8c1c1c;
+                               background-image: url("/theme/infodoc/images/img09.gif");
+                               background-repeat: repeat-x;
+                               padding-left:15px;
+                               border-left: 1px solid #DBDBDB;
+                               border-bottom: 1px solid #CCCCCC;
+                             } 
+#wiki .titulo_categoria      { 
+                               text-align: left;
+                               background-image: url("/theme/infodoc/images/img09.gif");
+                               background-repeat: repeat-x;
+                               padding-left:15px;
+                               border-left: 1px solid #DBDBDB;
+                               border-bottom: 1px solid #CCCCCC;
+                             }
+#wiki .itens_index ul        { padding-left:15px;; }
+#wiki .itens_index li        { list-style: square; font-size:0.9em;}
+#wiki .itens_index           { border-left: 1px solid #EDEDED;border-bottom: 1px solid #FFFFFF;  padding-left:5px;vertical-align:top;}
+#wiki #link_botao            { float:left; text-align:left; background:none; width:40%;padding:0;}  
+#wiki #link_botao a          { display:inline; color:#000000; margin:0;}
+#wiki #link_botao a:hover    { text-decoration:underline; }
+#wiki h3                     { margin:0; width:60%; }
+#wiki #busca_wiki #resultado_busca
+                             { width: 70%; margin-left:1%; }
+#wiki .titulo_categoria h3   { color: #8c1c1c; margin-left:20px; }
+#wiki .wiki_texto            { float:left;width:85%; }
+#wiki #categorias div.formulario{ 
+                                  width: auto; 
+                                  padding-top: 10px; 
+                                  border-left: 1px solid #CCCCCC; 
+                                  border-right:1px solid #EDEDED;
+                                  border-bottom: 1px solid #CCCCCC;
+                                }
+
+                            
+/*=====================================================
+*/
+                         
 
 /* ===================================================
-# BOTOES DE NAVEGACAO*/  
+# BOTOES DE NAVEGACAO*/    
+
                             
 #artefatos .formulario input[type=submit], 
 .new_entidade a,
@@ -723,8 +733,9 @@ BOTOES==============================*/
                             }
 #artefatos .formulario input[type=submit]:hover { color: #8C1C1C;}
 
-/*======================================
-*/                           
+/*=====================================
+*/
+                           
 
 .lista_item                 {
 
@@ -732,10 +743,13 @@ BOTOES==============================*/
                                 text-align:right;
                                 padding:5px 0;
                                 padding-right:6px;
-                                min-width:15%;
                                 width:10%;
+                                min-width:15%;
                                 background-color:#f2f2f2;
-                                border: 1px solid #FFFFFF;
+
+                                border-top:1px solid #FFFFFF;
+                                border-bottom:1px solid #DBDBDB;
+                                background:color:#ffffff;
                             }
 
 .lista_conteudo pre         {   letter-spacing: 1px; }
@@ -794,15 +808,14 @@ BOTOES==============================*/
                                              width:100%;
                                              height:100%;
                                              color:#FFFFFF;
-                                             font-size
+
                                              
                                            }
 #listar .sobe                              { background-image: url("/theme/infodoc/images/arrow_up.png"); }
 #listar .desce                             { background-image: url("/theme/infodoc/images/arrow_down.png"); }
-/**********************************************************************************************************/
-/*********************************************** MENSAGENS SISTEMA ***************************************/
-/********************************************************************************************************/
-
+/*
+MENSAGENS DO SISTEMA
+==============================================*/
 
 #flash_notice, #flash_error {
 
@@ -826,14 +839,13 @@ BOTOES==============================*/
 }
 
 
-/***********************************************************************************************************/
-/**********************************************************************************************************/
+/*
+==============================================*/
 
 
-
-         /**********************************************************************************/
-        /********************************  FORM  ******************************************/
-       /***********************************************************************************/
+/*
+FORMS
+============================================*/
 
 
 .formulario               {
@@ -841,7 +853,8 @@ BOTOES==============================*/
                             width:100%;
                             margin: 6px 0;
                             padding:2px 2px 25px;
-                            font-weight:bold; border: 1px solid #EDEDED;
+                            font-weight:bold;
+                             border: 1px solid #EDEDED;
                           }
 
 .formulario td            { empty-cells: hide ; }
@@ -851,8 +864,6 @@ BOTOES==============================*/
 .formulario select        {
                             font-size:0.9em;
                             color:#8C1C1C;
-
-
                           }
 
 .formulario option        { background-color:#F5F5F5; color:#8C1C1C; }
@@ -882,6 +893,7 @@ BOTOES==============================*/
 
 .formulario input[type=submit]:hover { background-position:bottom; }
 .formulario .lista_conteudo     { border: 1px solid #FFFFFF }
+
 input[type=text],
 input[type=password]            {
 
@@ -902,7 +914,7 @@ input[type=password]:hover      {  background:#FAF5DC;  }
 
 input[type=checkbox]            { height:auto; margin:0; padding:0;            }
 
-select                          { margin: 0; margin:0 10px; padding-top: 3px; }
+select                          { margin: 0; }
 
 textarea                        {
                                   border: 1px solid #CCCCCC;
@@ -917,7 +929,13 @@ textarea                        {
 .formulario textarea:focus,
 .formulario textarea:hover      { background:#FAF5DC; }
 
+/*==========================
+CRIACAO DE ITENS FORMULARIO 
+*/
 
+
+ 
+ 
 .formulario li                  { font-size:0.9em; list-style: none ; margin-left:20px; }
 
 .formulario td                  { font-size:0.8em;                                      }
@@ -943,10 +961,10 @@ td.form_item { padding-left:0; border:none;}
 #form_item table         { width: 100%; border-collapse:separate; border-spacing:0px;}
 #form_item h3            { font-size: 1em;}
 #form_item td h3         { font-size: 1.5em; }
-#form_item p             { font-size: 0.9em;} 
-#form_item td p          { font-size: 0.9em; } 
+#form_item p             { font-size: 0.9em; } 
+#form_item td p          { font-size: 0.9em; margin:0;} 
 #form_item td.lista_item { color: #000000; font-weight: bold; font-size:0.8em;}
-#form_item td.lista_conteudo { font-size:0.8em; } 
+#form_item td.lista_conteudo { font-size:0.8em; padding: 0 0 0 6px; } 
 
 .lista_linha  { display:table-row; }
 div.lista_item { width:43.5%; display:table-cell ; }
@@ -973,15 +991,21 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
 .form_item_exemplo:before       {  content:"Ex:\""; }
 .form_item_exemplo:after        {  content:"\"";   }
 
+/*==========================
+*/
 
-/**********************************************  FILTRO FORM **********************************************/
+
+
+/*==========================
+FILTRO FORM
+*/
+
 
 
 #busca                      {
                                   text-align:left;
                                   clear:both;
                                   color: #000000;
-                                  border: 1px solid #EDEDED;
                                   padding: 8px 4px;
                                   padding-bottom: 5px;
                                   font-size: 0.8em;
@@ -1014,9 +1038,10 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
 #ajuda a {float:left;  width:100%; height:100%;}
 #ajuda a:hover{text-decoration:none; background-image:url("/images/ajuda_2.png");}
 
-/***********************************************************************************************************/
+/*==========================
+COMENTARIOS
+*/
 
-/*************************** COMENTARIOS **************************************/
 
 
 
@@ -1212,7 +1237,7 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
 
 #artefatos div.formulario     { width:74.8%; float:left; padding:0; border:0; margin:0;}
 
-#artefatos .formulario select { color:#8C1C1C; float:right; margin:0 22px; vertical-align:middle;}
+#artefatos .formulario select { color:#8C1C1C; float:left; margin:0 22px; vertical-align:middle;}
                                
 #artefatos .formulario option  {  }
 /*
@@ -1334,7 +1359,7 @@ HISTORICO
 
                                   float:left;
                                   margin: 6px 0 6px 0px;
-                                  min-height:450px;
+                                  min-hei */ght:450px;
                                   background-repeat:repeat-x;
                                   height:auto;
                                   min-height:15px;
@@ -1350,6 +1375,8 @@ RELACIONAMENTOS
 
 
 #relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
+#relacionados form               { width:25%; margin-left:20px;float:left; }
+#relacionados select             { color:#8C1C1C;  }
 #relacionados #barra_titulo      { width:98.8%; }
 #relacionados .formulario input[type=submit] {float:none}
 

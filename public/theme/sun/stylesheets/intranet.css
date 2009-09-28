@@ -3,34 +3,35 @@
 body                                {  
                                        margin:0;
                                        padding:0;
-                                       font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura;
+                                       font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
                                     }
 
 a                                   { color:#D4943B; text-decoration:none; }
 
 a:hover                             { text-decoration:underline; }
 
-td                                  { font-size:0.8em;
-                                      padding:5px;
-                                      padding-left:6px;
-                                      border-bottom: 1px solid #EDEDED;
+td                                  { font-size:0.9em;
+                                      padding:0 5px 0 0;
+                                      
+                                      
                                     }
 
 table                               {  margin-bottom:0; }
 
-form                                { margin:0; }               
+form                                { margin:0; padding: 0;}        
       
 h3                                  { color:#D4943B; margin:0px; }
-
+#listar tr:hover                    { background:#FAF5DC; }
+#listar  #busca_wiki { background-color:#FFFFFF; }
 
 /**************************************    END  **********************************************************/
 
 
                   
                   
-/*******************************************************************************************************/                  
-/************************************ ESTRUTURAS PRINCIPALS *******************************************/
-/*****************************************************************************************************/
+/*
+ESTRUTURAS PRINCIPAIS
+=================================================*/
 
 #tudo                               {
 
@@ -74,22 +75,28 @@ h3                                  { color:#D4943B; margin:0px; }
 	                                    clear: both;
 	                                    width: 100%;
                                         font-size:0.8em;
-                                        font-family: arial;
-                                        padding: 6px;
-                                        margin: 6px 0;
-                                        margin-left:2px;
+                                        padding: 15px 0;
+                                        margin-bottom:2px;
                                         margin-bottom:2px;
                                         list-style-type: none;
-                                        text-align: right;
+                                        text-align: center;
                                         background-color:#ffffff;
-                                        height:18px;
-                                        border-bottom-style:solid;
-                                        border-bottom-width:5px;
-                                        border-bottom-color:#D4943B;
+                                        min-height:50px;
+                                        border-top: 1px solid #F8EFA7;
+                                        border-bottom:5px solid #D4943B;
                                         background-image: url("/theme/sun/images/img09.gif");
 	                                    background-repeat: repeat-x;
+
 	                                    
                                     }
+#licensa                            { width:60%; float:left; margin:0 5%; margin-left:20%; height:auto; }
+
+#rodape a                           {  color:#D4943B; }
+#rodape img                         {  border:0; vertical-align:top; height:16px;      }
+
+#rodape p                           { float:left; margin:0; }
+
+#icones                             { margin: 5px 0; }                                    
                                      
                                      
 /******************************************************************************************************/
@@ -99,24 +106,23 @@ h3                                  { color:#D4943B; margin:0px; }
   /***************************************************************************************************/
  /******************************************* MENU DROPDOWN *****************************************/
 /***************************************************************************************************/
-#menu_nav { clear:both; width:100%;}
+#menu_nav                           { clear:both; width:100%;}
 
 #menu_nav ul                        {
 
                                       
-                                      padding: 4px 0px;
-                                      margin: 6px 0 6px 8px;
+                                      padding:0;
+                                      margin: 6px 0 6px 0px;
                                       list-style-type: none;
                                       text-align: left;
                                       background-color:#ffffff;
-                                      height: auto;
-                                      min-height:20px;
                                       width:100%;
                                       border-top: 5px solid #D4943B;
-                                      border-bottom: 1px solid #F8EFA7;
+                                      border-bottom: 1px solid #f1efe2;
                                       background-image: url("/theme/sun/images/img09.gif");
                                       background-repeat: repeat-x;
                                       clear:both;
+                                      
                                       
 
                                     }
@@ -127,13 +133,16 @@ h3                                  { color:#D4943B; margin:0px; }
 
 #menu_nav ul li a                   { 
                                       margin:0;
-                                      margin-left:2px;
+                                      height:25px;
                                       text-decoration: none;
-                                      padding:2px 8px 0px 12px;
+                                      padding:6px 5px 0px 10px;
                                       color: #704509;
+                                      border-left: 1px solid #FFFFFF;
+                                      border-right: 1px solid #F2DBBB;
+                                      
                                     }
 
-#menu_nav ul li a:hover             { outline: 1px solid #EDEDED;  background-color: #FFFFFF;  }
+#menu_nav ul li a:hover             { outline: 1px solid #F8EFA7;  background-color: #D4943B; color:#FFFFFF;  }
 
 .mattblackmenu ul                   {
                                       
@@ -141,20 +150,17 @@ h3                                  { color:#D4943B; margin:0px; }
                                       padding: 0;
                                       font: normal 12px "sans serif";
                                       list-style-type: none; border-bottom: 1px solid #BBB;
-                                      background: #EDEDED; overflow: hidden; width: auto;
+                                      background: #F8EFA7; overflow: hidden; width: auto;
                                     }
 
-.mattblackmenu li                   { display: inline; margin: 0;  padding: 30px 0 ; }
+.mattblackmenu li                   { display: inline; margin: 0;height:100%;}
 
 .mattblackmenu li a                 { 
 
                                       float: left;
                                       display: block;
                                       text-decoration: none;
-                                      margin: 0;
-                                      margin-left:1px; 
-                                      padding: 6px 8px; /*padding inside each tab*/
-                                      border-right: 1px solid #EDEDED; /*right divider between tabs*/
+                                      border-right: 1px solid #F8EFA7; /*right divider between tabs*/
                                       color: white;
                                     }
 
@@ -186,13 +192,19 @@ h3                                  { color:#D4943B; margin:0px; }
                                       min-width: 160px; /*width of menu (not including side paddings)*/
                                       background-color:#fdf8d2;
                                       text-decoration: none;
-                                      padding: 3px 4px;
+                                      padding: 8px 4px;
+                                      padding-left:36px;
                                       border-bottom: 1px solid #CCCCCC;
+                                      border-left: 1px solid #DBDBDB;
+                                      border-right: 1px solid #FFFFFF;
                                     }
                         
-* html .ddsubmenustyle li           { /*IE6 CSS hack*/ display: inline-block; }               
+* html .ddsubmenustyle li           { /*IE6 CSS hack*/ display: inline-block; }             
 
-.ddsubmenustyle li a:hover          { background-color: #D4943B; color:#FFFFFF; }
+.ddsubmenustyle li a                { background-image: url("/theme/sun/images/fundo_menu.png"); background-repeat:no-repeat;}
+
+.ddsubmenustyle li a:hover          { background-image: url("/theme/sun/images/fundo_menu2.png"); background-repeat:no-repeat;background-color: #D4943B; color:#FFFFFF; }
+
 
 
 
@@ -291,7 +303,6 @@ input.enviar                          {
                                       clear:right;
                                    }
 
-#tab_status                        { width:100% ;}
 
 #status td                         { margin :0px; padding:0px;  }
 
@@ -301,6 +312,30 @@ input.enviar                          {
 #status b                          { color:#D4943B; }
 
 #status .titulo_lista              { padding:1px; padding-left:4px; }
+
+/*
+====================================
+AVATAR*/
+#avatar                            {
+                                     width:60px; 
+                                     height:60px;
+                                     float:left; 
+                                     background-image:url("/theme/sun/images/perfilbg.png"); 
+                                     margin:0 15px;
+                                     margin-top:10px;
+                                   }
+
+#avatar img                        { margin:8% 8%; }
+
+#status #dados_perfil              { font-family:"sans serif"; font-size:0.9em; float:left; margin-top:10px;margin-right:15px;}
+#status #menu_perfil               { float:right;}
+#status #menu_perfil ul            { margin:0; margin-top:5px;}  
+#status #menu_perfil ul li         { list-style:none; display:inline; margin:0;}
+#status #menu_perfil ul li a       { margin:0; color:#D4943B; font-weight:bold;padding:2px; font-family:"sans serif"; font-size:0.7em;}
+#status #menu_perfil ul li a:hover { background-color: #F8EFA7; text-decoration:none;}
+
+/*===================================
+*/
 
 
 /**********************************************************************************************************/
@@ -322,8 +357,10 @@ input.enviar                          {
                                 margin:3px 0 3px 1px;
                                 background-image: url("/theme/sun/images/fil4.jpg");
                                 background-repeat: repeat-x;
-                                border: 1px solid #F8EFA7;
-                                border-top:0px;
+                                border: 1px solid #F2DBBB;
+                                border-bottom:1px solid #f1efe2;
+                                border-left: 1px solid #F2DBBB;
+                                border-right: 1px solid #F8EFA7;
                              }
 
 /* **************************************************************************************************** */
@@ -341,10 +378,17 @@ input.enviar                          {
 
 .titulo_edit                { background-image: url("/theme/sun/images/edit.png") }
 
+.titulo_index_infowiki      { background-image: none; }
+
+.titulo_cat_infowiki        { background-image: url("/theme/sun/images/categoria.png") }
+
 .titulo_index,
 .titulo_show,
 .titulo_new,
-.titulo_edit                {
+.titulo_edit,
+.titulo_comentario,
+.titulo_cat_infowiki,
+.titulo_index_infowiki                {
 
                             font-size:1.2em;
                             float:left;
@@ -358,7 +402,7 @@ input.enviar                          {
 /* ***************************************   END    ************************************************* */
 
 
-#listar 
+#listar,#wiki
                             {
                             
                             color:#704509;
@@ -368,12 +412,15 @@ input.enviar                          {
                             background-repeat:repeat-x;
                             height:auto;
                             border: 1px solid #F2DBBB;
+                            border-left: 1px solid #F2DBBB;
+                            border-right: 1px solid #F8EFA7;
                             width:100%;
                             padding:2px 2px 25px;
 
                             }   
 
-.itens_index
+.itens_index,
+.itens_curto
                             {
 
                             font-size:0.8em;
@@ -382,14 +429,24 @@ input.enviar                          {
                             text-align:left;              /* Item listado */
                             padding-left: 30px;
                             width:auto;
+                            border-left:1px solid #F8EFA7;
+                            border-bottom: 1px solid #f1efe2;
                             }
-
-.linha_item_index           {  border: 1px solid #EDEDED; }
-
-.titulo_lista               { background-image:url("/theme/sun/images/fil4.jpg"); }
+.itens_index li             { list-style-type: none; }                            
 
 .titulo_lista,
-.lista_item 
+.titulo_curto               { 
+                                background-image:url("/theme/sun/images/fil4.jpg");
+                                background-repeat: repeat-x;
+                                border-left: 1px solid #F2DBBB;
+                                border-right: 1px solid #F1EFE2;
+                            }
+
+.titulo_lista,
+.lista_item,
+.form_item,
+.titulo_curto,
+.itens_curto 
                             {
                              
                              font-size:0.9em;
@@ -400,18 +457,24 @@ input.enviar                          {
                              padding-left: 30px;             /*Titulo do Item*/
                              font-weight:bold;
                              width:auto;
-                             border-bottom: 1px solid #EDEDED;
+                             height:1em;
+                             border-bottom: 1px solid #F1EFE2;
                              
                              
                              }
+.titulo_curto,
+.itens_curto                 { width:12%; text-align:center;padding:0px; }
+
+.lista_item th               { margin-left:20px; }                             
 .titulo_lista a,
 #titulo_lista a:hover       
                              { float:left; text-decoration:none; width:100%;  height:100%; }
 
 .item_index a,
-.item_index a:hover          { font-weight: bold; color:#8C1C1C; }
+.item_index a:hover          { font-weight: bold; color:#D4943B; }
 
-
+/*
+BOTOES==============================*/
 
 #link_botao                 {
                                font-size:.8em;
@@ -449,7 +512,225 @@ input.enviar                          {
                                text-decoration: none;
                                
                             }
+/* ===================================================
+*/
 
+/*========================   WIKI
+*/
+
+
+div#wiki                        { width:99.5%;  overflow:hidden;}  
+
+
+#wiki .titulo_lista          { }
+#wiki .conteudo_wiki         { width:80%; vertical-align:top; }
+#wiki .titulo_wiki           { 
+                               text-align:left; 
+                               vertical-align:top; 
+                               font-size:1.8em; 
+                               color:#D4943B;
+                               background-image: url("/theme/sun/images/img09.gif");
+                               background-repeat: repeat-x;
+                               padding-left:15px;
+                               border-left: 1px solid #F8EFA7;
+                               border-bottom: 1px solid #F2DBBB;
+                             } 
+#wiki .titulo_categoria      { 
+                               text-align: left;
+                               background-image: url("/theme/sun/images/img09.gif");
+                               background-repeat: repeat-x;
+                               padding-left:15px;
+                               border-left: 1px solid #F8EFA7;
+                               border-bottom: 1px solid #F2DBBB;
+                             }
+#wiki .itens_index ul        { padding-left:15px;; }
+#wiki .itens_index li        { list-style: square; font-size:0.9em;}
+#wiki .itens_index           { border-left: 1px solid #F1EFE2;border-bottom: 1px solid #FFFFFF;  padding-left:5px;vertical-align:top;}
+#wiki #link_botao            { float:left; text-align:left; background:none; width:40%;padding:0;}  
+#wiki #link_botao a          { display:inline; color:#000000; margin:0;}
+#wiki #link_botao a:hover    { text-decoration:underline; }
+#wiki h3                     { margin:0; width:60%; }
+#wiki #busca_wiki #resultado_busca
+                             { width: 70%; margin-left:1%; }
+#wiki .titulo_categoria h3   { color: #D4943B; margin-left:20px; }
+#wiki .wiki_texto            { float:left;width:85%; }
+#wiki #categorias div.formulario{ 
+                                  width: auto; 
+                                  padding-top: 10px; 
+                                  border-left: 1px solid #F2DBBB; 
+                                  border-right:1px solid #F1EFE2;
+                                  border-bottom: 1px solid #F2DBBB;
+                                }
+
+                            
+/*=====================================================
+*/
+
+/* ===================================================
+# BOTOES DE NAVEGACAO*/    
+
+                            
+#artefatos .formulario input[type=submit], 
+.new_entidade a,
+.abilita a,
+.delete a,
+.usuarios_index a,
+.new_grupo a,
+.new_usuario a,
+.new_modulo a,
+.new_sistema a,
+.new_categoria a,
+.new_subcategoria a,
+.new_formulario a,
+.new_item a,
+.novo_cadastro a,
+.new_novo a,
+.ajuda a,
+.voltar a,
+.new_ajuda a,
+.new_comentario a,
+.hide_comentario a,
+.hide_artefato a,
+.hide_historico a,
+.hide_relacionamento a,
+
+.edit a                     {
+                               
+                               background-image: url("/theme/sun/images/add_entidade.png");
+                               background-repeat:no-repeat;
+                               background-position: center top;
+                               color: #D4943B;
+                               font-size:0.7em;
+                               font-weight:normal;
+                               width:auto;
+                               height:15px;
+                               text-decoration: none;
+                               vertical-align: bottom;
+                               float:right;
+                               padding:0;
+                               margin:0;
+                               margin-right:20px;
+                               padding:3px;
+                               padding-top:36px;
+                               text-align:center;
+                               overflow: hidden;
+
+                            }
+                            
+.edit a                     { background-image: url("/theme/sun/images/editar.png"); }
+
+.usuarios_index a           { background-image: url("/theme/sun/images/usuario.png"); }
+
+.abilita a                  { background-image: url("/theme/sun/images/des-habilita.png"); }
+
+.delete a                   { background-image: url("/theme/sun/images/delete.png"); }
+
+.new_grupo a                { background-image: url("/theme/sun/images/add_grupo.png"); }
+
+.new_usuario a              { background-image: url("/theme/sun/images/add_usuario.png"); }
+
+.new_modulo a               { background-image: url("/theme/sun/images/add_modulo.png"); }
+
+.new_sistema a              { background-image: url("/theme/sun/images/add_sistema.png"); }
+
+.new_categoria a            { background-image: url("/theme/sun/images/add_categoria.png"); }
+
+.new_subcategoria a         { background-image: url("/theme/sun/images/add_sub_categoria.png"); }
+
+.new_formulario a           { background-image: url("/theme/sun/images/add_form.png"); }
+
+.new_item a                 { background-image: url("/theme/sun/images/add_item.png"); }
+
+.novo_cadastro a            { background-image: url("/theme/sun/images/add_cadastro.png"); }
+
+.new_novo a                 { background-image: url("/theme/sun/images/add_novo.png"); }
+
+.ajuda a                    { background-image: url("/theme/sun/images/ajuda.png"); }
+
+.voltar a                   { background-image: url("/theme/sun/images/voltar.png"); }
+
+.new_ajuda a                { background-image: url("/theme/sun/images/add_ajuda.png"); }
+
+.new_comentario a           { 
+                              background-image: url("/theme/sun/images/add_comentario.png");
+                              font-size:0.7em;
+                              padding-top:25px;
+                             }
+
+.hide_comentario a           { 
+                                  background-image: url("/theme/sun/images/hide_comentario.png");
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
+                                  padding-top:25px;
+                             }
+                             
+.hide_historico a           { 
+                                  background-image: url("/theme/sun/images/hide_historico.png");
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
+                                  padding-top:25px;
+                             }
+
+.hide_artefato a                { 
+                                  background-image: url("/theme/sun/images/hide_artefato.png");
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
+                                  padding-top:25px;
+
+                                }
+
+.hide_relacionamento a          { 
+                                  background-image: url("/theme/sun/images/hide_relacionamento.png");
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
+                                  padding-top:25px;
+                                }
+
+#artefatos .formulario input[type=submit] { 
+                                            background-image: url("/theme/sun/images/add_artefato.png");
+                                            background-color:#FFFFFF; 
+                                            border:0; 
+                                            padding-top:25px; 
+                                            padding-bottom:15px;
+                                            font-size:0.7em;
+                                            margin-left:2px;
+                                            cursor:pointer;
+                                          }
+.new_entidade a:hover,
+.abilita a:hover,
+.delete a:hover,
+.usuarios_index a:hover,
+.new_grupo a:hover,
+.new_usuario a:hover,
+.new_modulo a:hover,
+.new_sistema a:hover,
+.new_categoria a:hover,
+.new_subcategoria a:hover,
+.new_formulario a:hover,
+.new_item a:hover,
+.novo_cadastro a:hover,
+.new_novo a:hover,
+.ajuda a:hover,
+.voltar a:hover,
+.new_ajuda a:hover,
+.new_comentario a:hover,
+.hide_comentario a:hover,
+.hide_historico a:hover,
+.hide_artefato a:hover,
+.hide_relacionamento a:hover,
+#artefatos .formulario input[type=submit]:hover,
+.edit a:hover         {
+
+                                                            
+                               text-decoration: none;
+                               outline: 1px solid #F2DBBB;
+                               background-color: #F8EFA7;
+
+                            }
+#artefatos .formulario input[type=submit]:hover { color: #D4943B;}
+
+/*=====================================
+*/
 
 .lista_item                 {
 
@@ -460,8 +741,8 @@ input.enviar                          {
                                 min-width:15%;
                                 width:auto;
                                 background-color:#F8EFA7;
-                                border-top:1px;
-                                border-bottom:0px;
+                                border-top:1px solid #FFFFFF;
+                                border-bottom:1px solid #F2DBBB;
                                 
                             }
 
@@ -473,7 +754,7 @@ input.enviar                          {
                                 color:#704509;
                                 padding:0;
                                 padding-left:6px;
-                                border-bottom: 1px solid #EDEDED;
+                                border-bottom: 1px solid #F1EFE2;
                             }
 
 #link_voltar                {
@@ -500,6 +781,7 @@ input.enviar                          {
                                 padding-left:20px;
                                 padding-top:0px;
                                 background-repeat: no-repeat;
+                                float:left;
                             }
 
 #link_voltar a:hover        {
@@ -510,7 +792,20 @@ input.enviar                          {
                             }
 
 
-.formulario td.lista_item                  {  empty-cells: show; } 
+.formulario td.lista_item                  {  empty-cells: show; }
+
+#listar .sobe,#listar .desce                { 
+                                             overflow:hidden;
+                                             background-repeat: no-repeat;
+                                             padding: 0px 5px;
+                                             width:100%;
+                                             height:100%;
+                                             color:#FFFFFF;
+                                           
+                                             
+                                           }
+#listar .sobe                              { background-image: url("/theme/sun/images/arrow_up.png"); }
+#listar .desce                             { background-image: url("/theme/sun/images/arrow_down.png"); }
 /**********************************************************************************************************/
 /*********************************************** MENSAGENS SISTEMA ***************************************/  
 /********************************************************************************************************/
@@ -539,22 +834,21 @@ input.enviar                          {
 }     
 
           
-/***********************************************************************************************************/
-/**********************************************************************************************************/
-          
+/*
+==============================================*/          
 
 
-         /**********************************************************************************/
-        /********************************  FORM  ******************************************/
-       /***********************************************************************************/
-
+/*
+FORMS
+============================================*/
 
 .formulario               { 
                             font-size:1em;
                             width:100%;
                             margin: 6px 0;
                             padding:2px 2px 25px;
-                            font-weight:bold; border: 1px solid #F8EFA7;
+                            font-weight:bold;
+                            border: 1px solid #F8EFA7;
                           }
                           
 .formulario td            { empty-cells: hide ; }                          
@@ -564,19 +858,19 @@ input.enviar                          {
 .formulario select        { 
                             font-size:0.9em;
                             color:#D4943B;
-                            height:29px;
-                            width:200px; 
-                            margin-bottom:8px;
                           }
 
 .formulario option        { background-color:#F5F5F5; color:#D4943B; }
 
 
-.formulario input[type=submit],#busca input[type=submit]  {
+.formulario input[type=submit],
+#busca input[type=submit]  {
 
                                     float:left;
                                     color:#E0E0E0;
-                                    background-color:#8C1C1C;
+                                    /*background-color:#8C1C1C;*/
+                                    background-image: url("/theme/sun/images/fundo_botoes.png");
+                                    background-position:center;
                                     padding: 0 4px;
                                     text-align:center;
                                     height:24px;
@@ -588,8 +882,12 @@ input.enviar                          {
                                     font-weight:bold;
                                     background-color:#D4943B;    
                                     border:0;
+                                    cursor:pointer;
 
                                 }
+.formulario input[type=submit]:hover,
+ #busca input[type=submit]{ background-position:bottom; }
+.formulario .lista_conteudo     { border: 1px solid #FFFFFF }
 
 input[type=text],
 input[type=password]            {
@@ -611,21 +909,22 @@ input[type=password]:hover      {  background:#FAF5DC;  }
 
 input[type=checkbox]            { height:auto; margin:0; padding:0;            }
 
-select                          { margin: 0; margin:0 10px; padding-top: 3px; }
+select                          { margin: 0;}
 
 textarea                        {
                                   border: 1px solid #F2DBBB;
                                   background:#F5F5F5;
                                   padding-left:2px;
-                                  margin:0; 
-                                  color:#8C1C1C;
-                                  font-family: "sans serif";
+                                  margin:0;
                                   font-size:0.9em;
                                 }
 
 .formulario textarea:focus, 
 .formulario textarea:hover      { background:#FAF5DC; }
 
+/*==========================
+CRIACAO DE ITENS FORMULARIO 
+*/
 
 .formulario li                  { font-size:0.9em; list-style: none ; margin-left:20px; }
 
@@ -646,16 +945,32 @@ textarea                        {
 /*.formulario p { float:left; width:60%; margin:0px; }*/
 
 div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px; padding-top:20px; color:#704509}
+td.form_item { padding-left:0; border:none;}
 
-#form_item                      { width:auto;} 
+#form_item               { width:auto;}
+#form_item table         { width: 100%; border-collapse:separate; border-spacing:0px;}
+#form_item h3            { font-size: 1em;}
+#form_item td h3         { font-size: 1.5em; }
+#form_item p             { font-size: 0.9em;} 
+#form_item td p          { font-size: 0.9em; margin:0;} 
+#form_item td.lista_item { color: #D4943B; font-weight: bold; font-size:0.8em;}
+#form_item td.lista_conteudo { font-size:0.8em; padding: 0 0 0 6px; } 
+
+.lista_linha  { display:table-row; }
+div.lista_item { width:43.5%; display:table-cell ; }
+div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding:0 0 0 6px;}
+
+#ajax_item { font-size:1em; }  
+#form_item #ajax_item td.lista_item    { font-size: 1em; }
+#form_item #ajax_item td.lista_conteudo{ font-size: 1em; }
 
 .form_item_exemplo              {
-    
+
                                   letter-spacing:2px;
                                   margin:0;
                                   padding:0px;
                                   margin-left:8px;
-                                  color:#D4943B;
+                                  color:#aaaaaa;
                                   font-size: 0.6em;
                                   line-height:0.6em;
                                   font-weight:normal;
@@ -666,8 +981,13 @@ div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px
 .form_item_exemplo:before       {  content:"Ex:\""; }
 .form_item_exemplo:after        {  content:"\"";   }
 
+/*==========================
+*/
 
-/**********************************************  FILTRO FORM **********************************************/
+
+/*==========================
+FILTRO FORM
+*/
 
 
 #busca                      {         
@@ -701,7 +1021,453 @@ div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px
 #filtro_avancado br     { display: none; }
 
 .fechar                 { float:right; }
+/*
+AJUDA ========================================*/
+#ajuda { float:right; background-image: url("/images/ajuda.png"); width:26px; height:28px; margin-right:12px;}
+#ajuda a {float:left;  width:100%; height:100%;}
+#ajuda a:hover{text-decoration:none; background-image:url("/images/ajuda_2.png");}
+
+/*
+===============================================*/
+
+/*==========================
+COMENTARIOS
+*/
 
 
 
-/***********************************************************************************************************/
+
+#show_actions               { font-size:0.7em; float: right; width:30%; text-align:right;}
+
+#show_actions a             {
+                              font-size: 1em;
+                              color:black;
+                              float:none;
+                              font-weight:normal;
+                              text-decoration:underline;
+                              padding:0;
+                              padding-top:0px;
+
+                            }
+
+#comentarios                {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+
+                             }
+
+#artefatos                   {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+                             }
+                             
+#historico                   {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+                             }                             
+#comentarios #barra_titulo,
+#artefatos #barra_titulo,
+#historico #barra_titulo,
+#relacionados #barra_titulo
+                             {
+
+
+                                padding:9px 5px;
+                                width:99%;
+                                min-height:25px;
+                                clear:both;
+                                margin:6px 2px;
+                                background-image: none;
+                                background-color: #ffffff;
+                                border: 1px solid #cccccc;
+
+
+                                }
+                                
+#comentarios #barra_titulo h3   { 
+                                  font-size: 1.1em;
+                                  padding-left:33px; 
+                                  background-image: url("/theme/sun/images/comment_write.png") ;
+                                }
+
+#artefatos #barra_titulo h3     { 
+                                  font-size: 1.1em; 
+                                  padding-left:32px; 
+                                  background-image: url("/theme/sun/images/artefato.png") ;
+                                }
+                                
+#relacionados #barra_titulo h3   { 
+                                  font-size: 1em; 
+                                  padding-left:32px; 
+                                  background-image: url("/theme/sun/images/relacionamento.png") ;
+                                }
+                                                                
+#historico #barra_titulo h3     { font-size: 1em;
+                                  padding-left:32px;
+                                  background-image: url("/theme/sun/images/historico.png");
+                                 }     
+    
+.titulo_comentario              { font-size:10px; background-image:none; }
+
+
+
+
+
+#comentarios .itens_index       {
+
+                                  font-size:0.8em;
+                                  margin:0 0%;
+                                  margin-bottom:14px;
+                                  padding: 10px 0px;
+                                  text-align:left;              /* Item listado */
+                                  padding-left: 30px;
+                                  width:auto;
+                                  border:0;
+                                  border-bottom: solid 1px #cccccc;
+                                  width:99%;
+                                  background-color: #F5F5F5;
+                                  
+                                 }
+                                 
+#comentarios #listar             {
+
+
+                                  float:left;
+                                  margin: 6px 0 6px 0px;
+                                  min-height:450px;
+                                  background-repeat:repeat-x;
+                                  height:auto;
+                                  min-height:15px;
+                                  border: 0;
+                                  width:100%;
+                                  padding:2px 2px ;
+
+                                  }
+/*
+#comentarios #link_botao,
+#artefatos #link_botao            {
+
+                                  font-size:0.7em;
+                                  padding: 0.4% 4px;
+                                  text-align:center;
+                                  height:auto;
+                                  min-width:80px;
+                                  width:auto;
+                                  margin:2px 5px 0 0 ;
+                                  float:right;
+
+                                  font-weight:normal;
+                                  background-color:#8C1C1C;
+                                  border:1px solid #8C1C1C;
+
+                                  }
+
+#comentarios #link_botao a:hover,
+#artefatos #link_botao a:hover    { color:#FFFFFF; }
+
+#comentarios #link_botao a,
+#artefatos #link_botao a          {
+
+                                  font-weight:none;
+                                  margin:0;
+                                  padding:0;
+                                  background-color:#8C1C1C;
+                                  color:#E0E0E0;
+
+                                  font-weight: bold;
+                                  width:100%;
+                                  height:100%;
+
+                                 }
+*/    
+#comentarios h3.titulo_new       {                               
+
+                                  width:98%;
+                                  margin:0;
+                                  padding:0;
+                                  margin-top:10px;
+                                  margin-bottom: 10px;
+                                  background-image:none;
+                                  font-size:0.8em;
+
+                                 }
+                               
+#comentarios input[type=submit]  {  
+                                    margin-top:5px;
+                                    color: #EDEDED;
+                                    font-weight:bold;
+                                    font-size:0.7em;
+                                    background-color:#D4943B;
+                                    border: 1px solid #D4943B;
+
+                                 }
+
+#comentarios input[type=submit]:hover { color:#FFFFFF; }
+
+#new_comentario                 { padding:0 5px; width:100%; margin:10px 0; margin-left:10px;}
+
+#comentarios textarea           { background-color:#FFFFFF;       }
+
+#comentarios textarea:focus     { background-color:#FFFFFF;       }
+
+
+/*****************                  ARTEFATOS                      *******************/
+#new_artefato                   { 
+
+                                padding:0;
+                                width:100%; 
+                                float:left;
+                                margin:10px 0; 
+ 
+
+                                }
+                            
+#artefatos .formulario        { margin:0;}
+
+#artefatos div.formulario     { width:74.8%; float:left; padding:0; border:0; margin:0;}
+
+#artefatos .formulario select { color:#D4943B; float:left; margin:0 22px; vertical-align:middle;}
+                               
+#artefatos .formulario option  {  }
+/*
+#artefatos .formulario input[type=submit]  { 
+                                            
+                                background-color:#8C1C1C;
+                                border:1px solid #8C1C1C;
+                                padding:0px 2px 0;
+                                font-size:0.6em;
+                                font-weight:bold;
+                                color:#E0E0E0;
+                                text-align:center; 
+                                float:right;
+                                height:2.6em; 
+                                margin:1px 0 0;
+                                
+                                            }
+                                            
+#artefatos .formulario input[type=submit]:hover { color:#FFFFFF }
+*/
+#artefatos h3.titulo_new
+                               {
+
+                                width:98%;
+                                margin:0;
+                                padding:0;
+                                margin-top:10px;
+                                margin-bottom: 10px;
+                                background-image:none;
+                                font-size:0.8em;
+
+                               }
+                               
+#artefatos input[type="file"] { margin-top: 10px; }
+
+#artefatos input[type=submit]  { 
+                                 margin-bottom:5px;
+                                 color: #EDEDED;
+                                 font-weight:bold;
+                                 font-size:0.7em;
+                                 background-color:#D4943B;
+                                 border: 1px solid #D4943B;
+
+                                }
+
+#artefatos input[type=submit]:hover { color:#FFFFFF; }
+
+#artefatos #listar { border:1px solid #CCCCCC; padding-bottom:2px; margin:6px 0.1% ;} 
+#artefatos #listar .download_artefato a,
+#artefatos #listar .delete a             { 
+                        padding-top:50px; 
+                        background-position:center;
+                        background-repeat: no-repeat;
+                        margin:0; margin-top:10px;
+                        float:right;
+                        margin:4% 35%;
+                        
+                                          }
+#artefatos #listar .delete a:hover { background-color:#F8EFA7; }
+#artefatos #listar .download_artefato a { background-image: url("/theme/sun/images/download.png"); }
+
+                     
+#artefatos #listar .download_artefato a:hover { text-decoration:none; padding-top: 40px; outline:1px solid #F2DBBB; background-color:#F8EFA7;}  
+
+
+#artefatos td           { 
+
+                             border-bottom:1px solid #ededed;
+                             background-color: #F8EFA7;
+                             vertical-align:bottom;padding:8px; 
+                             padding-bottom:1px;
+                        }
+
+#artefatos .itens_index { background-color: #F8EFA7; min-width:10px; }
+
+#artefatos .formulario input[type="text"] { margin-top: 5px; }
+
+#artefatos form         { float:left; width:100%; }
+
+#artefatos input[type="text"], 
+input[type="password"]  { margin-top:0; }
+                       
+#artefatos .lista_item  { background-image:url("/theme/sun/images/img09.gif"); border-bottom:1px solid #F1EFE2; text-align:center;  }
+
+.artefato               { border: 1px solid #F2DBBB; width:100%; padding: 2px; outline: 1px solid #F1EFE2;}
+
+#artefatos .artefato td.lista_item {
+                                     background-color:none; 
+                                     border-bottom:0;  
+                                     padding-bottom:1%;
+                                     text-align:right;
+                                   }
+
+#artefatos td.lista_conteudo {
+                                         background-color:#FFFFFF;
+                                         border-bottom:1px solid #F1EFE2; 
+                                         padding-bottom:8px;
+                                       }
+
+#artefatos .artefato td                { background-color:#FFFFFF; border: 0;}
+
+#artefatos textarea:focus,
+#artefatos textarea:hover              { background:#FAF5DC; }
+
+#artefatos tr:hover                    { background:#FAF5DC; }   
+
+#artefatos ul                          { list-style:none ;}
+
+/* ********************************************************************************* */
+
+
+/*
+HISTORICO
+===========================*/
+
+
+#historico #listar             {
+
+
+                                  float:left;
+                                  margin: 6px 0 6px 0px;
+                                  min-hei */ght:450px;
+                                  background-repeat:repeat-x;
+                                  height:auto;
+                                  min-height:15px;
+                                  width:99.8%;
+                                  padding:2px 2px;
+
+                                  }
+
+
+/*
+RELACIONAMENTOS
+============================*/
+
+
+#relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
+#relacionados form               { width:25%; margin-left:20px;float:left; }
+#relacionados select             { color:#D4943B;  }
+#relacionados #barra_titulo      { width:98.8%; }
+#relacionados .formulario input[type=submit] {float:none}
+#relacionados select             { margin-left:6px; }
+
+/*========================== AJUDA AO USUARIO ==================================== */
+
+#lista_ajuda ul                         {   list-style:none ; padding-left:10px;}
+
+#lista_ajuda                            {   
+                                            font-size:0.8em;            
+                                            list-style:none ;
+                                            margin:0;
+                                            padding:0;
+                                            width:20%;
+                                            height:auto;
+                                            min-height:50px;
+                                            float:left;
+                                            
+                                        }    
+  
+#lista_ajuda li                         { margin:0; }
+
+#lista_ajuda li a                       { padding:0; color:#D4943B;  border-bottom: 1px solid #D4943B; line-height:1.6em;}
+
+#lista_ajuda li a:hover                 {
+                                          text-decoration:none;  
+                                          border-bottom: 2px solid #D4943B;
+                                          background-color:#D4943B;
+                                          color:#FFFFFF;
+                                         }
+
+#lista_ajuda li a.ativo:hover            {                             
+                                          text-decoration:none;  
+                                          border-bottom: 0px solid #D4943B;
+                                          background-color:#ffffff;
+                                          
+                                         }
+                                          
+#lista_ajuda li a.ativo                  { font-weight:bold; border:none; color:#F1EFE2; font-size: 1.2em;}
+
+#conteudo_ajuda                          { width:77%; margin:5px 0.2%; border-left:2px solid #F1EFE2; float:left; padding:5px; } 
+
+#frame                                   { height: auto;  margin: 5px 0;}
+
+#frame ul                                { width:25%;font-size:0.8em; float:left;}
+
+#frame h3#barra_titulo                   { padding-left: 15px; color:#D4943B; }
+
+#frame h4,#frame h5                      { margin-left: 20px; margin-top:1em; margin-bottom:1em; width:100%; clear:both;float:left;}
+
+#frame p,#frame code                     { margin-left: 20px; margin-top: 0.6em; margin-bottom:0.6em; font-size:0.8em;width:80%; clear:both;}
+
+
+#conteudo_ajuda iframe          {border: 1px none; width:100%; height:auto padding:0;}
+
+#lista_ajuda a:visited          { color:#855c5c; }  
+
+#frame img                      { border:1px solid #F1EFE2; margin-left:15px; margin-bottom:10px; }
+
+#frame img.semborda             { border: 1px solid #FFFFFF; float:left;}
+
+#frame a,
+#frame strong,
+#frame h4,
+#frame h5                       { color:#8C1C1C; }
+#frame ul.emlinha                        { float:none; }
+
+/*========================================*/
+
+
+                      
+/* AJUDAS                      
+============================================== */
+
+
+#topo_ajuda                     {     
+                                       width: 100%; 
+                                       min-height:20px; 
+                                       margin:0;
+                                       width:100%;
+                                       background-image: url("/theme/sun/images/fil1.png");
+                                       padding-bottom: 10px;
+                                       padding-top:10px;
+                                       display: inline-block;
+                                       border-top:8px solid #D4943B;
+                                       border-bottom: 1px  solid #F1EFE2;
+                                       
+                                 }
+                                 
+#topo_ajuda b                    {     margin:10px; color: #D4943B; }
+
+#rodape_ajuda                    {     
+                                       width:100%; height:32px;
+                                       border-top:5px solid #D4943B;
+                                       border-bottom: 1px solid #F1EFE2;
+                                       background-image: url("/theme/sun/images/img09.gif");
+                                 }
+                                 
+#ajuda_tudo                      {     min-height:370px;  }
+
+#ajuda_conteudo                  { padding: 10px; }
+

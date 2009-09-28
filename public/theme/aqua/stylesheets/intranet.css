@@ -937,7 +937,7 @@ td.form_item { padding-left:0; border:none;}
 #form_item p             { font-size: 0.9em;} 
 #form_item td p          { font-size: 0.9em; } 
 #form_item td.lista_item { color: #205C7A; font-weight: bold; font-size:0.8em;}
-#form_item td.lista_conteudo { font-size:0.8em; } 
+#form_item td.lista_conteudo { font-size:0.8em; padding: 0 0 0 6px; } 
 
 .lista_linha  { display:table-row; }
 div.lista_item { width:43.5%; display:table-cell ; }
@@ -1204,7 +1204,7 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
 
 #artefatos div.formulario     { width:74.8%; float:left; padding:0; border:0; margin:0;}
 
-#artefatos .formulario select { color:#205C7A; float:right; margin:0 22px; vertical-align:middle;}
+#artefatos .formulario select { color:#205C7A; float:left; margin:0 22px; vertical-align:middle;}
                                
 #artefatos .formulario option  {  }
 /*
@@ -1287,7 +1287,7 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
 #artefatos input[type="text"], 
 input[type="password"]  { margin-top:0; }
                        
-#artefatos .lista_item  { background-image:none; border-bottom:1px solid #EDEDED; text-align:center;  }
+#artefatos .lista_item  { background-image:url("theme/aqua/images/img09.gif"); border-bottom:1px solid #EDEDED; text-align:center;  }
 
 .artefato               { border: 1px solid #CCCCCC; width:100%; padding: 2px; outline: 1px solid #EDEDED;}
 
@@ -1342,6 +1342,8 @@ RELACIONAMENTOS
 
 
 #relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
+#relacionados form               { width:25%; margin-left:20px;float:left; }
+#relacionados select             { color:#205C7A; }
 #relacionados #barra_titulo      { width:98.8%; }
 #relacionados .formulario input[type=submit] {float:none}
 
