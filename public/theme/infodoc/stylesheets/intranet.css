@@ -117,7 +117,6 @@ ESTRUTURAS PRINCIPAIS
                                       list-style-type: none;
                                       text-align: left;
                                       background-color:#ffffff;
-                                      
                                       width:100%;
                                       border-top: 5px solid #8c1c1c;
                                       border-bottom: 1px solid #DBDBDB;
@@ -782,7 +781,6 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                                 color:#8C1C1C;
                                 font-weight:bold;
                                 text-decoration:none;
-                                color:none;
                                 padding:0;
                                 padding-left:20px;
                                 padding-top:0px;
@@ -854,7 +852,7 @@ FORMS
                             margin: 6px 0;
                             padding:2px 2px 25px;
                             font-weight:bold;
-                             border: 1px solid #EDEDED;
+                            border: 1px solid #EDEDED;
                           }
 
 .formulario td            { empty-cells: hide ; }
@@ -942,7 +940,7 @@ CRIACAO DE ITENS FORMULARIO
 
 .formulario form li             { margin-left:20px;                                     }
 
-.formulario td p               {
+.formulario td p                {
                                   margin: 5px 0px;
                                   margin-top:2px;
                                   color:#7D7979;
