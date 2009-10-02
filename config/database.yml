@@ -9,7 +9,7 @@
 ## Warning: The database defined as "test" will be erased and
 ## re-generated from your development database when you run "rake".
 ## Do not set this db to the same as development or production.
-#test:
+#test: &TEST
 #  adapter: sqlite3
 #  database: db/test.sqlite3
 #  pool: 5
@@ -25,16 +25,16 @@ development:
   adapter: mysql
   database: infodoc_open
   username: root
-  password: 123
+  password: info@adm
   host: localhost
 #  socket: /var/run/mysqld/mysqld.sock
 
-#test:
-#  adapter: mysql
-#  database: infodocdoc_test
-#  username: root
-#  password: infodoc@adm
-#  host: localhost
+test: &TEST
+  adapter: mysql
+  database: infodoc_test
+  username: root
+  password: info@adm
+  host: localhost
   #socket: /var/run/mysqld/mysqld.sock
 
 #production:
@@ -44,4 +44,8 @@ development:
 #  password: infodoc@adm
 #  host: localhost
   #socket: /var/run/mysqld/mysqld.sock
+
+
+cucumber:
+  <<: *TEST
 

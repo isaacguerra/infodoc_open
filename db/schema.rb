@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090817121640) do
+ActiveRecord::Schema.define(:version => 20091002114827) do
 
   create_table "ajudas", :force => true do |t|
     t.integer "entidade_id"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
     t.text     "ocr"
   end
 
+  create_table "blogs", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "usuario_id"
+    t.integer "destinatario_id"
+    t.string  "menssagem"
+  end
+
+  add_index "blogs", ["destinatario_id"], :name => "index_blogs_on_destinatario_id"
+  add_index "blogs", ["entidade_id"], :name => "index_blogs_on_entidade_id"
+  add_index "blogs", ["menssagem"], :name => "index_blogs_on_menssagem"
+  add_index "blogs", ["usuario_id"], :name => "index_blogs_on_usuario_id"
+
   create_table "cadastros", :force => true do |t|
     t.integer  "entidade_id"
     t.integer  "formulario_id"
@@ -38,6 +50,19 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
     t.boolean  "status"
     t.boolean  "publicado",              :default => false
     t.text     "filtro"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cadastros", ["entidade_id"], :name => "index_cadastros_on_entidade_id"
+  add_index "cadastros", ["formulario_id"], :name => "index_cadastros_on_formulario_id"
+  add_index "cadastros", ["formulariocategoria_id"], :name => "index_cadastros_on_formulariocategoria_id"
+  add_index "cadastros", ["formulariotipo_id"], :name => "index_cadastros_on_formulariotipo_id"
+  add_index "cadastros", ["parent_id"], :name => "index_cadastros_on_parent_id"
+  add_index "cadastros", ["status"], :name => "index_cadastros_on_status"
+  add_index "cadastros", ["usuario_id"], :name => "index_cadastros_on_usuario_id"
+
+  create_table "categoria_noticias", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -330,6 +355,11 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
 
   add_index "modulos", ["nome"], :name => "index_modulos_on_nome"
 
+  create_table "noticias", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sessaos", :force => true do |t|
     t.integer  "usuario_id"
     t.integer  "entidade_id"
@@ -364,6 +394,16 @@ ActiveRecord::Schema.define(:version => 20090817121640) do
   add_index "sistemas", ["nome"], :name => "index_sistemas_on_nome"
   add_index "sistemas", ["rota"], :name => "index_sistemas_on_rota"
   add_index "sistemas", ["status"], :name => "index_sistemas_on_status"
+
+  create_table "usuario_blogs", :force => true do |t|
+    t.integer "entidade_id"
+    t.integer "usuario_id"
+    t.integer "seguido_id"
+  end
+
+  add_index "usuario_blogs", ["entidade_id"], :name => "index_usuario_blogs_on_entidade_id"
+  add_index "usuario_blogs", ["seguido_id"], :name => "index_usuario_blogs_on_seguido_id"
+  add_index "usuario_blogs", ["usuario_id"], :name => "index_usuario_blogs_on_usuario_id"
 
   create_table "usuarios", :force => true do |t|
     t.integer  "entidade_id"

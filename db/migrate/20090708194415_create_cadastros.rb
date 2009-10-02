@@ -12,6 +12,13 @@ class CreateCadastros < ActiveRecord::Migration
       t.text :filtro
       t.timestamps
     end
+    add_index :cadastros, :entidade_id
+    add_index :cadastros, :formulariocategoria_id
+    add_index :cadastros, :formulario_id
+    add_index :cadastros, :formulariotipo_id
+    add_index :cadastros, :usuario_id
+    add_index :cadastros, :parent_id
+    add_index :cadastros, :status
   end
 
   def self.down

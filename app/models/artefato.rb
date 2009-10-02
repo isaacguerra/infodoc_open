@@ -8,7 +8,7 @@ class Artefato < ActiveRecord::Base
   validates_presence_of :cadastro_id
   validates_presence_of :entidade_id
 
-  def apos_criar
+  def fazer_ocr
     file = ""
     file_ocr = ""
 

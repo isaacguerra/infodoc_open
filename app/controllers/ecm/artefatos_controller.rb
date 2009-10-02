@@ -52,7 +52,9 @@ class Ecm::ArtefatosController < ApplicationController
       @artefato.entidade_id = @cadastro.entidade_id
       @artefato.objeto = params[:cadastro][:objeto]
       @artefato.save
-      @artefato.apos_criar
+      if params[:ocr] == "1"
+        @artefato.fazer_ocr
+      end
       flash[:notice] = "Artefato Criada com Sucesso!"
       redirect_to ecm_formulario_cadastro_path(@parent.formulario_id, @parent)
     end
@@ -83,6 +85,11 @@ class Ecm::ArtefatosController < ApplicationController
       flash[:notice] = "impossivel excluir o cadastro"
       redirect_to ecm_formulario_cadastro_path(@cadastro.formulario_id, @cadastro)
     end
+  end
+
+  def ocr
+    @artefato = Cadastro.find(params[:id])
+    render :ocr, :layout => "clean"
   end
 end
 

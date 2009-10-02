@@ -107,7 +107,8 @@ class Core::InstallController < ApplicationController
        @log << "ID da vinculacao do sistema #{vsg.sistema.nome} - #{vsg.id}\n"
      end
     u = Usuario.new
-    @senha = u.random_alphanumeric(6)
+    #@senha = u.random_alphanumeric(6)
+    @senha = "123456"
     usuario = Usuario.create(:entidade_id=>entidade.id, :nome=>"Administrador", :login=>"admin", :email=>"contato@infomanagerbrasil.com.br", :senha=>@senha, :senha_confirmation=>@senha, :status=>true)
     @log << "ID do Usuario #{usuario.nome}\n"
 

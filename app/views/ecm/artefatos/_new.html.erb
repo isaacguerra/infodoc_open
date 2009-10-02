@@ -11,6 +11,16 @@
          <td class="lista_item"><%= f.label :objeto ,'Artefato'%></td>
          <td class="lista_conteudo"><%= f.file_field :objeto %></td>
       </tr>
+      <tr>
+         <td class="lista_item">Reconhecer Caracteres do Documento</td>
+         <td class="lista_conteudo"><%= check_box_tag :ocr %>
+           <p>O processo de Reconhecimento de Caracteres do Documento(OCR) pode ser realizado em documentos texto,
+           ou seja documentos que contenham textos em seu conteúdo. O resultado do processo será usado para pesquisa
+           no conteúdo destes documentos. O sistema de reconhecimento de caracteres so pode ser realizado em arquivos
+           do tipo imagem(png, jpg, bmp, tif, etc) com resolução de 300dpi e imagens bem alinhadas para garantir a
+           qualidade do processo. O processo de OCR é pesado de demanda tempo de processamento.</p>
+         </td>
+      </tr>
       <% @formulario.itensformularios.each do |form_item| %>
       <tr>
          <td class="lista_item"> <%= form_item.rotulo %></td>
