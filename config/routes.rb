@@ -31,6 +31,10 @@ ActionController::Routing::Routes.draw do |map|
     page.resources :entidades
   end
 
+  map.namespace :com do |com|
+    com.resources :blogs, :collection=>{:usuario_blogs=>:post }
+  end
+
   map.namespace :wiki do |wiki|
     wiki.resources :wikicategorias, :collection=>{:busca=>:get }, :has_many=>:wikipages
     wiki.resources :wikipages, :has_many=>:wikihistotiapages

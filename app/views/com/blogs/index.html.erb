@@ -1,0 +1,61 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Usuarios</h3>
+</div>
+  <% form_tag(:action=>"usuario_blogs") do %>
+  <table id="listar">
+   <tr>
+     <th class="titulo_lista">Usuarios Seguidos</th>
+    </tr>
+    <% @sessao_usuario.usuario.usuario_blogs.each do |ub| %>
+    <tr>
+      <td>
+       <%= check_box_tag "usuarios[]", ub.id %>
+       <%= Usuario.find(ub.seguido_id).nome %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= submit_tag "Remover" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+
+  <% form_tag(:action=>"usuario_blogs") do %>
+  <table id="listar">
+   <tr>
+     <th class="titulo_lista">Usuarios não Seguidos</th>
+    </tr>
+    <% @usuarios.each do |usuario| %>
+    <tr>
+      <td>
+       <%= check_box_tag "usuarios[]", usuario.id %>
+       <%= usuario.nome %>
+      </td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= submit_tag "Adicionar" %></td>
+    </tr>
+  </table>
+  <% end %>
+
+  <% form_tag(:action=>"create") do %>
+  <table id="listar">
+   <tr>
+     <th class="titulo_lista">Seus Seguidores</th>
+    </tr>
+    <% @seguidores.each do |us| %>
+    <tr>
+      <td>
+       <%= Usuario.find(us.usuario_id).nome %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+  <% end %>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', com_blogs_path %>
+</div>
+

@@ -1,4 +1,7 @@
 class Wiki::WikicomentariosController < ApplicationController
+  skip_before_filter :autorizado
+
+
   def index
     @wikipage = Wikipage.find(params[:wikipage_id])
     render :update do |page|

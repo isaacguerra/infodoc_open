@@ -1,4 +1,7 @@
 class Wiki::WikipagesController < ApplicationController
+  skip_before_filter :autorizado
+
+
   def show
     @wikicategoria = Wikicategoria.find(params[:wikicategoria_id])
     @wikipage = Wikipage.find(params[:id])

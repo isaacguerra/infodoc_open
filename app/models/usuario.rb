@@ -3,6 +3,9 @@ class Usuario < ActiveRecord::Base
     has_one :sessao
     has_many :grupousuarios
     has_many :grupos, :through => :grupousuarios
+    has_many :blogs
+    has_many :usuario_blogs
+
     has_attached_file :avatar
 
     attr_accessor :senha

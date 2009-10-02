@@ -5,7 +5,7 @@ class Ecm::AjudasFormulariosController < ApplicationController
 
   def show
     @formulario = Formulario.find(params[:formulario_id])
-    render :show, :layout => "ajudas"
+    render :show, :layout => "clean"
   end
 
   def new

@@ -20,15 +20,35 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
-   config.gem "uuid", :lib=>"uuid"
-   config.gem "json", :lib=>"json"
-   config.gem "eventmachine", :lib=>false
-   config.gem "juggernaut", :lib=>false
-   config.gem "thoughtbot-shoulda", :lib => "shoulda/rails", :source => "http://gems.github.com"
-   config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
-   config.gem 'brazilian-rails'
-   #require 'brazilian-rails'
-   require 'brI18n'
+  # config.gem "uuid", :lib=>"uuid"
+  # config.gem "json", :lib=>"json"
+  # config.gem "eventmachine", :lib=>false
+  # config.gem "juggernaut", :lib=>false
+  # config.gem "thoughtbot-shoulda", :lib => "shoulda/rails", :source => "http://gems.github.com"
+  # config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
+#   config.gem 'brazilian-rails', :lib=>false
+#   # Necessária para a internacionalização
+#  config.gem "polyglot", :lib => false#, :version => ">= 0.2.5"
+#  # Ferramenta de parsing necessária
+#  config.gem "hpricot", :lib => false#, :version => ">= 0.8.1"
+#  # Metalinguagem
+#  # É um componente esssencial do cucumber
+#  config.gem "treetop", :lib => false#, :version => ">= 1.2.5"
+#  # Utilizada para colorir a saída no terminal
+#  config.gem "term-ansicolor", :lib => false#, :version => ">= 1.0.3"
+#  # Ferramenta para testes funcionais
+#  config.gem "webrat", :lib => false#, :version => ">= 0.4.4"
+#  # O cucumber propriamente dito
+#  config.gem "cucumber", :lib => false#, :version => ">= 0.3.5"
+#  # rspec
+#  config.gem "rspec", :lib => false#, :version => ">= 1.2.6"
+#  # rspec para o rails
+#  config.gem "rspec-rails", :lib => false#, :version => ">= 1.2.6"
+  # Selenium
+  #config.gem "Selenium", :lib => false#, :version => ">= 1.1.14"
+  # Cliente Selenium
+  #config.gem "selenium-client", :lib => false#, :version => ">= 1.2.15"
+
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -49,4 +69,6 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
    config.i18n.default_locale = "pt-BR"
 end
+require 'brI18n'
+require 'brazilian-rails'
 

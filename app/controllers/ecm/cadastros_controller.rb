@@ -118,10 +118,14 @@ class Ecm::CadastrosController < ApplicationController
     end
     @cadastro_itens = EcmItemTexto.do_formulario(@formulario.id).do_itens_formulario(@formulario.principal_id).find(:all, :conditions=>["cadastro_id in (?)", @res])
     @tipo = params[:tipo]
-    render :update do |page|
-      page.visual_effect(:highlight , 'cadastros')
-      page.replace_html "cadastros", render(:partial => "filtro")
-    end
+#     params[:pdf]
+      render :update do |page|
+        page.visual_effect(:highlight , 'cadastros')
+        page.replace_html "cadastros", render(:partial => "filtro")
+      end
+#    else
+#      send_data render_to_pdf({:action =>'_filtro.html.erb'})
+#    end
   end
 
   def ajax

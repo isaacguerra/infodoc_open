@@ -1,4 +1,6 @@
 class Wiki::WikicategoriasController < ApplicationController
+  skip_before_filter :autorizado
+
   def index
     @wikicategorias = Wikicategoria.raiz.da_entidade(@sessao_usuario.entidade_id).find(:all)
   end
