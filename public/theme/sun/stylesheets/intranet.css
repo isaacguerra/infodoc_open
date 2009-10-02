@@ -55,7 +55,7 @@ ESTRUTURAS PRINCIPAIS
                            
                                     }
                         
-#topo img                           {  height:80%; margin :25px 5px 2px 20px; }
+#logo img                           {  height:80%; margin :25px 5px 2px 20px; }
 
 #logo                               {  float:left; width:20%; height:100%;  }
 
@@ -362,7 +362,7 @@ AVATAR*/
                                 border-left: 1px solid #F2DBBB;
                                 border-right: 1px solid #F8EFA7;
                              }
-
+#barra_titulo                { min-height: 54px; }
 /* **************************************************************************************************** */
 
 
@@ -393,7 +393,8 @@ AVATAR*/
                             font-size:1.2em;
                             float:left;
                             padding-left:28px;
-                            margin-left:5px;
+                            margin-left:10px;
+                            margin-top: 1%;
                             background-position:left;
                             background-repeat:no-repeat;
                             
@@ -1020,6 +1021,19 @@ FILTRO FORM
 
 #filtro_avancado br     { display: none; }
 
+/*
+RESULTADO DETALHADO BUSCA
+==================================================*/
+#cadastros #listar tr:hover { background:#FFFFFF; }
+#cadastros #listar b        { color: #D4943B;  margin-right:5px; }
+#cadastros #listar h3       { color: #D4943B; margin:0; display:inline; text-decoration:underline; font-size:1.2em; }
+#cadastros #listar ul       { padding:0px; }
+#cadastros #listar li       { border-bottom: 1px solid #F8EFA7; margin-top:5px; padding: 3px 0; font-size: 0.9em; }
+
+/*
+
+===================================================*/
+
 .fechar                 { float:right; }
 /*
 AJUDA ========================================*/
@@ -1229,7 +1243,7 @@ COMENTARIOS
 
 #artefatos div.formulario     { width:74.8%; float:left; padding:0; border:0; margin:0;}
 
-#artefatos .formulario select { color:#D4943B; float:left; margin:0 22px; vertical-align:middle;}
+#artefatos .formulario select { color:#D4943B; float:left; margin:1% 22px; vertical-align:middle;}
                                
 #artefatos .formulario option  {  }
 /*

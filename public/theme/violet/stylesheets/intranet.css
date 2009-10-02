@@ -56,7 +56,7 @@ ESTRUTURAS PRINCIPAIS
                            
                                     }
                         
-#topo img                           {  height:80%; margin :25px 5px 2px 20px; }
+#logo img                           {  height:80%; margin :25px 5px 2px 20px; }
 
 #logo                               {  float:left; width:20%; height:100%;  }
 
@@ -328,7 +328,7 @@ AVATAR*/
 #status #menu_perfil               { float:right;}
 #status #menu_perfil ul            { margin:0; margin-top:5px;}  
 #status #menu_perfil ul li         { list-style:none; display:inline; margin:0;}
-#status #menu_perfil ul li a       { margin:0; color:#8c1c1c; font-weight:bold;padding:2px; font-family:"sans serif"; font-size:0.7em;}
+#status #menu_perfil ul li a       { margin:0; color:#934DA2; font-weight:bold;padding:2px; font-family:"sans serif"; font-size:0.7em;}
 #status #menu_perfil ul li a:hover { background-color: #dbdbdb; text-decoration:none;}
 
  /*===================================
@@ -360,7 +360,7 @@ AVATAR*/
                                 border-right: 1px solid #F1E5F4;
 
                              }
-
+#barra_titulo                { min-height: 54px; }
 /* **************************************************************************************************** */
 
 
@@ -391,7 +391,8 @@ AVATAR*/
                             font-size:1.2em;
                             float:left;
                             padding-left:28px;
-                            margin-left:5px;
+                            margin-left:10px;
+                            margin-top: 1%;
                             background-position:left;
                             background-repeat:no-repeat;
                             

@@ -1,17 +1,17 @@
 <table id="listar">
-  </tr>
+  <tr>
     <th class="titulo_lista">Foram encontrados <%= @cadastro_itens.size.to_s %> Cadastros em <%= @principal.formulario.titulo %></th>
   </tr>
     <% @cadastro_itens.each do |cadastro_item| %>
     <tr>
       <td class="itens_index">
-        <%= @principal.rotulo %> -
-        <%= link_to ecm_show_cadastro_item(@principal, cadastro_item.cadastro), ecm_formulario_cadastro_path(@formulario, cadastro_item.cadastro_id) %>
+        <h3><%= @principal.rotulo %> -
+        <%= link_to ecm_show_cadastro_item(@principal, cadastro_item.cadastro), ecm_formulario_cadastro_path(@formulario, cadastro_item.cadastro_id) %></h3>
         <% if @tipo == "avancado" %>
           <ul>
             <% cadastro_item.cadastro.formulario.itensformularios.sort_by{|it| it.posicao}.each do |form_item| %>
             <li>
-             <%= form_item.rotulo %>:
+             <b><%= form_item.rotulo %>:</b>
              <%= ecm_show_filtro_cadastro_item(form_item, cadastro_item.cadastro) %>
             </li>
             <% end %>

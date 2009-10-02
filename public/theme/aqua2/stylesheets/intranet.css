@@ -2,7 +2,7 @@
 
 body                                {  margin:0;
                                        padding:0;
-                                       font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura;
+                                       font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
                                     }
 
 a                                   { color:#205C7A; text-decoration:none; }
@@ -10,9 +10,7 @@ a                                   { color:#205C7A; text-decoration:none; }
 a:hover                             { text-decoration:underline; }
 
 td                                  { font-size:0.8em;
-                                      padding:5px;
-                                      padding-left:6px;
-                                      border-bottom: 1px solid #E3E7E8;
+                                      padding:0 5px 0 0;
                                     }
 
 table                               {  margin-bottom:0; }
@@ -34,8 +32,9 @@ h3                                  { color:black; margin:0px; }
 #tudo                               {
 
                                        
-                                       height: auto;
-                                       min-height: 640px;
+                                       
+                                       min-height: 600px;
+                                       height:auto;
                                        width: 98%;
                                        margin-right: auto;
                                        margin-left: auto;
@@ -54,7 +53,7 @@ h3                                  { color:black; margin:0px; }
                            
                                     }
                         
-#topo img                           {  height:80%; margin :25px 5px 2px 20px; }
+#logo img                           {  height:80%; margin :25px 5px 2px 20px; }
 
 #logo                               {  float:left; width:20%; height:100%;  }
 
@@ -70,18 +69,16 @@ h3                                  { color:black; margin:0px; }
                                     }
 
 #rodape                             {
-                                        color:#515859;
-	                                    clear: both;
-	                                    width: 99.5%;
+                                        clear: both;
+	                                    width: 100%;
                                         font-size:0.8em;
                                         padding: 15px 0;
-                                        margin-left:2px;
                                         margin-bottom:2px;
                                         margin-bottom:2px;
                                         list-style-type: none;
                                         text-align: center;
                                         background-color:#ffffff;
-                                        min-height:80px;
+                                        min-height:50px;
                                         border-top: 1px solid #EDEDED;
                                         border-bottom:5px solid #3C7B96;
                                         background-image: url("/theme/aqua/images/img11.gif");

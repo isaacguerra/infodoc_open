@@ -52,7 +52,7 @@ h3                                  { color:#2d6809; margin:0px; }
 
                                     }
 
-#topo img                           {  height:80%; margin :25px 5px 2px 20px; }
+#logo img                           {  height:80%; margin :25px 5px 2px 20px; }
 
 #logo                               {  float:left; width:20%; height:100%;  }
 
@@ -351,7 +351,7 @@ AVATAR*/
                                 border-left: 1px solid #cdd7c7
                                 border-right: 1px solid #EDEDED;
                              }
-
+#barra_titulo                { min-height: 54px; }
 /* **************************************************************************************************** */
 
 
@@ -380,7 +380,8 @@ AVATAR*/
                             font-size:1.2em;
                             float:left;
                             padding-left:28px;
-                            margin-left:5px;
+                            margin-left:10px;
+                            margin-top: 1%;
                             background-position:left;
                             background-repeat:no-repeat;
 
@@ -1007,6 +1008,18 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
 
 .fechar                 { float:right; }
 
+/*
+RESULTADO DETALHADO BUSCA
+==================================================*/
+#cadastros #listar tr:hover { background:#FFFFFF; }
+#cadastros #listar b        { color: #2D6809;  margin-right:5px; }
+#cadastros #listar h3       { color: #2D6809; margin:0; display:inline; text-decoration:underline; font-size:1.2em; }
+#cadastros #listar ul       { padding:0px; }
+#cadastros #listar li       { border-bottom: 1px solid #E3F1DA; margin-top:5px; padding: 3px 0; font-size: 0.9em; }
+
+/*
+
+===================================================*/
 
 
 /*==========================
@@ -1111,6 +1124,7 @@ COMENTARIOS
                                   border:0;
                                   border-bottom: solid 1px #cccccc;
                                   width:99%;
+                                  height:auto;
                                   background-color: #F5F5F5;
                                   
                                  }
@@ -1218,7 +1232,7 @@ ARTEFATOS
 
 #artefatos div.formulario     { width:74%; float:left; padding:0; border:0; margin:0;}
 
-#artefatos .formulario select { color:#8C1C1C; float:left margin:0 22px; vertical-align:middle;}
+#artefatos .formulario select { color:#2D6809; float:left; margin:1% 22px; vertical-align:middle;}
                                
 #artefatos .formulario option  {  }
 /*
@@ -1259,8 +1273,8 @@ ARTEFATOS
                                  color: #EDEDED;
                                  font-weight:bold;
                                  font-size:0.7em;
-                                 background-color:#8C1C1C;
-                                 border: 1px solid #8C1C1C;
+                                 background-color:#2D6809;
+                                 border: 1px solid #2D6809;
 
                                 }
 

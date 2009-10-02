@@ -4,7 +4,7 @@
 <table class="formulario">
   <% form_for @formulario, :url=>{:action=>'create'} do |f| %>
    <tr>   
-      <td class="error_messages">
+      <td class="error_messages" colspan=2>
         <%= f.error_messages %>
         <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.usuario.entidade_id %>
       </td>

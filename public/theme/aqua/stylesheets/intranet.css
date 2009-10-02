@@ -51,7 +51,7 @@ h3                                  { color:black; margin:0px; }
                            
                                     }
                         
-#topo img                           {  height:80%; margin :25px 5px 2px 20px; }
+#logo img                           {  height:80%; margin :25px 5px 2px 20px; }
 
 #logo                               {  float:left; width:20%; height:100%;  }
 
@@ -350,7 +350,7 @@ input.enviar                          {
 
 
                              }
-
+#barra_titulo                { min-height: 54px; }
 /* **************************************************************************************************** */
 
 
@@ -382,7 +382,8 @@ input.enviar                          {
                             color: #205C7A;
                             float:left;
                             padding-left:28px;
-                            margin-left:5px;
+                            margin-left:10px;
+                            margin-top: 1%;
                             background-position:left;
                             background-repeat:no-repeat;
                             
@@ -971,7 +972,6 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
                               text-align:left;
                               clear:both;
                               color: #515859;
-                              border: 1px solid #C1D9E3;
                               padding: 8px 4px; 
                               padding-bottom: 5px;
                               font-size: 0.8em;
@@ -980,6 +980,8 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
                               width:98.7%;
                               float:left;
                               outline:1px solid #E8F2F4;
+                              border: 2px solid #C1D9E3;
+                              
                             }
 
 
@@ -998,6 +1000,19 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
 #filtro_avancado p      { margin:3px 0; padding:0; }
 
 #filtro_avancado br     { display: none; }
+
+/*
+RESULTADO DETALHADO BUSCA
+==================================================*/
+#cadastros #listar tr:hover { background:none; }
+#cadastros #listar b        { color: #205C7A;  margin-right:5px; }
+#cadastros #listar h3       { color: #205C7A; margin:0; display:inline; text-decoration:underline; font-size:1.2em; }
+#cadastros #listar ul       { padding:0px; }
+#cadastros #listar li       { border-bottom: 1px solid #E5EFF3; margin-top:5px; padding: 3px 0; font-size: 0.9em; }
+
+/*
+
+===================================================*/
 
 .fechar                 { float:right; }
 #ajuda { float:right; background-image: url("/images/ajuda.png"); width:26px; height:28px; margin-right:12px;}

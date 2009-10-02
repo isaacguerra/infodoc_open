@@ -158,22 +158,22 @@ buildmenu:function(mainmenuid, header, submenu, submenupos, istoplevel, dir){
 			ddlevelsmenu.getoffsetof(header)
 			var scrollX=window.pageXOffset? window.pageXOffset : ddlevelsmenu.standardbody.scrollLeft
 			var scrollY=window.pageYOffset? window.pageYOffset : ddlevelsmenu.standardbody.scrollTop
-			var submenurightedge=this._offsets.left + this._dimensions.submenuw + (this._istoplevel && dir=="topbar"? 0 : this._dimensions.w)
+			var submenurightedge=this._offsets.left + this._dimensions.submenuw + (this._istoplevel && dir=="sidebar"? 0 : this._dimensions.w)
 			var submenubottomedge=this._offsets.top + this._dimensions.submenuh
 			//Sub menu starting left position
-			var menuleft=(this._istoplevel? this._offsets.left + (dir=="sidebar"? this._dimensions.w : 0) : this._dimensions.w)
+			var menuleft=(this._istoplevel? this._offsets.left + (dir=="topbar"? this._dimensions.w : 0) : this._dimensions.w)
 			if (submenurightedge-scrollX>ddlevelsmenu.docwidth){
-				menuleft+= -this._dimensions.submenuw + (this._istoplevel && dir=="topbar" ? this._dimensions.w : -this._dimensions.w)
+				menuleft+= -this._dimensions.submenuw + (this._istoplevel && dir=="sidebar" ? this._dimensions.w : -this._dimensions.w)
 			}
 			submenu.style.left=menuleft+"px"
 			//Sub menu starting top position
-			var menutop=(this._istoplevel? this._offsets.top + (dir=="sidebar"? 0 : this._dimensions.h) : this.offsetTop)
+			var menutop=(this._istoplevel? this._offsets.top + (dir=="topbar"? 0 : this._dimensions.h) : this.offsetTop)
 			if (submenubottomedge-scrollY>ddlevelsmenu.docheight){ //no room downwards?
-				if (this._dimensions.submenuh<this._offsets.top+(dir=="sidebar"? this._dimensions.h : 0)-scrollY){ //move up?
-					menutop+= - this._dimensions.submenuh + (this._istoplevel && dir=="topbar"? -this._dimensions.h : this._dimensions.h)
+				if (this._dimensions.submenuh<this._offsets.top+(dir=="topbar"? this._dimensions.h : 0)-scrollY){ //move up?
+					menutop+= - this._dimensions.submenuh + (this._istoplevel && dir=="sidebar"? -this._dimensions.h : this._dimensions.h)
 				}
 				else{ //top of window edge
-					menutop+= -(this._offsets.top-scrollY) + (this._istoplevel && dir=="topbar"? -this._dimensions.h : 0)
+					menutop+= -(this._offsets.top-scrollY) + (this._istoplevel && dir=="sidebar"? -this._dimensions.h : 0)
 				}
 			}
 			submenu.style.top=menutop+"px"
@@ -212,7 +212,7 @@ setopacity:function(el, value){
 showmenu:function(header, submenu, dir){
 	if (this.effects.enableswipe || this.effects.enablefade){
 		if (this.effects.enableswipe){
-			var endpoint=(header._istoplevel && dir=="topbar")? header._dimensions.submenuh : header._dimensions.submenuw
+			var endpoint=(header._istoplevel && dir=="sidebar")? header._dimensions.submenuh : header._dimensions.submenuw
 			submenu.style.width=submenu.style.height=0
 			submenu.style.overflow="hidden"
 		}
@@ -235,9 +235,9 @@ revealmenu:function(header, submenu, endpoint, dir){
 	if (elapsed<this.effects.duration){
 		if (this.effects.enableswipe){
 			if (submenu._curanimatedegree==0){ //reset either width or height of sub menu to "auto" when animation begins
-				submenu.style[header._istoplevel && dir=="topbar"? "width" : "height"]="auto"
+				submenu.style[header._istoplevel && dir=="sidebar"? "width" : "height"]="auto"
 			}
-			submenu.style[header._istoplevel && dir=="topbar"? "height" : "width"]=(submenu._curanimatedegree*endpoint)+"px"
+			submenu.style[header._istoplevel && dir=="sidebar"? "height" : "width"]=(submenu._curanimatedegree*endpoint)+"px"
 		}
 		if (this.effects.enablefade){
 			this.setopacity(submenu, submenu._curanimatedegree)
@@ -349,10 +349,10 @@ init:function(mainmenuid, dir){
 			dropul._master=mainmenuid  //Indicate which main menu this main UL is associated with
 			dropul._pos=this.topitemsindex //Indicate which main menu item this main UL is associated with
 			this.addEvent(dropul, function(){ddlevelsmenu.hidemenu(this)}, "click")
-			var arrowclass=(dir=="sidebar")? "rightarrowpointer" : "downarrowpointer"
-			var arrowpointer=(dir=="sidebar")? this.arrowpointers.rightarrow : this.arrowpointers.downarrow
+			var arrowclass=(dir=="topbar")? "rightarrowpointer" : "downarrowpointer"
+			var arrowpointer=(dir=="topbar")? this.arrowpointers.rightarrow : this.arrowpointers.downarrow
 			if (this.arrowpointers.showarrow.toplevel)
-				this.addpointer(menuitem, arrowclass, arrowpointer, (dir=="sidebar")? "before" : "after")
+				this.addpointer(menuitem, arrowclass, arrowpointer, (dir=="topbar")? "before" : "after")
 			this.buildmenu(mainmenuid, menuitem, dropul, this.ulindex, true, dir) //build top level menu
 			dropul.onmouseover=function(){
 				clearTimeout(ddlevelsmenu.hidetimers[this._master][this._pos])

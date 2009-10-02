@@ -7,9 +7,9 @@
   </tr>
   <% @formulario.itensformularios.sort_by{|it| it.posicao}.each do |form_item| %>
   <tr>
-   <td><%= form_item.rotulo %></td>
-   <td><%= ecm_find_cadastro_item(form_item) %></td>
-   <td><%= check_box(:filtro, "check_#{form_item.id}") %></td>
+   <td class="lista_item"><%= form_item.rotulo %></td>
+   <td class="lista_conteudo"><%= ecm_find_cadastro_item(form_item) %></td>
+   <td class="titulo_curto"><%= check_box(:filtro, "check_#{form_item.id}") %></td>
   </tr>
   <% end %>
   <tr><td colspan=3>
