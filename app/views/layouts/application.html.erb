@@ -4,11 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <%= stylesheet_link_tag "/theme/#{@sessao_usuario.entidade.tema}/stylesheets/intranet.css" %>
     <%= stylesheet_link_tag "/theme/infodoc/stylesheets/scaffold.css" %>
-    
     <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag "/theme/#{@sessao_usuario.entidade.tema}/javascripts/script.js" %>
     <%= javascript_include_tag "/theme/#{@sessao_usuario.entidade.tema}/javascripts/ddlevelsmenu.js" %>
-    
     <%= javascript_include_tag :fckeditor %>
     <%= javascript_include_inputs %>
 
@@ -51,7 +49,6 @@
                 <li>
                   <a href="/core/login/logout">logout</a>
                 </li>
-                
               </ul>  
             </div>
         </div>
@@ -118,8 +115,7 @@
         <div class="micro_messagem">
           <b>Enviar micro mensagem</b>
           <form>
-            <textarea cols="49" rows="1">
-            </textarea>
+            <textarea cols="49" rows="1"></textarea>
             <input type="submit" value="enviar">
           </form>
         </div>
@@ -136,7 +132,8 @@
              <b><%= @sessao_usuario.usuario.entidade.nome %>: &nbsp;</b> 
              <p>
                Mensagem lipsum Mensagem lipsum Mensagem lipsum Mensagem lipsum Mensagem lipsum
-             </p> 
+             </p>
+             <b class="hmensagem">2 horas atrás</b> 
            </div>
            <div class="mensagem">
              <div class="avatar">
@@ -145,7 +142,12 @@
               <% else %>
                 <%= image_tag "user.png" %>
               <% end %>
-             </div> 
+             </div>
+              <b><%= @sessao_usuario.usuario.entidade.nome %>: &nbsp;</b> 
+              <p>
+                 Mensagem lipsum Mensagem lipsum Mensagem lipsum Mensagem lipsum Mensagem lipsum
+              </p>
+              <b class="hmensagem">2 horas atrás</b>  
            </div>
         </div>
       </div>

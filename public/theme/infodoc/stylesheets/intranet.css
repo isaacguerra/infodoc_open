@@ -346,7 +346,7 @@ AVATAR*/
 
                                 float:left;
                                 padding:6px 1px;
-                                width:99.6%;
+                                width:99.5%;
                                 min-height:30px;
                                 clear:both;
                                 margin:3px 0 3px 1px;
@@ -770,8 +770,8 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                                 padding:0;
                                 padding:9px 4px;
                                 padding-bottom:0px;
-                                margin:6px 2px ;
-                                width:99%;
+                                margin:6px 0px ;
+                                width:98.7%;
                                 float:left;
                                 background-image:url("/theme/infodoc/images/fil6.jpg");
                                 border: 1px solid #DBDBDB;
@@ -829,7 +829,7 @@ MENSAGENS DO SISTEMA
                                 padding-bottom: 5px;
                                 width:100%;
                                 height:auto;
-                                background-color:#95C4AE;
+                                background-color:#1a7629;
                             }
 
 #flash_error                { background-color:#F5C4C4; }
@@ -957,7 +957,7 @@ CRIACAO DE ITENS FORMULARIO
 
 /*.formulario p { float:left; width:60%; margin:0px; }*/
 
-div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px; display:table;}
+div.formulario { width:97.5%; float:left; padding-left:10px; padding-right: 10px; display:table;}
 td.form_item { padding-left:0; border:none;}
 
 #form_item               { width:auto;}
@@ -1501,6 +1501,7 @@ JQUERY ZEBRA ======================================
 /*
 COMUNICACAO ============================
 */
+
 .titulo_comunicacao
                                  { width:100%;
                                    float: left;
@@ -1510,6 +1511,13 @@ COMUNICACAO ============================
                                    border-top: 1px solid #DBDBDB;
                                    
                                   } 
+#comunicacao                      { width:24.5%;
+                                    float: left;
+                                    border: 1px solid #EDEDED;
+                                    height:auto;
+                                    margin: 3px 0;
+                                    padding-bottom:10px;
+                                  }                                  
                                    
 #comunicacao .micro_messagem,
 #comunicacao .mensagem          { height: 70px;
@@ -1538,7 +1546,7 @@ COMUNICACAO ============================
                                     -moz-border-radius-topright:5px;
                                   }
                                   
-#comunicacao p                    { padding:0;margin:0; }
+#comunicacao p                    { padding:0;margin:0;margin-bottom:2px; }
 #comunicacao .mensagens           { float:left; width:100%;}
 #comunicacao .mensagens b         { margin-left:5%; font-size: 0.7em;float:left; }
 #comunicacao .mensagens .mensagem b
@@ -1561,17 +1569,11 @@ COMUNICACAO ============================
                                     font-weight:bold;
                                     
                                    }      
-#comunicacao input[type=submit]:hover{ color:#FFFFFF; }
+#comunicacao input[type=submit]:hover{ color:#FFFFFF; cursor:pointer;}
            
 
 
-#comunicacao                      { width:24.5%;
-                                    float: left;
-                                    border: 1px solid #EDEDED;
-                                    height:auto;
-                                    margin: 3px 0;
-                                    padding-bottom:10px;
-                                  }
+
                                   
 #comunicacao h3                   { 
                                    padding-left:28px;
@@ -1585,6 +1587,9 @@ COMUNICACAO ============================
                                   
 #comunicacao b                    { margin-left: 2%; color:#8c1c1c;}
 
+#comunicacao .mensagens .mensagem b.hmensagem
+                                  { font-size:0.8em; color:#CCCCCC;ma }
+
 .avatar                           {
                                      width:48px; 
                                      height:48px;
@@ -1593,5 +1598,5 @@ COMUNICACAO ============================
                                      margin:2px 2px;
                                   }
                                   
-.avatar img                       { margin:4%; height:90%; width:90%;background-image:url("/theme/infodoc/images/perfilbg.png");  }                                   
+.avatar img                       { margin:4%; height:90%; width:90%; }                                   
 
