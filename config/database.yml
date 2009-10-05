@@ -25,7 +25,7 @@ development:
   adapter: mysql
   database: infodoc_open
   username: root
-  password: info@adm
+  password: 123
   host: localhost
 #  socket: /var/run/mysqld/mysqld.sock
 
@@ -33,7 +33,7 @@ test: &TEST
   adapter: mysql
   database: infodoc_test
   username: root
-  password: info@adm
+  password: 123
   host: localhost
   #socket: /var/run/mysqld/mysqld.sock
 

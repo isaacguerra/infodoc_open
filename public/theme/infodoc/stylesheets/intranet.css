@@ -558,7 +558,7 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
 #wiki #busca_wiki #resultado_busca
                              { width: 70%; margin-left:1%; }
 #wiki .titulo_categoria h3   { color: #8c1c1c; margin-left:20px; }
-#wiki .wiki_texto            { float:left;width:85%; }
+#wiki .wiki_texto            { float:left;width:85%; font-family:Arial,Verdana,sans-serif; font-size:12px; }
 #wiki #categorias div.formulario{ 
                                   width: auto; 
                                   padding-top: 10px; 
@@ -746,7 +746,7 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                                 padding:5px 0;
                                 padding-right:6px;
                                 width:10%;
-                                min-width:15%;
+                                min-width:20.3%;
                                 background-color:#f2f2f2;
 
                                 border-top:1px solid #FFFFFF;
@@ -966,11 +966,13 @@ td.form_item { padding-left:0; border:none;}
 #form_item td h3         { font-size: 1.5em; }
 #form_item p             { font-size: 0.9em; } 
 #form_item td p          { font-size: 0.9em; margin:0;} 
-#form_item td.lista_item { color: #000000; font-weight: bold; font-size:0.8em;}
+#form_item td.lista_item { color: #000000; font-weight: bold; font-size:0.8em; width:20%;}
+.opera #form_item td.lista_item { color: #000000; font-weight: bold; font-size:0.8em; width:120px;}
 #form_item td.lista_conteudo { font-size:0.8em; padding: 0 0 0 6px; } 
 
 .lista_linha  { display:table-row; }
 div.lista_item { width:43.5%; display:table-cell ; }
+.opera div.lista_item { width:120px; display:table-cell ; }
 div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding:0 0 0 6px;}
 
 #ajax_item { font-size:1em; }  
@@ -1042,6 +1044,9 @@ RESULTADO DETALHADO BUSCA
 #cadastros #listar tr:hover { background:#FFFFFF; }
 #cadastros #listar b        { color: #8C1C1C;  margin-right:5px; }
 #cadastros #listar h3       { color: #8C1C1C; margin:0; display:inline; text-decoration:underline; font-size:1.2em; }
+#cadastros #listar h3 a     { color: #8C1C1C; }
+#cadastros #listar h3 a:hover,
+#cadastros #listar h3:hover { text-decoration:none; }
 #cadastros #listar ul       { padding:0px; }
 #cadastros #listar li       { border-bottom: 1px solid #EDEDED; margin-top:5px; padding: 3px 0; font-size: 0.9em; }
 
@@ -1247,7 +1252,7 @@ ARTEFATOS
                             
 #artefatos .formulario        { margin:0;}
 
-#artefatos div.formulario     { width:74.8%; float:left; padding:0; border:0; margin:0;}
+#artefatos div.formulario     { width:63.8%; float:left; padding:0; border:0; margin:0;}
 
 #artefatos .formulario select { color:#8C1C1C; float:left; margin:1% 22px; vertical-align:middle;}
                                
@@ -1381,7 +1386,7 @@ RELACIONAMENTOS
 
 
 #relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
-#relacionados form               { width:25%; margin-left:20px;float:left; }
+#relacionados form               { width:28%; margin-left:20px;float:left; }
 #relacionados select             { color:#8C1C1C;  }
 #relacionados #barra_titulo      { width:98.8%; }
 #relacionados .formulario input[type=submit] {float:none}
@@ -1505,7 +1510,7 @@ COMUNICACAO ============================
 .titulo_comunicacao
                                  { width:100%;
                                    float: left;
-                                   background-image: url("/theme/infodoc/images/fil4.jpg");
+                                   /*background-image: url("/theme/infodoc/images/fil4.jpg");*/
                                    background-repeat: repeat-x;
                                    min-height: 54px;
                                    border-top: 1px solid #DBDBDB;
@@ -1517,12 +1522,13 @@ COMUNICACAO ============================
                                     height:auto;
                                     margin: 3px 0;
                                     padding-bottom:10px;
+                                    background-color: #dcdcdc;
                                   }                                  
                                    
 #comunicacao .micro_messagem,
 #comunicacao .mensagem          { height: 70px;
                                    width:93%;
-                                   background-color:#FFFFFF;
+                                   /*background-color:#FFFFFF;*/
                                    float:left; 
                                    padding:10px;
                                    /*border: 1px solid #EDEDED;
@@ -1547,9 +1553,9 @@ COMUNICACAO ============================
                                   }
                                   
 #comunicacao p                    { padding:0;margin:0;margin-bottom:2px; }
-#comunicacao .mensagens           { float:left; width:100%;}
-#comunicacao .mensagens b         { margin-left:5%; font-size: 0.7em;float:left; }
-#comunicacao .mensagens .mensagem b
+#comunicacao #mensagens           { float:left; width:100%;}
+#comunicacao #mensagens b         { margin-left:5%; font-size: 0.7em;float:left; }
+#comunicacao #mensagens .mensagem b
                                   { margin:0;  font-size:1em;}
 #comunicacao form                 { margin:0; }
 #comunicacao form textarea        { 
@@ -1583,11 +1589,18 @@ COMUNICACAO ============================
                                    margin-bottom:10px;
                                    margin-left:10px;
                                    margin-top:20px;
+                                   width:50%;
+                                   float:left;
                                   }
+#comunicacao a                    { text-align:right;font-weight:bold; float:right;   font-size: 0.6em; width:38%; margin:0; margin-top:10px; }                                  
+#comunicacao a:hover              { background-color:#CCCCCC; text-decoration:none; }
+div#historico_com_blogs_path a    { width:38%; margin-right:5px;margin-top:5px; }
+
+div#com_blogs_path a              { width:25%; margin-right:5px; } 
                                   
 #comunicacao b                    { margin-left: 2%; color:#8c1c1c;}
 
-#comunicacao .mensagens .mensagem b.hmensagem
+#comunicacao #mensagens .mensagem b.hmensagem
                                   { font-size:0.8em; color:#CCCCCC;ma }
 
 .avatar                           {

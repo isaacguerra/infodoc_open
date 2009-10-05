@@ -395,7 +395,6 @@ AVATAR*/
                             color:#2C3D21;
                             float:left;
                             margin: 6px 0 6px 0px;
-                            min-height:450px;
                             background-repeat:repeat-x;
                             border: 1px solid #E3F1DA;
                             border-left: 1px solid #E3F1DA;
@@ -541,7 +540,7 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
 #wiki #busca_wiki #resultado_busca
                              { width: 70%; margin-left:1%; }
 #wiki .titulo_categoria h3   { color: #2D6809; margin-left:20px; }
-#wiki .wiki_texto            { float:left;width:85%; }
+#wiki .wiki_texto            { float:left;width:85%; font-family:Arial,Verdana,sans-serif; font-size:12px; }
 #wiki #categorias div.formulario{ 
                                   width: auto; 
                                   padding-top: 10px; 
@@ -724,7 +723,7 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                                 text-align:right;
                                 padding:5px 0;
                                 padding-right:6px;
-                                width:10%;
+                                width:18%;
                                 min-width:15%;
                                 background-color:#E3F1DA;
 
@@ -985,7 +984,7 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
                                   font-size: 0.8em;
                                   margin:3px 6px;
                                   margin-left:2px;
-                                  width:98.7%;
+                                  width:98.3%;
                                   float:left;
                                   border: 2px solid #F2F2F2;
                                   outline:1px solid #C0DCAF;
@@ -1072,7 +1071,7 @@ COMENTARIOS
 
 
                                 padding:9px 5px;
-                                width:99%;
+                                width:98.7%;
                                 min-height:25px;
                                 clear:both;
                                 margin:6px 2px;
@@ -1230,7 +1229,7 @@ ARTEFATOS
                             
 #artefatos .formulario        { margin:0;}
 
-#artefatos div.formulario     { width:74%; float:left; padding:0; border:0; margin:0;}
+#artefatos div.formulario     { width:65%; float:left; padding:0; border:0; margin:0;}
 
 #artefatos .formulario select { color:#2D6809; float:left; margin:1% 22px; vertical-align:middle;}
                                
@@ -1371,9 +1370,9 @@ RELACIONAMENTOS
 
 
 #relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
-#relacionados form               { width:25%; margin-left:20px;float:left; }
+#relacionados form               { width:28%; margin-left:20px;float:left; }
 #relacionados select             { color:#2C3D21;  }
-#relacionados #barra_titulo      { width:98.8%; }
+#relacionados #barra_titulo      { width:98.2%; }
 #relacionados .formulario input[type=submit] {float:none}
 
 /*
@@ -1484,7 +1483,7 @@ COMUNICACAO ============================
 .titulo_comunicacao
                                  { width:100%;
                                    float: left;
-                                   background-image: url("/theme/green/images/img09.gif");
+                                   /*background-image: url("/theme/green/images/img09.gif");*/
                                    background-repeat: repeat-x;
                                    min-height: 54px;
                                    border-top: 1px solid #E3F1DA;
@@ -1496,12 +1495,13 @@ COMUNICACAO ============================
                                     height:auto;
                                     margin: 3px 0;
                                     padding-bottom:10px;
+                                    background-color: #B6C6AC;
                                   }                                  
                                    
 #comunicacao .micro_messagem,
 #comunicacao .mensagem          { height: 70px;
                                    width:93%;
-                                   background-color:#FFFFFF;
+                                   /*background-color:#FFFFFF;*/
                                    float:left; 
                                    padding:10px;
                                    /*border: 1px solid #EDEDED;
@@ -1526,9 +1526,9 @@ COMUNICACAO ============================
                                   }
                                   
 #comunicacao p                    { padding:0;margin:0;margin-bottom:2px; }
-#comunicacao .mensagens           { float:left; width:100%;}
-#comunicacao .mensagens b         { margin-left:5%; font-size: 0.7em;float:left; }
-#comunicacao .mensagens .mensagem b
+#comunicacao #mensagens           { float:left; width:100%;}
+#comunicacao #mensagens b         { margin-left:5%; font-size: 0.7em;float:left; }
+#comunicacao #mensagens .mensagem b
                                   { margin:0;  font-size:1em;}
 #comunicacao form                 { margin:0; }
 #comunicacao form textarea        { 
@@ -1562,11 +1562,19 @@ COMUNICACAO ============================
                                    margin-bottom:10px;
                                    margin-left:10px;
                                    margin-top:20px;
+                                   width:50%;
+                                   float:left;
                                   }
+#comunicacao a                    { text-align:right;font-weight:bold; float:right;   font-size: 0.6em; width:38%; margin:0; margin-top:10px; }                                  
+#comunicacao a:hover              { background-color:#C0DCAF; text-decoration:none; }
+div#historico_com_blogs_path a    { width:38%; margin-right:5px;margin-top:5px; }
+
+div#com_blogs_path a              { width:25%; margin-right:5px; } 
+                                  
                                   
 #comunicacao b                    { margin-left: 2%; color:#2D6809;}
 
-#comunicacao .mensagens .mensagem b.hmensagem
+#comunicacao #mensagens .mensagem b.hmensagem
                                   { font-size:0.8em; color:#CCCCCC;ma }
 
 .avatar                           {
