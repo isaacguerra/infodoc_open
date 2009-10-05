@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
+
   before_filter :autenticado
   #before_filter :autorizado
 
@@ -43,6 +44,7 @@ class ApplicationController < ActionController::Base
       redirect_to :controller => "core/login", :action=>:index
       return false
     end
+
   end
 
   def autorizado

@@ -1,0 +1,19 @@
+<b>Mensagem de Acompanhados</b>
+<% @menssagens = Blog.busca_menssagem(@sessao_usuario.usuario_id) %>
+<% @menssagens.each do |m| %>
+<div class="mensagem">
+ <div class="avatar">
+  <% if m.usuario.avatar_file_name %>
+    <%= image_tag m.usuario.avatar.url, :size=>"50x50" %>
+  <% else %>
+    <%= image_tag "user.png" %>
+  <% end %>
+ </div>
+ <b><%= m.usuario.nome %>: &nbsp;</b>
+ <p>
+   <%= m.menssagem %>
+ </p>
+ <b class="hmensagem"><%= m.created_at.to_s_br %></b>
+</div>
+<% end %>
+

@@ -29,10 +29,12 @@ ActiveRecord::Schema.define(:version => 20091002114827) do
   end
 
   create_table "blogs", :force => true do |t|
-    t.integer "entidade_id"
-    t.integer "usuario_id"
-    t.integer "destinatario_id"
-    t.string  "menssagem"
+    t.integer  "entidade_id"
+    t.integer  "usuario_id"
+    t.integer  "destinatario_id"
+    t.string   "menssagem"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "blogs", ["destinatario_id"], :name => "index_blogs_on_destinatario_id"

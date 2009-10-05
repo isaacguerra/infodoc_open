@@ -1,0 +1,35 @@
+<script type="text/javascript">
+function blocTexto(valor)
+{
+    quant = 255;
+    total = valor.length;
+    if(total <= quant)
+    {
+        resto = quant - total;
+        document.getElementById('cont').innerHTML = resto;
+    }
+    else
+    {
+        document.getElementById('menssagem').value = valor.substr(0,quant);
+    }
+}
+</script>
+
+<div class="titulo_comunicacao">
+  <h3>
+      Comunicação
+  </h3>
+</div>
+<div class="micro_messagem">
+  <b>Enviar micro mensagem: <span id="cont">255</span> caracteres</b>
+  <% form_remote_tag :url=>(url_for(com_blogs_path)), :action=>"create", :method=>"post" do -%>
+    <%= text_area_tag 'menssagem', nil,:size => "40x3", :max_length=>3, :onkeyup=>"blocTexto(this.value)" %>
+    <%= submit_tag 'Enviar' %>
+  <% end -%>
+  <%= periodically_call_remote(:url=>{:controller=>'/com/blogs', :action=>'view'}, :frequency=>'120') %>
+</div>
+<div id="mensagens">
+  <%= render :partial=>"/com/blogs/view" %>
+</div>
+</div>
+

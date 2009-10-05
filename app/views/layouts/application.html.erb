@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <%= stylesheet_link_tag "/theme/#{@sessao_usuario.entidade.tema}/stylesheets/intranet.css" %>                  
+    <%= stylesheet_link_tag "/theme/#{@sessao_usuario.entidade.tema}/stylesheets/intranet.css" %>
     <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag "/theme/#{@sessao_usuario.entidade.tema}/javascripts/ddlevelsmenu.js" %>
     <%= javascript_include_tag :fckeditor %>
@@ -47,12 +47,7 @@
                 <li>
                   <a href="/core/login/logout">logout</a>
                 </li>
-<<<<<<< HEAD:app/views/layouts/application.html.erb
-
               </ul>
-=======
-              </ul>  
->>>>>>> comunicacao:app/views/layouts/application.html.erb
             </div>
         </div>
     </div>
@@ -108,50 +103,39 @@
         <%= yield %>
 
       </div>
-      
+
       <div id="comunicacao">
+        <script type="text/javascript">
+        function blocTexto(valor)
+        {
+            quant = 255;
+            total = valor.length;
+            if(total <= quant)
+            {
+                resto = quant - total;
+                document.getElementById('cont').innerHTML = resto;
+            }
+            else
+            {
+                document.getElementById('menssagem').value = valor.substr(0,quant);
+            }
+        }
+        </script>
         <div class="titulo_comunicacao">
           <h3>
               Comunicação
           </h3>
         </div>
         <div class="micro_messagem">
-          <b>Enviar micro mensagem</b>
-          <form>
-            <textarea cols="49" rows="1"></textarea>
-            <input type="submit" value="enviar">
-          </form>
+          <b>Enviar micro mensagem: <span id="cont">255</span> caracteres</b>
+          <% form_remote_tag :url=>(url_for(com_blogs_path)), :action=>"create", :method=>"post" do -%>
+            <%= text_area_tag 'menssagem', nil,:size => "40x3", :max_length=>3, :onkeyup=>"blocTexto(this.value)" %>
+            <%= submit_tag 'Enviar' %>
+          <% end -%>
+          <%= periodically_call_remote(:url=>{:controller=>'/com/blogs', :action=>'view'}, :frequency=>'120') %>
         </div>
-        <div class="mensagens">
-           <b>Mensagem de Acompanhados</b>
-           <div class="mensagem">
-             <div class="avatar">
-              <% if @sessao_usuario.usuario.avatar_file_name %>
-                <%= image_tag @sessao_usuario.usuario.avatar.url, :size=>"50x50" %>
-              <% else %>
-                <%= image_tag "user.png" %>
-              <% end %>
-             </div>
-             <b><%= @sessao_usuario.usuario.entidade.nome %>: &nbsp;</b> 
-             <p>
-               Mensagem lipsum Mensagem lipsum Mensagem lipsum Mensagem lipsum Mensagem lipsum
-             </p>
-             <b class="hmensagem">2 horas atrás</b> 
-           </div>
-           <div class="mensagem">
-             <div class="avatar">
-              <% if @sessao_usuario.usuario.avatar_file_name %>
-                <%= image_tag @sessao_usuario.usuario.avatar.url, :size=>"50x50" %>
-              <% else %>
-                <%= image_tag "user.png" %>
-              <% end %>
-             </div>
-              <b><%= @sessao_usuario.usuario.entidade.nome %>: &nbsp;</b> 
-              <p>
-                 Mensagem lipsum Mensagem lipsum Mensagem lipsum Mensagem lipsum Mensagem lipsum
-              </p>
-              <b class="hmensagem">2 horas atrás</b>  
-           </div>
+        <div id="mensagens">
+          <%= render :partial=>"/com/blogs/view" %>
         </div>
       </div>
     </div>

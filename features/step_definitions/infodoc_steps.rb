@@ -17,12 +17,29 @@ end
 
 Dado /^que os seguintes usuarios existem:$/ do |table|
   table.hashes.each do |hash|
-    usuario = Usuario.new(hash)
-    usuario.save
+    visit '/core/adminusuarios/new'
+    fill_in("usuario[nome]", :with=>hash[:nome])
+    fill_in("usuario[login]", :with=>hash[:login])
+    fill_in("usuario[email]", :with=>hash[:email])
+    fill_in("usuario[senha]", :with=>hash[:senha])
+    fill_in("usuario[senha_confirmation]", :with=>hash[:senha_confirmation])
+    click_button("Salvar")
   end
 end
 
 Entao /^eu deveria ver "([^\"]*)"$/ do |texto|
   response.should contain(texto)
+end
+
+Entao /^marco o checkbox "([^\"]*)"$/ do |checkbox|
+  check checkbox
+end
+
+Entao /^clico no link "([^\"]*)"$/ do |link|
+  click_link(link)
+end
+
+Entao /^clico no botao "([^\"]*)"$/ do |botao|
+  click_button(botao)
 end
 
