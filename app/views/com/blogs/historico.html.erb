@@ -1,0 +1,25 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Histórico de Menssagens</h3>
+</div>
+<div id="cadastros">
+
+<b>Mensagem de Acompanhados</b>
+<% @menssagens.each do |m| %>
+<div class="mensagem">
+ <div class="avatar">
+  <% if m.usuario.avatar_file_name %>
+    <%= image_tag m.usuario.avatar.url, :size=>"50x50" %>
+  <% else %>
+    <%= image_tag "user.png" %>
+  <% end %>
+ </div>
+ <b><%= m.usuario.nome %>: &nbsp;</b>
+ <p>
+   <%= m.menssagem %>
+ </p>
+ <b class="hmensagem"><%= m.created_at.to_s_br %></b>
+</div>
+<% end %>
+<p><%= will_paginate @menssagens %></p>
+    </div>
+

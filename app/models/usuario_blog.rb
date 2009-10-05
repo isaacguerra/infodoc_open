@@ -6,10 +6,5 @@ class UsuarioBlog < ActiveRecord::Base
 
   named_scope :da_entidade, lambda {|id| {:conditions=>["entidade_id = ?", id]}}
   named_scope :seguidores_de, lambda {|id| {:conditions=>["seguido_id = ?", id]}}
-
-  def busca_menssagem(usuario_id)
-    us = UsuarioBlog.find(:all, :conditions=>["usuario_id = ?", usuario_id]).collect {|ub| ub.seguido_id}
-    menssagens = Blog.find(:all, :limit=>10, :order=>"id DESC", :conditions=>["usuario_id = ? and usuario_id in (?)", usuario_id, us])
-  end
 end
 

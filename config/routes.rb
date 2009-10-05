@@ -32,7 +32,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.namespace :com do |com|
-    com.resources :blogs, :collection=>{:usuario_blogs=>:post }
+    com.resources :blogs, :collection=>{:usuario_blogs=>:post, :view=>:get, :historico=>:get}
   end
 
   map.namespace :wiki do |wiki|

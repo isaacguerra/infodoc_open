@@ -25,14 +25,14 @@ development:
   adapter: mysql
   database: infodoc_open
   username: root
-  password: 123
+  password: info@adm
   host: localhost
 #  socket: /var/run/mysqld/mysqld.sock
 
 test: &TEST
   adapter: mysql
   database: infodoc_test
-  username: root
+  username: info@adm
   password: 123
   host: localhost
   #socket: /var/run/mysqld/mysqld.sock

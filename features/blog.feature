@@ -18,4 +18,7 @@ Funcionalidade: Blogs
         Entao eu deveria ver "jose"
         Entao eu deveria ver "luis"
         Entao eu deveria ver "claudio"
+        E marco o checkbox "usuarios_"
+        E clico no botao "Adicionar"
+        Entao eu deveria ver "jose"
 

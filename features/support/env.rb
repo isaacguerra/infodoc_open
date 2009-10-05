@@ -24,17 +24,17 @@ require 'webrat'
 require 'cucumber/webrat/element_locator' # Lets you do table.diff!(element_at('#my_table_or_dl_or_ul_or_ol').to_table)
 
 Webrat.configure do |config|
-  #config.mode = :rails
-  config.mode = :selenium
+  config.mode = :rails
+  #config.mode = :selenium
   config.open_error_files = false # Set to true if you want error pages to pop up in the browser
 end
 
-Before do
-  begin
-    selenium.set_speed 3000
-  rescue
-  end
-end
+#Before do
+#  begin
+#    selenium.set_speed 100
+#  rescue
+#  end
+#end
 
 require 'cucumber/rails/rspec'
 require 'webrat/core/matchers'

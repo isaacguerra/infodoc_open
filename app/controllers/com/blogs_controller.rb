@@ -23,12 +23,24 @@ class Com::BlogsController < ApplicationController
   end
 
   def create
-    Blog.create(:entidade_id=>@sessao_usuario.entidade_id, :usuario_id=>@sessao_usuario.usuario_id, :menssagem=>params[:menssagem])
-    render show
+    m = Blog.new(:entidade_id=>@sessao_usuario.entidade_id, :usuario_id=>@sessao_usuario.usuario_id, :menssagem=>params[:menssagem])
+    m.save
+    render :update do |page|
+      page.visual_effect(:highlight , "comunicacao")
+      page.replace_html "comunicacao", render(:partial=>"create")
+    end
   end
 
-  def show
-    @menssagens = Blog.busca_menssagem(@sessao_usuario.usuario_id)
+  def view
+    render :update do |page|
+      page.visual_effect(:highlight , "mensagens")
+      page.replace_html "mensagens", render(:partial=>"view")
+    end
+  end
+
+  def historico
+    us = UsuarioBlog.find(:all, :conditions=>["usuario_id = ?",  @sessao_usuario.usuario_id]).collect {|ub| ub.seguido_id}
+    @menssagens = Blog.paginate(:all, :order=>"created_at DESC", :conditions=>["usuario_id = ? or usuario_id in (?)", @sessao_usuario.usuario_id, us], :page=>params[:page], :per_page=>5)
   end
 end
 
