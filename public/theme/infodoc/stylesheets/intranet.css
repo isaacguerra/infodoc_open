@@ -401,7 +401,7 @@ AVATAR*/
 /* ***************************************   END    ************************************************* */
 
 
-#listar,#wiki
+#listar,#wiki,#historico_microblog,#listar_ajuda  
                             {
 
                             float:left;
@@ -472,7 +472,7 @@ AVATAR*/
 
 .item_index a,
 .item_index a:hover          { font-weight: bold; color:#8C1C1C; }
-
+form table#listar td         { padding:5px; border-left: 1px solid #EDEDED; border-bottom: 1px  solid #EDEDED; }
 
 /*
 BOTOES==============================*/
@@ -524,7 +524,7 @@ BOTOES==============================*/
 */
 
 
-div#wiki                        { width:99.5%;  overflow:hidden;}  
+div#wiki                        { width:99.4%;  overflow:hidden;}  
 
 
 #wiki .titulo_lista          { }
@@ -771,7 +771,7 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                                 padding:9px 4px;
                                 padding-bottom:0px;
                                 margin:6px 0px ;
-                                width:98.7%;
+                                width:99%;
                                 float:left;
                                 background-image:url("/theme/infodoc/images/fil6.jpg");
                                 border: 1px solid #DBDBDB;
@@ -1106,7 +1106,7 @@ COMENTARIOS
 
 
                                 padding:9px 5px;
-                                width:99%;
+                                width:98.6%;
                                 min-height:25px;
                                 clear:both;
                                 margin:6px 2px;
@@ -1374,7 +1374,7 @@ HISTORICO
                                   background-repeat:repeat-x;
                                   height:auto;
                                   min-height:15px;
-                                  width:99.8%;
+                                  width:99.6%;
                                   padding:2px 2px;
 
                                   }
@@ -1388,7 +1388,7 @@ RELACIONAMENTOS
 #relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
 #relacionados form               { width:28%; margin-left:20px;float:left; }
 #relacionados select             { color:#8C1C1C;  }
-#relacionados #barra_titulo      { width:98.8%; }
+#relacionados #barra_titulo      { width:98.3%; }
 #relacionados .formulario input[type=submit] {float:none}
 
 /*
@@ -1464,7 +1464,17 @@ AJUDA AO USUARIO
 ============================================== */
 
 
-#topo_ajuda                     {     
+/* AJUDAS INDEX
+============================================== */
+
+#listar_ajuda                    { font-family: Arial,Verdana,sans-serif ; font-size:12px;  }
+#listar_ajuda td                 { margin:0; padding:5px; border-bottom: 1px dashed #EDEDED ;}
+#listar_ajuda .edit              { float:left;  font-size:1.2em;}
+/*
+===========================*/
+
+
+#topo_ajuda,#clean_topo          {     
                                        width: 100%; 
                                        min-height:20px; 
                                        margin:0;
@@ -1478,18 +1488,19 @@ AJUDA AO USUARIO
                                        
                                  }
                                  
-#topo_ajuda b                    {     margin:10px; color: #8C1C1C; }
+#topo_ajuda b,#cleam_conteudo b  {     margin:10px; color: #8C1C1C; font-size:1.2em;}
 
-#rodape_ajuda                    {     
+#rodape_ajuda,#rodape_clean      {     
                                        width:100%; height:32px;
                                        border-top:5px solid #8C1C1C;
                                        border-bottom: 1px solid #EDEDED;
                                        background-image: url("/theme/infodoc/images/img09.gif");
+                                       clear:both;
                                  }
                                  
-#ajuda_tudo                      {     min-height:370px;  }
+#ajuda_tudo, #clean_tudo         {     min-height:450px; width:auto; }
 
-#ajuda_conteudo                  { padding: 10px; }
+#ajuda_conteudo,#cleam_conteudo  {     padding: 5px; font-family: Arial,Verdana,sans-serif ; font-size:12px; }
 
 /*
 JQUERY ZEBRA ======================================
@@ -1526,7 +1537,7 @@ COMUNICACAO ============================
                                   }                                  
                                    
 #comunicacao .micro_messagem,
-#comunicacao .mensagem          { height: 70px;
+#comunicacao .mensagem          { 
                                    width:93%;
                                    /*background-color:#FFFFFF;*/
                                    float:left; 
@@ -1546,36 +1557,41 @@ COMUNICACAO ============================
                                     margin-top: 2px;
                                     padding:5px;
                                     background-image: url("/theme/infodoc/images/fil2.jpg");
+                                    background-repeat: repeat-x;
+                                    overflow:hidden;
                                     -moz-border-radius-bottomleft:5px;
                                     -moz-border-radius-bottomright:5px;
                                     -moz-border-radius-topleft:5px;
                                     -moz-border-radius-topright:5px;
                                   }
                                   
-#comunicacao p                    { padding:0;margin:0;margin-bottom:2px; }
+#comunicacao p                    { padding:0;margin:0;margin-bottom:2px; overflow:hidden; }
 #comunicacao #mensagens           { float:left; width:100%;}
-#comunicacao #mensagens b         { margin-left:5%; font-size: 0.7em;float:left; }
+#comunicacao #mensagens b         { margin-left:5%;  font-size: 0.7em;float:left; }
 #comunicacao #mensagens .mensagem b
                                   { margin:0;  font-size:1em;}
 #comunicacao form                 { margin:0; }
 #comunicacao form textarea        { 
-                                    margin:0 2%;
+                                    margin:0 1%;
                                     margin-top:5px; 
-                                    font-size:0.7em; 
+                                    
                                     padding:3px;
+                                    width:96%;
                                   }
                                   
 #comunicacao input[type=submit]   { float:right; 
                                     margin-top:5px; 
                                     margin-right:6px; 
-                                    font-size: 0.7em;
+                                    font-size:0.8em;
                                     background-color:#8C1C1C;
                                     border: 1px solid #8C1C1C;
                                     color:#EDEDED;
                                     font-weight:bold;
                                     
+
+                                    
                                    }      
-#comunicacao input[type=submit]:hover{ color:#FFFFFF; cursor:pointer;}
+#comunicacao input[type=submit]:hover{ color:#FFFFFF;cursor:pointer; }
            
 
 
@@ -1612,4 +1628,27 @@ div#com_blogs_path a              { width:25%; margin-right:5px; }
                                   }
                                   
 .avatar img                       { margin:4%; height:90%; width:90%; }                                   
+.slidea a.slidel,a.slideb             { float:right; width:auto; text-align:left; line-height:0.5em;  font-size:0.5em; margin-right:5px; }
+.slidea { clear:both; }
+/*
+===========================================
+HISTORICO MICROBLOG
+*/
+#historico_microblog                        { width:99.3%; padding-bottom:25px; } /* herdado de #listar */
+#historico_microblog h3                     { margin: 3px 0 ; color:#8c1c1c; margin-left:33px; } 
+#historico_microblog .mensagem              { min-height:50px;height:auto; border-top: 1px dotted #CCCCCC; border-bottom:1px dotted #CCCCCC; padding: 0.7em 0 20px 33px; font-size: 0.8em;  }
+#historico_microblog .mensagem:hover        { background: #F2F2F2; }
+#historico_microblog b                      { color: #8c1c1c;  float:left;} 
+#historico_microblog b.hmensagem            { color: #CCCCCC; font-size:0.8em; float:none;}
+#historico_microblog p                      { padding:0;margin:0;margin-bottom:2px; }
+
+/*
+==========================================
+PAGINACAO DO HISTORICO DO MICROBLOG
+*/
+
+.pagination                                 { font-family: "sans serif"; font-size: 0.8em;  width:26%; margin:10px 38%; }
+.pagination a                               { background-color: #FFFFFF; padding: 2px 3px; }  
+.pagination .current,.pagination a:hover    { background-color: #8c1c1c; color: #FFFFFF; padding: 2px 3px; text-decoration:none; } 
+    
 

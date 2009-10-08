@@ -1,14 +1,14 @@
 <div id="barra_titulo">
   <h3 class="titulo_index">Histórico de Menssagens</h3>
 </div>
-<div id="cadastros">
+<div id="historico_microblog">
 
-<b>Mensagem de Acompanhados</b>
+<h3>Mensagem de Acompanhados</h3>
 <% @menssagens.each do |m| %>
 <div class="mensagem">
  <div class="avatar">
   <% if m.usuario.avatar_file_name %>
-    <%= image_tag m.usuario.avatar.url, :size=>"50x50" %>
+    <%= image_tag m.usuario.avatar.url, :size=>"48x48" %>
   <% else %>
     <%= image_tag "user.png" %>
   <% end %>

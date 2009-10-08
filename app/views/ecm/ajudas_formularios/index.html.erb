@@ -2,7 +2,7 @@
   <h3 class="titulo_index">Lista Ajudas do Formulário</h3>
   <div class="new_ajuda"><%= link_to 'Nova Ajuda', new_ecm_formulario_ajudas_formulario_path(@formulario) %></div>
 </div>
-<table id="listar">
+<table id="listar_ajuda">
   </tr>
     <th class="titulo_lista">Ajudas</th>
   </tr>
@@ -11,7 +11,7 @@
       <td><%= ajuda.conteudo %></td>
     </tr>
     <tr>
-      <td><%= link_to "Alterar Ajuda", edit_ecm_formulario_ajudas_formulario_path(@formulario, ajuda) %></td>
+      <td><div class="edit"><%= link_to "Alterar Ajuda", edit_ecm_formulario_ajudas_formulario_path(@formulario, ajuda) %></div></td>
     </tr>
 	  <% end %>
 </table>

@@ -3,10 +3,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <%= stylesheet_link_tag "/theme/#{@sessao_usuario.entidade.tema}/stylesheets/intranet.css" %>
+    <%= stylesheet_link_tag "/theme/#{@sessao_usuario.entidade.tema}/stylesheets/scaffold.css" %>
     <%= javascript_include_tag "css_browser_selector.js" %>
     <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag "/theme/#{@sessao_usuario.entidade.tema}/javascripts/ddlevelsmenu.js" %>
     <%= javascript_include_tag :fckeditor %>
+<!--    <%= javascript_include_tag "sliding.js" %> -->
     <%= javascript_include_inputs %>
 
     </style>
@@ -85,9 +87,15 @@
             <% end %>
           </ul>
         <% end %>
-
+       
       </div>
+<!--      <div class="slidea">
+            <a class="slidel" href="#">Mostrar </a>  <a class="slideb" href="#"> esconder</a>  
+          </div>
+MOSTRAR / ESCONDER COMUNICACAO
+-->          
     <div id="tudo">
+    
 
       <div id="conteudo">
         <% if flash[:notice] %>
@@ -123,6 +131,7 @@
         }
         </script>
         <div class="titulo_comunicacao">
+          
           <h3>
               Comunicação
           </h3>
