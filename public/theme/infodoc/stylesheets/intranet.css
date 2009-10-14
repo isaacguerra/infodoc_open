@@ -401,7 +401,11 @@ AVATAR*/
 /* ***************************************   END    ************************************************* */
 
 
-#listar,#wiki,#historico_microblog,#listar_ajuda  
+#listar,
+#wiki,
+#historico_microblog,
+#listar_ajuda,
+#intranet_inicial  
                             {
 
                             float:left;
@@ -1016,7 +1020,7 @@ FILTRO FORM
                                   font-size: 0.8em;
                                   margin:3px 6px;
                                   margin-left:2px;
-                                  width:98.7%;
+                                  width:98.5%;
                                   float:left;
                                   border: 2px solid #F2F2F2;
                                   outline:1px solid #E8E8E8;
@@ -1609,15 +1613,16 @@ COMUNICACAO ============================
                                    float:left;
                                   }
 #comunicacao a                    { text-align:right;font-weight:bold; float:right;   font-size: 0.6em; width:38%; margin:0; margin-top:10px; }                                  
+#comunicacao b                    { margin-left: 2%; color:#8c1c1c;}
 #comunicacao a:hover              { background-color:#CCCCCC; text-decoration:none; }
 div#historico_com_blogs_path a    { width:38%; margin-right:5px;margin-top:5px; }
 
 div#com_blogs_path a              { width:25%; margin-right:5px; } 
                                   
-#comunicacao b                    { margin-left: 2%; color:#8c1c1c;}
+
 
 #comunicacao #mensagens .mensagem b.hmensagem
-                                  { font-size:0.8em; color:#CCCCCC;ma }
+                                  { font-size:0.8em; color:#CCCCCC; }
 
 .avatar                           {
                                      width:48px; 
@@ -1651,4 +1656,49 @@ PAGINACAO DO HISTORICO DO MICROBLOG
 .pagination a                               { background-color: #FFFFFF; padding: 2px 3px; }  
 .pagination .current,.pagination a:hover    { background-color: #8c1c1c; color: #FFFFFF; padding: 2px 3px; text-decoration:none; } 
     
-
+/*
+==========================================
+PAGINA PRINCIPAL INTRANET
+*/
+#intranet_inicial                           { border: none; font-size:0.8em;width:99%;  }
+#intranet_inicial ul.menu_nav               { border-left: 3px solid #EDEDED; width:20%; margin:5px 0; padding:0 15px; float:left;}
+#intranet_inicial ul.menu_nav li            { list-style: none; border-bottom: 1px dashed #EDEDED; padding:3px; }
+#intranet_inicial ul.menu_nav li b          { font-size: 1.7em; } 
+#intranet_inicial ul.menu_nav li a          { display:block ; font-size:1em; padding:3px;}
+#intranet_inicial ul.menu_nav li a:hover    { text-decoration:none; width:100%; background-color:#8c1c1c; color:#FFFFFF; }
+                                            
+#bloco_p                                    { width:60%;  padding: 5px 20px; float:left;  margin-bottom:5px; }
+.bloco                                      { width:60%; float:left; margin:0 10px;  }
+#intranet_inicial .bloco h1,
+#intranet_inicial .bloco h2
+                                            { margin:1.33em 13px; }
+#intranet_inicial #bloco_p h1,
+#intranet_inicial .bloco h2                 { background-image: url("/theme/infodoc/images/img09.gif"); padding:7px; border-bottom: 1px solid #CCCCCC;}
+.bloco p b.n                                { 
+                                              padding:3px 5px ; 
+                                              background-image: url("/theme/infodoc/images/fundo_botoes.png");
+                                              background-position: center;
+                                              color: #FFFFFF;
+                                              -moz-border-radius-bottomleft:5px;
+                                              -moz-border-radius-bottomright:5px;
+                                              -moz-border-radius-topleft:5px;
+                                              -moz-border-radius-topright:5px;
+                                            }                                            
+.bloco p                                    { float:left; margin: 20px 13px; width:100%; line-height:1.5em; }  
+.bloco h3                                   { margin:13px; }
+.bloco  ol                                  { float:left; margin-left:15px;}
+.bloco  ol li                               { font-weight: bold; }
+.bloco_img                                  { float:left; width: 78%; padding:1% 0.5%; height:auto; border: 2px solid #EDEDED;  background-color:#FAF5DC; margin-left:13px; margin-bottom:15px;  }
+.bloco_img                                  {
+                                              -moz-border-radius-bottomleft:5px;
+                                              -moz-border-radius-bottomright:5px;
+                                              -moz-border-radius-topleft:5px;
+                                              -moz-border-radius-topright:5px; 
+                                            } 
+.bloco_img img                              { margin: 0 10px; border: 1px solid #EDEDED;
+                                              text-align:center;  
+                                              border-width:1px 1px 2px 2px ;
+                                              border-color:#EDEDED #EDEDED #CCCCCC #CCCCCC; 
+                                            } 
+                                             
+.bloco_img b                                { display:block; text-align: center;}                                            
