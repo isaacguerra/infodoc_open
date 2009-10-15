@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
     core.resources :adminusuarios, :has_many=>:adminmudarsenhas
     core.resources :perfil
     core.resources :perfilentidades
+    core.resources :entidades, :has_many=>:paginaentidades
   end
 
   map.namespace :ecm do |ecm|

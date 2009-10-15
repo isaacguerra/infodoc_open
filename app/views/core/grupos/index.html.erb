@@ -1,6 +1,6 @@
 <div id="barra_titulo">
   <h3 class="titulo_index">Lista de Grupos</h3>
-  <div class="new_grupo"><%= link_to 'Novo Grupo', new_core_entidade_grupo_path(@entidade) %></div>
+  <div class="new_grupo"><%= link_to 'Novo Grupo', new_core_entidade_paginaentidade_path(@sessao_usuario.entidade_id) %></div>
 </div>
 
 <table id="listar">

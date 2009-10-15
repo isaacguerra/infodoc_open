@@ -1,0 +1,19 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index_infowiki">Cadastro de Verbete da Pagina Inicial</h3>
+  <div class="voltar">
+    <%= link_to "Voltar", '/intranet' %>
+  </div>
+</div>
+<div class="formulario">
+  <% form_for @paginaentidade, :url=>{:action=>'create'} do |f| %>
+    <%= f.error_messages %>
+    <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.entidade_id %>
+    <%= f.hidden_field :usuario_id, :value=>@sessao_usuario.usuario_id %>
+    <%= fckeditor_textarea(:paginaentidade, :pagina, :toolbarSet=>'Simple', :width=>'100%', :height=>'500px') %><br>
+    <%= f.submit 'Salvar', :class=>"botao_formulario" %>
+  <% end %>
+</div>
+<div id="link_voltar">
+  <%= link_to "Voltar", '/intranet' %>
+</div>
+

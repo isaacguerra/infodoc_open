@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091002114827) do
+ActiveRecord::Schema.define(:version => 20091014193845) do
 
   create_table "ajudas", :force => true do |t|
     t.integer "entidade_id"
@@ -358,6 +358,14 @@ ActiveRecord::Schema.define(:version => 20091002114827) do
   add_index "modulos", ["nome"], :name => "index_modulos_on_nome"
 
   create_table "noticias", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "paginaentidades", :force => true do |t|
+    t.integer  "entidade_id"
+    t.integer  "usuario_id"
+    t.text     "pagina"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
