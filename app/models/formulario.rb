@@ -5,7 +5,7 @@ class Formulario < ActiveRecord::Base
   has_many :cadastros
   has_many :itensformularios
   has_many :ajudas, :as=>:ajudavel
-
+  has_many :cadastropublicos
 
   validates_presence_of :formulariocategoria_id
   validates_presence_of :formulariotipo_id

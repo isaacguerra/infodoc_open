@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091014193845) do
+ActiveRecord::Schema.define(:version => 20091016161229) do
 
   create_table "ajudas", :force => true do |t|
     t.integer "entidade_id"
@@ -41,6 +41,20 @@ ActiveRecord::Schema.define(:version => 20091014193845) do
   add_index "blogs", ["entidade_id"], :name => "index_blogs_on_entidade_id"
   add_index "blogs", ["menssagem"], :name => "index_blogs_on_menssagem"
   add_index "blogs", ["usuario_id"], :name => "index_blogs_on_usuario_id"
+
+  create_table "cadastropublicos", :force => true do |t|
+    t.integer  "entidade_id"
+    t.integer  "formulario_id"
+    t.string   "titulo"
+    t.text     "filtro"
+    t.integer  "permissao"
+    t.boolean  "status",        :default => true
+    t.string   "usuario"
+    t.string   "senha"
+    t.boolean  "privado"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cadastros", :force => true do |t|
     t.integer  "entidade_id"

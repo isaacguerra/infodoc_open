@@ -116,7 +116,7 @@ class Core::InstallController < ApplicationController
     @log << "ID da vinculacao do usuario ao grupo #{vug.id}\n"
 
     #criação da pagina home
-    Paginaentidade.create(:entidade_id=>entidade.id, :tipo=>"home", :pagina=>"<h1>Esta pagina pode deve ser personalizada</h1>")
+    Paginaentidade.create(:entidade_id=>entidade.id, :tipo=>"home", :pagina=>"Esta pagina deve ser personalizada")
   end
 end
 

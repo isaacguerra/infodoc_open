@@ -1,0 +1,20 @@
+<div id="barra_titulo">
+  <h3 class="titulo_show">Categoria de Formulario</h3>
+  <div class="edit"><%= link_to 'Editar', edit_ecm_categoria_path(@categoria) %></div>
+</div>
+
+<table id="listar">
+  <tr>
+    <td class="lista_item">Nome</td>
+    <td class="lista_conteudo"><%= @categoria.nome %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Descrição</td>
+    <td class="lista_conteudo"><%= @categoria.descricao %></td>
+  </tr>
+</table>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categorias_path %>
+</div>
+

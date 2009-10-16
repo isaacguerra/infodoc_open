@@ -1,0 +1,41 @@
+<div id="barra_titulo">
+  <h3 class="titulo_new">Publicar Cadastro</h3>
+</div>
+<table class="formulario">
+  <% form_for @cadastropublico, :url=>{:action=>'create'} do |f| %>
+    <tr>
+      <td class="error_messages">
+        <%= f.error_messages %>
+        <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.usuario.entidade_id %>
+        <%= f.hidden_field :formulario_id, :value=>@formulario.id %>
+    </tr>
+    <tr>
+      <td class="lista_item">Filtro</td>
+      <td class="lista_conteudo">
+        <table>
+        <tr>
+          <th>Campo</th>
+          <th>Valor</th>
+          <th>Filtro</th>
+        </tr>
+        <% @formulario.itensformularios.sort_by{|it| it.posicao}.each do |form_item| %>
+        <tr>
+         <td class="lista_item"><%= form_item.rotulo %></td>
+         <td class="lista_conteudo"><%= ecm_find_cadastro_item(form_item) %></td>
+         <td class="titulo_curto"><%= check_box(:filtro, "check_#{form_item.id}") %></td>
+        </tr>
+        <% end %>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="lista_item"/>
+      <td class="lista_conteudo"><%= f.submit 'Salvar', :class=>"botao_formulario" %></td>
+    </tr>
+  <% end %>
+</table>
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_formulario_publicar_formularios_path(@formulario) %>
+</div>
+
