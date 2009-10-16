@@ -1,0 +1,2 @@
+module Page::PublicadosHelper
+end

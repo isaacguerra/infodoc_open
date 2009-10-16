@@ -4,6 +4,7 @@ class CreatePaginaentidades < ActiveRecord::Migration
       t.integer :entidade_id
       t.integer :usuario_id
       t.text :pagina
+      t.string :tipo
 
       t.timestamps
     end

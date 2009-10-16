@@ -366,6 +366,7 @@ ActiveRecord::Schema.define(:version => 20091014193845) do
     t.integer  "entidade_id"
     t.integer  "usuario_id"
     t.text     "pagina"
+    t.string   "tipo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

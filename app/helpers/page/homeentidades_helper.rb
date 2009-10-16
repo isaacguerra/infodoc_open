@@ -1,0 +1,2 @@
+module Page::HomeentidadesHelper
+end

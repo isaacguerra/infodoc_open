@@ -12,5 +12,19 @@
     <td class="lista_item">Logomarca</td>
     <td class="lista_conteudo"><%= image_tag @sessao_usuario.entidade.logo.url %></td>
   <tr>
+  <tr>
+    <td class="lista_item">Pagina Principal da Entidade</td>
+    <td class="lista_conteudo"><%= link_to "/page/entidade/#{@sessao_usuario.entidade_id}", page_entidade_path(@sessao_usuario.entidade_id) %></td>
+  <tr>
+  <tr>
+    <td class="lista_item">Conteudo da Pagina Principal</td>
+    <td class="lista_conteudo"><%= link_to "Personalizar Pagina Principal", edit_page_homeentidade_path(Paginaentidade.find(:first, :conditions=>["entidade_id = ? and tipo = 'home'", @sessao_usuario.entidade_id]).id) %><br><br>
+    </td>
+  <tr>
+  <tr>
+    <td class="lista_item" colspan=2>
+      <%= Paginaentidade.find(:first, :conditions=>["entidade_id = ? and tipo = 'home'", @sessao_usuario.entidade_id]).pagina %>
+    </td>
+  <tr>
 </table>
 

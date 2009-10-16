@@ -16,6 +16,7 @@ class Core::EntidadesController < ApplicationController
     modulo = Modulo.find(:first, :conditions=>{:nome=>"Administração"})
     vmadm = Moduloentidade.create(:entidade_id=>@entidade.id, :modulo_id=>modulo.id)
     grupoadministrador = Grupo.create(:entidade_id=>@entidade.id, :nome=>"Administradores", :descricao=>"Administradores")
+    Paginaentidade.create(:entidade_id=>@entidade.id, :tipo=>"home", :pagina=>"<h1>Esta pagina pode deve ser personalizada")
     modulo.sistemas.each do |s|
       Gruposistema.create(:grupo_id=>grupoadministrador.id, :sistema_id=>s.id, :permissao=>3)
     end

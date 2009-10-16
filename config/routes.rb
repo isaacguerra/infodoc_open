@@ -29,7 +29,10 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.namespace :page do |page|
-    page.resources :entidades
+    page.resources :entidade, :only=>[:show] do |entidade|
+      entidade.resources :publicados, :only=>[:index, :show]
+    end
+    page.resources :homeentidades
   end
 
   map.namespace :com do |com|

@@ -4,6 +4,7 @@
 </div>
 <div id="pagina_verbete">
 <% @sessao_usuario.entidade.paginaentidades.each do |p| %>
+ <% if p.tipo == "intranet" %>
   Criado em: <%= p.created_at.to_s_br %> por <%= p.usuario.nome %>
   <%= p.pagina %>
   <div id="edit_pagina_verbete">
@@ -11,6 +12,7 @@
     <%= link_to 'Excluir', core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p), :method=>"delete"  %>
   </div>
   <hr>
+ <% end %>
 <% end %>
 </div>
 

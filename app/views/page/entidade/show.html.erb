@@ -1,0 +1,4 @@
+<div id="home">
+  <%= Paginaentidade.find(:first, :conditions=>["entidade_id = ? and tipo = 'home'", @entidade.id]).pagina %>
+</div>
+
