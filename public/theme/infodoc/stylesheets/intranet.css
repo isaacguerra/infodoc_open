@@ -403,6 +403,7 @@ AVATAR*/
 
 #listar,
 #wiki,
+#pagina_verbete,
 #historico_microblog,
 #listar_ajuda,
 #intranet_inicial  
@@ -1701,4 +1702,30 @@ PAGINA PRINCIPAL INTRANET
                                               border-color:#EDEDED #EDEDED #CCCCCC #CCCCCC; 
                                             } 
                                              
-.bloco_img b                                { display:block; text-align: center;}                                            
+.bloco_img b                                { display:block; text-align: center;} 
+
+/*==========================================
+*/
+
+/*
+VERBETES INTRANET
+==========================================*/
+
+#pagina_verbete                            { width: 99.4%; height:auto;}
+#pagina_verbete .verbete                   { width: 48%;  float:left; margin:5px;}
+#pagina_verbete .verbete                   {
+                                             border: 1px solid #EDEDED;
+                                             -moz-border-radius-topleft:5px;
+                                             -moz-border-radius-topright:5px;
+                                           }
+.titulo_verbete                           { width: 100%; clear:both; font-size:0.8em; height:2em; background-image: url(/theme/infodoc/images/img09.gif); padding-top:3px; }
+.titulo_verbete .acoes_verbete            { width:10%;  float:right; text-align:right; padding: 0 5px; } 
+.titulo_verbete #edit_pagina_verbete      { width:10%; float:left; margin-left:5px;}
+.titulo_verbete #edit_pagina_verbete a:hover
+                                          { outline:1px solid #CCCCCC; }   
+.titulo_verbete #edit_pagina_verbete a.alterar
+                                          { color:#DBDBDB; background-image:url(/theme/infodoc/images/editar_mini.png); width:15px; padding-left:3px; float:left; background-repeat:no-repeat;}
+.titulo_verbete #edit_pagina_verbete a.excluir
+                                          { color:#DBDBDB; background-image:url(/theme/infodoc/images/lixo.png); width:15px; padding-left:3px; float:left; }            
+ .titulo_verbete b                        { float:left; margin-left: 5px;}             
+                                           

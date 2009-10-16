@@ -4,14 +4,25 @@
 </div>
 <div id="pagina_verbete">
 <% @sessao_usuario.entidade.paginaentidades.each do |p| %>
+
  <% if p.tipo == "intranet" %>
-  Criado em: <%= p.created_at.to_s_br %> por <%= p.usuario.nome %>
-  <%= p.pagina %>
-  <div id="edit_pagina_verbete">
-    <%= link_to 'Alterar', edit_core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p)  %>
-    <%= link_to 'Excluir', core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p), :method=>"delete"  %>
-  </div>
-  <hr>
+ <div class="verbete">
+  <div class="titulo_verbete">   
+    <b>Criado em: <%= p.created_at.to_s_br %> por <%= p.usuario.nome %></b>
+    <div class="acoes_verbete">
+                <a class="fechar" href="#">&nbsp;</a>    
+                <a class="max"    href="#">&nbsp;</a>
+                <a class="mini"   href="#">&nbsp;</a>
+    </div>
+    <div id="edit_pagina_verbete">
+        <%= link_to '&nbsp;', edit_core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p), :class=>"alterar"  %>
+        <%= link_to '&nbsp;', core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p), :method=>"delete",:class=>"excluir"  %>
+    </div>
+  </div>  
+  <div class="conteudo_verbete">
+    <%= p.pagina %>
+  </div>  
+ </div>
  <% end %>
 <% end %>
 </div>
