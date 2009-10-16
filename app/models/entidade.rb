@@ -3,6 +3,8 @@ class Entidade < ActiveRecord::Base
    has_many :grupos
    has_many :moduloentidades
    has_many :paginaentidades
+   has_many :cadastropublicos
+
    has_attached_file :logo
 
    validates_presence_of :nome

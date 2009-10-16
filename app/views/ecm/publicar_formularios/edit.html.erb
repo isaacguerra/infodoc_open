@@ -1,0 +1,28 @@
+<div id="barra_titulo">
+  <h3 id="titulo_edit">Alterar Categoria</h3>
+</div>
+
+<table class="formulario">
+  <% form_for @categoria, :id=>"forms", :url=>{:action=>'update'} do |f| %>
+   <tr>
+      <td class="error_messages"><%= f.error_messages %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"><%= f.label :nome %></td>
+      <td class="lista_conteudo"><%= f.text_field :nome %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"><%= f.label :descricao, 'Descrição' %></td>
+      <td class="lista_conteudo"><%= f.text_field :descricao %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"/>
+      <td class="lista_conteudo"><%= f.submit 'Salvar', :class=>"botao_formulario" %></td>
+   </tr>
+  <% end %>
+</table>
+
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categoria_path(@categoria) %>
+</div>
+

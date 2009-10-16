@@ -1,0 +1,22 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Publicações de Formularios</h3>
+  <% if @formulario.cadastropublicos.size == 0 %>
+    <div class="new_categoria"><%= link_to 'Nova Publicação', new_ecm_formulario_publicar_formulario_path(@formulario) %></div>
+  <% end %>
+</div>
+<table id="listar">
+  </tr>
+    <th class="titulo_lista">Tiutulo</th>
+    <th class="titulo_lista">Ação</th>
+  </tr>
+    <% @formulario.cadastropublicos.each do |cp| %>
+    <tr>
+      <td class="itens_index"><%= link_to cp.titulo,  ecm_formulario_publicar_formulario_path(@formulario, cp) %></td>
+      <td class="itens_index"><%= link_to "Excluir",  ecm_formulario_publicar_formulario_path(@formulario, cp), :method=>:delete %></td>
+    </tr>
+	  <% end %>
+</table>
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_categoria_formularios_path(@formulario.formulariocategoria_id) %>
+</div>
+
