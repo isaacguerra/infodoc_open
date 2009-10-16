@@ -22,7 +22,7 @@
     </td>
   <tr>
   <tr>
-    <td class="lista_item" colspan=2>
+    <td class="lista_item" colspan=2 id ="home_entidade">
       <%= Paginaentidade.find(:first, :conditions=>["entidade_id = ? and tipo = 'home'", @sessao_usuario.entidade_id]).pagina %>
     </td>
   <tr>

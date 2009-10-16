@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag "/theme/#{@entidade.tema}/stylesheets/entidade.css" %>
 	  <title>Infomanager - Gertão Digital de Informação</title>
-	   <%= stylesheet_link_tag "/theme/infodoc/stylesheets/estilo.css" %>
   </head>
 
   <body>
@@ -15,23 +16,28 @@
         <% end %>
     </div>
     <div id="topo">
-        <img src="../../../images/infomanager.gif" height="90px" />
+        <% if @entidade.logo_file_name %>
+            <%= image_tag @entidade.logo.url %>
+          <% else %>
+            <%= image_tag "infodoc.gif" %>
+          <% end %>
     </div>
 
      <div id="navcontainer">
       <ul>
-        <li><a href="/">Home</a><b>|</b></li>
-        <li><a href="/noticias">Noticias</a><b>|</b></li>
-        <li><a href="/servicos">Serviços</a><b>|</b></li>
-        <li><a href="/clientes">Clientes</a><b>|</b></li>
-        <li><a href="/depoimentos">Depoimentos</a></li>
+        
       </ul>
     </div>
 
     <div id="tudo">
 
       <div id="conteudo">
-        <%= yield %>
+        <div id="conteudo_customizado">
+          <%= yield %>
+        </div>
+        <div id="publicacoes">
+        Publícações de <%= @entidade.nome  %>
+        </div>  
       </div>
 <div style="clear: both"></div>
 
@@ -39,11 +45,7 @@
     </div>
     <div id="rodape">
 	      <ul>
-          <li><a href="/">Home</a><b>|</b></li>
-          <li><a href="noticias">Noticias</a><b>|</b></li>
-          <li><a href="/servicos">Serviços</a><b>|</b></li>
-          <li><a href="/clientes">Clientes</a><b>|</b></li>
-          <li><a href="/depoimentos">Depoimentos</a></li>
+          
         </ul>
       </div>
   </body>

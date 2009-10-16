@@ -1735,5 +1735,10 @@ VERBETES INTRANET
 .titulo_verbete .acoes_verbete  a.fechar:hover
                                           { outline:1px solid #CCCCCC; }
 .titulo_verbete b                         { float:left; margin-left: 5px;}
-.conteudo_verbete                         {  font-family:Arial,Verdana,sans-serif; font-size:12px; }
+.conteudo_verbete                         { font-family:Arial,Verdana,sans-serif; font-size:12px; }
+
+/*
+PERSONALIZACAO DA PAGINA PRINCIPAL DA ENTIDADe
+==============================*/
+#home_entidade                            { font-family:Arial,Verdana,sans-serif; font-size:12px; text-align:left; background-color:#FFFFFF; }
                                            
