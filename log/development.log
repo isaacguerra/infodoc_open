@@ -9170,3 +9170,101 @@ The error occurred while evaluating nil.nome) on line #9 of app/views/intranet/i
 Rendered rescues/_trace (149.7ms)
 Rendered rescues/_request_and_response (0.6ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IntranetController#index (for 127.0.0.1 at 2009-10-16 16:33:37) [GET]
+  [4;35;1mSessao Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `sessaos`[0m
+  [4;36;1mSessao Load (0.2ms)[0m   [0;1mSELECT * FROM `sessaos` WHERE (`sessaos`.`id` = 1) [0m
+  [4;35;1mEntidade Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `entidades`[0m
+  [4;36;1mEntidade Load (0.2ms)[0m   [0;1mSELECT * FROM `entidades` WHERE (`entidades`.`id` = 1) [0m
+  [4;35;1mPaginaentidade Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `paginaentidades`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `paginaentidades` WHERE (`paginaentidades`.entidade_id = 1) [0m
+Rendering template within layouts/application
+Rendering intranet/index
+  [4;35;1mPaginaentidade Load (0.2ms)[0m   [0mSELECT * FROM `paginaentidades` WHERE (`paginaentidades`.entidade_id = 1) [0m
+  [4;36;1mUsuario Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `usuarios`[0m
+  [4;35;1mUsuario Load (0.1ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `entidades` WHERE (`entidades`.`id` = 1) [0m
+  [4;35;1mFormulariocategoria Load (0.2ms)[0m   [0mSELECT * FROM `formulariocategorias` WHERE (entidade_id = 1) [0m
+  [4;36;1mUsuarioBlog Load (0.2ms)[0m   [0;1mSELECT * FROM `usuario_blogs` WHERE (usuario_id = 1) [0m
+  [4;35;1mBlog Load (0.1ms)[0m   [0mSELECT * FROM `blogs` WHERE (usuario_id = 1 or usuario_id in (NULL)) ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mBlog Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `blogs`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+Rendered com/blogs/_view (36.5ms)
+Completed in 500ms (View: 187, DB: 10) | 200 OK [http://localhost/intranet]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Core::PaginaentidadesController#new (for 127.0.0.1 at 2009-10-16 16:34:22) [GET]
+  Parameters: {"entidade_id"=>"1"}
+  [4;35;1mSessao Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `sessaos`[0m
+  [4;36;1mSessao Load (0.1ms)[0m   [0;1mSELECT * FROM `sessaos` WHERE (`sessaos`.`id` = 1) [0m
+  [4;35;1mEntidade Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `entidades`[0m
+  [4;36;1mEntidade Load (0.1ms)[0m   [0;1mSELECT * FROM `entidades` WHERE (`entidades`.`id` = 1) [0m
+  [4;35;1mPaginaentidade Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `paginaentidades`[0m
+Rendering template within layouts/application
+Rendering core/paginaentidades/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `entidades` WHERE (`entidades`.`id` = 1) [0m
+  [4;35;1mUsuario Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (0.2ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `entidades` WHERE (`entidades`.`id` = 1) [0m
+  [4;36;1mFormulariocategoria Load (0.2ms)[0m   [0;1mSELECT * FROM `formulariocategorias` WHERE (entidade_id = 1) [0m
+  [4;35;1mUsuarioBlog Load (0.2ms)[0m   [0mSELECT * FROM `usuario_blogs` WHERE (usuario_id = 1) [0m
+  [4;36;1mBlog Load (0.1ms)[0m   [0;1mSELECT * FROM `blogs` WHERE (usuario_id = 1 or usuario_id in (NULL)) ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mBlog Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `blogs`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+Rendered com/blogs/_view (34.3ms)
+Completed in 250ms (View: 102, DB: 9) | 200 OK [http://localhost/core/entidades/1/paginaentidades/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IntranetController#index (for 127.0.0.1 at 2009-10-16 16:34:25) [GET]
+  [4;36;1mSessao Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `sessaos`[0m
+  [4;35;1mSessao Load (0.1ms)[0m   [0mSELECT * FROM `sessaos` WHERE (`sessaos`.`id` = 1) [0m
+  [4;36;1mEntidade Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `entidades`[0m
+  [4;35;1mEntidade Load (0.2ms)[0m   [0mSELECT * FROM `entidades` WHERE (`entidades`.`id` = 1) [0m
+  [4;36;1mPaginaentidade Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `paginaentidades`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `paginaentidades` WHERE (`paginaentidades`.entidade_id = 1) [0m
+Rendering template within layouts/application
+Rendering intranet/index
+  [4;36;1mPaginaentidade Load (0.1ms)[0m   [0;1mSELECT * FROM `paginaentidades` WHERE (`paginaentidades`.entidade_id = 1) [0m
+  [4;35;1mUsuario Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `usuarios`[0m
+  [4;36;1mUsuario Load (0.2ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `entidades` WHERE (`entidades`.`id` = 1) [0m
+  [4;36;1mFormulariocategoria Load (0.2ms)[0m   [0;1mSELECT * FROM `formulariocategorias` WHERE (entidade_id = 1) [0m
+  [4;35;1mUsuarioBlog Load (0.2ms)[0m   [0mSELECT * FROM `usuario_blogs` WHERE (usuario_id = 1) [0m
+  [4;36;1mBlog Load (0.1ms)[0m   [0;1mSELECT * FROM `blogs` WHERE (usuario_id = 1 or usuario_id in (NULL)) ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mBlog Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `blogs`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `usuarios` WHERE (`usuarios`.`id` = 1) [0m
+Rendered com/blogs/_view (36.5ms)
+Completed in 263ms (View: 197, DB: 10) | 200 OK [http://localhost/intranet]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-16 16:34:26) [GET]
+
+ActionController::RoutingError (No route matches "/uploads/Image/0,,20813349-EX,00.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

@@ -16,15 +16,15 @@ jQuery.iUtil = {
 	{
 		var x = 0;
 		var y = 0;
-		var restoreStyle = false;
 		var es = e.style;
+		var restoreStyles = false;
 		if (jQuery(e).css('display') == 'none') {
-			oldVisibility = es.visibility;
-			oldPosition = es.position;
+			var oldVisibility = es.visibility;
+			var oldPosition = es.position;
+			restoreStyles = true;
 			es.visibility = 'hidden';
 			es.display = 'block';
 			es.position = 'absolute';
-			restoreStyle = true;
 		}
 		var el = e;
 		while (el){
@@ -39,7 +39,7 @@ jQuery.iUtil = {
 			y -= el.scrollTop||0;
 			el = el.parentNode;
 		}
-		if (restoreStyle) {
+		if (restoreStyles == true) {
 			es.display = 'none';
 			es.position = oldPosition;
 			es.visibility = oldVisibility;
@@ -67,8 +67,8 @@ jQuery.iUtil = {
 			wb = e.offsetWidth;
 			hb = e.offsetHeight;
 		} else {
-			oldVisibility = es.visibility;
-			oldPosition = es.position;
+			var oldVisibility = es.visibility;
+			var oldPosition = es.position;
 			es.visibility = 'hidden';
 			es.display = 'block';
 			es.position = 'absolute';
@@ -102,7 +102,7 @@ jQuery.iUtil = {
 	},
 	getScroll : function (e)
 	{
-		var t, l, w, h, iw, ih;
+		var t=0, l=0, w=0, h=0, iw=0, ih=0;
 		if (e && e.nodeName.toLowerCase() != 'body') {
 			t = e.scrollTop;
 			l = e.scrollLeft;
@@ -111,7 +111,7 @@ jQuery.iUtil = {
 			iw = 0;
 			ih = 0;
 		} else  {
-			if (document.documentElement && document.documentElement.scrollTop) {
+			if (document.documentElement) {
 				t = document.documentElement.scrollTop;
 				l = document.documentElement.scrollLeft;
 				w = document.documentElement.scrollWidth;
@@ -209,23 +209,23 @@ jQuery.iUtil = {
 	},
 	centerEl : function(el, axis)
 	{
-		var clientScroll = $.iUtil.getScroll();
-		var windowSize = $.iUtil.getSize(el);
+		var clientScroll = jQuery.iUtil.getScroll();
+		var windowSize = jQuery.iUtil.getSize(el);
 		if (!axis || axis == 'vertically')
-			$(el).css(
+			jQuery(el).css(
 				{
 					top: clientScroll.t + ((Math.max(clientScroll.h,clientScroll.ih) - clientScroll.t - windowSize.hb)/2) + 'px'
 				}
 			);
 		if (!axis || axis == 'horizontally')
-			$(el).css(
+			jQuery(el).css(
 				{
 					left:	clientScroll.l + ((Math.max(clientScroll.w,clientScroll.iw) - clientScroll.l - windowSize.wb)/2) + 'px'
 				}
 			);
 	},
 	fixPNG : function (el, emptyGIF) {
-		var images = $('img[@src*="png"]', el||document), png;
+		var images = jQuery('img[@src*="png"]', el||document), png;
 		images.each( function() {
 			png = this.src;				
 			this.src = emptyGIF;

@@ -1719,13 +1719,21 @@ VERBETES INTRANET
                                              -moz-border-radius-topright:5px;
                                            }
 .titulo_verbete                           { width: 100%; clear:both; font-size:0.8em; height:2em; background-image: url(/theme/infodoc/images/img09.gif); padding-top:3px; }
-.titulo_verbete .acoes_verbete            { width:10%;  float:right; text-align:right; padding: 0 5px; } 
+.titulo_verbete .acoes_verbete            { width:14%;  float:right; text-align:right; padding: 0 5px; } 
 .titulo_verbete #edit_pagina_verbete      { width:10%; float:left; margin-left:5px;}
 .titulo_verbete #edit_pagina_verbete a:hover
                                           { outline:1px solid #CCCCCC; }   
 .titulo_verbete #edit_pagina_verbete a.alterar
                                           { color:#DBDBDB; background-image:url(/theme/infodoc/images/editar_mini.png); width:15px; padding-left:3px; float:left; background-repeat:no-repeat;}
 .titulo_verbete #edit_pagina_verbete a.excluir
-                                          { color:#DBDBDB; background-image:url(/theme/infodoc/images/lixo.png); width:15px; padding-left:3px; float:left; }            
- .titulo_verbete b                        { float:left; margin-left: 5px;}             
+                                          { color:#DBDBDB; background-image:url(/theme/infodoc/images/lixo.png); width:15px; padding-left:3px; float:left; }
+.titulo_verbete .acoes_verbete  a.mini    { color:#DBDBDB; background-image:url(/theme/infodoc/images/minimizar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.max     { color:#DBDBDB; background-image:url(/theme/infodoc/images/maxmizar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.fechar  { color:#DBDBDB; background-image:url(/theme/infodoc/images/fechar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.mini:hover,
+.titulo_verbete .acoes_verbete  a.max:hover,
+.titulo_verbete .acoes_verbete  a.fechar:hover
+                                          { outline:1px solid #CCCCCC; }
+.titulo_verbete b                         { float:left; margin-left: 5px;}
+.conteudo_verbete                         {  font-family:Arial,Verdana,sans-serif; font-size:12px; }
                                            

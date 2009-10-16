@@ -1,65 +1,38 @@
-
 $(document).ready(
-	function () {
-		$('a.closeEl').bind('click', toggleContent);
-		$('div.groupWrapper').Sortable(
-			{
-				accept: 'groupItem',
-				helperclass: 'sortHelper',
-				activeclass : 	'sortableactive',
-				hoverclass : 	'sortablehover',
-				handle: 'div.itemHeader',
-				tolerance: 'pointer',
-				onChange : function(ser)
-				{
-				},
-				onStart : function()
-				{
-					$.iAutoscroller.start(this, document.getElementsByTagName('body'));
-				},
-				onStop : function()
-				{
-					$.iAutoscroller.stop();
-				}
-			}
-		);
-	}
-);
-var toggleContent = function(e)
-{
-	var targetContent = $('div.itemContent', this.parentNode.parentNode);
-	if (targetContent.css('display') == 'none') {
-		targetContent.slideDown(300);
-		$(this).html('[-]');
-	} else {
-		targetContent.slideUp(300);
-		$(this).html('[+]');
-	}
-	return false;
-};
-function serialize(s)
-{
-	serial = $.SortSerialize(s);
-	alert(serial.hash);
-};
+/* minimizar conteudo da janela
+==================================*/
 
+	function () {
+     	$('a.mini').click(function() {
+  
+          $('.conteudo_verbete', this.parentNode.parentNode.parentNode).hide('fast');
+            
+          return false;
+  
+        });
+/* maximizar o conteudo da janela
+================================== */        
+
+        $('a.max').click(function() {
+  
+          $('.conteudo_verbete', this.parentNode.parentNode.parentNode).show('fast');
+            
+          return false;
+  
+        });
+/* Fechar a janela */
+        
+        $('a.fechar').click(function() {
+  
+          $( this.parentNode.parentNode.parentNode).hide('fast');
+            
+          return false;
+  
+        });
 /*
-$(document).ready(function(){ 
-      $('.verbete').Draggable(
-                              {
-                                      handler:'titulo_verbete',
-                                      grid: [50,50],
-                                      ghosting: true,
-                                      opacity: 0.5,
-                                      containment : '#pagina_verbete'
+Arrastar e soltar
+======================================== */       
 
-                              }
-                      );
-       });
-*/       
-
-$(document).ready(
-	function () {
 		$('#pagina_verbete').Sortable(
 			{
 				accept : 		'verbete',
@@ -75,5 +48,18 @@ $(document).ready(
 		)
 	}
 );
-
+/*
+var toggleContent = function(e)
+{
+	var targetContent = $('div.conteudo_verbete', this.parentNode.parentNode);
+	if (targetContent.css('display') == 'none') {
+		targetContent.hide(300);
+		$(this).html('[-]');
+	} else {
+		targetContent.hide(300);
+		$(this).html('[+]');
+	}
+	return false;
+};
+*/
 
