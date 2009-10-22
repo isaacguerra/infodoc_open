@@ -69,6 +69,7 @@ h3                                  { color:black; margin:0px; }
                                         min-height:500px;
                                         height:auto;
                                         margin:0;
+                                        margin-top: 4px;
                                         margin-right:10px;
                                     }
 
@@ -342,7 +343,7 @@ input.enviar                          {
                                      width:60px; 
                                      height:60px;
                                      float:left; 
-                                     background-image:url("/theme/infodoc/images/perfilbg.png"); 
+                                     background-image:url("/theme/aqua2/images/perfilbg.png"); 
                                      margin:0 15px;
                                      margin-top:10px;
                                    }
@@ -397,7 +398,7 @@ input.enviar                          {
 
 .titulo_edit                { background-image: url("/theme/aqua2/images/edit.png"); }
 
-.titulo_cat_infowiki        { background-image: url("/theme/infodoc/images/categoria.png"); }
+.titulo_cat_infowiki        { background-image: url("/theme/aqua2/images/categoria.png"); }
 
 
 
@@ -423,7 +424,12 @@ input.enviar                          {
 /* ***************************************   END    ************************************************* */
 
 
-#listar,#wiki,#historico_microblog,#listar_ajuda  
+#listar,
+#wiki,
+#pagina_verbete,
+#historico_microblog,
+#listar_ajuda,
+#intranet_inicial  
                             {
                             color:#515859;
                             float:left;
@@ -492,7 +498,7 @@ input.enviar                          {
                              { float:left; text-decoration:none; width:100%;  height:100%; }
 .lista_item th               { margin-left:20px; }
 .item_index a,
-.item_index a:hover          { font-weight: bold; color:#8C1C1C; }
+.item_index a:hover          { font-weight: bold; color:#3C7B96; }
 
 
 
@@ -534,7 +540,7 @@ input.enviar                          {
 
 /*========================   WIKI
 */
-
+#wiki                        { width: 99.2%; }
 
 
 #wiki .wiki_texto            { float:left;width:85%; font-family:Arial,Verdana,sans-serif; font-size:12px; }
@@ -544,7 +550,7 @@ input.enviar                          {
 #wiki .titulo_wiki           { 
                                text-align:left; 
                                vertical-align:top; 
-                               font-size:1.8em; 
+                               font-size:1.3em; 
                                color:#205C7A;
                                background-image: url("/theme/aqua2/images/img09.gif");
                                background-repeat: repeat-x;
@@ -569,7 +575,7 @@ input.enviar                          {
 #wiki h3                     { margin:0; width:60%; }
 #wiki #busca_wiki #resultado_busca
                              { width: 70%; margin-left:1%; }
-#wiki .titulo_categoria h3   { color: #205C7A; margin-left:20px; }
+#wiki .titulo_categoria h3   { color: #205C7A; margin-left:20px; font-size: 0.9em; }
 #wiki .wiki_texto            { float:left;width:85%; }
 #wiki #categorias div.formulario{ 
                                   width: auto; 
@@ -614,7 +620,7 @@ input.enviar                          {
 
 .edit a                     {
                                
-                               background-image: url("/theme/infodoc/images/add_entidade.png");
+                               background-image: url("/theme/aqua2/images/add_entidade.png");
                                background-repeat:no-repeat;
                                background-position: center top;
                                color: #3C7B96;
@@ -635,62 +641,62 @@ input.enviar                          {
 
                             }
                             
-.edit a                     { background-image: url("/theme/infodoc/images/editar.png"); }
+.edit a                     { background-image: url("/theme/aqua2/images/editar.png"); }
 
-.usuarios_index a           { background-image: url("/theme/infodoc/images/usuario.png"); }
+.usuarios_index a           { background-image: url("/theme/aqua2/images/usuario.png"); }
 
-.abilita a                  { background-image: url("/theme/infodoc/images/des-habilita.png"); }
+.abilita a                  { background-image: url("/theme/aqua2/images/des-habilita.png"); }
 
-.delete a                   { background-image: url("/theme/infodoc/images/delete.png"); }
+.delete a                   { background-image: url("/theme/aqua2/images/delete.png"); }
 
-.new_grupo a                { background-image: url("/theme/infodoc/images/add_grupo.png"); }
+.new_grupo a                { background-image: url("/theme/aqua2/images/add_grupo.png"); }
 
-.new_usuario a              { background-image: url("/theme/infodoc/images/add_usuario.png"); }
+.new_usuario a              { background-image: url("/theme/aqua2/images/add_usuario.png"); }
 
-.new_modulo a               { background-image: url("/theme/infodoc/images/add_modulo.png"); }
+.new_modulo a               { background-image: url("/theme/aqua2/images/add_modulo.png"); }
 
-.new_sistema a              { background-image: url("/theme/infodoc/images/add_sistema.png"); }
+.new_sistema a              { background-image: url("/theme/aqua2/images/add_sistema.png"); }
 
-.new_categoria a            { background-image: url("/theme/infodoc/images/add_categoria.png"); }
+.new_categoria a            { background-image: url("/theme/aqua2/images/add_categoria.png"); }
 
-.new_subcategoria a         { background-image: url("/theme/infodoc/images/add_sub_categoria.png"); }
+.new_subcategoria a         { background-image: url("/theme/aqua2/images/add_sub_categoria.png"); }
 
-.new_formulario a           { background-image: url("/theme/infodoc/images/add_form.png"); }
+.new_formulario a           { background-image: url("/theme/aqua2/images/add_form.png"); }
 
-.new_item a                 { background-image: url("/theme/infodoc/images/add_item.png"); }
+.new_item a                 { background-image: url("/theme/aqua2/images/add_item.png"); }
 
-.novo_cadastro a            { background-image: url("/theme/infodoc/images/add_cadastro.png"); }
+.novo_cadastro a            { background-image: url("/theme/aqua2/images/add_cadastro.png"); }
 
-.new_novo a                 { background-image: url("/theme/infodoc/images/add_novo.png"); }
+.new_novo a                 { background-image: url("/theme/aqua2/images/add_novo.png"); }
 
-.ajuda a                    { background-image: url("/theme/infodoc/images/ajuda.png"); }
+.ajuda a                    { background-image: url("/theme/aqua2/images/ajuda.png"); }
 
-.voltar a                   { background-image: url("/theme/infodoc/images/voltar.png"); }
+.voltar a                   { background-image: url("/theme/aqua2/images/voltar.png"); }
 
-.new_ajuda a                { background-image: url("/theme/infodoc/images/add_ajuda.png"); }
+.new_ajuda a                { background-image: url("/theme/aqua2/images/add_ajuda.png"); }
 
 .new_comentario a           { 
-                              background-image: url("/theme/infodoc/images/add_comentario.png");
+                              background-image: url("/theme/aqua2/images/add_comentario.png");
                               font-size:0.7em;
                               padding-top:25px;
                              }
 
 .hide_comentario a           { 
-                                  background-image: url("/theme/infodoc/images/hide_comentario.png");
+                                  background-image: url("/theme/aqua2/images/hide_comentario.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                              }
                              
 .hide_historico a           { 
-                                  background-image: url("/theme/infodoc/images/hide_historico.png");
+                                  background-image: url("/theme/aqua2/images/hide_historico.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                              }
 
 .hide_artefato a                { 
-                                  background-image: url("/theme/infodoc/images/hide_artefato.png");
+                                  background-image: url("/theme/aqua2/images/hide_artefato.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
@@ -698,14 +704,14 @@ input.enviar                          {
                                 }
 
 .hide_relacionamento a          { 
-                                  background-image: url("/theme/infodoc/images/hide_relacionamento.png");
+                                  background-image: url("/theme/aqua2/images/hide_relacionamento.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                                 }
 
 #artefatos .formulario input[type=submit] { 
-                                            background-image: url("/theme/infodoc/images/add_artefato.png");
+                                            background-image: url("/theme/aqua2/images/add_artefato.png");
                                             background-color:#FFFFFF; 
                                             border:0; 
                                             padding-top:25px; 
@@ -773,7 +779,7 @@ input.enviar                          {
                                 padding-left:6px;
                                 border-bottom: 1px solid #E3E7E8;
                             }
-
+.lista_conteudo img            { width: 70% ;}
 #link_voltar                {
 
                                 padding:0;
@@ -1111,25 +1117,25 @@ RESULTADO DETALHADO BUSCA
 #comentarios #barra_titulo h3   { 
                                   font-size: 1.1em;
                                   padding-left:33px; 
-                                  background-image: url("/theme/infodoc/images/comment_write.png") ;
+                                  background-image: url("/theme/aqua2/images/comment_write.png") ;
                                 }
 
 #artefatos #barra_titulo h3     { 
                                   font-size: 1.1em; 
                                   padding-left:32px;
                                   margin-top:0; 
-                                  background-image: url("/theme/infodoc/images/artefato.png") ;
+                                  background-image: url("/theme/aqua2/images/artefato.png") ;
                                 }
                                 
 #relacionados #barra_titulo h3   { 
                                   font-size: 1em; 
                                   padding-left:32px; 
-                                  background-image: url("/theme/infodoc/images/relacionamento.png") ;
+                                  background-image: url("/theme/aqua2/images/relacionamento.png") ;
                                 }
                                                                 
 #historico #barra_titulo h3     { font-size: 1em;
                                   padding-left:32px;
-                                  background-image: url("/theme/infodoc/images/historico.png");
+                                  background-image: url("/theme/aqua2/images/historico.png");
                                  }     
     
 .titulo_comentario              { font-size:10px; background-image:none; }
@@ -1183,8 +1189,8 @@ RESULTADO DETALHADO BUSCA
                                   float:right;
 
                                   font-weight:normal;
-                                  background-color:#8C1C1C;
-                                  border:1px solid #8C1C1C;
+                                  background-color:#3C7B96;
+                                  border:1px solid #3C7B96;
 
                                   }
 
@@ -1197,7 +1203,7 @@ RESULTADO DETALHADO BUSCA
                                   font-weight:none;
                                   margin:0;
                                   padding:0;
-                                  background-color:#8C1C1C;
+                                  background-color:#3C7B96;
                                   color:#E0E0E0;
 
                                   font-weight: bold;
@@ -1258,8 +1264,8 @@ RESULTADO DETALHADO BUSCA
 /*
 #artefatos .formulario input[type=submit]  { 
                                             
-                                background-color:#8C1C1C;
-                                border:1px solid #8C1C1C;
+                                background-color:#3C7B96;
+                                border:1px solid #3C7B96;
                                 padding:0px 2px 0;
                                 font-size:0.6em;
                                 font-weight:bold;
@@ -1312,7 +1318,7 @@ RESULTADO DETALHADO BUSCA
                         
                                           }
 #artefatos #listar .delete a:hover { background-color:#F2F2F2; }
-#artefatos #listar .download_artefato a { background-image: url("/theme/infodoc/images/download.png"); }
+#artefatos #listar .download_artefato a { background-image: url("/theme/aqua2/images/download.png"); }
 
                      
 #artefatos #listar .download_artefato a:hover { text-decoration:none; padding-top: 40px; outline:1px solid #D1D1D1; background-color:#F2F2F2;}  
@@ -1378,7 +1384,7 @@ HISTORICO
                                   background-repeat:repeat-x;
                                   height:auto;
                                   min-height:15px;
-                                  width:99.8%;
+                                  width:99.6%;
                                   padding:2px 2px;
 
                                   }
@@ -1413,23 +1419,23 @@ RELACIONAMENTOS
   
 #lista_ajuda li                         { margin:0; }
 
-#lista_ajuda li a                       { padding:0; color:#8C1C1C;  border-bottom: 1px solid #8C1C1C; line-height:1.6em;}
+#lista_ajuda li a                       { padding:0; color:#3C7B96;  border-bottom: 1px solid #3C7B96; line-height:1.6em;}
 
 #lista_ajuda li a:hover                 {
                                           text-decoration:none;  
-                                          border-bottom: 2px solid #8C1C1C;
-                                          background-color:#8C1C1C;
+                                          border-bottom: 2px solid #3C7B96;
+                                          background-color:#3C7B96;
                                           color:#FFFFFF;
                                          }
 
 #lista_ajuda li a.ativo:hover            {                             
                                           text-decoration:none;  
-                                          border-bottom: 0px solid #8C1C1C;
+                                          border-bottom: 0px solid #3C7B96;
                                           background-color:#ffffff;
                                           
                                          }
                                           
-#lista_ajuda li a.ativo                  { font-weight:bold; border:none; color:#8C1C1C; font-size: 1.2em;}
+#lista_ajuda li a.ativo                  { font-weight:bold; border:none; color:#3C7B96; font-size: 1.2em;}
 
 #conteudo_ajuda                          { width:77%; margin:5px 0.2%; border-left:2px solid #EDEDED; float:left; padding:5px; } 
 
@@ -1437,7 +1443,7 @@ RELACIONAMENTOS
 
 #frame ul                                { width:25%;font-size:0.8em; float:left;}
 
-#frame h3#barra_titulo                   { padding-left: 15px; color:#8C1C1C; }
+#frame h3#barra_titulo                   { padding-left: 15px; color:#3C7B96; }
 
 #frame h4,#frame h5                      { margin-left: 20px; margin-top:1em; margin-bottom:1em; width:100%; clear:both;float:left;}
 
@@ -1455,7 +1461,7 @@ RELACIONAMENTOS
 #frame a,
 #frame strong,
 #frame h4,
-#frame h5                       { color:#8C1C1C; }
+#frame h5                       { color:#3C7B96; }
 #frame ul.emlinha                        { float:none; }
 
 /*========================================*/
@@ -1628,4 +1634,203 @@ HISTORICO MICROBLOG
 .pagination                                 { font-family: "sans serif"; font-size: 0.8em;  width:35%; margin:10px 38%; }
 .pagination a                               { background-color: #FFFFFF; padding: 2px 3px; }  
 .pagination .current,.pagination a:hover    { background-color: #205C7A; color: #FFFFFF; padding: 2px 3px; text-decoration:none; } 
-       
+
+/*
+==========================================
+PAGINA PRINCIPAL INTRANET
+*/
+#intranet_inicial                           { border: none; font-size:0.8em;width:99%;  }
+#intranet_inicial ul.menu_nav               { border-left: 3px solid #EDEDED; width:20%; margin:5px 0; padding:0 15px; float:left;}
+#intranet_inicial ul.menu_nav li            { list-style: none; border-bottom: 1px dashed #EDEDED; padding:3px; }
+#intranet_inicial ul.menu_nav li b          { font-size: 1.7em; } 
+#intranet_inicial ul.menu_nav li a          { display:block ; font-size:1em; padding:3px;}
+#intranet_inicial ul.menu_nav li a:hover    { text-decoration:none; width:100%; background-color:#3C7B96; color:#FFFFFF; }
+                                            
+#bloco_p                                    { width:60%;  padding: 5px 20px; float:left;  margin-bottom:5px; }
+.bloco                                      { width:60%; float:left; margin:0 10px;  }
+#intranet_inicial .bloco h1,
+#intranet_inicial .bloco h2
+                                            { margin:1.33em 13px; }
+#intranet_inicial #bloco_p h1,
+#intranet_inicial .bloco h2                 { background-image: url("/theme/aqua/images/fil2.jpg");color:#3C7B96; padding:7px; border-bottom: 1px solid #CCCCCC;}
+.bloco p b.n                                { 
+                                              padding:3px 5px ; 
+                                              background-image: url("/theme/aqua/images/fundo_botoes.png");
+                                              background-position: center;
+                                              color: #FFFFFF;
+                                              -moz-border-radius-bottomleft:5px;
+                                              -moz-border-radius-bottomright:5px;
+                                              -moz-border-radius-topleft:5px;
+                                              -moz-border-radius-topright:5px;
+                                            }                                            
+.bloco p                                    { float:left; margin: 20px 13px; width:100%; line-height:1.5em; }  
+.bloco h3                                   { margin:13px; }
+.bloco  ol                                  { float:left; margin-left:15px;}
+.bloco  ol li                               { font-weight: bold; }
+.bloco_img                                  { float:left; width: 99%; padding:1% 0.5%; height:auto; border: 2px solid #EDEDED;  background-color:#FAF5DC; margin-left:13px; margin-bottom:15px;  }
+.bloco_img                                  {
+                                              -moz-border-radius-bottomleft:5px;
+                                              -moz-border-radius-bottomright:5px;
+                                              -moz-border-radius-topleft:5px;
+                                              -moz-border-radius-topright:5px; 
+                                            } 
+.bloco_img img                              { margin: 0 10px; border: 1px solid #EDEDED;
+                                              text-align:center;  
+                                              border-width:1px 1px 2px 2px ;
+                                              border-color:#EDEDED #EDEDED #CCCCCC #CCCCCC; 
+                                            } 
+                                             
+.bloco_img b                                { display:block; text-align: center;} 
+
+a.add_conteudo                              { 
+                                             
+                                              background-image:url("/theme/aqua/images/fundo_botoes.png");
+                                              background-position: bottom;
+                                              font-family: "sans serif";
+                                              color: #FFFFFF;
+                                              height:30px;
+                                              padding:0px 8px;
+                                              padding-top: 10px;
+                                              margin-left: 20px;
+                                              float:left;
+                                              border: 4px solid #3C7B96;
+                                              text-decoration:none;
+                                            }
+a.add_conteudo:hover                        { background-position: top; border-color: #3C7B96; }                    
+/*==========================================
+*/
+
+/*
+VERBETES INTRANET
+==========================================*/
+
+#pagina_verbete                            { width: 99%; height:auto;}
+#pagina_verbete .verbete                   { width: 48.3%;  float:left; margin:5px;}
+#pagina_verbete .verbete                   {
+                                             border: 1px solid #EDEDED;
+                                             -moz-border-radius-topleft:5px;
+                                             -moz-border-radius-topright:5px;
+                                           }
+.titulo_verbete                           { width: 100%; clear:both; font-size:0.8em; height:2em; background-image: url(/theme/aqua/images/img09.gif); padding-top:3px; }
+.titulo_verbete .acoes_verbete            { width:16%;  float:right; text-align:right; padding: 0 5px; } 
+.titulo_verbete #edit_pagina_verbete      { width:11%; float:right; margin-left:5px;}
+.titulo_verbete #edit_pagina_verbete a:hover
+                                          { outline:1px solid #CCCCCC; }   
+.titulo_verbete #edit_pagina_verbete a.alterar
+                                          { color:#DBDBDB; background-image:url(/theme/aqua/images/editar_mini.png); width:15px; padding-left:3px; float:left; background-repeat:no-repeat;}
+.titulo_verbete #edit_pagina_verbete a.excluir
+                                          { color:#DBDBDB; background-image:url(/theme/aqua/images/lixo.png); width:15px; padding-left:3px; float:left; }
+.titulo_verbete .acoes_verbete  a.mini    { color:#DBDBDB; background-image:url(/theme/aqua/images/minimizar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.max     { color:#DBDBDB; background-image:url(/theme/aqua/images/maxmizar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.fechar  { color:#DBDBDB; background-image:url(/theme/aqua/images/fechar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.mini:hover,
+.titulo_verbete .acoes_verbete  a.max:hover,
+.titulo_verbete .acoes_verbete  a.fechar:hover
+                                          { outline:1px solid #CCCCCC;  }
+.titulo_verbete b                         { float:left; margin-left: 5px; font-size: 0.8em;}
+.conteudo_verbete                         { font-family:Arial,Verdana,sans-serif; font-size:12px; overflow:hidden; }
+
+/*
+PERSONALIZACAO DA PAGINA PRINCIPAL DA ENTIDADe
+==============================*/
+#home_entidade                            { font-family:Arial,Verdana,sans-serif; font-size:12px; text-align:left; background-color:#FFFFFF; }
+/*
+HOME DA ENTIDADE
+=================================*/
+                                               
+#status h4                                { 
+                                            color:#949494;
+                                        	font-family: Arial,Helvetica,Verdana;
+                                        	margin:0;
+                                        	margin: 1px 0 0 5px;
+                                        	clear:both;
+                                        	text-align:left;
+                                        	display:block;
+                                          }	
+                                          #statusform         { margin:  0px; font-size:0.8em; }                       
+#status input[type=text],
+#status input[type=password]   {     
+                                    padding:0;
+                                    padding-top:3px;
+                                    padding-left:2px;
+                                    width:auto;
+                                    min-width:100px;
+                                    color:#3C7B96;
+                                    font-size:0.9em;
+                                    border: 1px solid #CCCCCC;
+                                    margin:0 5px;
+                                    margin-bottom:4px;
+                                    background:#F5F5F5;    
+                              }
+                              
+#status input[type=submit]     {   
+                                    margin-left: 52px;
+                                    margin-top:3px;
+                                    font-size: 0.8em;
+                                    border: 1px solid #CCCCCC;
+                                    color:#3C7B96;
+                                    
+                                    
+                              }   
+#navcontainer ul {
+      	font-size:0.8em;
+      	font-weight:bold;
+      	padding: 6px;
+      	margin: 20px 0px 0px 0px;
+      	list-style-type: none;
+      	text-align: left;
+      	background-color:#ffffff;
+      	height:18px;
+      	border-top: solid 5px #3C7B96;
+      	border-bottom: solid 1px #DBDBDB;
+      	background-image: url("/theme/aqua2/images/img09.gif");
+	background-repeat: repeat-x;
+    }
+    #navcontainer ul li {
+     	display: inline;
+    }
+    #navcontainer ul li b {
+     	color:#7a7272;
+    }
+    #navcontainer ul li a{
+	text-decoration: none;
+	padding:0px 15px 0px 15px;
+	color: #000000;
+    }
+    #navcontainer ul li a:hover{
+	text-decoration: underline;
+	
+    }
+/*Fim Menu*/ 
+
+/*
+PUBLICACOES
+==========================*/
+
+#publicacoes        {
+                       	min-height: 50px;
+                       	width:37%;
+	                    float:right;
+	                    border-left: 2px solid #EDEDED;
+	                    padding:10px;
+                    }
+#publicacoes h2            {   margin: 0; margin-left:10px; color:#3C7B96; }
+#publicacoes ul            {   padding: 0 ; padding-left:10px; }
+#publicacoes ul li         {   height:25px; border-bottom: 1px dashed #EDEDED;  list-style:none; padding: 0px 0; }  
+#publicacoes ul li a       {   color: #3C7B96; width:100%;  height:100%;  display:block; margin-top:4px; padding-top:4px; font-size:0.8em; }
+#publicacoes ul li a:hover {   background-color: #F2F2F2; text-decoration:none;    }
+
+
+
+#conteudo_customizado {
+
+                    width:60%;
+                    min-height:160px;
+	                float: left;
+	                padding: 3px 0px 3px 3px;
+	                margin: 10px 0 0 0;
+	                background-color: #FFFFFF;
+	                text-align: justify;
+                      
+                     }
+                                                                                                                          

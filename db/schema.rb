@@ -48,9 +48,8 @@ ActiveRecord::Schema.define(:version => 20091016161229) do
     t.string   "titulo"
     t.text     "filtro"
     t.integer  "permissao"
-    t.boolean  "status",        :default => true
-    t.string   "usuario"
-    t.string   "senha"
+    t.boolean  "status",         :default => true
+    t.string   "hash_validacao"
     t.boolean  "privado"
     t.datetime "created_at"
     t.datetime "updated_at"

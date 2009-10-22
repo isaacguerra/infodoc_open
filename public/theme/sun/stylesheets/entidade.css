@@ -4,7 +4,7 @@
 body {
 	margin:0;
 	padding:0;
-	background-image: url("/theme/infodoc/images/fil1.png");
+	background-image: url("/theme/sun/images/fil1.png");
 	background-repeat: repeat-x;
 }
  
@@ -45,7 +45,7 @@ LOGIM*/
 	                    text-align: right;
 	                    border-width: 5px 1px 2px 1px;
                     	border-style: solid solid solid solid;
-                    	border-color: #8C1C1C #EDEDED #CCCCCC #EDEDED; 
+                    	border-color: #D4943B #EDEDED #CCCCCC #EDEDED; 
                     	margin-bottom: 15px;
                     	margin-right:20px;
                     	margin-top: 5px;
@@ -79,7 +79,7 @@ LOGIM*/
                                     padding-left:2px;
                                     width:auto;
                                     min-width:100px;
-                                    color:#8C1C1C;
+                                    color:#D4943B;
                                     font-size:0.9em;
                                     border: 1px solid #CCCCCC;
                                     margin:0 5px;
@@ -92,7 +92,7 @@ LOGIM*/
                                     margin-top:3px;
                                     font-size: 0.8em;
                                     border: 1px solid #CCCCCC;
-                                    color:#8C1C1C;
+                                    color:#D4943B;
                                     
                                     
                               }   
@@ -105,22 +105,22 @@ LOGIM*/
                                        min-height:20px; 
                                        margin:0;
                                        width:100%;
-                                       background-image: url("/theme/infodoc/images/fil1.png");
+                                       background-image: url("/theme/sun/images/fil1.png");
                                        padding-bottom: 10px;
                                        padding-top:10px;
                                        display: inline-block;
-                                       border-top:8px solid #8C1C1C;
+                                       border-top:8px solid #D4943B;
                                        border-bottom: 1px  solid #EDEDED;
                                        
                                  }
                                  
-#topo_login b                    {     margin:10px; color: #8C1C1C; }
+#topo_login b                    {     margin:10px; color: #D4943B; }
 
 #rodape_login                    {     
                                        width:100%; height:32px;
-                                       border-top:5px solid #8C1C1C;
+                                       border-top:5px solid #D4943B;
                                        border-bottom: 1px solid #EDEDED;
-                                       background-image: url("/theme/infodoc/images/img09.gif");
+                                       background-image: url("/theme/sun/images/img09.gif");
                                  }
                                  
 #login_tudo                      {     min-height:370px;  }
@@ -145,9 +145,9 @@ LOGIM*/
       	text-align: left;
       	background-color:#ffffff;
       	height:18px;
-      	border-top: solid 5px #8c1c1c;
+      	border-top: solid 5px #D4943B;
       	border-bottom: solid 1px #DBDBDB;
-      	background-image: url("/theme/infodoc/images/img09.gif");
+      	background-image: url("/theme/sun/images/img09.gif");
 	background-repeat: repeat-x;
     }
     #navcontainer ul li {
@@ -178,10 +178,10 @@ PUBLICACOES
 	                    border-left: 2px solid #EDEDED;
 	                    padding:10px;
                     }
-#publicacoes h2            {   margin: 0; margin-left:10px; color:#8c1c1c; }
+#publicacoes h2            {   margin: 0; margin-left:10px; color:#D4943B; }
 #publicacoes ul            {   padding: 0 ; padding-left:10px; }
 #publicacoes ul li         {   height:25px; border-bottom: 1px dashed #EDEDED;  list-style:none; padding: 0px 0; }  
-#publicacoes ul li a       {   color: #8C1C1C; width:100%;  height:100%;  display:block; margin-top:4px; padding-top:4px; font-size:0.8em; }
+#publicacoes ul li a       {   color: #D4943B; width:100%;  height:100%;  display:block; margin-top:4px; padding-top:4px; font-size:0.8em; }
 #publicacoes ul li a:hover {   background-color: #F2F2F2; text-decoration:none;    }
 
 
@@ -214,9 +214,9 @@ PUBLICACOES
      height:18px;
      border-bottom-style:solid;
      border-bottom-width:5px;
-     border-bottom-color:#8c1c1c;
+     border-bottom-color:#D4943B;
      border-top: 1px solid #EDEDED;
-     background-image: url("/theme/infodoc/images/img09.gif");
+     background-image: url("/theme/sun/images/img09.gif");
 	 background-repeat: repeat-x;
     }
     #rodape ul li {
@@ -247,7 +247,7 @@ input#login_usuario,input#login_senha {
 }
 
 #form_login {
-    background-image: url("/theme/infodoc/images/img10.gif");
+    background-image: url("/theme/sun/images/img10.gif");
     background-repeat: repeat-x;
     border: 1px solid #C4C4C4;
     border-top: 3px solid #C4C4C4;
@@ -259,7 +259,7 @@ input#login_usuario,input#login_senha {
     margin:20px auto 50px auto;
 }
 .form_login{
-    border: 2px solid #8c1c1c;
+    border: 2px solid #D4943B;
     border-right:0px ;
     border-left: 0px;
     color: #FFFFFF;
@@ -268,7 +268,7 @@ input#login_usuario,input#login_senha {
     margin-bottom:20px
     text-align:center;
     padding: 0 5px 0 5px;
-    background-color: #8c1c1c;
+    background-color: #D4943B;
     
 }
 #form_login form {

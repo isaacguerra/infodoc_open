@@ -42,6 +42,7 @@ Arrastar e soltar
 				opacity: 		0.8,
 				/*fx:				200,*/
 				revert:			true,
+				handle:         'div.titulo_verbete',
 				floats:			true,
 				tolerance:		'pointer'
 			}

@@ -769,7 +769,7 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
                                 padding-left:6px;
                                 border-bottom: 1px solid #EDEDED;
                             }
-
+.lista_conteudo img         {   width: 30%; }
 #link_voltar                {
 
                                 padding:0;
@@ -889,7 +889,7 @@ FORMS
                                     min-width:80px;
                                     width:auto;
                                     margin:0px;
-                                    margin:5px 0;
+                                    margin:5px auto;
                                     color: #ffffff;
                                     font-weight:bold;
                                    
@@ -1704,6 +1704,21 @@ PAGINA PRINCIPAL INTRANET
                                              
 .bloco_img b                                { display:block; text-align: center;} 
 
+a.add_conteudo                              { 
+                                             
+                                              background-image:url("/theme/infodoc/images/fundo_botoes.png");
+                                              background-position: bottom;
+                                              font-family: "sans serif";
+                                              color: #FFFFFF;
+                                              height:30px;
+                                              padding:0px 8px;
+                                              padding-top: 10px;
+                                              margin-left: 20px;
+                                              float:left;
+                                              border: 4px solid #8c1c1c;
+                                              text-decoration:none;
+                                            }
+a.add_conteudo:hover                        { background-position: top; border-color: #8A4646; }                    
 /*==========================================
 */
 
@@ -1712,7 +1727,7 @@ VERBETES INTRANET
 ==========================================*/
 
 #pagina_verbete                            { width: 99.4%; height:auto;}
-#pagina_verbete .verbete                   { width: 48%;  float:left; margin:5px;}
+#pagina_verbete .verbete                   { width: 48.6%;  float:left; margin:5px;}
 #pagina_verbete .verbete                   {
                                              border: 1px solid #EDEDED;
                                              -moz-border-radius-topleft:5px;
@@ -1720,7 +1735,7 @@ VERBETES INTRANET
                                            }
 .titulo_verbete                           { width: 100%; clear:both; font-size:0.8em; height:2em; background-image: url(/theme/infodoc/images/img09.gif); padding-top:3px; }
 .titulo_verbete .acoes_verbete            { width:14%;  float:right; text-align:right; padding: 0 5px; } 
-.titulo_verbete #edit_pagina_verbete      { width:10%; float:left; margin-left:5px;}
+.titulo_verbete #edit_pagina_verbete      { width:10%; float:right; margin-left:5px;}
 .titulo_verbete #edit_pagina_verbete a:hover
                                           { outline:1px solid #CCCCCC; }   
 .titulo_verbete #edit_pagina_verbete a.alterar
@@ -1735,10 +1750,109 @@ VERBETES INTRANET
 .titulo_verbete .acoes_verbete  a.fechar:hover
                                           { outline:1px solid #CCCCCC; }
 .titulo_verbete b                         { float:left; margin-left: 5px;}
-.conteudo_verbete                         { font-family:Arial,Verdana,sans-serif; font-size:12px; }
+.conteudo_verbete                         { font-family:Arial,Verdana,sans-serif; font-size:12px; overflow:hidden; }
 
 /*
 PERSONALIZACAO DA PAGINA PRINCIPAL DA ENTIDADe
 ==============================*/
 #home_entidade                            { font-family:Arial,Verdana,sans-serif; font-size:12px; text-align:left; background-color:#FFFFFF; }
-                                           
+/*
+HOME DA ENTIDADE
+=================================*/
+                                               
+#status h4                                { 
+                                            color:#949494;
+                                        	font-family: Arial,Helvetica,Verdana;
+                                        	margin:0;
+                                        	margin: 1px 0 0 5px;
+                                        	clear:both;
+                                        	text-align:left;
+                                        	display:block;
+                                          }	
+                                          #statusform         { margin:  0px; font-size:0.8em; }                       
+#status input[type=text],
+#status input[type=password]   {     
+                                    padding:0;
+                                    padding-top:3px;
+                                    padding-left:2px;
+                                    width:auto;
+                                    min-width:100px;
+                                    color:#8c1c1c;
+                                    font-size:0.9em;
+                                    border: 1px solid #CCCCCC;
+                                    margin:0 5px;
+                                    margin-bottom:4px;
+                                    background:#F5F5F5;    
+                              }
+                              
+#status input[type=submit]     {   
+                                    margin-left: 52px;
+                                    margin-top:3px;
+                                    font-size: 0.8em;
+                                    border: 1px solid #CCCCCC;
+                                    color:#8c1c1c;
+                                    
+                                    
+                              }   
+#navcontainer ul {
+      	font-size:0.8em;
+      	font-weight:bold;
+      	padding: 6px;
+      	margin: 20px 0px 0px 0px;
+      	list-style-type: none;
+      	text-align: left;
+      	background-color:#ffffff;
+      	height:18px;
+      	border-top: solid 5px #8c1c1c;
+      	border-bottom: solid 1px #DBDBDB;
+      	background-image: url("/theme/infodoc/images/img09.gif");
+	background-repeat: repeat-x;
+    }
+    #navcontainer ul li {
+     	display: inline;
+    }
+    #navcontainer ul li b {
+     	color:#7a7272;
+    }
+    #navcontainer ul li a{
+	text-decoration: none;
+	padding:0px 15px 0px 15px;
+	color: #000000;
+    }
+    #navcontainer ul li a:hover{
+	text-decoration: underline;
+	
+    }
+/*Fim Menu*/ 
+
+/*
+PUBLICACOES
+==========================*/
+
+#publicacoes        {
+                       	min-height: 50px;
+                       	width:37%;
+	                    float:right;
+	                    border-left: 2px solid #EDEDED;
+	                    padding:10px;
+                    }
+#publicacoes h2            {   margin: 0; margin-left:10px; color:#8c1c1c; }
+#publicacoes ul            {   padding: 0 ; padding-left:10px; }
+#publicacoes ul li         {   height:25px; border-bottom: 1px dashed #EDEDED;  list-style:none; padding: 0px 0; }  
+#publicacoes ul li a       {   color: #8c1c1c; width:100%;  height:100%;  display:block; margin-top:4px; padding-top:4px; font-size:0.8em; }
+#publicacoes ul li a:hover {   background-color: #F2F2F2; text-decoration:none;    }
+
+
+
+#conteudo_customizado {
+
+                    width:60%;
+                    min-height:160px;
+	                float: left;
+	                padding: 3px 0px 3px 3px;
+	                margin: 10px 0 0 0;
+	                background-color: #FFFFFF;
+	                text-align: justify;
+                      
+                     }
+                                                                        

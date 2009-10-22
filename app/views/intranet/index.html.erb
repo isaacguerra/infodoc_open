@@ -9,11 +9,12 @@
  <div class="verbete">
   <div class="titulo_verbete">   
     <b>Criado em: <%= p.created_at.to_s_br %> por <%= p.usuario.nome %></b>
-    <div class="acoes_verbete">
+<!--    <div class="acoes_verbete">
                 <a class="fechar" href="#">&nbsp;</a>    
                 <a class="max"    href="#">&nbsp;</a>
                 <a class="mini"   href="#">&nbsp;</a>
     </div>
+-->    
     <div id="edit_pagina_verbete">
         <%= link_to '&nbsp;', edit_core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p), :class=>"alterar"  %>
         <%= link_to '&nbsp;', core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p), :method=>"delete",:class=>"excluir"  %>

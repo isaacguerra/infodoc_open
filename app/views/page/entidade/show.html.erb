@@ -1,4 +1,65 @@
-<div id="home">
-  <%= Paginaentidade.find(:first, :conditions=>["entidade_id = ? and tipo = 'home'", @entidade.id]).pagina %>
-</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag "/theme/#{@entidade.tema}/stylesheets/intranet.css" %>
+	  <title>Infomanager - Gertão Digital de Informação</title>
+  </head>
+
+  <body>
+     <div id="topo">
+        <div id="logo">
+          <% if @entidade.logo_file_name %>
+            <%= image_tag @entidade.logo.url %>
+          <% else %>
+            <%= image_tag "infodoc.gif" %>
+          <% end %>
+
+        </div>
+        <div id="status">
+        <h4>Intranet</h4>
+	      <% form_tag("/core/login") do %>
+          Usuário:                 <%= text_field :login, :usuario %><br>
+          Senha:&nbsp;&nbsp; <%= password_field :login, :senha %><br>
+          <%= submit_tag "Logar"%>
+        <% end %>
+        </div>        
+     </div>   
+     <div id="navcontainer">
+      <ul>
+      </ul>
+    </div>
+    <div id="tudo">
+        <div id="conteudo_customizado">
+          <div id="home">
+            <%= Paginaentidade.find(:first, :conditions=>["entidade_id = ? and tipo = 'home'", @entidade.id]).pagina %>
+          </div>
+        </div>
+        <div id="publicacoes">
+          <h2>Publicações de <%= @entidade.nome  %></h2>
+          <ul>
+            <li><a href="#">12/10/2009 - Publicacao1</a></li>
+            <li><a href="#">12/10/2009 - Publicacao2</a></li>
+            <li><a href="#">12/10/2009 - Publicacao3</a></li>
+            <li><a href="#">12/10/2009 - Publicacao4</a></li>
+            <li><a href="#">12/10/2009 - Publicacao5</a></li>
+            <li><a href="#">12/10/2009 - Publicacao6</a></li>                    
+          </ul>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+    <div id="rodape">
+	      <div id="licensa">
+        <b><a href="http://www.openinfodoc.org" target=_BLANK>INFODOC</a></b> é <i>Free Software</i> Liberado sob a <i><a target=_BLANK href="http://www.gnu.org/licenses/gpl-2.0.html">GNU / GPL v2.0 License</a></i>.<br />
+         Desenvolvido por <b><a href=mailto:guerra.isaac@gmail.com>Isaac Guerra</a></b> e
+        Design por <b><a href=mailto:raphaeljq@gmail.com>Raphael Chaves</a></b><br />
+        <div id="icones">
+          <a href="http://www.w3.org/1999/xhtml"> XHTML</a> <img src="/images/ico_html.png" alt="html" /> |
+          <a href="http://www.w3.org/Style/CSS/">CSS</a> <img src="/images/ico_css.png" alt="css"/> |
+          <a href="http://rubyonrails.org">RoR</a> <img src="/images/rails.png" alt="rails" />
+        </div>
+      </div>
+  </body>
+</html>
 
