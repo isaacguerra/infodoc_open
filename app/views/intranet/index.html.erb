@@ -16,8 +16,9 @@
     </div>
 -->    
     <div id="edit_pagina_verbete">
-        <%= link_to '&nbsp;', edit_core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p), :class=>"alterar"  %>
+        
         <%= link_to '&nbsp;', core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p), :method=>"delete",:class=>"excluir"  %>
+        <%= link_to '&nbsp;', edit_core_entidade_paginaentidade_path(@sessao_usuario.entidade_id, p), :class=>"alterar"  %>
     </div>
   </div>  
   <div class="conteudo_verbete">
