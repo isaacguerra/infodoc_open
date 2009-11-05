@@ -1,5 +1,5 @@
 class Formulariocategoria < ActiveRecord::Base
-  has_many :formularios
+  has_many :formularios, :dependent => :destroy
 
   validates_presence_of :entidade_id
   validates_presence_of :nome

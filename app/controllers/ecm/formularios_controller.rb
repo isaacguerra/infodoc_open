@@ -41,5 +41,13 @@ class Ecm::FormulariosController < ApplicationController
        render :action=> :edit, :id=>@formulario
     end
   end
+
+  def destroy
+    @categoria = Formulariocategoria.find(params[:categoria_id])
+    @formulario = Formulario.find(params[:id])
+    @formulario.destroy
+    flash[:notice] = "Formulario Atualizado com Sucesso!"
+    redirect_to ecm_categorias_path
+  end
 end
 

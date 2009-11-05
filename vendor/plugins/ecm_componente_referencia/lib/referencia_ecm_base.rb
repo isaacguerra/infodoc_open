@@ -50,6 +50,21 @@ class ReferenciaEcmBase
     end
   end
 
+  def remover_filtro_em_referencia(form_item, deleta_form_item)
+    form_item.opcoes[1].each do |key, value|
+      if key.include?("_#{deleta_form_item.id}")
+        form_item.opcoes[1].delete(key)
+      end
+    end
+    form_item.opcoes[2].each do |key, value|
+      if key.include?("_#{deleta_form_item.id}")
+        form_item.opcoes[2].delete(key)
+      end
+    end
+    form_item.save
+    return true
+  end
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 # CADASTRO
 #

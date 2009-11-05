@@ -1,5 +1,6 @@
 <div id="barra_titulo">
   <h3 class="titulo_show">Categoria de Formulario</h3>
+  <div class="edit"><%= link_to 'Excluir', ecm_categoria_path(@categoria), :method=>:delete, :confirm=>"tem certeza da Exclusão da Categoria de Formulário?" %></div>
   <div class="edit"><%= link_to 'Editar', edit_ecm_categoria_path(@categoria) %></div>
 </div>
 

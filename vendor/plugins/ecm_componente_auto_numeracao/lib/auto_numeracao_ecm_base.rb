@@ -26,6 +26,10 @@ class AutoNumeracaoEcmBase
     end
   end
 
+  def remover_filtro_em_referencia(form_item, deleta_form_item)
+    return true
+  end
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------
 # CADASTRO
 #

@@ -2,10 +2,10 @@ class Formulario < ActiveRecord::Base
   belongs_to :formulariocategoria
   belongs_to :formulariotipo
   belongs_to :entidade
-  has_many :cadastros
-  has_many :itensformularios
-  has_many :ajudas, :as=>:ajudavel
-  has_many :cadastropublicos
+  has_many :cadastros, :dependent => :destroy
+  has_many :itensformularios, :dependent => :destroy
+  has_many :ajudas, :as=>:ajudavel, :dependent => :destroy
+  has_many :cadastropublicos, :dependent => :destroy
 
   validates_presence_of :formulariocategoria_id
   validates_presence_of :formulariotipo_id

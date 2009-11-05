@@ -22,7 +22,7 @@ class Itensformulario < ActiveRecord::Base
 
   after_create :apos_criar_item
   before_create :add_posicao
-  before_destroy :remover_posicao
+  before_destroy :remover_posicao, :remover_filtro_em_referencia
 
   def validar_opcoes
     vo = eval("#{self.componente.camelize}EcmBase.new")
@@ -104,5 +104,16 @@ class Itensformulario < ActiveRecord::Base
 			end
    	end
  	end
+
+  def remover_filtro_em_referencia
+    formularios = Formulario.da_entidade(self.entidade_id).all
+    formularios.each do |f|
+      f.itensformularios.each do |form_item|
+        it = eval("#{form_item.componente.camelize}EcmBase.new")
+        it.remover_filtro_em_referencia(form_item, self)
+      end
+    end
+  end
+
 end
 

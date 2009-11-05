@@ -85,6 +85,13 @@ class Ecm::ItensFormulariosController < ApplicationController
   def destroy
     @formulario = Formulario.find(params[:formulario_id])
     @form_item = Itensformulario.find(params[:id])
+    if @form_item.destroy
+      flash[:notice] = "Item Excluido com Sucesso!"
+      redirect_to ecm_formulario_itens_formularios_path(@formulario)
+    else
+      flash[:notice] = "Item Excluido com Sucesso!"
+      redirect_to ecm_formulario_itens_formulario_path(@formulario, @form_item)
+    end
   end
 end
 

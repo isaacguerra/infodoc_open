@@ -34,5 +34,12 @@ class Ecm::CategoriasController < ApplicationController
        render :action=> :edit, :id=>@categoria
     end
   end
+
+  def destroy
+    @categoria = Formulariocategoria.find(params[:id])
+    @categoria.destroy
+    flash[:notice] = "Categoria de Formulario Excluida com Sucesso!"
+    redirect_to ecm_categorias_path
+  end
 end
 
