@@ -34,7 +34,7 @@
         <div id="status">
           <div id="avatar">
             <% if @sessao_usuario.usuario.avatar_file_name %>
-              <%= image_tag @sessao_usuario.usuario.avatar.url, :size=>"50x50" %>
+              <%= image_tag @sessao_usuario.usuario.avatar.url %>
             <% else %>
               <%= image_tag "user.png" %>
             <% end %>

@@ -322,7 +322,7 @@ AVATAR*/
                                      margin-top:10px;
                                    }
 
-#avatar img                        { margin:8% 8%; }
+#avatar img                        { margin:8% 8%; height:80%; }
 
 #status #dados_perfil              { font-family:"sans serif"; font-size:0.9em; float:left; margin-top:10px;margin-right:15px;}
 #status #menu_perfil               { float:right;}
@@ -427,10 +427,12 @@ AVATAR*/
 
                             font-size:0.8em;
                             margin:0;
+
                             padding: 4px 0px;
                             text-align:left;              /* Item listado */
                             padding-left: 30px;
                             width:auto;
+                            height:1em;
                             border-left:1px solid #dad4db;
                             border-bottom: 1px solid #F1E5F4;
                             }
@@ -461,6 +463,7 @@ AVATAR*/
                              padding-left: 30px;             /*Titulo do Item*/
                              font-weight:bold;
                              width:auto;
+                             
                              border-bottom: 1px solid #F1E5F4;
                              
                              
@@ -1594,8 +1597,8 @@ div#com_blogs_path a              { width:25%; margin-right:5px; }
                                   { font-size:0.8em; color:#CCCCCC; }
 
 .avatar                           {
-                                     width:48px; 
-                                     height:48px;
+                                     width:50px; 
+                                     height:50px;
                                      float:left; 
                                      background-image:url("/theme/violet/images/perfilbg2.png"); 
                                      margin:2px 2px;

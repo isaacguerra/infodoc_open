@@ -128,13 +128,14 @@ h3                                  { color:black; margin:0px; }
 #menu_nav ul li b { margin:0; color:#7a7272; }
 
 #menu_nav ul li a                   { 
+                                      
                                       margin:0;
                                       height:25px;
                                       text-decoration: none;
                                       padding:6px 5px 0px 10px;
                                       display: block;
                                       width:auto;
-                                      min-width: 160px; /*width of menu (not including side paddings)*/
+                                      min-width: 50px; /*width of menu (not including side paddings)*/
                                       text-decoration: none;
 
                                       padding-left:20px;
@@ -197,9 +198,9 @@ h3                                  { color:black; margin:0px; }
                                     }
 
 .rightarrowpointer                  { /*CSS for "right" arrow image added to drop down menu items*/
-                                        position: absolute;
+                                        position: none; 
                                         padding-top: 3px;
-                                        left: 100px;
+                                        right: 100px;
                                         border: 0;
                                     }
 
@@ -347,7 +348,7 @@ input.enviar                          {
                                      margin:0 15px;
                                      margin-top:10px;
                                    }
-#avatar img                        { margin:8% 8%; }
+#avatar img                        { margin:8% 8%; height:80%; }
 
 #status #dados_perfil              { font-family:"sans serif"; font-size:0.9em; float:left; margin-top:10px;margin-right:15px;}
 #status #menu_perfil               { float:right;}
@@ -1014,7 +1015,7 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
                               font-size: 0.8em;
                               margin:3px 6px;
                               margin-left:2px;
-                              width:98.7%;
+                              width:98%;
                               float:left;
                               outline:1px solid #E8F2F4;
                               border: 2px solid #C1D9E3;
@@ -1024,7 +1025,7 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
 
 #busca b,#busca p           { color:#205C7A; font-weight:normal; margin:5px 5px; }
 
-#busca input[type=radio] { background-color: #C1D9E3; height:200px; }
+#busca input[type=radio] { background-color: #C1D9E3;}
 
 #busca input[type=submit] { float:none; }
 
@@ -1611,8 +1612,8 @@ div#com_blogs_path a              { width:25%; margin-right:5px; }
                                   { font-size:0.8em; color:#CCCCCC; }
 
 .avatar                           {
-                                     width:48px; 
-                                     height:48px;
+                                     width:50px; 
+                                     height:50px;
                                      float:left; 
                                      background-image:url("/theme/aqua2/images/perfilbg2.png"); 
                                      margin:2px 2px;

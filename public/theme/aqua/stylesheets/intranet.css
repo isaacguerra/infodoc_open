@@ -15,7 +15,7 @@ td                                  { font-size:0.9em;
 
 table                               {  margin-bottom:0; }
 
-form                                { margin:0; }               
+form                                { margin:0; padding:0; }               
       
 h3                                  { color:black; margin:0px; }
 #listar tr:hover                    { background:#FAF5DC; }
@@ -317,7 +317,7 @@ input.enviar                          {
                                      margin:0 15px;
                                      margin-top:10px;
                                    }
-#avatar img                        { margin:8% 8%; }
+#avatar img                        { margin:8% 8%; height:80%; }
 
 #status #dados_perfil              { font-family:"sans serif"; font-size:0.9em; float:left; margin-top:10px;margin-right:15px;}
 #status #menu_perfil               { float:right;}
@@ -990,13 +990,16 @@ div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding
                               float:left;
                               outline:1px solid #E8F2F4;
                               border: 2px solid #C1D9E3;
+
                               
                             }
+
+#busca form                 { margin:0; padding:0; }
 
 
 #busca b,#busca p           { color:#205C7A; font-weight:normal; margin:5px 5px; }
 
-#busca input[type=radio] { background-color: #C1D9E3; height:200px; }
+#busca input[type=radio] { background-color: #C1D9E3;}
 
 #busca input[type=submit] { float:none; }
 
@@ -1583,8 +1586,8 @@ div#com_blogs_path a              { width:25%; margin-right:5px; }
                                   { font-size:0.8em; color:#b0bec1; }
 
 .avatar                           {
-                                     width:48px; 
-                                     height:48px;
+                                     width:50px; 
+                                     height:50px;
                                      float:left; 
                                      background-image:url("/theme/aqua/images/perfilbg2.png"); 
                                      margin:2px 2px;
