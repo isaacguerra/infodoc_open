@@ -155,9 +155,9 @@ module ReferenciaEcmHelper
       end
     end
     unless tudo
-      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo", :conditions=>["cadastro_id in (?)", res]).collect {|i| [i.conteudo, i.cadastro_id]}
+      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo", :conditions=>["cadastro_id in (?)", res], :order=>"conteudo").collect {|i| [i.conteudo, i.cadastro_id]}
     else
-      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo").collect {|i| [i.conteudo, i.cadastro_id]}
+      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo", :order=>"conteudo").collect {|i| [i.conteudo, i.cadastro_id]}
     end
     view.concat(link_to "+", new_ecm_formulario_cadastro_path(formulario)) if formulario.permissao(@sessao_usuario.usuario) > 1
     unless params
@@ -199,9 +199,9 @@ module ReferenciaEcmHelper
       end
     end
     unless tudo
-      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo", :conditions=>["cadastro_id in (?)", res]).collect {|i| [i.conteudo, i.cadastro_id]}
+      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo", :conditions=>["cadastro_id in (?)", res], :order=>"conteudo").collect {|i| [i.conteudo, i.cadastro_id]}
     else
-      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo").collect {|i| [i.conteudo, i.cadastro_id]}
+      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo", :order=>"conteudo").collect {|i| [i.conteudo, i.cadastro_id]}
     end
 
     view.concat(link_to "+", new_ecm_formulario_cadastro_path(formulario)) if formulario.permissao(@sessao_usuario.usuario) > 1
@@ -234,9 +234,9 @@ module ReferenciaEcmHelper
       end
     end
     unless tudo
-      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo", :conditions=>["cadastro_id in (?)", res]).collect {|i| [i.conteudo, i.cadastro_id]}
+      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo", :conditions=>["cadastro_id in (?)", res], :order=>"conteudo").collect {|i| [i.conteudo, i.cadastro_id]}
     else
-      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo").collect {|i| [i.conteudo, i.cadastro_id]}
+      cadastro_itens = EcmItemTexto.do_formulario(formulario.id).do_itens_formulario(formulario.principal_id).find(:all, :select=>"cadastro_id, conteudo", :order=>"conteudo").collect {|i| [i.conteudo, i.cadastro_id]}
     end
     view.concat(select :cadastro, "item_#{form_item.id}", cadastro_itens)
     return view
