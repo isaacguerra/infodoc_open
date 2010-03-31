@@ -1,0 +1,17 @@
+<table id="listar">
+  </tr>
+    <th class="titulo_lista">Data</th>
+    <th class="titulo_lista">Formulario</th>
+    <th class="titulo_lista">Identificador do Cadastro</th>
+    <th class="titulo_lista">Descrição</th>
+  </tr>
+    <% @auditorias.each do |auditoria| %>
+    <tr>
+      <td class="itens_index"><%= auditoria.created_at.to_s_br %></td>
+      <td class="itens_index"><%= auditoria.formulario.titulo %></td>
+      <td class="itens_index"><%= auditoria.cadastro_id %></td>
+      <td class="itens_index"><%= auditoria.descricao %></td>
+    </tr>
+	  <% end %>
+</table>
+

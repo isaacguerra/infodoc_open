@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
     core.resources :admingrupos, :has_many=>:gruposistemas
     core.resources :admingrupos, :has_many=>:grupousuarios
     core.resources :adminusuarios, :has_many=>:adminmudarsenhas
+    core.resources :adminusuarios, :has_many=>:auditorias
     core.resources :perfil
     core.resources :perfilentidades
     core.resources :entidades, :has_many=>:paginaentidades
@@ -23,9 +24,11 @@ ActionController::Routing::Routes.draw do |map|
     ecm.resources :formularios, :has_many=>:ajudas_formularios
     ecm.resources :formularios, :has_many=>:publicar_formularios
     ecm.resources :formularios, :has_many=>:cadastros
+    ecm.resources :formularios, :has_many=>:formauditorias
     ecm.resources :cadastros, :has_many=>:comentarios
     ecm.resources :cadastros, :has_many=>:artefatos
     ecm.resources :cadastros, :has_many=>:relacionados
+    ecm.resources :cadastros, :has_many=>:auditorias
   end
 
   map.namespace :page do |page|

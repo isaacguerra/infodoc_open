@@ -1,5 +1,5 @@
 class Ecm::PublicarFormulariosController < ApplicationController
-  skip_filter :autorizado
+  skip_before_filter :autorizado
 
   def index
     @formulario = Formulario.find(params[:formulario_id])

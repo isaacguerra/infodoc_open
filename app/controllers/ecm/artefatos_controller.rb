@@ -1,4 +1,6 @@
 class Ecm::ArtefatosController < ApplicationController
+  skip_before_filter :autorizado
+
   def index
     @cadastro = Cadastro.find(params[:cadastro_id])
     @new_form = Formulario.find(:all, :conditions=>["formulariotipo_id = 2 and formulariocategoria_id = ?", @cadastro.formulariocategoria_id]).collect {|f| [f.titulo, f.id] if f.funcional}.compact

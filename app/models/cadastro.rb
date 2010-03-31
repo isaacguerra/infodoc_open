@@ -4,6 +4,8 @@ class Cadastro < ActiveRecord::Base
   has_many :ecm_item_texto_longos
   has_many :comentarios, :as=>:comentavel
   has_one :artefato
+  has_many :auditoriacadastros
+
 
   acts_as_tree
 
@@ -46,14 +48,20 @@ class Cadastro < ActiveRecord::Base
   def salvar_itens(cadastro_itens)
     self.formulario.itensformularios.each do |form_item|
       cm = eval("#{form_item.itenstipo.componente.camelize}EcmBase.new")
-      cm.save(self, form_item, cadastro_itens)
+      unless cm.save(self, form_item, cadastro_itens)
+        raise ActiveRecord::Rollback
+      end
     end
   end
 
   def update_itens(cadastro_itens)
-    self.formulario.itensformularios.each do |form_item|
-      cm = eval("#{form_item.itenstipo.componente.camelize}EcmBase.new")
-      cm.update(self, form_item, cadastro_itens)
+    Cadastro.transaction do
+      self.formulario.itensformularios.each do |form_item|
+        cm = eval("#{form_item.itenstipo.componente.camelize}EcmBase.new")
+        unless cm.update(self, form_item, cadastro_itens)
+          raise ActiveRecord::Rollback
+        end
+      end
     end
   end
 
@@ -69,7 +77,9 @@ class Cadastro < ActiveRecord::Base
   def antes_de_deletar
     self.formulario.itensformularios.each do |form_item|
       cm = eval("#{form_item.itenstipo.componente.camelize}EcmBase.new")
-      cm.deleta_cadastro_item(form_item, self)
+      unless cm.deleta_cadastro_item(form_item, self)
+        raise ActiveRecord::Rollback
+      end
     end
   end
 end

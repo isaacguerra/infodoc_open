@@ -1,4 +1,6 @@
 class Ecm::PrincipalFormulariosController < ApplicationController
+  skip_before_filter :autorizado
+
   def index
     @formulario = Formulario.find(params[:formulario_id])
     @itens = Itensformulario.do_formulario(params[:formulario_id]).do_tipo("texto").find(:all)

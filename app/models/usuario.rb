@@ -5,6 +5,7 @@ class Usuario < ActiveRecord::Base
     has_many :grupos, :through => :grupousuarios
     has_many :blogs
     has_many :usuario_blogs
+    has_many :auditoriacadastros
 
     has_attached_file :avatar
 

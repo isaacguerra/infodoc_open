@@ -1,4 +1,6 @@
 class Ecm::ItensFormulariosController < ApplicationController
+  skip_before_filter :autorizado
+
   def index
     @formulario = Formulario.find(params[:formulario_id])
     @form_itens = Itensformulario.do_formulario(params[:formulario_id]).find(:all, :order=>"posicao")

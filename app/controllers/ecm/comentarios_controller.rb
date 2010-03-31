@@ -1,4 +1,6 @@
 class Ecm::ComentariosController < ApplicationController
+  skip_before_filter :autorizado
+
   def index
     @cadastro = Cadastro.find(params[:cadastro_id])
     render :update do |page|

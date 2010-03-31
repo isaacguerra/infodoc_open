@@ -25,5 +25,8 @@
 
 <div id="link_voltar">
   <%= link_to 'Voltar', core_entidade_usuarios_path(@usuario.entidade) %>
+  <%= link_to_remote "Auditorias do ECM", :url=>(url_for(core_usuario_auditorias_path(@usuario))), :method=>"get" %>
+</div>
+<div id="auditorias">
 </div>
 

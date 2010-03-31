@@ -1,4 +1,6 @@
 class Ecm::PermissaoFormulariosController < ApplicationController
+  skip_before_filter :autorizado
+
   def index
     @formulario = Formulario.find(params[:formulario_id])
     @gd = Grupoformulario.do_formulario(params[:formulario_id])

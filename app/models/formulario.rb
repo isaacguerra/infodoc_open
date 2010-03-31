@@ -6,6 +6,7 @@ class Formulario < ActiveRecord::Base
   has_many :itensformularios, :dependent => :destroy
   has_many :ajudas, :as=>:ajudavel, :dependent => :destroy
   has_many :cadastropublicos, :dependent => :destroy
+  has_many :auditoriacadastros
 
   validates_presence_of :formulariocategoria_id
   validates_presence_of :formulariotipo_id

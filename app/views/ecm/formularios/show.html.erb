@@ -1,7 +1,7 @@
 <div id="barra_titulo">
   <h3 class="titulo_show">Formulario</h3>
   <div class="delete"><%= link_to 'Excluir', ecm_categoria_formulario_path(@categoria, @formulario), :method=>:delete, :confirm=>"Tem certeza da Exclusão do Formulário?" %></div>
-  <div class="edit"><%= link_to 'Editar', edit_ecm_categoria_formulario_path(@categoria, @formulario) %></div>  
+  <div class="edit"><%= link_to 'Editar', edit_ecm_categoria_formulario_path(@categoria, @formulario) %></div>
 </div>
 
 <table id="listar">
@@ -21,5 +21,8 @@
 
 <div id="link_voltar">
   <%= link_to 'Voltar', ecm_categoria_formularios_path(@categoria) %>
+  <%= link_to_remote "Auditorias de Cadastros", :url=>(url_for(ecm_formulario_formauditorias_path(@formulario))), :method=>"get" %>
+</div>
+<div id="auditorias">
 </div>
 

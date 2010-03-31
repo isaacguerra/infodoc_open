@@ -91,12 +91,12 @@ class Core::InstallController < ApplicationController
     @log << "#ID do Categoria de Formularios - #{ecmcategoria.id}\n"
     ecmformulario = Sistema.create(:nome=>"Formularios", :descricao=>"Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::FormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
     @log << "#ID do Formularios - #{ecmformulario.id}\n"
-    ecmitensformulario = Sistema.create(:nome=>"Itens do Formularios", :descricao=>"Itens do Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::ItensFormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
-    @log << "#ID do Itens Formularios - #{ecmitensformulario.id}\n"
-    ecmpermissaoformulario = Sistema.create(:nome=>"Permissoes do Formularios", :descricao=>"Permissoes do Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::PermissaoFormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
-    @log << "#ID do Itens Formularios - #{ecmpermissaoformulario.id}\n"
-    ecmprincipalformulario = Sistema.create(:nome=>"Iten Principal Formularios", :descricao=>"Iten Principal Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::PrincipalFormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
-    @log << "#ID do Itens Formularios - #{ecmprincipalformulario.id}\n"
+    #ecmitensformulario = Sistema.create(:nome=>"Itens do Formularios", :descricao=>"Itens do Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::ItensFormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
+    #@log << "#ID do Itens Formularios - #{ecmitensformulario.id}\n"
+    #ecmpermissaoformulario = Sistema.create(:nome=>"Permissoes do Formularios", :descricao=>"Permissoes do Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::PermissaoFormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
+    #@log << "#ID do Itens Formularios - #{ecmpermissaoformulario.id}\n"
+    #ecmprincipalformulario = Sistema.create(:nome=>"Iten Principal Formularios", :descricao=>"Iten Principal Formularios", :rota=>"/ecm/categorias", :controle=>"Ecm::PrincipalFormulariosController", :menu=>false, :status=>true, :modulo_id=>mecm.id)
+    #@log << "#ID do Itens Formularios - #{ecmprincipalformulario.id}\n"
 
 
     grupoadministrador = Grupo.create(:entidade_id=>entidade.id, :nome=>"Administradores", :descricao=>"Administradores")

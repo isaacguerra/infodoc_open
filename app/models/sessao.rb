@@ -20,8 +20,8 @@ class Sessao < ActiveRecord::Base
       self.ultimo_login_ip = self.corrente_login_ip
       self.corrente_login_ip = ip
       self.ultima_data_login = self.corrente_data_login
-      self.corrente_data_login = DateTime.now
-      self.ultima_data_acesso = DateTime.now
+      self.corrente_data_login = DateTime.now-3.hours
+      self.ultima_data_acesso = DateTime.now-3.hours
       self.status = true
 
       #sistemas disponiveis
@@ -50,7 +50,7 @@ class Sessao < ActiveRecord::Base
     end
 
     def acesso
-      self.ultima_data_acesso = DateTime.now
+      self.ultima_data_acesso = DateTime.now-3.hours
       self.save
     end
 

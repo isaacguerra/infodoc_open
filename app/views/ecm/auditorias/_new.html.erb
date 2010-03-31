@@ -1,0 +1,15 @@
+<table id="listar">
+  <tr>
+    <th class="titulo_lista">Data</th>
+    <th class="titulo_lista">Usuário</th>
+    <th class="titulo_lista">Descrição</th>
+  </tr>
+  <% @auditorias.each do |auditoria| %>
+  <tr>
+    <td class="itens_index"><%= auditoria.created_at.to_s_br %></td>
+    <td class="itens_index"><%= auditoria.usuario.nome %></td>
+    <td class="itens_index"><%= auditoria.descricao %></td>
+  </tr>
+	<% end %>
+</table>
+

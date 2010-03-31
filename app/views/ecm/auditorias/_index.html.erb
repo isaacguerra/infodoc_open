@@ -1,0 +1,29 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Auditorias do Cadastros</h3>
+  <div  class="hide_auditoria">
+    <%= link_to_remote "Esconder Auditorias", :url=>{:controller=>"/ecm/auditorias", :action=>"clean"}, :method=>"get" %>
+  </div>
+  <% form_remote_tag :url=>(url_for(new_ecm_cadastro_auditoria_path(@cadastro))), :method=>"get" do -%>
+    Filtrar pelo Usuario <%= select_tag :usuario_id, options_for_select(@usuarios) %> <%= check_box_tag :filtro_nome %><br>
+    Filtrar pelo Periodo <%= date_select("post", "d_i", :start_year => 1995) %> e <%= date_select("post", "d_f", :start_year => 1995) %><%= check_box_tag :filtro_periodo %><br>
+    Filtrar pela Ação <%= select_tag :acao, options_for_select([["Criação","create"], ["Alteração","update"], ["Visualização","show"]]) %> <%= check_box_tag :filtro_acao %><br>
+    <%= submit_tag 'Exibir' %><br>
+  <% end -%>
+</div>
+<div id="exibir_auditorias">
+  <table id="listar">
+  </tr>
+    <th class="titulo_lista">Data</th>
+    <th class="titulo_lista">Usuário</th>
+    <th class="titulo_lista">Descrição</th>
+  </tr>
+    <% @auditorias.each do |auditoria| %>
+    <tr>
+      <td class="itens_index"><%= auditoria.created_at.to_s_br %></td>
+      <td class="itens_index"><%= auditoria.usuario.nome %></td>
+      <td class="itens_index"><%= auditoria.descricao %></td>
+    </tr>
+	  <% end %>
+   </table>
+</div>
+

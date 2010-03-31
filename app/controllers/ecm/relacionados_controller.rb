@@ -1,5 +1,7 @@
 class Ecm::RelacionadosController < ApplicationController
-   def index
+  skip_before_filter :autorizado
+
+  def index
     @cadastro = Cadastro.find(params[:cadastro_id])
     @form_rel = []
     Itensformulario.da_entidade(@sessao_usuario.entidade_id).do_tipo("referencia").find(:all).each do |i|
