@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20100331203150) do
     t.integer  "formulario_id"
     t.integer  "artefato_id"
     t.string   "acao"
-    t.string   "descricao"
+    t.text     "descricao"
     t.datetime "created_at"
   end
 

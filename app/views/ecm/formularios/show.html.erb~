@@ -21,9 +21,7 @@
 
 <div id="link_voltar">
   <%= link_to 'Voltar', ecm_categoria_formularios_path(@categoria) %>
-  <div id="show_actions">  
-    <%= link_to_remote "Auditorias de Cadastros", :url=>(url_for(ecm_formulario_formauditorias_path(@formulario))), :method=>"get" %>
-  </div>
+  <%= link_to_remote "Auditorias de Cadastros", :url=>(url_for(ecm_formulario_formauditorias_path(@formulario))), :method=>"get" %>
 </div>
 <div id="auditorias">
 </div>
