@@ -1,11 +1,8 @@
-/*********************************** PADROES TAGS ********************************************************/
-
 body                                {  
                                        margin:0;
                                        padding:0;
                                        font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
                                     }
-
 a                                   { color:#000000; text-decoration:none; }
 
 a:hover                             { text-decoration:underline; }
@@ -23,10 +20,7 @@ form                                { margin:0; padding: 0;}
 h3                                  { color:black; margin:0px; }
 
 #listar tr:hover                    { background:#FAF5DC; }
-#listar  #busca_wiki { background-color:#FFFFFF; }
-
-/**************************************    END  **********************************************************/
-
+#listar  #busca_wiki { background-color:#FFFFFF; }    
 
 
 
@@ -50,7 +44,7 @@ ESTRUTURAS PRINCIPAIS
                                        margin:0;
                                        width:100%;
                                        height:100px;
-                                       background-image: url("/theme/infodoc/images/fil1.png");
+                                       background-image: url("/theme/blue-orange/images/fil1.png");
                                        padding-bottom: 10px;
                                        display: inline-block;
 
@@ -65,7 +59,6 @@ ESTRUTURAS PRINCIPAIS
                                         border : 1px solid #ffffff;
                                         float:left;
                                         padding: 0px;
-
                                         min-height:500px;
                                         height:auto;
                                         margin:0 6px;
@@ -85,14 +78,14 @@ ESTRUTURAS PRINCIPAIS
                                         background-color:#ffffff;
                                         min-height:50px;
                                         border-top: 1px solid #EDEDED;
-                                        border-bottom:5px solid #8C1C1C;
-                                        background-image: url("/theme/infodoc/images/img09.gif");
+                                        border-bottom:5px solid #CF360D;
+                                        background-image: url("/theme/blue-orange/images/img09.gif");
 	                                    background-repeat: repeat-x;
 
                                     }
 #licensa                            { width:60%; float:left; margin:0 5%; margin-left:20%; height:auto; }
 
-#rodape a                           {  color:#8C1C1C; }
+#rodape a                           {  color:#CF360D; }
 #rodape img                         {  border:0; vertical-align:top; height:16px;      }
 
 #rodape p                           { float:left; margin:0; }
@@ -101,8 +94,7 @@ ESTRUTURAS PRINCIPAIS
 
 
 /******************************************************************************************************/
-
-
+                                
 
   /***************************************************************************************************/
  /******************************************* MENU DROPDOWN *****************************************/
@@ -118,9 +110,9 @@ ESTRUTURAS PRINCIPAIS
                                       text-align: left;
                                       background-color:#ffffff;
                                       width:100%;
-                                      border-top: 5px solid #8c1c1c;
+                                      border-top: 5px solid #CF360D;
                                       border-bottom: 1px solid #DBDBDB;
-                                      background-image: url("/theme/infodoc/images/img09.gif");
+                                      background-image: url("/theme/blue-orange/images/img09.gif");
                                       background-repeat: repeat-x;
                                       clear:both;
 
@@ -136,14 +128,14 @@ ESTRUTURAS PRINCIPAIS
                                       height:25px;
                                       text-decoration: none;
                                       padding:6px 5px 0px 10px;
-                                      color: #000000;
-                                      border-left: 1px solid #FFFFFF;
-                                      border-right: 1px solid #CCCCCC;
+                                      color: #ffffff;
+                                      border-left: 1px solid #91d5d7;
+                                      border-right: 1px solid #6DA2A4;
 
 
                                     }
 
-#menu_nav ul li a:hover             { outline: 1px solid #EDEDED;  background-color: #8A4646; color:#FFFFFF;  }
+#menu_nav ul li a:hover             { outline: 1px solid #EDEDED;  background-color: #d77960; color:#FFFFFF;  }
 
 .mattblackmenu ul                   {
 
@@ -191,20 +183,21 @@ ESTRUTURAS PRINCIPAIS
                                       display: block;
                                       width:auto;
                                       min-width: 160px; /*width of menu (not including side paddings)*/
-                                      background-color:#F0F0F0;
+                                      background-color:#78ade0 ;
                                       text-decoration: none;
+                                      color:#FFFFFF;
                                       padding: 8px 4px;
                                       padding-left:36px;
-                                      border-bottom: 1px solid #CCCCCC;
-                                      border-left: 1px solid #DBDBDB;
-                                      border-right: 1px solid #FFFFFF;
+                                      border-bottom: 1px solid #6DA2A4;
+                                      border-left: 1px solid #91d5d7;
+                                      border-right: 1px solid #6DA2A4;
                                     }
 
 * html .ddsubmenustyle li           { /*IE6 CSS hack*/ display: inline-block; }
 
-.ddsubmenustyle li a                { background-image: url("/theme/infodoc/images/fundo_menu.png"); background-repeat:no-repeat;}
+.ddsubmenustyle li a                { background-image: url("/theme/blue-orange/images/fundo_menu.png"); background-repeat:no-repeat;}
 
-.ddsubmenustyle li a:hover          { background-image: url("/theme/infodoc/images/fundo_menu2.png"); background-repeat:no-repeat;background-color: #8A4646; color:#FFFFFF; }
+.ddsubmenustyle li a:hover          { background-image: url("/theme/blue-orange/images/fundo_menu2.png"); background-repeat:no-repeat;background-color: #d77960; color:#FFFFFF; }
 
 
 
@@ -236,46 +229,7 @@ ESTRUTURAS PRINCIPAIS
 
 
 
- /********************************** FIM DO MENU DROP-DOWN ****************************************/
-
-
-
-
-
-
-
-/**************************************************************************************************/
-/************************************** LOGIN *****************************************************/
-/**************************************************************************************************/
-
-
-input#login_usuario,input#login_senha { margin-bottom: 4px; border:1px solid #BFBFBF; }
-
-#form_login                           { background-color:#E8E8E8;  border: 1px solid #C4C4C4;
-                                        text-align: center; width:30%; height:100px;
-                                        padding-top: 20px; margin:20px auto 50px auto;
-                                      }
-
-.form_login                           {
-                                        margin-left:31%;
-                                        margin-bottom:20px
-                                        text-align:center;
-                                        padding: 0 5px 0 5px;
-
-                                      }
-
-#form_login form                      {
-                                        margin:0;
-                                      }
-
-input.enviar                          {
-
-                                        margin-top: 5px
-
-                                      }
-
-
-/**************************************************************************************************/
+ /********************************** FIM DO MENU DROP-DOWN ****************************************/                                    
 
 
 /*************************************************************************************************/
@@ -287,7 +241,7 @@ input.enviar                          {
                                       font-size: 75%;
                                       font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura ;
                                       float:right;
-                                      background-image: url("/theme/infodoc/images/fil2.jpg");
+                                      background-image: url("/theme/blue-orange/images/fil2.jpg");
                                       background-repeat: repeat-x;
                                       background-position: top;
                                       width :35%;
@@ -295,8 +249,8 @@ input.enviar                          {
                                       margin-right: 14px;
                                       margin-top:10px;
                                       padding: 4px 5px 0px 5px;
-                                      border: 0px solid #E8E3E3;
-                                      border-bottom: 1px solid #DBDBDB;
+                                      border: 0px solid #CF360D;
+                                      border-bottom: 1px solid #fdd2c6;
                                       clear:right;
                                    }
                                    
@@ -304,7 +258,7 @@ input.enviar                          {
 
 #logout                            { width:85px; text-align:center; background-color:#ffffff; }
 
-#status b                          { color:#8C1C1C; }
+#status b                          { color:#CF360D; }
 
 #status .titulo_lista              { padding:1px; padding-left:4px; }
 
@@ -315,7 +269,7 @@ AVATAR*/
                                      width:60px; 
                                      height:60px;
                                      float:left; 
-                                     background-image:url("/theme/infodoc/images/perfilbg.png"); 
+                                     background-image:url("/theme/blue-orange/images/perfilbg.png"); 
                                      margin:0 15px;
                                      margin-top:10px;
                                    }
@@ -326,12 +280,12 @@ AVATAR*/
 #status #menu_perfil               { float:right;}
 #status #menu_perfil ul            { margin:0; margin-top:5px;}  
 #status #menu_perfil ul li         { list-style:none; display:inline; margin:0;}
-#status #menu_perfil ul li a       { margin:0; color:#8c1c1c; font-weight:bold;padding:2px; font-family:"sans serif"; font-size:0.7em;}
+#status #menu_perfil ul li a       { margin:0; color:#CF360D; font-weight:bold;padding:2px; font-family:"sans serif"; font-size:0.7em;}
 #status #menu_perfil ul li a:hover { background-color: #dbdbdb; text-decoration:none;}
 
  /*===================================
   */
-  
+
   
 /**********************************************************************************************************/
 /************************************** CONTEÚDO INTRANET **************************************************/
@@ -350,35 +304,33 @@ AVATAR*/
                                 min-height:30px;
                                 clear:both;
                                 margin:3px 0 3px 1px;
-                                background-image: url("/theme/infodoc/images/fil4.jpg");
+                                background-image: url("/theme/blue-orange/images/fil4.jpg");
                                 background-repeat: repeat-x;
-                                border: 1px solid #DBDBDB;
+                                border: 1px solid #EDEDED;
                                 border-bottom:1px solid #EDEDED;
-                                border-left: 1px solid #CCCCCC;
+                                border-left: 1px solid #EDEDED;
                                 border-right: 1px solid #EDEDED;
 
                              }
 #barra_titulo                { min-height: 54px; }
-/* **************************************************************************************************** */
-
-
+/* **************************************************************************************************** */ 
 
 
 /***************************** CABECALHO h3 COM SIMBOLO PARA AS ACOES DO CRUD ***************************/
 
-.titulo_index               { background-image: url("/theme/infodoc/images/view_tree.png");}
+.titulo_index               { background-image: url("/theme/blue-orange/images/view_tree.png");}
 
-.titulo_show                { background-image: url("/theme/infodoc/images/view_choose.png");}
+.titulo_show                { background-image: url("/theme/blue-orange/images/view_choose.png");}
 
-.titulo_new                 { background-image: url("/theme/infodoc/images/filenew.png"); }
+.titulo_new                 { background-image: url("/theme/blue-orange/images/filenew.png"); }
 
-.titulo_edit                { background-image: url("/theme/infodoc/images/edit.png"); }
+.titulo_edit                { background-image: url("/theme/blue-orange/images/edit.png"); }
 
 .titulo_index_infowiki      { background-image: none; }
 
 #comunicacao #barra_titulo .titulo_index_infowiki      { background-image: none; }
 
-.titulo_cat_infowiki        { background-image: url("/theme/infodoc/images/categoria.png") }
+.titulo_cat_infowiki        { background-image: url("/theme/blue-orange/images/categoria.png") }
 
 .titulo_index,
 .titulo_show,
@@ -395,11 +347,11 @@ AVATAR*/
                              margin-top: 1%;
                              background-position:left;
                              background-repeat:no-repeat;
+                             color:#CF360D;
 
                             }
 
 /* ***************************************   END    ************************************************* */
-
 
 #listar,
 #wiki,
@@ -443,7 +395,7 @@ AVATAR*/
 
 .titulo_lista,
 .titulo_curto               {
-                              background-image:url("/theme/infodoc/images/fil4.jpg");
+                              background-image:url("/theme/blue-orange/images/fil4.jpg");
                               background-repeat: repeat-x;
                               border-left: 1px solid #CCCCCC;
                               border-right: 1px solid #EDEDED;
@@ -476,8 +428,9 @@ AVATAR*/
                              { float:left; text-decoration:none; width:100%;  height:100%; }
 
 .item_index a,
-.item_index a:hover          { font-weight: bold; color:#8C1C1C; }
+.item_index a:hover          { font-weight: bold; color:#CF360D; }
 form table#listar td         { padding:5px; border-left: 1px solid #EDEDED; border-bottom: 1px  solid #EDEDED; }
+
 
 /*
 BOTOES==============================*/
@@ -492,7 +445,7 @@ BOTOES==============================*/
                                float:right;
                                color: #ffffff;
                                font-weight:bold;
-                               background-color:#8C1C1C;
+                               background-color:#CF360D;
                                border:0;
                             }
 
@@ -522,9 +475,6 @@ BOTOES==============================*/
 /* ===================================================
 */
 
-
-
-
 /*========================   WIKI
 */
 
@@ -538,8 +488,8 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
                                text-align:left; 
                                vertical-align:top; 
                                font-size:1.8em; 
-                               color:#8c1c1c;
-                               background-image: url("/theme/infodoc/images/img09.gif");
+                               color:#CF360D;
+                               background-image: url("/theme/blue-orange/images/fil4.jpg");
                                background-repeat: repeat-x;
                                padding-left:15px;
                                border-left: 1px solid #DBDBDB;
@@ -547,7 +497,7 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
                              } 
 #wiki .titulo_categoria      { 
                                text-align: left;
-                               background-image: url("/theme/infodoc/images/img09.gif");
+                               background-image: url("/theme/blue-orange/images/fil4.jpg");
                                background-repeat: repeat-x;
                                padding-left:15px;
                                border-left: 1px solid #DBDBDB;
@@ -562,7 +512,7 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
 #wiki h3                     { margin:0; width:60%; }
 #wiki #busca_wiki #resultado_busca
                              { width: 70%; margin-left:1%; }
-#wiki .titulo_categoria h3   { color: #8c1c1c; margin-left:20px; }
+#wiki .titulo_categoria h3   { color: #CF360D; margin-left:20px; }
 #wiki .wiki_texto            { float:left;width:85%; font-family:Arial,Verdana,sans-serif; font-size:12px; }
 #wiki #categorias div.formulario{ 
                                   width: auto; 
@@ -575,7 +525,6 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
                             
 /*=====================================================
 */
-                         
 
 /* ===================================================
 # BOTOES DE NAVEGACAO*/    
@@ -604,14 +553,13 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
 .hide_artefato a,
 .hide_historico a,
 .hide_relacionamento a,
-.hide_auditoria a,
 
 .edit a                     {
                                
-                               background-image: url("/theme/infodoc/images/add_entidade.png");
+                               background-image: url("/theme/blue-orange/images/add_entidade.png");
                                background-repeat:no-repeat;
                                background-position: center top;
-                               color: #8C1C1C;
+                               color: #CF360D;
                                font-size:0.7em;
                                font-weight:normal;
                                width:auto;
@@ -629,62 +577,62 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
 
                             }
                             
-.edit a                     { background-image: url("/theme/infodoc/images/editar.png"); }
+.edit a                     { background-image: url("/theme/blue-orange/images/editar.png"); }
 
-.usuarios_index a           { background-image: url("/theme/infodoc/images/usuario.png"); }
+.usuarios_index a           { background-image: url("/theme/blue-orange/images/usuario.png"); }
 
-.abilita a                  { background-image: url("/theme/infodoc/images/des-habilita.png"); }
+.abilita a                  { background-image: url("/theme/blue-orange/images/des-habilita.png"); }
 
-.delete a                   { background-image: url("/theme/infodoc/images/delete.png"); }
+.delete a                   { background-image: url("/theme/blue-orange/images/delete.png"); }
 
-.new_grupo a                { background-image: url("/theme/infodoc/images/add_grupo.png"); }
+.new_grupo a                { background-image: url("/theme/blue-orange/images/add_grupo.png"); }
 
-.new_usuario a              { background-image: url("/theme/infodoc/images/add_usuario.png"); }
+.new_usuario a              { background-image: url("/theme/blue-orange/images/add_usuario.png"); }
 
-.new_modulo a               { background-image: url("/theme/infodoc/images/add_modulo.png"); }
+.new_modulo a               { background-image: url("/theme/blue-orange/images/add_modulo.png"); }
 
-.new_sistema a              { background-image: url("/theme/infodoc/images/add_sistema.png"); }
+.new_sistema a              { background-image: url("/theme/blue-orange/images/add_sistema.png"); }
 
-.new_categoria a            { background-image: url("/theme/infodoc/images/add_categoria.png"); }
+.new_categoria a            { background-image: url("/theme/blue-orange/images/add_categoria.png"); }
 
-.new_subcategoria a         { background-image: url("/theme/infodoc/images/add_sub_categoria.png"); }
+.new_subcategoria a         { background-image: url("/theme/blue-orange/images/add_sub_categoria.png"); }
 
-.new_formulario a           { background-image: url("/theme/infodoc/images/add_form.png"); }
+.new_formulario a           { background-image: url("/theme/blue-orange/images/add_form.png"); }
 
-.new_item a                 { background-image: url("/theme/infodoc/images/add_item.png"); }
+.new_item a                 { background-image: url("/theme/blue-orange/images/add_item.png"); }
 
-.novo_cadastro a            { background-image: url("/theme/infodoc/images/add_cadastro.png"); }
+.novo_cadastro a            { background-image: url("/theme/blue-orange/images/add_cadastro.png"); }
 
-.new_novo a                 { background-image: url("/theme/infodoc/images/add_novo.png"); }
+.new_novo a                 { background-image: url("/theme/blue-orange/images/add_novo.png"); }
 
-.ajuda a                    { background-image: url("/theme/infodoc/images/ajuda.png"); }
+.ajuda a                    { background-image: url("/theme/blue-orange/images/ajuda.png"); }
 
-.voltar a                   { background-image: url("/theme/infodoc/images/voltar.png"); }
+.voltar a                   { background-image: url("/theme/blue-orange/images/voltar.png"); }
 
-.new_ajuda a                { background-image: url("/theme/infodoc/images/add_ajuda.png"); }
+.new_ajuda a                { background-image: url("/theme/blue-orange/images/add_ajuda.png"); }
 
 .new_comentario a           { 
-                              background-image: url("/theme/infodoc/images/add_comentario.png");
+                              background-image: url("/theme/blue-orange/images/add_comentario.png");
                               font-size:0.7em;
                               padding-top:25px;
                              }
 
 .hide_comentario a           { 
-                                  background-image: url("/theme/infodoc/images/hide_comentario.png");
+                                  background-image: url("/theme/blue-orange/images/hide_comentario.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                              }
                              
 .hide_historico a           { 
-                                  background-image: url("/theme/infodoc/images/hide_historico.png");
+                                  background-image: url("/theme/blue-orange/images/hide_historico.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                              }
 
 .hide_artefato a                { 
-                                  background-image: url("/theme/infodoc/images/hide_artefato.png");
+                                  background-image: url("/theme/blue-orange/images/hide_artefato.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
@@ -692,22 +640,14 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
                                 }
 
 .hide_relacionamento a          { 
-                                  background-image: url("/theme/infodoc/images/hide_relacionamento.png");
+                                  background-image: url("/theme/blue-orange/images/hide_relacionamento.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                                 }
-.hide_auditoria a          { 
-                                  background-image: url("/theme/infodoc/images/hide_auditoria.png");
-                                  color:#b5b5b5;
-                                  font-size:0.7em;
-                                  padding-top:25px;
-                                  
-                                }
-
 
 #artefatos .formulario input[type=submit] { 
-                                            background-image: url("/theme/infodoc/images/add_artefato.png");
+                                            background-image: url("/theme/blue-orange/images/add_artefato.png");
                                             background-color:#FFFFFF; 
                                             border:0; 
                                             padding-top:25px; 
@@ -738,7 +678,6 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
 .hide_historico a:hover,
 .hide_artefato a:hover,
 .hide_relacionamento a:hover,
-.hide_auditoria a:hover,
 #artefatos .formulario input[type=submit]:hover,
 .edit a:hover         {
 
@@ -748,11 +687,11 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
                                background-color: #F2F2F2;
 
                             }
-#artefatos .formulario input[type=submit]:hover { color: #8C1C1C;}
+#artefatos .formulario input[type=submit]:hover { color: #CF360D;}
 
 /*=====================================
 */
-                           
+
 
 .lista_item                 {
 
@@ -762,7 +701,7 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
                                 padding-right:6px;
                                 width:10%;
                                 min-width:20.3%;
-                                background-color:#f2f2f2;
+                                background-color:#ecf3fb;
 
                                 border-top:1px solid #FFFFFF;
                                 border-bottom:1px solid #DBDBDB;
@@ -774,7 +713,7 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
 .lista_conteudo             {
 
                                 font-size:0.8em;
-                                color:#8C1C1C;
+                                color:#CF360D;
                                 padding:0;
                                 padding-left:6px;
                                 border-bottom: 1px solid #EDEDED;
@@ -788,15 +727,14 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
                                 margin:6px 0px ;
                                 width:99%;
                                 float:left;
-                                background-image:url("/theme/infodoc/images/fil6.jpg");
+                                background-image:url("/theme/blue-orange/images/fil6.jpg");
                                 border: 1px solid #DBDBDB;
 
                             }
-
 #link_voltar a              {
 
                                 font-size: 0.9em;
-                                color:#8C1C1C;
+                                color:#CF360D;
                                 font-weight:bold;
                                 text-decoration:none;
                                 padding:0;
@@ -814,7 +752,6 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
 
                             }
 
-
 .formulario td.lista_item                  {  empty-cells: show; }
 
 #listar .sobe,#listar .desce                { 
@@ -827,8 +764,9 @@ div#wiki                        { width:99.4%;  overflow:hidden;}
 
                                              
                                            }
-#listar .sobe                              { background-image: url("/theme/infodoc/images/arrow_up.png"); }
-#listar .desce                             { background-image: url("/theme/infodoc/images/arrow_down.png"); }
+#listar .sobe                              { background-image: url("/theme/blue-orange/images/arrow_up.png"); }
+#listar .desce                             { background-image: url("/theme/blue-orange/images/arrow_down.png"); }                             
+
 /*
 MENSAGENS DO SISTEMA
 ==============================================*/
@@ -846,6 +784,8 @@ MENSAGENS DO SISTEMA
                                 height:auto;
                                 background-color:#1a7629;
                             }
+#flash_notice a             { margin-left:5px; color:blue; font-size:75%;}                            
+#flash_notice a:hover       { background-color:#66a470; }  
 
 #flash_error                { background-color:#F5C4C4; }
 
@@ -879,20 +819,19 @@ FORMS
 
 .formulario select        {
                             font-size:0.9em;
-                            color:#8C1C1C;
+                            color:#CF360D;
                           }
 
-.formulario option        { background-color:#F5F5F5; color:#8C1C1C; }
+.formulario option        { background-color:#F5F5F5; color:#CF360D; }
 
 
 .formulario input[type=submit],
-#auditorias input[type=submit],
 #busca input[type=submit]           {
 
                                     float:left;
                                     color:#E0E0E0;
-                                    /* background-color:#8C1C1C; */
-                                    background-image: url("/theme/infodoc/images/fundo_botoes.png");
+                                    /* background-color:#CF360D; */
+                                    background-image: url("/theme/blue-orange/images/fundo_botoes.png");
                                     background-position:center;
                                     padding: 0 4px;
                                     text-align:center;
@@ -910,7 +849,6 @@ FORMS
                                 }
 
 .formulario input[type=submit]:hover,
-#auditorias input[type=submit]:hover,
 #busca input[type=submit]:hover { background-position:bottom; }
 .formulario .lista_conteudo     { border: 1px solid #FFFFFF }
 
@@ -920,7 +858,7 @@ input[type=password]            {
                                     padding-top:3px;
                                     padding-left:2px;
                                     width:auto;
-                                    color:#8C1C1C;
+                                    color:#CF360D;
                                     font-size:0.9em;
                                     border: 1px solid #CCCCCC;
                                     background:#F5F5F5;
@@ -941,13 +879,14 @@ textarea                        {
                                   background:#F5F5F5;
                                   padding-left:2px;
                                   margin:0;
-                                  color:#8C1C1C;
+                                  color:#CF360D;
                                   font-family: "sans serif";
                                   font-size:0.9em;
                                 }
 
 .formulario textarea:focus,
 .formulario textarea:hover      { background:#FAF5DC; }
+
 
 /*==========================
 CRIACAO DE ITENS FORMULARIO 
@@ -1040,7 +979,7 @@ FILTRO FORM
                             }
 
 
-#busca b,#busca p       { color:#8C1C1C; font-weight:normal; margin:5px 5px; }
+#busca b,#busca p       { color:#CF360D; font-weight:normal; margin:5px 5px; }
 
 #busca input[type=submit] { float:none; }
 
@@ -1054,14 +993,13 @@ FILTRO FORM
 
 #filtro_avancado br     { display: none; }
 
-
 /*
 RESULTADO DETALHADO BUSCA
 ==================================================*/
-
-#cadastros #listar b        { color: #8C1C1C;  margin-right:5px; }
-#cadastros #listar h3       { color: #8C1C1C; margin:0; display:inline; text-decoration:underline; font-size:1.2em; }
-#cadastros #listar h3 a     { color: #8C1C1C; }
+#cadastros #listar tr:hover { background:#FFFFFF; }
+#cadastros #listar b        { color: #CF360D;  margin-right:5px; }
+#cadastros #listar h3       { color: #CF360D; margin:0; display:inline; text-decoration:underline; font-size:1.2em; }
+#cadastros #listar h3 a     { color: #CF360D; }
 #cadastros #listar h3 a:hover,
 #cadastros #listar h3:hover { text-decoration:none; }
 #cadastros #listar ul       { padding:0px; }
@@ -1071,11 +1009,13 @@ RESULTADO DETALHADO BUSCA
 
 ===================================================*/
 
+
 .fechar                 { float:right; }
 
 #ajuda { float:right; background-image: url("/images/ajuda.png"); width:26px; height:28px; margin-right:12px;}
 #ajuda a {float:left;  width:100%; height:100%;}
 #ajuda a:hover{text-decoration:none; background-image:url("/images/ajuda_2.png");}
+
 
 /*==========================
 COMENTARIOS
@@ -1088,7 +1028,7 @@ COMENTARIOS
 
 #show_actions a             {
                               font-size: 1em;
-                              color:black;
+                              color:#C91C1C;
                               float:none;
                               font-weight:normal;
                               text-decoration:underline;
@@ -1138,30 +1078,25 @@ COMENTARIOS
 #comentarios #barra_titulo h3   { 
                                   font-size: 1.1em;
                                   padding-left:33px; 
-                                  background-image: url("/theme/infodoc/images/comment_write.png") ;
+                                  background-image: url("/theme/blue-orange/images/comment_write.png") ;
                                 }
 
 #artefatos #barra_titulo h3     { 
                                   font-size: 1.1em; 
                                   padding-left:32px; 
-                                  background-image: url("/theme/infodoc/images/artefato.png") ;
+                                  background-image: url("/theme/blue-orange/images/artefato.png") ;
                                 }
                                 
 #relacionados #barra_titulo h3   { 
                                   font-size: 1em; 
                                   padding-left:32px; 
-                                  background-image: url("/theme/infodoc/images/relacionamento.png") ;
+                                  background-image: url("/theme/blue-orange/images/relacionamento.png") ;
                                 }
                                                                 
 #historico #barra_titulo h3     { font-size: 1em;
                                   padding-left:32px;
-                                  background-image: url("/theme/infodoc/images/historico.png");
+                                  background-image: url("/theme/blue-orange/images/historico.png");
                                  }     
-#auditorias #barra_titulo h3   { 
-                                  font-size: 1em; 
-                                  padding-left:32px; 
-                                  background-image: url("/theme/infodoc/images/auditoria.png") ;
-                                }
     
 .titulo_comentario              { font-size:10px; background-image:none; }
 
@@ -1214,8 +1149,8 @@ COMENTARIOS
                                   float:right;
 
                                   font-weight:normal;
-                                  background-color:#8C1C1C;
-                                  border:1px solid #8C1C1C;
+                                  background-color:#CF360D;
+                                  border:1px solid #CF360D;
 
                                   }
 
@@ -1228,7 +1163,7 @@ COMENTARIOS
                                   font-weight:none;
                                   margin:0;
                                   padding:0;
-                                  background-color:#8C1C1C;
+                                  background-color:#CF360D;
                                   color:#E0E0E0;
 
                                   font-weight: bold;
@@ -1254,8 +1189,8 @@ COMENTARIOS
                                     color: #EDEDED;
                                     font-weight:bold;
                                     font-size:0.7em;
-                                    background-color:#8C1C1C;
-                                    border: 1px solid #8C1C1C;
+                                    background-color:#CF360D;
+                                    border: 1px solid #CF360D;
 
                                  }
 
@@ -1267,7 +1202,6 @@ COMENTARIOS
 
 #comentarios textarea:focus     { background-color:#FFFFFF;       }
 
-
 /*
 ARTEFATOS
 ============================================*/
@@ -1277,27 +1211,10 @@ ARTEFATOS
 
 #artefatos div.formulario     { width:63.8%; float:left; padding:0; border:0; margin:0;}
 
-#artefatos .formulario select { color:#8C1C1C; float:left; margin:1% 22px; vertical-align:middle;}
+#artefatos .formulario select { color:#CF360D; float:left; margin:1% 22px; vertical-align:middle;}
                                
 #artefatos .formulario option  {  }
-/*
-#artefatos .formulario input[type=submit]  { 
-                                            
-                                background-color:#8C1C1C;
-                                border:1px solid #8C1C1C;
-                                padding:0px 2px 0;
-                                font-size:0.6em;
-                                font-weight:bold;
-                                color:#E0E0E0;
-                                text-align:center; 
-                                float:right;
-                                height:2.6em; 
-                                margin:1px 0 0;
-                                
-                                            }
-                                            
-#artefatos .formulario input[type=submit]:hover { color:#FFFFFF }
-*/
+
 #artefatos h3.titulo_new
                                { width:98%; margin:0;padding:0;margin-top:10px; margin-bottom: 10px;
                                 background-image:none;
@@ -1309,8 +1226,8 @@ ARTEFATOS
 
 #artefatos input[type=submit]  { 
                                  margin-bottom:5px; color: #EDEDED; font-weight:bold; font-size:0.7em;
-                                 background-color:#8C1C1C;
-                                 border: 1px solid #8C1C1C;
+                                 background-color:#CF360D;
+                                 border: 1px solid #CF360D;
 
                                 }
 
@@ -1330,13 +1247,11 @@ ARTEFATOS
 #artefatos #listar .delete a:hover
                                 { background-color:#F2F2F2; }
 #artefatos #listar .download_artefato a
-                                { background-image: url("/theme/infodoc/images/download.png"); }
+                                { background-image: url("/theme/blue-orange/images/download.png"); }
 
                      
 #artefatos #listar .download_artefato a:hover
                                 { text-decoration:none; padding-top: 40px; outline:1px solid #D1D1D1; background-color:#F2F2F2;}  
-
-
 #artefatos td                   { border-bottom:1px solid #ededed;
                                   background-color: #F5F5F5; 
                                   vertical-align:bottom;padding:8px; 
@@ -1380,6 +1295,7 @@ input[type="password"]          { margin-top:0; }
 
 #artefatos ul                   { list-style:none ;}
 
+
 /*
 ========================================*/
 
@@ -1401,8 +1317,6 @@ HISTORICO
                                   padding:2px 2px;
 
                                   }
-
-
 /*
 RELACIONAMENTOS
 ============================*/
@@ -1410,7 +1324,7 @@ RELACIONAMENTOS
 
 #relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
 #relacionados form               { width:28%; margin-left:20px;float:left; }
-#relacionados select             { color:#8C1C1C;  }
+#relacionados select             { color:#CF360D;  }
 #relacionados #barra_titulo      { width:98.3%; }
 #relacionados .formulario input[type=submit] {float:none}
 
@@ -1419,13 +1333,8 @@ AUDITORIA
 ============================*/
 
 
-#auditorias form               { margin-left:0; }
-#auditorias form input[type=submit]
-                               { min-width: 0; height:auto; font-size: 1em; }
-#auditorias table              { float:left; font-size : 0.8em; margin:10px 0 0 0; width:100%; border: 1px solid #DBDBDB; padding: 2px; }
-#auditorias table td           {  } 
-#auditorias table td.lista_item   { padding-bottom: 1%; border :0; background-color: #FFFFFF; }
-#auditorias .lista_conteudo    { border:0;}
+#auditorias form               {  margin-left:0; }
+#auditorias table              { float:left; font-size : 0.8em; margin:10px 0 0 0; width:100%; border: 1px solid #DBDBDB; }
 #auditorias select             { color:#8C1C1C;  font-size:1em;}
 #auditorias #barra_titulo      { width:98.3%; }
 #auditorias .formulario input[type=submit] {float:none}
@@ -1452,23 +1361,23 @@ AJUDA AO USUARIO
   
 #lista_ajuda li                         { margin:0; }
 
-#lista_ajuda li a                       { padding:0; color:#8C1C1C;  border-bottom: 1px solid #8C1C1C; line-height:1.6em;}
+#lista_ajuda li a                       { padding:0; color:#CF360D;  border-bottom: 1px solid #CF360D; line-height:1.6em;}
 
 #lista_ajuda li a:hover                 {
                                           text-decoration:none;  
-                                          border-bottom: 2px solid #8C1C1C;
-                                          background-color:#8C1C1C;
+                                          border-bottom: 2px solid #CF360D;
+                                          background-color:#CF360D;
                                           color:#FFFFFF;
                                          }
 
 #lista_ajuda li a.ativo:hover            {                             
                                           text-decoration:none;  
-                                          border-bottom: 0px solid #8C1C1C;
+                                          border-bottom: 0px solid #CF360D;
                                           background-color:#ffffff;
                                           
                                          }
                                           
-#lista_ajuda li a.ativo                  { font-weight:bold; border:none; color:#8C1C1C; font-size: 1.2em;}
+#lista_ajuda li a.ativo                  { font-weight:bold; border:none; color:#CF360D; font-size: 1.2em;}
 
 #conteudo_ajuda                          { width:77%; margin:5px 0.2%; border-left:2px solid #EDEDED; float:left; padding:5px; } 
 
@@ -1476,7 +1385,7 @@ AJUDA AO USUARIO
 
 #frame ul                                { width:25%;font-size:0.8em; float:left;}
 
-#frame h3#barra_titulo                   { padding-left: 15px; color:#8C1C1C; }
+#frame h3#barra_titulo                   { padding-left: 15px; color:#CF360D; }
 
 #frame h4,#frame h5                      { margin-left: 20px; margin-top:1em; margin-bottom:1em; width:100%; clear:both;float:left;}
 
@@ -1494,15 +1403,10 @@ AJUDA AO USUARIO
 #frame a,
 #frame strong,
 #frame h4,
-#frame h5                       { color:#8C1C1C; }
+#frame h5                       { color:#CF360D; }
 #frame ul.emlinha                        { float:none; }
 
 /*========================================*/
-
-
-                      
-/* AJUDAS                      
-============================================== */
 
 
 /* AJUDAS INDEX
@@ -1520,22 +1424,22 @@ AJUDA AO USUARIO
                                        min-height:20px; 
                                        margin:0;
                                        width:100%;
-                                       background-image: url("/theme/infodoc/images/fil1.png");
+                                       background-image: url("/theme/blue-orange/images/fil1.png");
                                        padding-bottom: 10px;
                                        padding-top:10px;
                                        display: inline-block;
-                                       border-top:8px solid #8C1C1C;
+                                       border-top:8px solid #CF360D;
                                        border-bottom: 1px  solid #EDEDED;
                                        
                                  }
                                  
-#topo_ajuda b,#cleam_conteudo b  {     margin:10px; color: #8C1C1C; font-size:1.2em;}
+#topo_ajuda b,#cleam_conteudo b  {     margin:10px; color: #CF360D; font-size:1.2em;}
 
 #rodape_ajuda,#rodape_clean      {     
                                        width:100%; height:32px;
-                                       border-top:5px solid #8C1C1C;
+                                       border-top:5px solid #CF360D;
                                        border-bottom: 1px solid #EDEDED;
-                                       background-image: url("/theme/infodoc/images/img09.gif");
+                                       background-image: url("/theme/blue-orange/images/img09.gif");
                                        clear:both;
                                  }
                                  
@@ -1544,25 +1448,13 @@ AJUDA AO USUARIO
 #ajuda_conteudo,#cleam_conteudo  {     padding: 5px; font-family: Arial,Verdana,sans-serif ; font-size:12px; }
 
 /*
-JQUERY ZEBRA ======================================
-*/
-
-.zebraUm                         { background-color: #f4f4f4; }
-.zebraDois                       { background-color: #FFFFFF;  }
-
-/*
-========================================
-*/
-
-
-/*
 COMUNICACAO ============================
 */
 
 .titulo_comunicacao
                                  { width:100%;
                                    float: left;
-                                   /*background-image: url("/theme/infodoc/images/fil4.jpg");*/
+                                   /*background-image: url("/theme/blue-orange/images/fil4.jpg");*/
                                    background-repeat: repeat-x;
                                    min-height: 54px;
                                    border-top: 1px solid #DBDBDB;
@@ -1574,9 +1466,8 @@ COMUNICACAO ============================
                                     height:auto;
                                     margin: 3px 0;
                                     padding-bottom:10px;
-                                    background-color: #dcdcdc;
-                                  }                                  
-                                   
+                                    background-color: #72a8da;
+                                  }  
 #comunicacao .micro_messagem,
 #comunicacao .mensagem          { 
                                    width:93%;
@@ -1597,14 +1488,14 @@ COMUNICACAO ============================
                                     margin-bottom: 5px;
                                     margin-top: 2px;
                                     padding:5px;
-                                    background-image: url("/theme/infodoc/images/fil2.jpg");
+                                    background-image: url("/theme/blue-orange/images/fil4.jpg");
                                     background-repeat: repeat-x;
                                     overflow:hidden;
                                     -moz-border-radius-bottomleft:5px;
                                     -moz-border-radius-bottomright:5px;
                                     -moz-border-radius-topleft:5px;
                                     -moz-border-radius-topright:5px;
-                                  }
+                                  }        
                                   
 #comunicacao p                    { padding:0;margin:0;margin-bottom:2px; overflow:hidden; }
 #comunicacao #mensagens           { float:left; width:100%;}
@@ -1619,19 +1510,18 @@ COMUNICACAO ============================
                                     padding:3px;
                                     width:96%;
                                   }
-                                  
 #comunicacao input[type=submit]   { float:right; 
                                     margin-top:5px; 
                                     margin-right:6px; 
                                     font-size:0.8em;
-                                    background-color:#8C1C1C;
-                                    border: 1px solid #8C1C1C;
+                                    background-color:#CF360D;
+                                    border: 1px solid #CF360D;
                                     color:#EDEDED;
                                     font-weight:bold;
                                     
 
                                     
-                                   }      
+                                   }
 #comunicacao input[type=submit]:hover{ color:#FFFFFF;cursor:pointer; }
            
 
@@ -1640,7 +1530,7 @@ COMUNICACAO ============================
                                   
 #comunicacao h3                   { 
                                    padding-left:28px;
-                                   background-image:url("/theme/infodoc/images/comunicacao.png");
+                                   background-image:url("/theme/blue-orange/images/comunicacao.png");
                                    background-repeat:no-repeat;
                                    background-position: left;
                                    margin-bottom:10px;
@@ -1648,13 +1538,14 @@ COMUNICACAO ============================
                                    margin-top:20px;
                                    width:50%;
                                    float:left;
+                                   color:#FFFFFF;
                                   }
 #comunicacao a                    { text-align:right;font-weight:bold; float:right;   font-size: 0.6em; width:38%; margin:0; margin-top:10px; }                                  
-#comunicacao b                    { margin-left: 2%; color:#8c1c1c;}
+#comunicacao b                    { margin-left: 2%; color:#e33a0c;}
 #comunicacao a:hover              { background-color:#CCCCCC; text-decoration:none; }
-div#historico_com_blogs_path a    { width:38%; margin-right:5px;margin-top:5px; }
+div#historico_com_blogs_path a    { width:38%; margin-right:5px;margin-top:5px; color:#e33a0c;}
 
-div#com_blogs_path a              { width:25%; margin-right:5px; } 
+div#com_blogs_path a              { width:25%; margin-right:5px; color:#e33a0c;} 
                                   
 
 
@@ -1665,24 +1556,26 @@ div#com_blogs_path a              { width:25%; margin-right:5px; }
                                      width:50px; 
                                      height:50px;
                                      float:left; 
-                                     background-image:url("/theme/infodoc/images/perfilbg2.png"); 
+                                     background-image:url("/theme/blue-orange/images/perfilbg2.png"); 
                                      margin:2px 2px;
                                   }
                                   
 .avatar img                       { margin:4%; height:90%; width:90%; }                                   
 .slidea a.slidel,a.slideb             { float:right; width:auto; text-align:left; line-height:0.5em;  font-size:0.5em; margin-right:5px; }
-.slidea { clear:both; }
+.slidea { clear:both; }     
 /*
 ===========================================
 HISTORICO MICROBLOG
 */
 #historico_microblog                        { width:99.3%; padding-bottom:25px; } /* herdado de #listar */
-#historico_microblog h3                     { margin: 3px 0 ; color:#8c1c1c; margin-left:33px; } 
+#historico_microblog h3                     { margin: 3px 0 ; color:#CF360D; margin-left:33px; } 
 #historico_microblog .mensagem              { min-height:50px;height:auto; border-top: 1px dotted #CCCCCC; border-bottom:1px dotted #CCCCCC; padding: 0.7em 0 20px 33px; font-size: 0.8em;  }
-#historico_microblog .mensagem:hover        { background: #F2F2F2; }
-#historico_microblog b                      { color: #8c1c1c;  float:left;} 
+#historico_microblog .mensagem:hover        { background: #ecf3fb; }
+#historico_microblog b                      { color: #CF360D;  float:left;} 
 #historico_microblog b.hmensagem            { color: #CCCCCC; font-size:0.8em; float:none;}
 #historico_microblog p                      { padding:0;margin:0;margin-bottom:2px; }
+
+/*
 
 /*
 ==========================================
@@ -1691,8 +1584,8 @@ PAGINACAO DO HISTORICO DO MICROBLOG
 
 .pagination                                 { font-family: "sans serif"; font-size: 0.8em;  width:26%; margin:10px 38%; }
 .pagination a                               { background-color: #FFFFFF; padding: 2px 3px; }  
-.pagination .current,.pagination a:hover    { background-color: #8c1c1c; color: #FFFFFF; padding: 2px 3px; text-decoration:none; } 
-    
+.pagination .current,.pagination a:hover    { background-color: #CF360D; color: #FFFFFF; padding: 2px 3px; text-decoration:none; } 
+
 /*
 ==========================================
 PAGINA PRINCIPAL INTRANET
@@ -1702,25 +1595,26 @@ PAGINA PRINCIPAL INTRANET
 #intranet_inicial ul.menu_nav li            { list-style: none; border-bottom: 1px dashed #EDEDED; padding:3px; }
 #intranet_inicial ul.menu_nav li b          { font-size: 1.7em; } 
 #intranet_inicial ul.menu_nav li a          { display:block ; font-size:1em; padding:3px;}
-#intranet_inicial ul.menu_nav li a:hover    { text-decoration:none; width:100%; background-color:#8c1c1c; color:#FFFFFF; }
-                                            
+#intranet_inicial ul.menu_nav li a:hover    { text-decoration:none; width:100%; background-color:#CF360D; color:#FFFFFF; }
+
 #bloco_p                                    { width:60%;  padding: 5px 20px; float:left;  margin-bottom:5px; }
 .bloco                                      { width:60%; float:left; margin:0 10px;  }
 #intranet_inicial .bloco h1,
 #intranet_inicial .bloco h2
                                             { margin:1.33em 13px; }
+                                            
 #intranet_inicial #bloco_p h1,
-#intranet_inicial .bloco h2                 { background-image: url("/theme/infodoc/images/img09.gif"); padding:7px; border-bottom: 1px solid #CCCCCC;}
+#intranet_inicial .bloco h2                 { background-image: url("/theme/blue-orange/images/img09.gif"); padding:7px; border-bottom: 1px solid #CCCCCC;}
 .bloco p b.n                                { 
                                               padding:3px 5px ; 
-                                              background-image: url("/theme/infodoc/images/fundo_botoes.png");
+                                              background-image: url("/theme/blue-orange/images/fundo_botoes.png");
                                               background-position: center;
                                               color: #FFFFFF;
                                               -moz-border-radius-bottomleft:5px;
                                               -moz-border-radius-bottomright:5px;
                                               -moz-border-radius-topleft:5px;
                                               -moz-border-radius-topright:5px;
-                                            }                                            
+ }                                            
 .bloco p                                    { float:left; margin: 20px 13px; width:100%; line-height:1.5em; }  
 .bloco h3                                   { margin:13px; }
 .bloco  ol                                  { float:left; margin-left:15px;}
@@ -1736,13 +1630,13 @@ PAGINA PRINCIPAL INTRANET
                                               text-align:center;  
                                               border-width:1px 1px 2px 2px ;
                                               border-color:#EDEDED #EDEDED #CCCCCC #CCCCCC; 
-                                            } 
+                                            }                                                                                           
                                              
 .bloco_img b                                { display:block; text-align: center;} 
 
 a.add_conteudo                              { 
                                              
-                                              background-image:url("/theme/infodoc/images/fundo_botoes.png");
+                                              background-image:url("/theme/blue-orange/images/fundo_botoes.png");
                                               background-position: bottom;
                                               font-family: "sans serif";
                                               color: #FFFFFF;
@@ -1751,12 +1645,14 @@ a.add_conteudo                              {
                                               padding-top: 10px;
                                               margin-left: 20px;
                                               float:left;
-                                              border: 4px solid #8c1c1c;
+                                              border: 4px solid #CF360D;
                                               text-decoration:none;
                                             }
-a.add_conteudo:hover                        { background-position: top; border-color: #8A4646; }                    
+a.add_conteudo:hover                        { background-position: top; border-color: #8A4646; }  
+
 /*==========================================
 */
+
 
 /*
 VERBETES INTRANET
@@ -1769,18 +1665,18 @@ VERBETES INTRANET
                                              -moz-border-radius-topleft:5px;
                                              -moz-border-radius-topright:5px;
                                            }
-.titulo_verbete                           { width: 100%; clear:both; font-size:0.8em; height:2em; background-image: url(/theme/infodoc/images/img09.gif); padding-top:3px; }
+.titulo_verbete                           { width: 100%; clear:both; font-size:0.8em; height:2em; background-image: url(/theme/blue-orange/images/img09.gif); padding-top:3px; }
 .titulo_verbete .acoes_verbete            { width:14%;  float:right; text-align:right; padding: 0 5px; } 
 .titulo_verbete #edit_pagina_verbete      { width:10%; float:right; margin-left:5px;}
 .titulo_verbete #edit_pagina_verbete a:hover
                                           { outline:1px solid #CCCCCC; }   
 .titulo_verbete #edit_pagina_verbete a.alterar
-                                          { color:#DBDBDB; background-image:url(/theme/infodoc/images/editar_mini.png); width:15px; padding-left:3px; float:right; background-repeat:no-repeat;}
+                                          { color:#DBDBDB; background-image:url(/theme/blue-orange/images/editar_mini.png); width:15px; padding-left:3px; float:right; background-repeat:no-repeat;}
 .titulo_verbete #edit_pagina_verbete a.excluir
-                                          { color:#DBDBDB; background-image:url(/theme/infodoc/images/lixo.png); width:15px; padding-left:3px; float:right; }
-.titulo_verbete .acoes_verbete  a.mini    { color:#DBDBDB; background-image:url(/theme/infodoc/images/minimizar.png); width:15px; padding-left:3px;float:right;   }
-.titulo_verbete .acoes_verbete  a.max     { color:#DBDBDB; background-image:url(/theme/infodoc/images/maxmizar.png); width:15px; padding-left:3px;float:right;   }
-.titulo_verbete .acoes_verbete  a.fechar  { color:#DBDBDB; background-image:url(/theme/infodoc/images/fechar.png); width:15px; padding-left:3px;float:right;   }
+                                          { color:#DBDBDB; background-image:url(/theme/blue-orange/images/lixo.png); width:15px; padding-left:3px; float:right; }
+.titulo_verbete .acoes_verbete  a.mini    { color:#DBDBDB; background-image:url(/theme/blue-orange/images/minimizar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.max     { color:#DBDBDB; background-image:url(/theme/blue-orange/images/maxmizar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.fechar  { color:#DBDBDB; background-image:url(/theme/blue-orange/images/fechar.png); width:15px; padding-left:3px;float:right;   }
 .titulo_verbete .acoes_verbete  a.mini:hover,
 .titulo_verbete .acoes_verbete  a.max:hover,
 .titulo_verbete .acoes_verbete  a.fechar:hover
@@ -1788,10 +1684,12 @@ VERBETES INTRANET
 .titulo_verbete b                         { float:left; margin-left: 5px;}
 .conteudo_verbete                         { font-family:Arial,Verdana,sans-serif; font-size:12px; overflow:hidden; }
 
+
 /*
 PERSONALIZACAO DA PAGINA PRINCIPAL DA ENTIDADe
 ==============================*/
 #home_entidade                            { font-family:Arial,Verdana,sans-serif; font-size:12px; text-align:left; background-color:#FFFFFF; }
+
 /*
 HOME DA ENTIDADE
 =================================*/
@@ -1813,7 +1711,7 @@ HOME DA ENTIDADE
                                     padding-left:2px;
                                     width:auto;
                                     min-width:100px;
-                                    color:#8c1c1c;
+                                    color:#CF360D;
                                     font-size:0.9em;
                                     border: 1px solid #CCCCCC;
                                     margin:0 5px;
@@ -1826,7 +1724,7 @@ HOME DA ENTIDADE
                                     margin-top:3px;
                                     font-size: 0.8em;
                                     border: 1px solid #CCCCCC;
-                                    color:#8c1c1c;
+                                    color:#CF360D;
                                     
                                     
                               }   
@@ -1839,9 +1737,9 @@ HOME DA ENTIDADE
       	text-align: left;
       	background-color:#ffffff;
       	height:18px;
-      	border-top: solid 5px #8c1c1c;
+      	border-top: solid 5px #CF360D;
       	border-bottom: solid 1px #DBDBDB;
-      	background-image: url("/theme/infodoc/images/img09.gif");
+      	background-image: url("/theme/blue-orange/images/img09.gif");
 	background-repeat: repeat-x;
     }
     #navcontainer ul li {
@@ -1872,18 +1770,18 @@ PUBLICACOES
 	                    border-left: 2px solid #EDEDED;
 	                    padding:10px;
                     }
-#publicacoes h2            {   margin: 0; margin-left:10px; color:#8c1c1c; }
+#publicacoes h2            {   margin: 0; margin-left:10px; color:#CF360D; }
 #publicacoes ul            {   padding: 0 ; padding-left:10px; }
 #publicacoes ul li         {   height:25px; border-bottom: 1px dashed #EDEDED;  list-style:none; padding: 0px 0; }  
-#publicacoes ul li a       {   color: #8c1c1c; width:100%;  height:100%;  display:block; margin-top:4px; padding-top:4px; font-size:0.8em; }
+#publicacoes ul li a       {   color: #CF360D; width:100%;  height:100%;  display:block; margin-top:4px; padding-top:4px; font-size:0.8em; }
 #publicacoes ul li a:hover {   background-color: #F2F2F2; text-decoration:none;    }
 
 
 
 #conteudo_customizado {
 
-                    	width:60%;
-	                min-height:160px;
+                    width:60%;
+                    min-height:160px;
 	                float: left;
 	                padding: 3px 0px 3px 3px;
 	                margin: 10px 0 0 0;
@@ -1891,4 +1789,5 @@ PUBLICACOES
 	                text-align: justify;
                       
                      }
-
+                                                                        
+                              

@@ -10,7 +10,7 @@
             <td class="lista_item">Filtrar pelo Formulario</td><td class="lista_conteudo"> <%= select_tag :formulario_id, options_for_select(@formularios) %></td><td> <%= check_box_tag :filtro_formulario %></td>
         </tr>
         <tr>        
-            <td class="lista_item">Filtrar pelo Periodo</td><td class="lista_conteudo"> <%= date_select("post", "d_i", :start_year => 1995) %> e <%= date_select("post", "d_f", :start_year => 1995) %><td><%= check_box_tag :filtro_periodo %></td>
+            <td class="lista_item">Filtrar pelo Periodo</td><td class="lista_conteudo"> <%= date_select("post", "d_i", :start_year => 1995) %> e <br/><%= date_select("post", "d_f", :start_year => 1995) %><td><%= check_box_tag :filtro_periodo %></td>
         </tr>
         <tr>        
             <td class="lista_item">Filtrar pela Ação </td><td class="lista_conteudo"> <%= select_tag :acao, options_for_select([["Criação","create"], ["Alteração","update"], ["Visualização","show"], ["Exclusão","destroy"]]) %></td><td> <%= check_box_tag :filtro_acao %></td>

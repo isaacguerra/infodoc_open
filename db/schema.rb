@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(:version => 20100329194747) do
   create_table "auditoriacadastros", :force => true do |t|
     t.integer  "entidade_id"
     t.integer  "usuario_id"
-    t.integer  "cadatro_id"
+    t.integer  "cadastro_id"
     t.integer  "formulario_id"
     t.integer  "artefato_id"
     t.string   "acao"
-    t.string   "descricao"
+    t.text     "descricao"
     t.datetime "created_at"
   end
 

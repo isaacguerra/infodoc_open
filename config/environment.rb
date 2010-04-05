@@ -28,7 +28,7 @@ Rails::Initializer.run do |config|
   # config.gem "juggernaut", :lib=>false
   # config.gem "thoughtbot-shoulda", :lib => "shoulda/rails", :source => "http://gems.github.com"
   # config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
-#   config.gem 'brazilian-rails', :lib=>false
+  config.gem 'brazilian-rails', :lib=>false, :version => ">2.1.9"
 #   # Necessária para a internacionalização
 #  config.gem "polyglot", :lib => false#, :version => ">= 0.2.5"
 #  # Ferramenta de parsing necessária
