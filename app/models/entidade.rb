@@ -4,6 +4,8 @@ class Entidade < ActiveRecord::Base
    has_many :moduloentidades
    has_many :paginaentidades
    has_many :cadastropublicos
+   has_one :perfilentidade
+   has_many :formulariocategorias
 
    has_attached_file :logo
 

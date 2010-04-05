@@ -7,7 +7,7 @@
   <tr>
       <td class="error_messages"><%= f.error_messages %></td>
   </tr>
-  <tr>    
+  <tr>
       <td class="lista_item"><%= f.label :nome %></td>
       <td class="lista_conteudo"><%= f.text_field :nome %></td>
   </tr>
@@ -19,15 +19,15 @@
       <td class="lista_item"><%= f.label :cpf_cnpj, 'CPF/CNPJ'%></td>
       <td class="lista_conteudo"><%= f.text_field :cpf_cnpj %></td>
   </tr>
-  <tr>    
+  <tr>
       <td class="lista_item"><%= f.label :cidade %></td>
       <td class="lista_conteudo"><%= f.text_field :cidade %></td>
   </tr>
-  <tr>    
+  <tr>
       <td class="lista_item"><%= f.label :endereco, 'Endereço' %></td>
       <td class="lista_conteudo"><%= f.text_field :endereco %></td>
   </tr>
-  <tr>    
+  <tr>
       <td class="lista_item"><%= f.label :bairro %></td>
       <td class="lista_conteudo"><%= f.text_field :bairro %></td>
   </tr>
@@ -35,27 +35,27 @@
       <td class="lista_item"><%= f.label :cep %></td>
       <td class="lista_conteudo"><%= f.text_field :cep %></td>
   </tr>
-  <tr>    
+  <tr>
       <td class="lista_item"><%= f.label :telefone %></td>
       <td class="lista_conteudo"><%= f.text_field :telefone %></td>
   </tr>
-  <tr>    
+  <tr>
       <td class="lista_item"><%= f.label :email, 'E-mail'%></td>
       <td class="lista_conteudo"><%= f.text_field :email %></td>
   </tr>
-  <tr>    
+  <tr>
       <td class="lista_item"><%= f.label :nome_responsavel, 'Nome do Responsavel' %></td>
       <td class="lista_conteudo"><%= f.text_field :nome_responsavel %></td>
   </tr>
-  <tr>    
+  <tr>
       <td class="lista_item"><%= f.label :telefone_responsavel, 'Telefone do Responsavel' %></td>
       <td class="lista_conteudo"><%= f.text_field :telefone_responsavel %></td>
   </tr>
-  <tr>    
+  <tr>
       <td class="lista_item"><%= f.label :email_responsavel, 'E-mail do Responsavel' %></td>
       <td class="lista_conteudo"><%= f.text_field :email_responsavel %></td>
    </tr>
-   <tr>   
+   <tr>
       <td class="lista_item"><%= f.label :tema, 'Tema' %></td>
       <td class="lista_conteudo"><%= f.select :tema, Dir.open("public/theme").collect {|t| [t] if t != "." and t != ".."}.compact %></td>
    </tr>
@@ -64,9 +64,22 @@
       <td class="lista_conteudo"><%= f.file_field :logo %></td>
    </tr>
    <tr>
+      <td class="lista_item"><%= f.label :quantidadearquivo, 'Quantidade de Artefatos' %></td>
+      <td class="lista_conteudo"><%= f.text_field :quantidadearquivo %></td>
+   </tr>
+   <tr>
+      <td class="lista_item"><%= f.label :espacodisco, 'Espaço Alocado' %></td>
+      <td class="lista_conteudo"><%= f.text_field :espacodisco %> GB</td>
+   </tr>
+   <tr>
+      <td class="lista_item"><%= f.label :mediaarquivo, 'Tamanho Médio para Artefato' %></td>
+      <td class="lista_conteudo"><%= f.text_field :mediaarquivo %> Bytes</td>
+   </tr>
+
+   <tr>
       <td class="lista_item"/>
       <td class="lista_conteudo"><%= f.submit 'Salvar', :class=>"botao_formulario" %></td>
-   </tr>   
+   </tr>
   <% end %>
 </table>
 

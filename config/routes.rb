@@ -29,6 +29,7 @@ ActionController::Routing::Routes.draw do |map|
     ecm.resources :cadastros, :has_many=>:artefatos
     ecm.resources :cadastros, :has_many=>:relacionados
     ecm.resources :cadastros, :has_many=>:auditorias
+    ecm.resources :relatorioentidades
   end
 
   map.namespace :page do |page|

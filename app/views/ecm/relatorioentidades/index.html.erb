@@ -1,0 +1,30 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">RELATORIO RESUMIDO DA ENTIDADE</h3>
+</div>
+<table id="listar">
+  <tr>
+    <th class="titulo_lista">Dados Levantados</th>
+  </tr>
+    <td>
+
+    <% @entidade.formulariocategorias.each do |cat| %>
+      <ul><%= cat.nome %>
+      <% cat.formularios.each do |f| %>
+        <li><%= f.titulo %> - <%= f.cadastros.size.to_s %></li>
+      <% end %>
+      </ul>
+    <% end %>
+
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Total de Cadastros <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(1).count('id')  %><br>
+      Total de Artefato <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(2).count('id')  %><br>
+
+      Total de Espaço Utilizado <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')  %><br>
+      Total de Documentos Digitalizados <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')/@sessao_usuario.entidade.mediaarquivo %><br>
+    </td>
+  </tr>
+</table>
+

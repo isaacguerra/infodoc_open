@@ -66,6 +66,18 @@
     <td class="lista_item">Logomarca</td>
     <td class="lista_conteudo"><%= image_tag @entidade.logo.url %></td>
   </tr>
+  <tr>
+    <td class="lista_item">Quantidade de Artefatos</td>
+    <td class="lista_conteudo"><%= @entidade.quantidadearquivo %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Espaço Alocado</td>
+    <td class="lista_conteudo"><%= @entidade.espacodisco %> GB</td>
+  </tr>
+  <tr>
+    <td class="lista_item">Tamanho Médio para Artefato</td>
+    <td class="lista_conteudo"><%= @entidade.mediaarquivo %> Bytes</td>
+  </tr>
 </table>
 <div id="link_voltar">
   <%= link_to 'Voltar', core_entidades_path %>

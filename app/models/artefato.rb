@@ -8,6 +8,8 @@ class Artefato < ActiveRecord::Base
   validates_presence_of :cadastro_id
   validates_presence_of :entidade_id
 
+  named_scope :da_entidade, lambda {|id| {:conditions=>["entidade_id = ?", id]}}
+
   def fazer_ocr
     file = ""
     file_ocr = ""

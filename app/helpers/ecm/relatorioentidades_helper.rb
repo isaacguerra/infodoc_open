@@ -1,0 +1,2 @@
+module Ecm::RelatorioentidadesHelper
+end
