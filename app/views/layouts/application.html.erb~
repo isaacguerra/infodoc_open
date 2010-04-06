@@ -2,54 +2,172 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <%= stylesheet_link_tag "chromestyle.css" %>
-    <%= stylesheet_link_tag "anylinkcssmenu.css" %>
-     <%= stylesheet_link_tag "intranet.css" %>
-    <%= javascript_include_tag 'chrome.js' %>
-    <%= javascript_include_tag 'anylinkcssmenu.js' %>
-    <%= javascript_include_tag :defaults %>
 
-    </script>
+    <%= stylesheet_link_tag "/theme/#{@sessao_usuario.entidade.tema}/stylesheets/intranet.css" %>
+    <%= stylesheet_link_tag "/theme/#{@sessao_usuario.entidade.tema}/stylesheets/scaffold.css" %>
+
+    <%= javascript_include_tag "css_browser_selector.js" %>
+    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag "/theme/#{@sessao_usuario.entidade.tema}/javascripts/ddlevelsmenu.js" %>
+    <%= javascript_include_tag :fckeditor %>
+<!--    <%= javascript_include_tag "sliding.js" %> -->
+    <%= javascript_include_tag "iutil.js" %>
+    <%= javascript_include_tag "isortables.js" %>
+    <%= javascript_include_tag "idrop.js" %>    
+    <%= javascript_include_tag "idrag.js" %>
+    <%= javascript_include_tag "drag.js" %>
+    <%= javascript_include_tag "jquery.dataTables.js" %>
+    <%= javascript_include_tag "dataTable.js" %>
+    <%= javascript_include_inputs %>
+
+    </style>
+
     <title>INTRANET :: Infomanager</title>
   </head>
   <body>
     <div id="topo">
         <div id="logo">
-          <img src="/images/infodoc.gif" />
+          <% if @sessao_usuario.entidade.logo_file_name %>
+            <%= image_tag @sessao_usuario.entidade.logo.url %>
+          <% else %>
+            <%= image_tag "infodoc.gif" %>
+          <% end %>
+
         </div>
 
         <div id="status">
-          <b>Login: </b><i>Infomanager</i>
+          <div id="avatar">
+            <% if @sessao_usuario.usuario.avatar_file_name %>
+              <%= image_tag @sessao_usuario.usuario.avatar.url %>
+            <% else %>
+              <%= image_tag "user.png" %>
+            <% end %>
+          </div>
+          <div id="dados_perfil">
+            <b>Usuário: </b><%= @sessao_usuario.usuario.nome %><br>
+            <b>Entidade: </b><%= @sessao_usuario.usuario.entidade.nome %><br><br>
+          </div>
+            <div id="menu_perfil">
+              <ul>
+                <li>
+                  <a href="/core/perfil">Perfil</a> |
+                </li>
+                <li>
+                  <%= link_to "Ajudas", "/ajuda", :popup=>true %> |
+                </li>
+                <li>
+                  <a href="/core/login/logout">logout</a>
+                </li>
+              </ul>
+            </div>
         </div>
     </div>
-    <div id="tudo">
-      <div class="chromestyle" "id="menu_nav">
-        <ul>
-          <% if @menu_modulo %>
-           <% @menu_modulo.each do |m| %>
-            <li><a href="#" rel=<%= m[0] %> rev="lr"><%= m[1] %></a></li>
-           <% end %>
-           
-           <% @menu_modulo.each do |m| %>
-             <div id=<%= m[0] %> class="dropmenudiv">
-               <% @sessao_usuario.opcoes.each do |s| %>
-                 <% if s[5] == true  and s[7] == m[0] %>  
-                 <a href=<%= s[3] %>><%= s[4] %></a>
-                 <% end %>
-               <% end %>  
-             </div>
-           <% end %>
+    <div id="menu_nav">
+        <script type="text/javascript">
+          ddlevelsmenu.setup("ddtopmenubar", "topbar") //ddlevelsmenu.setup("mainmenuid", "topbar|sidebar")
+        </script>
+        <div id="ddtopmenubar" class="mattblackmenu">
+          <ul>
+          <li><a href="/intranet">Intranet</a></li>
+          <% @menu_modulo.each do |m| %>
+           <li><a href="#" rel="<%= m %>"><%= m %></a></li>
           <% end %>
-        </ul>
-        <!--1º drop down menu -->
+          </ul>
+        </div>
+        <% @menu_modulo.each do |m| %>
+          <ul id="<%= m %>" class="ddsubmenustyle">
+            <% @sessao_usuario.opcoes.each do |s| %>
+              <% if s[5] and s[6] and s[8] == m %>
+                <li><a href="<%= s[3] %>"><%= s[4] %></a></li>
+              <% end %>
+            <% end %>
+            <% if m == "Gerencia de Conteúdo" %>
+              <% Formulariocategoria.da_entidade(@sessao_usuario.entidade_id).all.each do |fc| %>
+                <li><a href="#"><%= fc.nome %></a>
+                <ul>
+                <% fc.formularios.each do |f| %>
+                  <% if f.permissao(@sessao_usuario.usuario) > 0 and f.funcional and f.formulariotipo_id == 1 %>
+                  <li><a href="/ecm/formularios/<%= f.id %>/cadastros"><%= f.titulo %></a></li>
+                  <% end %>
+                <% end %>
+                </ul>
+              <% end %>
+            <% end %>
+          </ul>
+        <% end %>
+       
       </div>
-      <%=javascript_tag "cssdropdown.startchrome('menu_nav')"%>
+<!--      <div class="slidea">
+            <a class="slidel" href="#">Mostrar </a>  <a class="slideb" href="#"> esconder</a>  
+          </div>
+MOSTRAR / ESCONDER COMUNICACAO
+-->          
+    <div id="tudo">
+    
+
       <div id="conteudo">
-      <%= yield %>
+        <% if flash[:notice] %>
+        <div id="flash_notice">
+          <%= flash[:notice] %>
+        </div>
+        <% end %>
+        <% if flash[:error] %>
+        <div id="flash_error">
+          <%= flash[:error] %>
+        </div>
+        <% end %>
+
+        <%= yield %>
 
       </div>
 
-      <div id="rodape">
+      <div id="comunicacao">
+        <script type="text/javascript">
+        function blocTexto(valor)
+        {
+            quant = 255;
+            total = valor.length;
+            if(total <= quant)
+            {
+                resto = quant - total;
+                document.getElementById('cont').innerHTML = resto;
+            }
+            else
+            {
+                document.getElementById('menssagem').value = valor.substr(0,quant);
+            }
+        }
+        </script>
+        <div class="titulo_comunicacao">
+          
+          <h3>
+              Comunicação
+          </h3>
+         <div id="com_blogs_path"><%= link_to "Configurações", com_blogs_path %></div>
+        </div>
+        <div class="micro_messagem">
+          <b>Enviar micro mensagem: <span id="cont">255</span> caracteres</b>
+          <% form_remote_tag :url=>(url_for(com_blogs_path)), :action=>"create", :method=>"post" do -%>
+            <%= text_area_tag 'menssagem', nil,:size => "40x3", :max_length=>3, :onkeyup=>"blocTexto(this.value)" %>
+            <%= submit_tag 'Enviar' %>
+          <% end -%>
+          <%= periodically_call_remote(:url=>{:controller=>'/com/blogs', :action=>'view'}, :frequency=>'120') %>
+        </div>
+        <div id="mensagens">
+          <%= render :partial=>"/com/blogs/view" %>
+        </div>
+      </div>
+    </div>
+    <div id="rodape">
+      <div id="licensa">
+        <b><a href="http://www.openinfodoc.org" target=_BLANK>INFODOC</a></b> é <i>Free Software</i> Liberado sob a <i><a target=_BLANK href="http://www.gnu.org/licenses/gpl-2.0.html">GNU / GPL v2.0 License</a></i>.<br />
+         Desenvolvido por <b><a href=mailto:guerra.isaac@gmail.com>Isaac Guerra</a></b> e
+        Design por <b><a href=mailto:raphaeljq@gmail.com>Raphael Chaves</a></b><br />
+        <div id="icones">
+          <a href="http://www.w3.org/1999/xhtml"> XHTML</a> <img src="/images/ico_html.png" alt="html" /> |
+          <a href="http://www.w3.org/Style/CSS/">CSS</a> <img src="/images/ico_css.png" alt="css"/> |
+          <a href="http://rubyonrails.org">RoR</a> <img src="/images/rails.png" alt="rails" />
+        </div>
       </div>
     </div>
   </body>

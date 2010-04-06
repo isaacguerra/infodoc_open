@@ -267,9 +267,9 @@ ActiveRecord::Schema.define(:version => 20100331203150) do
     t.integer  "logo_file_size"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "mediaarquivo"
-    t.integer  "quantidadearquivo"
-    t.float    "espacodisco"
+    t.integer  "mediaarquivo",                       :default => 0
+    t.integer  "quantidadearquivo",                  :default => 0
+    t.float    "espacodisco",                        :default => 0.0
   end
 
   add_index "entidades", ["endereco"], :name => "index_entidades_on_endereco"

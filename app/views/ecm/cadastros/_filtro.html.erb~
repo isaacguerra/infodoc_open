@@ -1,12 +1,13 @@
 <%= javascript_include_tag "dataTable.js" %>
 <table id="listar">
-    <thead>
+  <thead>
       <tr>
-        <th class="titulo_lista">Foram encontrados <%= @cadastro_itens.size.to_s %> Cadastros em <%= @principal.formulario.titulo %></th>
+        <th class="titulo_lista">Foram encontrados  <%= @cadastro_itens.size.to_s %> Cadastros em <%= @principal.formulario.titulo %></th>
       </tr>
-    </thead>
-    <tbody>
+  </thead>
+  <tbody>
     <% @cadastro_itens.each do |cadastro_item| %>
+  
     <tr>
       <td class="itens_index">
         <h3><%= @principal.rotulo %> -
@@ -24,6 +25,6 @@
       </td>
     </tr>
 	  <% end %>
-    </tbody>
+   </tbody>
 </table>
 
