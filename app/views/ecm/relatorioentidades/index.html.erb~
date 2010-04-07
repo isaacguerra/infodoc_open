@@ -19,11 +19,11 @@
   </tr>
   <tr>
     <td class="itens_index">
-      <b>Total de Cadastros:</b> <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(1).count('id')  %><br>
-      <b>Total de Artefato:</b> <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(2).count('id')  %><br>
+      Total de Cadastros <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(1).count('id')  %><br>
+      Total de Artefato <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(2).count('id')  %><br>
 
-      <b>Total de Espaço Utilizado:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')  %><br>
-      <b>Total de Documentos Digitalizados:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')/@sessao_usuario.entidade.mediaarquivo %><br>
+      Total de Espaço Utilizado <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')  %><br>
+      Total de Documentos Digitalizados <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')/@sessao_usuario.entidade.mediaarquivo %><br>
     </td>
   </tr>
 </table>

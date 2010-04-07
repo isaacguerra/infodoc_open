@@ -2,32 +2,31 @@
 
 body                                {  margin:0;
                                        padding:0;
-                                       font-family: Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura;
+                                       font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
                                     }
 
 a                                   { color:#2d6809; text-decoration:none; }
 
 a:hover                             { text-decoration:underline; }
 
-td                                  { font-size:0.8em;
-                                      padding:5px;
-                                      padding-left:6px;
-                                      border-bottom: 1px solid #EDEDED;
-                                    }
+td                                  { font-size:0.9em;padding:0 5px 0 0;   }
 
 table                               {  margin-bottom:0; }
 
-form                                { margin:0; }               
-      
+form                                { margin:0; }
+
 h3                                  { color:#2d6809; margin:0px; }
+
+#listar tr:hover     { background:#FAF5DC; }
+#listar  #busca_wiki { background-color:#FFFFFF; }
 
 
 /**************************************    END  **********************************************************/
 
 
-                  
-                  
-/*******************************************************************************************************/                  
+
+
+/*******************************************************************************************************/
 /************************************ ESTRUTURAS PRINCIPALS *******************************************/
 /*****************************************************************************************************/
 
@@ -35,7 +34,7 @@ h3                                  { color:#2d6809; margin:0px; }
 
                                        min-height: 600px;
                                        height: auto;
-                                       width: 98%;
+                                       width: 99.5%;
                                        margin-right: auto;
                                        margin-left: auto;
                                        margin-top: 0px;
@@ -50,53 +49,51 @@ h3                                  { color:#2d6809; margin:0px; }
                                        background-image: url("/theme/green/images/fil1.png");
                                        padding-bottom: 10px;
                                        display: inline-block;
-                           
+
                                     }
-                        
-#topo img                           {  height:80%; margin :25px 5px 2px 20px; }
+
+#logo img                           {  height:80%; margin :25px 5px 2px 20px; }
 
 #logo                               {  float:left; width:20%; height:100%;  }
 
 #conteudo                           {
-                                        width: 100%;
+                                        width: 73.3%;
                                         border : 1px solid #ffffff;
                                         float:left;
                                         padding: 0px;
-                                        overflow: hidden;
                                         min-height:500px;
                                         height:auto;
                                         margin:0 6px;
                                     }
 
 #rodape                             {
-                                        color:#515859;
+                                        color:#2C3D21;
 	                                    clear: both;
-	                                    width: 99.5%;
+	                                    width: 100%;
                                         font-size:0.8em;
                                         padding: 15px 0;
-                                        margin-left:2px;
                                         margin-bottom:2px;
                                         margin-bottom:2px;
                                         list-style-type: none;
                                         text-align: center;
                                         background-color:#ffffff;
-                                        min-height:80px;
+                                        min-height:50px;
                                         border-top: 1px solid #EDEDED;
-                                        border-bottom:5px solid #3C7B96;
+                                        border-bottom:5px solid #2d6809;
                                         background-image: url("/theme/green/images/img11.gif");
 	                                    background-repeat: repeat-x;
-	                                    
+
                                     }
 #licensa                            { width:60%; float:left; margin:0 5%; margin-left:20%; height:auto; }
-    
+
 #rodape a                           {  color:#2D6809; }
 #rodape img                         {  border:0; vertical-align:top; height:16px;     }
 
 #rodape p                           { float:left; margin:0; }
 
 #icones                             { margin: 5px 0; }
-                                     
-                                     
+
+
 /******************************************************************************************************/
 
 
@@ -107,22 +104,16 @@ h3                                  { color:#2d6809; margin:0px; }
 #menu_nav { clear:both; width:100%;}
 
 #menu_nav ul                        {
-
-                                      
-                                      padding: 4px 0px;
-                                      margin: 6px 0 6px 8px;
+                                      margin: 6px 0 6px 0px;
                                       list-style-type: none;
                                       text-align: left;
                                       background-color:#ffffff;
-                                      height: auto;
-                                      min-height:20px;
                                       width:100%;
                                       border-top: 5px solid #2d6809;
                                       border-bottom: 1px solid #e3f1da;
                                       background-image: url("/theme/green/images/img09.gif");
                                       background-repeat: repeat-x;
                                       clear:both;
-                                      
 
                                     }
 
@@ -130,18 +121,20 @@ h3                                  { color:#2d6809; margin:0px; }
 
 #menu_nav ul li b                   { margin:0; color:#7a7272; }
 
-#menu_nav ul li a                   { 
+#menu_nav ul li a                   {
                                       margin:0;
-                                      margin-left:2px;
+                                      height:25px;
                                       text-decoration: none;
-                                      padding:2px 8px 0px 12px;
+                                      padding:6px 5px 0px 10px;
                                       color: #2C3D21;
+                                      border-left: 1px solid #FFFFFF;
+                                      border-right: 1px solid #CCCCCC;
                                     }
 
 #menu_nav ul li a:hover             { outline: 1px solid #EDEDED;  background-color: #FFFFFF;  }
 
 .mattblackmenu ul                   {
-                                      
+
                                       margin: 0;
                                       padding: 0;
                                       font: normal 12px "sans serif";
@@ -149,17 +142,16 @@ h3                                  { color:#2d6809; margin:0px; }
                                       background: #EDEDED; overflow: hidden; width: auto;
                                     }
 
-.mattblackmenu li                   { display: inline; margin: 0;  padding: 30px 0 ; }
+.mattblackmenu li                   { display: inline; margin: 0;height:100%;}
 
-.mattblackmenu li a                 { 
+.mattblackmenu li a                 {
 
                                       float: left;
                                       display: block;
                                       text-decoration: none;
                                       margin: 0;
-                                      margin-left:1px; 
-                                      padding: 6px 8px; /*padding inside each tab*/
-                                      border-right: 1px solid #EDEDED; /*right divider between tabs*/
+                                      margin-left:1px;
+                                      border-right: 1px solid #E3F1DA; /*right divider between tabs*/
                                       color: white;
                                     }
 
@@ -191,18 +183,23 @@ h3                                  { color:#2d6809; margin:0px; }
                                       min-width: 160px; /*width of menu (not including side paddings)*/
                                       background-color:#F0F0F0;
                                       text-decoration: none;
-                                      padding: 3px 4px;
-                                      border-bottom: 1px solid #CCCCCC;
+                                      padding: 8px 4px;
+                                      padding-left:36px;
+                                      border-bottom: 1px solid #cdd7c7;
+                                      border-left: 1px solid #E3F1DA;
+                                      border-right: 1px solid #FFFFFF;
                                     }
-                        
-* html .ddsubmenustyle li           { /*IE6 CSS hack*/ display: inline-block; }               
 
-.ddsubmenustyle li a:hover          { background-color: #2D6809; color:#FFFFFF; }
+* html .ddsubmenustyle li           { /*IE6 CSS hack*/ display: inline-block; }
+
+.ddsubmenustyle li a                { background-image: url("/theme/green/images/fundo_menu.png"); background-repeat:no-repeat;}
+
+.ddsubmenustyle li a:hover          { background-image: url("/theme/green/images/fundo_menu2.png"); background-repeat:no-repeat;background-color: #2D6809; color:#FFFFFF; }
 
 
 
                         /* ######### Neutral CSS  ######### */
-                        
+
 
 .downarrowpointer                   { /*CSS for "down" arrow image added to top menu items*/
                                         padding-left: 4px;
@@ -248,20 +245,20 @@ input#login_usuario,input#login_senha { margin-bottom: 4px; border:1px solid #BF
                                         text-align: center; width:30%; height:100px;
                                         padding-top: 20px; margin:20px auto 50px auto;
                                       }
-                                      
-.form_login                           {                          
+
+.form_login                           {
 
                                         margin-left:31%;
                                         margin-bottom:20px
                                         text-align:center;
                                         padding: 0 5px 0 5px;
-                                        
+
                                       }
-                                        
+
 #form_login form                      {
                                         margin:0;
                                       }
-                                      
+
 input.enviar                          {
 
                                         margin-top: 5px
@@ -283,9 +280,9 @@ input.enviar                          {
                                       float:right;
                                       background-image: url("/theme/green/images/fil2.jpg");
                                       background-repeat: repeat-x;
-                                      background-position: top;          
-                                      width :35%;                       
-                                      height: 90%;                     
+                                      background-position: top;
+                                      width :35%;
+                                      height: 90%;
                                       margin-right: 14px;
                                       margin-top:10px;
                                       padding: 4px 5px 0px 5px;
@@ -293,8 +290,6 @@ input.enviar                          {
                                       border-bottom:1px solid #c0dcaf;
                                       clear:right;
                                    }
-
-#tab_status                        { width:100% ;}
 
 #status td                         { margin :0px; padding:0px;  }
 
@@ -305,6 +300,31 @@ input.enviar                          {
 
 #status .titulo_lista              { padding:1px; padding-left:4px; }
 
+/*
+====================================
+AVATAR*/
+
+#avatar                            {
+                                     width:60px; 
+                                     height:60px;
+                                     float:left; 
+                                     background-image:url("/theme/green/images/perfilbg.png"); 
+                                     margin:0 15px;
+                                     margin-top:10px;
+                                   }
+
+#avatar img                        { margin:8% 8%; height:80%; }
+
+#status #dados_perfil              { font-family:"sans serif"; font-size:0.9em; float:left; margin-top:10px;margin-right:15px;}
+#status #menu_perfil               { float:right;}
+#status #menu_perfil ul            { margin:0; margin-top:5px;}  
+#status #menu_perfil ul li         { list-style:none; display:inline; margin:0;}
+#status #menu_perfil ul li a       { margin:0; color:#2D6809; font-weight:bold;padding:2px; font-family:"sans serif"; font-size:0.7em;}
+#status #menu_perfil ul li a:hover { background-color: #C0DCAF; text-decoration:none;}
+
+ /*===================================
+  */
+
 
 /**********************************************************************************************************/
 /************************************** CONTEÚDO INTRANET **************************************************/
@@ -314,21 +334,23 @@ input.enviar                          {
 
 /* Area onde ficam botao 'Novo' , filtro e campo para filtrar  e o Link Voltar*/
 
-#barra_titulo, #link_voltar 
+#barra_titulo, #link_voltar
                               {
 
                                 float:left;
                                 padding:6px 1px;
-                                width:99.6%;
+                                width:99.5%;
                                 min-height:30px;
-                                clear:both;                    
+                                clear:both;
                                 margin:3px 0 3px 1px;
                                 background-image: url("/theme/green/images/fil4.jpg");
                                 background-repeat: repeat-x;
                                 border: 1px solid #E3F1DA;
-                                border-top:0px;
+                                border-bottom:1px solid #E3F1DA;
+                                border-left: 1px solid #cdd7c7
+                                border-right: 1px solid #EDEDED;
                              }
-
+#barra_titulo                { min-height: 54px; }
 /* **************************************************************************************************** */
 
 
@@ -340,43 +362,55 @@ input.enviar                          {
 
 .titulo_show                { background-image: url("/theme/green/images/view_choose.png");}
 
-.titulo_new                 { background-image: url("/theme/green/images/filenew.png") };
+.titulo_new                 { background-image: url("/theme/green/images/filenew.png"); }
 
-.titulo_edit                { background-image: url("/theme/green/images/edit.png") }
+.titulo_edit                { background-image: url("/theme/green/images/edit.png"); }
+
+.titulo_cat_infowiki        { background-image: url("/theme/green/images/categoria.png") }
 
 .titulo_index,
 .titulo_show,
 .titulo_new,
-.titulo_edit                {
+.titulo_edit,
+.titulo_comentario,
+.titulo_cat_infowiki,
+.titulo_index_infowiki                {
 
                             font-size:1.2em;
                             float:left;
                             padding-left:28px;
-                            margin-left:5px;
+                            margin-left:10px;
+                            margin-top: 1%;
                             background-position:left;
                             background-repeat:no-repeat;
-                            
+
                             }
-                                                    
+
 /* ***************************************   END    ************************************************* */
 
 
-#listar 
+#listar,
+#wiki,
+#pagina_verbete,
+#historico_microblog,
+#listar_ajuda,
+#intranet_inicial    
                             {
-                            color:#2C3D21;    
+                            color:#2C3D21;
                             float:left;
                             margin: 6px 0 6px 0px;
-                            min-height:450px;
                             background-repeat:repeat-x;
-                            height:auto;
                             border: 1px solid #E3F1DA;
+                            border-left: 1px solid #E3F1DA;
+                            border-right: 1px solid #E3F1DA;
                             width:100%;
                             padding:2px 2px 25px;
-                            
 
-                            }   
 
-.itens_index
+                            }
+
+.itens_index,
+.itens_curto
                             {
 
                             font-size:0.8em;
@@ -384,35 +418,55 @@ input.enviar                          {
                             padding: 4px 0px;
                             text-align:left;              /* Item listado */
                             padding-left: 30px;
+                            height:1em;
                             width:auto;
+                            border-left:1px solid #E3F1DA;
+                            border-bottom:1px solid #E3F1DA;
+
                             }
-
-.linha_item_index           {  border: 1px solid #EDEDED; }
-
-.titulo_lista               { background-image:url("/theme/green/images/fil4.jpg"); }
+.itens_index li             { list-style-type: none; }                            
 
 .titulo_lista,
-.lista_item 
+.titulo_curto              { 
+                              background-image:url("/theme/green/images/fil4.jpg");
+                              background-repeat: repeat-x;
+                              border-left: 1px solid #C0DCAF;
+                              border-right: 1px solid #E3F1DA;
+                             }
+
+.titulo_lista,
+.lista_item,
+.form_item,
+.titulo_curto,
+.itens_curto
                             {
-                             
+
                              font-size:0.9em;
                              text-align:left;
                              margin-top:5px;
                              padding: 10px 0;
                              padding-left: 30px;             /*Titulo do Item*/
                              font-weight:bold;
-                             width:auto;
+                             height:1em;
                              border-bottom: 1px solid #EDEDED;
-                             
-                             
+
+
                              }
+.titulo_curto,
+.itens_curto   { width:12%; text-align:center;padding:0px; }
+                 
+.lista_item th               { margin-left:20px; }
+                             
 .titulo_lista a,
-#titulo_lista a:hover       
+#titulo_lista a:hover
                              { float:left; text-decoration:none; width:100%;  height:100%; }
 
 .item_index a,
 .item_index a:hover          { font-weight: bold; color:#8C1C1C; }
 
+form table#listar td         { padding:6px; border-left: 1px solid #E3F1DA; border-bottom: 1px  solid #E3F1DA; }
+/*
+BOTOES==============================*/
 
 
 #link_botao                 {
@@ -426,44 +480,271 @@ input.enviar                          {
                                float:right;
                                color: #ffffff;
                                font-weight:bold;
-                               background-color:#2D6809;     
+                               background-color:#2D6809;
                                border:0;
                             }
-                            
-#link_botao a               { 
+
+#link_botao a               {
 
                                color: #e3f1da;
                                margin-top:3px;
-                               float:left;                   
-                               width:100%;
-                               height:100%;
-                               text-decoration: none;
-                               
-                            }
-                            
-#link_botao a:hover         {
-
-                               color: #ffffff;
-                               margin-top:3px;              
                                float:left;
                                width:100%;
                                height:100%;
                                text-decoration: none;
-                               
+
                             }
 
+#link_botao a:hover         {
+
+                               color: #ffffff;
+                               margin-top:3px;
+                               float:left;
+                               width:100%;
+                               height:100%;
+                               text-decoration: none;
+
+                            }
+/*
+============================================*/
+
+/*========================   WIKI
+*/
+
+
+div#wiki                        { width:99.5%;  overflow:hidden;}  
+
+
+#wiki .titulo_lista          { }
+#wiki .conteudo_wiki         { width:80%; vertical-align:top; }
+#wiki .titulo_wiki           { 
+                               text-align:left; 
+                               vertical-align:top; 
+                               font-size:1.8em; 
+                               color:#2D6809;
+                               background-image: url("/theme/green/images/img09.gif");
+                               background-repeat: repeat-x;
+                               padding-left:15px;
+                               border-left: 1px solid #DBDBDB;
+                               border-bottom: 1px solid #CCCCCC;
+                             } 
+#wiki .titulo_categoria      { 
+                               text-align: left;
+                               background-image: url("/theme/green/images/img09.gif");
+                               background-repeat: repeat-x;
+                               padding-left:15px;
+                               border-left: 1px solid #DBDBDB;
+                               border-bottom: 1px solid #CCCCCC;
+                             }
+#wiki .itens_index ul        { padding-left:15px;; }
+#wiki .itens_index li        { list-style: square; font-size:0.9em;}
+#wiki .itens_index           { border-left: 1px solid #EDEDED;border-bottom: 1px solid #FFFFFF; padding-left:5px;vertical-align:top;}
+#wiki #link_botao            { float:left; text-align:left; background:none; width:40%;padding:0;}  
+#wiki #link_botao a          { display:inline; color:#000000; margin:0;}
+#wiki #link_botao a:hover    { text-decoration:underline; }
+#wiki h3                     { margin:0; width:60%; }
+#wiki #busca_wiki #resultado_busca
+                             { width: 70%; margin-left:1%; }
+#wiki .titulo_categoria h3   { color: #2D6809; margin-left:20px; }
+#wiki .wiki_texto            { float:left;width:85%; font-family:Arial,Verdana,sans-serif; font-size:12px; }
+#wiki #categorias div.formulario{ 
+                                  width: auto; 
+                                  padding-top: 10px; 
+                                  border-left: 1px solid #CCCCCC; 
+                                  border-right:1px solid #EDEDED;
+                                  border-bottom: 1px solid #CCCCCC;
+                                }
+
+                            
+/*=====================================================
+*/
+
+/* ===================================================
+# BOTOES DE NAVEGACAO*/  
+                            
+#artefatos .formulario input[type=submit], 
+.new_entidade a,
+.abilita a,
+.delete a,
+.usuarios_index a,
+.new_grupo a,
+.new_usuario a,
+.new_modulo a,
+.new_sistema a,
+.new_categoria a,
+.new_subcategoria a,
+.new_formulario a,
+.new_item a,
+.novo_cadastro a,
+.new_novo a,
+.ajuda a,
+.voltar a,
+.new_ajuda a,
+.new_comentario a,
+.hide_comentario a,
+.hide_artefato a,
+.hide_historico a,
+.hide_relacionamento a,
+.hide_auditoria a,
+
+.edit a                     {
+                               
+                               background-image: url("/theme/green/images/add_entidade.png");
+                               background-repeat:no-repeat;
+                               background-position: center top;
+                               color: #2D6809;
+                               font-size:0.7em;
+                               font-weight:normal;
+                               width:auto;
+                               height:15px;
+                               text-decoration: none;
+                               vertical-align: bottom;
+                               float:right;
+                               padding:0;
+                               margin:0;
+                               margin-right:20px;
+                               padding:3px;
+                               padding-top:36px;
+                               text-align:center;
+                               overflow: hidden;
+
+                            }
+                            
+.edit a                     { background-image: url("/theme/green/images/editar.png"); }
+
+.usuarios_index a           { background-image: url("/theme/green/images/usuario.png"); }
+
+.abilita a                  { background-image: url("/theme/green/images/des-habilita.png"); }
+
+.delete a                   { background-image: url("/theme/green/images/delete.png"); }
+
+.new_grupo a                { background-image: url("/theme/green/images/add_grupo.png"); }
+
+.new_usuario a              { background-image: url("/theme/green/images/add_usuario.png"); }
+
+.new_modulo a               { background-image: url("/theme/green/images/add_modulo.png"); }
+
+.new_sistema a              { background-image: url("/theme/green/images/add_sistema.png"); }
+
+.new_categoria a            { background-image: url("/theme/green/images/add_categoria.png"); }
+
+.new_subcategoria a         { background-image: url("/theme/green/images/add_sub_categoria.png"); }
+
+.new_formulario a           { background-image: url("/theme/green/images/add_form.png"); }
+
+.new_item a                 { background-image: url("/theme/green/images/add_item.png"); }
+
+.novo_cadastro a            { background-image: url("/theme/green/images/add_cadastro.png"); }
+
+.new_novo a                 { background-image: url("/theme/green/images/add_novo.png"); }
+
+.ajuda a                    { background-image: url("/theme/green/images/ajuda.png"); }
+
+.voltar a                   { background-image: url("/theme/green/images/voltar.png"); }
+
+.new_ajuda a                { background-image: url("/theme/green/images/add_ajuda.png"); }
+
+.new_comentario a           { 
+                              background-image: url("/theme/green/images/add_comentario.png");
+                              font-size:0.7em;
+                              padding-top:25px;
+                             }
+
+.hide_comentario a           { 
+                                  background-image: url("/theme/green/images/hide_comentario.png");
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
+                                  padding-top:25px;
+                             }
+                             
+.hide_historico a           { 
+                                  background-image: url("/theme/green/images/hide_historico.png");
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
+                                  padding-top:25px;
+                             }
+
+.hide_artefato a                { 
+                                  background-image: url("/theme/green/images/hide_artefato.png");
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
+                                  padding-top:25px;
+
+                                }
+
+.hide_relacionamento a          { 
+                                  background-image: url("/theme/green/images/hide_relacionamento.png");
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
+                                  padding-top:25px;
+                                }
+.hide_auditoria a          { 
+                                  background-image: url("/theme/infodoc/images/hide_auditoria.png");
+                                  color:#b5b5b5;
+                                  font-size:0.7em;
+                                  padding-top:25px;
+                                  
+                                }
+
+#artefatos .formulario input[type=submit] { 
+                                            background-image: url("/theme/green/images/add_artefato.png");
+                                            background-color:#FFFFFF; 
+                                            border:0; 
+                                            padding-top:25px; 
+                                            padding-bottom:15px;
+                                            font-size:0.7em;
+                                            margin-left:2px;
+                                            cursor:pointer;
+                                          }
+.new_entidade a:hover,
+.abilita a:hover,
+.delete a:hover,
+.usuarios_index a:hover,
+.new_grupo a:hover,
+.new_usuario a:hover,
+.new_modulo a:hover,
+.new_sistema a:hover,
+.new_categoria a:hover,
+.new_subcategoria a:hover,
+.new_formulario a:hover,
+.new_item a:hover,
+.novo_cadastro a:hover,
+.new_novo a:hover,
+.ajuda a:hover,
+.voltar a:hover,
+.new_ajuda a:hover,
+.new_comentario a:hover,
+.hide_comentario a:hover,
+.hide_historico a:hover,
+.hide_artefato a:hover,
+.hide_relacionamento a:hover,
+.hide_auditoria a:hover,
+#artefatos .formulario input[type=submit]:hover,
+.edit a:hover         {
+
+                                                            
+                               text-decoration: none;
+                               outline: 1px solid #D1D1D1;
+                               background-color: #F2F2F2;
+
+                            }
+#artefatos .formulario input[type=submit]:hover { color: #8C1C1C;}
+
+/*======================================
+*/                           
 
 .lista_item                 {
-                                color:#2D6809;
                                 font-size:0.8em;
                                 text-align:right;
                                 padding:5px 0;
                                 padding-right:6px;
+                                width:18%;
                                 min-width:15%;
-                                width:auto;
-                                background-color:#e0f4d3;
-                                border-top:1px;
-                                border-bottom:0px;
+                                background-color:#E3F1DA;
+
+                                border-top:1px solid #FFFFFF;
+                                border-bottom:1px solid #B6C6AC;
+                                background:color:#ffffff;
                             }
 
 .lista_conteudo pre         {   letter-spacing: 1px; }
@@ -475,17 +756,18 @@ input.enviar                          {
                                 padding:2px 1px 6px;
                                 border-bottom: 1px solid #EDEDED;
                             }
+.lista_conteudo img         { width: 30%; }                            
 
 #link_voltar                {
 
                                 padding:0;
                                 padding:9px 4px;
                                 padding-bottom:0px;
-                                margin:6px 2px ;
-                                width:99%;
+                                margin:6px 0px ;
+                                width:98.7%;
                                 float:left;
                                 background-image:url("/theme/green/images/fil6.jpg");
-                                border: 1px solid #EDEDED;
+                                border: 1px solid #E3F1DA;
 
                             }
 
@@ -500,25 +782,38 @@ input.enviar                          {
                                 padding-left:20px;
                                 padding-top:0px;
                                 background-repeat: no-repeat;
+                                float:left;
                             }
 
 #link_voltar a:hover        {
 
-                                color:#77cd44; 
+                                color:#77cd44;
                                 background-repeat: no-repeat;
 
                             }
 
 
-.formulario td.lista_item                  {  empty-cells: show; } 
-/**********************************************************************************************************/
-/*********************************************** MENSAGENS SISTEMA ***************************************/  
-/********************************************************************************************************/
-          
-          
-          
+.formulario td.lista_item                  {  empty-cells: show; }
+#listar .sobe,#listar .desce               { 
+                                             overflow:hidden;
+                                             background-repeat: no-repeat;
+                                             padding: 0px 5px;
+                                             width:100%;
+                                             height:100%;
+                                             color:#FFFFFF;
+                                             font-size
+                                             
+                                           }
+#listar .sobe                              { background-image: url("/theme/green/images/arrow_up.png"); }
+#listar .desce                             { background-image: url("/theme/green/images/arrow_down.png"); }
+/*
+MENSAGENS DO SISTEMA
+==============================================*/
+
+
+
 #flash_notice, #flash_error {
-    
+
                                 font-size: 0.9em;
                                 text-align:center;
                                 letter-spacing:1px;
@@ -528,56 +823,57 @@ input.enviar                          {
                                 padding-bottom: 5px;
                                 width:100%;
                                 height:auto;
-                                background-color:#95C4AE;
+                                background-color:#1a7629;
                             }
 
-#flash_error                { background-color:#F5C4C4; }  
+#flash_error                { background-color:#F5C4C4; }
 
 .error_messages {
 
     empty-cells:hide;
-}     
-
-          
-/***********************************************************************************************************/
-/**********************************************************************************************************/
-          
+}
 
 
-         /**********************************************************************************/
-        /********************************  FORM  ******************************************/
-       /***********************************************************************************/
+/*
+==============================================*/
 
 
-.formulario               { 
+/*
+FORMS
+==============================================*/
+
+.formulario               {
                             color:#2C3D21;
                             font-size:1em;
                             width:100%;
                             margin: 6px 0;
                             padding:2px 2px 25px;
-                            font-weight:bold; border: 1px solid #E3F1DA;
+                            font-weight:bold;
+                             border: 1px solid #E3F1DA;
                           }
-                          
-.formulario td            { empty-cells: hide ; }                          
+
+.formulario td            { empty-cells: hide ; }
 
 .formulario label         { margin:0; }
 
-.formulario select        { 
+.formulario select        {
                             font-size:0.9em;
                             color:#2D6809;
-                            height:29px;
-                            width:200px; 
-                            margin-bottom:8px;
+                            margin:3px 0;
                           }
 
 .formulario option        { background-color:#F5F5F5; color:#2D6809; }
 
 
-.formulario input[type=submit],#busca input[type=submit]  {
+.formulario input[type=submit],
+#auditorias input[type=submit],
+#busca input[type=submit]  {
 
                                     float:left;
                                     color:#E0E0E0;
-                                    background-color:#8C1C1C;
+                                    /* background-color:#8C1C1C; */
+                                    background-image: url("/theme/green/images/fundo_botoes.png");
+                                    background-position:center;
                                     padding: 0 4px;
                                     text-align:center;
                                     height:24px;
@@ -587,10 +883,15 @@ input.enviar                          {
                                     margin:5px 0;
                                     color: #ffffff;
                                     font-weight:bold;
-                                    background-color:#2D6809;    
+                                   
                                     border:0;
+                                    cursor:pointer;
 
                                 }
+.formulario input[type=submit]:hover,
+#auditorias input[type=submit]:hover,
+#busca input[type=submit]:hover { background-position:bottom; }
+.formulario .lista_conteudo     { border: 1px solid #FFFFFF }                              
 
 input[type=text],
 input[type=password]            {
@@ -604,7 +905,7 @@ input[type=password]            {
                                     background:#F5F5F5;
 
                                 }
-                                
+
 .formulario input[type=text]:focus,
 input[type=text]:hover,
 input[type=password]:focus,
@@ -612,77 +913,100 @@ input[type=password]:hover      {  background:#FAF5DC;  }
 
 input[type=checkbox]            { height:auto; margin:0; padding:0;            }
 
-select                          { margin: 0; margin:0 10px; padding-top: 3px; }
+select                          { margin: 0;padding: 0px; }
 
 textarea                        {
                                   border: 1px solid #E3F1DA;
                                   background:#F5F5F5;
                                   padding-left:2px;
-                                  margin:0; 
-                                  color:#8C1C1C;
+                                  margin:0;
+                                  color:#2D6809;
                                   font-family: "sans serif";
                                   font-size:0.9em;
                                 }
 
-.formulario textarea:focus, 
+.formulario textarea:focus,
 .formulario textarea:hover      { background:#FAF5DC; }
+/*==========================
+CRIACAO DE ITENS FORMULARIO 
+*/
 
 
 .formulario li                  { font-size:0.9em; list-style: none ; margin-left:20px; }
 
-.formulario td                  { font-size:0.8em;                                      }    
+.formulario td                  { font-size:0.8em;                                      }
 
 .formulario form li             { margin-left:20px;                                     }
 
 .formulario td li               {
                                   margin: 5px 0px;
                                   margin-top:2px;
-                                  color:#2D6809; 
+                                  color:#2D6809;
                                   font-size: 0.8em;
                                   list-style: none;
                                 }
 
-.formulario table               { width:100%; padding-bottom:30px;                      }
+/*.formulario table               { width:100%; padding-bottom:30px;                      }*/
 
 /*.formulario p { float:left; width:60%; margin:0px;}*/
 
-div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px; padding-top:20px}
+div.formulario { width:97.5%; float:left; padding-left:10px; padding-right: 10px; display:table;}
+td.form_item { padding-left:0; border:none;}
 
-#form_item                      { width:auto;} 
+#form_item               { width:auto;}
+#form_item table         { width: 100%; border-collapse:separate; border-spacing:0px;}
+#form_item h3            { font-size: 1em;}
+#form_item td h3         { font-size: 1.5em; }
+#form_item p             { font-size: 0.9em;} 
+#form_item td p          { font-size: 0.9em; margin:0; } 
+#form_item td.lista_item { color: #000000; font-weight: bold; font-size:0.8em;  width:20.3%;}
+.opera #form_item td.lista_item { color: #2D6809; font-weight: bold; font-size:0.8em; width:120px;}
+#form_item td.lista_conteudo { font-size:0.8em; padding: 0 0 0 6px; } 
+
+.lista_linha  { display:table-row; }
+div.lista_item { width:43.5%; display:table-cell ; }
+.opera div.lista_item { width:120px; display:table-cell ; }
+div.lista_conteudo {display:table-cell ; color:#000000; font-size:0.8em; padding:0 0 0 6px;}
+
+#ajax_item { font-size:1em; }  
+#form_item #ajax_item td.lista_item    { font-size: 1em; }
+#form_item #ajax_item td.lista_conteudo{ font-size: 1em; }
 
 .form_item_exemplo              {
-    
+
                                   letter-spacing:2px;
-                                  margin:3px;
+                                  margin:0;
                                   padding:0px;
                                   margin-left:8px;
-                                  color:#2D6809;
+                                  color:#aaaaaa;
                                   font-size: 0.6em;
                                   line-height:0.6em;
                                   font-weight:normal;
                                   list-style: none;
-                                  display:block;
 
                                 }
 
 .form_item_exemplo:before       {  content:"Ex:\""; }
 .form_item_exemplo:after        {  content:"\"";   }
 
+/*
+========================================================*/
+
 
 /**********************************************  FILTRO FORM **********************************************/
 
 
-#busca                      {         
+#busca                      {
                                   text-align:left;
                                   clear:both;
                                   color: #000000;
                                   border: 1px solid #E3F1DA;
-                                  padding: 8px 4px; 
+                                  padding: 8px 4px;
                                   padding-bottom: 5px;
                                   font-size: 0.8em;
                                   margin:3px 6px;
                                   margin-left:2px;
-                                  width:98.7%;
+                                  width:98.3%;
                                   float:left;
                                   border: 2px solid #F2F2F2;
                                   outline:1px solid #C0DCAF;
@@ -705,6 +1029,1376 @@ div.formulario { width:98.2%; float:left; padding-left:10px; padding-right: 10px
 
 .fechar                 { float:right; }
 
+/*
+RESULTADO DETALHADO BUSCA
+==================================================*/
+#cadastros #listar tr:hover { background:#FFFFFF; }
+#cadastros #listar b        { color: #2D6809;  margin-right:5px; }
+#cadastros #listar h3       { color: #2D6809; margin:0; display:inline; text-decoration:underline; font-size:1.2em; }
+#cadastros #listar ul       { padding:0px; }
+#cadastros #listar li       { border-bottom: 1px solid #E3F1DA; margin-top:5px; padding: 3px 0; font-size: 0.9em; }
+
+/*
+
+===================================================*/
 
 
-/***********************************************************************************************************/
+/*==========================
+*/
+
+
+/*==========================
+COMENTARIOS
+*/
+
+
+
+
+#show_actions               { font-size:0.7em; float: right; width:30%; text-align:right;}
+
+#show_actions a             {
+                              font-size: 1em;
+                              color:black;
+                              float:none;
+                              font-weight:normal;
+                              text-decoration:underline;
+                              padding:0;
+                              padding-top:0px;
+
+                            }
+
+#comentarios                {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+
+                             }
+
+#artefatos                   {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+                             }
+                             
+#historico                   {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+                             }                             
+#comentarios #barra_titulo,
+#artefatos #barra_titulo,
+#historico #barra_titulo,
+#relacionados #barra_titulo,
+#auditorias #barra_titulo
+                             {
+
+
+                                padding:9px 5px;
+                                width:98.7%;
+                                min-height:25px;
+                                clear:both;
+                                margin:6px 2px;
+                                background-image: none;
+                                background-color: #ffffff;
+                                border: 1px solid #cccccc;
+
+
+                                }
+                                
+#comentarios #barra_titulo h3   { 
+                                  font-size: 1.2em;
+                                  padding-left:33px; 
+                                  background-image: url("/theme/green/images/comment_write.png") ;
+                                }
+
+#artefatos #barra_titulo h3     { 
+                                  font-size: 1.1em; 
+                                  padding-left:32px; 
+                                  background-image: url("/theme/green/images/artefato.png") ;
+                                }
+                                
+#relacionados #barra_titulo h3   { 
+                                  font-size: 1em; 
+                                  padding-left:32px; 
+                                  background-image: url("/theme/green/images/relacionamento.png") ;
+                                }
+                                                                
+#historico #barra_titulo h3     { font-size: 1em;
+                                  padding-left:32px;
+                                  background-image: url("/theme/green/images/historico.png");
+                                 }     
+#auditorias #barra_titulo h3   { 
+                                  font-size: 1em; 
+                                  padding-left:32px; 
+                                  background-image: url("/theme/infodoc/images/auditoria.png") ;
+                                }
+    
+.titulo_comentario              { font-size:10px; background-image:none; }
+
+
+
+
+
+#comentarios .itens_index       {
+
+                                  font-size:0.8em;
+                                  margin:0 0%;
+                                  margin-bottom:14px;
+                                  padding: 10px 0px;
+                                  text-align:left;              /* Item listado */
+                                  padding-left: 30px;
+                                  width:auto;
+                                  border:0;
+                                  border-bottom: solid 1px #cccccc;
+                                  width:99%;
+                                  height:auto;
+                                  background-color: #F5F5F5;
+                                  
+                                 }
+                                 
+#comentarios #listar             {
+
+
+                                  float:left;
+                                  margin: 6px 0 6px 0px;
+                                  min-height:450px;
+                                  background-repeat:repeat-x;
+                                  height:auto;
+                                  min-height:15px;
+                                  border: 0;
+                                  width:100%;
+                                  padding:2px 2px ;
+
+                                  }
+/*
+#comentarios #link_botao,
+#artefatos #link_botao            {
+
+                                  font-size:0.7em;
+                                  padding: 0.4% 4px;
+                                  text-align:center;
+                                  height:auto;
+                                  min-width:80px;
+                                  width:auto;
+                                  margin:2px 5px 0 0 ;
+                                  float:right;
+
+                                  font-weight:normal;
+                                  background-color:#8C1C1C;
+                                  border:1px solid #8C1C1C;
+
+                                  }
+
+#comentarios #link_botao a:hover,
+#artefatos #link_botao a:hover    { color:#FFFFFF; }
+
+#comentarios #link_botao a,
+#artefatos #link_botao a          {
+
+                                  font-weight:none;
+                                  margin:0;
+                                  padding:0;
+                                  background-color:#8C1C1C;
+                                  color:#E0E0E0;
+
+                                  font-weight: bold;
+                                  width:100%;
+                                  height:100%;
+
+                                 }
+*/    
+#comentarios h3.titulo_new       {                               
+
+                                  width:98%;
+                                  margin:0;
+                                  padding:0;
+                                  margin-top:10px;
+                                  margin-bottom: 10px;
+                                  background-image:none;
+                                  font-size:0.8em;
+
+                                 }
+                               
+#comentarios input[type=submit]  {  
+                                    margin-top:5px;
+                                    color: #EDEDED;
+                                    font-weight:bold;
+                                    font-size:0.7em;
+                                    background-color:#2D6809;
+                                    border: 1px solid #2D6809;
+
+                                 }
+
+#comentarios input[type=submit]:hover { color:#FFFFFF; }
+
+#new_comentario                 { padding:0 5px; width:100%; margin:10px 0; margin-left:10px;}
+
+#comentarios textarea           { background-color:#FFFFFF;       }
+
+#comentarios textarea:focus     { background-color:#FFFFFF;       }
+
+/*
+==============================================*/
+
+
+
+/*
+ARTEFATOS
+==============================================*/
+#new_artefato                   { 
+
+                                padding:0;
+                                width:100%; 
+                                float:left;
+                                margin:10px 0; 
+ 
+
+                                }
+                            
+#artefatos .formulario        { margin:0;}
+
+#artefatos div.formulario     { width:65%; float:left; padding:0; border:0; margin:0;}
+
+#artefatos .formulario select { color:#2D6809; float:left; margin:1% 22px; vertical-align:middle;}
+                               
+#artefatos .formulario option  {  }
+/*
+#artefatos .formulario input[type=submit]  { 
+                                            
+                                background-color:#8C1C1C;
+                                border:1px solid #8C1C1C;
+                                padding:0px 2px 0;
+                                font-size:0.6em;
+                                font-weight:bold;
+                                color:#E0E0E0;
+                                text-align:center; 
+                                float:right;
+                                height:2.6em; 
+                                margin:1px 0 0;
+                                
+                                            }
+                                            
+#artefatos .formulario input[type=submit]:hover { color:#FFFFFF }
+*/
+#artefatos h3.titulo_new
+                               {
+
+                                width:98%;
+                                margin:0;
+                                padding:0;
+                                margin-top:10px;
+                                margin-bottom: 10px;
+                                background-image:none;
+                                font-size:0.8em;
+
+                               }
+                               
+#artefatos input[type="file"] { margin-top: 10px; }
+
+#artefatos input[type=submit]  { 
+                                 margin-bottom:5px;
+                                 color: #EDEDED;
+                                 font-weight:bold;
+                                 font-size:0.7em;
+                                 background-color:#2D6809;
+                                 border: 1px solid #2D6809;
+
+                                }
+
+#artefatos input[type=submit]:hover { color:#FFFFFF; }
+
+#artefatos #listar { border:1px solid #CCCCCC; padding-bottom:2px; margin:6px 0.1% ;} 
+#artefatos #listar .download_artefato a,
+#artefatos #listar .delete a             { 
+                        padding-top:50px; 
+                        background-position:center;
+                        background-repeat: no-repeat;
+                        margin:0; margin-top:10px;
+                        float:right;
+                        margin:4% 35%;
+                        
+                                          }
+#artefatos #listar .delete a:hover { background-color:#F2F2F2; }
+#artefatos #listar .download_artefato a { background-image: url("/theme/green/images/download.png"); }
+
+                     
+#artefatos #listar .download_artefato a:hover { text-decoration:none; padding-top: 40px; outline:1px solid #D1D1D1; background-color:#F2F2F2;}  
+
+
+#artefatos td           { 
+
+                             border-bottom:1px solid #ededed;
+                             background-color: #F5F5F5; 
+                             vertical-align:bottom;padding:8px; 
+                             padding-bottom:1px;
+                        }
+
+#artefatos .itens_index { background-color: #F5F5F5; min-width:10px; }
+
+#artefatos .formulario input[type="text"] { margin-top: 5px; }
+
+#artefatos form         { float:left; width:100%; }
+
+#artefatos input[type="text"], 
+input[type="password"]  { margin-top:0; }
+                       
+#artefatos .lista_item  { background-image:url("theme/green/images/img09.gif"); border-bottom:1px solid #EDEDED; text-align:center;  }
+
+.artefato               { border: 1px solid #CCCCCC; width:100%; padding: 2px; outline: 1px solid #EDEDED;}
+
+#artefatos .artefato td.lista_item {
+                                     background-color:none; 
+                                     border-bottom:0;  
+                                     padding-bottom:1%;
+                                     text-align:right;
+                                   }
+
+#artefatos td.lista_conteudo {
+                                         background-color:#FFFFFF;
+                                         border-bottom:1px solid #EDEDED; 
+                                         padding-bottom:8px;
+                                       }
+
+#artefatos .artefato td                { background-color:#FFFFFF; border: 0;}
+
+#artefatos textarea:focus,
+#artefatos textarea:hover              { background:#FAF5DC; }
+
+#artefatos tr:hover                    { background:#FAF5DC; }   
+
+#artefatos ul                          { list-style:none ;}
+
+/*
+===========================================*/
+
+
+/*
+HISTORICO
+===========================*/
+
+
+#historico #listar             {
+
+
+                                  float:left;
+                                  margin: 6px 0 6px 0px;
+                                  min-hei */ght:450px;
+                                  background-repeat:repeat-x;
+                                  height:auto;
+                                  min-height:15px;
+                                  width:99.8%;
+                                  padding:2px 2px;
+
+                                  }
+
+
+/*
+RELACIONAMENTOS
+============================*/
+
+
+#relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
+#relacionados form               { width:28%; margin-left:20px;float:left; }
+#relacionados select             { color:#2C3D21;  }
+#relacionados #barra_titulo      { width:98.2%; }
+#relacionados .formulario input[type=submit] {float:none}
+
+/*
+AUDITORIA
+============================*/
+
+
+#auditorias form               { margin-left:0; }
+#auditorias form input[type=submit]
+                               { min-width: 0; height:auto; font-size: 1em; }
+#auditorias table              { float:left; font-size : 0.8em; margin:10px 0 0 0; width:100%; border: 1px solid #DBDBDB; padding: 2px; }
+#auditorias table td           {  } 
+#auditorias table td.lista_item   { padding-bottom: 1%; border :0; background-color: #FFFFFF; }
+#auditorias .lista_conteudo    { border:0;}
+#auditorias select             { color:#2D6809;  font-size:1em;}
+#auditorias #barra_titulo      { width:98.3%; }
+#auditorias .formulario input[type=submit] {float:none}
+
+/*
+AJUDA AO USUARIO 
+==================================== */
+
+#lista_ajuda ul                         {   list-style:none ; padding-left:10px;}
+
+#lista_ajuda                            {   
+                                            font-size:0.8em;            
+                                            list-style:none ;
+                                            margin:0;
+                                            padding:0;
+                                            width:20%;
+                                            height:auto;
+                                            min-height:50px;
+                                            float:left;
+                                            
+                                        }    
+  
+#lista_ajuda li                         { margin:0; }
+
+#lista_ajuda li a                       { padding:0; color:#2C3D21;  border-bottom: 1px solid #2C3D21; line-height:1.6em;}
+
+#lista_ajuda li a:hover                 {
+                                          text-decoration:none;  
+                                          border-bottom: 2px solid #2C3D21;
+                                          background-color:#2C3D21;
+                                          color:#FFFFFF;
+                                         }
+
+#lista_ajuda li a.ativo:hover            {                             
+                                          text-decoration:none;  
+                                          border-bottom: 0px solid #2C3D21;
+                                          background-color:#ffffff;
+                                          
+                                         }
+                                          
+#lista_ajuda li a.ativo                  { font-weight:bold; border:none; color:#2C3D21; font-size: 1.2em;}
+
+#conteudo_ajuda                          { width:77%; margin:5px 0.2%; border-left:2px solid #EDEDED; float:left; padding:5px; } 
+
+#frame                                   { height: auto;  margin: 5px 0;}
+
+#frame ul                                { width:25%;font-size:0.8em; float:left;}
+
+#frame h3#barra_titulo                   { padding-left: 15px; color:#2C3D21; }
+
+#frame h4,#frame h5                      { margin-left: 20px; margin-top:1em; margin-bottom:1em; width:100%; clear:both;float:left;}
+
+#frame p,#frame code                     { margin-left: 20px; margin-top: 0.6em; margin-bottom:0.6em; font-size:0.8em;width:80%; clear:both;}
+
+
+#conteudo_ajuda iframe          {border: 1px none; width:100%; height:auto padding:0;}
+
+#lista_ajuda a:visited          { color:#855c5c; }  
+
+#frame img                      { border:1px solid #EDEDED; margin-left:15px; margin-bottom:10px; }
+
+#frame img.semborda             { border: 1px solid #FFFFFF; float:left;}
+
+#frame a,
+#frame strong,
+#frame h4,
+#frame h5                       { color:#2C3D21; }
+#frame ul.emlinha                        { float:none; }
+
+/*========================================*/
+
+
+                      
+/* AJUDAS                      
+============================================== */
+
+/* AJUDAS INDEX
+============================================== */
+
+#listar_ajuda                    { font-family: Arial,Verdana,sans-serif ; font-size:12px;  }
+#listar_ajuda td                 { margin:0; padding:5px; border-bottom: 1px dashed #EDEDED ;}
+#listar_ajuda .edit              { float:left;  font-size:1.2em;}
+/*
+===========================*/
+
+#topo_ajuda,#clean_topo          {     
+                                       width: 100%; 
+                                       min-height:20px; 
+                                       margin:0;
+                                       width:100%;
+                                       background-image: url("/theme/green/images/fil1.png");
+                                       padding-bottom: 10px;
+                                       padding-top:10px;
+                                       display: inline-block;
+                                       border-top:8px solid #2D6809;
+                                       border-bottom: 1px  solid #EDEDED;
+                                       
+                                 }
+                                 
+#topo_ajuda b,#cleam_conteudo b  {     margin:10px; color: #2D6809; font-size:1.2em;}
+
+#rodape_ajuda,#rodape_clean      {     
+                                       width:100%; height:32px;
+                                       border-top:5px solid #2D6809;
+                                       border-bottom: 1px solid #EDEDED;
+                                       background-image: url("/theme/green/images/img11.gif");
+                                 }
+                                 
+#ajuda_tudo, #clean_tudo         {     min-height:450px; width:auto; }
+
+#ajuda_conteudo,#cleam_conteudo  {     padding: 5px; font-family: Arial,Verdana,sans-serif ; font-size:12px; }
+
+
+/*
+COMUNICACAO ============================
+*/
+
+.titulo_comunicacao
+                                 { width:100%;
+                                   float: left;
+                                   /*background-image: url("/theme/green/images/img09.gif");*/
+                                   background-repeat: repeat-x;
+                                   min-height: 54px;
+                                   border-top: 1px solid #E3F1DA;
+                                   
+                                  } 
+#comunicacao                      { width:24.5%;
+                                    float: left;
+                                    border: 1px solid #E3F1DA;
+                                    height:auto;
+                                    margin: 3px 0;
+                                    padding-bottom:10px;
+                                    background-color: #B6C6AC;
+                                  }                                  
+                                   
+#comunicacao .micro_messagem,
+#comunicacao .mensagem          { 
+                                   width:93%;
+                                   /*background-color:#FFFFFF;*/
+                                   float:left; 
+                                   padding:10px;
+                                   /*border: 1px solid #EDEDED;
+                                   border-bottom: 1px solid #EDEDED;
+                                   border-left:1px solid #FFFFFF;
+                                   border-right:1px solid #FFFFFF; */
+                                   font-size: 0.7em;
+                                  }            
+                                  
+#comunicacao .mensagem           {  height:auto;
+                                    border: 1px solid #E3F1DA;
+                                    width:90%;
+                                    margin:0 3%;
+                                    margin-bottom: 5px;
+                                    margin-top: 2px;
+                                    padding:5px;
+                                    background-image: url("/theme/green/images/fil2.jpg");
+                                    overflow:hidden;
+                                    -moz-border-radius-bottomleft:5px;
+                                    -moz-border-radius-bottomright:5px;
+                                    -moz-border-radius-topleft:5px;
+                                    -moz-border-radius-topright:5px;
+                                  }
+                                  
+#comunicacao p                    { padding:0;margin:0;margin-bottom:2px;overflow:hidden; }
+#comunicacao #mensagens           { float:left; width:100%;}
+#comunicacao #mensagens b         { margin-left:5%; font-size: 0.7em;float:left; }
+#comunicacao #mensagens .mensagem b
+                                  { margin:0;  font-size:1em;}
+#comunicacao form                 { margin:0; }
+#comunicacao form textarea        { 
+                                    margin:0 1%;
+                                    margin-top:5px; 
+                                     
+                                    padding:3px;
+                                    width:96%;
+                                  }
+                                  
+#comunicacao input[type=submit]   { float:right; 
+                                    margin-top:5px; 
+                                    margin-right:6px; 
+                                    font-size: 0.7em;
+                                    background-color:#2D6809;
+                                    border: 1px solid #2D6809;
+                                    color:#EDEDED;
+                                    font-weight:bold;
+                                    
+                                   }      
+#comunicacao input[type=submit]:hover{ color:#FFFFFF; cursor:pointer;}
+           
+
+
+
+                                  
+#comunicacao h3                   { 
+                                   padding-left:28px;
+                                   background-image:url("/theme/green/images/comunicacao.png");
+                                   background-repeat:no-repeat;
+                                   background-position: left;
+                                   margin-bottom:10px;
+                                   margin-left:10px;
+                                   margin-top:20px;
+                                   width:50%;
+                                   float:left;
+                                  }
+#comunicacao a                    { text-align:right;font-weight:bold; float:right;   font-size: 0.6em; width:38%; margin:0; margin-top:10px; }                                  
+#comunicacao a:hover              { background-color:#C0DCAF; text-decoration:none; }
+div#historico_com_blogs_path a    { width:38%; margin-right:5px;margin-top:5px; }
+
+div#com_blogs_path a              { width:25%; margin-right:5px; } 
+                                  
+                                  
+#comunicacao b                    { margin-left: 2%; color:#2D6809;}
+
+#comunicacao #mensagens .mensagem b.hmensagem
+                                  { font-size:0.8em; color:#CCCCCC;ma }
+
+.avatar                           {
+                                     width:50px; 
+                                     height:50px;
+                                     float:left; 
+                                     background-image:url("/theme/green/images/perfilbg2.png"); 
+                                     margin:2px 2px;
+                                  }
+                                  
+.avatar img                       { margin:4%; height:90%; width:90%; }                                   
+/*
+===========================================
+HISTORICO MICROBLOG
+*/
+#historico_microblog                        { width:99.3%; padding-bottom:25px; } /* herdado de #listar */
+#historico_microblog h3                     { margin: 3px 0 ; color:#2D6809; margin-left:33px; } 
+#historico_microblog .mensagem              { min-height:50px;height:auto; border-top: 1px dotted #CCCCCC; border-bottom:1px dotted #CCCCCC; padding: 0.7em 0 20px 33px; font-size: 0.8em;  }
+#historico_microblog .mensagem:hover        { background: #C0DCAF; }
+#historico_microblog b                      { color: #2D6809;  float:left;} 
+#historico_microblog b.hmensagem            { color: #CCCCCC; font-size:0.8em; float:none;}
+#historico_microblog p                      { padding:0;margin:0;margin-bottom:2px; }
+
+/*
+==========================================
+PAGINACAO DO HISTORICO DO MICROBLOG
+*/
+
+.pagination                                 { font-family: "sans serif"; font-size: 0.8em;  width:26%; margin:10px 38%; }
+.pagination a                               { background-color: #FFFFFF; padding: 2px 3px; }  
+.pagination .current,.pagination a:hover    { background-color: #2D6809; color: #FFFFFF; padding: 2px 3px; text-decoration:none; } 
+
+/*
+==========================================
+PAGINA PRINCIPAL INTRANET
+*/
+#intranet_inicial                           { border: none; font-size:0.8em;width:99%;  }
+#intranet_inicial ul.menu_nav               { border-left: 3px solid #EDEDED; width:20%; margin:5px 0; padding:0 15px; float:left;}
+#intranet_inicial ul.menu_nav li            { list-style: none; border-bottom: 1px dashed #EDEDED; padding:3px; }
+#intranet_inicial ul.menu_nav li b          { font-size: 1.7em; } 
+#intranet_inicial ul.menu_nav li a          { display:block ; font-size:1em; padding:3px;}
+#intranet_inicial ul.menu_nav li a:hover    { text-decoration:none; width:100%; background-color:#2D6809; color:#FFFFFF; }
+                                            
+#bloco_p                                    { width:60%;  padding: 5px 20px; float:left;  margin-bottom:5px; }
+.bloco                                      { width:60%; float:left; margin:0 10px;  }
+#intranet_inicial .bloco h1,
+#intranet_inicial .bloco h2
+                                            { margin:1.33em 13px; }
+#intranet_inicial #bloco_p h1,
+#intranet_inicial .bloco h2                 { background-image: url("/theme/green/images/fil2.jpg");color: #2D6809; padding:7px; border-bottom: 1px solid #CCCCCC;}
+.bloco p b.n                                { 
+                                              padding:3px 5px ; 
+                                              background-image: url("/theme/green/images/fundo_botoes.png");
+                                              background-position: center;
+                                              color: #FFFFFF;
+                                              -moz-border-radius-bottomleft:5px;
+                                              -moz-border-radius-bottomright:5px;
+                                              -moz-border-radius-topleft:5px;
+                                              -moz-border-radius-topright:5px;
+                                            }                                            
+.bloco p                                    { float:left; margin: 20px 13px; width:100%; line-height:1.5em; }  
+.bloco h3                                   { margin:13px; }
+.bloco  ol                                  { float:left; margin-left:15px;}
+.bloco  ol li                               { font-weight: bold; }
+.bloco_img                                  { float:left; width: 78%; padding:1% 0.5%; height:auto; border: 2px solid #EDEDED;  background-color:#FAF5DC; margin-left:13px; margin-bottom:15px;  }
+.bloco_img                                  {
+                                              -moz-border-radius-bottomleft:5px;
+                                              -moz-border-radius-bottomright:5px;
+                                              -moz-border-radius-topleft:5px;
+                                              -moz-border-radius-topright:5px; 
+                                            } 
+.bloco_img img                              { margin: 0 10px; border: 1px solid #EDEDED;
+                                              text-align:center;  
+                                              border-width:1px 1px 2px 2px ;
+                                              border-color:#EDEDED #EDEDED #CCCCCC #CCCCCC; 
+                                            } 
+                                             
+.bloco_img b                                { display:block; text-align: center;} 
+
+a.add_conteudo                              { 
+                                             
+                                              background-image:url("/theme/green/images/fundo_botoes.png");
+                                              background-position: bottom;
+                                              font-family: "sans serif";
+                                              color: #FFFFFF;
+                                              height:30px;
+                                              padding:0px 8px;
+                                              padding-top: 10px;
+                                              margin-left: 20px;
+                                              float:left;
+                                              border: 4px solid #2D6809;
+                                              text-decoration:none;
+                                            }
+a.add_conteudo:hover                        { background-position: top; border-color: #77CD44; }                    
+/*==========================================
+*/
+
+/*
+VERBETES INTRANET
+==========================================*/
+
+#pagina_verbete                            { width: 99.4%; height:auto;}
+#pagina_verbete .verbete                   { width: 98.6%;  float:left; margin:5px;}
+#pagina_verbete .verbete                   {
+                                             border: 1px solid #EDEDED;
+                                             -moz-border-radius-topleft:5px;
+                                             -moz-border-radius-topright:5px;
+                                           }
+.titulo_verbete                           { width: 100%; clear:both; font-size:0.8em; height:2em; background-image: url(/theme/green/images/img09.gif); padding-top:3px; }
+.titulo_verbete .acoes_verbete            { width:14%;  float:right; text-align:right; padding: 0 5px; } 
+.titulo_verbete #edit_pagina_verbete      { width:10%; float:right; margin-left:5px;}
+.titulo_verbete #edit_pagina_verbete a:hover
+                                          { outline:1px solid #CCCCCC; }   
+.titulo_verbete #edit_pagina_verbete a.alterar
+                                          { color:#DBDBDB; background-image:url(/theme/green/images/editar_mini.png); width:15px; padding-left:3px; float:right; background-repeat:no-repeat;}
+.titulo_verbete #edit_pagina_verbete a.excluir
+                                          { color:#DBDBDB; background-image:url(/theme/green/images/lixo.png); width:15px; padding-left:3px; float:right; }
+.titulo_verbete .acoes_verbete  a.mini    { color:#DBDBDB; background-image:url(/theme/green/images/minimizar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.max     { color:#DBDBDB; background-image:url(/theme/green/images/maxmizar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.fechar  { color:#DBDBDB; background-image:url(/theme/green/images/fechar.png); width:15px; padding-left:3px;float:right;   }
+.titulo_verbete .acoes_verbete  a.mini:hover,
+.titulo_verbete .acoes_verbete  a.max:hover,
+.titulo_verbete .acoes_verbete  a.fechar:hover
+                                          { outline:1px solid #CCCCCC; }
+.titulo_verbete b                         { float:left; margin-left: 5px;}
+.conteudo_verbete                         { font-family:Arial,Verdana,sans-serif; font-size:12px; overflow:hidden; }
+
+/*
+PERSONALIZACAO DA PAGINA PRINCIPAL DA ENTIDADe
+==============================*/
+#home_entidade                            { font-family:Arial,Verdana,sans-serif; font-size:12px; text-align:left; background-color:#FFFFFF; }
+
+
+/*
+HOME DA ENTIDADE
+=================================*/
+                                               
+#status h4                                { 
+                                            color:#949494;
+                                        	font-family: Arial,Helvetica,Verdana;
+                                        	margin:0;
+                                        	margin: 1px 0 0 5px;
+                                        	clear:both;
+                                        	text-align:left;
+                                        	display:block;
+                                          }	
+                                          #statusform         { margin:  0px; font-size:0.8em; }                       
+#status input[type=text],
+#status input[type=password]   {     
+                                    padding:0;
+                                    padding-top:3px;
+                                    padding-left:2px;
+                                    width:auto;
+                                    min-width:100px;
+                                    color:#2D6809;
+                                    font-size:0.9em;
+                                    border: 1px solid #CCCCCC;
+                                    margin:0 5px;
+                                    margin-bottom:4px;
+                                    background:#F5F5F5;    
+                              }
+                              
+#status input[type=submit]     {   
+                                    margin-left: 52px;
+                                    margin-top:3px;
+                                    font-size: 0.8em;
+                                    border: 1px solid #CCCCCC;
+                                    color:#2D6809;
+                                    
+                                    
+                              }   
+#navcontainer ul {
+      	font-size:0.8em;
+      	font-weight:bold;
+      	padding: 6px;
+      	margin: 20px 0px 0px 0px;
+      	list-style-type: none;
+      	text-align: left;
+      	background-color:#ffffff;
+      	height:18px;
+      	border-top: solid 5px #2D6809;
+      	border-bottom: solid 1px #DBDBDB;
+      	background-image: url("/theme/green/images/img09.gif");
+	background-repeat: repeat-x;
+    }
+    #navcontainer ul li {
+     	display: inline;
+    }
+    #navcontainer ul li b {
+     	color:#7a7272;
+    }
+    #navcontainer ul li a{
+	text-decoration: none;
+	padding:0px 15px 0px 15px;
+	color: #000000;
+    }
+    #navcontainer ul li a:hover{
+	text-decoration: underline;
+	
+    }
+/*Fim Menu*/ 
+
+/*
+PUBLICACOES
+==========================*/
+
+#publicacoes        {
+                       	min-height: 50px;
+                       	width:37%;
+	                    float:right;
+	                    border-left: 2px solid #EDEDED;
+	                    padding:10px;
+                    }
+#publicacoes h2            {   margin: 0; margin-left:10px; color:#2D6809; }
+#publicacoes ul            {   padding: 0 ; padding-left:10px; }
+#publicacoes ul li         {   height:25px; border-bottom: 1px dashed #EDEDED;  list-style:none; padding: 0px 0; }  
+#publicacoes ul li a       {   color: #2D6809; width:100%;  height:100%;  display:block; margin-top:4px; padding-top:4px; font-size:0.8em; }
+#publicacoes ul li a:hover {   background-color: #F2F2F2; text-decoration:none;    }
+
+
+
+#conteudo_customizado {
+
+                    width:60%;
+                    min-height:160px;
+	                float: left;
+	                padding: 3px 0px 3px 3px;
+	                margin: 10px 0 0 0;
+	                background-color: #FFFFFF;
+	                text-align: justify;
+                      
+                     }
+/*
+=========================================#DATATABLES
+*/
+
+/*
+ *  File:         demo_table.css
+ *  CVS:          $Id$
+ *  Description:  CSS descriptions for DataTables demo pages
+ *  Author:       Allan Jardine
+ *  Created:      Tue May 12 06:47:22 BST 2009
+ *  Modified:     $Date$ by $Author$
+ *  Language:     CSS
+ *  Project:      DataTables
+ *
+ *  Copyright 2009 Allan Jardine. All Rights Reserved.
+ *
+ * ***************************************************************************
+ * DESCRIPTION
+ *
+ * The styles given here are suitable for the demos that are used with the standard DataTables
+ * distribution (see www.datatables.net). You will most likely wish to modify these styles to
+ * meet the layout requirements of your site.
+ *
+ * Common issues:
+ *   'full_numbers' pagination - I use an extra selector on the body tag to ensure that there is
+ *     no conflict between the two pagination types. If you want to use full_numbers pagination
+ *     ensure that you either have "example_alt_pagination" as a body class name, or better yet,
+ *     modify that selector.
+ *   Note that the path used for Images is relative. All images are by default located in
+ *     /images/datatable/ - relative to this CSS file.
+ */
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables features
+ */
+
+.dataTables_wrapper {
+	position: relative;
+	min-height: 302px;
+	clear: both;
+	_height: 302px;
+	zoom: 1; /* Feeling sorry for IE */
+}
+
+.dataTables_processing {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 30px;
+	margin-left: -125px;
+	margin-top: -15px;
+	padding: 14px 0 2px 0;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 14px;
+	background-color: white;
+}
+
+.dataTables_length {
+	width: 40%;
+	float: left;
+}
+
+.dataTables_filter {
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+.dataTables_info {
+	width: 60%;
+	float: left;
+}
+
+.dataTables_paginate {
+	width: 44px;
+	* width: 50px;
+	float: right;
+	text-align: right;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	float: left;
+}
+
+.paginate_disabled_previous {
+	background-image: url("/images/datatable/back_disabled.jpg");
+}
+
+.paginate_enabled_previous {
+	background-image: url("/images/datatable/back_enabled.jpg");
+}
+
+.paginate_disabled_next {
+	background-image: url("/images/datatable/forward_disabled.jpg");
+}
+
+.paginate_enabled_next {
+	background-image: url("/images/datatable/forward_enabled.jpg");
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+ */
+table.display {
+	margin: 0 auto;
+	width: 100%;
+	clear: both;
+}
+
+table.display thead th {
+	padding: 3px 18px 3px 10px;
+	border-bottom: 1px solid black;
+	font-weight: bold;
+	cursor: pointer;
+	* cursor: hand;
+}
+
+table.display tfoot th {
+	padding: 3px 10px;
+	border-top: 1px solid black;
+	font-weight: bold;
+}
+
+table.display tr.heading2 td {
+	border-bottom: 1px solid #aaa;
+}
+
+table.display td {
+	padding: 3px 10px;
+}
+
+table.display td.center {
+	text-align: center;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc {
+	background: url("/images/datatable/sort_asc.png") no-repeat center right;
+}
+
+.sorting_desc {
+	background: url("/images/datatable/sort_desc.png") no-repeat center right;
+}
+
+.sorting {
+	background: url("/images/datatable/sort_both.png") no-repeat center right;
+}
+
+.sorting_asc_disabled {
+	background: url("/images/datatable/sort_asc_disabled.png") no-repeat center right;
+}
+
+.sorting_desc_disabled {
+	background: url("/images/datatable/sort_desc_disabled.png") no-repeat center right;
+}
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+table.display tr.odd.gradeA {
+	background-color: #ddffdd;
+}
+
+table.display tr.even.gradeA {
+	background-color: #eeffee;
+}
+
+table.display tr.odd.gradeA {
+	background-color: #ddffdd;
+}
+
+table.display tr.even.gradeA {
+	background-color: #eeffee;
+}
+
+table.display tr.odd.gradeC {
+	background-color: #ddddff;
+}
+
+table.display tr.even.gradeC {
+	background-color: #eeeeff;
+}
+
+table.display tr.odd.gradeX {
+	background-color: #ffdddd;
+}
+
+table.display tr.even.gradeX {
+	background-color: #ffeeee;
+}
+
+table.display tr.odd.gradeU {
+	background-color: #ddd;
+}
+
+table.display tr.even.gradeU {
+	background-color: #eee;
+}
+
+
+tr.odd {
+	background-color: #E2E4FF;
+}
+
+tr.even {
+	background-color: white;
+}
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+.top, .bottom {
+	padding: 15px;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+
+.top .dataTables_info {
+	float: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.dataTables_empty {
+	text-align: center;
+}
+
+tfoot input {
+	margin: 0.5em 0;
+	width: 100%;
+	color: #444;
+}
+
+tfoot input.search_init {
+	color: #999;
+}
+
+td.group {
+	background-color: #d1cfd0;
+	border-bottom: 2px solid #A19B9E;
+	border-top: 2px solid #A19B9E;
+}
+
+td.details {
+	background-color: #d1cfd0;
+	border: 2px solid #A19B9E;
+}
+
+
+.example_alt_pagination div.dataTables_info {
+	width: 40%;
+}
+
+.paging_full_numbers {
+	width: 400px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.paging_full_numbers span.paginate_button,
+ 	.paging_full_numbers span.paginate_active {
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.paging_full_numbers span.paginate_button {
+	background-color: #ddd;
+}
+
+.paging_full_numbers span.paginate_button:hover {
+	background-color: #ccc;
+}
+
+.paging_full_numbers span.paginate_active {
+	background-color: #99B3FF;
+}
+
+table.display tr.even.row_selected td {
+	background-color: #B0BED9;
+}
+
+table.display tr.odd.row_selected td {
+	background-color: #9FAFD1;
+}
+
+
+/*
+ * Sorting classes for columns
+ */
+/* For the standard odd/even */
+tr.odd td.sorting_1 {
+	background-color: #D3D6FF;
+}
+
+tr.odd td.sorting_2 {
+	background-color: #DADCFF;
+}
+
+tr.odd td.sorting_3 {
+	background-color: #E0E2FF;
+}
+
+tr.even td.sorting_1 {
+	background-color: #EAEBFF;
+}
+
+tr.even td.sorting_2 {
+	background-color: #F2F3FF;
+}
+
+tr.even td.sorting_3 {
+	background-color: #F9F9FF;
+}
+
+
+/* For the Conditional-CSS grading rows */
+/*
+ 	Colour calculations (based off the main row colours)
+  Level 1:
+		dd > c4
+		ee > d5
+	Level 2:
+	  dd > d1
+	  ee > e2
+ */
+tr.odd.gradeA td.sorting_1 {
+	background-color: #c4ffc4;
+}
+
+tr.odd.gradeA td.sorting_2 {
+	background-color: #d1ffd1;
+}
+
+tr.odd.gradeA td.sorting_3 {
+	background-color: #d1ffd1;
+}
+
+tr.even.gradeA td.sorting_1 {
+	background-color: #d5ffd5;
+}
+
+tr.even.gradeA td.sorting_2 {
+	background-color: #e2ffe2;
+}
+
+tr.even.gradeA td.sorting_3 {
+	background-color: #e2ffe2;
+}
+
+tr.odd.gradeC td.sorting_1 {
+	background-color: #c4c4ff;
+}
+
+tr.odd.gradeC td.sorting_2 {
+	background-color: #d1d1ff;
+}
+
+tr.odd.gradeC td.sorting_3 {
+	background-color: #d1d1ff;
+}
+
+tr.even.gradeC td.sorting_1 {
+	background-color: #d5d5ff;
+}
+
+tr.even.gradeC td.sorting_2 {
+	background-color: #e2e2ff;
+}
+
+tr.even.gradeC td.sorting_3 {
+	background-color: #e2e2ff;
+}
+
+tr.odd.gradeX td.sorting_1 {
+	background-color: #ffc4c4;
+}
+
+tr.odd.gradeX td.sorting_2 {
+	background-color: #ffd1d1;
+}
+
+tr.odd.gradeX td.sorting_3 {
+	background-color: #ffd1d1;
+}
+
+tr.even.gradeX td.sorting_1 {
+	background-color: #ffd5d5;
+}
+
+tr.even.gradeX td.sorting_2 {
+	background-color: #ffe2e2;
+}
+
+tr.even.gradeX td.sorting_3 {
+	background-color: #ffe2e2;
+}
+
+tr.odd.gradeU td.sorting_1 {
+	background-color: #c4c4c4;
+}
+
+tr.odd.gradeU td.sorting_2 {
+	background-color: #d1d1d1;
+}
+
+tr.odd.gradeU td.sorting_3 {
+	background-color: #d1d1d1;
+}
+
+tr.even.gradeU td.sorting_1 {
+	background-color: #d5d5d5;
+}
+
+tr.even.gradeU td.sorting_2 {
+	background-color: #e2e2e2;
+}
+
+tr.even.gradeU td.sorting_3 {
+	background-color: #e2e2e2;
+}
+
+
+/*
+ * Row highlighting example
+ */
+.ex_highlight #example tbody tr.even:hover, #example tbody tr.even td.highlighted {
+	background-color: #ECFFB3;
+}
+
+.ex_highlight #example tbody tr.odd:hover, #example tbody tr.odd td.highlighted {
+	background-color: #E6FF99;
+}
+
+
+/*
+ * KeyTable
+ */
+table.KeyTable td {
+	border: 3px solid transparent;
+}
+
+table.KeyTable td.focus {
+	border: 3px solid #3366FF;
+}
+
+table.display tr.gradeA {
+	background-color: #eeffee;
+}
+
+table.display tr.gradeC {
+	background-color: #ddddff;
+}
+
+table.display tr.gradeX {
+	background-color: #ffdddd;
+}
+
+table.display tr.gradeU {
+	background-color: #ddd;
+}
+
+div.box {
+	height: 100px;
+	padding: 10px;
+	overflow: auto;
+	border: 1px solid #8080FF;
+	background-color: #E5E5FF;
+}
+
+
+
+
+
+/*
+DataTable        
+==============================*/
+#cadastros #listar tr:hover { 
+                                background-color:#FFFFFF;
+                                border-left: 1px solid #CCCCCC;
+                                border-right: 1px solid #EDEDED;
+                            }
+#cadastros #listar tr th{ font-size:0.8em; background-color:#FFFFFF; }
+#cadastros #listar tr th:hover { cursor:pointer; }
+#cadastros #listar li   { border-bottom:none; }
+#listar_length,
+#listar_info,
+#listar_paginate,
+#listar_filter          { font-size:0.8em; }
+.dataTables_wrapper     { position: static; float:left; margin-top: 10px; }
+
+
+/* CORES DA ZEBRA*/
+tr.odd td.sorting_1,
+tr.odd                              { background-color: #E3F1DA; }
+
+tr.odd td.sorting_1:hover           { background-color: #FAF5DC; }
+tr.even td.sorting_1,
+tr.even                             { background-color: #FFFFFF; }
+tr.even td.sorting_1:hover          { background-color: #FAF5DC; }
+
+/*
+RELATORIO ENTIDADES
+====================================*/
+
+#listar.relatorio_entidades tr:hover         { background-color: #FFFFFF; }
+.relatorio_entidades td.itens_index ul       { padding:0px; margin:0; }
+.relatorio_entidades td.itens_index li       { margin-top:5px; padding: 3px 0; font-size: 0.9em; }
+.relatorio_entidades td.itens_index h3,
+.relatorio_entidades td.itens_index b        { color: #2D6809; }
+
+
+                             

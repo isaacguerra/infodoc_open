@@ -910,7 +910,7 @@ FORMS
                                 }
 
 .formulario input[type=submit]:hover,
-#auditorias input[type=submit]:hover
+#auditorias input[type=submit]:hover,
 #busca input[type=submit]:hover { background-position:bottom; }
 .formulario .lista_conteudo     { border: 1px solid #FFFFFF }
 
@@ -1393,7 +1393,7 @@ HISTORICO
 
                                   float:left;
                                   margin: 6px 0 6px 0px;
-                                  min-hei */ght:450px;
+                                  min-height:450px;
                                   background-repeat:repeat-x;
                                   height:auto;
                                   min-height:15px;
@@ -2421,6 +2421,14 @@ tr.even td.sorting_1,
 tr.even                             { background-color: #FFFFFF; }
 tr.even td.sorting_1:hover          { background-color: #FAF5DC; }
 
-#listar_paginate                     
+/*
+RELATORIO ENTIDADES
+====================================*/
 
+#listar.relatorio_entidades tr:hover         { background-color: #FFFFFF; }
+.relatorio_entidades td.itens_index ul       { padding:0px; margin:0; }
+.relatorio_entidades td.itens_index li       { margin-top:5px; padding: 3px 0; font-size: 0.9em; }
+.relatorio_entidades td.itens_index h3,
+.relatorio_entidades td.itens_index b        { color: #8c1c1c; }
 
+pre { word-wrap:break-word; }
