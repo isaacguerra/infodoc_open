@@ -6,7 +6,7 @@
   <% form_remote_tag :url=>(url_for(new_ecm_formulario_formauditoria_path(@formulario))), :method=>"get" do -%>
     Filtrar pelo Usuario <%= select_tag :usuario_id, options_for_select(@usuarios) %> <%= check_box_tag :filtro_nome %><br>
     Filtrar pelo Periodo <%= date_select("post", "d_i", :start_year => 1995) %> e <%= date_select("post", "d_f", :start_year => 1995) %><%= check_box_tag :filtro_periodo %><br>
-    Filtrar pela Ação <%= select_tag :acao, options_for_select([["Criação","create"], ["Alteração","update"], ["Visualização","show"], ["Exclusão","destroy"]]) %> <%= check_box_tag :filtro_acao %><br>
+    Filtrar pela Ação <%= select_tag :acao, options_for_select([["Criação","create"], ["Alteração","update"], ["Visualização","show"], ["Exclusão","destroy"], ["Criação de Artefato","create_artefato"], ["Download de Artefato","download_artefato"], ["Exclusão de Artefato","destroy_artefato"]]) %> <%= check_box_tag :filtro_acao %><br>
     <%= submit_tag 'Exibir' %><br>
   <% end -%>
 </div>
@@ -20,8 +20,8 @@
   </tr>
     <% @auditorias.each do |auditoria| %>
     <tr>
-      <td class="itens_index"><%= auditoria.created_at.to_s_br %></td>
-      <td class="itens_index"><%= auditoria.usuario.nome %></td>
+      <td class="itens_index"><%= auditoria.created_at.to_s %></td>
+      <td class="itens_index"><%= auditoria.usuario_nome %></td>
       <td class="itens_index"><%= auditoria.cadastro_id %></td>
       <td class="itens_index"><%= auditoria.descricao %></td>
     </tr>

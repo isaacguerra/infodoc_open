@@ -57,6 +57,15 @@ class Ecm::ArtefatosController < ApplicationController
       if params[:ocr] == "1"
         @artefato.fazer_ocr
       end
+      Auditoriacadastro.create(:entidade_id=>@cadastro.entidade_id,
+                               :usuario_id=>@cadastro.usuario_id,
+                               :usuario_nome=>@sessao_usuario.usuario.nome,
+                               :cadastro_id=>@cadastro.parent.id,
+                               :formulario_id=>@cadastro.formulario_id,
+                               :formulario_nome=>@cadastro.formulario.titulo,
+                               :artefato_id=>@artefato.id,
+                               :acao=>"create_artefato",
+                               :descricao=>"Criou o Artefato #{@artefato.objeto_file_name}")
       flash[:notice] = "Artefato Criada com Sucesso!"
       redirect_to ecm_formulario_cadastro_path(@parent.formulario_id, @parent)
     end
@@ -70,9 +79,19 @@ class Ecm::ArtefatosController < ApplicationController
   end
 
   def download
-    cadastro = Cadastro.find(params[:id])
-    if cadastro.parent.formulario.permissao(@sessao_usuario.usuario) > 0 and cadastro.artefato
-      send_file(cadastro.artefato.objeto.path, :type=>cadastro.artefato.objeto_content_type)
+    @cadastro = Cadastro.find(params[:id])
+    if @cadastro.parent.formulario.permissao(@sessao_usuario.usuario) > 0 and @cadastro.artefato
+      Auditoriacadastro.create(:entidade_id=>@cadastro.entidade_id,
+                               :usuario_id=>@cadastro.usuario_id,
+                               :usuario_nome=>@sessao_usuario.usuario.nome,
+                               :cadastro_id=>@cadastro.parent.id,
+                               :formulario_id=>@cadastro.formulario_id,
+                               :formulario_nome=>@cadastro.formulario.titulo,
+                               :artefato_id=>@cadastro.artefato.id,
+                               :acao=>"download_artefato",
+                               :descricao=>"Baixou o Artefato #{@cadastro.artefato.objeto_file_name}")
+
+      send_file(@cadastro.artefato.objeto.path, :type=>@cadastro.artefato.objeto_content_type)
     end
   end
 
@@ -80,6 +99,15 @@ class Ecm::ArtefatosController < ApplicationController
     @cadastro = Cadastro.find(params[:cadastro_id])
     @artefato = Cadastro.find(params[:id])
     if @cadastro.formulario.permissao(@sessao_usuario.usuario) > 2
+      Auditoriacadastro.create(:entidade_id=>@cadastro.entidade_id,
+                               :usuario_id=>@cadastro.usuario_id,
+                               :usuario_nome=>@sessao_usuario.usuario.nome,
+                               :cadastro_id=>@cadastro.id,
+                               :formulario_id=>@artefato.formulario_id,
+                               :formulario_nome=>@artefato.formulario.titulo,
+                               :artefato_id=>@artefato.artefato.id,
+                               :acao=>"destroy_artefato",
+                               :descricao=>"Excluiu o Artefato #{@artefato.artefato.objeto_file_name}")
       @artefato.destroy
       flash[:notice] = "Artefato Excluido com Sucesso!"
       redirect_to ecm_formulario_cadastro_path(@cadastro.formulario_id, @cadastro)

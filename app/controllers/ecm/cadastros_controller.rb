@@ -14,7 +14,14 @@ class Ecm::CadastrosController < ApplicationController
       flash[:notice] = "Ação não Autorizada"
       redirect_to "/intranet"
     end
-    Auditoriacadastro.create(:entidade_id=>@sessao_usuario.entidade_id,:usuario_id=>@sessao_usuario.usuario_id,:cadastro_id=>@cadastro.id,:formulario_id=>@cadastro.formulario_id,:acao=>"show",:descricao=>"Visualizou")
+    Auditoriacadastro.create(:entidade_id=>@cadastro.entidade_id,
+                             :usuario_id=>@cadastro.usuario_id,
+                             :usuario_nome=>@sessao_usuario.usuario.nome,
+                             :cadastro_id=>@cadastro.id,
+                             :formulario_id=>@cadastro.formulario_id,
+                             :formulario_nome=>@cadastro.formulario.titulo,
+                             :acao=>"show",
+                             :descricao=>"Visualizou o Cadastro")
   end
 
   def new
@@ -44,8 +51,15 @@ class Ecm::CadastrosController < ApplicationController
       Cadastro.transaction do
          @cadastro.save
          @cadastro.salvar_itens(params[:cadastro])
+         Auditoriacadastro.create(:entidade_id=>@cadastro.entidade_id,
+                             :usuario_id=>@cadastro.usuario_id,
+                             :usuario_nome=>@sessao_usuario.usuario.nome,
+                             :cadastro_id=>@cadastro.id,
+                             :formulario_id=>@cadastro.formulario_id,
+                             :formulario_nome=>@cadastro.formulario.titulo,
+                             :acao=>"create",
+                             :descricao=>"Criou o Cadastro")
       end
-      Auditoriacadastro.create(:entidade_id=>@sessao_usuario.entidade_id,:usuario_id=>@sessao_usuario.usuario_id,:cadastro_id=>@cadastro.id,:formulario_id=>@cadastro.formulario_id,:acao=>"create",:descricao=>"Criou o Cadastro")
       flash[:notice] = "Cadastro Criado com Sucesso!"
       redirect_to :action=>"show",:id=>@cadastro.id
     end
@@ -71,7 +85,14 @@ class Ecm::CadastrosController < ApplicationController
       render :action => "edit", :id=>@cadastro
     else
       @cadastro.update_itens(params[:cadastro])
-      Auditoriacadastro.create(:entidade_id=>@sessao_usuario.entidade_id,:usuario_id=>@sessao_usuario.usuario_id,:cadastro_id=>@cadastro.id,:formulario_id=>@cadastro.formulario_id,:acao=>"update",:descricao=>"Alterou o Cadastro")
+      Auditoriacadastro.create(:entidade_id=>@cadastro.entidade_id,
+                             :usuario_id=>@cadastro.usuario_id,
+                             :usuario_nome=>@sessao_usuario.usuario.nome,
+                             :cadastro_id=>@cadastro.id,
+                             :formulario_id=>@cadastro.formulario_id,
+                             :formulario_nome=>@cadastro.formulario.titulo,
+                             :acao=>"update",
+                             :descricao=>"Alterou o Cadastro")
       flash[:notice] = "Cadastro Alterado com Sucesso!"
       redirect_to :action=>"show",:id=>@cadastro.id
     end
@@ -145,7 +166,14 @@ class Ecm::CadastrosController < ApplicationController
   def destroy
     @cadastro = Cadastro.find(params[:id])
     if @cadastro.formulario.permissao(@sessao_usuario.usuario) > 2
-      Auditoriacadastro.create(:entidade_id=>@sessao_usuario.entidade_id,:usuario_id=>@sessao_usuario.usuario_id,:cadastro_id=>@cadastro.id,:formulario_id=>@cadastro.formulario_id,:acao=>"destroy",:descricao=>"Excluiu o Cadastro")
+      Auditoriacadastro.create(:entidade_id=>@cadastro.entidade_id,
+                             :usuario_id=>@cadastro.usuario_id,
+                             :usuario_nome=>@sessao_usuario.usuario.nome,
+                             :cadastro_id=>@cadastro.id,
+                             :formulario_id=>@cadastro.formulario_id,
+                             :formulario_nome=>@cadastro.formulario.titulo,
+                             :acao=>"destroy",
+                             :descricao=>"Excluiu o Cadastro")
       @cadastro.destroy
       flash[:notice] = "Cadastro Excluido com Sucesso!"
       redirect_to ecm_formulario_cadastros_path(@cadastro.formulario_id)
@@ -154,5 +182,6 @@ class Ecm::CadastrosController < ApplicationController
       redirect_to ecm_formulario_cadastro_path(@cadastro.formulario_id, @cadastro)
     end
   end
+
 end
 
