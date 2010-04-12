@@ -13,6 +13,8 @@ class Core::InstallController < ApplicationController
     @log << "#ID da modulos Administracao - #{madm.id}\n"
     mecm = Modulo.create(:nome=>"Gerencia ECM", :descricao=>"Gerencia ECM")
     @log << "#ID da modulos ECM - #{mecm.id}\n"
+    mgde = Modulo.create(:nome=>"Gerencia de Documento Eletrônico", :descricao=>"Gerencia de Documento Eletrônico")
+    @log << "#ID da modulos GDE - #{mgde.id}\n"
     mgc = Modulo.create(:nome=>"Gerencia de Conteúdo", :descricao=>"Gerencia de Conteúdo")
     @log << "#ID da modulos Gerencia de Conteúdo - #{mgc.id}\n"
     mwiki = Modulo.create(:nome=>"Wiki", :descricao=>"Wiki de Conteúdo")

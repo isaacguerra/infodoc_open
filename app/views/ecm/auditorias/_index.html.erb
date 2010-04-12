@@ -4,24 +4,24 @@
   <div  class="hide_auditoria">
     <%= link_to_remote "Esconder Auditorias", :url=>{:controller=>"/ecm/auditorias", :action=>"clean"}, :method=>"get" %>
   </div>
- 	
+
     <% form_remote_tag :url=>(url_for(new_ecm_cadastro_auditoria_path(@cadastro))), :method=>"get" do -%>
     <table>
-      <tr>          
-        <td class="lista_item">Filtrar pelo Usuario</td><td class="lista_conteudo"> <%= select_tag :usuario_id, options_for_select(@usuarios) %></td><td> <%= check_box_tag :filtro_nome %></td>
-      </tr>        
+      <tr>
+        <td class="lista_item">Filtrar pelo Usuario</td><td class="lista_conteudo"><%= select_tag :usuario_id, options_for_select(@usuarios) %></td><td> <%= check_box_tag :filtro_nome %></td>
+      </tr>
         <td class="lista_item">Filtrar pelo Periodo</td><td class="lista_conteudo"> <%= date_select("post", "d_i", :start_year => 1995) %> e <%= date_select("post", "d_f", :start_year => 1995) %></td><td><%= check_box_tag :filtro_periodo %></td>
       <tr>
-        <td class="lista_item">Filtrar pela Ação </td><td class="lista_conteudo"><%= select_tag :acao, options_for_select([["Criação","create"], ["Alteração","update"], ["Visualização","show"]]) %></td><td> <%= check_box_tag :filtro_acao %></td>
+        <td class="lista_item">Filtrar pela Ação </td><td class="lista_conteudo"> <%= select_tag :acao, options_for_select([["Criação","create"], ["Alteração","update"], ["Visualização","show"], ["Exclusão","destroy"], ["Criação de Artefato","create_artefato"], ["Download de Artefato","download_artefato"], ["Exclusão de Artefato","destroy_artefato"]]) %></td><td> <%= check_box_tag :filtro_acao %></td>
       </tr>
       <tr>
          <td class="lista_item"/>
          <td class="lista_conteudo"><%= submit_tag 'Exibir' %></td>
       </tr>
     </table>
-       
-    <% end -%>
 
+    <% end -%>
+</div>
 <div id="exibir_auditorias">
   <table id="listar">
     <thead>
@@ -33,9 +33,10 @@
     </thead>
     <tbody>
     <% @auditorias.each do |auditoria| %>
+
         <tr>
-          <td class="itens_index"><%= auditoria.created_at.to_s_br %></td>
-          <td class="itens_index"><%= auditoria.usuario.nome %></td>
+          <td class="itens_index"><%= auditoria.created_at.to_s %> %></td>
+          <td class="itens_index"><%= auditoria.usuario_nome %></td>
           <td class="itens_index"><%= auditoria.descricao %></td>
         </tr>
     <% end %>
