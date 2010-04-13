@@ -328,6 +328,8 @@ AVATAR*/
 
 .titulo_index_infowiki      { background-image: none; }
 
+.titulo_relatorio_entidades { background-image: url("/theme/infodoc/images/pizza.png"); }
+
 #comunicacao #barra_titulo .titulo_index_infowiki      { background-image: none; }
 
 .titulo_cat_infowiki        { background-image: url("/theme/blue-orange/images/categoria.png") }
@@ -2324,6 +2326,7 @@ DataTable
 #cadastros #listar li   { border-bottom:none; }
 #listar_length,
 #listar_info,
+#listar_paginate,
 #listar_filter          { font-size:0.8em; }
 .dataTables_wrapper     { position: static; float:left; margin-top: 10px; }
 
@@ -2339,4 +2342,22 @@ tr.even td.sorting_1:hover          { background-color: #FAF5DC; }
 #cadastros #listar tr.odd:hover,
 #cadastros #listar tr.even:hover         { background-color: #; }
 
+/*
+RELATORIO ENTIDADES
+====================================*/
 
+#listar.relatorio_entidades tr:hover         { background-color: #FFFFFF; }
+.relatorio_entidades td.itens_index ul       { padding:0px; margin:0; }
+.relatorio_entidades td.itens_index li       { margin-top:5px; padding: 3px 5px; font-size: 1em; }
+.relatorio_entidades td.itens_index h3,
+.relatorio_entidades td.itens_index b        { color: #CF360D; font-size: 1em;}
+.relatorio_entidades td.itens_index h3       { background: #ECF3FB; margin-top:1px; padding: 5px 5px; }
+.titulo_relatorio_entidades                  { font-size:1.2em;
+                                               float:left;
+                                               padding: 23px 23px 23px 100px;
+                                               margin-left:10px;
+                                               margin-top: 1%;
+                                               background-position:left;
+                                               background-repeat:no-repeat;
+                                              }
+.relatorio_entidades .titulo_lista            { border: 0; background:0; font-size: 1.1em; }      

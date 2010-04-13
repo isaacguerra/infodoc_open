@@ -379,6 +379,8 @@ AVATAR*/
 
 .titulo_cat_infowiki        { background-image: url("/theme/violet/images/categoria.png") }
 
+.titulo_relatorio_entidades { background-image: url("/theme/infodoc/images/pizza.png"); }
+
 .titulo_index,
 .titulo_show,
 .titulo_new,
@@ -2394,10 +2396,18 @@ RELATORIO ENTIDADES
 ====================================*/
 
 #listar.relatorio_entidades tr:hover         { background-color: #FFFFFF; }
+.relatorio_entidades td.itens_index          { border:0; }
 .relatorio_entidades td.itens_index ul       { padding:0px; margin:0; }
-.relatorio_entidades td.itens_index li       { margin-top:5px; padding: 3px 0; font-size: 0.9em; }
+.relatorio_entidades td.itens_index li       { margin-top:5px; padding: 3px 5px; font-size: 1em; }
 .relatorio_entidades td.itens_index h3,
-.relatorio_entidades td.itens_index b        { color: #934DA2; }
-
-
-                                                                        
+.relatorio_entidades td.itens_index b        { color: #934DA2; 1em;}
+.relatorio_entidades td.itens_index h3       { background: #F1E5F4; margin-top:1px; padding: 5px 5px; }
+.titulo_relatorio_entidades                  { font-size:1.2em;
+                                               float:left;
+                                               padding: 23px 23px 23px 100px;
+                                               margin-left:10px;
+                                               margin-top: 1%;
+                                               background-position:left;
+                                               background-repeat:no-repeat;
+                                              }
+.relatorio_entidades .titulo_lista            { border: 0; background:0; font-size: 1.1em; }      

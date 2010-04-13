@@ -31,8 +31,10 @@ ActiveRecord::Schema.define(:version => 20100331203150) do
   create_table "auditoriacadastros", :force => true do |t|
     t.integer  "entidade_id"
     t.integer  "usuario_id"
+    t.string   "usuario_nome"
     t.integer  "cadastro_id"
     t.integer  "formulario_id"
+    t.string   "formulario_nome"
     t.integer  "artefato_id"
     t.string   "acao"
     t.text     "descricao"
