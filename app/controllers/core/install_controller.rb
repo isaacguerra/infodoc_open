@@ -60,6 +60,8 @@ class Core::InstallController < ApplicationController
     @log << "#ID do sistema de Perfil da entidade - #{perfilentidade.id}\n"
     relatorioentidade = Sistema.create(:nome=>"Relatorio Resumido de ECM", :descricao=>"Relatorio Resumido de ECM", :rota=>"/ecm/relatorioentidades", :controle=>"Ecm::RelatorioentidadesController", :menu=>true, :status=>true, :modulo_id=>madm.id)
     @log << "#ID do Relatorio da entidade - #{relatorioentidade.id}\n"
+    relatorioproducao = Sistema.create(:nome=>"Auditoria de Produção de ECM", :descricao=>"Auditoria de Produção de ECM", :rota=>"/ecm/auditoriaproducaos", :controle=>"Ecm::AuditoriaproducaosController", :menu=>true, :status=>true, :modulo_id=>madm.id)
+    @log << "#ID do Auditoria de Prodicao - #{relatorioentidade.id}\n"
 
     cadastro = Sistema.create(:nome=>"Cadastros", :descricao=>"Cadastro", :rota=>"/ecm/cadastros", :controle=>"Ecm::CadastrosController", :menu=>false, :status=>true, :modulo_id=>mgc.id)
     @log << "#ID do sistema  de Gerencia de Cadastro - #{cadastro.id}\n"

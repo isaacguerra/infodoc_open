@@ -2381,6 +2381,7 @@ RELATORIO ENTIDADES
 ====================================*/
 
 #listar.relatorio_entidades tr:hover         { background-color: #FFFFFF; }
+.relatorio_entidades td.itens_index          { border:0; }
 .relatorio_entidades td.itens_index ul       { padding:0px; margin:0; }
 .relatorio_entidades td.itens_index li       { margin-top:5px; padding: 3px 5px; font-size: 1em; }
 .relatorio_entidades td.itens_index h3,

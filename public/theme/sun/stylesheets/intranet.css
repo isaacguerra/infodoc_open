@@ -1279,7 +1279,7 @@ COMENTARIOS
                             
 #artefatos .formulario        { margin:0;}
 
-#artefatos div.formulario     { width:74.8%; float:left; padding:0; border:0; margin:0;}
+#artefatos div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
 
 #artefatos .formulario select { color:#D4943B; float:left; margin:1% 22px; vertical-align:middle;}
                                
@@ -1364,7 +1364,7 @@ COMENTARIOS
 #artefatos input[type="text"], 
 input[type="password"]  { margin-top:0; }
                        
-#artefatos .lista_item  { background-image:url("/theme/sun/images/img09.gif"); border-bottom:1px solid #F1EFE2; text-align:center;  }
+#artefatos .lista_item  { border-bottom:1px solid #F1EFE2; text-align:center;  }
 
 .artefato               { border: 1px solid #F2DBBB; width:100%; padding: 2px; outline: 1px solid #F1EFE2;}
 
@@ -1437,7 +1437,7 @@ AUDITORIA
 #auditorias table td           {  } 
 #auditorias table td.lista_item   { padding-bottom: 1%; border :0; background-color: #FFFFFF; }
 #auditorias .lista_conteudo    { border:0;}
-#auditorias select             { color:#8C1C1C;  font-size:1em;}
+#auditorias select             { color:#D4943B;  font-size:1em;}
 #auditorias #barra_titulo      { width:98.3%; }
 #auditorias .formulario input[type=submit] {float:none}
 

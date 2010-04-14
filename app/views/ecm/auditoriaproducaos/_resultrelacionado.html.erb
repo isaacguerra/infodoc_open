@@ -1,0 +1,19 @@
+foram encontrados <%= @errados.size.to_s %> cadastros irregulares
+<table id="listar">
+    <thead>
+      <tr>
+        <th class="titulo_lista"><%= @form_pai.titulo %></th>
+        <th class="titulo_lista"><%= @form_filho.titulo %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @errados.size.times do |i| %>
+      <tr>
+        <td class="itens_index">
+          <%= link_to @errados[i].id, ecm_formulario_cadastro_path(@errados[i].formulario_id, @errados[i]) %>
+        </td>
+        <td class="itens_index"><%= @errados_q[i].to_s %></td>
+      </tr>
+	  <% end %>
+    </tobody>
+</table>

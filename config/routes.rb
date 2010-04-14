@@ -30,6 +30,7 @@ ActionController::Routing::Routes.draw do |map|
     ecm.resources :cadastros, :has_many=>:relacionados
     ecm.resources :cadastros, :has_many=>:auditorias
     ecm.resources :relatorioentidades
+    ecm.resources :auditoriaproducaos
   end
 
   map.namespace :page do |page|

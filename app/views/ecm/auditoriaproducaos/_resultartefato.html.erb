@@ -1,0 +1,19 @@
+foram encontrados <%= @cadastros.size.to_s %> cadastros irregulares
+<table id="listar">
+    <thead>
+      <tr>
+        <th class="titulo_lista">Cadastro</th>
+        <th class="titulo_lista">Artefatos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @cadastros.each do |c| %>
+      <tr>
+        <td class="itens_index">
+          <%= link_to c.id, ecm_formulario_cadastro_path(c.formulario_id, c) %>
+        </td>
+        <td class="itens_index"><%= c.children.size.to_s %></td>
+      </tr>
+	  <% end %>
+    </tobody>
+</table>

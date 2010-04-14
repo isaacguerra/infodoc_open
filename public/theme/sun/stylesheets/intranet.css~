@@ -1279,7 +1279,7 @@ COMENTARIOS
                             
 #artefatos .formulario        { margin:0;}
 
-#artefatos div.formulario     { width:74.8%; float:left; padding:0; border:0; margin:0;}
+#artefatos div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
 
 #artefatos .formulario select { color:#D4943B; float:left; margin:1% 22px; vertical-align:middle;}
                                
@@ -1437,7 +1437,7 @@ AUDITORIA
 #auditorias table td           {  } 
 #auditorias table td.lista_item   { padding-bottom: 1%; border :0; background-color: #FFFFFF; }
 #auditorias .lista_conteudo    { border:0;}
-#auditorias select             { color:#8C1C1C;  font-size:1em;}
+#auditorias select             { color:#D4943B;  font-size:1em;}
 #auditorias #barra_titulo      { width:98.3%; }
 #auditorias .formulario input[type=submit] {float:none}
 
@@ -2412,6 +2412,7 @@ RELATORIO ENTIDADES
 ====================================*/
 
 #listar.relatorio_entidades tr:hover         { background-color: #FFFFFF; }
+.relatorio_entidades td.itens_index          { border:0; }
 .relatorio_entidades td.itens_index ul       { padding:0px; margin:0; }
 .relatorio_entidades td.itens_index li       { margin-top:5px; padding: 3px 5px; font-size: 1em; }
 .relatorio_entidades td.itens_index h3,

@@ -12,12 +12,6 @@ class CreateAuditoriacadastros < ActiveRecord::Migration
       t.text     :descricao
       t.datetime :created_at
     end
-    add_index :auditoriacadastros, :entidade_id
-    add_index :auditoriacadastros, :usuario_id
-    add_index :auditoriacadastros, :cadastro_id
-    add_index :auditoriacadastros, :formulario_id
-    add_index :auditoriacadastros, :acao_id
-    add_index :auditoriacadastros, :created_at
   end
 
   def self.down

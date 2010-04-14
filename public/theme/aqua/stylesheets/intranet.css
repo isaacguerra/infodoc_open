@@ -1125,7 +1125,12 @@ RESULTADO DETALHADO BUSCA
 #historico #barra_titulo h3     { font-size: 1em;
                                   padding-left:32px;
                                   background-image: url("/theme/aqua/images/historico.png");
-                                 }     
+                                 }   
+#auditorias #barra_titulo h3   { 
+                                  font-size: 1em; 
+                                  padding-left:32px; 
+                                  background-image: url("/theme/infodoc/images/auditoria.png") ;
+                                }  
     
 .titulo_comentario              { font-size:10px; background-image:none; }
 
