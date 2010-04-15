@@ -290,7 +290,7 @@ input.enviar                          {
                                       background-image: url("/theme/infodoc/images/fil2.jpg");
                                       background-repeat: repeat-x;
                                       background-position: top;
-                                      width :35%;
+                                      width :301px;
                                       height: 90%;
                                       margin-right: 14px;
                                       margin-top:10px;
@@ -322,9 +322,9 @@ AVATAR*/
 
 #avatar img                        { margin:8% 8%; height:80%; }
 
-#status #dados_perfil              { font-family:"sans serif"; font-size:0.9em; float:left; margin-top:10px;margin-right:15px;}
+#status #dados_perfil              { font-family:"sans serif"; font-size:0.9em; float:left; margin-top:30px;margin-right:15px;}
 #status #menu_perfil               { float:right;}
-#status #menu_perfil ul            { margin:0; margin-top:5px;}  
+#status #menu_perfil ul            { margin:0; margin-top:5px; padding:0px 8px; position: absolute; left:81%;}  
 #status #menu_perfil ul li         { list-style:none; display:inline; margin:0;}
 #status #menu_perfil ul li a       { margin:0; color:#8c1c1c; font-weight:bold;padding:2px; font-family:"sans serif"; font-size:0.7em;}
 #status #menu_perfil ul li a:hover { background-color: #dbdbdb; text-decoration:none;}
@@ -378,6 +378,8 @@ AVATAR*/
 
 .titulo_relatorio_entidades { background-image: url("/theme/infodoc/images/pizza.png"); }
 
+.titulo_relatorio_producao { background-image: url("/theme/infodoc/images/producao.png"); }
+
 #comunicacao #barra_titulo .titulo_index_infowiki      { background-image: none; }
 
 .titulo_cat_infowiki        { background-image: url("/theme/infodoc/images/categoria.png") }
@@ -388,6 +390,7 @@ AVATAR*/
 .titulo_edit,
 .titulo_comentario,
 .titulo_cat_infowiki,
+.titulo_relatorio_producao,
 .titulo_index_infowiki
                        {
 
@@ -1562,6 +1565,7 @@ JQUERY ZEBRA ======================================
 /*
 COMUNICACAO ============================
 */
+#com_blogs_path                  { position:absolute; right:20px; }
 
 .titulo_comunicacao
                                  { width:100%;
@@ -1658,7 +1662,7 @@ COMUNICACAO ============================
 #comunicacao a:hover              { background-color:#CCCCCC; text-decoration:none; }
 div#historico_com_blogs_path a    { width:38%; margin-right:5px;margin-top:5px; }
 
-div#com_blogs_path a              { width:25%; margin-right:5px; } 
+div#com_blogs_path a              { width:100%; margin-right:5px; } 
                                   
 
 
@@ -2444,4 +2448,34 @@ RELATORIO ENTIDADES
                                                background-position:left;
                                                background-repeat:no-repeat;
                                               }
-.relatorio_entidades .titulo_lista            { border: 0; background:0; font-size: 1.1em; }      
+.relatorio_entidades .titulo_lista            { border: 0; background:0; font-size: 1.1em; }  
+
+
+/*
+AUDITORIA DE PRODUCAO DE ECM
+=================================*/
+
+
+#auditoria_de_producao                        { border:1px solid #DBDBDB; float:left; width:100%; margin: 6px 0;}
+#auditoria_de_producao #listar                { border:0; margin:0 0;}
+#auditoria_de_producao #listar .titulo_lista  { border:0; background: 0; font-size: 1.1em;}
+#auditoria_de_producao #listar td.itens_index { border:0; }
+#auditoria_de_producao #listar td.itens_index h3
+                                              { font-size: 1em; background: #ededed; margin-top:1px; padding: 5px 5px; float:left; width:98.5%;}
+                                              
+#auditoria_de_producao #listar td.itens_index h3 a 
+                                              { float:left;color: #8c1c1c; width:100%; height:100%; }
+                                             
+#auditoria_de_producao #listar tr:hover       { background-color: #FFFFFF; }
+
+#auditoria_de_producao #barra_titulo          { border:0; background:0; }  
+
+.titulo_relatorio_producao                   { font-size:1.2em;
+                                               float:left;
+                                               padding: 23px 23px 23px 100px;
+                                               margin-left:10px;
+                                               margin-top: 1%;
+                                               background-position:left;
+                                               background-repeat:no-repeat;
+                                              } 
+                                                                                                                                       

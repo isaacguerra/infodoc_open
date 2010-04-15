@@ -1,16 +1,18 @@
 <div id="barra_titulo">
-  <h3 class="titulo_index">Auditoria de Produção</h3>
+  <h3 class="titulo_relatorio_producao">Auditoria de Produção</h3>
 </div>
-<table id="listar">
-  <tr>
-    <th class="titulo_lista">Relatorio Disponiveis</th>
-  </tr>
-  <tr>  
-    <td><%= link_to_remote "Auditoria de Artefatos por Cadastros", :url=>(url_for(ecm_auditoriaproducao_path("artefato"))), :method=>"get" %></td>
-  </tr>
-  <tr>  
-    <td><%= link_to_remote "Auditoria de Relacionamento entre Cadastros", :url=>(url_for(ecm_auditoriaproducao_path("relacionados"))), :method=>"get" %></td>
-  </tr>
-</table>
-<div id="filtro"></div>
+<div id ="auditoria_de_producao">
+  <table id="listar">
+    <tr>
+      <th class="titulo_lista">Relatorio Disponiveis</th>
+    </tr>
+    <tr>
+      <td class="itens_index"><h3><%= link_to_remote "Auditoria de Artefatos por Cadastros", :url=>(url_for(ecm_auditoriaproducao_path("artefato"))), :method=>"get" %></h3></td>
+    </tr>
+    <tr>
+      <td class="itens_index"><h3><%= link_to_remote "Auditoria de Relacionamento entre Cadastros", :url=>(url_for(ecm_auditoriaproducao_path("relacionados"))), :method=>"get" %></h3></td>
+    </tr>
+  </table>
+  <div id="filtro"></div>
+</div>
 

@@ -18,8 +18,11 @@ class Ecm::AuditoriaproducaosController < ApplicationController
   
   def create
     if params[:tipo]=="artefato"
+      @formulario = Formulario.find(params[:formulario])
+      @principal = Itensformulario.find(@formulario.principal_id)
+    
       quant = params[:quant].to_i
-      @cadastros = Cadastro.do_formulario(params[:formulario]).find(:all, :select=>"id, parent_id, formulario_id")
+      @cadastros = Cadastro.do_formulario(params[:formulario]).find(:all)
       @cadastros.collect! {|c| c if c.children.size != quant}
       @cadastros.compact!
     
@@ -30,6 +33,8 @@ class Ecm::AuditoriaproducaosController < ApplicationController
     else
       @form_pai = Formulario.find(params[:formulario_pai])
       @form_filho = Formulario.find(params[:formulario_filho])
+      
+      @principal = Itensformulario.find(@form_pai.principal_id)
       
       if_ff = Itensformulario.find(:all, :conditions=>["formulario_id=? and tipo='referencia'", @form_filho.id])
       
@@ -42,7 +47,7 @@ class Ecm::AuditoriaproducaosController < ApplicationController
       end
       
       if id_iff
-        cads_pai = Cadastro.do_formulario(@form_pai.id).find(:all, :select=>"id, formulario_id")
+        cads_pai = Cadastro.do_formulario(@form_pai.id).find(:all)
         @errados = []
         @errados_q = []
         cads_pai.each do |c| 

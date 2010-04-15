@@ -287,7 +287,7 @@ input.enviar                          {
                                       background-image: url("/theme/aqua/images/fil2.jpg");
                                       background-repeat: repeat-x;
                                       background-position: top;          
-                                      width :35%;                       
+                                      width :301px;                       
                                       height: 90%;                     
                                       margin-right: 14px;
                                       margin-top:10px;
@@ -318,9 +318,9 @@ input.enviar                          {
                                    }
 #avatar img                        { margin:8% 8%; height:80%; }
 
-#status #dados_perfil              { font-family:"sans serif"; font-size:0.9em; float:left; margin-top:10px;margin-right:15px;}
+#status #dados_perfil              { font-family:"sans serif"; font-size:0.9em; float:left; margin-top:30px;margin-right:15px;}
 #status #menu_perfil               { float:right;}
-#status #menu_perfil ul            { margin:0; margin-top:5px;}  
+#status #menu_perfil ul            { margin:0; margin-top:5px; padding:0px 8px; position: absolute; left:81%;}  
 #status #menu_perfil ul li         { list-style:none; display:inline; margin:0;}
 #status #menu_perfil ul li a       { margin:0; color:#3C7B96; font-weight:bold;padding:2px; font-family:"sans serif"; font-size:0.7em;}
 #status #menu_perfil ul li a:hover { background-color: #C1D9E3; text-decoration:none;}
@@ -1522,6 +1522,7 @@ AUDITORIA
 /*
 COMUNICACAO ============================
 */
+#com_blogs_path                  { position:absolute; right:20px; }
 
 .titulo_comunicacao
                                  { width:100%;
@@ -1614,7 +1615,7 @@ COMUNICACAO ============================
 #comunicacao a:hover              { background-color:#CCCCCC; text-decoration:none; }
 div#historico_com_blogs_path a    { width:38%; margin-right:5px;margin-top:5px; }
 
-div#com_blogs_path a              { width:25%; margin-right:5px; } 
+div#com_blogs_path a              { width:100%; margin-right:5px; } 
                                   
 #comunicacao b                    { margin-left: 2%; color:#205C7A;}
 

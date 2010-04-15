@@ -10,7 +10,8 @@ foram encontrados <%= @cadastros.size.to_s %> cadastros irregulares
       <% @cadastros.each do |c| %>
       <tr>
         <td class="itens_index">
-          <%= link_to c.id, ecm_formulario_cadastro_path(c.formulario_id, c) %>
+          <%= @principal.rotulo %>: 
+          <%= link_to ecm_show_cadastro_item(@principal, c), ecm_formulario_cadastro_path(c.formulario_id, c) %>
         </td>
         <td class="itens_index"><%= c.children.size.to_s %></td>
       </tr>
