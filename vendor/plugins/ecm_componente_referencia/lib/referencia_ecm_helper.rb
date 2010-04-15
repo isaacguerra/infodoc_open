@@ -11,7 +11,7 @@ module ReferenciaEcmHelper
      view.concat("<h3>Item Referecia a outro Formulário</h3>")
      view.concat("<p>Este Item fará referencia a outros formulários</p>")
        view.concat("</td>")
-      view.concat("</tr>") 
+      view.concat("</tr>")
       view.concat("<tr>")
         view.concat("<td class='lista_item'/>")
         view.concat("<td class='lista_conteudo'>")
@@ -50,7 +50,7 @@ module ReferenciaEcmHelper
      view.concat("<h3>Item Referecia a outro Formulário</h3>")
      view.concat("<p>Este Item fará referencia a outros formulários</p>")
        view.concat("</td>")
-      view.concat("</tr>") 
+      view.concat("</tr>")
       view.concat("<tr>")
         view.concat("<td class='lista_item'/>")
         view.concat("<td class='lista_conteudo'>")
@@ -163,12 +163,8 @@ module ReferenciaEcmHelper
     unless params
       view.concat(select :cadastro, "item_#{form_item.id}", cadastro_itens)
     else
-      if params[:cadastro]
-        if params[:cadastro]["item_#{form_item.id}"]
-          view.concat(select :cadastro, "item_#{form_item.id}", cadastro_itens, :selected=>params[:cadastro]["item_#{form_item.id}"].to_i)
-        else
-          view.concat(select :cadastro, "item_#{form_item.id}", cadastro_itens)
-        end
+      if params["item_#{form_item.id}"]
+        view.concat(select :cadastro, "item_#{form_item.id}", cadastro_itens, :selected=>params["item_#{form_item.id}"].to_i)
       else
         view.concat(select :cadastro, "item_#{form_item.id}", cadastro_itens)
       end

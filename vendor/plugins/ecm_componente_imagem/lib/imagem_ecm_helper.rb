@@ -11,12 +11,12 @@ module ImagemEcmHelper
          view.concat("<h3>Item Imagem</h3>")
          view.concat("<p> Este campo vilculará uma imagem ao formulario</p>")
         view.concat("</td>")
-      view.concat("</tr>")  
+      view.concat("</tr>")
       view.concat("<tr>")
         view.concat("<td class='lista_item'>")
           view.concat("Tipos:")
         view.concat("</td>")
-        view.concat("<td class='lista_conteudo'>")  
+        view.concat("<td class='lista_conteudo'>")
           view.concat(text_area "opcoes", :tipo, options={:cols=>50, :rows=>10})
           view.concat("<p>Informe a Lista de Tipos separando por ; </p>")
         view.concat("</td>")
@@ -49,7 +49,7 @@ module ImagemEcmHelper
         view.concat("<td class='lista_item'>")
           view.concat("Tipos:")
         view.concat("</td>")
-        view.concat("<td class='lista_conteudo'/>")  
+        view.concat("<td class='lista_conteudo'/>")
           view.concat(text_area "opcoes", :tipo, options={:cols=>50, :rows=>10, :value=>form_item.opcoes[:lista]})
           view.concat("<p>Informe a Lista de Tipos separando por ; </p>")
         view.concat("</td>")
@@ -113,7 +113,11 @@ module ImagemEcmHelper
     base = ImagemEcmBase.new
     cadastro_item = base.busca_cadastro_item(form_item, cadastro)
     view = ""
-    view.concat(cadastro_item.imagem_file_name) if cadastro_item
+    if cadastro_item and cadastro_item.imagem_file_name
+      view.concat(cadastro_item.imagem_file_name) if cadastro_item
+    else
+      view.concat("Missing")
+    end
     return view
   end
 
