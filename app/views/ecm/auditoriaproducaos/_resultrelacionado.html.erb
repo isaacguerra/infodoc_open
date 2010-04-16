@@ -1,6 +1,9 @@
-foram encontrados <%= @errados.size.to_s %> cadastros irregulares
+
 <table id="listar">
     <thead>
+      <tr>
+        <th colspan="2">foram encontrados <%= @errados.size.to_s %> cadastros irregulares</th>
+      </tr>  
       <tr>
         <th class="titulo_lista"><%= @form_pai.titulo %></th>
         <th class="titulo_lista"><%= @form_filho.titulo %></th>
