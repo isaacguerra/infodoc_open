@@ -420,7 +420,7 @@ AVATAR*/
                             border: 1px solid #F2DBBB;
                             border-left: 1px solid #F2DBBB;
                             border-right: 1px solid #F8EFA7;
-                            width:100%;
+                            width:100% !important;
                             padding:2px 2px 25px;
 
                             }   
