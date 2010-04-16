@@ -1,0 +1,31 @@
+foram encontrados <%= @cadastros.size.to_s %> Cadastros não Auditados
+<table id="listar">
+    <thead>
+      <tr>
+        <th class="titulo_lista">Criação</th>
+        <th class="titulo_lista">Cadastro</th>
+        <th class="titulo_lista">Auditar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @cadastros.each do |c| %>
+      <tr>
+        <td>
+          <%= c.created_at.to_s %>
+        </td>
+        <td class="itens_index">
+          <%= @principal.rotulo %>:
+          <%= link_to ecm_show_cadastro_item(@principal, c), ecm_formulario_cadastro_path(c.formulario_id, c) %>
+        </td>
+        <td class="itens_index">
+          <div id="audi_<%= c.id %>">
+           <% form_remote_tag :url=>{:controller=>"/ecm/auditoriaproducaos/#{c.id}"}, :method=>'put' do -%>
+             <%= submit_tag 'Auditado', :class=>"botao_formulario" %>
+           <% end %>
+          </div>
+        </td>
+      </tr>
+	  <% end %>
+    </tobody>
+</table>
+

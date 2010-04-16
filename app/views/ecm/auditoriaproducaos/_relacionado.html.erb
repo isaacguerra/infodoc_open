@@ -1,5 +1,5 @@
 <div id="barra_titulo">
-  <h3 class="titulo_new">Auditoria por Artefatos</h3>
+  <h3 class="titulo_new">Auditoria de Cadastros Relacionados</h3>
 </div>
   <% form_remote_tag :url=>{:controller=>'/ecm/auditoriaproducaos'}, :action=>'create' do -%>
     <%= hidden_field_tag :tipo, "relacionados" %>
@@ -17,3 +17,4 @@
     </tr>
   <% end %>
 <div id="resultado"></div>
+

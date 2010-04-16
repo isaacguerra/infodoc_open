@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100331203150) do
+ActiveRecord::Schema.define(:version => 20100415182441) do
 
   create_table "ajudas", :force => true do |t|
     t.integer "entidade_id"
@@ -31,14 +31,14 @@ ActiveRecord::Schema.define(:version => 20100331203150) do
   create_table "auditoriacadastros", :force => true do |t|
     t.integer  "entidade_id"
     t.integer  "usuario_id"
-    t.string   "usuario_nome"
     t.integer  "cadastro_id"
     t.integer  "formulario_id"
-    t.string   "formulario_nome"
     t.integer  "artefato_id"
     t.string   "acao"
-    t.text     "descricao"
+    t.string   "descricao"
     t.datetime "created_at"
+    t.string   "usuario_nome",    :default => ""
+    t.string   "formulario_nome", :default => ""
   end
 
   create_table "blogs", :force => true do |t|
@@ -80,6 +80,9 @@ ActiveRecord::Schema.define(:version => 20100331203150) do
     t.text     "filtro"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "auditado",               :default => false
+    t.integer  "auditor_id"
+    t.date     "auditado_at"
   end
 
   add_index "cadastros", ["entidade_id"], :name => "index_cadastros_on_entidade_id"
@@ -269,9 +272,9 @@ ActiveRecord::Schema.define(:version => 20100331203150) do
     t.integer  "logo_file_size"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "mediaarquivo",                       :default => 0
-    t.integer  "quantidadearquivo",                  :default => 0
-    t.float    "espacodisco",                        :default => 0.0
+    t.integer  "mediaarquivo"
+    t.integer  "quantidadearquivo"
+    t.float    "espacodisco"
   end
 
   add_index "entidades", ["endereco"], :name => "index_entidades_on_endereco"
