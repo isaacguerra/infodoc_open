@@ -33,6 +33,10 @@ ActionController::Routing::Routes.draw do |map|
     ecm.resources :auditoriaproducaos
   end
 
+  map.namespace :gde do |gde|
+    gde.resources :Navegadordearquivos
+  end
+
   map.namespace :page do |page|
     page.resources :entidade, :only=>[:show] do |entidade|
       entidade.resources :publicados, :only=>[:index, :show]

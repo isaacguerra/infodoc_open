@@ -1,0 +1,26 @@
+<div id="barra_titulo">
+  <h3 class="titulo_relatorio_producao">Navegador de Arquivos</h3>
+</div>
+<div id ="auditoria_de_producao">
+  <table id="listar">
+    <tr>
+      <th class="titulo_lista">Mudar a Raiz do Sistema</th>
+    </tr>
+    <tr>
+      <% form_remote_tag :url=>{:controller=>'/gde/navegadordearquivos', :action=>'create'} do -%>
+        <%= hidden_field_tag :tipo, "categorias" %>
+        <td class="lista_conteudo"><%= submit_tag 'Usar o Sistema com raiz nas Categorias de Formulario', :class=>"botao_formulario" %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% form_remote_tag :url=>{:controller=>'/gde/navegadordearquivos', :action=>'create'} do -%>
+        <%= hidden_field_tag :tipo, "formularios" %>
+        <td class="lista_conteudo"><%= select_tag :formulario, option_groups_from_collection_for_select(Formulariocategoria.da_entidade(@sessao_usuario.entidade_id).all, :formularios, :nome, :id, :titulo, 3)  %>
+        <%= submit_tag 'Mudar', :class=>"botao_formulario" %></td>
+      <% end %>
+    </tr>
+  </table>
+  <div id="pastas">
+  </div>
+</div>
+

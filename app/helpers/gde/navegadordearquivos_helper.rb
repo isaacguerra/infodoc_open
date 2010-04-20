@@ -1,0 +1,2 @@
+module Gde::NavegadordearquivosHelper
+end

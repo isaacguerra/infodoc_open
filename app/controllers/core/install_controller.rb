@@ -66,6 +66,9 @@ class Core::InstallController < ApplicationController
     cadastro = Sistema.create(:nome=>"Cadastros", :descricao=>"Cadastro", :rota=>"/ecm/cadastros", :controle=>"Ecm::CadastrosController", :menu=>false, :status=>true, :modulo_id=>mgc.id)
     @log << "#ID do sistema  de Gerencia de Cadastro - #{cadastro.id}\n"
 
+    navegador = Sistema.create(:nome=>"Navegador de Arquivos", :descricao=>"Navegador de Arquivos", :rota=>"/gde/navegadordearquivos", :controle=>"Ecm::NavegadordearquivosController", :menu=>true, :status=>true, :modulo_id=>mgde.id)
+    @log << "#ID Navegador de Arquivos - #{navegador.id}\n"
+
     scwiki = Sistema.create(:nome=>"InfoWiki", :descricao=>"infocategoriawiki", :rota=>"/wiki/wikicategorias", :controle=>"Wiki::WikicategoriasController", :menu=>true, :status=>true, :modulo_id=>mwiki.id)
     swiki = Sistema.create(:nome=>"InfoWiki", :descricao=>"infowiki", :rota=>"/wiki/wikipages", :controle=>"Wiki::WikipagesController", :menu=>false, :status=>true, :modulo_id=>mwiki.id)
     shwiki = Sistema.create(:nome=>"InfoHistoriaWiki", :descricao=>"infohistoriawiki", :rota=>"/wiki/wiki", :controle=>"Wiki::WikihistoriapagesController", :menu=>false, :status=>true, :modulo_id=>mwiki.id)
