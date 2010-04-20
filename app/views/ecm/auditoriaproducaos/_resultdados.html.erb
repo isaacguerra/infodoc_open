@@ -1,6 +1,8 @@
-foram encontrados <%= @cadastros.size.to_s %> Cadastros não Auditados
+
 <table id="listar">
     <thead>
+      <tr>
+        <th colspan="2">foram encontrados <%= @cadastros.size.to_s %> Cadastros não Auditados</th>
       <tr>
         <th class="titulo_lista">Criação</th>
         <th class="titulo_lista">Cadastro</th>
@@ -10,7 +12,7 @@ foram encontrados <%= @cadastros.size.to_s %> Cadastros não Auditados
     <tbody>
       <% @cadastros.each do |c| %>
       <tr>
-        <td>
+        <td class="itens_index">
           <%= c.created_at.to_s %>
         </td>
         <td class="itens_index">

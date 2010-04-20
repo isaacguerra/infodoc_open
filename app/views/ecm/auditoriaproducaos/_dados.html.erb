@@ -1,16 +1,18 @@
-<div id="barra_titulo">
-  <h3 class="titulo_new">Auditoria de Dados do Cadastro</h3>
-</div>
   <% form_remote_tag :url=>{:controller=>'/ecm/auditoriaproducaos'}, :action=>'create' do -%>
     <%= hidden_field_tag :tipo, "dados" %>
-    <tr>
-      <td class="lista_item">Formulario</td>
-      <td class="lista_conteudo"><%= select_tag :formulario, option_groups_from_collection_for_select(Formulariocategoria.da_entidade(@sessao_usuario.entidade_id).all, :formularios, :nome, :id, :titulo, 3)  %></td>
-    </tr>
-    <tr>
-      <td class="lista_item"/>
-      <td class="lista_conteudo"><%= submit_tag 'Filtrar', :class=>"botao_formulario" %></td>
-    </tr>
+    <table id ="listar"
+     <tr>
+        <td  colspan="2"><h3 class="titulo_new">Auditoria de Dados do Cadastro</h3></td>
+     </tr>   
+      <tr>
+        <td class="lista_item">Formulario</td>
+        <td class="lista_conteudo"><%= select_tag :formulario, option_groups_from_collection_for_select(Formulariocategoria.da_entidade(@sessao_usuario.entidade_id).all, :formularios, :nome, :id, :titulo, 3)  %></td>
+      </tr>
+      <tr>
+        <td class="lista_item"/>
+        <td class="lista_conteudo"><%= submit_tag 'Filtrar', :class=>"botao_formulario" %></td>
+      </tr>
+     </table> 
   <% end %>
 <div id="resultado"></div>
 
