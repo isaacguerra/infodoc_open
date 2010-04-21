@@ -12,7 +12,11 @@ class Gde::NavegadordearquivosController < ApplicationController
         page.replace_html "pastas", render(:partial=>"categorias")
       end
     else
-
+      @formulario = Formulario.find(params[:formulario])
+      render :update do |page|
+        page.visual_effect(:highlight , "pastas")
+        page.replace_html "pastas", render(:partial=>"formularios")
+      end
     end
   end
 

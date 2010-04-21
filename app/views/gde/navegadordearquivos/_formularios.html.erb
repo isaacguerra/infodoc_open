@@ -1,0 +1,7 @@
+<% form_remote_tag :url=>{:controller=>'/gde/navegadordearquivos', :action=>'update'} do -%>
+<h1><%= @formulario.titulo %></h1>
+<%= submit_tag 'Baixar Arquvios Marcados', :class=>"botao_formulario" %>
+  <%= lista_formulario(@formulario) %>
+<%= submit_tag 'Baixar Arquvios Marcados', :class=>"botao_formulario" %>
+<% end %>
+

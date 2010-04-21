@@ -1,2 +1,0 @@
-module Core::PerfilentidadesHelper
-end
