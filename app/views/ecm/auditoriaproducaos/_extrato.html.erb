@@ -1,0 +1,25 @@
+<% form_remote_tag :url=>{:controller=>'/ecm/auditoriaproducaos'}, :action=>'create' do -%>
+  <%= hidden_field_tag :tipo, "extrato" %>
+   <table id="listar">
+    <tr>
+      <td colspan="2"><h3 class="titulo_new">Extrato de Produção Por Usuario</h3> </td>
+    <tr>
+      <td class="lista_item">Usuario</td>
+      <td class="lista_conteudo"><%= select_tag :usuario_id, options_from_collection_for_select(Usuario.da_entidade(@sessao_usuario.entidade_id).all, 'id', 'nome') %></td>
+    </tr>
+    <tr>
+      <td class="lista_item">Data Inicio</td>
+      <td class="lista_conteudo"><%= date_select :periodo, :data_inicio %></td>
+    </tr>
+     <tr>
+      <td class="lista_item">Data Fim</td>
+      <td class="lista_conteudo"><%= date_select :periodo, :data_fim %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"/>
+      <td class="lista_conteudo"><%= submit_tag 'Filtrar', :class=>"botao_formulario" %></td>
+    </tr>
+  </table>
+  <% end %>
+<div id="resultado"></div>
+

@@ -1,0 +1,39 @@
+
+<table id="listar">
+    <thead>
+      <tr>
+        <th colspan="2">Extrato do Usuario <%= @usuario.nome.upcase %> no periodo de <%= @di.to_s %> a <%= @df.to_s %></th>
+      </tr>
+    </tdead>
+    <tbody>
+      <tr>
+        <td class="itens_index">Cadastros Criados</td>
+        <td class="itens_index"><%= @cadastros_criados %></td>
+      </tr>
+      <tr>
+        <td class="itens_index">Cadastros Criados e Auditados</td>
+        <td class="itens_index"><%= @cadastros_auditados %></td>
+      </tr>
+      <tr>
+        <td class="itens_index">Cadastros Alterados</td>
+        <td class="itens_index"><%= @cadastros_alterados %></td>
+      </tr>
+      <tr>
+        <td class="itens_index">Cadastros Excluidos</td>
+        <td class="itens_index"><%= @cadastros_excluidos %></td>
+      </tr>
+      <tr>
+        <td class="itens_index">Artefatos Criados</td>
+        <td class="itens_index"><%= @artefatos_criados %></td>
+      </tr>
+      <tr>
+        <td class="itens_index">Artefatos Excluidos</td>
+        <td class="itens_index"><%= @artefatos_excuidos %></td>
+      </tr>
+      <tr>
+        <td class="itens_index">Auditoria em Cadastro</td>
+        <td class="itens_index"><%= @auditados.size %></td>
+      </tr>
+    </tobody>
+</table>
+
