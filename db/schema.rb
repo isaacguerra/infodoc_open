@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(:version => 20100415182441) do
     t.datetime "created_at"
   end
 
+  add_index "auditoriacadastros", ["acao"], :name => "index_auditoriacadastros_on_acao"
+  add_index "auditoriacadastros", ["cadastro_id"], :name => "index_auditoriacadastros_on_cadastro_id"
+  add_index "auditoriacadastros", ["created_at"], :name => "index_auditoriacadastros_on_created_at"
+  add_index "auditoriacadastros", ["entidade_id"], :name => "index_auditoriacadastros_on_entidade_id"
+  add_index "auditoriacadastros", ["formulario_id"], :name => "index_auditoriacadastros_on_formulario_id"
+  add_index "auditoriacadastros", ["usuario_id"], :name => "index_auditoriacadastros_on_usuario_id"
+
   create_table "blogs", :force => true do |t|
     t.integer  "entidade_id"
     t.integer  "usuario_id"

@@ -16,7 +16,7 @@ class CreateAuditoriacadastros < ActiveRecord::Migration
     add_index :auditoriacadastros, :usuario_id
     add_index :auditoriacadastros, :cadastro_id
     add_index :auditoriacadastros, :formulario_id
-    add_index :auditoriacadastros, :acao_id
+    add_index :auditoriacadastros, :acao
     add_index :auditoriacadastros, :created_at
   end
 
