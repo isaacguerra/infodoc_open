@@ -15,6 +15,9 @@
     <tr>
       <td class="itens_index"><h3><%= link_to_remote "Auditoria de Dados de Cadastros", :url=>(url_for(ecm_auditoriaproducao_path("dados"))), :method=>"get" %></h3></td>
     </tr>
+    <tr>
+      <td class="itens_index"><h3><%= link_to_remote "Extrato de Produção por Usuario", :url=>(url_for(ecm_auditoriaproducao_path("extrato"))), :method=>"get" %></h3></td>
+    </tr>
   </table>
   <div id="filtro"></div>
 </div>
