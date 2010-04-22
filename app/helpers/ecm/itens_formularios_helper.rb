@@ -1,2 +1,0 @@
-module Ecm::ItensFormulariosHelper
-end

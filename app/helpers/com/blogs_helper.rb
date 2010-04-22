@@ -1,2 +1,0 @@
-module Com::BlogsHelper
-end

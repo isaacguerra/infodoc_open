@@ -34,7 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.namespace :gde do |gde|
-    gde.resources :Navegadordearquivos
+    gde.resources :navegadordearquivos, :member=>{:download=>:get}
   end
 
   map.namespace :page do |page|

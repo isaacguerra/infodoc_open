@@ -1,2 +1,0 @@
-module Wiki::WikipagesHelper
-end

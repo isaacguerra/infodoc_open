@@ -38,5 +38,20 @@ class Formulario < ActiveRecord::Base
     end
   end
 
+  def item_principal
+    Itensformulario.find(self.principal_id)
+  end
+
+  def formularios_relacionados_filhos
+    id_ref = Itensformulario.da_entidade(self.entidade_id).do_tipo("referencia").find(:all)
+    id_ref.collect! {|f| f.formulario_id if f.opcoes[0][:referenciado].to_i == self.id}.compact!
+    Formulario.find(:all, :conditions=>["id in (?)", id_ref])
+  end
+
+  def formularios_relacionados_pais
+    id_ref = Itensformulario.do_formulario(self).da_entidade(self.entidade_id).do_tipo("referencia").find(:all)
+    id_ref.collect! {|f| f.opcoes[0][:referenciado]}.compact!
+    Formulario.find(:all, :conditions=>["id in (?)", id_ref])
+  end
 end
 

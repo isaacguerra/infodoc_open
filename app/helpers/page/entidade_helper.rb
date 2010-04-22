@@ -1,2 +1,0 @@
-module Page::EntidadeHelper
-end

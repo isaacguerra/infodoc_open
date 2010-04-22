@@ -1,2 +1,0 @@
-module Ecm::CadastrosHelper
-end
