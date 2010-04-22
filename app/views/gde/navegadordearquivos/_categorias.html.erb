@@ -1,37 +1,40 @@
-<ol>
-<% @categorias.each do |cat| %>
-  <li><%= cat.nome %>
-    <ol>
-      <% cat.formularios.each do |form| %>
-        <% if form.formulariotipo_id==1 %>
-        <li><%= form.titulo %></li>
-          <ol>
-            <% form.cadastros.each do |cad| %>
-              <% principal = Itensformulario.find(cad.formulario.principal_id) %>
-              <% if cad.formulario.permissao(@sessao_usuario.usuario) > 0 %>
-               <li><%= link_to ecm_show_cadastro_item(principal, cad), ecm_formulario_cadastro_path(cad.formulario_id, cad) %></li>
-              <% else %>
-               <li><%= ecm_show_cadastro_item(principal, cad) %></li>
+<%= javascript_include_tag "treeView.js" %>
+<ul id="navegacao_arquivos" class="filetree">
+  <% @categorias.each do |cat| %>
+    <li><span class="folder"><h3><%= cat.nome %></h3></span>
+      <ul>
+        <% cat.formularios.each do |form| %>
+          <% if form.formulariotipo_id==1 %>
+          <li><span class="folder"><h4><%= form.titulo %></h4></span>
+            <ul>
+              <% form.cadastros.each do |cad| %>
+                <% principal = Itensformulario.find(cad.formulario.principal_id) %>
+                <% if cad.formulario.permissao(@sessao_usuario.usuario) > 0 %>
+                 <li><span class="folder"><%= link_to ecm_show_cadastro_item(principal, cad), ecm_formulario_cadastro_path(cad.formulario_id, cad) %></span>
+                <% else %>
+                 <li><%= ecm_show_cadastro_item(principal, cad) %>
+                <% end %>
+                  <ul>
+                    <% cad.children.each do |art| %>
+                      <span class="file <%= art.artefato.mime_type %>">
+                        <li>
+                          <% if cad.formulario.permissao(@sessao_usuario.usuario) > 0 %>
+                           <%= link_to art.artefato.objeto_file_name, download_gde_navegadordearquivo_path(art) %>
+                          <% else %>
+                           <%= art.artefato.objeto_file_name %>
+                          <% end %>
+                        </li>
+                      </span>
+                    <% end %>
+                  </ul>
+                 </li> 
               <% end %>
-                <ul>
-                  <% cad.children.each do |art| %>
-                    <div class="<%= art.artefato.mime_type %>">
-                      <li>
-                        <% if cad.formulario.permissao(@sessao_usuario.usuario) > 0 %>
-                         <%= link_to art.artefato.objeto_file_name, download_gde_navegadordearquivo_path(art) %>
-                        <% else %>
-                         <%= art.artefato.objeto_file_name %>
-                        <% end %>
-                      </li>
-                    </div>
-                  <% end %>
-                </ul>
-            <% end %>
-          </ol>
+            </ul>
+          </li>
+          <% end %>
         <% end %>
-      <% end %>
-    </ol>
-  </li>
-<% end %>
-</ol>
+      </ul>
+    </li>  
+  <% end %>
+</ul>
 
