@@ -10,13 +10,20 @@ module Gde::NavegadordearquivosHelper
     end
     formulario.cadastros.each do |cad|
     view.concat("<li>")
-    view.concat(link_to ecm_show_cadastro_item(formulario.item_principal, cad), ecm_formulario_cadastro_path(cad.formulario_id, cad))
+    if cad.formulario.permissao(@sessao_usuario.usuario) > 0
+     view.concat(link_to ecm_show_cadastro_item(formulario.item_principal, cad), ecm_formulario_cadastro_path(cad.formulario_id, cad))
+    else
+     view.concat(ecm_show_cadastro_item(formulario.item_principal, cad))
+    end
       view.concat("<ul>")
       cad.children.each do |art|
         view.concat("<div class=#{art.artefato.mime_type}>")
           view.concat("<li>")
-            view.concat(check_box_tag "artefatos[]", art.id)
-            view.concat(art.artefato.objeto_file_name)
+            if cad.formulario.permissao(@sessao_usuario.usuario) > 0
+             view.concat(link_to art.artefato.objeto_file_name, download_gde_navegadordearquivo_path(art))
+            else
+             view.concat(art.artefato.objeto_file_name)
+            end
           view.concat("</li>")
         view.concat("</div>")
       end

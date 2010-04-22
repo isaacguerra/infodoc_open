@@ -55,7 +55,7 @@ class Ecm::ArtefatosController < ApplicationController
       @artefato.objeto = params[:cadastro][:objeto]
       @artefato.save
       if params[:ocr] == "1"
-        @artefato.fazer_ocr
+        @artefato.send_later :fazer_ocr
       end
       Auditoriacadastro.create(:entidade_id=>@cadastro.entidade_id,
                                :usuario_id=>@cadastro.usuario_id,
