@@ -16,15 +16,15 @@
                 <% end %>
                   <ul>
                     <% cad.children.each do |art| %>
-                      <span class="file <%= art.artefato.mime_type %>">
                         <li>
+                          <span class="file <%= art.artefato.mime_type %>">
                           <% if cad.formulario.permissao(@sessao_usuario.usuario) > 0 %>
                            <%= link_to art.artefato.objeto_file_name, download_gde_navegadordearquivo_path(art) %>
                           <% else %>
                            <%= art.artefato.objeto_file_name %>
                           <% end %>
+                          </span>
                         </li>
-                      </span>
                     <% end %>
                   </ul>
                  </li> 

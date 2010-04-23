@@ -378,7 +378,7 @@ AVATAR*/
 
 .titulo_relatorio_entidades { background-image: url("/theme/infodoc/images/pizza.png"); }
 
-.titulo_relatorio_producao{ background-image: url("/theme/infodoc/images/producao.png"); }
+.titulo_relatorio_producao  { background-image: url("/theme/infodoc/images/producao.png"); }
 
 .titulo_navegacao           { background-image: url("/theme/infodoc/images/arvore.png"); }
 
@@ -2629,6 +2629,7 @@ mimetypes
 .filetree span.file.imagem{ background: url("/images/treeview/imagem.png") 0 0 no-repeat; }
 .filetree span.file.documento{ background: url("/images/treeview/documento.png") 0 0 no-repeat; }
 .filetree span.file.compactado{ background: url("/images/treeview/compactado.png") 0 0 no-repeat; }
+.filetree span.file.pdf{ background: url("/images/treeview/pdf.png") 0 0 no-repeat; }
 
 
 

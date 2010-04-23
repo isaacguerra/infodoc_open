@@ -17,7 +17,7 @@ table                               {  margin-bottom:0; }
 
 form                                { margin:0; padding: 0;}
 
-h3                                  { color:black; margin:0px; }
+h3,h4                               { color:black; margin:0px; }
 
 #listar tr:hover                    { background:#FAF5DC; }
 #listar  #busca_wiki { background-color:#FFFFFF; }    
@@ -330,6 +330,10 @@ AVATAR*/
 
 .titulo_relatorio_entidades { background-image: url("/theme/infodoc/images/pizza.png"); }
 
+.titulo_relatorio_producao  { background-image: url("/theme/infodoc/images/producao.png"); }
+
+.titulo_navegacao           { background-image: url("/theme/infodoc/images/arvore.png"); }
+
 #comunicacao #barra_titulo .titulo_index_infowiki      { background-image: none; }
 
 .titulo_cat_infowiki        { background-image: url("/theme/blue-orange/images/categoria.png") }
@@ -340,6 +344,7 @@ AVATAR*/
 .titulo_edit,
 .titulo_comentario,
 .titulo_cat_infowiki,
+.titulo_navegacao,
 .titulo_index_infowiki      {
 
                              font-size:1.2em;
@@ -837,6 +842,7 @@ FORMS
 
 .formulario input[type=submit],
 #auditorias input[type=submit],
+#auditoria_de_producao #filtro .lista_conteudo input[type=submit],
 #busca input[type=submit]           {
 
                                     float:left;
@@ -861,6 +867,7 @@ FORMS
 
 .formulario input[type=submit]:hover,
 #auditorias input[type=submit]:hover,
+#auditoria_de_producao #filtro .lista_conteudo input[type=submit]:hover,
 #busca input[type=submit]:hover { background-position:bottom; }
 .formulario .lista_conteudo     { border: 1px solid #FFFFFF }
 
@@ -2363,3 +2370,189 @@ RELATORIO ENTIDADES
                                                background-repeat:no-repeat;
                                               }
 .relatorio_entidades .titulo_lista            { border: 0; background:0; font-size: 1.1em; }      
+
+
+/*
+AUDITORIA DE PRODUCAO DE ECM
+=================================*/
+
+
+#auditoria_de_producao                        { border:1px solid ;float:left; width:100%; margin: 6px 0;}
+#auditoria_de_producao                        { border-color: #DBDBDB; } /*aparencia */
+#auditoria_de_producao #listar                { border:0; margin:0 0;}
+#auditoria_de_producao #listar .titulo_lista  { border:0; background: 0; font-size: 1.1em;}
+#auditoria_de_producao #listar td.itens_index { border:0; }
+#auditoria_de_producao #listar td.itens_index h3
+                                              { font-size: 1em;  margin-top:1px; padding: 5px 5px; float:left; width:98.5%;}
+#auditoria_de_producao #listar td.itens_index h3
+                                              { background: #ECF3FB; }  /*aparencia*/                                            
+#auditoria_de_producao #listar td.itens_index h3 a 
+                                              { float:left; width:100%; height:100%; }
+#auditoria_de_producao #listar td.itens_index h3 a
+                                              { color: #CF360D; } /*aparencia*/
+#auditoria_de_producao #listar tr:hover       { background-color: #FFFFFF; } /*neutro*/
+
+#auditoria_de_producao #barra_titulo          { border:0; background:0; }
+.titulo_relatorio_producao                    { /*herdado em conteudo da intranet  */}
+.titulo_relatorio_producao                    { /*herdado em CABECALHO h3 imagem de titulo*/} 
+.titulo_relatorio_producao                    { font-size:1.2em;
+                                                float:left;
+                                                padding: 23px 23px 23px 100px;
+                                                margin-left:10px;
+                                                margin-top: 1%;
+                                                background-position:left;
+                                                background-repeat:no-repeat;
+                                                color:#CF360D;
+                                              } 
+#auditoria_de_producao h3                     { background: 0; margin:3px 0px;}
+#auditoria_de_producao #filtro                { float:left; position:relative; bottom:30px; left:4px; width:98.5%; margin-top:10px; }
+#auditoria_de_producao #filtro form           { margin-left:28px; }
+#auditoria_de_producao #filtro #listar        { border: 1px solid; width:100%; }
+#auditoria_de_producao #filtro #listar        { border-color: #EDEDED; } /*aparencia*/
+#auditoria_de_producao #filtro #listar td     { background: #FFFFFF; border: 0; } /*neutro*/
+#auditoria_de_producao #filtro .lista_conteudo input[type=submit] {/* herdando em *forms */}
+#auditoria_de_producao #filtro .lista_conteudo select             { font-size:0.9em;}
+#auditoria_de_producao #filtro .lista_conteudo select             { color:#CF360D;  }/*aparencia*/
+#auditoria_de_producao #filtro #resultado     { float:left; width: 97%; margin: 10px 26px;}
+
+#auditoria_de_producao #filtro #resultado #listar .titulo_lista { height:1em; border: 1px solid; }
+#auditoria_de_producao #filtro #resultado #listar { border:0; }
+#auditoria_de_producao #filtro #resultado #listar .titulo_lista { background-image:url(/theme/infodoc/images/fil4.jpg); 
+                                                                  border-color: #EDEDED #EDEDED #EDEDED #CCCCCC;
+                                                                 } /*aparencia*/
+                                                                 
+#auditoria_de_producao #filtro #resultado  #listar td { border-left:1px solid ; border-bottom:1px solid ;}
+#auditoria_de_producao #filtro #resultado  #listar td { border-left-color: #EDEDED; border-bottom-color: #EDEDED;} /*aparencia*/
+/*
+end=============*/
+
+/*
+NAVEGACAO DE ARQUIVOS
+============================*/
+#navegacao                        { border:1px solid ;float:left; width:100%; margin: 6px 0;}
+#navegacao                        { border-color: #DBDBDB; } /*aparencia */
+#navegacao #listar                { border:0; margin:0 0;}
+#navegacao #listar .titulo_lista  { border:0; background: 0; font-size: 1.1em;}
+#navegacao #listar td.itens_index { border:0; }
+#navegacao #listar td.itens_index h3
+                                              { font-size: 1em;  margin-top:1px; padding: 5px 5px; float:left; width:98.5%;}
+#navegacao #listar td.itens_index h3
+                                              { background: #ededed; }  /*aparencia*/                                            
+#navegacao #listar td.itens_index h3 a 
+                                              { float:left; width:100%; height:100%; }
+#navegacao #listar td.itens_index h3 a
+                                              { color: #8c1c1c; } /*aparencia*/
+#navegacao #listar tr:hover       { background-color: #FFFFFF; } /*neutro*/
+
+#navegacao #barra_titulo          { border:0; background:0; }
+.titulo_navegacao                 { /*herdado em conteudo da intranet  */}
+.titulo_navegacao                 { /*herdado em CABECALHO h3 imagem de titulo*/} 
+.titulo_navegacao                 {             font-size:1.2em;
+                                                float:left;
+                                                padding: 23px 23px 23px 100px;
+                                                margin-left:10px;
+                                                margin-top: 1%;
+                                                background-position:left;
+                                                background-repeat:no-repeat;
+                                  } 
+#auditoria_de_producao h3         { background: 0; margin:3px 0px;}
+
+/*
+end==========*/
+
+
+/*
+ESTILO DO PLUGIN NAVEGACAO DE ARQUIVOS EM ARVORE ( TREEVIEW )
+=============================================*/
+
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.treeview ul {
+	background-color: white;
+	margin-top: 4px;
+}
+
+.treeview .hitarea {
+	background: url("/images/treeview/treeview-default.gif") -64px -25px no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+.treeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+
+.treeview a.selected {
+	background-color: #eee;
+}
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover { color: red; cursor: pointer; }
+
+.treeview li { background: url("/images/treeview/treeview-default-line.gif") 0 0 no-repeat; }
+.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
+
+.treeview .expandable-hitarea { background-position: -80px -3px; }
+
+.treeview li.last { background-position: 0 -1766px }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url("/images/treeview/treeview-default.gif"); }  
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }
+
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+
+.treeview-red li { background-image: url("/images/treeview/treeview-red-line.gif"); }
+.treeview-red .hitarea, .treeview-red li.lastCollapsable, .treeview-red li.lastExpandable { background-image: url("/images/treeview/treeview-red.gif"); } 
+
+.treeview-black li { background-image: url("/images/treeview/treeview-black-line.gif"); }
+.treeview-black .hitarea, .treeview-black li.lastCollapsable, .treeview-black li.lastExpandable { background-image: url("/images/treeview/treeview-black.gif"); }  
+
+.treeview-gray li { background-image: url("/images/treeview/treeview-gray-line.gif"); }
+.treeview-gray .hitarea, .treeview-gray li.lastCollapsable, .treeview-gray li.lastExpandable { background-image: url("/images/treeview/treeview-gray.gif"); } 
+
+.treeview-famfamfam li { background-image: url("/images/treeview/treeview-famfamfam-line.gif"); }
+.treeview-famfamfam .hitarea, .treeview-famfamfam li.lastCollapsable, .treeview-famfamfam li.lastExpandable { background-image: url("/images/treeview/treeview-famfamfam.gif"); } 
+
+
+.filetree li { padding: 3px 0 2px 16px; }
+.filetree span.folder, .filetree span.file { padding: 1px 0 1px 16px; display: block; }
+.filetree span.folder { background: url("/images/treeview/folder.gif") 0 0 no-repeat; }
+.filetree li.expandable span.folder { background: url("/images/treeview/folder-closed.gif") 0 0 no-repeat; }
+.filetree span.file { background: url("/images/treeview/file.gif") 0 0 no-repeat; }
+/*
+========================*/
+
+
+.treeview, .treeview ul { font-size: 0.9em; }
+#pastas  { float:left; }
+
+/*
+mimetypes
+=========================*/
+
+.filetree span.file.imagem{ background: url("/images/treeview/imagem.png") 0 0 no-repeat; }
+.filetree span.file.documento{ background: url("/images/treeview/documento.png") 0 0 no-repeat; }
+.filetree span.file.compactado{ background: url("/images/treeview/compactado.png") 0 0 no-repeat; }
+.filetree span.file.pdf{ background: url("/images/treeview/pdf.png") 0 0 no-repeat; }
+
+
+
+/*
+======================*/
+
+
+
