@@ -556,7 +556,7 @@ div#wiki                        { width:99.3%;  overflow:hidden;}
                              }
 #wiki .itens_index ul        { padding-left:15px;; }
 #wiki .itens_index li        { list-style: square; font-size:0.9em;}
-#wiki .itens_index           { border-left: 1px solid #EDEDED;border-bottom: 1px solid #FFFFFF;  padding-left:5px;vertical-align:top;}
+#wiki .itens_index           { border-left: 1px solid #F1E5F4;border-bottom: 1px solid #FFFFFF;  padding-left:5px;vertical-align:top;}
 #wiki #link_botao            { float:left; text-align:left; background:none; width:40%;padding:0;}  
 #wiki #link_botao a          { display:inline; color:#000000; margin:0;}
 #wiki #link_botao a:hover    { text-decoration:underline; }
@@ -669,21 +669,21 @@ div#wiki                        { width:99.3%;  overflow:hidden;}
                              }
 
 .hide_comentario a           { 
-                                  background-image: url("/theme/violet/images/hide_comentario.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                              }
                              
 .hide_historico a           { 
-                                  background-image: url("/theme/violet/images/hide_historico.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                              }
 
 .hide_artefato a                { 
-                                  background-image: url("/theme/violet/images/hide_artefato.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
@@ -691,13 +691,13 @@ div#wiki                        { width:99.3%;  overflow:hidden;}
                                 }
 
 .hide_relacionamento a          { 
-                                  background-image: url("/theme/violet/images/hide_relacionamento.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                                 }
 .hide_auditoria a          { 
-                                  background-image: url("/theme/infodoc/images/hide_auditoria.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
@@ -713,6 +713,7 @@ div#wiki                        { width:99.3%;  overflow:hidden;}
                                             font-size:0.7em;
                                             margin-left:2px;
                                             cursor:pointer;
+                                            outline:1px solid #F1E5F4;
                                           }
 .new_entidade a:hover,
 .abilita a:hover,
@@ -774,7 +775,7 @@ div#wiki                        { width:99.3%;  overflow:hidden;}
                                 color:#7B6E7E;
                                 padding:0;
                                 padding-left:6px;
-                                border-bottom: 1px solid #EDEDED;
+                                border-bottom: 1px solid #F1E5F4;
                             }
 .lista_conteudo img         {  width:30%; }
 
@@ -1063,13 +1064,10 @@ FILTRO FORM
 
 
 /***********************************************************************************************************/
+/*
+Actions
 
-/*==========================
-COMENTARIOS
-*/
-
-
-
+===================*/
 
 #show_actions               { font-size:0.7em; float: right; width:30%; text-align:right;}
 
@@ -1083,6 +1081,7 @@ COMENTARIOS
                               padding-top:0px;
 
                             }
+
 
 #comentarios                {
                                width:99.6%;
@@ -1101,7 +1100,18 @@ COMENTARIOS
                                width:99.6%;
                                height:auto;
                                margin:0px;
-                             }                             
+                             }   
+#relacionados                {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+                             }                                                         
+#auditorias                  {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+                             }                                                         
+
 #comentarios #barra_titulo,
 #artefatos #barra_titulo,
 #historico #barra_titulo,
@@ -1109,9 +1119,8 @@ COMENTARIOS
 #auditorias #barra_titulo
                              {
 
-
                                 padding:9px 5px;
-                                width:99%;
+                                width:98.6%;
                                 min-height:25px;
                                 clear:both;
                                 margin:6px 2px;
@@ -1122,40 +1131,43 @@ COMENTARIOS
 
                                 }
                                 
-#comentarios #barra_titulo h3   { 
+#comentarios #barra_titulo h3.titulo_index   { 
                                   font-size: 1.1em;
                                   padding-left:33px; 
-                                  background-image: url("/theme/violet/images/comment_write.png") ;
+                                  background-image: url("/theme/infodoc/images/comment_write.png") ;
                                 }
 
-#artefatos #barra_titulo h3     { 
+#artefatos #barra_titulo h3.titulo_index    { 
                                   font-size: 1.1em; 
                                   padding-left:32px; 
-                                  background-image: url("/theme/violet/images/artefato.png") ;
+                                  background-image: url("/theme/infodoc/images/artefato.png") ;
                                 }
                                 
 #relacionados #barra_titulo h3   { 
                                   font-size: 1em; 
                                   padding-left:32px; 
-                                  background-image: url("/theme/violet/images/relacionamento.png") ;
+                                  background-image: url("/theme/infodoc/images/relacionamento.png") ;
                                 }
                                                                 
 #historico #barra_titulo h3     { font-size: 1em;
                                   padding-left:32px;
-                                  background-image: url("/theme/violet/images/historico.png");
-                                 }    
+                                  background-image: url("/theme/infodoc/images/historico.png");
+                                 }     
 #auditorias #barra_titulo h3   { 
                                   font-size: 1em; 
                                   padding-left:32px; 
                                   background-image: url("/theme/infodoc/images/auditoria.png") ;
-                                } 
+                                }
     
 .titulo_comentario              { font-size:10px; background-image:none; }
 
 
+/*==========================
+COMENTARIOS
+*/
 
-
-
+#comentarios #barra_titulo      { background-color: #F1E5F4; }
+#comentarios .comentario        { float:left; } 
 #comentarios .itens_index       {
 
                                   font-size:0.8em;
@@ -1167,14 +1179,13 @@ COMENTARIOS
                                   width:auto;
                                   border:0;
                                   border-bottom: solid 1px #cccccc;
-                                  width:99%;
+                                  width:auto;
                                   background-color: #F5F5F5;
+                                  height:auto;
                                   
                                  }
                                  
 #comentarios #listar             {
-
-
                                   float:left;
                                   margin: 6px 0 6px 0px;
                                   min-height:450px;
@@ -1184,45 +1195,7 @@ COMENTARIOS
                                   border: 0;
                                   width:100%;
                                   padding:2px 2px ;
-
                                   }
-/*
-#comentarios #link_botao,
-#artefatos #link_botao            {
-
-                                  font-size:0.7em;
-                                  padding: 0.4% 4px;
-                                  text-align:center;
-                                  height:auto;
-                                  min-width:80px;
-                                  width:auto;
-                                  margin:2px 5px 0 0 ;
-                                  float:right;
-
-                                  font-weight:normal;
-                                  background-color:#934DA2;
-                                  border:1px solid #934DA2;
-
-                                  }
-
-#comentarios #link_botao a:hover,
-#artefatos #link_botao a:hover    { color:#FFFFFF; }
-
-#comentarios #link_botao a,
-#artefatos #link_botao a          {
-
-                                  font-weight:none;
-                                  margin:0;
-                                  padding:0;
-                                  background-color:#934DA2;
-                                  color:#E0E0E0;
-
-                                  font-weight: bold;
-                                  width:100%;
-                                  height:100%;
-
-                                 }
-*/    
 #comentarios h3.titulo_new       {                               
 
                                   width:98%;
@@ -1237,7 +1210,7 @@ COMENTARIOS
                                
 #comentarios input[type=submit]  {  
                                     margin-top:5px;
-                                    color: #EDEDED;
+                                    color: #F1E5F4;
                                     font-weight:bold;
                                     font-size:0.7em;
                                     background-color:#934DA2;
@@ -1246,137 +1219,173 @@ COMENTARIOS
                                  }
 
 #comentarios input[type=submit]:hover { color:#FFFFFF; }
-
 #new_comentario                 { padding:0 5px; width:100%; margin:10px 0; margin-left:10px;}
-
 #comentarios textarea           { background-color:#FFFFFF;       }
-
 #comentarios textarea:focus     { background-color:#FFFFFF;       }
+#comentarios .hide_comentario      { float:right;width:10px; margin:0 5px 0 0;padding:0; }
+#comentarios .hide_comentario a    { margin:0; padding:0; width:100%; }
 
 
-/*****************                  ARTEFATOS                      *******************/
-#new_artefato                   { 
-
-                                padding:0;
-                                width:100%; 
-                                float:left;
-                                margin:10px 0; 
- 
-
-                                }
-                            
-#artefatos .formulario        { margin:0;}
-
-#artefatos div.formulario     { width:74.8%; float:left; padding:0; border:0; margin:0;}
-
-#artefatos .formulario select { color:#934DA2; float:left; margin:0 22px; vertical-align:middle;}
-                               
-#artefatos .formulario option  {  }
 /*
-#artefatos .formulario input[type=submit]  { 
-                                            
-                                background-color:#934DA2;
-                                border:1px solid #934DA2;
-                                padding:0px 2px 0;
-                                font-size:0.6em;
-                                font-weight:bold;
-                                color:#E0E0E0;
-                                text-align:center; 
-                                float:right;
-                                height:2.6em; 
-                                margin:1px 0 0;
-                                
-                                            }
-                                            
-#artefatos .formulario input[type=submit]:hover { color:#FFFFFF }
-*/
-#artefatos h3.titulo_new
-                               {
+ARTEFATOS
+============================================*/
 
-                                width:98%;
-                                margin:0;
-                                padding:0;
-                                margin-top:10px;
-                                margin-bottom: 10px;
+#new_artefato                 { padding:0; width:100%; float:left; margin:10px 0;  }
+#artefatos .formulario        { margin:0;}
+#artefatos #barra_titulo      { background-color: #F1E5F4; }
+#artefatos #barra_titulo .lista_conteudo h3 {  float:left; }
+#artefatos b._titulo          { font-size:0.8em;  width:auto; margin-right:5px;  float:left; padding-top: 13px; color: #934DA2;} 
+#artefatos h4                 { width:auto;  float:left; }
+#artefatos div.formulario {
+
+                              background:transparent url(/theme/violet/images/img09.gif) repeat scroll 0 0;
+                              border:1px solid #FFFFFF;
+                              float:right;
+                              margin:0 15px 0 41px;
+                              outline-color:#DBDBDB;
+                              outline-style:solid;
+                              outline-width:1px;
+                              padding:10px;
+                              width:40%;
+
+
+}
+#artefatos .formulario select { color:#934DA2; float:left; margin:10px 0 0 22px; vertical-align:middle;}
+#artefatos .formulario option {  }
+#artefatos h3.titulo_new
+                              { width:98%; margin:0;padding:0;margin-top:10px; margin-bottom: 10px;
+                                margin-left:5px;
                                 background-image:none;
                                 font-size:0.8em;
-
-                               }
+                              }
                                
-#artefatos input[type="file"] { margin-top: 10px; }
+#artefatos input[type="file"]  { margin-top: 10px; }
 
 #artefatos input[type=submit]  { 
-                                 margin-bottom:5px;
-                                 color: #EDEDED;
-                                 font-weight:bold;
-                                 font-size:0.7em;
+                                 margin-bottom:5px; color: #F1E5F4; font-weight:bold; font-size:0.7em;
                                  background-color:#934DA2;
                                  border: 1px solid #934DA2;
 
                                 }
 
-#artefatos input[type=submit]:hover { color:#FFFFFF; }
+#artefatos input[type=submit]:hover
+                                { color:#FFFFFF; }
 
-#artefatos #listar { border:1px solid #CCCCCC; padding-bottom:2px; margin:6px 0.1% ;} 
-#artefatos #listar .download_artefato a,
-#artefatos #listar .delete a             { 
-                        padding-top:50px; 
-                        background-position:center;
-                        background-repeat: no-repeat;
-                        margin:0; margin-top:10px;
-                        float:right;
-                        margin:4% 35%;
-                        
-                                          }
-#artefatos #listar .delete a:hover { background-color:#F2F2F2; }
-#artefatos #listar .download_artefato a { background-image: url("/theme/violet/images/download.png"); }
+#artefatos #listar              { border:1px solid #CCCCCC; padding-bottom:2px; margin:6px 0.1% ;} 
 
-                     
-#artefatos #listar .download_artefato a:hover { text-decoration:none; padding-top: 40px; outline:1px solid #D1D1D1; background-color:#F2F2F2;}  
+#artefatos #listar .file        { float:left; width:20px; height:16px ; margin: 0 0 0 0; }
+
+                                
+#artefatos #listar .file a      { float:left; width:100%;height:auto; padding:14px 0 0; }
+
+#artefatos #listar .file        {
+
+                                   background-repeat:no-repeat;
+                                   background-position:center top ;
+                                   font-size:0.7em;
+                                   width:20px;
+                                   height:31px;
+                                   vertical-align: bottom;
+                                   float:right;
+                                   margin:-3px 0 0 0 ;
+                                   padding:5px;
+                                   text-align:center;
+                                   
+                                 }
 
 
-#artefatos td           { 
+#artefatos #listar .file a:hover{ text-decoration: none; }
+/*
+mimetypes artefatos
+============================*/
+#artefatos #listar .file.imagem    { background: url("/images/treeview/imagem.png") center no-repeat; }
+#artefatos #listar .file.documento { background: url("/images/treeview/documento.png") center no-repeat; }
+#artefatos #listar .file.planilha  { background: url("/images/treeview/planilha.png") center no-repeat; }
+#artefatos #listar .file.generico  { background: url("/images/treeview/file.gif") center no-repeat; }
+#artefatos #listar .file.compactado{ background: url("/images/treeview/compactado.png") center  no-repeat; }
+#artefatos #listar .file.pdf       { background: url("/images/treeview/pdf.png") center no-repeat; }
+#artefatos #listar .file.apresentacao{ background: url("/images/treeview/apresentacao.png") center no-repeat; }
+#artefatos #listar .file.script{ background: url("/images/treeview/script.png") center no-repeat; }
+#artefatos #listar .file.executavel{ background: url("/images/treeview/executavel.png") center no-repeat; }
+#artefatos #listar .file.html{ background: url("/images/treeview/html.png") center no-repeat; }
 
-                             border-bottom:1px solid #ededed;
-                             background-color: #F5F5F5; 
-                             vertical-align:bottom;padding:8px; 
-                             padding-bottom:1px;
-                        }
 
-#artefatos .itens_index { background-color: #F5F5F5; min-width:10px; }
 
-#artefatos .formulario input[type="text"] { margin-top: 5px; }
+/*
+==================*/
 
-#artefatos form         { float:left; width:100%; }
+#artefatos #listar .file:hover  { text-decoration: none;
+                                  outline: 1px solid #D1D1D1;
+                                  background-color: #F1E5F4;
+                                }
 
+#artefatos .hide_artefato          { float:right;width:10px; margin:0 5px 0 0;padding:0; }
+#artefatos .hide_artefato a        { margin:0; padding:0; width:100%; }
+#artefatos .delete a               { height:auto; width:26px;}
+#artefatos td                      { } 
+#artefatos .itens_index            { background-color: #F5F5F5; min-width:10px; }
+#artefatos .formulario input[type="text"]
+                                   { margin-top: 5px; }
+#artefatos form                    { float:left; width:100%; }
 #artefatos input[type="text"], 
-input[type="password"]  { margin-top:0; }
-                       
-#artefatos .lista_item  { background-image:none; border-bottom:1px solid #EDEDED; text-align:center;  }
-
-.artefato               { border: 1px solid #CCCCCC; width:100%; padding: 2px; outline: 1px solid #EDEDED;}
-
-#artefatos .artefato td.lista_item {
-                                     background-color:none; 
-                                     border-bottom:0;  
-                                     padding-bottom:1%;
-                                     text-align:right;
+input[type="password"]             { margin-top:0; }
+#artefatos .lista_item             { background-image:none; border-bottom:1px solid #F1E5F4; text-align:center;  }
+.artefato                          { border: 1px solid #CCCCCC; width:100%; padding: 2px; outline: 1px solid #F1E5F4; background-color:#FFFFFF;}
+#artefatos .artefato td.lista_item
+                                   {
+                                    background-color:none; 
+                                    border-bottom:0;  
+                                    padding-bottom:1%;
+                                    text-align:right;
                                    }
-
-#artefatos td.lista_conteudo {
-                                         background-color:#FFFFFF;
-                                         border-bottom:1px solid #EDEDED; 
-                                         padding-bottom:8px;
-                                       }
-
-#artefatos .artefato td                { background-color:#FFFFFF; border: 0;}
-
+#artefatos td.lista_conteudo       {
+                                    background-color:#FFFFFF;
+                                    border-bottom:1px solid #F1E5F4; 
+                                    padding-bottom:8px;
+                                    padding-top: 10px;
+                                   }
+#artefatos .artefato td            { background-color:#FFFFFF; border: 0;}
 #artefatos textarea:focus,
-#artefatos textarea:hover              { background:#FAF5DC; }
+#artefatos textarea:hover          { background:#FAF5DC; }
+#artefatos tr:hover                { background:#FAF5DC; }   
+#artefatos ul                      { list-style:none ; margin:0; float:left;}
+#artefatos ul li                   { margin:0; padding: 0; line-height:1.2em; } 
 
-#artefatos tr:hover                    { background:#FAF5DC; }   
 
-#artefatos ul                          { list-style:none ;}
+
+/*
+
+========================================*/
+/*
+RELACIONAMENTOS
+============================*/
+
+
+#relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
+#relacionados form               { width:28%; margin-left:20px;float:left; }
+#relacionados select             { color:#934DA2;  }
+#relacionados #barra_titulo      { width:98.3%;background: #F1E5F4; }
+#relacionados .formulario input[type=submit] {float:none;}
+#relacionados #exibir_relacionados #listar{ background-color:#FFFFFF; }
+#relacionados .hide_relacionamento        { float:right;width:10px; margin:0 5px 0 0;padding:0; }
+#relacionados .hide_relacionamento a      { margin:0; padding:0; width:100%; }
+/*
+AUDITORIA
+============================*/
+
+
+#auditorias form               { margin-left:0; }
+#auditorias form input[type=submit]
+                               { min-width: 0; height:auto; font-size: 1em; }
+#auditorias table              { background-color: #FFFFFF; float:left; font-size : 0.8em; margin:10px 0 0 0; width:100%; border: 1px solid #DBDBDB; padding: 2px; }
+#auditorias table td           {  } 
+#auditorias table td.lista_item{ padding-bottom: 1%; border :0; background-color: #FFFFFF; }
+#auditorias .lista_conteudo    { border:0;}
+#auditorias select             { color:#934DA2;  font-size:1em; }
+#auditorias #barra_titulo      { background-color: #F1E5F4; width:98.3%; }
+#auditorias .formulario input[type=submit] { float:none; }
+#auditorias .hide_auditoria    { float:right;width:10px; margin:0 5px 0 0;padding:0; }
+#auditorias .hide_auditoria a  { margin:0; padding:0; width:100%; }
 
 /* ********************************************************************************* */
 
@@ -1391,7 +1400,7 @@ HISTORICO
 
                                   float:left;
                                   margin: 6px 0 6px 0px;
-                                  min-hei */ght:450px;
+                                  min-height:450px;
                                   background-repeat:repeat-x;
                                   height:auto;
                                   min-height:15px;
@@ -1401,32 +1410,6 @@ HISTORICO
                                   }
 
 
-/*
-RELACIONAMENTOS
-============================*/
-
-
-#relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
-#relacionados form               { width:25%; margin-left:20px;float:left; }
-#relacionados select             { color:#934DA2;  }
-#relacionados #barra_titulo      { width:98.8%; }
-#relacionados .formulario input[type=submit] {float:none}
-
-/*
-AUDITORIA
-============================*/
-
-
-#auditorias form               { margin-left:0; }
-#auditorias form input[type=submit]
-                               { min-width: 0; height:auto; font-size: 1em; }
-#auditorias table              { float:left; font-size : 0.8em; margin:10px 0 0 0; width:100%; border: 1px solid #DBDBDB; padding: 2px; }
-#auditorias table td           {  } 
-#auditorias table td.lista_item   { padding-bottom: 1%; border :0; background-color: #FFFFFF; }
-#auditorias .lista_conteudo    { border:0;}
-#auditorias select             { color:#934DA2;  font-size:1em;}
-#auditorias #barra_titulo      { width:98.3%; color:#7B6E7E; }
-#auditorias .formulario input[type=submit] {float:none}
 
 
 /*========================== AJUDA AO USUARIO ==================================== */
@@ -1465,7 +1448,7 @@ AUDITORIA
                                           
 #lista_ajuda li a.ativo                  { font-weight:bold; border:none; color:#934DA2; font-size: 1.2em;}
 
-#conteudo_ajuda                          { width:77%; margin:5px 0.2%; border-left:2px solid #EDEDED; float:left; padding:5px; } 
+#conteudo_ajuda                          { width:77%; margin:5px 0.2%; border-left:2px solid #F1E5F4; float:left; padding:5px; } 
 
 #frame                                   { height: auto;  margin: 5px 0;}
 
@@ -1482,7 +1465,7 @@ AUDITORIA
 
 #lista_ajuda a:visited          { color:#855c5c; }  
 
-#frame img                      { border:1px solid #EDEDED; margin-left:15px; margin-bottom:10px; }
+#frame img                      { border:1px solid #F1E5F4; margin-left:15px; margin-bottom:10px; }
 
 #frame img.semborda             { border: 1px solid #FFFFFF; float:left;}
 
@@ -1503,7 +1486,7 @@ AUDITORIA
 ============================================== */
 
 #listar_ajuda                    { font-family: Arial,Verdana,sans-serif ; font-size:12px;  }
-#listar_ajuda td                 { margin:0; padding:5px; border-bottom: 1px dashed #EDEDED ;}
+#listar_ajuda td                 { margin:0; padding:5px; border-bottom: 1px dashed #F1E5F4 ;}
 #listar_ajuda .edit              { float:left;  font-size:1.2em;}
 /*
 ===========================*/
@@ -1518,7 +1501,7 @@ AUDITORIA
                                        padding-top:10px;
                                        display: inline-block;
                                        border-top:5px solid #934DA2;
-                                       border-bottom: 1px  solid #EDEDED;
+                                       border-bottom: 1px  solid #F1E5F4;
                                        
                                  }
                                  
@@ -1527,7 +1510,7 @@ AUDITORIA
 #rodape_ajuda,#rodape_clean      {     
                                        width:100%; height:32px;
                                        border-top:5px solid #934DA2;
-                                       border-bottom: 1px solid #EDEDED;
+                                       border-bottom: 1px solid #F1E5F4;
                                        background-image: url("/theme/violet/images/img09.gif");
                                  }
                                  
@@ -1564,8 +1547,8 @@ COMUNICACAO ============================
                                   /* background-color:#FFFFFF;*/
                                    float:left; 
                                    padding:10px;
-                                   /*border: 1px solid #EDEDED;
-                                   border-bottom: 1px solid #EDEDED;
+                                   /*border: 1px solid #F1E5F4;
+                                   border-bottom: 1px solid #F1E5F4;
                                    border-left:1px solid #FFFFFF;
                                    border-right:1px solid #FFFFFF; */
                                    font-size: 0.7em;
@@ -1675,8 +1658,8 @@ PAGINACAO DO HISTORICO DO MICROBLOG
 PAGINA PRINCIPAL INTRANET
 */
 #intranet_inicial                           { border: none; font-size:0.8em;width:99%;  }
-#intranet_inicial ul.menu_nav               { border-left: 3px solid #EDEDED; width:20%; margin:5px 0; padding:0 15px; float:left;}
-#intranet_inicial ul.menu_nav li            { list-style: none; border-bottom: 1px dashed #EDEDED; padding:3px; }
+#intranet_inicial ul.menu_nav               { border-left: 3px solid #F1E5F4; width:20%; margin:5px 0; padding:0 15px; float:left;}
+#intranet_inicial ul.menu_nav li            { list-style: none; border-bottom: 1px dashed #F1E5F4; padding:3px; }
 #intranet_inicial ul.menu_nav li b          { font-size: 1.7em; } 
 #intranet_inicial ul.menu_nav li a          { display:block ; font-size:1em; padding:3px;}
 #intranet_inicial ul.menu_nav li a:hover    { text-decoration:none; width:100%; background-color:#934DA2; color:#FFFFFF; }
@@ -1702,17 +1685,17 @@ PAGINA PRINCIPAL INTRANET
 .bloco h3                                   { margin:13px; }
 .bloco  ol                                  { float:left; margin-left:15px;}
 .bloco  ol li                               { font-weight: bold; }
-.bloco_img                                  { float:left; width: 78%; padding:1% 0.5%; height:auto; border: 2px solid #EDEDED;  background-color:#FAF5DC; margin-left:13px; margin-bottom:15px;  }
+.bloco_img                                  { float:left; width: 78%; padding:1% 0.5%; height:auto; border: 2px solid #F1E5F4;  background-color:#FAF5DC; margin-left:13px; margin-bottom:15px;  }
 .bloco_img                                  {
                                               -moz-border-radius-bottomleft:5px;
                                               -moz-border-radius-bottomright:5px;
                                               -moz-border-radius-topleft:5px;
                                               -moz-border-radius-topright:5px; 
                                             } 
-.bloco_img img                              { margin: 0 10px; border: 1px solid #EDEDED;
+.bloco_img img                              { margin: 0 10px; border: 1px solid #F1E5F4;
                                               text-align:center;  
                                               border-width:1px 1px 2px 2px ;
-                                              border-color:#EDEDED #EDEDED #CCCCCC #CCCCCC; 
+                                              border-color:#F1E5F4 #F1E5F4 #CCCCCC #CCCCCC; 
                                             } 
                                              
 .bloco_img b                                { display:block; text-align: center;} 
@@ -1742,7 +1725,7 @@ VERBETES INTRANET
 #pagina_verbete                            { width: 99.4%; height:auto;}
 #pagina_verbete .verbete                   { width: 98.6%;  float:left; margin:5px;}
 #pagina_verbete .verbete                   {
-                                             border: 1px solid #EDEDED;
+                                             border: 1px solid #F1E5F4;
                                              -moz-border-radius-topleft:5px;
                                              -moz-border-radius-topright:5px;
                                            }
@@ -1848,12 +1831,12 @@ PUBLICACOES
                        	min-height: 50px;
                        	width:37%;
 	                    float:right;
-	                    border-left: 2px solid #EDEDED;
+	                    border-left: 2px solid #F1E5F4;
 	                    padding:10px;
                     }
 #publicacoes h2            {   margin: 0; margin-left:10px; color:#934DA2; }
 #publicacoes ul            {   padding: 0 ; padding-left:10px; }
-#publicacoes ul li         {   height:25px; border-bottom: 1px dashed #EDEDED;  list-style:none; padding: 0px 0; }  
+#publicacoes ul li         {   height:25px; border-bottom: 1px dashed #F1E5F4;  list-style:none; padding: 0px 0; }  
 #publicacoes ul li a       {   color: #934DA2; width:100%;  height:100%;  display:block; margin-top:4px; padding-top:4px; font-size:0.8em; }
 #publicacoes ul li a:hover {   background-color: #F2F2F2; text-decoration:none;    }
 
@@ -2378,7 +2361,7 @@ DataTable
 #cadastros #listar tr:hover { 
                                 background-color:#FFFFFF;
                                 border-left: 1px solid #CCCCCC;
-                                border-right: 1px solid #EDEDED;
+                                border-right: 1px solid #F1E5F4;
                             }
 #cadastros #listar tr th{ font-size:0.8em; background-color:#FFFFFF; }
 #cadastros #listar tr th:hover { cursor:pointer; }
@@ -2469,7 +2452,7 @@ AUDITORIA DE PRODUCAO DE ECM
                                                                  } /*aparencia*/
                                                                  
 #auditoria_de_producao #filtro #resultado  #listar td { border-left:1px solid ; border-bottom:1px solid ;}
-#auditoria_de_producao #filtro #resultado  #listar td { border-left-color: #F1E5F4; border-bottom-color: #EDEDED;} /*aparencia*/
+#auditoria_de_producao #filtro #resultado  #listar td { border-left-color: #F1E5F4; border-bottom-color: #F1E5F4;} /*aparencia*/
 /*
 end=============*/
 
@@ -2485,11 +2468,11 @@ NAVEGACAO DE ARQUIVOS
 #navegacao #listar td.itens_index h3
                                               { font-size: 1em;  margin-top:1px; padding: 5px 5px; float:left; width:98.5%;}
 #navegacao #listar td.itens_index h3
-                                              { background: #ededed; }  /*aparencia*/                                            
+                                              { background: #F1E5F4; }  /*aparencia*/                                            
 #navegacao #listar td.itens_index h3 a 
                                               { float:left; width:100%; height:100%; }
 #navegacao #listar td.itens_index h3 a
-                                              { color: #8c1c1c; } /*aparencia*/
+                                              { color: #934DA2; } /*aparencia*/
 #navegacao #listar tr:hover       { background-color: #FFFFFF; } /*neutro*/
 
 #navegacao #barra_titulo          { border:0; background:0; }
@@ -2595,6 +2578,7 @@ mimetypes
 .filetree span.file.documento{ background: url("/images/treeview/documento.png") 0 0 no-repeat; }
 .filetree span.file.compactado{ background: url("/images/treeview/compactado.png") 0 0 no-repeat; }
 .filetree span.file.pdf{ background: url("/images/treeview/pdf.png") 0 0 no-repeat; }
+.filetree span.file.planilha{ background: url("/images/treeview/pdf.png") 0 0 no-repeat; }
 
 
 

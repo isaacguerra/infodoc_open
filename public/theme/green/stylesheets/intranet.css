@@ -473,7 +473,7 @@ AVATAR*/
                              { float:left; text-decoration:none; width:100%;  height:100%; }
 
 .item_index a,
-.item_index a:hover          { font-weight: bold; color:#8C1C1C; }
+.item_index a:hover          { font-weight: bold; color:#2D6809; }
 
 form table#listar td         { padding:6px; border-left: 1px solid #E3F1DA; border-bottom: 1px  solid #E3F1DA; }
 /*
@@ -662,21 +662,21 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                              }
 
 .hide_comentario a           { 
-                                  background-image: url("/theme/green/images/hide_comentario.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                              }
                              
 .hide_historico a           { 
-                                  background-image: url("/theme/green/images/hide_historico.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                              }
 
 .hide_artefato a                { 
-                                  background-image: url("/theme/green/images/hide_artefato.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
@@ -684,13 +684,13 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                                 }
 
 .hide_relacionamento a          { 
-                                  background-image: url("/theme/green/images/hide_relacionamento.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
                                 }
 .hide_auditoria a          { 
-                                  background-image: url("/theme/infodoc/images/hide_auditoria.png");
+                                  background-image: url("/theme/infodoc/images/hide_menu.png");
                                   color:#b5b5b5;
                                   font-size:0.7em;
                                   padding-top:25px;
@@ -706,6 +706,7 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                                             font-size:0.7em;
                                             margin-left:2px;
                                             cursor:pointer;
+                                            outline:1px solid #E3F1DA;
                                           }
 .new_entidade a:hover,
 .abilita a:hover,
@@ -739,7 +740,7 @@ div#wiki                        { width:99.5%;  overflow:hidden;}
                                background-color: #F2F2F2;
 
                             }
-#artefatos .formulario input[type=submit]:hover { color: #8C1C1C;}
+#artefatos .formulario input[type=submit]:hover { color: #2D6809;}
 
 /*======================================
 */                           
@@ -883,7 +884,7 @@ FORMS
 
                                     float:left;
                                     color:#E0E0E0;
-                                    /* background-color:#8C1C1C; */
+                                    /* background-color:#2D6809; */
                                     background-image: url("/theme/green/images/fundo_botoes.png");
                                     background-position:center;
                                     padding: 0 4px;
@@ -914,7 +915,7 @@ input[type=password]            {
                                     width:auto;
                                     color:#2D6809;
                                     font-size:0.9em;
-                                    border: 1px solid #E3F1DA;
+                                    border: 1px solid #DBDBDB;
                                     background:#F5F5F5;
 
                                 }
@@ -1056,16 +1057,10 @@ RESULTADO DETALHADO BUSCA
 ===================================================*/
 
 
-/*==========================
-*/
+/*
+Actions
 
-
-/*==========================
-COMENTARIOS
-*/
-
-
-
+===================*/
 
 #show_actions               { font-size:0.7em; float: right; width:30%; text-align:right;}
 
@@ -1079,6 +1074,7 @@ COMENTARIOS
                               padding-top:0px;
 
                             }
+
 
 #comentarios                {
                                width:99.6%;
@@ -1097,7 +1093,18 @@ COMENTARIOS
                                width:99.6%;
                                height:auto;
                                margin:0px;
-                             }                             
+                             }   
+#relacionados                {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+                             }                                                         
+#auditorias                  {
+                               width:99.6%;
+                               height:auto;
+                               margin:0px;
+                             }                                                         
+
 #comentarios #barra_titulo,
 #artefatos #barra_titulo,
 #historico #barra_titulo,
@@ -1105,9 +1112,8 @@ COMENTARIOS
 #auditorias #barra_titulo
                              {
 
-
                                 padding:9px 5px;
-                                width:98.7%;
+                                width:98.6%;
                                 min-height:25px;
                                 clear:both;
                                 margin:6px 2px;
@@ -1118,27 +1124,27 @@ COMENTARIOS
 
                                 }
                                 
-#comentarios #barra_titulo h3   { 
-                                  font-size: 1.2em;
+#comentarios #barra_titulo h3.titulo_index   { 
+                                  font-size: 1.1em;
                                   padding-left:33px; 
-                                  background-image: url("/theme/green/images/comment_write.png") ;
+                                  background-image: url("/theme/infodoc/images/comment_write.png") ;
                                 }
 
-#artefatos #barra_titulo h3     { 
+#artefatos #barra_titulo h3.titulo_index    { 
                                   font-size: 1.1em; 
                                   padding-left:32px; 
-                                  background-image: url("/theme/green/images/artefato.png") ;
+                                  background-image: url("/theme/infodoc/images/artefato.png") ;
                                 }
                                 
 #relacionados #barra_titulo h3   { 
                                   font-size: 1em; 
                                   padding-left:32px; 
-                                  background-image: url("/theme/green/images/relacionamento.png") ;
+                                  background-image: url("/theme/infodoc/images/relacionamento.png") ;
                                 }
                                                                 
 #historico #barra_titulo h3     { font-size: 1em;
                                   padding-left:32px;
-                                  background-image: url("/theme/green/images/historico.png");
+                                  background-image: url("/theme/infodoc/images/historico.png");
                                  }     
 #auditorias #barra_titulo h3   { 
                                   font-size: 1em; 
@@ -1149,9 +1155,12 @@ COMENTARIOS
 .titulo_comentario              { font-size:10px; background-image:none; }
 
 
+/*==========================
+COMENTARIOS
+*/
 
-
-
+#comentarios #barra_titulo      { background-color: #EDEDED; }
+#comentarios .comentario        { float:left; } 
 #comentarios .itens_index       {
 
                                   font-size:0.8em;
@@ -1163,15 +1172,13 @@ COMENTARIOS
                                   width:auto;
                                   border:0;
                                   border-bottom: solid 1px #cccccc;
-                                  width:99%;
-                                  height:auto;
+                                  width:auto;
                                   background-color: #F5F5F5;
+                                  height:auto;
                                   
                                  }
                                  
 #comentarios #listar             {
-
-
                                   float:left;
                                   margin: 6px 0 6px 0px;
                                   min-height:450px;
@@ -1181,45 +1188,7 @@ COMENTARIOS
                                   border: 0;
                                   width:100%;
                                   padding:2px 2px ;
-
                                   }
-/*
-#comentarios #link_botao,
-#artefatos #link_botao            {
-
-                                  font-size:0.7em;
-                                  padding: 0.4% 4px;
-                                  text-align:center;
-                                  height:auto;
-                                  min-width:80px;
-                                  width:auto;
-                                  margin:2px 5px 0 0 ;
-                                  float:right;
-
-                                  font-weight:normal;
-                                  background-color:#8C1C1C;
-                                  border:1px solid #8C1C1C;
-
-                                  }
-
-#comentarios #link_botao a:hover,
-#artefatos #link_botao a:hover    { color:#FFFFFF; }
-
-#comentarios #link_botao a,
-#artefatos #link_botao a          {
-
-                                  font-weight:none;
-                                  margin:0;
-                                  padding:0;
-                                  background-color:#8C1C1C;
-                                  color:#E0E0E0;
-
-                                  font-weight: bold;
-                                  width:100%;
-                                  height:100%;
-
-                                 }
-*/    
 #comentarios h3.titulo_new       {                               
 
                                   width:98%;
@@ -1243,143 +1212,175 @@ COMENTARIOS
                                  }
 
 #comentarios input[type=submit]:hover { color:#FFFFFF; }
-
 #new_comentario                 { padding:0 5px; width:100%; margin:10px 0; margin-left:10px;}
-
 #comentarios textarea           { background-color:#FFFFFF;       }
-
 #comentarios textarea:focus     { background-color:#FFFFFF;       }
-
-/*
-==============================================*/
-
+#comentarios .hide_comentario      { float:right;width:10px; margin:0 5px 0 0;padding:0; }
+#comentarios .hide_comentario a    { margin:0; padding:0; width:100%; }
 
 
 /*
 ARTEFATOS
-==============================================*/
-#new_artefato                   { 
+============================================*/
 
-                                padding:0;
-                                width:100%; 
-                                float:left;
-                                margin:10px 0; 
- 
-
-                                }
-                            
+#new_artefato                 { padding:0; width:100%; float:left; margin:10px 0;  }
 #artefatos .formulario        { margin:0;}
+#artefatos #barra_titulo      { background-color: #EDEDED; }
+#artefatos #barra_titulo .lista_conteudo h3 {  float:left; }
+#artefatos b._titulo          { font-size:0.8em;  width:auto; margin-right:5px;  float:left; padding-top: 13px;color: #2D6809;} 
+#artefatos h4                 { width:auto;  float:left; }
+#artefatos div.formulario {
 
-#artefatos div.formulario     { width:65%; float:left; padding:0; border:0; margin:0;}
+                              background:transparent url(/theme/green/images/fil2.jpg) repeat scroll 0 0;
+                              border:1px solid #FFFFFF;
+                              float:right;
+                              margin:0 15px 0 41px;
+                              outline-color:#DBDBDB;
+                              outline-style:solid;
+                              outline-width:1px;
+                              padding:10px;
+                              width:40%;
 
-#artefatos .formulario select { color:#2D6809; float:left; margin:1% 22px; vertical-align:middle;}
-                               
-#artefatos .formulario option  {  }
-/*
-#artefatos .formulario input[type=submit]  { 
-                                            
-                                background-color:#8C1C1C;
-                                border:1px solid #8C1C1C;
-                                padding:0px 2px 0;
-                                font-size:0.6em;
-                                font-weight:bold;
-                                color:#E0E0E0;
-                                text-align:center; 
-                                float:right;
-                                height:2.6em; 
-                                margin:1px 0 0;
-                                
-                                            }
-                                            
-#artefatos .formulario input[type=submit]:hover { color:#FFFFFF }
-*/
+
+}
+#artefatos .formulario select { color:#2D6809; position:relative; top:10px; font-size:0.8em; }
+#artefatos .formulario option {  }
 #artefatos h3.titulo_new
-                               {
-
-                                width:98%;
-                                margin:0;
-                                padding:0;
-                                margin-top:10px;
-                                margin-bottom: 10px;
+                              { width:98%; margin:0;padding:0;margin-top:10px; margin-bottom: 10px;
+                                margin-left:5px;
                                 background-image:none;
                                 font-size:0.8em;
-
-                               }
+                              }
                                
-#artefatos input[type="file"] { margin-top: 10px; }
+#artefatos input[type="file"]  { margin-top: 10px; }
 
 #artefatos input[type=submit]  { 
-                                 margin-bottom:5px;
-                                 color: #EDEDED;
-                                 font-weight:bold;
-                                 font-size:0.7em;
+                                 margin-bottom:5px; color: #EDEDED; font-weight:bold; font-size:0.7em;
                                  background-color:#2D6809;
                                  border: 1px solid #2D6809;
 
                                 }
 
-#artefatos input[type=submit]:hover { color:#FFFFFF; }
+#artefatos input[type=submit]:hover
+                                { color:#FFFFFF; }
 
-#artefatos #listar { border:1px solid #CCCCCC; padding-bottom:2px; margin:6px 0.1% ;} 
-#artefatos #listar .download_artefato a,
-#artefatos #listar .delete a             { 
-                        padding-top:50px; 
-                        background-position:center;
-                        background-repeat: no-repeat;
-                        margin:0; margin-top:10px;
-                        float:right;
-                        margin:4% 35%;
-                        
-                                          }
-#artefatos #listar .delete a:hover { background-color:#F2F2F2; }
-#artefatos #listar .download_artefato a { background-image: url("/theme/green/images/download.png"); }
+#artefatos #listar              { border:1px solid #CCCCCC; padding-bottom:2px; margin:6px 0.1% ;} 
 
-                     
-#artefatos #listar .download_artefato a:hover { text-decoration:none; padding-top: 40px; outline:1px solid #D1D1D1; background-color:#F2F2F2;}  
+#artefatos #listar .file        { float:left; width:20px; height:16px ; margin: 0 0 0 0; }
+
+                                
+#artefatos #listar .file a      { float:left; width:100%;height:auto; padding:14px 0 0; }
+
+#artefatos #listar .file        {
+
+                                   background-repeat:no-repeat;
+                                   background-position:center top ;
+                                   font-size:0.7em;
+                                   width:20px;
+                                   height:31px;
+                                   vertical-align: bottom;
+                                   float:right;
+                                   margin:-3px 0 0 0 ;
+                                   padding:5px;
+                                   text-align:center;
+                                   
+                                 }
 
 
-#artefatos td           { 
+#artefatos #listar .file a:hover{ text-decoration: none; }
+/*
+mimetypes artefatos
+============================*/
+#artefatos #listar .file.imagem    { background: url("/images/treeview/imagem.png") center no-repeat; }
+#artefatos #listar .file.documento { background: url("/images/treeview/documento.png") center no-repeat; }
+#artefatos #listar .file.planilha  { background: url("/images/treeview/planilha.png") center no-repeat; }
+#artefatos #listar .file.generico  { background: url("/images/treeview/file.gif") center no-repeat; }
+#artefatos #listar .file.compactado{ background: url("/images/treeview/compactado.png") center  no-repeat; }
+#artefatos #listar .file.pdf       { background: url("/images/treeview/pdf.png") center no-repeat; }
+#artefatos #listar .file.apresentacao{ background: url("/images/treeview/apresentacao.png") center no-repeat; }
+#artefatos #listar .file.script{ background: url("/images/treeview/script.png") center no-repeat; }
+#artefatos #listar .file.executavel{ background: url("/images/treeview/executavel.png") center no-repeat; }
+#artefatos #listar .file.html{ background: url("/images/treeview/html.png") center no-repeat; }
 
-                             border-bottom:1px solid #ededed;
-                             background-color: #F5F5F5; 
-                             vertical-align:bottom;padding:8px; 
-                             padding-bottom:1px;
-                        }
 
-#artefatos .itens_index { background-color: #F5F5F5; min-width:10px; }
 
-#artefatos .formulario input[type="text"] { margin-top: 5px; }
+/*
+==================*/
 
-#artefatos form         { float:left; width:100%; }
+#artefatos #listar .file:hover  { text-decoration: none;
+                                  outline: 1px solid #D1D1D1;
+                                  background-color: #ededed;
+                                }
 
+#artefatos .hide_artefato          { float:right;width:10px; margin:0 5px 0 0;padding:0; }
+#artefatos .hide_artefato a        { margin:0; padding:0; width:100%; }
+#artefatos .delete a               { height:auto; width:26px;}
+#artefatos td                      { } 
+#artefatos .itens_index            { background-color: #F5F5F5; min-width:10px; }
+#artefatos .formulario input[type="text"]
+                                   { margin-top: 5px; }
+#artefatos form                    { float:left; width:100%; }
 #artefatos input[type="text"], 
-input[type="password"]  { margin-top:0; }
-                       
-#artefatos .lista_item  { background-image:url("theme/green/images/img09.gif"); border-bottom:1px solid #EDEDED; text-align:center;  }
-
-.artefato               { border: 1px solid #CCCCCC; width:100%; padding: 2px; outline: 1px solid #EDEDED;}
-
-#artefatos .artefato td.lista_item {
-                                     background-color:none; 
-                                     border-bottom:0;  
-                                     padding-bottom:1%;
-                                     text-align:right;
+input[type="password"]             { margin-top:0; }
+#artefatos .lista_item             { background-image:none; border-bottom:1px solid #EDEDED; text-align:center;  }
+.artefato                          { border: 1px solid #CCCCCC; width:100%; padding: 2px; outline: 1px solid #EDEDED; background-color:#FFFFFF;}
+#artefatos .artefato td.lista_item
+                                   {
+                                    background-color:none; 
+                                    border-bottom:0;  
+                                    padding-bottom:1%;
+                                    text-align:right;
                                    }
-
-#artefatos td.lista_conteudo {
-                                         background-color:#FFFFFF;
-                                         border-bottom:1px solid #EDEDED; 
-                                         padding-bottom:8px;
-                                       }
-
-#artefatos .artefato td                { background-color:#FFFFFF; border: 0;}
-
+#artefatos td.lista_conteudo       {
+                                    background-color:#FFFFFF;
+                                    border-bottom:1px solid #EDEDED; 
+                                    padding-bottom:8px;
+                                    padding-top: 10px;
+                                   }
+#artefatos .artefato td            { background-color:#FFFFFF; border: 0;}
 #artefatos textarea:focus,
-#artefatos textarea:hover              { background:#FAF5DC; }
+#artefatos textarea:hover          { background:#FAF5DC; }
+#artefatos tr:hover                { background:#FAF5DC; }   
+#artefatos ul                      { list-style:none ; margin:0; float:left;}
+#artefatos ul li                   { margin:0; padding: 0; line-height:1.2em; } 
 
-#artefatos tr:hover                    { background:#FAF5DC; }   
 
-#artefatos ul                          { list-style:none ;}
+
+/*
+
+========================================*/
+/*
+RELACIONAMENTOS
+============================*/
+
+
+#relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
+#relacionados form               { width:28%; margin-left:20px;float:left; }
+#relacionados select             { color:#2D6809;  }
+#relacionados #barra_titulo      { width:98.3%;background: #EDEDED; }
+#relacionados .formulario input[type=submit] {float:none;}
+#relacionados #exibir_relacionados #listar{ background-color:#FFFFFF; }
+#relacionados .hide_relacionamento        { float:right;width:10px; margin:0 5px 0 0;padding:0; }
+#relacionados .hide_relacionamento a      { margin:0; padding:0; width:100%; }
+/*
+AUDITORIA
+============================*/
+
+
+#auditorias form               { margin-left:0; }
+#auditorias form input[type=submit]
+                               { min-width: 0; height:auto; font-size: 1em; }
+#auditorias table              { background-color: #FFFFFF; float:left; font-size : 0.8em; margin:10px 0 0 0; width:100%; border: 1px solid #DBDBDB; padding: 2px; }
+#auditorias table td           {  } 
+#auditorias table td.lista_item{ padding-bottom: 1%; border :0; background-color: #FFFFFF; }
+#auditorias .lista_conteudo    { border:0;}
+#auditorias select             { color:#2D6809;  font-size:1em; }
+#auditorias #barra_titulo      { background-color: #ededed; width:98.3%; }
+#auditorias .formulario input[type=submit] { float:none; }
+#auditorias .hide_auditoria    { float:right;width:10px; margin:0 5px 0 0;padding:0; }
+#auditorias .hide_auditoria a  { margin:0; padding:0; width:100%; }
+
+
 
 /*
 ===========================================*/
@@ -1405,32 +1406,7 @@ HISTORICO
                                   }
 
 
-/*
-RELACIONAMENTOS
-============================*/
 
-
-#relacionados div.formulario     { width:60%; float:left; padding:0; border:0; margin:0;}
-#relacionados form               { width:28%; margin-left:20px;float:left; }
-#relacionados select             { color:#2C3D21;  }
-#relacionados #barra_titulo      { width:98.2%; }
-#relacionados .formulario input[type=submit] {float:none}
-
-/*
-AUDITORIA
-============================*/
-
-
-#auditorias form               { margin-left:0; }
-#auditorias form input[type=submit]
-                               { min-width: 0; height:auto; font-size: 1em; }
-#auditorias table              { float:left; font-size : 0.8em; margin:10px 0 0 0; width:100%; border: 1px solid #DBDBDB; padding: 2px; }
-#auditorias table td           {  } 
-#auditorias table td.lista_item   { padding-bottom: 1%; border :0; background-color: #FFFFFF; }
-#auditorias .lista_conteudo    { border:0;}
-#auditorias select             { color:#2D6809;  font-size:1em;}
-#auditorias #barra_titulo      { width:98.3%; color:#2C3D21; }
-#auditorias .formulario input[type=submit] {float:none}
 
 /*
 AJUDA AO USUARIO 
@@ -2493,7 +2469,7 @@ NAVEGACAO DE ARQUIVOS
 #navegacao #listar td.itens_index h3 a 
                                               { float:left; width:100%; height:100%; }
 #navegacao #listar td.itens_index h3 a
-                                              { color: #8c1c1c; } /*aparencia*/
+                                              { color: #2D6809; } /*aparencia*/
 #navegacao #listar tr:hover       { background-color: #FFFFFF; } /*neutro*/
 
 #navegacao #barra_titulo          { border:0; background:0; }
