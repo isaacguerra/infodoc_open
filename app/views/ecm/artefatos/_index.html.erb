@@ -1,48 +1,60 @@
 <div id="barra_titulo">
-  <h3 class="titulo_index">Lista de Artefatos</h3>
+  <h3 class="titulo_index">Artefatos</h3>
+  <div class="hide_artefato">
+    <%= link_to_remote "&nbsp;", :url=>{:controller=>"/ecm/artefatos", :action=>"clean"}, :method=>"get" %>
+  </div>
   <% if @new_form.size > 0 and @cadastro.formulario.permissao(@sessao_usuario.usuario) > 1 %>
   <div class="formulario">
     <% form_remote_tag :url=>(url_for(new_ecm_cadastro_artefato_path(@cadastro))), :method=>"get" do -%>
       <%= submit_tag 'Novo Artefato' %>
-      <%= select_tag :formulario_id, options_for_select(@new_form) %>
+        <b class="_titulo">Formulário: </b><%= select_tag :formulario_id, options_for_select(@new_form) %>    
     <% end -%>
   </div>
   <% end %>
-  <div class="hide_artefato">
-    <%= link_to_remote "Esconder Artefatos", :url=>{:controller=>"/ecm/artefatos", :action=>"clean"}, :method=>"get" %>
+  
+  <div id="new_artefato">
   </div>
-</div>
-<div id="new_artefato">
-</div>
+<h3 class="titulo_new">Lista de Artefatos </h3>
 <table id="listar">
+   
     <% @cadastro.children.each do |artefato| %>
+   
     <tr>
-      <td class="lista_item">
+<!--      <td class="lista_item">
       <div class="download_artefato">
          <%= link_to("download", :controller=>"/ecm/artefatos/download/#{artefato.id}") %>
       </div>   
       </td>
+-->      
        <td class="lista_conteudo"">
-        <h3><%= artefato.formulario.titulo %></h3>
+       
+        <h4><%= artefato.formulario.titulo %> > </h4>
+        
         <ul>
           <% artefato.formulario.itensformularios.sort_by{|it| it.posicao}.each do |form_item| %>
           <li>
-              <b><%= form_item.rotulo %> :</b><%= ecm_show_cadastro_item(form_item, artefato) %>
+              <b><%= form_item.rotulo %>: </b><%= ecm_show_cadastro_item(form_item, artefato) %>
           </li>
           <% end %>
           <% if artefato.artefato.ocr %>
             <%= link_to("OCR", {:controller=>"/ecm/artefatos/ocr/#{artefato.id}"}, :popup=>true) %>
           <% end %>
+        
         </ul>
-       </td>
-       <td class="lista_item">
-          <% if @cadastro.formulario.permissao(@sessao_usuario.usuario) > 2  %>
-           <div class="delete"> 
-            <%= link_to("Excluir", ecm_cadastro_artefato_path(@cadastro, artefato), :method=>"delete", :confirm => 'Exclur permanentemente o Cadastro e todos seus artefatos?') %>
+       
+         <% if @cadastro.formulario.permissao(@sessao_usuario.usuario) > 2  %>
+           <div class="delete" title="Apagar Artefato"> 
+            <%= link_to("", ecm_cadastro_artefato_path(@cadastro, artefato), :method=>"delete", :confirm => 'Exclur permanentemente o Cadastro e todos seus artefatos?') %>
            </div>
           <% end %>
+           <div class="file <%= artefato.artefato.mime_type %>" title="Baixar Artefato">
+            <%= link_to("&nbsp", :controller=>"/ecm/artefatos/download/#{artefato.id}") %>
+        </div>
        </td>
+      
     </tr>
 	  <% end %>
 </table>
+</div>
+
 

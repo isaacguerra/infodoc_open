@@ -1,7 +1,7 @@
 <div id="barra_titulo">
   <h3 class="titulo_index">Cadastros Relacionados</h3>
   <div  class="hide_relacionamento">
-    <%= link_to_remote "Esconder Relacionados", :url=>{:controller=>"/ecm/relacionados", :action=>"clean"}, :method=>"get" %>
+    <%= link_to_remote "&nbsp;", :url=>{:controller=>"/ecm/relacionados", :action=>"clean"}, :method=>"get" %>
   </div>
   <% if @form_rel.size > 0 %>
     <% form_remote_tag :url=>(url_for(new_ecm_cadastro_relacionado_path(@cadastro))), :method=>"get" do -%>
@@ -11,8 +11,8 @@
       <%= radio_button_tag :tipo, :avancado %><font size=1>Relatorio detalhado</font>
     <% end -%>
   <% end %>
-  
+  <div id="exibir_relacionados">
+  </div> 
 </div>
-<div id="exibir_relacionados">
-</div>
+
 

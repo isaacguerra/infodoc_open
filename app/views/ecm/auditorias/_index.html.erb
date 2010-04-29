@@ -2,7 +2,7 @@
 <div id="barra_titulo">
   <h3 class="titulo_index">Auditorias do Cadastros</h3>
   <div  class="hide_auditoria">
-    <%= link_to_remote "Esconder Auditorias", :url=>{:controller=>"/ecm/auditorias", :action=>"clean"}, :method=>"get" %>
+    <%= link_to_remote "&nbsp;", :url=>{:controller=>"/ecm/auditorias", :action=>"clean"}, :method=>"get" %>
   </div>
 
     <% form_remote_tag :url=>(url_for(new_ecm_cadastro_auditoria_path(@cadastro))), :method=>"get" do -%>
@@ -21,8 +21,7 @@
     </table>
 
     <% end -%>
-</div>
-<div id="exibir_auditorias">
+    <div id="exibir_auditorias">
   <table id="listar">
     <thead>
       <tr>
@@ -42,5 +41,7 @@
     <% end %>
     </tbody>
    </table>
+</div>
+
 </div>
 
