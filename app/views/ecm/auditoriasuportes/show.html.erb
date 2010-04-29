@@ -1,0 +1,43 @@
+<div id="barra_titulo">
+  <h3 class="titulo_show">Suporte Tecnico</h3>
+</div>
+
+<table id="listar">
+  <tr>
+    <td class="lista_item">Realizou o Backup dos Dados do Biro? <%= @auditoriasuporte.backup_biro %></td>
+    <td class="lista_conteudo"><%= @auditoriasuporte.backup_biro_obs %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Realizou o Backup dos Dados do Servidor? <%= @auditoriasuporte.backup_servidor %></td>
+    <td class="lista_conteudo"><%= @auditoriasuporte.backup_servidor_obs %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Realizou Manutenção dos Computadores do Biro? <%= @auditoriasuporte.manutencaodesktop %></td>
+    <td class="lista_conteudo"><%= @auditoriasuporte.manutencaodesktop_obs %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Realizou Manutenção no Servidor? <%= @auditoriasuporte.manutencaoservidor %></td>
+    <td class="lista_conteudo"><%= @auditoriasuporte.manutencaoservidor_obs %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Realizou Manutenção nos Equipamento de captura de Imagem? <%= @auditoriasuporte.manutencaoscanner %></td>
+    <td class="lista_conteudo"><%= @auditoriasuporte.manutencaoscanner_obs %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Realizou Manutenção Na Rede de Lógica? <%= @auditoriasuporte.manutencaoredelogica %></td>
+    <td class="lista_conteudo"><%= @auditoriasuporte.manutencaoredelogica_obs %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Realizou Manutenção Na Rede Eletrica? <%= @auditoriasuporte.manutencaoredeeletrica %></td>
+    <td class="lista_conteudo"><%= @auditoriasuporte.manutencaoredeeletrica_obs %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Realizou Treinamento Interno? <%= @auditoriasuporte.treinamentointerno %></td>
+    <td class="lista_conteudo"><%= @auditoriasuporte.treinamentointerno_obs %></td>
+  </tr>
+  <tr>
+    <td class="lista_item">Realizou Treinamento ao Cliente? <%= @auditoriasuporte.treinamentocliente %></td>
+    <td class="lista_conteudo"><%= @auditoriasuporte.treinamentocliente_obs %></td>
+  </tr>
+</table>
+

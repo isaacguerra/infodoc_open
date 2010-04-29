@@ -1,0 +1,17 @@
+<div id="barra_titulo">
+  <h3 class="titulo_index">Lista de Suportes</h3>
+  <div class="new_categoria"><%= link_to 'Novo Registro', new_ecm_auditoriasuporte_path %></div>
+</div>
+<table id="listar">
+  </tr>
+    <th class="titulo_lista">Data</th>
+    <th class="titulo_lista">Status</th>
+  </tr>
+    <% @auditoriasuportes.each do |auditoriasuporte| %>
+    <tr>
+      <td class="itens_index"><%= link_to auditoriasuporte.created_at.to_s, ecm_auditoriasuporte_path(auditoriasuporte) %></td>
+      <td class="itens_index"><%= auditoriasuporte.auditado %></td>
+    </tr>
+	  <% end %>
+</table>
+

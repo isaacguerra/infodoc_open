@@ -1,0 +1,57 @@
+<div id="barra_titulo">
+  <h3 class="titulo_new">Cadastro de Suporte Tecnico</h3>
+</div>
+<table class="formulario">
+  <% form_for @auditoriasuporte, :url=>{:action=>'create'} do |f| %>
+    <tr>
+      <td class="error_messages">
+        <%= f.error_messages %>
+        <%= f.hidden_field :entidade_id, :value=>@sessao_usuario.usuario.entidade_id %>
+        <%= f.hidden_field :usuario_id, :value=>@sessao_usuario.usuario_id %>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.check_box :backup_biro %> - Realizou o Backup dos Dados do Biro? </td>
+      <td class="lista_conteudo"><%= f.text_area(:backup_biro_obs, :cols=>55, :rows=>4) %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.check_box :backup_servidor %> - Realizou o Backup dos Dados do Servidor e DB? </td>
+      <td class="lista_conteudo"><%= f.text_area(:backup_servidor_obs, :cols=>55, :rows=>4) %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.check_box :manutencaodesktop %> - Realizou Manutenção dos Computadores do Biro? </td>
+      <td class="lista_conteudo"><%= f.text_area(:manutencaodesktop_obs, :cols=>55, :rows=>4) %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.check_box :manutencaoservidor %> - Realizou Manutenção no Servidor? </td>
+      <td class="lista_conteudo"><%= f.text_area(:manutencaoservidor_obs, :cols=>55, :rows=>4) %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.check_box :manutencaoscanner %> - Realizou Manutenção nos Equipamento de captura de Imagem? </td>
+      <td class="lista_conteudo"><%= f.text_area(:manutencaoscanner_obs, :cols=>55, :rows=>4) %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.check_box :manutencaoredelogica %> - Realizou Manutenção Na Rede de Lógica? </td>
+      <td class="lista_conteudo"><%= f.text_area(:manutencaoredelogica_obs, :cols=>55, :rows=>4) %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.check_box :manutencaoredeeletrica %> - Realizou Manutenção Na Rede de Elétrica? </td>
+      <td class="lista_conteudo"><%= f.text_area(:manutencaoredeeletrica_obs, :cols=>55, :rows=>4) %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.check_box :treinamentointerno %> - Realizou Treinamento Interno? </td>
+      <td class="lista_conteudo"><%= f.text_area(:treinamentointerno_obs, :cols=>55, :rows=>4) %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"><%= f.check_box :treinamentocliente %> - Realizou Treinamento ao Cliente? </td>
+      <td class="lista_conteudo"><%= f.text_area(:treinamentocliente_obs, :cols=>55, :rows=>4) %></td>
+    </tr>
+    <tr>
+      <td class="lista_item"/>
+      <td class="lista_conteudo"><%= f.submit 'Salvar', :class=>"botao_formulario" %></td>
+    </tr>
+  <% end %>
+</table>
+<div id="link_voltar">
+  <%= link_to 'Voltar', ecm_auditoriasuportes_path %>
+</div>
+
