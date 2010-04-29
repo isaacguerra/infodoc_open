@@ -31,6 +31,7 @@ ActionController::Routing::Routes.draw do |map|
     ecm.resources :cadastros, :has_many=>:auditorias
     ecm.resources :relatorioentidades
     ecm.resources :auditoriaproducaos
+    ecm.resources :auditoriasuportes
   end
 
   map.namespace :gde do |gde|

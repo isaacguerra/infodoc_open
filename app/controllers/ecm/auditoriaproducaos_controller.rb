@@ -18,6 +18,11 @@ class Ecm::AuditoriaproducaosController < ApplicationController
         page.visual_effect(:highlight , "filtro")
         page.replace_html "filtro", render(:partial=>"dados")
       end
+    elsif params[:id] == "suporte"
+      render :update do |page|
+        page.visual_effect(:highlight , "filtro")
+        page.replace_html "filtro", render(:partial=>"suporte")
+      end
     else
       render :update do |page|
         page.visual_effect(:highlight , "filtro")
@@ -89,6 +94,13 @@ class Ecm::AuditoriaproducaosController < ApplicationController
         page.replace_html "resultado", render(:partial=>"resultdados")
       end
 
+    elsif params[:tipo]=="suporte"
+      @auditoriasuporte = Auditoriasuporte.do_usuario(params[:usuario_id]).find(:all, :conditions=>["auditado = ? or auditado is null", false], :order=>"created_at desc")
+
+      render :update do |page|
+        page.visual_effect(:highlight , "resultado")
+        page.replace_html "resultado", render(:partial=>"resultsuporte")
+      end
     else
       @di = "#{params[:periodo]["data_inicio(1i)"]}-#{params[:periodo]["data_inicio(2i)"]}-#{params[:periodo]["data_inicio(3i)"]}".to_date
       @df = "#{params[:periodo]["data_fim(1i)"]}-#{params[:periodo]["data_fim(2i)"]}-#{params[:periodo]["data_fim(3i)"]}".to_date
@@ -137,17 +149,30 @@ class Ecm::AuditoriaproducaosController < ApplicationController
 
 
   def update
-    @cadastro = Cadastro.find(params[:id])
-    @formulario = Formulario.find(@cadastro.formulario_id)
-    @principal = Itensformulario.find(@formulario.principal_id)
-    @cadastro.auditado = true
-    @cadastro.auditor_id = @sessao_usuario.usuario_id
-    @cadastro.auditado_at = DateTime.now
-    @cadastro.save
+    if params[:tipo] == "cadastro"
+      @cadastro = Cadastro.find(params[:id])
+      @formulario = Formulario.find(@cadastro.formulario_id)
+      @principal = Itensformulario.find(@formulario.principal_id)
+      @cadastro.auditado = true
+      @cadastro.auditor_id = @sessao_usuario.usuario_id
+      @cadastro.auditado_at = DateTime.now
+      @cadastro.save
 
-    render :update do |page|
-      page.visual_effect(:highlight , "audi_#{params[:id]}")
-      page.replace_html "audi_#{params[:id]}", render(:text=>"auditado")
+      render :update do |page|
+        page.visual_effect(:highlight , "audi_#{params[:id]}")
+        page.replace_html "audi_#{params[:id]}", render(:text=>"auditado")
+      end
+    else
+      @auditoriasuporte = Auditoriasuporte.find(params[:id])
+
+      @auditoriasuporte.auditado = true
+      @auditoriasuporte.auditor_id = @sessao_usuario.usuario_id
+      @auditoriasuporte.save
+
+      render :update do |page|
+        page.visual_effect(:highlight , "audi_#{params[:id]}")
+        page.replace_html "audi_#{params[:id]}", render(:text=>"auditado")
+      end
     end
   end
 

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100421205151) do
+ActiveRecord::Schema.define(:version => 20100423121515) do
 
   create_table "ajudas", :force => true do |t|
     t.integer "entidade_id"
@@ -47,6 +47,33 @@ ActiveRecord::Schema.define(:version => 20100421205151) do
   add_index "auditoriacadastros", ["entidade_id"], :name => "index_auditoriacadastros_on_entidade_id"
   add_index "auditoriacadastros", ["formulario_id"], :name => "index_auditoriacadastros_on_formulario_id"
   add_index "auditoriacadastros", ["usuario_id"], :name => "index_auditoriacadastros_on_usuario_id"
+
+  create_table "auditoriasuportes", :force => true do |t|
+    t.integer  "entidade_id"
+    t.integer  "usuario_id"
+    t.boolean  "backup_biro"
+    t.text     "backup_biro_obs"
+    t.boolean  "backup_servidor"
+    t.text     "backup_servidor_obs"
+    t.boolean  "manutencaodesktop"
+    t.text     "manutencaodesktop_obs"
+    t.boolean  "manutencaoservidor"
+    t.text     "manutencaoservidor_obs"
+    t.boolean  "manutencaoscanner"
+    t.text     "manutencaoscanner_obs"
+    t.boolean  "manutencaoredelogica"
+    t.text     "manutencaoredelogica_obs"
+    t.boolean  "manutencaoredeeletrica"
+    t.text     "manutencaoredeeletrica_obs"
+    t.boolean  "treinamentointerno"
+    t.text     "treinamentointerno_obs"
+    t.boolean  "treinamentocliente"
+    t.text     "treinamentocliente_obs"
+    t.boolean  "auditado"
+    t.integer  "auditor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "blogs", :force => true do |t|
     t.integer  "entidade_id"

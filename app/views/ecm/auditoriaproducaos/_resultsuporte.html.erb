@@ -1,0 +1,28 @@
+<table id="listar">
+    <thead>
+      <tr>
+        <th colspan="2">Foram encontrados <%= @auditoriasuporte.size.to_s %> Suportes não Auditados</th>
+      <tr>
+        <th class="titulo_lista">Data</th>
+        <th class="titulo_lista">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @auditoriasuporte.each do |c| %>
+      <tr>
+        <td class="itens_index">
+             <%= link_to c.created_at.to_s, ecm_auditoriasuporte_path(c) %>
+        </td>
+        <td class="itens_index">
+          <div id="audi_<%= c.id %>">
+           <% form_remote_tag :url=>{:controller=>"/ecm/auditoriaproducaos/#{c.id}"}, :method=>'put' do -%>
+             <%= hidden_field_tag :tipo, "suporte" %>
+             <%= submit_tag 'Auditado', :class=>"botao_formulario" %>
+           <% end %>
+          </div>
+        </td>
+      </tr>
+	  <% end %>
+    </tobody>
+</table>
+
