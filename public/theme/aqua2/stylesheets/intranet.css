@@ -406,6 +406,11 @@ input.enviar                          {
 
 .titulo_navegacao           { background-image: url("/theme/infodoc/images/arvore.png"); }
 
+.titulo_auditoria_suporte   {background-image: url("/theme/infodoc/images/suporte.png") }
+
+
+.titulo_auditoria_add_suporte {background-image: url("/theme/infodoc/images/add_suporte.png") }
+
 .titulo_index,
 .titulo_show,
 .titulo_new,
@@ -413,6 +418,8 @@ input.enviar                          {
 .titulo_comentario,
 .titulo_cat_infowiki,
 .titulo_navegacao,
+.titulo_auditoria_suporte,
+.titulo_auditoria_add_suporte, 
 .titulo_index_infowiki                {
                             
                             font-size:1.2em;
@@ -2583,7 +2590,13 @@ mimetypes
 .filetree span.file.documento{ background: url("/images/treeview/documento.png") 0 0 no-repeat; }
 .filetree span.file.compactado{ background: url("/images/treeview/compactado.png") 0 0 no-repeat; }
 .filetree span.file.pdf{ background: url("/images/treeview/pdf.png") 0 0 no-repeat; }
-.filetree span.file.planilha{ background: url("/images/treeview/pdf.png") 0 0 no-repeat; }
+.filetree span.file.planilha{ background: url("/images/treeview/planilha.png") 0 0 no-repeat; }
+.filetree span.file.apresentacao{ background: url("/images/treeview/apresentacao.png") 0 0 no-repeat; }
+.filetree span.file.script{ background: url("/images/treeview/script.png") 0 0 no-repeat; }
+.filetree span.file.executavel{ background: url("/images/treeview/executavel.png") 0 0 no-repeat; }
+.filetree span.file.html{ background: url("/images/treeview/html.png") 0 0 no-repeat; }
+
+
 
 
 
@@ -2592,3 +2605,21 @@ mimetypes
 
 
 
+/*
+AUDITORIA DE SUPORTE
+======================*/
+
+.titulo_auditoria_suporte                    { /*herdado em conteudo da intranet  */}
+.titulo_auditoria_suporte                    { /*herdado em CABECALHO h3 imagem de titulo*/} 
+.titulo_auditoria_suporte,
+.titulo_auditoria_add_suporte                { font-size:1.2em;
+                                                float:left;
+                                                padding: 23px 23px 23px 100px;
+                                                margin-left:10px;
+                                                margin-top: 1%;
+                                                background-position:left;
+                                                background-repeat:no-repeat;
+                                              }
+                                              
+/*
+======================*/

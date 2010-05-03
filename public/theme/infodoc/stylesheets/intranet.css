@@ -386,6 +386,11 @@ AVATAR*/
 
 .titulo_cat_infowiki        { background-image: url("/theme/infodoc/images/categoria.png") }
 
+.titulo_auditoria_suporte   {background-image: url("/theme/infodoc/images/suporte.png") }
+
+
+.titulo_auditoria_add_suporte {background-image: url("/theme/infodoc/images/add_suporte.png") }
+
 .titulo_index,
 .titulo_show,
 .titulo_new,
@@ -393,6 +398,8 @@ AVATAR*/
 .titulo_comentario,
 .titulo_cat_infowiki,
 .titulo_navegacao,
+.titulo_auditoria_suporte,
+.titulo_auditoria_add_suporte, 
 .titulo_index_infowiki
                        {
 
@@ -2630,3 +2637,21 @@ mimetypes
 
 
 
+/*
+AUDITORIA DE SUPORTE
+======================*/
+
+.titulo_auditoria_suporte                    { /*herdado em conteudo da intranet  */}
+.titulo_auditoria_suporte                    { /*herdado em CABECALHO h3 imagem de titulo*/} 
+.titulo_auditoria_suporte,
+.titulo_auditoria_add_suporte                { font-size:1.2em;
+                                                float:left;
+                                                padding: 23px 23px 23px 100px;
+                                                margin-left:10px;
+                                                margin-top: 1%;
+                                                background-position:left;
+                                                background-repeat:no-repeat;
+                                              }
+                                              
+/*
+======================*/
