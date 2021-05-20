@@ -126,13 +126,13 @@ module DataHoraEcmHelper
      if form_item.opcoes[:readonly] == "0"
         view.concat(datetime_select :cadastro, "item_#{form_item.id}", :order=>[:day, :month, :year], :start_year=>form_item.opcoes[:ano_inicio].to_i, :end_year=>form_item.opcoes[:ano_fim].to_i, :default=>DateTime.now)
       else
-        view.concat(text_field :cadastro, "item_#{form_item.id}", :readonly=>true, :value=>Time.new.to_s_br)
+        view.concat(text_field :cadastro, "item_#{form_item.id}", :readonly=>true, :value=>Time.new.to_s)
       end
     else
       if form_item.opcoes[:readonly] == "0"
         view.concat(datetime_select :cadastro, "item_#{form_item.id}", :order=>[:day, :month, :year], :start_year=>form_item.opcoes[:ano_inicio].to_i, :end_year=>form_item.opcoes[:ano_fim].to_i, :default=>"#{params["item_#{form_item.id}(1i)"]}-#{params["item_#{form_item.id}(2i)"]}-#{params["item_#{form_item.id}(3i)"]}".to_date)
       else
-        view.concat(text_field :cadastro, "item_#{form_item.id}", :readonly=>true, :value=>Time.new.to_s_br)
+        view.concat(text_field :cadastro, "item_#{form_item.id}", :readonly=>true, :value=>Time.new.to_s)
       end
     end
     return view
@@ -145,7 +145,7 @@ module DataHoraEcmHelper
     if form_item.opcoes[:readonly] == "0"
         view.concat(datetime_select :cadastro, "item_#{form_item.id}", :order=>[:day, :month, :year], :start_year=>form_item.opcoes[:ano_inicio].to_i, :end_year=>form_item.opcoes[:ano_fim].to_i, :default=>cadastro_item.conteudo)
       else
-        view.concat(text_field :cadastro, "item_#{form_item.id}", :readonly=>true, :value=>cadastro_item.conteudo.to_s_br)
+        view.concat(text_field :cadastro, "item_#{form_item.id}", :readonly=>true, :value=>cadastro_item.conteudo.to_s)
       end
    return view
   end
@@ -162,13 +162,13 @@ module DataHoraEcmHelper
   def data_hora_ecm_show_cadastro_item(form_item, cadastro)
     base = DataHoraEcmBase.new
     cadastro_item = base.busca_cadastro_item(form_item, cadastro)
-    return cadastro_item.conteudo.to_s_br
+    return cadastro_item.conteudo.to_s
   end
 
   def data_hora_ecm_show_filtro_cadastro_item(form_item, cadastro)
     base = DataHoraEcmBase.new
     cadastro_item = base.busca_cadastro_item(form_item, cadastro)
-    return cadastro_item.conteudo.to_s_br
+    return cadastro_item.conteudo.to_s
   end
 
 

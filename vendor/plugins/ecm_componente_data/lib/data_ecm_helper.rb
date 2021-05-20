@@ -133,13 +133,13 @@ module DataEcmHelper
   def data_ecm_show_cadastro_item(form_item, cadastro)
     base = DataEcmBase.new
     cadastro_item = base.busca_cadastro_item(form_item, cadastro)
-    return cadastro_item.conteudo.to_s_br
+    return cadastro_item.conteudo.to_s
   end
 
   def data_ecm_show_filtro_cadastro_item(form_item, cadastro)
     base = DataEcmBase.new
     cadastro_item = base.busca_cadastro_item(form_item, cadastro)
-    return cadastro_item.conteudo.to_s_br
+    return cadastro_item.conteudo.to_s
   end
 
 

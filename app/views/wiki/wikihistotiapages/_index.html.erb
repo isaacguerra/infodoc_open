@@ -9,10 +9,10 @@
       <div class="itens_index">
         <% unless historia.conteudo_antigo %>
           <b>Criado por: <%= historia.usuario.nome %> em </b>&nbsp;
-          <%= historia.created_at.to_s_br %><br>
+          <%= historia.created_at.to_s %><br>
         <% else %>
           <b>Midificado por: <%= historia.usuario.nome %> em </b>&nbsp;
-          <%= historia.created_at.to_s_br %> - <%= link_to_remote "Visualizar versão não modificada", :url=>(url_for(wiki_wikipage_wikihistotiapage_path(@wikipage, historia))), :method=>"get" %>
+          <%= historia.created_at.to_s %> - <%= link_to_remote "Visualizar versão não modificada", :url=>(url_for(wiki_wikipage_wikihistotiapage_path(@wikipage, historia))), :method=>"get" %>
 
           <br>
         <% end %>

@@ -46,8 +46,7 @@ class NumeroInteiroEcmBase
         cadastro.errors.add("Item #{form_item.id}", ". Campo #{form_item.rotulo} Requerido!")
       end
       if form_item.opcoes[:unico] == "1"
-        cadastro_itens["item_#{form_item.id}"].upcase! if form_item.opcoes[:semacento] == "1"
-        cadastro_itens["item_#{form_item.id}"].remover_acentos! if form_item.opcoes[:maiusculo] == "1"
+        cadastro_itens["item_#{form_item.id}"].upcase! if form_item.opcoes[:maiusculo] == "1"
 
         cad = EcmItemNumeroInteiro.find(:first, :conditions=>["itensformulario_id = ? and conteudo = ? and cadastro_id = ?", form_item.id, cadastro_itens["item_#{form_item.id}"], cadastro.id])
         unless cad

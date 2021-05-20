@@ -1,0 +1,2354 @@
+# Logfile created on Thu May 20 11:28:23 +0000 2021
+
+Processing HomeController#index (for 172.19.0.1 at 2021-05-20 11:56:06) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing Core::LoginController#create (for 172.19.0.1 at 2021-05-20 11:56:16) [POST]
+  Parameters: {"commit"=>"Logar", "login"=>{"senha"=>"123456", "usuario"=>"admin"}, "authenticity_token"=>"+D1/gwlKAp7SEKiltxULWNCK4V7y3RHnrP2qCwwCLHA="}
+Rendering template within layouts/login
+Rendering core/login/index
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/core/login]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 11:56:45) [GET]
+
+ActionController::RoutingError (No route matches "/core/insall" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Core::InstallController#index (for 172.19.0.1 at 2021-05-20 11:56:53) [GET]
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendering template within layouts/home
+Rendering core/install/index
+Completed in 417ms (View: 2, DB: 137) | 200 OK [http://localhost/core/install]
+
+
+Processing Core::LoginController#create (for 172.19.0.1 at 2021-05-20 11:56:57) [POST]
+  Parameters: {"commit"=>"Logar", "login"=>{"senha"=>"123456", "usuario"=>"admin"}, "authenticity_token"=>"+D1/gwlKAp7SEKiltxULWNCK4V7y3RHnrP2qCwwCLHA="}
+Redirected to http://localhost:3001/intranet
+Completed in 42ms (DB: 9) | 302 Found [http://localhost/core/login]
+
+
+Processing IntranetController#index (for 172.19.0.1 at 2021-05-20 11:56:57) [GET]
+Rendering template within layouts/application
+Rendering intranet/ajuda
+Completed in 78ms (View: 63, DB: 4) | 200 OK [http://localhost/intranet]
+
+
+Processing Com::BlogsController#view (for 172.19.0.1 at 2021-05-20 11:58:58) [POST]
+  Parameters: {"authenticity_token"=>"+D1/gwlKAp7SEKiltxULWNCK4V7y3RHnrP2qCwwCLHA="}
+Completed in 14ms (View: 2, DB: 3) | 200 OK [http://localhost/com/blogs/view]
+
+
+Processing HomeController#index (for 172.19.0.1 at 2021-05-20 12:40:11) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing Core::LoginController#create (for 172.19.0.1 at 2021-05-20 12:40:14) [POST]
+  Parameters: {"commit"=>"Logar", "authenticity_token"=>"+D1/gwlKAp7SEKiltxULWNCK4V7y3RHnrP2qCwwCLHA=", "login"=>{"senha"=>"123456", "usuario"=>"admin"}}
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'infodoc_open.usuarios' doesn't exist: SELECT * FROM `usuarios` WHERE (login = 'admin' and status = 1)  LIMIT 1):
+  app/models/usuario.rb:50:in `login'
+  app/controllers/core/login_controller.rb:12:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing HomeController#index (for 172.19.0.1 at 2021-05-20 12:46:14) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing Core::LoginController#create (for 172.19.0.1 at 2021-05-20 12:46:16) [POST]
+  Parameters: {"commit"=>"Logar", "authenticity_token"=>"+D1/gwlKAp7SEKiltxULWNCK4V7y3RHnrP2qCwwCLHA=", "login"=>{"usuario"=>"admin", "senha"=>"123456"}}
+Rendering template within layouts/login
+Rendering core/login/index
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/core/login]
+
+
+Processing Core::InstallController#index (for 172.19.0.1 at 2021-05-20 12:46:24) [GET]
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendering template within layouts/home
+Rendering core/install/index
+Completed in 401ms (View: 1, DB: 132) | 200 OK [http://localhost/core/install]
+
+
+Processing Core::LoginController#create (for 172.19.0.1 at 2021-05-20 12:46:27) [POST]
+  Parameters: {"commit"=>"Logar", "authenticity_token"=>"+D1/gwlKAp7SEKiltxULWNCK4V7y3RHnrP2qCwwCLHA=", "login"=>{"usuario"=>"admin", "senha"=>"123456"}}
+Redirected to http://localhost:3001/intranet
+Completed in 96ms (DB: 10) | 302 Found [http://localhost/core/login]
+
+
+Processing IntranetController#index (for 172.19.0.1 at 2021-05-20 12:46:27) [GET]
+Rendering template within layouts/application
+Rendering intranet/ajuda
+Completed in 26ms (View: 10, DB: 4) | 200 OK [http://localhost/intranet]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 12:46:33) [GET]
+
+ActionController::RoutingError (No route matches "/theme/infodoc/images/fundo_menu2.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Core::PerfilController#index (for 172.19.0.1 at 2021-05-20 12:46:33) [GET]
+Rendering template within layouts/application
+Rendering core/perfil/index
+Completed in 27ms (View: 7, DB: 5) | 200 OK [http://localhost/core/perfil]
+
+
+Processing Core::PerfilController#index (for 172.19.0.1 at 2021-05-20 12:46:43) [GET]
+Rendering template within layouts/application
+Rendering core/perfil/index
+Completed in 14ms (View: 3, DB: 4) | 200 OK [http://localhost/core/perfil]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 12:46:55) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 72ms (View: 4, DB: 4) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 12:49:46) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 62ms (View: 18, DB: 13) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Core::AdmingruposController#index (for 172.19.0.1 at 2021-05-20 12:49:48) [GET]
+Rendering template within layouts/application
+Rendering core/admingrupos/index
+Completed in 82ms (View: 5, DB: 8) | 200 OK [http://localhost/core/admingrupos]
+
+
+Processing HomeController#index (for 172.19.0.1 at 2021-05-20 13:14:04) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing Core::LoginController#create (for 172.19.0.1 at 2021-05-20 13:14:06) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "login"=>{"senha"=>"123456", "usuario"=>"admin"}, "commit"=>"Logar"}
+Redirected to http://localhost:3001/intranet
+Completed in 55ms (DB: 22) | 302 Found [http://localhost/core/login]
+
+
+Processing IntranetController#index (for 172.19.0.1 at 2021-05-20 13:14:06) [GET]
+Rendering template within layouts/application
+Rendering intranet/ajuda
+Completed in 74ms (View: 6, DB: 6) | 200 OK [http://localhost/intranet]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 13:14:09) [GET]
+
+ActionController::RoutingError (No route matches "/theme/infodoc/images/fundo_menu2.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 13:14:09) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 73ms (View: 3, DB: 4) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::CategoriasController#new (for 172.19.0.1 at 2021-05-20 13:14:11) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/new
+Completed in 21ms (View: 9, DB: 5) | 200 OK [http://localhost/ecm/categorias/new]
+
+
+Processing Ecm::CategoriasController#create (for 172.19.0.1 at 2021-05-20 13:14:18) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "commit"=>"Salvar", "formulariocategoria"=>{"descricao"=>"teste", "entidade_id"=>"1", "nome"=>"teste"}}
+Redirected to http://localhost:3001/ecm/categorias/1
+Completed in 17ms (DB: 4) | 302 Found [http://localhost/ecm/categorias]
+
+
+Processing Ecm::CategoriasController#show (for 172.19.0.1 at 2021-05-20 13:14:18) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/categorias/show
+Completed in 78ms (View: 5, DB: 6) | 200 OK [http://localhost/ecm/categorias/1]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 13:14:22) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 16ms (View: 3, DB: 4) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:14:23) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 70ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::FormulariosController#new (for 172.19.0.1 at 2021-05-20 13:14:25) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/new
+Completed in 32ms (View: 13, DB: 7) | 200 OK [http://localhost/ecm/categorias/1/formularios/new]
+
+
+Processing Ecm::FormulariosController#create (for 172.19.0.1 at 2021-05-20 13:14:47) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "formulario"=>{"descricao"=>"asd", "formulariotipo_id"=>"1", "entidade_id"=>"1", "titulo"=>"Cadastro Pessoal"}, "commit"=>"Salvar", "categoria_id"=>"1"}
+Redirected to http://localhost:3001/ecm/categorias/1/formularios/1
+Completed in 17ms (DB: 5) | 302 Found [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::FormulariosController#show (for 172.19.0.1 at 2021-05-20 13:14:47) [GET]
+  Parameters: {"id"=>"1", "categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/show
+Completed in 79ms (View: 8, DB: 8) | 200 OK [http://localhost/ecm/categorias/1/formularios/1]
+
+
+Processing Ecm::FormauditoriasController#index (for 172.19.0.1 at 2021-05-20 13:14:51) [GET]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "formulario_id"=>"1"}
+Completed in 19ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/formularios/1/formauditorias?authenticity_token=GDiLUmj%2Bvk%2FBp0z%2FNU9aBJAx38FJD9l2K1hGc6fY%2FE0%3D]
+
+
+Processing Ecm::FormauditoriasController#new (for 172.19.0.1 at 2021-05-20 13:14:54) [GET]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "usuario_id"=>"1", "post"=>{"d_f(2i)"=>"5", "d_f(1i)"=>"2021", "d_f(3i)"=>"20", "d_i(2i)"=>"5", "d_i(1i)"=>"2021", "d_i(3i)"=>"20"}, "formulario_id"=>"1", "acao"=>"create"}
+Completed in 59ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/formularios/1/formauditorias/new?authenticity_token=GDiLUmj%2Bvk%2FBp0z%2FNU9aBJAx38FJD9l2K1hGc6fY%2FE0%3D&usuario_id=1&post%5Bd_i(1i)%5D=2021&post%5Bd_i(2i)%5D=5&post%5Bd_i(3i)%5D=20&post%5Bd_f(1i)%5D=2021&post%5Bd_f(2i)%5D=5&post%5Bd_f(3i)%5D=20&acao=create&authenticity_token=GDiLUmj%2Bvk%2FBp0z%2FNU9aBJAx38FJD9l2K1hGc6fY%2FE0%3D]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:15:07) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 21ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:15:09) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 24ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 13:15:10) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 90ms (View: 15, DB: 9) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 13:15:20) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "itenstipo_id"=>"1"}
+Completed in 12ms (View: 1, DB: 4) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 13:15:59) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "opcoes"=>{"exemplo"=>"JOAO DA SILVA", "max_length"=>"22", "largura"=>"22", "nulo"=>"0", "semacento"=>"1", "maiusculo"=>"1", "mascara"=>"", "regex"=>"", "unico"=>"1"}, "itensformulario"=>{"itenstipo_id"=>"1", "entidade_id"=>"1", "formulario_id"=>"1", "rotulo"=>"Nome"}, "formulario_id"=>"1", "commit"=>"Salvar Item"}
+Redirected to http://localhost:3001/ecm/formularios/1/itens_formularios/1
+Completed in 20ms (DB: 8) | 302 Found [http://localhost/ecm/formularios/1/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 13:15:59) [GET]
+  Parameters: {"formulario_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 20ms (View: 7, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios/1]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:16:01) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 20ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 13:16:03) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 80ms (View: 10, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 13:16:18) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "itenstipo_id"=>"5"}
+Completed in 12ms (View: 1, DB: 2) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 13:16:36) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "opcoes"=>{"ano_fim"=>"2022", "ano_inicio"=>"1990"}, "itensformulario"=>{"itenstipo_id"=>"5", "entidade_id"=>"1", "formulario_id"=>"1", "rotulo"=>"Data Nascimento"}, "formulario_id"=>"1", "commit"=>"Salvar Item"}
+Redirected to http://localhost:3001/ecm/formularios/1/itens_formularios/2
+Completed in 20ms (DB: 5) | 302 Found [http://localhost/ecm/formularios/1/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 13:16:36) [GET]
+  Parameters: {"formulario_id"=>"1", "id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 72ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios/2]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:16:38) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 19ms (View: 6, DB: 4) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 13:16:56) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 70ms (View: 51, DB: 12) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 13:17:20) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "itenstipo_id"=>"12"}
+Completed in 10ms (View: 1, DB: 2) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 13:17:34) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "opcoes"=>{"tipo"=>"1", "nulo"=>"0", "unico"=>"1"}, "itensformulario"=>{"itenstipo_id"=>"12", "entidade_id"=>"1", "formulario_id"=>"1", "rotulo"=>"CPF"}, "formulario_id"=>"1", "commit"=>"Salvar Item"}
+Redirected to http://localhost:3001/ecm/formularios/1/itens_formularios/3
+Completed in 18ms (DB: 4) | 302 Found [http://localhost/ecm/formularios/1/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 13:17:34) [GET]
+  Parameters: {"formulario_id"=>"1", "id"=>"3"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 77ms (View: 8, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios/3]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:17:37) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 29ms (View: 11, DB: 7) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:17:57) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 25ms (View: 6, DB: 7) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::PrincipalFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:17:58) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/principal_formularios/index
+Completed in 75ms (View: 7, DB: 5) | 200 OK [http://localhost/ecm/formularios/1/principal_formularios]
+
+
+Processing Ecm::PrincipalFormulariosController#show (for 172.19.0.1 at 2021-05-20 13:18:00) [GET]
+  Parameters: {"formulario_id"=>"1", "id"=>"1"}
+Redirected to http://localhost:3001/ecm/categorias/1/formularios
+Completed in 9ms (DB: 3) | 302 Found [http://localhost/ecm/formularios/1/principal_formularios/1]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:18:00) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 79ms (View: 63, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 13:18:01) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 22ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:18:03) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 24ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::PermissaoFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:18:05) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/permissao_formularios/index
+Completed in 79ms (View: 8, DB: 7) | 200 OK [http://localhost/ecm/formularios/1/permissao_formularios]
+
+
+Processing Ecm::PermissaoFormulariosController#create (for 172.19.0.1 at 2021-05-20 13:18:08) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "formulario_id"=>"1", "commit"=>"Adicionar", "perm"=>{"1"=>"3"}}
+Redirected to http://localhost:3001/ecm/formularios/1/permissao_formularios
+Completed in 12ms (DB: 5) | 302 Found [http://localhost/ecm/formularios/1/permissao_formularios]
+
+
+Processing Ecm::PermissaoFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:18:08) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/permissao_formularios/index
+Completed in 23ms (View: 5, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/permissao_formularios]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 13:18:12) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 92ms (View: 8, DB: 5) | 200 OK [http://localhost/ecm/formularios/1/cadastros]
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 13:18:13) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+Completed in 27ms (View: 11, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/cadastros/new]
+
+
+Processing Ecm::CadastrosController#create (for 172.19.0.1 at 2021-05-20 13:18:24) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "cadastro"=>{"formulariocategoria_id"=>"1", "item_2(1i)"=>"2021", "item_2(2i)"=>"5", "item_2(3i)"=>"20", "formulariotipo_id"=>"1", "usuario_id"=>"1", "entidade_id"=>"1", "formulario_id"=>"1", "item_3"=>"613.047.942-53", "item_1"=>"sdsdfdsf"}, "formulario_id"=>"1", "commit"=>"Salvar"}
+
+NoMethodError (undefined method `remover_acentos!' for "SDSDFDSF":String):
+  app/models/cadastro.rb:45:in `validar'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  app/models/cadastro.rb:43:in `validar'
+  app/controllers/ecm/cadastros_controller.rb:41:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::CadastrosController#create (for 172.19.0.1 at 2021-05-20 13:18:40) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "cadastro"=>{"formulariocategoria_id"=>"1", "item_2(1i)"=>"2009", "item_2(2i)"=>"1", "item_2(3i)"=>"20", "formulariotipo_id"=>"1", "usuario_id"=>"1", "entidade_id"=>"1", "formulario_id"=>"1", "item_3"=>"613.047.942-53", "item_1"=>"sdsdfdsf"}, "formulario_id"=>"1", "commit"=>"Salvar"}
+
+NoMethodError (undefined method `remover_acentos!' for "SDSDFDSF":String):
+  app/models/cadastro.rb:45:in `validar'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  app/models/cadastro.rb:43:in `validar'
+  app/controllers/ecm/cadastros_controller.rb:41:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::CadastrosController#busca (for 172.19.0.1 at 2021-05-20 13:18:59) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "tipo"=>"simples", "id"=>"1", "filtro"=>""}
+Completed in 12ms (View: 1, DB: 4) | 200 OK [http://localhost/ecm/cadastros/busca/1]
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 13:19:03) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+Completed in 86ms (View: 11, DB: 8) | 200 OK [http://localhost/ecm/formularios/1/cadastros/new]
+
+
+Processing Ecm::CadastrosController#create (for 172.19.0.1 at 2021-05-20 13:19:10) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "cadastro"=>{"formulariocategoria_id"=>"1", "item_2(1i)"=>"2021", "item_2(2i)"=>"5", "item_2(3i)"=>"20", "formulariotipo_id"=>"1", "usuario_id"=>"1", "entidade_id"=>"1", "formulario_id"=>"1", "item_3"=>"222.222.222-22", "item_1"=>"aaa"}, "formulario_id"=>"1", "commit"=>"Salvar"}
+
+NoMethodError (undefined method `remover_acentos!' for "AAA":String):
+  app/models/cadastro.rb:45:in `validar'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  app/models/cadastro.rb:43:in `validar'
+  app/controllers/ecm/cadastros_controller.rb:41:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::CadastrosController#create (for 172.19.0.1 at 2021-05-20 13:22:24) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "cadastro"=>{"formulariocategoria_id"=>"1", "item_2(1i)"=>"2021", "item_2(2i)"=>"5", "item_2(3i)"=>"20", "formulariotipo_id"=>"1", "usuario_id"=>"1", "entidade_id"=>"1", "formulario_id"=>"1", "item_3"=>"222.222.222-22", "item_1"=>"aaa"}, "formulario_id"=>"1", "commit"=>"Salvar"}
+
+NoMethodError (undefined method `remover_acentos!' for "AAA":String):
+  app/models/cadastro.rb:45:in `validar'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  app/models/cadastro.rb:43:in `validar'
+  app/controllers/ecm/cadastros_controller.rb:41:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 13:22:28) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 31ms (View: 10, DB: 10) | 200 OK [http://localhost/ecm/formularios/1/cadastros]
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 13:22:30) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+Completed in 29ms (View: 10, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/cadastros/new]
+
+
+Processing Ecm::CadastrosController#create (for 172.19.0.1 at 2021-05-20 13:22:48) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "cadastro"=>{"formulariocategoria_id"=>"1", "item_2(1i)"=>"2021", "item_2(2i)"=>"5", "item_2(3i)"=>"20", "formulariotipo_id"=>"1", "usuario_id"=>"1", "entidade_id"=>"1", "formulario_id"=>"1", "item_3"=>"613.047.942-53", "item_1"=>"sdasd"}, "formulario_id"=>"1", "commit"=>"Salvar"}
+
+NoMethodError (undefined method `remover_acentos!' for "SDASD":String):
+  app/models/cadastro.rb:45:in `validar'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  app/models/cadastro.rb:43:in `validar'
+  app/controllers/ecm/cadastros_controller.rb:41:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::CadastrosController#create (for 172.19.0.1 at 2021-05-20 13:24:16) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "cadastro"=>{"formulariocategoria_id"=>"1", "item_2(1i)"=>"2021", "item_2(2i)"=>"5", "item_2(3i)"=>"20", "formulariotipo_id"=>"1", "usuario_id"=>"1", "entidade_id"=>"1", "formulario_id"=>"1", "item_3"=>"613.047.942-53", "item_1"=>"sdasd"}, "formulario_id"=>"1", "commit"=>"Salvar"}
+
+NoMethodError (undefined method `remover_acentos!' for "SDASD":String):
+  app/models/cadastro.rb:45:in `validar'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+  app/models/cadastro.rb:43:in `validar'
+  app/controllers/ecm/cadastros_controller.rb:41:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 13:26:09) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+Completed in 126ms (View: 70, DB: 14) | 200 OK [http://localhost/ecm/formularios/1/cadastros/new]
+
+
+Processing Ecm::CadastrosController#create (for 172.19.0.1 at 2021-05-20 13:26:19) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "formulario_id"=>"1", "cadastro"=>{"usuario_id"=>"1", "item_2(1i)"=>"2021", "item_2(2i)"=>"5", "item_2(3i)"=>"20", "formulario_id"=>"1", "entidade_id"=>"1", "item_3"=>"613.047.942-53", "item_1"=>"sssss", "formulariocategoria_id"=>"1", "formulariotipo_id"=>"1"}, "commit"=>"Salvar"}
+Redirected to http://localhost:3001/ecm/formularios/1/cadastros/1
+Completed in 35ms (DB: 12) | 302 Found [http://localhost/ecm/formularios/1/cadastros]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 13:26:19) [GET]
+  Parameters: {"formulario_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 28ms (View: 8, DB: 8) | 200 OK [http://localhost/ecm/formularios/1/cadastros/1]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 13:26:25) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 75ms (View: 13, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/cadastros]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 13:26:40) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 20ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:26:42) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 74ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::FormulariosController#new (for 172.19.0.1 at 2021-05-20 13:26:44) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/new
+Completed in 31ms (View: 13, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios/new]
+
+
+Processing Ecm::FormulariosController#create (for 172.19.0.1 at 2021-05-20 13:26:54) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "commit"=>"Salvar", "categoria_id"=>"1", "formulario"=>{"descricao"=>"asd", "entidade_id"=>"1", "titulo"=>"Cadastro Funcional", "formulariotipo_id"=>"1"}}
+Redirected to http://localhost:3001/ecm/categorias/1/formularios/2
+Completed in 14ms (DB: 4) | 302 Found [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::FormulariosController#show (for 172.19.0.1 at 2021-05-20 13:26:54) [GET]
+  Parameters: {"id"=>"2", "categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/show
+Completed in 77ms (View: 8, DB: 7) | 200 OK [http://localhost/ecm/categorias/1/formularios/2]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:26:56) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 17ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:26:57) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 79ms (View: 7, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 13:27:00) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 22ms (View: 9, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 13:27:14) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "itenstipo_id"=>"11"}
+Completed in 11ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 13:27:20) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"11", "entidade_id"=>"1", "rotulo"=>"Matricula"}, "formulario_id"=>"2", "commit"=>"Salvar Item", "opcoes"=>{"tamanho"=>"10", "tipo"=>"2"}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/4
+Completed in 71ms (DB: 4) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 13:27:20) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"4"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 22ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/4]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:27:22) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 28ms (View: 10, DB: 7) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 13:27:29) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 23ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 13:27:42) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "itenstipo_id"=>"9"}
+Completed in 16ms (View: 3, DB: 5) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#ajax (for 172.19.0.1 at 2021-05-20 13:27:44) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "id"=>"9", "referenciado"=>"1"}
+Completed in 85ms (View: 21, DB: 3) | 200 OK [http://localhost/ecm/itens_formularios/ajax/9]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 13:27:45) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"9", "entidade_id"=>"1", "rotulo"=>"Nome"}, "formulario_id"=>"2", "commit"=>"Salvar Item", "opcoes"=>{"referenciado"=>"1"}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/5
+Completed in 16ms (DB: 5) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 13:27:45) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"5"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+
+ActionView::TemplateError (undefined method `[]' for nil:NilClass) on line #12 of app/views/ecm/itens_formularios/show.html.erb:
+9:     <td class="lista_item">Rotulo</td>
+10:     <td class="lista_conteudo"><%= @form_item.rotulo %></td>
+11:   </tr>
+12:   <%= ecm_show_form_item(@form_item) %>
+13: </table>
+14: 
+15: <div id="link_voltar">
+
+    app/helpers/application_helper.rb:29:in `ecm_show_form_item'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    (eval):1:in `ecm_show_form_item'
+    app/views/ecm/itens_formularios/show.html.erb:12:in `eval'
+    app/helpers/application_helper.rb:29:in `ecm_show_form_item'
+    app/views/ecm/itens_formularios/show.html.erb:12
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:28:14) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+
+ActionView::TemplateError (undefined method `[]' for nil:NilClass) on line #38 of app/views/ecm/itens_formularios/index.html.erb:
+35:         <%= form_item.rotulo %>
+36:       </td>
+37:       <td class="lista_conteudo">
+38:         <%= ecm_new_cadastro_item(form_item) %>
+39:       </td>
+40:     </tr>
+41:     <% end %>
+
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    (eval):1:in `ecm_new_cadastro_item'
+    app/views/ecm/itens_formularios/index.html.erb:38:in `eval'
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    app/views/ecm/itens_formularios/index.html.erb:38
+    app/views/ecm/itens_formularios/index.html.erb:32:in `each'
+    app/views/ecm/itens_formularios/index.html.erb:32
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:28:19) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+
+ActionView::TemplateError (undefined method `[]' for nil:NilClass) on line #38 of app/views/ecm/itens_formularios/index.html.erb:
+35:         <%= form_item.rotulo %>
+36:       </td>
+37:       <td class="lista_conteudo">
+38:         <%= ecm_new_cadastro_item(form_item) %>
+39:       </td>
+40:     </tr>
+41:     <% end %>
+
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    (eval):1:in `ecm_new_cadastro_item'
+    app/views/ecm/itens_formularios/index.html.erb:38:in `eval'
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    app/views/ecm/itens_formularios/index.html.erb:38
+    app/views/ecm/itens_formularios/index.html.erb:32:in `each'
+    app/views/ecm/itens_formularios/index.html.erb:32
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:28:24) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Formulariocategoria without an ID):
+  app/controllers/ecm/formularios_controller.rb:3:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 13:28:28) [GET]
+
+ActionController::RoutingError (No route matches "/ecm/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing HomeController#index (for 172.19.0.1 at 2021-05-20 13:28:32) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing Core::LoginController#create (for 172.19.0.1 at 2021-05-20 13:28:34) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "commit"=>"Logar", "login"=>{"usuario"=>"admin", "senha"=>"123456"}}
+Redirected to http://localhost:3001/intranet
+Completed in 40ms (DB: 15) | 302 Found [http://localhost/core/login]
+
+
+Processing IntranetController#index (for 172.19.0.1 at 2021-05-20 13:28:34) [GET]
+Rendering template within layouts/application
+Rendering intranet/ajuda
+Completed in 78ms (View: 7, DB: 6) | 200 OK [http://localhost/intranet]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 13:28:38) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 22ms (View: 10, DB: 6) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:28:39) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 77ms (View: 8, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::PrincipalFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:28:42) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/principal_formularios/index
+Completed in 30ms (View: 9, DB: 7) | 200 OK [http://localhost/ecm/formularios/2/principal_formularios]
+
+
+Processing Ecm::PrincipalFormulariosController#show (for 172.19.0.1 at 2021-05-20 13:28:43) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"4"}
+Redirected to http://localhost:3001/ecm/categorias/1/formularios
+Completed in 12ms (DB: 4) | 302 Found [http://localhost/ecm/formularios/2/principal_formularios/4]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:28:43) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 76ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::PermissaoFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:28:46) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/permissao_formularios/index
+Completed in 22ms (View: 8, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/permissao_formularios]
+
+
+Processing Ecm::PermissaoFormulariosController#create (for 172.19.0.1 at 2021-05-20 13:28:49) [POST]
+  Parameters: {"authenticity_token"=>"GDiLUmj+vk/Bp0z/NU9aBJAx38FJD9l2K1hGc6fY/E0=", "formulario_id"=>"2", "perm"=>{"1"=>"3"}, "commit"=>"Adicionar"}
+Redirected to http://localhost:3001/ecm/formularios/2/permissao_formularios
+Completed in 65ms (DB: 3) | 302 Found [http://localhost/ecm/formularios/2/permissao_formularios]
+
+
+Processing Ecm::PermissaoFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:28:49) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/permissao_formularios/index
+Completed in 21ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/permissao_formularios]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:28:51) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 17ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::FormulariosController#show (for 172.19.0.1 at 2021-05-20 13:28:53) [GET]
+  Parameters: {"id"=>"2", "categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/show
+Completed in 74ms (View: 7, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios/2]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:29:00) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 20ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:29:01) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+
+ActionView::TemplateError (undefined method `[]' for nil:NilClass) on line #38 of app/views/ecm/itens_formularios/index.html.erb:
+35:         <%= form_item.rotulo %>
+36:       </td>
+37:       <td class="lista_conteudo">
+38:         <%= ecm_new_cadastro_item(form_item) %>
+39:       </td>
+40:     </tr>
+41:     <% end %>
+
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    (eval):1:in `ecm_new_cadastro_item'
+    app/views/ecm/itens_formularios/index.html.erb:38:in `eval'
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    app/views/ecm/itens_formularios/index.html.erb:38
+    app/views/ecm/itens_formularios/index.html.erb:32:in `each'
+    app/views/ecm/itens_formularios/index.html.erb:32
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::PrincipalFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:29:13) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/principal_formularios/index
+Completed in 17ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/formularios/1/principal_formularios]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 13:29:16) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 19ms (View: 4, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:29:21) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 81ms (View: 13, DB: 7) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 13:29:25) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+
+ActionView::TemplateError (undefined method `[]' for nil:NilClass) on line #38 of app/views/ecm/itens_formularios/index.html.erb:
+35:         <%= form_item.rotulo %>
+36:       </td>
+37:       <td class="lista_conteudo">
+38:         <%= ecm_new_cadastro_item(form_item) %>
+39:       </td>
+40:     </tr>
+41:     <% end %>
+
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    (eval):1:in `ecm_new_cadastro_item'
+    app/views/ecm/itens_formularios/index.html.erb:38:in `eval'
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    app/views/ecm/itens_formularios/index.html.erb:38
+    app/views/ecm/itens_formularios/index.html.erb:32:in `each'
+    app/views/ecm/itens_formularios/index.html.erb:32
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing HomeController#index (for 172.19.0.1 at 2021-05-20 14:06:24) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#clientes (for 172.19.0.1 at 2021-05-20 14:06:28) [GET]
+Rendering template within layouts/home
+Rendering home/clientes
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing HomeController#depoimentos (for 172.19.0.1 at 2021-05-20 14:06:29) [GET]
+Rendering template within layouts/home
+Rendering home/depoimentos
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://localhost/depoimentos]
+
+
+Processing Core::LoginController#create (for 172.19.0.1 at 2021-05-20 14:06:31) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "commit"=>"Logar", "login"=>{"usuario"=>"admin", "senha"=>"123456"}}
+Redirected to http://localhost:3001/intranet
+Completed in 26ms (DB: 7) | 302 Found [http://localhost/core/login]
+
+
+Processing IntranetController#index (for 172.19.0.1 at 2021-05-20 14:06:31) [GET]
+Rendering template within layouts/application
+Rendering intranet/ajuda
+Completed in 72ms (View: 51, DB: 11) | 200 OK [http://localhost/intranet]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 14:06:34) [GET]
+
+ActionController::RoutingError (No route matches "/theme/infodoc/images/fundo_menu2.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 14:06:37) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 74ms (View: 54, DB: 11) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 14:06:39) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 18ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:06:40) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 23ms (View: 8, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/itens_formularios]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 14:06:44) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 71ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/cadastros]
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 14:06:46) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+
+ActionView::TemplateError (undefined method `[]' for nil:NilClass) on line #26 of app/views/ecm/cadastros/new.html.erb:
+23:         <%= form_item.rotulo %>
+24:       </td>
+25:       <td class="lista_conteudo">
+26:         <%= ecm_new_cadastro_item(form_item) unless @params %>
+27:         <%= ecm_new_cadastro_item(form_item, @params) if @params %>
+28:       </td>
+29:     </tr>
+
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    /var/lib/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:168:in `method_missing'
+    (eval):1:in `ecm_new_cadastro_item'
+    app/views/ecm/cadastros/new.html.erb:26:in `eval'
+    app/helpers/application_helper.rb:43:in `ecm_new_cadastro_item'
+    app/views/ecm/cadastros/new.html.erb:26
+    app/views/ecm/cadastros/new.html.erb:20:in `each'
+    app/views/ecm/cadastros/new.html.erb:20
+    app/views/ecm/cadastros/new.html.erb:8
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 14:09:05) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+Completed in 85ms (View: 8, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/cadastros/new]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 14:09:11) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 26ms (View: 9, DB: 6) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 14:09:12) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 22ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::FormulariosController#show (for 172.19.0.1 at 2021-05-20 14:09:14) [GET]
+  Parameters: {"id"=>"2", "categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/show
+Completed in 77ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios/2]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 14:09:16) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 20ms (View: 5, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:09:17) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 73ms (View: 52, DB: 13) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:09:19) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 23ms (View: 7, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 14:09:31) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itenstipo_id"=>"9"}
+Completed in 13ms (View: 2, DB: 4) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#ajax (for 172.19.0.1 at 2021-05-20 14:09:36) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"9", "referenciado"=>"1"}
+Completed in 68ms (View: 5, DB: 3) | 200 OK [http://localhost/ecm/itens_formularios/ajax/9]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:09:45) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"9", "entidade_id"=>"1", "rotulo"=>"Matricula"}, "formulario_id"=>"2", "cadastro"=>{"item_fim_2(2i)"=>"5", "item_fim_2(3i)"=>"20", "item_inicio_2(1i)"=>"2021", "item_inicio_2(2i)"=>"5", "item_inicio_2(3i)"=>"20", "item_3"=>"", "item_1"=>"", "item_fim_2(1i)"=>"2021"}, "filtro"=>{"check_3"=>"0", "check_2"=>"0", "check_1"=>"0"}, "commit"=>"Salvar Item", "opcoes"=>{"referenciado"=>"1"}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/6
+Completed in 19ms (DB: 5) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:09:45) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"6"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 22ms (View: 7, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/6]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:09:47) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 79ms (View: 11, DB: 7) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 14:09:57) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+Completed in 25ms (View: 7, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/cadastros/new]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 14:10:00) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 77ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/formularios/1/cadastros]
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 14:10:02) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+Completed in 23ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/cadastros/new]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 14:10:06) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 21ms (View: 5, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/cadastros]
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 14:10:08) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+Completed in 26ms (View: 9, DB: 7) | 200 OK [http://localhost/ecm/formularios/2/cadastros/new]
+
+
+Processing Ecm::CadastrosController#create (for 172.19.0.1 at 2021-05-20 14:10:14) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "formulario_id"=>"2", "cadastro"=>{"usuario_id"=>"1", "formulario_id"=>"2", "entidade_id"=>"1", "item_6"=>"1", "item_4"=>"9CRBYGC9CS", "formulariocategoria_id"=>"1", "formulariotipo_id"=>"1"}, "commit"=>"Salvar"}
+Redirected to http://localhost:3001/ecm/formularios/2/cadastros/2
+Completed in 26ms (DB: 10) | 302 Found [http://localhost/ecm/formularios/2/cadastros]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 14:10:14) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 93ms (View: 14, DB: 11) | 200 OK [http://localhost/ecm/formularios/2/cadastros/2]
+
+
+Processing Ecm::RelacionadosController#index (for 172.19.0.1 at 2021-05-20 14:10:16) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "cadastro_id"=>"2"}
+Completed in 17ms (View: 2, DB: 4) | 200 OK [http://localhost/ecm/cadastros/2/relacionados?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 14:10:29) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 71ms (View: 56, DB: 5) | 200 OK [http://localhost/ecm/formularios/1/cadastros]
+
+
+Processing Ecm::CadastrosController#busca (for 172.19.0.1 at 2021-05-20 14:10:31) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"1", "filtro"=>"", "tipo"=>"simples"}
+Completed in 15ms (View: 2, DB: 3) | 200 OK [http://localhost/ecm/cadastros/busca/1]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 14:10:32) [GET]
+  Parameters: {"formulario_id"=>"1", "id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 32ms (View: 11, DB: 9) | 200 OK [http://localhost/ecm/formularios/1/cadastros/1]
+
+
+Processing Ecm::RelacionadosController#index (for 172.19.0.1 at 2021-05-20 14:10:33) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "cadastro_id"=>"1"}
+Completed in 65ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/cadastros/1/relacionados?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::RelacionadosController#new (for 172.19.0.1 at 2021-05-20 14:10:37) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "formulario_id"=>"2", "cadastro_id"=>"1", "tipo"=>"simples"}
+Completed in 19ms (View: 4, DB: 5) | 200 OK [http://localhost/ecm/cadastros/1/relacionados/new?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D&formulario_id=2&tipo=simples&authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 14:10:39) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 26ms (View: 8, DB: 8) | 200 OK [http://localhost/ecm/formularios/2/cadastros/2]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 14:11:15) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 24ms (View: 11, DB: 5) | 200 OK [http://localhost/ecm/formularios/1/cadastros]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 14:11:18) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 18ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 14:11:21) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 70ms (View: 5, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:11:23) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 24ms (View: 8, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:11:24) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 21ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 14:11:29) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itenstipo_id"=>"2"}
+Completed in 63ms (View: 1, DB: 4) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:11:39) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"2", "entidade_id"=>"1", "rotulo"=>"Bio"}, "formulario_id"=>"2", "commit"=>"Salvar Item", "opcoes"=>{"altura"=>"", "nulo"=>"1", "largura"=>""}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/7
+Completed in 23ms (DB: 9) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:11:39) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"7"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 73ms (View: 59, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/7]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:11:40) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 31ms (View: 14, DB: 7) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:11:42) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 21ms (View: 8, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 14:11:46) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itenstipo_id"=>"3"}
+Completed in 59ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:12:17) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"3", "entidade_id"=>"1", "rotulo"=>"idade"}, "formulario_id"=>"2", "commit"=>"Salvar Item", "opcoes"=>{"nulo"=>"1", "unico"=>"0", "max_length"=>"11", "largura"=>"11"}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/8
+Completed in 26ms (DB: 7) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:12:17) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"8"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 78ms (View: 55, DB: 12) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/8]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:12:18) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 25ms (View: 10, DB: 7) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:12:21) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 22ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 14:12:26) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itenstipo_id"=>"4"}
+Completed in 59ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:12:35) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"4", "entidade_id"=>"1", "rotulo"=>"Salario"}, "formulario_id"=>"2", "commit"=>"Salvar Item", "opcoes"=>{"nulo"=>"1", "max_length"=>"222", "largura"=>"22"}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/9
+Completed in 25ms (DB: 8) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:12:35) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"9"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 20ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/9]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:12:37) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 91ms (View: 14, DB: 9) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:12:55) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 26ms (View: 12, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 14:13:01) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itenstipo_id"=>"5"}
+Completed in 64ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:13:21) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"5", "entidade_id"=>"1", "rotulo"=>"Data Contrato"}, "formulario_id"=>"2", "commit"=>"Salvar Item", "opcoes"=>{"ano_inicio"=>"2015", "ano_fim"=>"2030"}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/10
+Completed in 19ms (DB: 5) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:13:21) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"10"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 19ms (View: 5, DB: 4) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/10]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:13:22) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 82ms (View: 12, DB: 7) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:13:28) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 18ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 14:13:32) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itenstipo_id"=>"7"}
+Completed in 61ms (View: 1, DB: 2) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:13:53) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"7", "entidade_id"=>"1", "rotulo"=>"Função"}, "formulario_id"=>"2", "commit"=>"Salvar Item", "opcoes"=>{"lista"=>"Arquivista;Soldador;Puta"}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/11
+Completed in 21ms (DB: 6) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:13:53) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"11"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 17ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/11]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:13:55) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 85ms (View: 13, DB: 8) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:14:03) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 23ms (View: 7, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 14:14:07) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itenstipo_id"=>"8"}
+Completed in 62ms (View: 1, DB: 2) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:14:31) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"8", "entidade_id"=>"1", "rotulo"=>"Avatar"}, "formulario_id"=>"2", "commit"=>"Salvar Item", "opcoes"=>{"tipo"=>"png"}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/12
+Completed in 16ms (DB: 5) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:14:31) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"12"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 19ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/12]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:14:33) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 82ms (View: 14, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:14:59) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 20ms (View: 7, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 14:15:14) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itenstipo_id"=>"13"}
+Completed in 10ms (View: 1, DB: 2) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:15:32) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itensformulario"=>{"formulario_id"=>"2", "itenstipo_id"=>"13", "entidade_id"=>"1", "rotulo"=>"codigo"}, "formulario_id"=>"2", "commit"=>"Salvar Item", "opcoes"=>{"prefixo"=>"IKV-", "valor"=>"0", "posfixo"=>"-NGC"}}
+Redirected to http://localhost:3001/ecm/formularios/2/itens_formularios/13
+Completed in 21ms (DB: 6) | 302 Found [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:15:32) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"13"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 20ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios/13]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:15:33) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 88ms (View: 17, DB: 10) | 200 OK [http://localhost/ecm/formularios/2/itens_formularios]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 14:15:40) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 26ms (View: 8, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/cadastros]
+
+
+Processing Ecm::CadastrosController#new (for 172.19.0.1 at 2021-05-20 14:15:41) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/new
+Completed in 86ms (View: 8, DB: 8) | 200 OK [http://localhost/ecm/formularios/2/cadastros/new]
+
+
+Processing Ecm::CadastrosController#create (for 172.19.0.1 at 2021-05-20 14:15:57) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "formulario_id"=>"2", "cadastro"=>{"usuario_id"=>"1", "formulario_id"=>"2", "item_13"=>"IKV-xxxx-NGC", "item_12"=>#<File:/tmp/RackMultipart20210520-7-ut7zjo-0>, "item_11"=>"Arquivista", "entidade_id"=>"1", "item_10(1i)"=>"2021", "item_10(2i)"=>"5", "item_10(3i)"=>"20", "item_9"=>"112.43", "item_8"=>"22", "item_7"=>"asdasdasd", "item_6"=>"1", "item_4"=>"KNBJ9IZQBM", "formulariocategoria_id"=>"1", "formulariotipo_id"=>"1"}, "commit"=>"Salvar"}
+[paperclip] Saving attachments.
+[paperclip] saving /app/public/system/imagems/1/original/Captura_de_tela_de_2021-05-19_09-24-47.png
+Redirected to http://localhost:3001/ecm/formularios/2/cadastros/3
+Completed in 117ms (DB: 17) | 302 Found [http://localhost/ecm/formularios/2/cadastros]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 14:15:57) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"3"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 31ms (View: 12, DB: 9) | 200 OK [http://localhost/ecm/formularios/2/cadastros/3]
+
+
+Processing Ecm::AuditoriasController#index (for 172.19.0.1 at 2021-05-20 14:16:05) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "cadastro_id"=>"3"}
+Completed in 78ms (View: 8, DB: 5) | 200 OK [http://localhost/ecm/cadastros/3/auditorias?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::AjudasFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:16:36) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"1"}
+Rendering template within layouts/clean
+Rendering ecm/ajudas_formularios/show
+Completed in 18ms (View: 2, DB: 4) | 200 OK [http://localhost/ecm/formularios/2/ajudas_formularios/1]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 14:16:44) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 16ms (View: 5, DB: 4) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 14:16:46) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 73ms (View: 9, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::AjudasFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:16:49) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/ajudas_formularios/index
+Completed in 20ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/ajudas_formularios]
+
+
+Processing Ecm::AjudasFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:16:50) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/ajudas_formularios/new
+Completed in 73ms (View: 58, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/ajudas_formularios/new]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 14:16:51) [GET]
+
+ActionController::RoutingError (No route matches "/ecm/formularios/2/ajudas_formularios/images/spacer.gif" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Ecm::AjudasFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:16:58) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "formulario_id"=>"2", "commit"=>"Salvar", "ajuda"=>{"entidade_id"=>"1", "conteudo"=>"<p>sdasdjklasdlkaklsklasklj as&nbsp; </p>"}}
+Redirected to http://localhost:3001/ecm/formularios/2/ajudas_formularios
+Completed in 16ms (DB: 6) | 302 Found [http://localhost/ecm/formularios/2/ajudas_formularios]
+
+
+Processing Ecm::AjudasFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:16:58) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/ajudas_formularios/index
+Completed in 75ms (View: 5, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/ajudas_formularios]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 14:17:01) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 27ms (View: 9, DB: 6) | 200 OK [http://localhost/ecm/formularios/2/cadastros]
+
+
+Processing Ecm::AjudasFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:17:02) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"1"}
+Rendering template within layouts/clean
+Rendering ecm/ajudas_formularios/show
+Completed in 71ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/formularios/2/ajudas_formularios/1]
+
+
+Processing Ecm::RelatorioentidadesController#index (for 172.19.0.1 at 2021-05-20 14:18:03) [GET]
+Rendering template within layouts/application
+Rendering ecm/relatorioentidades/index
+
+ActionView::TemplateError (divided by 0) on line #26 of app/views/ecm/relatorioentidades/index.html.erb:
+23:       <b>Total de Artefato:</b> <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(2).count('id')  %><br>
+24: 
+25:       <b>Total de Espaço Utilizado:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')  %><br>
+26:       <b>Total de Documentos Digitalizados:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')/@sessao_usuario.entidade.mediaarquivo %><br>
+27:     </td>
+28:   </tr>
+29: </table>
+
+    app/views/ecm/relatorioentidades/index.html.erb:26:in `/'
+    app/views/ecm/relatorioentidades/index.html.erb:26
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::AuditoriaproducaosController#index (for 172.19.0.1 at 2021-05-20 14:18:08) [GET]
+Rendering template within layouts/application
+Rendering ecm/auditoriaproducaos/index
+Completed in 21ms (View: 5, DB: 4) | 200 OK [http://localhost/ecm/auditoriaproducaos]
+
+
+Processing Ecm::AuditoriaproducaosController#show (for 172.19.0.1 at 2021-05-20 14:18:09) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"artefato"}
+Completed in 69ms (View: 4, DB: 3) | 200 OK [http://localhost/ecm/auditoriaproducaos/artefato?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::RelatorioentidadesController#index (for 172.19.0.1 at 2021-05-20 14:19:35) [GET]
+Rendering template within layouts/application
+Rendering ecm/relatorioentidades/index
+
+ActionView::TemplateError (divided by 0) on line #26 of app/views/ecm/relatorioentidades/index.html.erb:
+23:       <b>Total de Artefato:</b> <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(2).count('id')  %><br>
+24: 
+25:       <b>Total de Espaço Utilizado:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')  %><br>
+26:       <b>Total de Documentos Digitalizados:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')/@sessao_usuario.entidade.mediaarquivo %><br>
+27:     </td>
+28:   </tr>
+29: </table>
+
+    app/views/ecm/relatorioentidades/index.html.erb:26:in `/'
+    app/views/ecm/relatorioentidades/index.html.erb:26
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 14:20:01) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 78ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/formularios/2/cadastros]
+
+
+Processing Ecm::CadastrosController#busca (for 172.19.0.1 at 2021-05-20 14:20:04) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"2", "filtro"=>"", "tipo"=>"simples"}
+Completed in 12ms (View: 2, DB: 4) | 200 OK [http://localhost/ecm/cadastros/busca/2]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 14:20:07) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 32ms (View: 13, DB: 10) | 200 OK [http://localhost/ecm/formularios/2/cadastros/2]
+
+
+Processing Ecm::ArtefatosController#index (for 172.19.0.1 at 2021-05-20 14:20:10) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "cadastro_id"=>"2"}
+Completed in 15ms (View: 3, DB: 4) | 200 OK [http://localhost/ecm/cadastros/2/artefatos?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 14:20:14) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 20ms (View: 5, DB: 4) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 14:20:16) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 73ms (View: 8, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::FormulariosController#new (for 172.19.0.1 at 2021-05-20 14:20:18) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/new
+Completed in 18ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/categorias/1/formularios/new]
+
+
+Processing Ecm::FormulariosController#create (for 172.19.0.1 at 2021-05-20 14:20:23) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "commit"=>"Salvar", "categoria_id"=>"1", "formulario"=>{"descricao"=>"", "entidade_id"=>"1", "titulo"=>"Doc", "formulariotipo_id"=>"2"}}
+Rendering template within layouts/application
+Rendering ecm/formularios/new
+Completed in 26ms (View: 8, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::FormulariosController#create (for 172.19.0.1 at 2021-05-20 14:20:29) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "commit"=>"Salvar", "categoria_id"=>"1", "formulario"=>{"descricao"=>"doc", "entidade_id"=>"1", "titulo"=>"Doc", "formulariotipo_id"=>"2"}}
+Redirected to http://localhost:3001/ecm/categorias/1/formularios/3
+Completed in 71ms (DB: 4) | 302 Found [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::FormulariosController#show (for 172.19.0.1 at 2021-05-20 14:20:29) [GET]
+  Parameters: {"id"=>"3", "categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/show
+Completed in 19ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios/3]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 14:20:31) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 72ms (View: 59, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:20:33) [GET]
+  Parameters: {"formulario_id"=>"3"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 26ms (View: 9, DB: 6) | 200 OK [http://localhost/ecm/formularios/3/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#new (for 172.19.0.1 at 2021-05-20 14:20:35) [GET]
+  Parameters: {"formulario_id"=>"3"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/new
+Completed in 19ms (View: 6, DB: 4) | 200 OK [http://localhost/ecm/formularios/3/itens_formularios/new]
+
+
+Processing Ecm::ItensFormulariosController#montaformitem (for 172.19.0.1 at 2021-05-20 14:20:42) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itenstipo_id"=>"1"}
+Completed in 62ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/itens_formularios/montaformitem]
+
+
+Processing Ecm::ItensFormulariosController#create (for 172.19.0.1 at 2021-05-20 14:20:57) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "itensformulario"=>{"formulario_id"=>"3", "itenstipo_id"=>"1", "entidade_id"=>"1", "rotulo"=>"numero"}, "formulario_id"=>"3", "commit"=>"Salvar Item", "opcoes"=>{"mascara"=>"", "nulo"=>"1", "regex"=>"", "unico"=>"0", "max_length"=>"11", "exemplo"=>"", "largura"=>"11", "maiusculo"=>"1", "semacento"=>"0"}}
+Redirected to http://localhost:3001/ecm/formularios/3/itens_formularios/14
+Completed in 18ms (DB: 6) | 302 Found [http://localhost/ecm/formularios/3/itens_formularios]
+
+
+Processing Ecm::ItensFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:20:57) [GET]
+  Parameters: {"formulario_id"=>"3", "id"=>"14"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/show
+Completed in 22ms (View: 6, DB: 6) | 200 OK [http://localhost/ecm/formularios/3/itens_formularios/14]
+
+
+Processing Ecm::ItensFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:21:00) [GET]
+  Parameters: {"formulario_id"=>"3"}
+Rendering template within layouts/application
+Rendering ecm/itens_formularios/index
+Completed in 78ms (View: 10, DB: 7) | 200 OK [http://localhost/ecm/formularios/3/itens_formularios]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 14:21:02) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 26ms (View: 8, DB: 7) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::PrincipalFormulariosController#index (for 172.19.0.1 at 2021-05-20 14:21:03) [GET]
+  Parameters: {"formulario_id"=>"3"}
+Rendering template within layouts/application
+Rendering ecm/principal_formularios/index
+Completed in 79ms (View: 9, DB: 7) | 200 OK [http://localhost/ecm/formularios/3/principal_formularios]
+
+
+Processing Ecm::PrincipalFormulariosController#show (for 172.19.0.1 at 2021-05-20 14:21:05) [GET]
+  Parameters: {"formulario_id"=>"3", "id"=>"14"}
+Redirected to http://localhost:3001/ecm/categorias/1/formularios
+Completed in 15ms (DB: 4) | 302 Found [http://localhost/ecm/formularios/3/principal_formularios/14]
+
+
+Processing Ecm::FormulariosController#index (for 172.19.0.1 at 2021-05-20 14:21:05) [GET]
+  Parameters: {"categoria_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/formularios/index
+Completed in 26ms (View: 9, DB: 6) | 200 OK [http://localhost/ecm/categorias/1/formularios]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 14:21:10) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 89ms (View: 12, DB: 6) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 14:21:12) [GET]
+  Parameters: {"formulario_id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 29ms (View: 9, DB: 8) | 200 OK [http://localhost/ecm/formularios/2/cadastros]
+
+
+Processing Ecm::CadastrosController#busca (for 172.19.0.1 at 2021-05-20 14:21:14) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"2", "filtro"=>"", "tipo"=>"simples"}
+Completed in 15ms (View: 2, DB: 4) | 200 OK [http://localhost/ecm/cadastros/busca/2]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 14:21:15) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 98ms (View: 15, DB: 13) | 200 OK [http://localhost/ecm/formularios/2/cadastros/2]
+
+
+Processing Ecm::ArtefatosController#index (for 172.19.0.1 at 2021-05-20 14:21:16) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "cadastro_id"=>"2"}
+Completed in 17ms (View: 3, DB: 4) | 200 OK [http://localhost/ecm/cadastros/2/artefatos?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::ArtefatosController#new (for 172.19.0.1 at 2021-05-20 14:21:18) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "formulario_id"=>"3", "cadastro_id"=>"2"}
+Completed in 71ms (View: 3, DB: 3) | 200 OK [http://localhost/ecm/cadastros/2/artefatos/new?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D&formulario_id=3&authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::ArtefatosController#create (for 172.19.0.1 at 2021-05-20 14:21:46) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "cadastro"=>{"objeto"=>#<File:/tmp/RackMultipart20210520-7-n7f73z-0>, "usuario_id"=>"1", "formulario_id"=>"3", "item_14"=>"111", "entidade_id"=>"1", "formulariocategoria_id"=>"1", "formulariotipo_id"=>"2"}, "cadastro_id"=>"2", "commit"=>"Salvar"}
+[paperclip] Saving attachments.
+[paperclip] saving /app/uploadartefatos/system/artefatos/objetos/1/original/monthly-report.rb
+Redirected to http://localhost:3001/ecm/formularios/2/cadastros/2
+Completed in 39ms (DB: 14) | 302 Found [http://localhost/ecm/cadastros/2/artefatos]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 14:21:46) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 96ms (View: 11, DB: 19) | 200 OK [http://localhost/ecm/formularios/2/cadastros/2]
+
+
+Processing Ecm::RelatorioentidadesController#index (for 172.19.0.1 at 2021-05-20 14:21:50) [GET]
+Rendering template within layouts/application
+Rendering ecm/relatorioentidades/index
+
+ActionView::TemplateError (divided by 0) on line #26 of app/views/ecm/relatorioentidades/index.html.erb:
+23:       <b>Total de Artefato:</b> <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(2).count('id')  %><br>
+24: 
+25:       <b>Total de Espaço Utilizado:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')  %><br>
+26:       <b>Total de Documentos Digitalizados:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')/@sessao_usuario.entidade.mediaarquivo %><br>
+27:     </td>
+28:   </tr>
+29: </table>
+
+    app/views/ecm/relatorioentidades/index.html.erb:26:in `/'
+    app/views/ecm/relatorioentidades/index.html.erb:26
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Core::EntidadesController#index (for 172.19.0.1 at 2021-05-20 14:22:20) [GET]
+Rendering template within layouts/application
+Rendering core/entidades/index
+Completed in 82ms (View: 62, DB: 6) | 200 OK [http://localhost/core/entidades]
+
+
+Processing Core::EntidadesController#show (for 172.19.0.1 at 2021-05-20 14:22:22) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering core/entidades/show
+Completed in 23ms (View: 7, DB: 5) | 200 OK [http://localhost/core/entidades/1]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 14:22:22) [GET]
+
+ActionController::RoutingError (No route matches "/logos/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Core::EntidadesController#edit (for 172.19.0.1 at 2021-05-20 14:22:29) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering core/entidades/edit
+Completed in 83ms (View: 67, DB: 5) | 200 OK [http://localhost/core/entidades/1/edit]
+
+
+Processing Core::EntidadesController#update (for 172.19.0.1 at 2021-05-20 14:22:37) [PUT]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "entidade"=>{"bairro"=>"Santa Nines", "email"=>"comercial@infomanagerbrasil.com.br", "endereco"=>"Rua Iraci Nunes Nadler, nº 346", "quantidadearquivo"=>"1000", "nome_responsavel"=>"Isaac de Almeida Gerra", "telefone"=>"3242-5877", "mediaarquivo"=>"0", "espacodisco"=>"0", "cpf_cnpj"=>"08505672000160", "nome"=>"Infomanager", "email_responsavel"=>"isaac@infomanagerbrasil.com.br", "tema"=>"infodoc", "cep"=>"68901-380", "cidade"=>"Macapá", "razao_social"=>"Infomanager Ltda", "telefone_responsavel"=>"8113-8057"}, "id"=>"1", "commit"=>"Salvar"}
+[paperclip] Saving attachments.
+Redirected to http://localhost:3001/core/entidades/1
+Completed in 15ms (DB: 5) | 302 Found [http://localhost/core/entidades/1]
+
+
+Processing Core::EntidadesController#show (for 172.19.0.1 at 2021-05-20 14:22:37) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering core/entidades/show
+Completed in 26ms (View: 8, DB: 7) | 200 OK [http://localhost/core/entidades/1]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 14:22:37) [GET]
+
+ActionController::RoutingError (No route matches "/logos/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Core::PerfilentidadesController#index (for 172.19.0.1 at 2021-05-20 14:22:42) [GET]
+Rendering template within layouts/application
+Rendering core/perfilentidades/index
+Completed in 78ms (View: 7, DB: 5) | 200 OK [http://localhost/core/perfilentidades]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 14:22:42) [GET]
+
+ActionController::RoutingError (No route matches "/logos/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 14:22:42) [GET]
+
+ActionController::RoutingError (No route matches "/logos/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Ecm::RelatorioentidadesController#index (for 172.19.0.1 at 2021-05-20 14:22:47) [GET]
+Rendering template within layouts/application
+Rendering ecm/relatorioentidades/index
+
+ActionView::TemplateError (divided by 0) on line #26 of app/views/ecm/relatorioentidades/index.html.erb:
+23:       <b>Total de Artefato:</b> <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(2).count('id')  %><br>
+24: 
+25:       <b>Total de Espaço Utilizado:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')  %><br>
+26:       <b>Total de Documentos Digitalizados:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')/@sessao_usuario.entidade.mediaarquivo %><br>
+27:     </td>
+28:   </tr>
+29: </table>
+
+    app/views/ecm/relatorioentidades/index.html.erb:26:in `/'
+    app/views/ecm/relatorioentidades/index.html.erb:26
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 14:23:14) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 19ms (View: 5, DB: 5) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Gde::NavegadordearquivosController#index (for 172.19.0.1 at 2021-05-20 14:23:17) [GET]
+Rendering template within layouts/application
+Rendering gde/navegadordearquivos/index
+Completed in 23ms (View: 8, DB: 6) | 200 OK [http://localhost/gde/navegadordearquivos]
+
+
+Processing Gde::NavegadordearquivosController#create (for 172.19.0.1 at 2021-05-20 14:23:25) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "tipo"=>"formularios", "formulario"=>"1"}
+Completed in 74ms (View: 10, DB: 7) | 200 OK [http://localhost/gde/navegadordearquivos]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 14:23:37) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 42ms (View: 16, DB: 12) | 200 OK [http://localhost/ecm/formularios/2/cadastros/2]
+
+
+Processing Gde::NavegadordearquivosController#index (for 172.19.0.1 at 2021-05-20 14:23:42) [GET]
+Rendering template within layouts/application
+Rendering gde/navegadordearquivos/index
+Completed in 24ms (View: 8, DB: 7) | 200 OK [http://localhost/gde/navegadordearquivos]
+
+
+Processing Gde::NavegadordearquivosController#create (for 172.19.0.1 at 2021-05-20 14:23:45) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "tipo"=>"formularios", "formulario"=>"3"}
+Completed in 15ms (View: 3, DB: 4) | 200 OK [http://localhost/gde/navegadordearquivos]
+
+
+Processing Gde::NavegadordearquivosController#create (for 172.19.0.1 at 2021-05-20 14:23:51) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "tipo"=>"formularios", "formulario"=>"2"}
+Completed in 65ms (View: 5, DB: 4) | 200 OK [http://localhost/gde/navegadordearquivos]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 14:23:52) [GET]
+  Parameters: {"formulario_id"=>"2", "id"=>"2"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 40ms (View: 13, DB: 13) | 200 OK [http://localhost/ecm/formularios/2/cadastros/2]
+
+
+Processing Wiki::WikicategoriasController#index (for 172.19.0.1 at 2021-05-20 14:24:02) [GET]
+Rendering template within layouts/application
+Rendering wiki/wikicategorias/index
+Completed in 77ms (View: 55, DB: 12) | 200 OK [http://localhost/wiki/wikicategorias]
+
+
+Processing Ecm::CategoriasController#index (for 172.19.0.1 at 2021-05-20 14:24:05) [GET]
+Rendering template within layouts/application
+Rendering ecm/categorias/index
+Completed in 21ms (View: 5, DB: 4) | 200 OK [http://localhost/ecm/categorias]
+
+
+Processing Ecm::AuditoriaproducaosController#index (for 172.19.0.1 at 2021-05-20 14:24:11) [GET]
+Rendering template within layouts/application
+Rendering ecm/auditoriaproducaos/index
+Completed in 20ms (View: 8, DB: 5) | 200 OK [http://localhost/ecm/auditoriaproducaos]
+
+
+Processing Ecm::AuditoriaproducaosController#show (for 172.19.0.1 at 2021-05-20 14:24:15) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"artefato"}
+Completed in 65ms (View: 2, DB: 4) | 200 OK [http://localhost/ecm/auditoriaproducaos/artefato?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::AuditoriaproducaosController#create (for 172.19.0.1 at 2021-05-20 14:24:19) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "tipo"=>"artefato", "quant"=>"", "formulario"=>"2"}
+Completed in 16ms (View: 2, DB: 4) | 200 OK [http://localhost/ecm/auditoriaproducaos]
+
+
+Processing Ecm::AuditoriaproducaosController#show (for 172.19.0.1 at 2021-05-20 14:24:26) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"relacionados"}
+Completed in 13ms (View: 3, DB: 3) | 200 OK [http://localhost/ecm/auditoriaproducaos/relacionados?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::AuditoriaproducaosController#create (for 172.19.0.1 at 2021-05-20 14:24:32) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "formulario_pai"=>"1", "formulario_filho"=>"2", "tipo"=>"relacionados"}
+Completed in 64ms (View: 2, DB: 5) | 200 OK [http://localhost/ecm/auditoriaproducaos]
+
+
+Processing Ecm::AuditoriaproducaosController#show (for 172.19.0.1 at 2021-05-20 14:24:37) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"dados"}
+Completed in 13ms (View: 2, DB: 3) | 200 OK [http://localhost/ecm/auditoriaproducaos/dados?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::AuditoriaproducaosController#create (for 172.19.0.1 at 2021-05-20 14:24:40) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "tipo"=>"dados", "formulario"=>"1"}
+Completed in 16ms (View: 3, DB: 4) | 200 OK [http://localhost/ecm/auditoriaproducaos]
+
+
+Processing Ecm::AuditoriaproducaosController#show (for 172.19.0.1 at 2021-05-20 14:24:48) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"suporte"}
+Completed in 61ms (View: 2, DB: 3) | 200 OK [http://localhost/ecm/auditoriaproducaos/suporte?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::AuditoriaproducaosController#create (for 172.19.0.1 at 2021-05-20 14:24:50) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "usuario_id"=>"1", "tipo"=>"suporte"}
+Completed in 10ms (View: 1, DB: 2) | 200 OK [http://localhost/ecm/auditoriaproducaos]
+
+
+Processing Ecm::AuditoriaproducaosController#show (for 172.19.0.1 at 2021-05-20 14:24:54) [GET]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "id"=>"extrato"}
+Completed in 14ms (View: 3, DB: 2) | 200 OK [http://localhost/ecm/auditoriaproducaos/extrato?authenticity_token=thGCW2yQMLVCQ4O%2F38H58NVLgodlqUwIhJzbNdxFs2Q%3D]
+
+
+Processing Ecm::AuditoriaproducaosController#create (for 172.19.0.1 at 2021-05-20 14:24:57) [POST]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "usuario_id"=>"1", "periodo"=>{"data_inicio(3i)"=>"20", "data_inicio(2i)"=>"5", "data_inicio(1i)"=>"2021", "data_fim(3i)"=>"20", "data_fim(2i)"=>"5", "data_fim(1i)"=>"2021"}, "tipo"=>"extrato"}
+Completed in 66ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/auditoriaproducaos]
+
+
+Processing Ecm::RelatorioentidadesController#index (for 172.19.0.1 at 2021-05-20 14:25:14) [GET]
+Rendering template within layouts/application
+Rendering ecm/relatorioentidades/index
+
+ActionView::TemplateError (divided by 0) on line #26 of app/views/ecm/relatorioentidades/index.html.erb:
+23:       <b>Total de Artefato:</b> <%= Cadastro.da_entidade(@sessao_usuario.entidade_id).do_tipo(2).count('id')  %><br>
+24: 
+25:       <b>Total de Espaço Utilizado:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')  %><br>
+26:       <b>Total de Documentos Digitalizados:</b> <%= Artefato.da_entidade(@sessao_usuario.entidade_id).sum('objeto_file_size')/@sessao_usuario.entidade.mediaarquivo %><br>
+27:     </td>
+28:   </tr>
+29: </table>
+
+    app/views/ecm/relatorioentidades/index.html.erb:26:in `/'
+    app/views/ecm/relatorioentidades/index.html.erb:26
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/500.html (500 Internal Server Error)
+
+
+Processing Core::EntidadesController#index (for 172.19.0.1 at 2021-05-20 14:26:21) [GET]
+Rendering template within layouts/application
+Rendering core/entidades/index
+Completed in 74ms (View: 52, DB: 12) | 200 OK [http://localhost/core/entidades]
+
+
+Processing Core::EntidadesController#show (for 172.19.0.1 at 2021-05-20 14:26:23) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering core/entidades/show
+Completed in 21ms (View: 6, DB: 6) | 200 OK [http://localhost/core/entidades/1]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 14:26:23) [GET]
+
+ActionController::RoutingError (No route matches "/logos/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Core::EntidadesController#edit (for 172.19.0.1 at 2021-05-20 14:26:26) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering core/entidades/edit
+Completed in 24ms (View: 11, DB: 6) | 200 OK [http://localhost/core/entidades/1/edit]
+
+
+Processing Core::EntidadesController#update (for 172.19.0.1 at 2021-05-20 14:26:32) [PUT]
+  Parameters: {"authenticity_token"=>"thGCW2yQMLVCQ4O/38H58NVLgodlqUwIhJzbNdxFs2Q=", "entidade"=>{"bairro"=>"Santa Nines", "email"=>"comercial@infomanagerbrasil.com.br", "endereco"=>"Rua Iraci Nunes Nadler, nº 346", "quantidadearquivo"=>"1000", "nome_responsavel"=>"Isaac de Almeida Gerra", "telefone"=>"3242-5877", "mediaarquivo"=>"45", "espacodisco"=>"0", "cpf_cnpj"=>"08505672000160", "nome"=>"Infomanager", "email_responsavel"=>"isaac@infomanagerbrasil.com.br", "tema"=>"infodoc", "cep"=>"68901-380", "cidade"=>"Macapá", "razao_social"=>"Infomanager Ltda", "telefone_responsavel"=>"8113-8057"}, "id"=>"1", "commit"=>"Salvar"}
+[paperclip] Saving attachments.
+Redirected to http://localhost:3001/core/entidades/1
+Completed in 13ms (DB: 5) | 302 Found [http://localhost/core/entidades/1]
+
+
+Processing Core::EntidadesController#show (for 172.19.0.1 at 2021-05-20 14:26:32) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering core/entidades/show
+Completed in 21ms (View: 5, DB: 5) | 200 OK [http://localhost/core/entidades/1]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 14:26:32) [GET]
+
+ActionController::RoutingError (No route matches "/logos/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Ecm::RelatorioentidadesController#index (for 172.19.0.1 at 2021-05-20 14:26:35) [GET]
+Rendering template within layouts/application
+Rendering ecm/relatorioentidades/index
+Completed in 82ms (View: 11, DB: 7) | 200 OK [http://localhost/ecm/relatorioentidades]

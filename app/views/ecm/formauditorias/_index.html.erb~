@@ -34,7 +34,7 @@
     <tbody> 
         <% @auditorias.each do |auditoria| %>
         <tr>
-          <td class="itens_index"><%= auditoria.created_at.to_s_br %></td>
+          <td class="itens_index"><%= auditoria.created_at.to_s %></td>
           <td class="itens_index"><%= auditoria.usuario.nome %></td>
           <td class="itens_index"><%= auditoria.cadastro_id %></td>
           <td class="itens_index"><%= auditoria.descricao %></td>

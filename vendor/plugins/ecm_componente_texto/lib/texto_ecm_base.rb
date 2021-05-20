@@ -42,8 +42,7 @@ class TextoEcmBase
         cadastro.errors.add("item_#{form_item.id}", "Campo #{form_item.rotulo} Requerido!")
       end
       if form_item.opcoes[:unico] == "1"
-        cadastro_itens["item_#{form_item.id}"].upcase! if form_item.opcoes[:semacento] == "1"
-        cadastro_itens["item_#{form_item.id}"].remover_acentos! if form_item.opcoes[:maiusculo] == "1"
+        cadastro_itens["item_#{form_item.id}"].upcase! if form_item.opcoes[:maiusculo] == "1"
 
         cad = EcmItemTexto.find(:first, :conditions=>["itensformulario_id = ? and conteudo = ? and cadastro_id = ?", form_item.id, cadastro_itens["item_#{form_item.id}"], cadastro.id])
         unless cad
@@ -71,7 +70,6 @@ class TextoEcmBase
       texto.itensformulario_id = form_item.id
       texto.cadastro_id = cadastro.id
       texto.conteudo = cadastro_itens["item_#{form_item.id}"]
-      texto.conteudo.remover_acentos! if form_item.opcoes[:semacento] == "1"
       texto.conteudo.upcase! if form_item.opcoes[:maiusculo] == "1"
       texto.save
    end

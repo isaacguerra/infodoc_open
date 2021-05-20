@@ -23,10 +23,10 @@
 
 development:
   adapter: mysql
-  database: infodoc_open
-  username: root
-  password: info@adm
-  host: localhost
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>  
 #  socket: /var/run/mysqld/mysqld.sock
 
 test: &TEST
@@ -37,13 +37,13 @@ test: &TEST
   host: localhost
   #socket: /var/run/mysqld/mysqld.sock
 
-#production:
-#  adapter: mysql
-#  database: infodocdoc_production
-#  username: root
-#  password: infodoc@adm
-#  host: localhost
-  #socket: /var/run/mysqld/mysqld.sock
+production:
+  adapter: mysql
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>  
+#  socket: /var/run/mysqld/mysqld.sock
 
 
 cucumber:
