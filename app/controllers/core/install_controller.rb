@@ -5,7 +5,7 @@ class Core::InstallController < ApplicationController
 
   def index
     @log  = ""
-    entidade = Entidade.create(:nome=>"Infomanager", :razao_social=>"Infomanager Ltda", :cpf_cnpj=>"08505672000160", :cidade=>"Macapá", :endereco=>"Rua Iraci Nunes Nadler, nº 346", :bairro=>"Santa Nines", :cep=>"68901-380", :telefone=>"3242-5877", :email=>"comercial@infomanagerbrasil.com.br", :nome_responsavel=>"Isaac de Almeida Gerra", :telefone_responsavel=>"8113-8057", :email_responsavel=>"isaac@infomanagerbrasil.com.br", :status=>true, :tema=>"infodoc")
+    entidade = Entidade.create(:nome=>"ECM", :razao_social=>"ECM Ltda", :cpf_cnpj=>"08505672000160", :cidade=>"Macapá", :endereco=>"Rua Iraci Nunes Nadler, nº 346", :bairro=>"Santa Nines", :cep=>"68901-380", :telefone=>"3242-5877", :email=>"comercial@ECMbrasil.com.br", :nome_responsavel=>"Isaac de Almeida Gerra", :telefone_responsavel=>"8113-8057", :email_responsavel=>"isaac@ECMbrasil.com.br", :status=>true, :tema=>"infodoc")
     @log << "#ID da Entidade - #{entidade.id}\n"
     madmg = Modulo.create(:nome=>"Administração Geral", :descricao=>"Administração Geral")
     @log << "#ID da modulos Administracao Geral - #{madmg.id}\n"
@@ -118,7 +118,7 @@ class Core::InstallController < ApplicationController
     u = Usuario.new
     #@senha = u.random_alphanumeric(6)
     @senha = "123456"
-    usuario = Usuario.create(:entidade_id=>entidade.id, :nome=>"Administrador", :login=>"admin", :email=>"contato@infomanagerbrasil.com.br", :senha=>@senha, :senha_confirmation=>@senha, :status=>true)
+    usuario = Usuario.create(:entidade_id=>entidade.id, :nome=>"Administrador", :login=>"admin", :email=>"contato@ECMbrasil.com.br", :senha=>@senha, :senha_confirmation=>@senha, :status=>true)
     @log << "ID do Usuario #{usuario.nome}\n"
 
     vug = Grupousuario.create(:usuario_id=>usuario.id, :grupo_id=>grupoadministrador.id)

@@ -2352,3 +2352,116 @@ Processing Ecm::RelatorioentidadesController#index (for 172.19.0.1 at 2021-05-20
 Rendering template within layouts/application
 Rendering ecm/relatorioentidades/index
 Completed in 82ms (View: 11, DB: 7) | 200 OK [http://localhost/ecm/relatorioentidades]
+
+
+Processing HomeController#index (for 172.19.0.1 at 2021-05-20 16:40:53) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing Core::LoginController#create (for 172.19.0.1 at 2021-05-20 16:40:55) [POST]
+  Parameters: {"login"=>{"senha"=>"123456", "usuario"=>"admin"}, "commit"=>"Logar", "authenticity_token"=>"Th6+wtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha+D+Y="}
+Redirected to http://localhost:3001/intranet
+Completed in 105ms (DB: 16) | 302 Found [http://localhost/core/login]
+
+
+Processing IntranetController#index (for 172.19.0.1 at 2021-05-20 16:40:55) [GET]
+Rendering template within layouts/application
+Rendering intranet/ajuda
+Completed in 50ms (View: 23, DB: 12) | 200 OK [http://localhost/intranet]
+
+
+Processing ApplicationController#index (for 172.19.0.1 at 2021-05-20 16:40:57) [GET]
+
+ActionController::RoutingError (No route matches "/theme/infodoc/images/fundo_menu2.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering /app/public/404.html (404 Not Found)
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 16:40:58) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 25ms (View: 9, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/cadastros]
+
+
+Processing Ecm::CadastrosController#busca (for 172.19.0.1 at 2021-05-20 16:41:02) [POST]
+  Parameters: {"filtro"=>"", "id"=>"1", "authenticity_token"=>"Th6+wtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha+D+Y=", "tipo"=>"simples"}
+Completed in 18ms (View: 5, DB: 6) | 200 OK [http://localhost/ecm/cadastros/busca/1]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 16:41:03) [GET]
+  Parameters: {"id"=>"1", "formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 42ms (View: 14, DB: 13) | 200 OK [http://localhost/ecm/formularios/1/cadastros/1]
+
+
+Processing Ecm::ArtefatosController#index (for 172.19.0.1 at 2021-05-20 16:41:05) [GET]
+  Parameters: {"cadastro_id"=>"1", "authenticity_token"=>"Th6+wtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha+D+Y="}
+Completed in 20ms (View: 4, DB: 4) | 200 OK [http://localhost/ecm/cadastros/1/artefatos?authenticity_token=Th6%2BwtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha%2BD%2BY%3D]
+
+
+Processing Ecm::ArtefatosController#new (for 172.19.0.1 at 2021-05-20 16:41:06) [GET]
+  Parameters: {"cadastro_id"=>"1", "authenticity_token"=>"Th6+wtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha+D+Y=", "formulario_id"=>"3"}
+Completed in 15ms (View: 3, DB: 4) | 200 OK [http://localhost/ecm/cadastros/1/artefatos/new?authenticity_token=Th6%2BwtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha%2BD%2BY%3D&formulario_id=3&authenticity_token=Th6%2BwtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha%2BD%2BY%3D]
+
+
+Processing Ecm::ArtefatosController#create (for 172.19.0.1 at 2021-05-20 16:41:16) [POST]
+  Parameters: {"cadastro_id"=>"1", "ocr"=>"1", "commit"=>"Salvar", "cadastro"=>{"objeto"=>#<File:/tmp/RackMultipart20210520-7-5h8xp3-0>, "usuario_id"=>"1", "item_14"=>"ssss", "formulariotipo_id"=>"2", "entidade_id"=>"1", "formulariocategoria_id"=>"1", "formulario_id"=>"3"}, "authenticity_token"=>"Th6+wtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha+D+Y="}
+[paperclip] Saving attachments.
+[paperclip] saving /app/uploadartefatos/system/artefatos/objetos/2/original/UC_1.453.94_-_d_bito_total.pdf
+Redirected to http://localhost:3001/ecm/formularios/1/cadastros/1
+Completed in 117ms (DB: 18) | 302 Found [http://localhost/ecm/cadastros/1/artefatos]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 16:41:16) [GET]
+  Parameters: {"id"=>"1", "formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 36ms (View: 14, DB: 12) | 200 OK [http://localhost/ecm/formularios/1/cadastros/1]
+
+
+Processing Ecm::CadastrosController#index (for 172.19.0.1 at 2021-05-20 16:41:18) [GET]
+  Parameters: {"formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/index
+Completed in 73ms (View: 8, DB: 6) | 200 OK [http://localhost/ecm/formularios/1/cadastros]
+
+
+Processing Ecm::CadastrosController#busca (for 172.19.0.1 at 2021-05-20 16:41:23) [POST]
+  Parameters: {"filtro"=>"", "id"=>"1", "authenticity_token"=>"Th6+wtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha+D+Y=", "tipo"=>"simples"}
+Completed in 12ms (View: 1, DB: 3) | 200 OK [http://localhost/ecm/cadastros/busca/1]
+
+
+Processing Ecm::CadastrosController#show (for 172.19.0.1 at 2021-05-20 16:41:24) [GET]
+  Parameters: {"id"=>"1", "formulario_id"=>"1"}
+Rendering template within layouts/application
+Rendering ecm/cadastros/show
+Completed in 83ms (View: 56, DB: 17) | 200 OK [http://localhost/ecm/formularios/1/cadastros/1]
+
+
+Processing Ecm::ArtefatosController#index (for 172.19.0.1 at 2021-05-20 16:41:26) [GET]
+  Parameters: {"cadastro_id"=>"1", "authenticity_token"=>"Th6+wtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha+D+Y="}
+Completed in 21ms (View: 6, DB: 5) | 200 OK [http://localhost/ecm/cadastros/1/artefatos?authenticity_token=Th6%2BwtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha%2BD%2BY%3D]
+
+
+Processing Com::BlogsController#view (for 172.19.0.1 at 2021-05-20 16:43:25) [POST]
+  Parameters: {"authenticity_token"=>"Th6+wtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha+D+Y="}
+Completed in 27ms (View: 1, DB: 4) | 200 OK [http://localhost/com/blogs/view]
+
+
+Processing Com::BlogsController#view (for 172.19.0.1 at 2021-05-20 16:45:24) [POST]
+  Parameters: {"authenticity_token"=>"Th6+wtLeElXNAU11fRAznjkc0vCTHFMf9MHK5Ha+D+Y="}
+Completed in 69ms (View: 1, DB: 3) | 200 OK [http://localhost/com/blogs/view]

@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'anylinkcssmenu.js' %>
      
     </script>
-    <title>INTRANET :: Infomanager</title>
+    <title>INTRANET :: ECM</title>
   </head>
   <body>
     <div id="topo">
@@ -18,7 +18,7 @@
         </div>
        
         <div id="status">
-          <b>Login: </b><i>Infomanager</i>
+          <b>Login: </b><i>ECM</i>
         </div>
     </div>
     <div id="tudo">

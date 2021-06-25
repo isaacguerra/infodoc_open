@@ -39,10 +39,10 @@ test: &TEST
 
 production:
   adapter: mysql
-  database: <%= ENV['DB_NAME'] %>
-  username: <%= ENV['DB_USER'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  host: <%= ENV['DB_HOST'] %>  
+  database: infodoc_open
+  username: root
+  password: 
+  host: localhost  
 #  socket: /var/run/mysqld/mysqld.sock
 
 
